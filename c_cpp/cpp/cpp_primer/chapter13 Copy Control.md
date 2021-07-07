@@ -502,7 +502,10 @@ Sales_data& Sales_data::operator=(const Sales_data &) = default;
 
 ### 7.2 如何阻止拷贝
 &emsp;&emsp; 为了阻止拷贝，我们似乎应该直接不定义 拷贝控制成员就行了，但如果你不定义，编译器就会帮你生成。
-&emsp;&emsp; 如何解决这个问题呢？ 在C++11新标准下，我们可以通过将 拷贝构造函数、拷贝赋值运算符定义为 删除的函数(deleted function)来阻止拷贝。
+&emsp;&emsp; 如何解决这个问题呢？ 一共有两个方法：
+> (1) 在C++11新标准下，我们可以通过将 拷贝构造函数、拷贝赋值运算符定义为 删除的函数(deleted function)来阻止拷贝。
+> (2) 将 拷贝构造函数、拷贝赋值运算符 声明为私有，但是不提供定义。
+> 
 
 ### 7.3 什么是 删除的函数？
 &emsp;&emsp; 我们虽然声明了它们，但不能以任何方式使用它们
@@ -511,6 +514,7 @@ Sales_data& Sales_data::operator=(const Sales_data &) = default;
 &emsp;&emsp; 通过在函数的参数列表后面加上`=delete`来指出我们希望该函数被定义为 删除的。
 
 ### 7.5 定义一个 NoCopy类，这个类使用 默认构造函数、析构函数用合成的，并阻止拷贝
+方法一：用`=delete`
 ```cpp
 class NoCopy {
 public:
@@ -518,6 +522,18 @@ public:
     NoCopy(const NoCopy &)=delete;
     NoCopy & operator=(const NoCopy &) = delete;
     ~NoCopy() = default;
+}
+```
+方法二：将这两个函数声明为私有
+```cpp
+class NoCopy {
+public:
+    NoCopy() = default;
+
+    ~NoCopy() = default;
+private:
+    NoCopy(const NoCopy &);
+    NoCopy & operator=(const NoCopy &);
 }
 ```
 
