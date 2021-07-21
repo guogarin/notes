@@ -1419,8 +1419,12 @@ class Sneaky : public Base { // 这个public 是 继承访问说明符
 | 派生方式        | 基类的public成员  | 基类的protected成员 | 基类的private成员| 概括       |
 | -----------    | ---------------- | ------------------- |-----------     |----------- |
 | `public`派生    | 仍为public       | 仍为private         |  不可见        | 所有的都**不变** |
-| `protected`派生 | 变为protected    | 变为private         |  不可见      | 基类的成员级别都**升一级** |
-| `private`派生   | 变为private      | 变为private         |  不可见      | 基类的成员级别都**升两级**|
+| `protected`派生 | 变为protected    | 变为protected       |  不可见      | 基类的成员级别都**升一级** |
+| `private`派生   | 变为private      | 变为private         |  不可见      | 基类的成员级别都**升到最高级`private`**|
+其实可以这么理解，派生方法对基类成员的影响，可以说是在 成员本身的保护类型 和 派生的类型 中 取一个最严格的：
+> 对于 `protected`派生，它会让 基类的`public`成员变成`protected`，但是它不会改变基类中`protected`成员和`private`；
+> 对于 `private`派生，它会让比`private`级别低的都变成`private`（也就是`public`和`protected`）
+> 
 
 ### 34.3 继承访问说明符 的作用是？
 &emsp;&emsp; 继承访问说明符的作用是 控制 派生类**用户** 对于基类成员的访问权限，而不是控制 派生类本身 对于基类成员的访问权限：
