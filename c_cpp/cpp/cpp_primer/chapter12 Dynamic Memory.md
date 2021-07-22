@@ -19,8 +19,8 @@
     - [2.3 使用智能指针有什么好处？](#23-使用智能指针有什么好处)
     - [2.4 智能指针 可以 托管 非动态分配的对象吗？](#24-智能指针-可以-托管-非动态分配的对象吗)
   - [三、shared_ptr类](#三shared_ptr类)
-    - [3.1 如何定义一个指向 string类型 的 shared_ptr?](#31-如何定义一个指向-string类型-的-shared_ptr)
-    - [3.2 定义一个 shared_ptr 时，若不对齐进行显式初始化，变量的值是？](#32-定义一个-shared_ptr-时若不对齐进行显式初始化变量的值是)
+    - [3.1 如何定义一个指向 string类型(值为：Hello world) 的 shared_ptr?](#31-如何定义一个指向-string类型值为hello-world-的-shared_ptr)
+    - [3.2 定义一个 shared_ptr 时，若不对其进行显式初始化，变量的值是？](#32-定义一个-shared_ptr-时若不对其进行显式初始化变量的值是)
     - [3.3 shared_ptr支持的操作](#33-shared_ptr支持的操作)
       - [3.3.1 和unique_ptr共有的操作](#331-和unique_ptr共有的操作)
       - [3.3.2 shared_ptr独有的操作](#332-shared_ptr独有的操作)
@@ -36,6 +36,7 @@
     - [3.8 程序一般出于什么原因一定要使用容易造成 内存泄露的 动态内存？](#38-程序一般出于什么原因一定要使用容易造成-内存泄露的-动态内存)
     - [3.9 定义和改变shared_ptr的其它方法](#39-定义和改变shared_ptr的其它方法)
     - [3.10 使用new出来的指针初始化 shared_ptr时要注意什么？为什么？](#310-使用new出来的指针初始化-shared_ptr时要注意什么为什么)
+    - [3.10.1 具体分析](#3101-具体分析)
     - [3.11 混用 普通指针 和 智能指针有何风险？](#311-混用-普通指针-和-智能指针有何风险)
     - [3.12 为什么推荐make_shared函数，而不是new运算符？](#312-为什么推荐make_shared函数而不是new运算符)
     - [3.13 `shared_ptr`的 get函数](#313-shared_ptr的-get函数)
@@ -88,7 +89,6 @@
     - [7.6 allocator类中 拷贝和填充 未初始化内存的算法](#76-allocator类中-拷贝和填充-未初始化内存的算法)
     - [7.7 `allocator::construct`的构造原理是什么？](#77-allocatorconstruct的构造原理是什么)
   - [8. `shared_ptr`、`unique_ptr`分别在哪个头文件？](#8-shared_ptrunique_ptr分别在哪个头文件)
-  - [RAII](#raii)
   - [文本查询程序](#文本查询程序)
 # 第十二章 动态内存
 
@@ -189,6 +189,7 @@ string *const p = new string[n]; // 构造 n个 空string(第一次赋值：n个
 
 delete[] p; // 释放
 ```
+&emsp;&emsp; **(4)** 不能重复`delete`同一块内存
 
 ### 1.11 什么是 空悬指针(dangling pointer)？如何解决？
 &emsp;&emsp; 对于指针 p，它指向的是一块动态分配的内存，在这块内存将在被delete后被释放，此时指针p仍然指向了这段被delete的指针，此时指针p就被称为 空悬指针(dangling pointer)。
@@ -243,11 +244,13 @@ void use_factory(T arg)
 
 &emsp;
 ## 三、shared_ptr类
-### 3.1 如何定义一个指向 string类型 的 shared_ptr?
+### 3.1 如何定义一个指向 string类型(值为：Hello world) 的 shared_ptr?
 ```cpp
-shared_ptr<string>p1 = "Hello wordl";
+shared_ptr<string>p1 = new string("Hello world"); // 错误
+shared_ptr<string>p1(new string("Hello world"));  // 正确，用的是直接初始化
+shared_ptr<string>p1 = make_shared<string>("Hello world");
 ```
-### 3.2 定义一个 shared_ptr 时，若不对齐进行显式初始化，变量的值是？
+### 3.2 定义一个 shared_ptr 时，若不对其进行显式初始化，变量的值是？
 &emsp;&emsp;此时将执行默认初始化，里面是一个空指针。
 ### 3.3 shared_ptr支持的操作
 #### 3.3.1 和unique_ptr共有的操作
@@ -357,13 +360,22 @@ shared_ptr<int> clone(int p){
     return new int(p); // 错误：映射转换为 shared_ptr
 }
 ```
-应该怎么写才对：
+应该这么写才对：
 ```cpp
 shared_ptr<int> clone(int p){
     return shared_ptr<int>(new int(p)); // 正确：显示的创建了一个 shared_ptr
 }
 ```
 **注意：** 并不是`shared_ptr`不能进行 拷贝初始化，而是不能通过 内置指针 对 `shared_ptr` 进行拷贝初始化！
+### 3.10.1 具体分析
+```cpp
+shared_ptr<int> p1 = new int(1024); 
+```
+上面的代码为什么行不通呢，因为`p1`的初始化隐式的要求编译器用 一个new返回的`int*`来创建一个shared_ptr，而智能指针中接受 指针参数 的构造函数是`explicit`的，因此我们不能使用 内置指针 隐式转换为一个智能指针，因此我们直接初始化：
+```cpp
+shared_ptr<int> p2(new int(1024));      // 正确: 直接初始化
+```
+
 ### 3.11 混用 普通指针 和 智能指针有何风险？
 来看下面这个函数：
 ```cpp
@@ -399,7 +411,7 @@ int i = *p; // 正确: p的引用计数为1
 #### 3.13.2 为什么要定义 get函数？
 &emsp;&emsp;这个函数时为了这样一种情况而设计的：我们需要向不能使用智能指针的代码传递一个内置指针
 #### 3.13.3 使用建议
-不&emsp;&emsp;要用get初始化另一个智能指针或为智能指针赋值，我们来看下面的代码：
+&emsp;&emsp; 不要用get初始化另一个智能指针或为智能指针赋值，我们来看下面的代码：
 ```cpp
 shared_ptr<int> p(new int(42)); // 智能指针p 的引用计数为 1
 int *q = p.get();               // 正确: 但要保证 q不会释放它指向的内存
@@ -495,7 +507,7 @@ void f(destination &d /* other parameters */)
 (1) 不使用相同的内置指针 初始化(或reset) 多个 智能指针
 (2) 不 delete get() 返回的指针
 (3) 不使用 get() 初始化或reset 另一个只能指针
-(4) 如果你使用 get() 返回的指针，记住当最后一个对应的智能指针被销毁后，你的只恨就变为无效了
+(4) 如果你使用 get() 返回的指针，记住当最后一个对应的智能指针被销毁后，你的指针就变为无效了
 (5) 如果你使用只能指针管理的资源不是new分配的内存，记住传递一个删除器给它。
 
 
@@ -645,7 +657,7 @@ int *pia = new int[10]{0,1,2,3,4,5,6,7,8,9};
 &emsp;&emsp; 有初始化器的将使用给定的初始化器初始化，剩余的进行 值初始化：
 ```cpp
 //前四个用给定的初始化器初始化，剩余的进行 值初始化。
-string *psa3 = new string]{"a", "an", "the",string(3,'x')};
+string *psa3 = new string[10]]{"a", "an", "the",string(3,'x')};
 ```
 **如果初始化器的数目大于元素数目：**
 &emsp;&emsp; 会抛异常：`bad_array_new_length`
@@ -896,9 +908,6 @@ destroy!
 &emsp;&emsp; 都在 `memory`头文件中。
 
 
-&emsp;
-## RAII
-、TODO:   https://zhuanlan.zhihu.com/p/34660259
 
 
 &emsp;
