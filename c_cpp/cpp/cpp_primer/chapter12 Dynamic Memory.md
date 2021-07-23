@@ -89,7 +89,18 @@
     - [7.6 allocator类中 拷贝和填充 未初始化内存的算法](#76-allocator类中-拷贝和填充-未初始化内存的算法)
     - [7.7 `allocator::construct`的构造原理是什么？](#77-allocatorconstruct的构造原理是什么)
   - [8. `shared_ptr`、`unique_ptr`分别在哪个头文件？](#8-shared_ptrunique_ptr分别在哪个头文件)
+  - [9 为什么说`std::shared_ptr`的引用计数是可以绕过的？](#9-为什么说stdshared_ptr的引用计数是可以绕过的)
+    - [9.1 如何绕过？](#91-如何绕过)
+    - [9.2 有何后果？](#92-有何后果)
+    - [9.3 如何避免？](#93-如何避免)
+  - [10  `std::enable_shared_from_this`](#10--stdenable_shared_from_this)
+    - [10.1 `enable_shared_from_this`的作用是什么？定义在哪个文件夹？](#101-enable_shared_from_this的作用是什么定义在哪个文件夹)
+    - [10.2 为什么需要使用它，而不是直接传递`this`指针？](#102-为什么需要使用它而不是直接传递this指针)
+    - [10.3 既然不能直接传`this`，那可以直接传递`share_ptr<this>`吗？为什么呢？](#103-既然不能直接传this那可以直接传递share_ptrthis吗为什么呢)
+    - [10.4 怎么用？](#104-怎么用)
+    - [10.5 注意事项](#105-注意事项)
   - [文本查询程序](#文本查询程序)
+  - [参考文献](#参考文献)
 # 第十二章 动态内存
 
 ## 一、new 和 delete
@@ -910,10 +921,177 @@ destroy!
 
 
 
+
+
+&emsp;
+&emsp; 
+## 9 为什么说`std::shared_ptr`的引用计数是可以绕过的？
+### 9.1 如何绕过？
+**(1) 使用内置指针构造`shared_ptr`**
+&emsp;&emsp; 同时用一个内置指针来初始化两个`shared_ptr`，这会导致这两个智能指针指向同一块内存，因为它们是两个独立的智能指针，都有各自的引用计数，我们来看代码：
+```cpp
+int main()
+{
+    string* str = new string("Hello World");
+
+    // 用 str初始化了 ptr和ret两个智能指针
+    shared_ptr<string> ptr(str);
+    shared_ptr<string> ret(str);
+    
+    // 可以看出两个智能指针的引用计数是相互独立的
+    cout << "use_count of ptr: " << ptr.use_count() << endl;
+    cout << "use_count of ret: " << ret.use_count() << endl;
+
+    shared_ptr<string> ptr2 = ptr;  // 拷贝智能指针是可以增加引用计数的
+    shared_ptr<string> ptr3(ptr);   // 直接构造也可以增加引用计数
+    cout << "After ptr2 and ptr3 was created." << endl;
+    cout << "use_count of ptr: " << ptr.use_count() << endl;
+    cout << "use_count of ret: " << ret.use_count() << endl;
+}
+```
+编译后运行：
+```
+use_count of ptr: 1
+use_count of ret: 1
+After ptr2 and ptr3 was created.
+use_count of ptr: 3
+use_count of ret: 1
+free(): double free detected in tcache 2
+Aborted (core dumped)
+```
+**(2) 类内直接通过`this`来构造`shared_ptr`**
+```cpp
+class Bad {
+public:
+    ~Bad() { cout << "~Bad()" << endl; }
+    shared_ptr<Bad> func(){
+        return shared_ptr<Bad>(this); // 这里用this指针新建了一个智能指针
+    }
+};
+
+int main()
+{
+    shared_ptr<Bad> ptr = make_shared<Bad>();
+    shared_ptr<Bad> ret = ptr->func(); // ret 和 ptr 是独立的
+    
+    cout << "use_count of ptr: " << ptr.use_count() << endl;
+    cout << "use_count of ret: " << ret.use_count() << endl;
+}
+```
+编译后运行：
+```
+use_count of ptr: 1
+use_count of ret: 1
+~Bad()
+double free or corruption (out)
+Aborted (core dumped)
+```
+之所以会 `core dumped`，是因为`Bad::func()`返回了一个 通过`this`指针新建的智能指针，它和`ptr`是独立的，但他们都指向同一个 `Bad`对象，因此在程序结束时，`ret`和`ptr`都会去释放同一块内存，最终导致错误。
+
+### 9.2 有何后果？
+&emsp;&emsp; 这会造成内存重复释放。
+&emsp;&emsp; 因为两个`shared_ptr`指向同一块内存，而且因为它们是两个独立的智能指针，因此都有各自的引用计数，所以在对象不需要时，它俩都会释放这块内存，这就导致内存重复释放，最终程序`core dumped`，直接奔溃。
+
+### 9.3 如何避免？
+(1) 混用指针
+&emsp;&emsp; 上面的情况都是 使用原始指针构造`shared_ptr`造成的，只要遵循规范，就能避免，比如使用`make_shared`来构造`shared_ptr`
+(2) 类内直接通过`this`来构造`shared_ptr`
+&emsp;&emsp; 使用 `std::enable_shared_from_this`。
+
+
+
+
+&emsp;
+&emsp; 
+## 10  `std::enable_shared_from_this`
+### 10.1 `enable_shared_from_this`的作用是什么？定义在哪个文件夹？
+&emsp;&emsp; `std::enable_shared_from_this` 能让一个对象（假设其名为 t ，**且已被一个 `std::shared_ptr` 对象 pt 管理**）安全地生成其他额外的 `std::shared_ptr` 实例（假设名为 pt1, pt2, ... ） ，它们与 pt 共享对象 t 的所有权。
+`enable_shared_from_this`是一个模板类，定义于头文件`<memory>`，其原型为：
+```cpp
+template< class/*或 typename */ T > class enable_shared_from_this;
+```
+
+### 10.2 为什么需要使用它，而不是直接传递`this`指针？
+&emsp;&emsp; 首先，`enable_shared_from_this`都是用于 **已被`shared_ptr`管理的对象**，而我们使用智能指针的初衷就是为了方便资源管理，如果在某些地方使用智能指针，某些地方使用原始指针，很容易破坏智能指针的语义，从而产生各种错误。
+
+### 10.3 既然不能直接传`this`，那可以直接传递`share_ptr<this>`吗？为什么呢？
+&emsp;&emsp; 不能，因为这样会造成2个非共享的`share_ptr`指向同一个对象，未增加引用计数导对象被析构两次。
+我们写代码来验证一下：
+```cpp
+class Bad {
+public:
+    ~Bad() { cout << "~Bad()" << endl; }
+    shared_ptr<Bad> func(){
+        return shared_ptr<Bad>(this); // 这里用this指针新建了一个智能指针
+    }
+};
+
+int main()
+{
+    shared_ptr<Bad> ptr = make_shared<Bad>();
+    shared_ptr<Bad> ret = ptr->func(); // ret 和 ptr 是独立的
+    
+    cout << "use_count of ptr: " << ptr.use_count() << endl;
+    cout << "use_count of ret: " << ret.use_count() << endl;
+}
+```
+编译后运行：
+```
+use_count of ptr: 1
+use_count of ret: 1
+~Bad()
+double free or corruption (out)
+Aborted (core dumped)
+```
+之所以会 `core dumped`，是因为`Bad::func()`返回了一个 通过`this`指针新建的智能指针，它和`ptr`是独立的，但他们都指向同一个 `Bad`对象，因此在程序结束时，`ret`和`ptr`都会去释放同一块内存，最终导致错误。
+
+### 10.4 怎么用？
+&emsp;&emsp; 继承`enable_shared_from_this`即可。若一个类 `T` 继承 `std::enable_shared_from_this<T>` ，则会为该类 `T` 提供成员函数： `shared_from_this` 。 当 T 类型对象 `t` 被一个为名为 `pt` 的 `std::shared_ptr<T>` 类对象管理时，调用 `T::shared_from_this` 成员函数，将会返回一个新的 `std::shared_ptr<T>` 对象，它与 `pt` 共享 `t 的所有权。
+
+```cpp
+class Good : public enable_shared_from_this<Good> /*因为它是类模板，因此要加上类型*/{
+public:
+    ~Good() { cout << "~Good()" << endl; }
+    shared_ptr<Good> func(){
+        return shared_from_this(); //  注意，不需要传实参
+    }
+};
+
+int main()
+{
+    shared_ptr<Good> ptr = make_shared<Good>();
+    shared_ptr<Good> ret = ptr->func();
+    
+    cout << "use_count of ptr: " << ptr.use_count() << endl;
+    cout << "use_count of ret: " << ret.use_count() << endl;
+}
+```
+编译后运行：
+```
+use_count of ptr: 2
+use_count of ret: 2
+~Good()
+```
+可以看到的是：
+> (1) ptr 和 ret 指向了同一个对象（它俩的use_count都是2）
+> (2) 不会出现前面那种  内存重复delete 的错误。
+> 
+
+### 10.5 注意事项
+
+
+
+
+
 &emsp;
 ## 文本查询程序
 、TODO:  12.3小结
 
+
+
 https://zhuanlan.zhihu.com/p/63488452
 https://www.zhihu.com/question/61008381
 https://www.zhihu.com/question/319277442
+
+## 参考文献
+1. [C++11新特性之十：enable_shared_from_this](https://blog.csdn.net/caoshangpa/article/details/79392878)
