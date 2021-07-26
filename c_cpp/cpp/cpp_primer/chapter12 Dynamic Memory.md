@@ -101,6 +101,10 @@
     - [10.5 注意事项](#105-注意事项)
   - [11 `shared_ptr` 的数据结构 是怎样的？](#11-shared_ptr-的数据结构-是怎样的)
   - [12  `shared_ptr` 是否是线程安全的？](#12--shared_ptr-是否是线程安全的)
+  - [13 为什么多线程读写 `shared_ptr` 要加锁？](#13-为什么多线程读写-shared_ptr-要加锁)
+    - [13.1 **我们先来分析一下`shared_ptr`的拷贝过程：**](#131-我们先来分析一下shared_ptr的拷贝过程)
+    - [13.2 **然后再考虑一下如下场景：**](#132-然后再考虑一下如下场景)
+  - [14 如果想用多个线程中同时访问同一个`shared_ptr`，应该怎么做？](#14-如果想用多个线程中同时访问同一个shared_ptr应该怎么做)
   - [文本查询程序](#文本查询程序)
   - [参考文献](#参考文献)
 # 第十二章 动态内存
@@ -1088,7 +1092,11 @@ use_count of ret: 2
 &emsp;
 &emsp; 
 ## 11 `shared_ptr` 的数据结构 是怎样的？
+&emsp;&emsp; `shared_ptr` 是引用计数型（reference counting）智能指针，几乎所有的实现都采用在堆（heap）上放个计数值（count）的办法。
+&emsp;&emsp; 具体来说，对于`shared_ptr<Foo>`，它包含两个成员，一个是指向 `Foo` 的指针 `ptr`，另一个是 `ref_count` 指针（其类型不一定是原始指针，有可能是 class 类型，但不影响这里的讨论），指向堆上的 `ref_count` `对象。ref_count` 对象有多个成员，具体的数据结构如图 1 所示，其中 `deleter` 和 `allocator` 是可选的。
 
+<div align="center"> <img src="./pic/chapter12/shared_ptr的数据结构.png"> </div>
+<center> <font color=black> <b> 图1 线程安全和可重入的关系 </b> </font> </center>
 
 
 
@@ -1097,19 +1105,91 @@ use_count of ret: 2
 &emsp;
 &emsp; 
 ## 12  `shared_ptr` 是否是线程安全的？
+&emsp;&emsp; `shared_ptr`的引用计数本身是安全且无锁的，但对象的读写则不是，因为 shared_ptr 有两个数据成员，读写操作不能原子化。 `shared_ptr` 的线程安全级别和内建类型、标准库容器、std::string 一样，即：
+> * 一个 shared_ptr 对象实体可被多个线程同时读取；
+> * 两个 shared_ptr 对象实体可以被两个线程同时写入，“析构”算写操作；
+> * 如果要从多个线程读写同一个 `shared_ptr` 对象，那么需要加锁
+> 
+
 
 
 
 
 &emsp;
+&emsp; 
+## 13 为什么多线程读写 `shared_ptr` 要加锁？
+&emsp;&emsp; 因为`shared_ptr` 的引用计数本身是安全且无锁的，但对象的读写则不是，因为 shared_ptr 有两个数据成员，读写操作不能原子化，若不加锁，则可能出现race condition。 
+### 13.1 **我们先来分析一下`shared_ptr`的拷贝过程：**
+&emsp;&emsp;对于 `shared_ptr<Foo> x(new Foo)`，对应的内存数据结构简图如下：
+<div align="center"> <img src="./pic/chapter12/图2.png"> </div>
+
+如果再执行 `shared_ptr<Foo> y = x;`（赋值操作，引用计数加1）， 那么对应的数据结构如下。
+
+<div align="center"> <img src="./pic/chapter12/图3.png"> </div>
+
+但是 `y=x` 涉及两个成员的复制，这两步拷贝不会同时（原子）发生，它们可以分为如下两个步骤：
+步骤 1，复制 ptr 指针：
+
+<div align="center"> <img src="./pic/chapter12/图4.png"> </div>
+
+步骤 2，复制 ref_count 指针，导致引用计数加 1：
+
+<div align="center"> <img src="./pic/chapter12/图5.png"> </div>
+
+步骤1和步骤2的先后顺序跟实现相关（因此步骤 2 里没有画出 y.ptr 的指向），一般都是先1后2。
+既然 `y=x` 有两个步骤，如果没有 `mutex` 保护，那么在多线程里就有 race condition。
+### 13.2 **然后再考虑一下如下场景：**
+&emsp;&emsp;考虑一个简单的场景，有 3 个 `shared_ptr<Foo>` 对象 `x、g、n`：
+```cpp
+shared_ptr<Foo> g(new Foo); // 线程之间共享的 shared_ptr
+shared_ptr<Foo> x;          // 线程 A 的局部变量
+shared_ptr<Foo> n(new Foo); // 线程 B 的局部变量
+```
+一开始，各安其事。
+
+<div align="center"> <img src="./pic/chapter12/图6.png"> </div>
+
+线程 `A` 执行` x = g; （即 read g）`，以下完成了步骤 1，还没来及执行步骤 2。这时切换到了 B 线程，此时的示意图如下：
+
+<div align="center"> <img src="./pic/chapter12/图7.png"> </div>
+
+同时编程 B 执行 `g = n;（即 write g）`，两个步骤一起完成了:
+先是步骤 1：
+
+<div align="center"> <img src="./pic/chapter12/图8.png"> </div>
+
+再是步骤 2：
+
+<div align="center"> <img src="./pic/chapter12/图9.png"> </div>
+
+此时 `Foo1` 对象已经销毁，`x.ptr` 成了空悬指针！
+最后回到线程 A，完成步骤 2：
+
+<div align="center"> <img src="./pic/chapter12/图10.png"> </div>
+
+多线程无保护地读写 g，造成了“x 是空悬指针”的后果。这正是多线程读写同一个 `shared_ptr` 必须加锁的原因。
+当然，race condition 远不止这一种，其他线程交织（interweaving）有可能会造成其他错误。
+
+
+
+
+
+&emsp;
+&emsp; 
+## 14 如果想用多个线程中同时访问同一个`shared_ptr`，应该怎么做？
+
+
+
+
+
+&emsp;
+&emsp;
 ## 文本查询程序
-、TODO:  12.3小结
+TODO:  12.3小结
 
 
 
-https://zhuanlan.zhihu.com/p/63488452
-https://www.zhihu.com/question/61008381
-https://www.zhihu.com/question/319277442
+
 
 ## 参考文献
 1. [C++11新特性之十：enable_shared_from_this](https://blog.csdn.net/caoshangpa/article/details/79392878)
