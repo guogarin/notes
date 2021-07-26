@@ -99,6 +99,8 @@
     - [10.3 既然不能直接传`this`，那可以直接传递`share_ptr<this>`吗？为什么呢？](#103-既然不能直接传this那可以直接传递share_ptrthis吗为什么呢)
     - [10.4 怎么用？](#104-怎么用)
     - [10.5 注意事项](#105-注意事项)
+  - [11 `shared_ptr` 的数据结构 是怎样的？](#11-shared_ptr-的数据结构-是怎样的)
+  - [12  `shared_ptr` 是否是线程安全的？](#12--shared_ptr-是否是线程安全的)
   - [文本查询程序](#文本查询程序)
   - [参考文献](#参考文献)
 # 第十二章 动态内存
@@ -1084,6 +1086,22 @@ use_count of ret: 2
 
 
 &emsp;
+&emsp; 
+## 11 `shared_ptr` 的数据结构 是怎样的？
+
+
+
+
+
+
+&emsp;
+&emsp; 
+## 12  `shared_ptr` 是否是线程安全的？
+
+
+
+
+&emsp;
 ## 文本查询程序
 、TODO:  12.3小结
 
@@ -1095,3 +1113,4 @@ https://www.zhihu.com/question/319277442
 
 ## 参考文献
 1. [C++11新特性之十：enable_shared_from_this](https://blog.csdn.net/caoshangpa/article/details/79392878)
+2. [为什么多线程读写 shared_ptr 要加锁？](https://blog.csdn.net/solstice/article/details/8547547)
