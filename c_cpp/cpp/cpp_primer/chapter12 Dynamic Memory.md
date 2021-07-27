@@ -1177,7 +1177,7 @@ shared_ptr<Foo> n(new Foo); // 线程 B 的局部变量
 &emsp;
 &emsp; 
 ## 14 如果想用多个线程中同时访问同一个`shared_ptr`，应该怎么做？
-
+&emsp;&emsp; 如果想用多个线程中同时访问同一个`shared_ptr`，那么需要加锁
 
 
 
