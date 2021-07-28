@@ -1105,7 +1105,7 @@ use_count of ret: 2
 &emsp;
 &emsp; 
 ## 12  `shared_ptr` 是否是线程安全的？
-&emsp;&emsp; `shared_ptr`的引用计数本身是安全且无锁的，但对象的读写则不是，因为 shared_ptr 有两个数据成员，读写操作不能原子化。 `shared_ptr` 的线程安全级别和内建类型、标准库容器、std::string 一样，即：
+&emsp;&emsp; `shared_ptr`的引用计数本身是安全且无锁的，但对象的读写则不是，因为 shared_ptr 有两个数据成员，读写操作不能原子化。 `shared_ptr` 的线程安全级别和内建类型、标准库容器、`std::string` 一样，即：
 > * 一个 shared_ptr 对象实体可被多个线程同时读取；
 > * 两个 shared_ptr 对象实体可以被两个线程同时写入，“析构”算写操作；
 > * 如果要从多个线程读写同一个 `shared_ptr` 对象，那么需要加锁
@@ -1177,9 +1177,10 @@ shared_ptr<Foo> n(new Foo); // 线程 B 的局部变量
 &emsp;
 &emsp; 
 ## 14 如果想用多个线程中同时访问同一个`shared_ptr`，应该怎么做？
-&emsp;&emsp; 如果想用多个线程中同时访问同一个`shared_ptr`，那么需要加锁
+&emsp;&emsp; 因为`shared_ptr`的复制分两步，因此多线程对同一个`shared_ptr`进行访问的时候有可能会有问题（具体见前面的介绍），因此如果想用多个线程中同时访问同一个`shared_ptr`，那么需要加锁。
+&emsp;&emsp; 但是应该怎么加锁呢？
 
-
+https://www.cnblogs.com/gqtcgq/p/7492772.html
 
 
 &emsp;
