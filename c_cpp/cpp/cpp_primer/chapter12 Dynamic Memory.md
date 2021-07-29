@@ -104,7 +104,17 @@
   - [13 为什么多线程读写 `shared_ptr` 要加锁？](#13-为什么多线程读写-shared_ptr-要加锁)
     - [13.1 **我们先来分析一下`shared_ptr`的拷贝过程：**](#131-我们先来分析一下shared_ptr的拷贝过程)
     - [13.2 **然后再考虑一下如下场景：**](#132-然后再考虑一下如下场景)
-  - [14 如果想用多个线程中同时访问同一个`shared_ptr`，应该怎么做？](#14-如果想用多个线程中同时访问同一个shared_ptr应该怎么做)
+  - [14 如果想用多个线程中同时访问同一个`shared_ptr`，应该怎么加锁？用什么锁？](#14-如果想用多个线程中同时访问同一个shared_ptr应该怎么加锁用什么锁)
+    - [14.1 用什么锁？](#141-用什么锁)
+    - [14.2 怎么加锁？](#142-怎么加锁)
+  - [15 `shared_ptr` 技术与陷阱](#15-shared_ptr-技术与陷阱)
+    - [15.1 意外延长对象的生命期](#151-意外延长对象的生命期)
+    - [15.2 函数参数](#152-函数参数)
+    - [15.3 析构动作在创建时被捕获](#153-析构动作在创建时被捕获)
+    - [15.4 循环引用](#154-循环引用)
+  - [16 `const` 和 `shared_ptr`](#16-const-和-shared_ptr)
+    - [16.1 声明一个指向 `const int`的 `shared_ptr`，将其初始化为1024](#161-声明一个指向-const-int的-shared_ptr将其初始化为1024)
+    - [16.2 声明一个指向 `int`的 `const` `shared_ptr`，将其初始化为1024](#162-声明一个指向-int的-const-shared_ptr将其初始化为1024)
   - [文本查询程序](#文本查询程序)
   - [参考文献](#参考文献)
 # 第十二章 动态内存
@@ -1139,7 +1149,7 @@ use_count of ret: 2
 步骤1和步骤2的先后顺序跟实现相关（因此步骤 2 里没有画出 y.ptr 的指向），一般都是先1后2。
 既然 `y=x` 有两个步骤，如果没有 `mutex` 保护，那么在多线程里就有 race condition。
 ### 13.2 **然后再考虑一下如下场景：**
-&emsp;&emsp;考虑一个简单的场景，有 3 个 `shared_ptr<Foo>` 对象 `x、g、n`：
+&emsp;&emsp; 考虑一个简单的场景，有 3 个 `shared_ptr<Foo>` 对象 `x、g、n`：
 ```cpp
 shared_ptr<Foo> g(new Foo); // 线程之间共享的 shared_ptr
 shared_ptr<Foo> x;          // 线程 A 的局部变量
@@ -1176,11 +1186,139 @@ shared_ptr<Foo> n(new Foo); // 线程 B 的局部变量
 
 &emsp;
 &emsp; 
-## 14 如果想用多个线程中同时访问同一个`shared_ptr`，应该怎么做？
-&emsp;&emsp; 因为`shared_ptr`的复制分两步，因此多线程对同一个`shared_ptr`进行访问的时候有可能会有问题（具体见前面的介绍），因此如果想用多个线程中同时访问同一个`shared_ptr`，那么需要加锁。
-&emsp;&emsp; 但是应该怎么加锁呢？
+## 14 如果想用多个线程中同时访问同一个`shared_ptr`，应该怎么加锁？用什么锁？
+### 14.1 用什么锁？
+&emsp;&emsp; 虽然我们这里对`shared_ptr`对象区分了读、写操作，但是我们没必要使用读写锁，因为临界区非常小，所以用互斥锁也不会阻塞并发读：
 
-https://www.cnblogs.com/gqtcgq/p/7492772.html
+### 14.2 怎么加锁？
+> 我们都知道，为提高并发性，我们需要尽量减小临界区长度，因此可以在锁外面做的操作尽量在外面做完再进入临界区；
+> 使用 local copy以避免race condition发生；
+> 
+```cpp
+MutexLock mutex; // No need for ReaderWriterLock  
+shared_ptr<Foo> globalPtr;  
+
+// 我们的任务是把globalPtr 安全地传给doit()  
+void doit(const shared_ptr<Foo>& pFoo); 
+```
+为了拷贝`globalPtr`，需要在读取它的时候加锁，即：
+```cpp
+void read()  
+{  
+    shared_ptr<Foo> localPtr;
+    {
+        MutexLockGuard lock(mutex);  
+        localPtr = globalPtr; // read globalPtr 
+        // RAII，退出作用域则解锁 
+    }
+    // use localPtr since here，读写localPtr 也无须加锁  
+    // 因为 localPtr 是栈上对象，不可能被别的线程看到， 那么读取始终是线程安全的
+    doit(localPtr);  
+}
+```
+写入也需要加锁：
+```cpp
+void write()  
+{  
+    shared_ptr<Foo> newPtr(new Foo); // 注意，对象的创建在临界区之外  
+    {  
+        MutexLockGuard lock(mutex);  
+        globalPtr = newPtr; // write to globalPtr  
+        // RAII，退出作用域则解锁
+    }
+    // use newPtr since here，读写newPtr 无须加锁  
+    // 因为 newPtr 是栈上对象，不可能被别的线程看到， 那么读取始终是线程安全的
+    doit(newPtr);  
+} 
+```
+&emsp;&emsp; 注意到上面的`read()`和`write()`在临界区之外都没有再访问`globalPtr`， 而是用了一个指向同一`Foo`对象的栈上`shared_ptr` local copy。 下面会谈到， 只要有这样的local copy存在，shared_ptr作为函数参数传递时不必复制， 用reference to const作为参数类型即可。 
+&emsp;&emsp; 另外注意到上面的`new Foo`是在临界区之外执行的， 这种写法通常比在临界区内写`globalPtr.reset(new Foo)`要好， 因为缩短了临界区长度。 如果要销毁对象， 我们固然可以在临界区内执行`globalPtr.reset()`， 但是这样往往会让对象析构发生在临界区以内， 增加了临界区的长度。一种改进办法是像上面一样定义一个`localPtr`， 用它在临界区内与`globalPtr`交换（`swap()`） ， 这样能保证把对象的销毁推迟到临界区之外。 
+&emsp;&emsp; 练习： 在`write()`函数中， `globalPtr＝newPtr;`这一句有可能会在临界区内销毁原来globalPtr指向的Foo对象， 设法将销毁行为移出临界区。
+**解析：**
+&emsp;&emsp; 上面的`read()`和`write()`，传给`doit()`都是栈上对象，不可能被别的线程看到， 那么读取始终是线程安全的。
+
+
+
+
+
+&emsp;
+&emsp; 
+## 15 `shared_ptr` 技术与陷阱
+### 15.1 意外延长对象的生命期
+&emsp;&emsp; `shared_ptr` 是强引用（“铁丝”绑的），只要有一个指向 `x` 对象的 `shared_ptr` 存在，该对象就不会析构。
+&emsp;&emsp;就拿之前写的观察者模式`Observable::observers_`来说，如果它的类型改为`vector<shared_ ptr<Observer> >`，那么除非手动调用`unregister()`， 否则Observer对象永远不会析构。
+&emsp;&emsp; 另外一个出错的可能是适配器`bind()`， 因为`bind`会把实参拷贝一份， `如果参数是个shared_ptr，` 那么对象的生命期就不会短于 `function`对象：
+```cpp
+class Foo{
+    void doit();
+}
+shared_ptr<Foo> pFoo(new Foo);
+auto func = bind(&Foo::doit, pFoo);
+```
+上面的`func`对象持有了`shared_ptr<Foo>`的一份拷贝，有可能会在不经意间延长倒数第二行创建的`Foo`对象的生命期。
+
+### 15.2 函数参数
+&emsp;&emsp; 因为要修改引用计数（而且拷贝的时候通常要加锁）， `shared_ptr` 的拷贝开销比拷贝原始指针要高，但是需要拷贝的时候并不多。多数情况下它可以以const reference方式传递， 一个线程只需要在最外层函数有一个实体对象， 之后都可以用const reference来使用这个shared_ptr。
+
+### 15.3 析构动作在创建时被捕获
+这意味着析构函数可以定制，虚析构函数不是必须的。
+
+### 15.4 循环引用
+
+
+
+
+
+
+&emsp;
+&emsp; 
+## 16 `const` 和 `shared_ptr`
+&emsp;&emsp; 智能指针`shared_ptr`是一个类模板，因此`shared_ptr<int>`其实就是一个类，我们不应该拿它和内置指针（即`*`）等同起来，而是应该把它当做一个普通的类来看待。
+### 16.1 声明一个指向 `const int`的 `shared_ptr`，将其初始化为1024
+```cpp
+shared_ptr<const int> p_int1(new int(1024));
+```
+写程序验证一下:
+```cpp
+int main()
+{
+    shared_ptr<const int> p_int1(new int(1024));
+    cout << *p_int1 << endl;
+    *p_int1 = 1234;
+}
+```
+编译时报错：
+```
+test.cpp: In function ‘int main()’:
+test.cpp:12:15: error: assignment of read-only location ‘((std::__shared_ptr_access<const int, (__gnu_cxx::_Lock_policy)2, false, false>*)(& p_int1))->std::__shared_ptr_access<const int, (__gnu_cxx::_Lock_policy)2, false, false>::operator*()’
+     *p_int1 = 1234;
+               ^~~~
+```
+根据报错信息，我们得知报错的原因是 `给const对象赋值`。
+
+### 16.2 声明一个指向 `int`的 `const` `shared_ptr`，将其初始化为1024
+```cpp
+const shared_ptr<int> p_int2(new int(1024));
+```
+写程序验证一下:
+```cpp
+int main()
+{
+    const shared_ptr<int> p_int2(new int(1024));
+    shared_ptr<int> p_int3(new int(1234));
+    cout << *p_int2 << endl;
+    p_int2 = p_int3;
+}
+```
+编译时报错：
+```
+test.cpp: In function ‘int main()’:
+test.cpp:13:14: error: no match for ‘operator=’ (operand types are ‘const std::shared_ptr<int>’ and ‘std::shared_ptr<int>’)
+     p_int2 = p_int3;
+              ^~~~~~
+```
+
+
 
 
 &emsp;
