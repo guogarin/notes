@@ -99,7 +99,10 @@
     - [10.3 既然不能直接传`this`，那可以直接传递`share_ptr<this>`吗？为什么呢？](#103-既然不能直接传this那可以直接传递share_ptrthis吗为什么呢)
     - [10.4 怎么用？](#104-怎么用)
     - [10.5 注意事项](#105-注意事项)
-  - [11 `shared_ptr` 的数据结构 是怎样的？](#11-shared_ptr-的数据结构-是怎样的)
+  - [11 `shared_ptr` 的数据结构](#11-shared_ptr-的数据结构)
+    - [11.1 `shared_ptr` 的数据结构是怎样的？](#111-shared_ptr-的数据结构是怎样的)
+    - [11.2 `shared_ptr`的 control block 分配在哪里？](#112-shared_ptr的-control-block-分配在哪里)
+    - [11.3 为什么`shared_ptr`里的control block要维护 weak reference counter（弱引用计数器）?](#113-为什么shared_ptr里的control-block要维护-weak-reference-counter弱引用计数器)
   - [12  `shared_ptr` 是否是线程安全的？](#12--shared_ptr-是否是线程安全的)
   - [13 为什么多线程读写 `shared_ptr` 要加锁？](#13-为什么多线程读写-shared_ptr-要加锁)
     - [13.1 **我们先来分析一下`shared_ptr`的拷贝过程：**](#131-我们先来分析一下shared_ptr的拷贝过程)
@@ -111,10 +114,12 @@
     - [15.1 意外延长对象的生命期](#151-意外延长对象的生命期)
     - [15.2 函数参数](#152-函数参数)
     - [15.3 析构动作在创建时被捕获](#153-析构动作在创建时被捕获)
-    - [15.4 循环引用](#154-循环引用)
+    - [15.4 析构所在的线程](#154-析构所在的线程)
+    - [15.5 循环引用](#155-循环引用)
   - [16 `const` 和 `shared_ptr`](#16-const-和-shared_ptr)
     - [16.1 声明一个指向 `const int`的 `shared_ptr`，将其初始化为1024](#161-声明一个指向-const-int的-shared_ptr将其初始化为1024)
     - [16.2 声明一个指向 `int`的 `const` `shared_ptr`，将其初始化为1024](#162-声明一个指向-int的-const-shared_ptr将其初始化为1024)
+  - [17 初始化`shared_ptr`时需要注意什么 ？](#17-初始化shared_ptr时需要注意什么-)
   - [文本查询程序](#文本查询程序)
   - [参考文献](#参考文献)
 # 第十二章 动态内存
@@ -1101,15 +1106,23 @@ use_count of ret: 2
 
 &emsp;
 &emsp; 
-## 11 `shared_ptr` 的数据结构 是怎样的？
+## 11 `shared_ptr` 的数据结构 
+### 11.1 `shared_ptr` 的数据结构是怎样的？
 &emsp;&emsp; `shared_ptr` 是引用计数型（reference counting）智能指针，几乎所有的实现都采用在堆（heap）上放个计数值（count）的办法。
 &emsp;&emsp; 具体来说，对于`shared_ptr<Foo>`，它包含两个成员，一个是指向 `Foo` 的指针 `ptr`，另一个是 `ref_count` 指针（其类型不一定是原始指针，有可能是 class 类型，但不影响这里的讨论），指向堆上的 `ref_count` `对象。ref_count` 对象有多个成员，具体的数据结构如图 1 所示，其中 `deleter` 和 `allocator` 是可选的。
 
 <div align="center"> <img src="./pic/chapter12/shared_ptr的数据结构.png"> </div>
 <center> <font color=black> <b> 图1 线程安全和可重入的关系 </b> </font> </center>
 
+`weak_count` 也是一个引用计数，它用来计数指向该Object的`std::weak_ptr`指针的数量
 
+### 11.2 `shared_ptr`的 control block 分配在哪里？
+&emsp;&emsp; 由于这个控制块需要在多个shared_ptr之间共享，所以它也是存在于 heap 中的。
 
+### 11.3 为什么`shared_ptr`里的control block要维护 weak reference counter（弱引用计数器）?
+https://segmentfault.com/q/1010000015099865
+
+http://senlinzhan.github.io/2015/04/24/%E6%B7%B1%E5%85%A5shared-ptr/
 
 
 &emsp;
@@ -1261,10 +1274,20 @@ auto func = bind(&Foo::doit, pFoo);
 &emsp;&emsp; 因为要修改引用计数（而且拷贝的时候通常要加锁）， `shared_ptr` 的拷贝开销比拷贝原始指针要高，但是需要拷贝的时候并不多。多数情况下它可以以const reference方式传递， 一个线程只需要在最外层函数有一个实体对象， 之后都可以用const reference来使用这个shared_ptr。
 
 ### 15.3 析构动作在创建时被捕获
-这意味着析构函数可以定制，虚析构函数不是必须的。
+这是一个非常有用的特性， 这意味着：
+> ·虚析构不再是必需的。
+> ·shared_ptr<void>可以持有任何对象， 而且能安全地释放。
+> ·shared_ptr对象可以安全地跨越模块边界， 比如从DLL里返回， 而不会造成从模块A分配的内存在模块B里被释放这种错误。
+> ·二进制兼容性， 即便Foo对象的大小变了， 那么旧的客户代码仍然可以使用新的动态库， 而无须重新编译。 前提是Foo的头文件中不出现访问对象的成员的inline函数， 并且Foo对象的由动态库中的Factory构造， 返回其shared_ptr。
+> ·析构动作可以定制。
+> 
+最后这个特性的实现比较巧妙， 因为`shared_ptr<T>`只有一个模板参数， 而“析构行为”可以是函数指针、 仿函数（functor） 或者其他什么东西。 这是泛型编程和面向对象编程的一次完美结合。 
 
-### 15.4 循环引用
+### 15.4 析构所在的线程
+&emsp;&emsp; 对象的析构是同步的， 当最后一个指向x的shared_ptr离开其作用域的时候， x会同时在同一个线程析构。这个线程不一定是对象诞生的线程。 这个特性是把双刃剑： 如果对象的析构比较耗时， 那么可能会拖慢关键线程的速度（如果最后一个shared_ptr引发的析构发生在关键线程）；同时， 我们可以用一个单独的线程来专门做析构， 通过一个`BlockingQueue<shared_ptr<void> >`把对象的析构都转移到那个专用线程， 从而解放关键线程。
 
+### 15.5 循环引用
+&emsp;&emsp; `shared_ptr`是管理共享资源的利器， 需要注意避免循环引用， 通常的做法是owner持有指向child的`shared_ptr`， child持有指向owner的`weak_ptr`。
 
 
 
@@ -1318,6 +1341,37 @@ test.cpp:13:14: error: no match for ‘operator=’ (operand types are ‘const 
               ^~~~~~
 ```
 
+
+
+
+
+&emsp;
+&emsp;
+## 17 初始化`shared_ptr`时需要注意什么 ？
+就是必须直接初始化，因为用指针初始化`shared_ptr` 的那个构造函数是 `explicit`的：
+```cpp
+int main()
+{
+    int* ptr = new int(1024);
+    shared_ptr<int> p1(ptr);
+    cout << *ptr << endl;
+}
+```
+拷贝初始化是不行的：
+```cpp
+int main()
+{
+    shared_ptr<int> p1 = new int(1024);
+    cout << *p1 << endl;
+}
+```
+编译时报错：
+```
+test.cpp: In function ‘int main()’:
+test.cpp:10:26: error: conversion from ‘int*’ to non-scalar type ‘std::shared_ptr<int>’ requested
+     shared_ptr<int> p1 = new int(1024);
+                          ^~~~~~~~~~~~~
+```
 
 
 
