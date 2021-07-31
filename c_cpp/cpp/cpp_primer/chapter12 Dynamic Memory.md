@@ -1117,18 +1117,27 @@ use_count of ret: 2
 `weak_count` 也是一个引用计数，它用来计数指向该Object的`std::weak_ptr`指针的数量
 
 ### 11.2 `shared_ptr`的 control block 分配在哪里？
-&emsp;&emsp; 由于这个控制块需要在多个shared_ptr之间共享，所以它也是存在于 heap 中的。
+&emsp;&emsp; 由于这个控制块需要在多个shared_ptr之间共享，所以它肯定是在于 heap 中分配的。
 
 ### 11.3 为什么`shared_ptr`里的control block要维护 weak reference counter（弱引用计数器）?
-https://segmentfault.com/q/1010000015099865
 
-http://senlinzhan.github.io/2015/04/24/%E6%B7%B1%E5%85%A5shared-ptr/
+先来看看：网上别人的解答：
+<div align="center"> <img src="./pic/chapter12/图11.png"> </div>
+
+&emsp;&emsp; 强引用计数(use_count)为0时会析构 `ptr`指向的对象（该智能指针指向的对象），而弱引用计数(weak_count)为0时会删除`ref_counter`对象，所以创建`shared_ptr`都会有一个`use_count`和一个。
+换句话说，强引用计数(use_count) 和 弱引用计数(weak_count)管理的资源不一样：
+> 强引用计数(use_count) 管理的是 `ptr`指向的对象（该智能指针指向的对象）
+> 弱引用计数(weak_count) 管理的是 `ref_counter`对象
+> 
+
+
+
 
 
 &emsp;
 &emsp; 
 ## 12  `shared_ptr` 是否是线程安全的？
-&emsp;&emsp; `shared_ptr`的引用计数本身是安全且无锁的，但对象的读写则不是，因为 shared_ptr 有两个数据成员，读写操作不能原子化。 `shared_ptr` 的线程安全级别和内建类型、标准库容器、`std::string` 一样，即：
+&emsp;&emsp; `shared_ptr`的引用计数本身是安全且无锁的，也就是说shared_ptr的引用计数增加和减少的操作都是原子的。但对象的读写则不是，因为 shared_ptr 有两个数据成员，读写操作不能原子化。 `shared_ptr` 的线程安全级别和内建类型、标准库容器、`std::string` 一样，即：
 > * 一个 shared_ptr 对象实体可被多个线程同时读取；
 > * 两个 shared_ptr 对象实体可以被两个线程同时写入，“析构”算写操作；
 > * 如果要从多个线程读写同一个 `shared_ptr` 对象，那么需要加锁
@@ -1288,6 +1297,7 @@ auto func = bind(&Foo::doit, pFoo);
 
 ### 15.5 循环引用
 &emsp;&emsp; `shared_ptr`是管理共享资源的利器， 需要注意避免循环引用， 通常的做法是owner持有指向child的`shared_ptr`， child持有指向owner的`weak_ptr`。
+&emsp;&emsp; 关于循环引用的实例，可以看 观察者模式.md 中的2.2.3小节。
 
 
 
@@ -1387,3 +1397,5 @@ TODO:  12.3小结
 ## 参考文献
 1. [C++11新特性之十：enable_shared_from_this](https://blog.csdn.net/caoshangpa/article/details/79392878)
 2. [为什么多线程读写 shared_ptr 要加锁？](https://blog.csdn.net/solstice/article/details/8547547)
+3. [为什么shared_ptr里的control block要维护weak reference counter?](https://segmentfault.com/q/1010000015099865)
+4. [谈谈 shared_ptr 的那些坑](http://senlinzhan.github.io/2015/04/24/%E6%B7%B1%E5%85%A5shared-ptr/)
