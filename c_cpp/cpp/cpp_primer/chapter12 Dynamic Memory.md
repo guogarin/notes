@@ -94,11 +94,14 @@
     - [9.2 有何后果？](#92-有何后果)
     - [9.3 如何避免？](#93-如何避免)
   - [10  `std::enable_shared_from_this`](#10--stdenable_shared_from_this)
-    - [10.1 `enable_shared_from_this`的作用是什么？定义在哪个文件夹？](#101-enable_shared_from_this的作用是什么定义在哪个文件夹)
+    - [10.1 `enable_shared_from_this`的作用是什么？定义在哪个头文件？](#101-enable_shared_from_this的作用是什么定义在哪个头文件)
     - [10.2 为什么需要使用它，而不是直接传递`this`指针？](#102-为什么需要使用它而不是直接传递this指针)
     - [10.3 既然不能直接传`this`，那可以直接传递`share_ptr<this>`吗？为什么呢？](#103-既然不能直接传this那可以直接传递share_ptrthis吗为什么呢)
     - [10.4 怎么用？](#104-怎么用)
-    - [10.5 注意事项](#105-注意事项)
+    - [10.5 注意事项，为什么？](#105-注意事项为什么)
+    - [10.5.1 有哪些？](#1051-有哪些)
+    - [10.5.2 为什么？](#1052-为什么)
+    - [10.6 原理](#106-原理)
   - [11 `shared_ptr` 的数据结构](#11-shared_ptr-的数据结构)
     - [11.1 `shared_ptr` 的数据结构是怎样的？](#111-shared_ptr-的数据结构是怎样的)
     - [11.2 `shared_ptr`的 control block 分配在哪里？](#112-shared_ptr的-control-block-分配在哪里)
@@ -119,7 +122,12 @@
   - [16 `const` 和 `shared_ptr`](#16-const-和-shared_ptr)
     - [16.1 声明一个指向 `const int`的 `shared_ptr`，将其初始化为1024](#161-声明一个指向-const-int的-shared_ptr将其初始化为1024)
     - [16.2 声明一个指向 `int`的 `const` `shared_ptr`，将其初始化为1024](#162-声明一个指向-int的-const-shared_ptr将其初始化为1024)
-  - [17 初始化`shared_ptr`时需要注意什么 ？](#17-初始化shared_ptr时需要注意什么-)
+  - [17 用new出来的内存初始化`shared_ptr`时需要注意什么 ？](#17-用new出来的内存初始化shared_ptr时需要注意什么-)
+  - [18 什么是 强引用、弱引用？](#18-什么是-强引用弱引用)
+  - [19 相比于使用原始的new函数创建`shared_ptr`，`std::make_shared`的优势在什么地方？](#19-相比于使用原始的new函数创建shared_ptrstdmake_shared的优势在什么地方)
+    - [19.1 使用原始的new函数创建`shared_ptr`](#191-使用原始的new函数创建shared_ptr)
+    - [19.2 使用`std::make_shared` 来分配](#192-使用stdmake_shared-来分配)
+    - [19.3 总结](#193-总结)
   - [文本查询程序](#文本查询程序)
   - [参考文献](#参考文献)
 # 第十二章 动态内存
@@ -1025,7 +1033,7 @@ Aborted (core dumped)
 &emsp;
 &emsp; 
 ## 10  `std::enable_shared_from_this`
-### 10.1 `enable_shared_from_this`的作用是什么？定义在哪个文件夹？
+### 10.1 `enable_shared_from_this`的作用是什么？定义在哪个头文件？
 &emsp;&emsp; `std::enable_shared_from_this` 能让一个对象（假设其名为 t ，**且已被一个 `std::shared_ptr` 对象 pt 管理**）安全地生成其他额外的 `std::shared_ptr` 实例（假设名为 pt1, pt2, ... ） ，它们与 pt 共享对象 t 的所有权。
 `enable_shared_from_this`是一个模板类，定义于头文件`<memory>`，其原型为：
 ```cpp
@@ -1098,17 +1106,71 @@ use_count of ret: 2
 > (2) 不会出现前面那种  内存重复delete 的错误。
 > 
 
-### 10.5 注意事项
+### 10.5 注意事项，为什么？
+### 10.5.1 有哪些？
 (1) `shared_from_this()`不能在构造函数里调用
 &emsp;&emsp; 因为在构造对象的时候， 它还没有被交给shared_ptr接管。
-
 (2) 为了使用`shared_from_this()`， 对象不能是`stack object`， 必须是`heap object`且由`shared_ptr`管理其生命期。
-https://segmentfault.com/a/1190000016055581?utm_source=tag-newest
+### 10.5.2 为什么？
+见下面的 [原理]()的实例分析
+
+### 10.6 原理
+`std::enable_shared_from_this<T>`模板类中有一个`weak_ptr`成员，这个`weak_ptr`用来观测`this`智能指针，调用`shared_from_this()`函数的时候，会在内部调用该`weak_ptr`成员的`lock()`方法，将所观测的`shared_ptr`返回。这个设计要依赖于当前对象已经有了一个相应的控制块。为此，必须已经存在一个指向当前对象的`shared_ptr`（比如在调用过`shared_from_this()`成员函数之外已经有了一个）。假如没有这样`shared_ptr`存在，那么`shared_from_this()`会抛异常:
+```cpp
+class Good : public enable_shared_from_this<Good> /*因为它是类模板，因此要加上类型*/{
+public:
+    ~Good() { cout << "~Good()" << endl; }
+    shared_ptr<Good> func(){
+        return shared_from_this(); //  注意，不需要传实参
+    }
+};
+
+int main()
+{
+    Good* ptr = new Good();
+    ptr->func();
+}
+```
+顺利通过编译，运行时报错：
+```
+terminate called after throwing an instance of 'std::bad_weak_ptr'
+  what():  bad_weak_ptr
+Aborted (core dumped)
+```
+那么这个`weak_ptr`在什么时候赋值的呢？答案就是在外部第一次构造`shared_ptr`的时候(如之前的`std::shared_ptr<Y> p1(new Y());`)，对`std::enable_shared_from_this<T>`进行了赋值（具体实现有点复杂，还不太懂。。），这也就为什么在调用`shared_from_this()`时，必须存在一个指向当前对象的`shared_ptr`的原因了。由于这个原因，不要在构造函数中调用`shared_from_this()`，如：
+```cpp
+class Y : public std::enable_shared_from_this<Y>
+{
+public:
+    Y() {
+        std::shared_ptr<Y> p = shared_from_this(); // 错误，不应该在构造函数中调用 shared_from_this()
+    }
+
+    std::shared_ptr<Y> f(){
+        return shared_from_this();
+    }
+};
+
+int main()
+{
+    std::shared_ptr<Y> p1(new Y());
+}
+```
+顺利通过编译，运行时报错：
+```
+terminate called after throwing an instance of 'std::bad_weak_ptr'
+  what():  bad_weak_ptr
+Aborted (core dumped)
+```
+
+
+
+
 
 
 &emsp;
 &emsp; 
-## 11 `shared_ptr` 的数据结构 
+## 11 `shared_ptr` 的数据结构
 ### 11.1 `shared_ptr` 的数据结构是怎样的？
 &emsp;&emsp; `shared_ptr` 是引用计数型（reference counting）智能指针，几乎所有的实现都采用在堆（heap）上放个计数值（count）的办法。
 &emsp;&emsp; 具体来说，对于`shared_ptr<Foo>`，它包含两个成员，一个是指向 `Foo` 的指针 `ptr`，另一个是 `ref_count` 指针（其类型不一定是原始指针，有可能是 class 类型，但不影响这里的讨论），指向堆上的 `ref_count` `对象。ref_count` 对象有多个成员，具体的数据结构如图 1 所示，其中 `deleter` 和 `allocator` 是可选的。
@@ -1409,7 +1471,7 @@ test.cpp:13:14: error: no match for ‘operator=’ (operand types are ‘const 
 
 &emsp;
 &emsp;
-## 17 初始化`shared_ptr`时需要注意什么 ？
+## 17 用new出来的内存初始化`shared_ptr`时需要注意什么 ？
 就是必须直接初始化，因为用指针初始化`shared_ptr` 的那个构造函数是 `explicit`的：
 ```cpp
 int main()
@@ -1437,6 +1499,59 @@ test.cpp:10:26: error: conversion from ‘int*’ to non-scalar type ‘std::sha
 
 
 
+
+
+&emsp;
+&emsp;
+## 18 什么是 强引用、弱引用？
+**强引用**, 用来记录当前有多少个存活的 shared_ptrs 正持有该对象. 共享的对象会在最后一个强引用离开的时候销毁( 也可能释放).
+**弱引用**, 用来记录当前有多少个正在观察该对象的 weak_ptrs. 当最后一个弱引用离开的时候, 共享的内部信息控制块会被销毁和释放 (共享的对象也会被释放, 如果还没有释放的话).
+
+
+
+
+
+
+&emsp;
+&emsp;
+## 19 相比于使用原始的new函数创建`shared_ptr`，`std::make_shared`的优势在什么地方？
+```cpp
+class Foo;
+shared_ptr<int> ptr1(new Foo());
+shared_ptr<int> ptr2 = std::make_shared<Foo>();
+```
+在分析代码之前呢，我们先来复习一下`shared_ptr`的构成：
+&emsp;&emsp; 对于`shared_ptr<Foo>`，它包含两个成员，一个是指向 `Foo` 的指针 `ptr`，另一个是 `ref_count` 指针（其类型不一定是原始指针，有可能是 class 类型，但不影响这里的讨论），指向堆上的 `ref_count` `对象。ref_count` 对象有多个成员，具体的数据结构如图 1 所示，其中 `deleter` 和 `allocator` 是可选的。
+
+<div align="center"> <img src="./pic/chapter12/shared_ptr的数据结构.png"> </div>
+
+下面我们来分析一下上面两个`shared_ptr`的执行过程：
+### 19.1 使用原始的new函数创建`shared_ptr`
+对于下面的代码，
+```cpp
+shared_ptr<int> ptr1(new Foo());
+```
+一共分配了两次动态内存：
+**第一次：**
+&emsp;&emsp; 原始的new分配了原始对象（在这里是`new Foo()`）, 然后将这个对象传递给 shared_ptr (即使用 shared_ptr 的构造函数)
+**第二次：**
+&emsp;&emsp;  在`shared_ptr`的构造函数中分配控制块（也就是上图中`ref_count`指向的对象）；
+
+### 19.2 使用`std::make_shared` 来分配
+&emsp;&emsp; 如果选择使用 `std::make_shared` 的话, 内存分配的动作 可以一次性完成，因为`std::make_shared`申请一个单独的内存块来同时存放指向的对象和控制块，这减少了内存分配的次数。
+
+### 19.3 总结
+因为`std::make_shared`只需new一次内存，可以减少系统开销
+**缺点**TODO:
+构造函数是保护或私有时,无法使用 make_shared
+make_shared 虽好, 但也存在一些问题, 比如, 当我想要创建的对象没有公有的构造函数时, make_shared 就无法使用了, 当然我们可以使用一些小技巧来解决这个问题, 比如这里 How do I call ::std::make_shared on a class with only protected or private constructors?
+
+对象的内存可能无法及时回收
+make_shared 只分配一次内存, 这看起来很好. 减少了内存分配的开销. 问题来了, weak_ptr 会保持控制块(强引用, 以及弱引用的信息)的生命周期, 而因此连带着保持了对象分配的内存, 只有最后一个 weak_ptr 离开作用域时, 内存才会被释放. 原本强引用减为 0 时就可以释放的内存, 现在变为了强引用, 若引用都减为 0 时才能释放, 意外的延迟了内存释放的时间. 这对于内存要求高的场景来说, 是一个需要注意的问题. 关于这个问题可以看这里 make_shared, almost a silver bullet
+
+
+
+
 &emsp;
 &emsp;
 ## 文本查询程序
@@ -1451,3 +1566,5 @@ TODO:  12.3小结
 2. [为什么多线程读写 shared_ptr 要加锁？](https://blog.csdn.net/solstice/article/details/8547547)
 3. [为什么shared_ptr里的control block要维护weak reference counter?](https://segmentfault.com/q/1010000015099865)
 4. [谈谈 shared_ptr 的那些坑](http://senlinzhan.github.io/2015/04/24/%E6%B7%B1%E5%85%A5shared-ptr/)
+5. [[c++11]智能指针学习笔记](https://segmentfault.com/a/1190000016055581?utm_source=tag-newest)
+6. [Why Make_shared ?](http://bitdewy.github.io/blog/2014/01/12/why-make-shared/)
