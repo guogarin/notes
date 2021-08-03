@@ -1099,9 +1099,11 @@ use_count of ret: 2
 > 
 
 ### 10.5 注意事项
+(1) `shared_from_this()`不能在构造函数里调用
+&emsp;&emsp; 因为在构造对象的时候， 它还没有被交给shared_ptr接管。
 
-
-
+(2) 为了使用`shared_from_this()`， 对象不能是`stack object`， 必须是`heap object`且由`shared_ptr`管理其生命期。
+https://segmentfault.com/a/1190000016055581?utm_source=tag-newest
 
 
 &emsp;
@@ -1120,14 +1122,14 @@ use_count of ret: 2
 &emsp;&emsp; 由于这个控制块需要在多个shared_ptr之间共享，所以它肯定是在于 heap 中分配的。
 
 ### 11.3 为什么`shared_ptr`里的control block要维护 weak reference counter（弱引用计数器）?
-
+&emsp;&emsp; `weak_ptr` 的存在是为了避免循环引用（可以参照 观察者模式.md 中2.2.3小节来理解），而弱引用计数器是为了让 `weak_ptr` 正常工作。
 先来看看：网上别人的解答：
 <div align="center"> <img src="./pic/chapter12/图11.png"> </div>
 
 &emsp;&emsp; 强引用计数(use_count)为0时会析构 `ptr`指向的对象（该智能指针指向的对象），而弱引用计数(weak_count)为0时会删除`ref_counter`对象，所以创建`shared_ptr`都会有一个`use_count`和一个。
 换句话说，强引用计数(use_count) 和 弱引用计数(weak_count)管理的资源不一样：
 > 强引用计数(use_count) 管理的是 `ptr`指向的对象（该智能指针指向的对象）
-> 弱引用计数(weak_count) 管理的是 `ref_counter`对象
+> 弱引用计数(weak_count)和强引用计数(use_count) 共同管理 `ref_counter`对象
 > 
 
 
@@ -1298,6 +1300,56 @@ auto func = bind(&Foo::doit, pFoo);
 ### 15.5 循环引用
 &emsp;&emsp; `shared_ptr`是管理共享资源的利器， 需要注意避免循环引用， 通常的做法是owner持有指向child的`shared_ptr`， child持有指向owner的`weak_ptr`。
 &emsp;&emsp; 关于循环引用的实例，可以看 观察者模式.md 中的2.2.3小节。
+下面是另一个实例：
+```cpp
+// 一段内存泄露的代码
+struct Son;
+struct Father{
+    shared_ptr<Son> son_;
+};
+struct Son{
+    shared_ptr<Father> father_;
+};
+int main() 
+{
+    auto father = make_shared<Father>();
+    auto son = make_shared<Son>();
+    father->son_ = son;
+    son->father_ = father;
+  
+    return 0;
+}
+```
+分析一下main函数是如何退出的，一切就都明了：
+> * main函数退出之前，Father和Son对象的引用计数都是2。
+> * son指针销毁，这时Son对象的引用计数是1。
+> * father指针销毁，这时Father对象的引用计数是1。
+> * 由于Father对象和Son对象的引用计数都是1，这两个对象都不会被销毁，从而发生内存泄露。
+> 
+为了避免循环引用导致的内存泄露，就需要使用`weak_ptr`，`weak_ptr`并不拥有其指向的对象，也就是说，让`weak_ptr`指向`shared_ptr`所指向对象，对象的引用计数并不会增加：
+```cpp
+// 修复内存泄露的问题
+struct Son;
+struct Father{
+    shared_ptr<Son> son_;
+};
+struct Son{
+    weak_ptr<Father> father_;
+};
+int main() 
+{
+    auto father = make_shared<Father>();
+    auto son = make_shared<Son>();
+    father->son_ = son;
+    son->father_ = father;
+  
+    return 0;
+}
+```
+同样，分析一下main函数退出时发生了什么：
+> * main函数退出前，Son对象的引用计数是2，而Father的引用计数是1。
+> * son指针销毁，Son对象的引用计数变成1。
+> * father指针销毁，Father对象的引用计数变成0，导致Father对象析构，Father对象的析构会导致它包含的son_指针被销毁，这时Son对象的引用计数变成0，所以Son对象也会被析构。
 
 
 
