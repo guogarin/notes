@@ -39,8 +39,11 @@
   - [bind()函数](#bind函数)
       - [bind()函数的作用是什么？](#bind函数的作用是什么)
       - [适配器指的是啥？](#适配器指的是啥)
+      - [bind()定义在哪？](#bind定义在哪)
       - [bind()函数的一般形式是怎样的？](#bind函数的一般形式是怎样的)
       - [bind()函数中的_1、_2表示什么？](#bind函数中的_1_2表示什么)
+      - [如果只出现了`_3`，没有出现`_1`和`_2`，需要注意什么？](#如果只出现了_3没有出现_1和_2需要注意什么)
+      - [_1、_2、_3到底指的是什么？TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:](#_1_2_3到底指的是什么todotodotodotodotodotodotodotodotodotodotodotodotodotodotodotodotodotodotodotodo)
       - [_1、_2定义在哪？](#_1_2定义在哪)
       - [bind() 的返回类型是什么？](#bind-的返回类型是什么)
       - [对于下面的代码，应该怎么调用呢？](#对于下面的代码应该怎么调用呢)
@@ -397,6 +400,8 @@ transform(vi.begin(), vi.end(), vi.begin(),
 &emsp;&emsp;bind()函数接受一个可调用对象以及参数列表来生成一个新的可调用对象，从而达到 更改 参数顺序 以及 参数数量 的目的
 #### 适配器指的是啥？
 &emsp;&emsp;现在MacBook已经不带usb接口了，如果你想用usb接口的u盘插到MacBook上，那你就要用一个合适的转接头才行，这个转接头就是一个适配器。
+#### bind()定义在哪？
+头文件`functional`中
 #### bind()函数的一般形式是怎样的？
 ```cpp
 auto newCallable = bind(callable, arg_list)
@@ -404,22 +409,100 @@ auto newCallable = bind(callable, arg_list)
 &emsp;&emsp;**newCallable**本身是一个可调用的对象；
 &emsp;&emsp;**arg_list**是一个逗号分隔的参数列表，对应给定的callable的参数。即，当我们调用newCallable时，newCallable会调用callable，并传给它 arg_list中的参数。
 #### bind()函数中的_1、_2表示什么？
-&emsp;&emsp;**arg_list中可能包含形如`_n`的名字**，其中n是一个整数，这些参数是 `占位符`，表示newCallable的参数，它们占据了传递给newCallable的参数的“位置”。数值n表示生成的可调用对象中参数的位置：_1表为newCallable的第一个参数， _2为第二个参数？
+&emsp;&emsp;**arg_list中可能包含形如`_n`的名字**，其中n是一个整数，这些参数是 `占位符`，表示`newCallable`的参数，它们占据了传递给newCallable的参数的“位置”。数值n表示生成的可调用对象中参数的位置：_1表为newCallable的第一个参数， _2为第二个参数。
 &emsp;&emsp;_1、_2表示调用时要传进去的参数，举个例子：
 ```cpp
-double my_divide (double x, double y) {return x/y;}
-auto fn_half = std::bind(my_divide,_1, 2);
+#include <functional> // where bind() in.
+
+using namespace std;
+
+using std::placeholders::_1;
+using std::placeholders::_2;
+
+double my_subtraction(int x, int y){
+    return x-y;
+}
+
+int main()
+{
+    auto fn_half_1 = bind(my_subtraction, _1, 2);
+    cout << fn_half_1(1) << endl;
+    
+    auto fn_half_2 = bind(my_subtraction, 2, _2);
+    cout << fn_half_2(1, 2) << endl;
+
+    auto fn_half_3 = bind(my_subtraction, _2, _1);
+    cout << fn_half_3(1, 2) << endl;
+}
 ```
-对于上面的bind()函数，它接收三个参数：
+编译后运行：
+```
+-1
+0
+1
+```
+**下面我们来分析一下运行结果：**
+(1) 对于上面的`auto fn_half_1 = bind(my_subtraction, _1, 2);`，它接收三个参数：
 | 参数       | 解释                                                                          |
 | ---------- | ----------------------------------------------------------------------------- |
-| 第一个参数 | my_divide，表示fn_half绑定的是my_divide()函数；                               |
-| 第二个参数 | 占位符_1，表示fn_half接收的第一个参数，它用来初始化my_divide()的第一个参数x； |
-| 第二个参数 | 数值2，它用来初始化my_divide()的第二个参数y；                                 |
+| 第一个参数 | my_subtraction，表示fn_half绑定的是my_subtraction()函数；                               |
+| 第二个参数 | 占位符_1，表示fn_half接收的第一个参数，它用来初始化my_subtraction()的第一个参数x； |
+| 第二个参数 | 数值2，它用来初始化my_subtraction()的第二个参数y；                                 |
+所以`fn_half_1(1)`就相当于调用 `my_subtraction(1, 2)`,因此结果为`-1`.
+(2) `auto fn_half_2 = bind(my_subtraction, 2, _2);`
+&emsp;&emsp;值得注意的是，`auto fn_half_2 = bind(my_subtraction, 2, _2);`中只有`_2`，没有`_1`，因此对于` fn_half_2(1, 2)`，相当于调用`my_subtraction(2, 2)`第一个参数`1`被忽略了，因此结果为`0`。
+(3)`auto fn_half_3 = bind(my_subtraction, _2, _1);`
+&emsp;&emsp; 
+
+#### 如果只出现了`_3`，没有出现`_1`和`_2`，需要注意什么？
+意味着必须穿三个参数进去：
+```cpp
+using std::placeholders::_1;
+using std::placeholders::_2;
+using std::placeholders::_3;
+
+double my_divide(int x, int y){
+    return x-y;
+}
+
+int main()
+{
+    auto fn_half_1 = bind(my_divide, _3, 2);
+    cout << fn_half_1(1, 2) << endl; // 只传了两个参数
+}
+```
+编译时报错：
+```
+test.cpp: In function ‘int main()’:
+test.cpp:17:27: error: no match for call to ‘(std::_Bind<double (*(std::_Placeholder<3>, int))(int, int)>) (int, int)’
+     cout << fn_half_1(1, 2) << endl;
+```
+为什么报错?
+TODO:
+将上面的main()改为：
+```cpp
+int main()
+{
+    auto fn_half_1 = bind(my_divide, _3, 4);
+    cout << fn_half_1(1, 2, 3) << endl;
+}
+```
+编译后运行：
+```
+-1
+```
+显然，`my_divide`的第一个参数`x`被初始化为3，第二个参数`y`被初始化为`4`,因此结果为`3-4`，结果为`-1`
+那么问题来了，`fn_half_1(1, 2, 3)`为什么只用到了第三个参数`3`，第一个和第二个参数呢？很显然没有被用到，因为声明`bind()`的时候`_1、_2`没有被用到，所以第一个和第二个参数并没有被用到，但是它们却不可缺少
+
+#### _1、_2、_3到底指的是什么？TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:
+
+
 #### _1、_2定义在哪？
 定义在命名空间placeholders中，可使用声明语句：
 ```cpp
-using namespace std::placeholders;
+using std::placeholders::_1;
+using std::placeholders::_2;
+// _3、_4以此类推
 ```
 #### bind() 的返回类型是什么？
 &emsp;&emsp;返回一个可调用对象，一般用auto来简化操作。
