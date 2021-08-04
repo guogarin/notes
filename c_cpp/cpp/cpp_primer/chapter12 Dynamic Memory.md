@@ -1127,7 +1127,7 @@ public:
 
 int main()
 {
-    Good* ptr = new Good();
+    Good* ptr = new Good();// 错误，GOOD对象 没有被shared_ptr接管
     ptr->func();
 }
 ```
