@@ -41,10 +41,10 @@
       - [适配器指的是啥？](#适配器指的是啥)
       - [bind()定义在哪？](#bind定义在哪)
       - [bind()函数的一般形式是怎样的？](#bind函数的一般形式是怎样的)
-      - [bind()函数中的_1、_2表示什么？](#bind函数中的_1_2表示什么)
-      - [如果只出现了`_3`，没有出现`_1`和`_2`，需要注意什么？](#如果只出现了_3没有出现_1和_2需要注意什么)
-      - [_1、_2、_3到底指的是什么？TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:](#_1_2_3到底指的是什么todotodotodotodotodotodotodotodotodotodotodotodotodotodotodotodotodotodotodotodo)
       - [_1、_2定义在哪？](#_1_2定义在哪)
+      - [bind()函数中的_1、_2表示什么？](#bind函数中的_1_2表示什么)
+      - [为什么说要弄明白`bind`，就必须弄明白两个顺序](#为什么说要弄明白bind就必须弄明白两个顺序)
+      - [如果只出现了`_3`，没有出现`_1`和`_2`，需要注意什么？](#如果只出现了_3没有出现_1和_2需要注意什么)
       - [bind() 的返回类型是什么？](#bind-的返回类型是什么)
       - [对于下面的代码，应该怎么调用呢？](#对于下面的代码应该怎么调用呢)
       - [在什么情况下需要使用bind()函数？](#在什么情况下需要使用bind函数)
@@ -398,19 +398,40 @@ transform(vi.begin(), vi.end(), vi.begin(),
 #### bind()函数的作用是什么？
 &emsp;&emsp;bind()函数相当于一个函数适配器，主要是进行参数绑定。
 &emsp;&emsp;bind()函数接受一个可调用对象以及参数列表来生成一个新的可调用对象，从而达到 更改 参数顺序 以及 参数数量 的目的
+
 #### 适配器指的是啥？
 &emsp;&emsp;现在MacBook已经不带usb接口了，如果你想用usb接口的u盘插到MacBook上，那你就要用一个合适的转接头才行，这个转接头就是一个适配器。
+
 #### bind()定义在哪？
 头文件`functional`中
+
 #### bind()函数的一般形式是怎样的？
 ```cpp
 auto newCallable = bind(callable, arg_list)
 ```
 &emsp;&emsp;**newCallable**本身是一个可调用的对象；
 &emsp;&emsp;**arg_list**是一个逗号分隔的参数列表，对应给定的callable的参数。即，当我们调用newCallable时，newCallable会调用callable，并传给它 arg_list中的参数。
+
+#### _1、_2定义在哪？
+定义在命名空间placeholders中，可使用声明语句：
+```cpp
+using std::placeholders::_1;
+using std::placeholders::_2;
+// _3、_4以此类推
+```
+
 #### bind()函数中的_1、_2表示什么？
 &emsp;&emsp;**arg_list中可能包含形如`_n`的名字**，其中n是一个整数，这些参数是 `占位符`，表示`newCallable`的参数，它们占据了传递给newCallable的参数的“位置”。数值n表示生成的可调用对象中参数的位置：_1表为newCallable的第一个参数， _2为第二个参数。
-&emsp;&emsp;_1、_2表示调用时要传进去的参数，举个例子：
+&emsp;&emsp; **总的来说，_1、_2表示调用时要传进去的参数的顺序**，举个例子：
+```cpp
+double my_subtraction(int x, int y){
+    return x-y;
+}
+
+auto fn_half_3 = bind(my_subtraction, _2, _1);
+cout << fn_half_3(1/* _1 */, 2/* _2 */) << endl;
+```
+我们来看一个实例：
 ```cpp
 #include <functional> // where bind() in.
 
@@ -442,32 +463,52 @@ int main()
 1
 ```
 **下面我们来分析一下运行结果：**
-(1) 对于上面的`auto fn_half_1 = bind(my_subtraction, _1, 2);`，它接收三个参数：
-| 参数       | 解释                                                                          |
-| ---------- | ----------------------------------------------------------------------------- |
-| 第一个参数 | my_subtraction，表示fn_half绑定的是my_subtraction()函数；                               |
-| 第二个参数 | 占位符_1，表示fn_half接收的第一个参数，它用来初始化my_subtraction()的第一个参数x； |
-| 第二个参数 | 数值2，它用来初始化my_subtraction()的第二个参数y；                                 |
-所以`fn_half_1(1)`就相当于调用 `my_subtraction(1, 2)`,因此结果为`-1`.
-(2) `auto fn_half_2 = bind(my_subtraction, 2, _2);`
-&emsp;&emsp;值得注意的是，`auto fn_half_2 = bind(my_subtraction, 2, _2);`中只有`_2`，没有`_1`，因此对于` fn_half_2(1, 2)`，相当于调用`my_subtraction(2, 2)`第一个参数`1`被忽略了，因此结果为`0`。
-(3)`auto fn_half_3 = bind(my_subtraction, _2, _1);`
-&emsp;&emsp; 
+(1) `fn_half_1`
+```cpp
+auto fn_half_1 = bind(my_subtraction, _1, 2); 
+cout << fn_half_1(1/*用来初始化占位符_1*/) << endl;
+```
+&emsp;&emsp; 将` _1, 2`绑定到函数`my_subtraction()`，其中`_1`表示调用`fn_half_1`时传的第一个参数（在这里为数字`1`），数字`2`是第二个参数，也就是说，调用` fn_half_1(1)`就意味着用`1`来初始化`_1`，也就相当于调用 `my_subtraction(1, 2)`，,因此结果为`-1`
+
+(2) `fn_half_2`
+```cpp
+auto fn_half_2 = bind(my_subtraction, 2, _2);
+cout << fn_half_2(1, 2/*用来初始化占位符_2*/) << endl;
+```
+&emsp;&emsp;值得注意的是，`auto fn_half_2 = bind(my_subtraction, 2, _2);`中只有`_2`，没有`_1`，因此对于` fn_half_2(1, 2)`，相当于调用`my_subtraction(2, 2)`第一个参数`1`被忽略了，因此结果为`0`。但是第一个参数还是得提供的，要不然会报错，因为我要的是第二个参数，但是有了第一个才能有第二个，因此第一个参数不能省略。
+
+(3)`fn_half_3`
+见后面 bind的两个顺序的笔记。
+
+#### 为什么说要弄明白`bind`，就必须弄明白两个顺序
+要彻底弄明白如何使用`bind`，就必须搞清楚两个顺序：
+**① bind声明中的 参数顺序**
+**② _1、_2、_3 ··· _n 的顺序**
+就拿前面的例子来说：
+```cpp
+// 顺序一：_2, _1分别是 my_subtraction的第一个和第二个参数
+auto fn_half_3 = bind(my_subtraction, _2, _1); 
+
+// 顺序二：1初始化_`，2初始化_2
+cout << fn_half_3(1, 2) << endl;
+```
+**bind声明中的 参数顺序：**`bind(my_subtraction, _2, _1)`，`_2`（第二个参数）初始化`my_subtraction`的第一个形参，`_1`（第一个参数）初始化`my_subtraction`的第二个形参，即相当于`my_subtraction(_2, _1)`
+**_1、_2、_3 ··· _n 的顺序:** 这表示调用`fn_half_3`时传入参数的顺序，对于`fn_half_3(1, 2)`，第一个参数`1`就是`_1`，第二个参数就是`_2`。因此就相对于`my_subtraction(2, 1)`，因此最终结果为`1`。
 
 #### 如果只出现了`_3`，没有出现`_1`和`_2`，需要注意什么？
-意味着必须穿三个参数进去：
+意味着必须传三个参数进去，虽然只用到了第三个参数，但是毕竟不可能凭空出现第三个参数，有了第一个和第二个的前提下才能有第三个：
 ```cpp
 using std::placeholders::_1;
 using std::placeholders::_2;
 using std::placeholders::_3;
 
-double my_divide(int x, int y){
+double my_subtraction(int x, int y){
     return x-y;
 }
 
 int main()
 {
-    auto fn_half_1 = bind(my_divide, _3, 2);
+    auto fn_half_1 = bind(my_subtraction, _3, 4);
     cout << fn_half_1(1, 2) << endl; // 只传了两个参数
 }
 ```
@@ -477,13 +518,12 @@ test.cpp: In function ‘int main()’:
 test.cpp:17:27: error: no match for call to ‘(std::_Bind<double (*(std::_Placeholder<3>, int))(int, int)>) (int, int)’
      cout << fn_half_1(1, 2) << endl;
 ```
-为什么报错?
-TODO:
-将上面的main()改为：
+**为什么报错?**
+因为`bind(my_subtraction, _3, 4)`需要用第三个参数来初始化`my_subtraction`的第一个参数，而`fn_half_1(1, 2)`只传了两个参数进去，因此报错。将上面的main()改为：
 ```cpp
 int main()
 {
-    auto fn_half_1 = bind(my_divide, _3, 4);
+    auto fn_half_1 = bind(my_subtraction, _3, 4);
     cout << fn_half_1(1, 2, 3) << endl;
 }
 ```
@@ -491,19 +531,9 @@ int main()
 ```
 -1
 ```
-显然，`my_divide`的第一个参数`x`被初始化为3，第二个参数`y`被初始化为`4`,因此结果为`3-4`，结果为`-1`
+显然，`my_subtraction`的第一个参数`x`被初始化为3，第二个参数`y`被初始化为`4`,因此结果为`3-4`，结果为`-1`
 那么问题来了，`fn_half_1(1, 2, 3)`为什么只用到了第三个参数`3`，第一个和第二个参数呢？很显然没有被用到，因为声明`bind()`的时候`_1、_2`没有被用到，所以第一个和第二个参数并没有被用到，但是它们却不可缺少
 
-#### _1、_2、_3到底指的是什么？TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:TODO:
-
-
-#### _1、_2定义在哪？
-定义在命名空间placeholders中，可使用声明语句：
-```cpp
-using std::placeholders::_1;
-using std::placeholders::_2;
-// _3、_4以此类推
-```
 #### bind() 的返回类型是什么？
 &emsp;&emsp;返回一个可调用对象，一般用auto来简化操作。
 TODO: 
