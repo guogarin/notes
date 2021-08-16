@@ -144,6 +144,13 @@ UNIX有5种I/O模型,阻塞会发生在两个阶段上:
 ### 3.3.4 有哪些 IO多路复用 接口？
 `select、poll、epoll`
 
+### 3.3.5 IO多路复用与非阻塞有何区别？
+&emsp;&emsp; **区别一**：非阻塞需要应用自己不断的轮询是否socket有数据可读。IO多路复用，首先必须是非阻塞的，然后 事先可以传入要监听的多个socket，当socket有数据过来会自动通知应用层有socket可读，省去了应用轮询的过程。
+&emsp;&emsp; **区别二**：使用非阻塞IO的话，有socket连接了，就得开个线程去处理这个socket的读写，不然的话就会阻塞应用的轮询。IO多路复用的话，从头到尾就在一个线程里面，这也是叫多路复用的原因(多路就是代指多个线程)。
+
+### 3.3.6 IO多路复用 是阻塞的吗？
+&emsp;&emsp; I/O复用虽然能同时监听多个文件描述符， 但它本身是阻塞的。 并且当多个文件描述符同时就绪时， 如果不采取额外的措施， 程序就只能按顺序依次处理其中的每一个文件描述符， 这使得服务器程序看起来像是串行工作的。 如果要实现并发， 只能使用多进程或多线程等编程手段。
+
 ## 3.4 信号驱动式I/O
 ## 3.4.1 为什么需要 信号驱动式I/O
 &emsp;&emsp; IO多路模型 可以使用一个线程可以监控多个fd，但是`select`仍然是采用轮询的方式来监控多个fd的，通过不断的轮询fd的可读状态来知道是否就可读的数据，而无脑的轮询就显得有点暴力，因为大部分情况下的轮询都是无效的，所以有人就想，能不能不要我总是去问你是否数据准备就绪，能不能我发出请求后等你数据准备好了就通知我，所以就衍生了信号驱动IO模型。
@@ -200,16 +207,33 @@ UNIX有5种I/O模型,阻塞会发生在两个阶段上:
 **(4) 信号IO** 第一个阶段只需注册一下SIGIO，第二个阶段阻塞；
 **(5) 异步IO** 两个阶段都不阻塞
 
-## IO多路复用与非阻塞有何区别？
-https://zhuanlan.zhihu.com/p/348979899
+
+
 
 
 
 &emsp;
 &emsp; 
 # 4. 如何使用 IO多路复用的接口？
+&emsp;&emsp; Linux下实现I/O复用的系统调用主要有`select`、`poll`和`epoll`。
+## 4.1 `select()`
+### 4.1.1 `select()`原型是怎样的？各个参数分别表示什么？
+```cpp
+#include <sys/time.h> /* For portability */
+#include <sys/select.h>
+int select(int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout);
+// Returns number of ready file descriptors, 0 on timeout,
+```
+
+## 4.2 `poll()`
+
+## 4.3 `epoll()`
 
 
+
+
+&emsp;
+&emsp; 
 # 5. 水平触发 和 边沿触发
 
 
