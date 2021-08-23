@@ -1,11 +1,114 @@
-# 什么是`NTPL`？
-NPTL(Native POSIX Threads Library)，这是 Linux 线程实现的现代版，Linux 2.6之后的都是NTPL线程。它的前任是`LinuxThreads`，是最初的 Linux 线程实现，先已被`NTPL`取代。
+- [](#)
+  - [1. 多线程程序为什么难？](#1-多线程程序为什么难)
+  - [2. 什么是 `happens-before`原则 ？](#2-什么是-happens-before原则-)
+  - [3. 什么是`NTPL`？](#3-什么是ntpl)
+- [二、关于多线程的一些问题的解答（摘自muduo的书中）](#二关于多线程的一些问题的解答摘自muduo的书中)
+  - [1．Linux下能启动的线程数量](#1linux下能启动的线程数量)
+    - [1.1 Linux能同时启动多少个线程？](#11-linux能同时启动多少个线程)
+    - [1.2 如何增加系统可以创建的线程数量？](#12-如何增加系统可以创建的线程数量)
+  - [2．多线程能提高并发度吗？](#2多线程能提高并发度吗)
+  - [4 多线程能降低响应时间吗？](#4-多线程能降低响应时间吗)
+  - [5．多线程程序如何让IO和“计算”相互重叠，降低latency？](#5多线程程序如何让io和计算相互重叠降低latency)
+  - [6．为什么第三方库往往要用自己的线程？](#6为什么第三方库往往要用自己的线程)
+  - [7. 什么是线程池大小的阻抗匹配原则？](#7-什么是线程池大小的阻抗匹配原则)
+  - [8．除了你推荐的`Reactor＋thread pool`， 还有别的non-trivial多线程编程模型吗？](#8除了你推荐的reactorthread-pool-还有别的non-trivial多线程编程模型吗)
+  - [9．模式(2)和模式(3)a该如何取舍？](#9模式2和模式3a该如何取舍)
+- [三、关于线程的`bash`命令](#三关于线程的bash命令)
+  - [](#-1)
+- [参考文献](#参考文献)
 
-设计 NPTL 是为了弥补 `LinuxThreads` 的大部分的缺陷。特别是如下部分：
+## 多线程的`errno` 和 多线程的`errno` 有何区别？
+
+## 多线程还是多进程？
+
+## 如何编译多线程程序？
+在 Linux 平台上， 在编译调用了 Pthreads API 的程序时， 需要设置 `cc -pthread `的编译选项。使用该选项的效果如下。
+* 定义_REENTRANT 预处理宏。这会公开对少数可重入（reentrant）函数的声明。
+* 程序会与库 libpthread 进行链接（等价于-lpthread）。
+> 编译多线程程序时的具体编译选项会因实现及编译器的不同而不同。 其他一些实现（例如 Tru64）使用 cc –pthread，而 Solaris 和 HP-UX 则使用 cc –mt。
+> 
+比如，在使用`g++`时，应该这样编译：
+```shell
+g++ -o test.o test.cpp --std=c++11 -pthread
+```
+
+# 一、多线程的相关概念
+## 1. 编写多线程程序难在哪？
+学习多线程编程面临的最大的思维方式的转变有两点：
+* (1) 当前线程可能随时会被切换出去， 或者说被抢占（preempt） 了。
+* (2) 多线程程序中事件的发生顺序不再有全局统一的先后关系。
+&emsp;&emsp; 当线程被切换回来继续执行下一条语句（指令）的时候，全局数据（包括当前进程在操作系统内核中的状态）可能已经被其他线程修改了。例如，在没有为指针`p`加锁的情况下，`if (p && p->next) { /* ... */ }`有可能导致segfault，因为在逻辑与（`&&`）的前一个分支evaluate为`true`之后的一刹那，p可能被其他线程置为`NULL`或是被释放， 后一个分支就访问了非法地址。
+&emsp;&emsp; 在单CPU系统中，理论上我们可以通过记录CPU上执行的指令的先后顺序来推演多线程的实际交织（interweaving）运行的情况。在多核系统中，多个线程是并行执行的，我们甚至没有统一的全局时钟来为每个事件编号。在没有适当同步的情况下，多个CPU上运行的多个线程中的事件发生先后顺序是无法确定的。在引入适当同步后，事件之间才有了happens-before关系。
+&emsp;&emsp; 多线程系统编程的难点不在于学习线程原语（primitives），而在于理解多线程与现有的C/C++库函数和系统调用的交互关系，以进一步学习如何设计并实现线程安全且高效的程序。
+
+## 2. 下面这段代码有什么问题？
+```cpp
+bool running = false;    //全局标志
+
+void threadFunc()
+{
+    while(running){
+        //get task from queue
+    }
+}
+
+void start(){
+    muduo::Thread t(threadFunc);
+    t.start();
+    running = true;    //应该放到t.start()之前。
+}
+```
+**存在的问题：**
+&emsp;&emsp; 这段代码暗中假定线程函数的启动慢于`running`变量的赋值，因此线程函数能进入`while`循环执行我们想要的功能。如果上机测试运行这段代码，十有八九会按我们预期的那样工作。 但是，直到有一天，系统负载很高，`Thread::start()`调用`pthread_create()`陷入内核后返回时， 内核决定换另外一个就绪任务来执行。于是running的赋值就推迟了， 这时线程函数就可能不进入`while`循环而直接退出了。
+&emsp;&emsp; 或许有人会认为在`while`之前加一小段延时（sleep）就能解决问题，但这是错的，无论加多大的延时，系统都有可能先执行`while`的条件判断，然后再执行`running`的赋值。正确的做法是把`running`的赋值放到`t.start()`之前，这样借助`pthread_create()`的happens-before语意来保证`running`的新值能被线程看到。
+**一个原则：**
+&emsp;&emsp; 多线程程序的正确性不能依赖于任何一个线程的执行速度， 不能通过原地等待（sleep()） 来假定其他线程的事件已经发生， 而必须通过适当的同步来让当前线程能看到其他线程的事件的结果。无论线程执行得快与慢（被操作系统切换出去得越多，执行越慢），程序都应该能正常工作。例如下面这段代码就有这方面的问题。
+
+## 2. 什么是 `happens-before`原则 ？
+&emsp;&emsp; 
+
+## 3. 什么是`NTPL`？
+&emsp;&emsp; NPTL(Native POSIX Threads Library)，这是 Linux 线程实现的现代版，Linux 2.6之后的都是NTPL线程。它的前任是`LinuxThreads`，是最初的 Linux 线程实现，先已被`NTPL`取代。
+&emsp;&emsp; 设计 NPTL 是为了弥补 `LinuxThreads` 的大部分的缺陷。特别是如下部分：
 > NPTL 更接近 SUSv3 Pthreads 标准。
 > 使用 NPTL 的有大量线程的应用程序的性能要远优于 LinuxThreads。
 > 
 
+## 4. 为什么说 线程安全的函数是不可组合的？
+&emsp;&emsp; 尽管单个函数是线程安全的， 但两个或多个函数放到一起就不再安全了。 例如`fseek()`和`fread()`都是安全的， **但是对某个文件“先seek再read”这两步操作中间有可能会被打断， 其他线程有可能趁机修改了文件的当前位置，让程序逻辑无法正确执行**。 在这种情况下， 我们可以用flockfile(FILE*)和funlockfile(FILE*)函数来显式地加锁。 并且由于FILE*的锁是可重入的，加锁之后再调用fread()不会造成死锁。
+&emsp;&emsp; 如果程序直接使用`lseek(2)`和`read(2)`这两个系统调用来随机读取文件， 也存在“先seek再read”这种race condition， 但是似乎我们无法高效地对系统调用加锁。 
+&emsp;&emsp; 例如，在单线程程序中，如果我们要临时转换时区，可以用txset() 函数，这个函数会改变程序全局的“当前时区”。
+```cpp
+//获取伦敦的当前时间
+string oldTz = getenv("TZ");  //save TZ,assumeing non-NULL
+putenv("TZ=Europe/London");  //set TZ to London
+tzset();  //load London time zone
+
+struct tm localTimeInLN;
+time_t now = time(NULL);  //get time in UTC
+localtime_r(&now, &localTimeInLN);  //convert to London local time
+setenv("TZ", oldTz.c_str(), 1);  //restore old TZ
+tzset();  //local old time zone
+```
+&emsp;&emsp; 但是在多线程程序中，这么做是不安全的，即便`tzset()`本身是线程安全的。因为他改变了全局状态，这有可能影响其他线程转换当前时间，或者被其他进行类似的操作的线程影响。解决办法是使用`mudou::TimeZone class`，每个immutable instance 对应一个时期，这样时间转换就不需要修改全局状态了。例如：
+```cpp
+class TimeZone{
+public:
+    explict TimeZone(const char* zonefile);
+    struct tm toLocalTime(time_t secondsSinceEpoch)const;
+    time_fromLocalTime(const struct tm&)const;
+    // default copy ctor /assigment /dtor are okay.
+    // ...
+};
+const TomeZone kNewYorkTz("/usr /share / zoneinfo / America /New_York");
+const TomeZone kLondonTz(" /usr / share / zoneinfo /Europe / London");
+time_t now = time(NULL);
+struct tm locaTimeInNY= kNewYorkTz.toLcalTime(now);
+struct tm localTimeInLN = kLondonTz.toLocalTime (now);
+```
+&emsp;&emsp; 对于c/c++库的作者来说，符合设计线程安全的接口也成了一大考验，值得效仿的例子并不多。一个基本的思路尽量吧class 设计成immutable 的，这样用起来就不必为线程安全操心了。
+&emsp;&emsp; 尽管c++03标准没有明说标准库的线程的安全性，但我们可以遵循一个基本的原则：凡是非共享的对象都是彼此独立的，如果一个对象从始至终只被一个线程用到，那么它就是安全的。
+
 
 
 
@@ -14,7 +117,69 @@ NPTL(Native POSIX Threads Library)，这是 Linux 线程实现的现代版，Lin
 &emsp;
 &emsp;
 &emsp;
-# 二、关于多线程的一些问题的解答
+# 二、`POSIX threads`库
+## 1. `Pthreads`函数的基本用法
+&emsp;&emsp; `Pthreads`函数有上百个，但是平常用的就那几个，下面介绍一下这些函数。
+### 1.1 如何创建线程？
+函数 `pthread_create()`负责创建一条新线程。
+```cpp
+
+```
+&emsp;&emsp; 
+
+### 1.2
+```cpp
+
+```
+&emsp;&emsp; 
+
+### 1.3
+```cpp
+
+```
+&emsp;&emsp; 
+
+### 1.4
+```cpp
+
+```
+&emsp;&emsp; 
+
+### 1.5
+```cpp
+
+```
+&emsp;&emsp; 
+
+### 1.6
+```cpp
+
+```
+&emsp;&emsp; 
+
+### 1.7
+```cpp
+
+```
+&emsp;&emsp; 
+
+
+## . Linux上的线程标识
+### .1 如何获取当前线程的 线程ID？
+&emsp;&emsp; 使用`pthread_self()`函数即可。
+### .2 为什么说不能依赖`pthread_create()`返回的线程ID？
+&emsp;&emsp; SUSv3 明确指出，在新线程开始执行之前，实现无需对 thread 参数所指向的缓冲区进行初始化，即新线程可能会在 `pthread_create()`返回给调用者之前已经开始运行。如新线程需要获取自己的线程 ID，则只能使用 `pthread_self()`。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# 三、关于多线程的一些问题的解答（摘自muduo的书中）
 ## 1．Linux下能启动的线程数量
 ### 1.1 Linux能同时启动多少个线程？
 系统能创建的线程数量受下面三个影响：
