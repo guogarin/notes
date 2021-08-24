@@ -17,22 +17,10 @@
   - [](#-1)
 - [参考文献](#参考文献)
 
-## 多线程的`errno` 和 多线程的`errno` 有何区别？
 
-## 多线程还是多进程？
 
-## 如何编译多线程程序？
-在 Linux 平台上， 在编译调用了 Pthreads API 的程序时， 需要设置 `cc -pthread `的编译选项。使用该选项的效果如下。
-* 定义_REENTRANT 预处理宏。这会公开对少数可重入（reentrant）函数的声明。
-* 程序会与库 libpthread 进行链接（等价于-lpthread）。
-> 编译多线程程序时的具体编译选项会因实现及编译器的不同而不同。 其他一些实现（例如 Tru64）使用 cc –pthread，而 Solaris 和 HP-UX 则使用 cc –mt。
-> 
-比如，在使用`g++`时，应该这样编译：
-```shell
-g++ -o test.o test.cpp --std=c++11 -pthread
-```
-
-# 一、多线程的相关概念
+&emsp;
+# 一、多线程的相关知识
 ## 1. 编写多线程程序难在哪？
 学习多线程编程面临的最大的思维方式的转变有两点：
 * (1) 当前线程可能随时会被切换出去， 或者说被抢占（preempt） 了。
@@ -41,6 +29,8 @@ g++ -o test.o test.cpp --std=c++11 -pthread
 &emsp;&emsp; 在单CPU系统中，理论上我们可以通过记录CPU上执行的指令的先后顺序来推演多线程的实际交织（interweaving）运行的情况。在多核系统中，多个线程是并行执行的，我们甚至没有统一的全局时钟来为每个事件编号。在没有适当同步的情况下，多个CPU上运行的多个线程中的事件发生先后顺序是无法确定的。在引入适当同步后，事件之间才有了happens-before关系。
 &emsp;&emsp; 多线程系统编程的难点不在于学习线程原语（primitives），而在于理解多线程与现有的C/C++库函数和系统调用的交互关系，以进一步学习如何设计并实现线程安全且高效的程序。
 
+
+&emsp;
 ## 2. 下面这段代码有什么问题？
 ```cpp
 bool running = false;    //全局标志
@@ -64,16 +54,17 @@ void start(){
 **一个原则：**
 &emsp;&emsp; 多线程程序的正确性不能依赖于任何一个线程的执行速度， 不能通过原地等待（sleep()） 来假定其他线程的事件已经发生， 而必须通过适当的同步来让当前线程能看到其他线程的事件的结果。无论线程执行得快与慢（被操作系统切换出去得越多，执行越慢），程序都应该能正常工作。例如下面这段代码就有这方面的问题。
 
-## 2. 什么是 `happens-before`原则 ？
-&emsp;&emsp; 
 
-## 3. 什么是`NTPL`？
+&emsp;
+## 3. 什么是`NPTL`？
 &emsp;&emsp; NPTL(Native POSIX Threads Library)，这是 Linux 线程实现的现代版，Linux 2.6之后的都是NTPL线程。它的前任是`LinuxThreads`，是最初的 Linux 线程实现，先已被`NTPL`取代。
 &emsp;&emsp; 设计 NPTL 是为了弥补 `LinuxThreads` 的大部分的缺陷。特别是如下部分：
 > NPTL 更接近 SUSv3 Pthreads 标准。
 > 使用 NPTL 的有大量线程的应用程序的性能要远优于 LinuxThreads。
 > 
 
+
+&emsp;
 ## 4. 为什么说 线程安全的函数是不可组合的？
 &emsp;&emsp; 尽管单个函数是线程安全的， 但两个或多个函数放到一起就不再安全了。 例如`fseek()`和`fread()`都是安全的， **但是对某个文件“先seek再read”这两步操作中间有可能会被打断， 其他线程有可能趁机修改了文件的当前位置，让程序逻辑无法正确执行**。 在这种情况下， 我们可以用flockfile(FILE*)和funlockfile(FILE*)函数来显式地加锁。 并且由于FILE*的锁是可重入的，加锁之后再调用fread()不会造成死锁。
 &emsp;&emsp; 如果程序直接使用`lseek(2)`和`read(2)`这两个系统调用来随机读取文件， 也存在“先seek再read”这种race condition， 但是似乎我们无法高效地对系统调用加锁。 
@@ -110,6 +101,108 @@ struct tm localTimeInLN = kLondonTz.toLocalTime (now);
 &emsp;&emsp; 尽管c++03标准没有明说标准库的线程的安全性，但我们可以遵循一个基本的原则：凡是非共享的对象都是彼此独立的，如果一个对象从始至终只被一个线程用到，那么它就是安全的。
 
 
+&emsp;
+## 5. 什么是 `happens-before`原则 ？
+&emsp;&emsp; 
+
+
+&emsp;
+## 6. 多线程的`errno` 和 多线程的`errno` 有何区别？
+&emsp;&emsp; 在传统 UNIX API 中， `errno` 是一全局整型变量。然而，这无法满足多线程程序的需要。如果线程调用的函数通过全局 `errno` 返回错误时，会与其他发起函数调用并检查 `errno` 的线程混淆在一起。换言之，这将引发竞争条件（race condition）。因此，在多线程程序中，每个线程都有属于自己的 `errno`。在 Linux 中， 线程特有 `errno` 的实现方式与大多数 UNIX 实现相类似：将 errno 定义为一个宏，可展开为函数调用，该函数返回一个可修改的左值（lvalue），且为每个线程所独有。（因为左值可以修改，多线程程序依然能以 errno=value 的方式对 errno 赋值。）
+&emsp;&emsp; 一言以蔽之， errno 机制在保留传统 UNIX API 报错方式的同时，也适应了多线程环境。
+> 最初的 POSIX.1 标准沿袭 K&R 的 C 语言用法，允许程序将 errno 声明为 `extern int errno`。SUSv3 却不允许这一做法（这一变化实际发生于 1995 年的 POSIX.1c 标准之中）。如今，需要声明 errno 的程序必须包含`<errno.h>`，以启用对 errno 的线程级实现。
+> 
+**总结**：
+&emsp;&emsp; 为了适配多线程，现在都把`errno`实现为一个宏，每个线程都有自己的`errno`，以避免竞争条件。
+
+
+&emsp;
+## 7. 同一进程内的多个线程 的资源
+### 7.1 同一进程内的多个线程共享了哪些资源？
+同一进程中的线程还共享一干其他属性，包括进程 ID、打开的文件描述符、信号处置、当前工作目录以及资源限制。
+除了全局内存之外，线程还共享了一干其他属性（这些属性对于进程而言是全局性的，
+而并非针对某个特定线程），包括以下内容。
+> 进程 ID（process ID）和父进程 ID。
+> 进程组 ID 与会话 ID（session ID）。
+> 控制终端。
+> 进程凭证（process credential）（用户 ID 和组 ID ）。
+> 打开的文件描述符。
+> 由 fcntl()创建的记录锁（record lock）。
+> 信号（signal）处置。
+> 文件系统的相关信息：文件权限掩码（umask）、当前工作目录和根目录。
+> 间隔定时器（setitimer()）和 POSIX 定时器（timer_create()）。
+> 系统 V（system V）信号量撤销（undo， semadj）值（47.8 节）。
+> 资源限制（resource limit）。
+> CPU 时间消耗（由 times()返回）。
+> 资源消耗（由 getrusage()返回）。
+> nice 值（由 setpriority()和 nice()设置）。
+### 7.2 哪些资源时各线程所独有？
+> 线程 ID（thread ID， 29.5 节）。
+> 信号掩码（signal mask）。
+> 线程特有数据（31.3 节）。
+> 备选信号栈（sigaltstack()）。
+> errno 变量。
+> 浮点型（floating-point）环境（见 fenv(3)）。
+> 实时调度策略（real-time scheduling policy）和优先级（35.2 节和 35.3 节）。
+> CPU 亲和力（affinity， Linux 所特有， 35.4 节将加以描述）。
+> 能力（capability， Linux 所特有，第 39 章将加以描述）。
+> 栈，本地变量和函数的调用链接（linkage）信息。
+> 
+
+
+&emsp;
+## 8. 多线程还是多进程？
+将应用程序实现为一组线程还是进程？我们先分析一下多线程、多进程各自的优缺点吧：
+**多线程相较于多线程的优点：**
+优点：
+> &emsp;&emsp; 线程间的数据共享很简单。相形之下，进程间的数据共享需要更多的投入。例如，创建共享内存段或者使用管道 pipe）。
+> &emsp;&emsp; 创建线程要快于创建进程。线程间的上下文切换（context-switch），其消耗时间一般也比进程要短。
+> 
+**多线程相较于多线程的缺点：**
+> &emsp;&emsp; 多线程编程时，需要确保调用线程安全（thread-safe）的函数，或者以线程安全的方式来调用函数。多进程应用则无需关注这些。
+> &emsp;&emsp; 某个线程中的 bug（例如，通过一个错误的指针来修改内存）可能会危及该进程的所有线程， 因为它们共享着相同的地址空间和其他属性。 相比之下， 进程间的隔离更彻底。
+> &emsp;&emsp; 每个线程都在争用宿主进程（host process）中有限的虚拟地址空间。特别是，一旦每个线程栈以及线程特有数据（或线程本地存储）消耗掉进程虚拟地址空间的一部分，则后续线程将无缘使用这些区域。虽然有效地址空间很大（例如，在 x86-32 平台上通常有 3GB），但当进程分配大量线程，亦或线程使用大量内存时，这一因素的限制作用也就突显出来。与之相反，每个进程都可以使用全部的有效虚拟内存，仅受制于实际内存和交换（swap）空间。
+> 
+**影响选择的还有如下几点。**
+> &emsp;&emsp; 在多线程应用中处理信号，需要小心设计。（作为通则，一般建议在多线程程序中避免使用信号。）关于线程与信号。
+> &emsp;&emsp; 在多线程应用中，所有线程必须运行同一个程序（尽管可能是位于不同函数中）。对于多进程应用，不同的进程可以运行不同的程序。
+> &emsp;&emsp; 除了数据，线程还可以共享某些其他信息（例如，文件描述符、信号处置、当前工作目录，以及用户 ID 和组 ID）。优劣之判，视应用而定。
+> 
+
+
+&emsp;
+## 9. 一个拥有多线程的进程的内存模式是怎样的？
+&emsp;&emsp; 同一程序中的所有线程均会独立执行相同程序，且共享同一份全局内存区域，其中包括初始化数据段（initialized data）、未初始化数据段（uninitialized data），以及堆内存段（heap segment）：
+<div align="center"> <img src="./pic/multi threads/memory model of a process which contained 4 threads.png"> </div>
+
+
+&emsp;
+## 10. 如何编译多线程程序？
+在 Linux 平台上， 在编译调用了 Pthreads API 的程序时， 需要设置 `cc -pthread `的编译选项。使用该选项的效果如下。
+* 定义_REENTRANT 预处理宏。这会公开对少数可重入（reentrant）函数的声明。
+* 程序会与库 libpthread 进行链接（等价于-lpthread）。
+> 编译多线程程序时的具体编译选项会因实现及编译器的不同而不同。 其他一些实现（例如 Tru64）使用 cc –pthread，而 Solaris 和 HP-UX 则使用 cc –mt。
+> 
+比如，在使用`g++`时，应该这样编译：
+```shell
+g++ -o test.o test.cpp --std=c++11 -pthread
+```
+
+
+&emsp;
+## 11. 什么是 主线程(main thread)？
+&emsp;&emsp; 启动程序时，产生的进程只有单条线程，称之为初始（initial）或主（main）线程。
+
+
+&emsp;
+## 12. 线程的执行顺序
+### 为什么说不能依赖线程的操作顺序？
+&emsp;&emsp; 调用 `pthread_create()`后，应用程序无从确定系统接着会调度哪一个线程来使用 CPU 资源（在多处理器系统中，多个线程可能会在不同 CPU 上同时执行）。程序如隐含了对特定调度顺序的依赖，则无疑会产生 竞争条件。
+### 如果要对执行顺序有要求，应该怎么做？
+&emsp;&emsp; 如果对执行顺序确有强制要求，那么就必须采用第 30 章所描述的同步技术。
+
+
+
 
 
 
@@ -118,42 +211,312 @@ struct tm localTimeInLN = kLondonTz.toLocalTime (now);
 &emsp;
 &emsp;
 # 二、`POSIX threads`库
-## 1. `Pthreads`函数的基本用法
 &emsp;&emsp; `Pthreads`函数有上百个，但是平常用的就那几个，下面介绍一下这些函数。
-### 1.1 如何创建线程？
+## 1. 如何创建线程？
 函数 `pthread_create()`负责创建一条新线程。
 ```cpp
-
+#include <pthread.h>
+int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
+                    void *(*start)(void *), void *arg);
+// Returns 0 on success, or a positive error number on error                    
 ```
-&emsp;&emsp; 
+&emsp;&emsp; **参数 thread** 指向 `pthread_t` 类型的缓冲区，在 `pthread_create()`返回前，会在此保存一个该线程的唯一标识。后续的 Pthreads 函数将使用该标识来引用此线程。
+&emsp;&emsp; **参数 attr** 是指向 `pthread_attr_t` 对象的指针，该对象指定了新线程的各种属性，如果将 attr 设置为 NULL，那么创建新线程时将使用各种默认属性。 
+&emsp;&emsp; **参数start、arg：** 新线程通过调用带有参数 `arg` 的函数 `start` （即 `start(arg)`）而开始执行。
+> 将参数 arg 声明为 void*类型，意味着可以将指向任意对象的指针传递给 start()函数。一般情况下， arg 指向一个全局或堆变量，也可将其置为 NULL。如果需要向 start()传递多个参数，可以将 arg 指向一个结构，该结构的各个字段则对应于待传递的参数。通过审慎的类型强制转换， arg 甚至可以传递 int 类型的值。
+> 严格说来，对于 `int` 与 `void*`之间相互强制转换的后果， C 语言标准并未加以定义。不过，大部分 C 语言编译器允许这样的操作，并且也能达成预期的目的，即 `int j == (int) ((void*) j)`。`start()`的返回值类型为 `void*`，对其使用方式与参数 `arg` 相同。对后续 `pthread_join()`函数的描述中，将论及对该返回值的使用方式。
+> 
 
-### 1.2
+
+
+&emsp;
+## 2 终止线程
+### 2.1 如何让主线程退出的情况下，其它线程继续运行？
+&emsp;&emsp; 主如果主线程调用了 `pthread_exit()`，而非调用 exit()或是执行 return 语句，那么其他线程将继续运行。
+### 2.2 什么情况下会导致进程中的所有线程立即终止？
+会导致进程中的所有线程立即终止的情况：
+> (1) 任意线程 调用了`exit()`;
+> (2) 主线程 在`main`函数中 执行了`return`语句
+> 
+### 2.3 有哪些方法可以终止线程？
+总的来说，可以以如下方式终止线程的运行。
+> (1) 线程 `start` 函数执行 return 语句并返回指定值。
+> (2) 线程调用 `pthread_exit()`（详见后述）。
+> (3) 调用 `pthread_cancel()`取消线程（在 32.1 节）。
+> (4) 任意线程调用了 `exit()`，或者主线程执行了 `return` 语句（在 `main()`函数中），都会导致进程中的所有线程立即终止。
+> 
+
+### 2.4 线程如何独立退出？（指的是不影响其它线程下退出）
+&emsp;&emsp; 每个线程随后可调用 `pthread_exit()`**独立退出。**（如有任一线程调用了 exit()，那么所有线程将立即终止。）
+
+### 2.5 `pthread_exit()`怎么用？
+`pthread_exit()`函数将终止调用线程，且其返回值可由另一线程通过调用 `pthread_join()`来获取：
 ```cpp
-
+include <pthread.h>
+void pthread_exit(void *retval);
 ```
-&emsp;&emsp; 
+&emsp;&emsp; **参数 retval** 指定了线程的返回值。 `Retval` 所指向的内容不应分配于线程栈中，因为线程终止后，将无法确定线程栈的内容是否有效。（例如，系统可能会立刻将该进程虚拟内存的这片区域重新分配，供一个新的线程栈使用。）出于同样的理由，也不应在线程栈中分配线程 `start` 函数的返回值。
+&emsp;&emsp; 如果主线程调用了 `pthread_exit()`，而非调用 `exit()`或是执行 `return` 语句，那么其他线程将继续运行。
 
-### 1.3
+
+
+&emsp;
+## 3 线程ID
+&emsp;&emsp; 一个进程内部的每个线程都有一个唯一标识，称为线程ID。
+### 3.1 如何获取线程ID？
+### 3.1.1 调用`pthread_create()`的线程 如何获取它创建的线程 的 线程ID？
+`pthread_create()`有一个参数用来返回其创建的线程 的 线程ID。
+### 3.1.2 线程自己 如何获取自己的线程ID？
+一个线程可以通过 `pthread_self()`来获取自己的 线程ID：
 ```cpp
-
+include <pthread.h>
+pthread_t pthread_self(void); // Returns the thread ID of the calling thread
 ```
-&emsp;&emsp; 
 
-### 1.4
+### 3.2 为什么说不能依赖`pthread_create()`返回的线程ID？
+&emsp;&emsp; SUSv3 明确指出，在新线程开始执行之前，实现无需对 thread 参数所指向的缓冲区进行初始化，即新线程可能会在 `pthread_create()`返回给调用者之前已经开始运行。如新线程需要获取自己的线程 ID，则只能使用 `pthread_self()`。
+
+### 3.3 线程ID 有什么用？
+线程 ID 在应用程序中非常有用：
+* 不同的 Pthreads函数 利用线程ID 来标识要操作的目标线程。这些函数包括 `pthread_join()`、 `pthread_detach()`、`pthread_cancel()`和 `pthread_kill()`等。
+* 在一些应用程序中，以特定线程的线程 ID 作为动态数据结构的标签，这颇有用处，既可用来识别某个数据结构的创建者或属主线程，又可以确定随后对该数据结构执行操作的具体线程
+
+### 3.4 如何判断两个线程ID是否相同？
+#### 3.4.1 如何比较？
 ```cpp
-
+include <pthread.h>
+// Returns nonzero value if t1 and t2 are equal, otherwise 0
+int pthread_equal(pthread_t t1, pthread_t t2); 
 ```
-&emsp;&emsp; 
-
-### 1.5
+例如，为了检查 调用线程的线程ID 与保存于变量`t1`中的线程ID 是否一致，可以编写如下代码：
 ```cpp
-
+if (pthread_equal(tid, pthread_self())
+	printf("tid matches self\n");
 ```
-&emsp;&emsp; 
+#### 3.4.2 为什么不直接用`==`？
+&emsp;&emsp; 因为必须将 `pthread_t` 作为一种不透明的数据类型加以对待， 所以函数 `pthread_equal()`是必须的。 Linux 将 `pthread_t` 定义为无符号长整型（`unsigned long`），但在其他实现中，则有可能是一个指针或结构。
+#### 3.4.3 `gettid()` 和 `pthread_self()` 有何不一样？
+**区别：** 
+&emsp;&emsp; `gettid()` 获取的是内核中线程ID
+&emsp;&emsp; `pthread_self` 是posix描述的线程ID。
+> &emsp;&emsp; POSIX 线程 ID 与 Linux 专有的系统调用 `gettid()`所返回的线程ID 并不相同。 POSIX 线程 ID 由线程库实现来负责分配和维护。`gettid()`返回的线程 ID 是一个由内核（Kernel）分配的数字，类似于进程 ID（process ID）。虽然在 Linux NPTL 线程实现中，每个 POSIX 线程都对应一个唯一的内核线程 ID，但应用程序一般无需了解内核线程ID（况且，如果程序依赖于这一信息，也将无法移植）。
+> 
 
-### 1.6
+### 3.5 线程ID 是否存在复用？
+&emsp;&emsp; 在 Linux 的线程实现中，线程 ID 在所有进程中都是唯一的。不过在其他实现中则未必如此， SUSv3 特别指出，应用程序若使用线程 ID 来标识其他进程的线程，其可移植性将无法得到保证。此外，在对已终止线程施以 `pthread_join()`，或者在已分离（detached）线程退出后，实现可以复用该线程的线程 ID。
+
+
+
+&emsp; 
+## 4. 连接（joining）已终止的线程
+### 4.1 什么是 连接(joining)？
+&emsp;&emsp; 以 <span style="color:red;font-weight:bold">阻塞的方式</span> 等待 `实参thread `指定的线程结束。当函数返回时，被等待线程的资源被收回。如果线程已经结束，那么该函数会立即返回。并且被join的线程必须是`joinable`的。
+
+### 4.2 如何连接(joining)？
+&emsp;&emsp; 函数 `pthread_join()`等待由 实参`thread` 标识的线程终止。如果线程已经终止，`pthread_join()`会立即返回）。这种操作被称为连接(joining)。
 ```cpp
+include <pthread.h>
 
+// Returns 0 on success, or a positive error number on error
+int pthread_join(pthread_t thread, void **retval);
+```
+形参讲解：
+> **thread** ： 待连接的线程的线程ID；
+> **retval** ： 若 `retval` 为一非空指针，将会保存线程终止时返回值的拷贝，该返回值亦即线程调用`return` 或 `pthred_exit()`时所指定的值。
+> 
+
+### 4.3 如果对同一线程多次 连接(joining) 会发生什么？
+&emsp;&emsp; 如向 `pthread_join()`传入一个之前已然连接过的线程 ID，将会导致无法预知的行为。例如，相同的线程 ID 在参与一次连接后恰好为另一新建线程所重用，再度连接的可能就是这个新线程。
+
+### 4.4 什么样的线程可以被 连接(joining)？ 
+&emsp;&emsp; 默认情况下，线程是可连接的(joinable)，也就是说，当线程退出时，其他线程可以通过调用 `pthread_join()`获取其返回状态。
+&emsp;&emsp; 有时，程序员并不关心线程的返回状态，只是希望系统在线程终止时能够自动清理并移除之。在这种情况下，可以调用 `pthread_detach()`并向 thread 参数传入指定线程的标识符，将该线程标记为处于分离detached）状态。
+&emsp;&emsp; 一旦线程处于分离状态，就不能再使用 `pthread_join()`来获取其状态，也无法使其重返“可连接”状态。
+
+### 4.5 如果未对 线程 连接，会发生什么后果？
+&emsp;&emsp; 若线程并未分离（detached），则必须使用 `ptherad_join()`来进行连接。如果未能连接，那么线程终止时将产生僵尸线程，与僵尸进程的概念相类似。除了浪费系统资源以外，僵尸线程若累积过多，应用将再也无法创建新的线程。
+
+### 4.6 `pthread_join()`执行的功能类似于针对进程的 `waitpid()`调用，它们之间有何差别？
+有如下区别：
+* ① 进程的wait()有明显的层次关系，而线程的join操作是没有的，线程之间的关系是对等的（peers）：
+> 进程中的任意线程均可以调用 `pthread_join()`与该进程的任何其他线程连接起来。 例如， 如果线程 A 创建线程 B， 线程 B 再创建线程 C，那么线程 A 可以连接线程 C， 线程 C 也可以连接线程 A。这与进程间的层次关系不同，父进程如果使用 fork()创建了子进程，那么它也是唯一能够对子进程调用 wait()的进程。调用 pthread_create()创建的新线程与发起调用的线程之间，就没有这样的关系。
+> 
+* ② 只能join指定线程，不能join“任意线程”;
+> 对于进程，则可以通过调用 `waitpid(-1, &status, options`做到这一点;
+> 而对于线程，必须指定 线程ID；
+> 
+* ③ 不能以非阻塞的方式进行连接
+> 
+
+### 4.7  线程join自己
+#### 4.7.1 会有什么后果？
+可能会有两种结果（都获得了 SUSv3 的支持）：
+> (1) 线程死锁，当试图加入自己时遭到阻塞，
+> (2) 或者调用 pthread_join()失败，返回错误为 EDEADLK。
+> 
+在 Linux 中，会发生后一种行为。
+#### 4.7.2 如何避免？
+在 `tid` 中给定一个线程ID，可使用如下代码来阻止这种不测事件：
+```cpp
+// 先判断要join的是不是自己，然后根据结果看是否join
+if (!pthread_equal(tid, pthread_self()))
+	pthread_join(tid, NULL);
+```
+
+
+
+&emsp; 
+## 5 线程的分离(detach)
+### 5.1 线程分离 有什么作用？
+&emsp;&emsp; 我们都知道，线程若不被join，则将变成僵尸线程；
+&emsp;&emsp; 若不希望不想调用join，又不想该线程最后变成僵尸进程，则需要调用`pthread_detach()`函数将该线程标记为 分离状态，处于分离状态的线程将在其终止时被OS自动清理，避免成为僵尸线程。
+&emsp;&emsp; **总结**：线程分离可以理解为偷懒，因为处于分离状态的线程不需要join，OS会自动回收它，避免成为僵尸线程。
+
+### 5.2 如何分离一个线程？
+&emsp;&emsp; 有时，程序员并不关心线程的返回状态，只是希望系统在线程终止时能够自动清理并移除之。在这种情况下，可以调用 `pthread_detach()`并向 thread 参数传入指定线程的标识符，将该线程标记为处于分离（detached）状态：
+```cpp
+#include <pthread.h>
+// Returns 0 on success, or a positive error number on error
+int pthread_detach(pthread_t thread);
+```
+
+### 5.3 一个线程如何分离自己？
+```cpp
+pthread_detach(pthread_self());
+```
+
+### 5.4 分离状态 是否可逆？
+&emsp;&emsp; 不可逆，一旦线程处于分离状态，就不能再使用 `pthread_join()`来获取其状态，也无法使其重返“可连接”状态。
+
+### 5.5 线程分离状后，是否意味着就和同一进程的其它线程没有关系了？
+&emsp;&emsp; 不是。其他线程调用了 `exit()`，或是主线程执行 `return` 语句时，即便遭到分离的线程也还是会受到影响。此时，不管线程处于可连接状态还是已分离状态，进程的所有线程会立即终止。
+&emsp;&emsp; 换而言之，`pthread_detach()`只是控制线程终止之后所发生的事情，而非何时或如何终止线程。
+
+
+
+&emsp;
+## 6. 僵尸线程
+### 6.1 僵尸线程是如何产生的？
+&emsp;&emsp; 若线程并未分离（detached），则必须使用 `ptherad_join()`来进行连接。如果未能连接，那么线程终止时将产生僵尸线程，与僵尸进程的概念相类似。
+### 6.2 僵尸线程的危害
+&emsp;&emsp; 除了浪费系统资源以外，僵尸线程若累积过多，应用将再也无法创建新的线程。
+
+
+
+&emsp;
+## 7. 一个`Pthreads`的使用实例：连接任意已终止线程
+### 7.1 原理
+&emsp;&emsp; 前面已然提及，使用 `pthread_join()`只能连接一个指定线程。且该函数也未提供任何机制去连接任意的已终止线程。
+&emsp;&emsp; 把所有线程放到一个数组里，当有一个线程终止的时候会通过条件变量发信号给主函数里的`pthread_cond_wait()`函数，主线程苏醒后遍历线程数组，检查有哪个线程的状态是 `TS_TERMINATED` ，然后将其join，然后回去继续 wait，直到所有线程均已join。因此，我们需要做如下几件事：
+> (1) 需要定义一个 struct ，其中包含tid，线程状态都能；
+> (2) 其它就和生产者和消费者中使用pthread_cond_wait()函数差不多；
+> 
+```cpp
+#include <pthread.h>
+#include "tlpi_hdr.h"
+
+static pthread_cond_t threadDied = PTHREAD_COND_INITIALIZER;
+static pthread_mutex_t threadMutex = PTHREAD_MUTEX_INITIALIZER;
+				/* Protects all of the following global variables */
+
+static int totThreads = 0; /* Total number of threads created */
+static int numLive = 0; /* Total number of threads still alive or
+						   terminated but not yet joined */
+
+static int numUnjoined = 0; /* Number of terminated threads that
+								have not yet been joined */
+
+enum tstate {		 /* Thread states */
+	TS_ALIVE, 		 /* Thread is alive */
+	TS_TERMINATED, 	 /* Thread terminated, not yet joined */
+	TS_JOINED 		 /* Thread terminated, and joined */
+};
+
+static struct { 		/* Info about each thread */
+	pthread_t tid; 		/* ID of this thread */
+	enum tstate state;  /* Thread state (TS_* constants above) */
+	int sleepTime; 		/* Number seconds to live before terminating */
+} *thread;
+
+static void * 			/* Start function for thread */
+threadFunc(void *arg)
+{
+	int idx = *((int *) arg);
+	int s;
+	sleep(thread[idx].sleepTime); /* Simulate doing some work */
+	printf("Thread %d terminating\n", idx);
+
+	s = pthread_mutex_lock(&threadMutex);
+	if (s != 0)
+		errExitEN(s, "pthread_mutex_lock");
+
+	numUnjoined++;
+	thread[idx].state = TS_TERMINATED;
+
+	s = pthread_mutex_unlock(&threadMutex);
+	if (s != 0)
+		errExitEN(s, "pthread_mutex_unlock");
+	s = pthread_cond_signal(&threadDied);
+	if (s != 0)
+		errExitEN(s, "pthread_cond_signal");
+
+	return NULL;
+}
+
+int
+main(int argc, char *argv[])
+{
+	int s, idx;
+	if (argc < 2 || strcmp(argv[1], "--help") == 0)
+		usageErr("%s nsecs...\n", argv[0]);
+		
+	thread = calloc(argc - 1, sizeof(*thread));
+	if (thread == NULL)
+		errExit("calloc");
+
+	/* Create all threads */
+
+	for (idx = 0; idx < argc - 1; idx++) {
+		thread[idx].sleepTime = getInt(argv[idx + 1], GN_NONNEG, NULL);
+		thread[idx].state = TS_ALIVE;
+		s = pthread_create(&thread[idx].tid, NULL, threadFunc, &idx);
+		if (s != 0)
+			errExitEN(s, "pthread_create");
+	}
+
+	totThreads = argc - 1;
+	numLive = totThreads;
+
+	/* Join with terminated threads */
+
+	while (numLive > 0) {
+		s = pthread_mutex_lock(&threadMutex);
+		if (s != 0)
+			errExitEN(s, "pthread_mutex_lock");
+		while (numUnjoined == 0) {
+			s = pthread_cond_wait(&threadDied, &threadMutex);
+			if (s != 0)
+				errExitEN(s, "pthread_cond_wait");
+		}
+		for (idx = 0; idx < totThreads; idx++) {
+			if (thread[idx].state == TS_TERMINATED){
+				s = pthread_join(thread[idx].tid, NULL);
+				if (s != 0)
+					errExitEN(s, "pthread_join");
+
+				thread[idx].state = TS_JOINED;
+				numLive--;
+				numUnjoined--;
+
+				printf("Reaped thread %d (numLive=%d)\n", idx, numLive);
+			}
+		}
+		s = pthread_mutex_unlock(&threadMutex);
+		if (s != 0)
+			errExitEN(s, "pthread_mutex_unlock");
+	}
+	exit(EXIT_SUCCESS);
+}
 ```
 &emsp;&emsp; 
 
@@ -164,17 +527,38 @@ struct tm localTimeInLN = kLondonTz.toLocalTime (now);
 &emsp;&emsp; 
 
 
-## . Linux上的线程标识
-### .1 如何获取当前线程的 线程ID？
-&emsp;&emsp; 使用`pthread_self()`函数即可。
-### .2 为什么说不能依赖`pthread_create()`返回的线程ID？
-&emsp;&emsp; SUSv3 明确指出，在新线程开始执行之前，实现无需对 thread 参数所指向的缓冲区进行初始化，即新线程可能会在 `pthread_create()`返回给调用者之前已经开始运行。如新线程需要获取自己的线程 ID，则只能使用 `pthread_self()`。
 
 
-
-
-
-
+## 一些练习题
+### 若一线程执行了如下代码，可能会产生什么结果？
+```cpp
+pthread_join(pthread_self(), NULL);
+```
+在 Linux 上编写一个程序，观察一下实际会发生什么情况。假设代码中有一变量 `tid`，其中包含了某个线程 ID，在自身发起 `pthread_join(tid, NULL)`调用时，要避免造成
+**解答**：
+可能会有两种结果（都获得了 SUSv3 的支持）：
+> (1) 线程死锁，当试图加入自己时遭到阻塞，
+> (2) 或者调用 pthread_join()失败，返回错误为 EDEADLK。
+> 
+在 Linux 中，会发生后一种行为。在 tid 中给定一个线程 ID，可使用如下代码来阻止这种不测事件。
+```cpp
+if (!pthread_equal(tid, pthread_self()))
+	pthread_join(tid, NULL);
+```
+### 除了缺少错误检查，以及对各种变量和结构的声明外，下列程序还有什么问题？
+```cpp
+static void * threadFunc(void *arg){
+	struct someStruct *pbuf = (struct someStruct *) arg;
+	/* Do some work with structure pointed to by 'pbuf' */
+}
+int main(int argc, char *argv[]){
+	struct someStruct buf;
+	pthread_create(&thr, NULL, threadFunc, (void *) &buf);
+	pthread_exit(NULL);
+}
+```
+**解答：**
+&emsp;&emsp; 没有在主线程中对子线程进行join，而是在创建一个线程之后就直接用了pthread_exit()退出了，问题是若主线程调用了pthread_exit()， 那么其他线程将继续运行，因此该程序在主线程终止后， threadFunc()函数继续对主线程堆栈中的数据进行操作，结果难以预测。
 
 &emsp;
 &emsp;
