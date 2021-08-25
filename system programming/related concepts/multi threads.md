@@ -498,6 +498,7 @@ main(int argc, char *argv[])
 			if (s != 0)
 				errExitEN(s, "pthread_cond_wait");
 		}
+		// 遍历，找出状态为TS_TERMINATED的线程，然后对该线程join
 		for (idx = 0; idx < totThreads; idx++) {
 			if (thread[idx].state == TS_TERMINATED){
 				s = pthread_join(thread[idx].tid, NULL);
@@ -511,6 +512,7 @@ main(int argc, char *argv[])
 				printf("Reaped thread %d (numLive=%d)\n", idx, numLive);
 			}
 		}
+		// pthread_cond_wait() 会自动加锁
 		s = pthread_mutex_unlock(&threadMutex);
 		if (s != 0)
 			errExitEN(s, "pthread_mutex_unlock");
