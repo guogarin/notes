@@ -404,8 +404,39 @@ pthread_detach(pthread_self());
 
 
 &emsp;
-## 7. 一个`Pthreads`的使用实例：连接任意已终止线程
-### 7.1 原理
+## 7. 多线程程序的初始化安全
+### 7.1 多线程程序为什么需要注意初始化安全？
+**多线程程序经常有这样的需求：** 不管创建了多少线程，有些初始化动作只能发生一次。例如：
+> &emsp; 程序可能需要执行 `pthread_mutex_init()`对带有特殊属性的互斥量进行初始化，而且必须只能初始化一次：
+> &emsp;&emsp;&emsp; (1) 如果由主线程来创建新线程，那么这一点易如反掌：可以在创建依赖于该初始化的线程之前进行初始化。
+> &emsp;&emsp;&emsp; (2) 不过，对于库函数而言，这样处理就不可行，因为调用者在初次调用库函数之前可能已经创建了这些线程。故而需要这样的库函数：无论首次为任何线程所调用，都会执行初始化动作。
+> 
+
+### 7.2 多线程程序如何保证初始化安全？
+可以通过函数 `pthread_once()`实现一次性初始化。
+```cpp
+#include <pthread.h>
+
+pthread_once_t once_var = PTHREAD_ONCE_INIT;
+// Returns 0 on success, or a positive error number on error
+int pthread_once(pthread_once_t *once_control, void (*init)(void));
+```
+利用 **参数`once_control`** 的状态，函数`pthread_once()`可以确保无论有多少线程对`pthread_once()`调用了多少次，也只会执行一次由 `init` 指向的调用者定义函数；另外，参数 `once_control` 必须是一指针，指向初始化为 `PTHREAD_ONCE_INIT` 的静态变量：
+```cpp
+pthread_once_t once_var = PTHREAD_ONCE_INIT;
+```
+**init函数** 没有任何参数，形式如下：
+```cpp
+init(void){
+	/* Function body */
+}
+```
+
+
+
+&emsp;
+## 8. 一个`Pthreads`的使用实例：连接任意已终止线程
+### 8.1 原理
 &emsp;&emsp; 前面已然提及，使用 `pthread_join()`只能连接一个指定线程。且该函数也未提供任何机制去连接任意的已终止线程。
 &emsp;&emsp; 把所有线程放到一个数组里，当有一个线程终止的时候会通过条件变量发信号给主函数里的`pthread_cond_wait()`函数，主线程苏醒后遍历线程数组，检查有哪个线程的状态是 `TS_TERMINATED` ，然后将其join，然后回去继续 wait，直到所有线程均已join。因此，我们需要做如下几件事：
 > (1) 需要定义一个 struct ，其中包含tid，线程状态都能；
