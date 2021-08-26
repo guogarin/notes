@@ -551,14 +551,198 @@ main(int argc, char *argv[])
 	exit(EXIT_SUCCESS);
 }
 ```
-&emsp;&emsp; 
 
-### 1.7
+
+
+&emsp; 
+## 9. 线程取消(thread cancellation)
+### 9.1  线程取消作用是？
+&emsp;&emsp; 使用线程取消，一个线程 可以对 另一个线程 提出取消申请，即线程被动终止的一种情况。
+
+### 9.2 什么时候 会使用 线程取消？
+&emsp;&emsp; 有时候，需要将一个线程取消（cancel）。亦即，向线程发送一个请求，要求其立即退出。比如：
+> &emsp;&emsp; ① 一组线程正在执行一个运算，一旦某个线程检测到错误发生，需要其他线程退出，取消线程的功能这时就派上用场。
+> &emsp;&emsp; ②还有一种情况，一个由图形用户界面（GUI）驱动的应用程序可能会提供一个“取消”按钮，以便用户可以终止后台某一线程正在执行的任务。这种情况下，主线程（控制图形用户界面）需要请求后台线程退出。
+> 
+
+### 9.3 调用了线程取消，是不是就意味着目标线程立马退出？
+&emsp;&emsp; 并不是，`pthread_cancel()`调用并不等待线程终止，它只提出请求。线程在取消请求(pthread_cancel)发出后会继续运行，直到到达某个取消点(取消点是线程检查是否被取消并按照请求进行动作的一个位置)。
+
+### 9.4 取消线程 的权限
+
+
+### 9.5 怎么使用 线程取消？
+#### 9.5.1  Pthread 线程取消的 API
+##### (1) 发送取消请求
+函数 `pthread_cancel()`向 由`thread`指定的线程 发送一个取消请求：
+```cpp
+#include <pthread.h>
+// Returns 0 on success, or a positive error number on error
+int pthread_cancel(pthread_t thread);
+```
+发出取消请求后，函数 `pthread_cancel()`当即返回，不会等待目标线程的退出。
+准确地说，目标线程会发生什么？何时发生？这些都取决于 线程取消状态（state）和 线程取消类型（type）。
+##### (2) 设置 取消状态（Cancellation State） 
+```cpp
+#include <pthread.h>
+// return 0 on success, or a positive error number on error
+int pthread_setcancelstate(int state, int *oldstate);
+```
+函数 `pthread_setcancelstate()`会将调用线程的取消性状态置为**参数 state**所给定的值。该参数的值如下。
+**① `PTHREAD_CANCEL_DISABLE`**
+> 线程不可取消。如果此类线程收到取消请求，则会将请求挂起，直至将线程的取消状态置为启用。
+> 
+**② `PTHREAD_CANCEL_ENABLE`**
+> 线程可以取消。这是新建线程取消性状态的默认值。
+> 
+&emsp;&emsp; 线程的前一取消性状态将返回至**参数 oldstate** 所指向的位置。
+&emsp;&emsp; 如果对前一状态没有兴趣， Linux 允许将 `oldstate` 置为 `NULL`。在很多其他的系统实现中，情况也是如此。不过， SUSv3 并没有规范这一特性，所以要保证应用的可移植性，就不能依赖这一特性。应该总是为 oldstate 设置一个非 `NULL` 的值。
+&emsp;&emsp; 如果线程执行的代码片段需要不间断地一气呵成，那么临时屏闭线程的取消性状态（`PTHREAD_CANCEL_DISABLE`）就变得很有必要。
+&emsp;&emsp; 如果线程的取消性状态为“启用”（`PTHREAD_CANCEL_ENABLE`），那么对取消请求的处理则取决于线程的取消性类型，该类型可以通过调用函数 `pthread_setcanceltype()`时的参数`type` 给定。
+
+##### (3) 设置  取消类型（Cancellation Type）
+```cpp
+#include <pthread.h>
+// return 0 on success, or a positive error number on error
+int pthread_setcanceltype(int type, int *oldtype);
+```
+**参数 type** 有如下值：
+**① `PTHREAD_CANCEL_ASYNCHRONOUS`**
+&emsp;&emsp; 可能会在任何时点（也许是立即取消，但不一定）取消线程。异步取消的应用场景很少。
+**② `PTHREAD_CANCEL_DEFERED`**
+&emsp;&emsp; 取消请求保持挂起状态，直至到达取消点（cancellation point，见下节）。这也是新建线程的缺省类型。后续各节将介绍延迟取消（deferred cancelability）的更多细节。线程原有的取消类型将返回至参数 oldtype 所指向的位置。
+**参数 oldstate** ： 如果不关心原有取消类型， 许多系统实现（包括 Linux）允许将 `oldtype` 置为 NULL。同样， SUSv3 也没有规范这一行为，所以需要保障可移植性的应用不应使用这一特性，应该总是为 `oldtype` 设置一个非 `NULL` 值。
+
+##### (4) 添加取消点
+&emsp;&emsp; 假设线程执行的是一个不含取消点函数，这时，该线程永远也不会响应取消请求。此时可以使用函数 `pthread_testcancel()`来 创建一个取消点。线程如果已有处于挂起状态的取消请求，那么只要调用该函数，线程就会随之终止：
+```cpp
+#include <pthread.h>
+void pthread_testcancel(void);
+```
+当线程执行的代码未包含取消点时，可以周期性地调用 `pthread_testcancel()`，以确保对其他线程向其发送的取消请求做出及时响应。
+
+##### (5) 添加取消函数
+```cpp
+#include <pthread.h>
+void pthread_cleanup_push(void (*routine)(void*), void *arg);
+void pthread_cleanup_pop(int execute);
+```
+
+### 9.7 取消点(Cancellation Points)
+#### 9.7.1 什么是取消点
+&emsp;&emsp; 取消点就是响应外部取消请求（其它线程调用`pthread_cancel()`）的一个位置。
+
+#### 9.7.2 取消点的作用？
+&emsp;&emsp; 取消点 就是 目标线程 响应取消请求的一个位置，如果一个线程不包含取消点，即使有人给它发了取消请求，它也不会取消。
+&emsp;&emsp; **也就是说，** 假如 线程B 对 线程A 发起取消请求，只有在 线程A 执行到了取消点，该线程才有可能被取消。举个例子：
+> &emsp;&emsp; 城市里的公交车只在 特定的公交站（取消点）停车，当乘客（发起线程取消的线程B）叫司机停车时，司机（线程B）只有在公交站才会停车。
+> 
+
+#### 9.7.3 如何定义取消点？
+**(1) 有一些特定的函数本身就是取消点**，比如：
+<div align="center"> <img src="./pic/multi threads/Functions required to be cancellation points by SUSv3.png"> </div>
+
+**(2) 自己添加一个取消点**
+&emsp;&emsp; 函数 `pthread_testcancel()`可以产生一个取消点。
+
+### 9.8 下列的代码可以取消吗？如果不能，该怎么修改？
+```cpp
+#include <stdio.h>    
+#include <stdlib.h>    
+#include <pthread.h>    
+#include <unistd.h>    
+  
+void* func(void   *)   
+{   
+	pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);           //允许退出线程   
+	pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS,   NULL);   //设置立即取消  
+	while (1) { }   
+	return   NULL;   
+}   
+  
+int main(int argc, char *argv[])   
+{   
+	pthread_t thrd;   
+	pthread_attr_t attr;   
+	pthread_attr_init(&attr);   
+	pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);   
+	
+	if ( pthread_create(&thrd, &attr, func, NULL) )   {   
+		perror( "pthread_create   error ");   
+		exit(EXIT_FAILURE);   
+	}   
+	
+	if (!pthread_cancel(thrd) )   {   
+		printf("pthread_cancel OK\n ");   
+	}   
+	
+	sleep(10);   
+	return 0;   
+}  
+```
+不会，因为`func()`函数不含取消点，子线程一直在`while()`循环，没有挂起，所以不能将其取消，如果要将其取消，需求添加一个取消点：
+```cpp
+void* func(void   *)   
+{   
+	pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);           //允许退出线程   
+	pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS,   NULL);   //设置立即取消  
+	while (1) { 
+		pthread_testcancel();
+	}   
+	return   NULL;   
+}   
+```
+
+### 9.9 清理函数(cleanup handler)
+#### 9.9.1 清理函数的 作用是？
+&emsp;&emsp; 一旦有处于挂起状态的取消请求，线程在执行到取消点时如果只是草草收场，这会将共享变量以及 Pthreads 对象（例如互斥量）置于一种不一致状态，可能导致进程中其他线程产生错误结果、死锁，甚至造成程序崩溃。
+&emsp;&emsp; 为了避免上述的情况，线程可以设置一个或多个清理函数，当线程遭取消时会自动运行这些函数，在线程终止之前可执行诸如修改全局变量，解锁互斥量等动作。
+&emsp;&emsp; **线程取消会导致线程退出，OS不会帮忙释放资源，需要通过清理函数来释放资源。**
+
+#### 9.9.2 清理函数的执行步骤
+&emsp;&emsp; 每个线程都可以拥有一个清理函数栈。当线程遭取消时，会沿该栈自顶向下依次执行清理函数，首先会执行最近设置的函数，接着是次新的函数，以此类推。当执行完所有清理函数后，线程终止。
+> 关于为什么清理函数的执行顺序是反着来的，可以这么理解：函数是记录在栈中的，这就意味着它们的执行顺序和它们注册时相反（后进先出）。
+> 
+
+#### 9.9.3 如何使用？
+&emsp;&emsp; 见 TLPI 32.5节
+
+### 能不能直接杀死进程？
+
+
+
+&emsp;
+## 10 线程栈(Thread Stacks)
+### 10.1 什么是线程栈？作用是？
+&emsp;&emsp; 创建线程时，每个线程都有一个属于自己的线程栈，且大小固定。
+&emsp;&emsp; 线程栈是用来放 自动变量的，可以理解为线程自己的栈区。
+<div align="center"> <img src="./pic/multi threads/memory model of a process which contained 4 threads.png"> </div>
+
+### 10.2 同一进程中，每个线程的线程栈都一样大吗？
+&emsp;&emsp; 不是，为了应对栈的增长），主线程栈的空间要大出许多，从上面的图就能看出来。
+
+### 10.3 改变线程栈的大小
+#### 10.3.1 为什么要改？
+改变线程栈一般有两个原因：
+* (1) 更大的线程栈可以容纳大型的自动变量或者深度的嵌套函数调用（也许是递归调用），这是改变每个线程栈大小的原因之一。
+* (2) 而另一方面，应用程序可能希望减小每个线程栈，以便进程可以创建更多的线程：
+> 系统可创建的线程数量为： `可支配的内存大小 / 线程默认栈大小`，因此减小默认线程栈的大小可以增加可创建的线程数量。
+> 
+#### 10.3.2 如何修改线程栈的大小？
+有两个方法：
+&emsp;&emsp; (1) 在通过线程属性对象创建线程时，调用函数`pthread_attr_setstacksize()`所设置的线程属性（29.8 节）决定了线程栈的大小。
+&emsp;&emsp; (2) 而使用与之相关的另一函数 `pthread_attr_setstack()`，可以同时控制线程栈的大小和位置，不过设置栈的地址将降低程序的可移植性。
+
+
+
+&emsp;
+## 11. 给线程发送信号
+见 TLPI 33.2节
+
 ```cpp
 
 ```
 &emsp;&emsp; 
-
 
 
 
@@ -593,16 +777,290 @@ int main(int argc, char *argv[]){
 **解答：**
 &emsp;&emsp; 没有在主线程中对子线程进行join，而是在创建一个线程之后就直接用了pthread_exit()退出了，问题是若主线程调用了pthread_exit()， 那么其他线程将继续运行，因此该程序在主线程终止后， threadFunc()函数继续对主线程堆栈中的数据进行操作，结果难以预测。
 
+
+
+
+
+
 &emsp;
 &emsp;
 &emsp;
-# 三、关于多线程的一些问题的解答（摘自muduo的书中）
+# 三、可重入 和 线程安全(thread safe)
+## 1. 可重入函数(reentrant function)
+### 1.1 什么是可重入函数
+&emsp;&emsp; 要解释可重入函数为何物，首先需要区分单线程程序和多线程程序。典型 UNIX 程序都具有一条执行线程，贯穿程序始终， CPU 围绕单条执行逻辑来处理指令。而对于多线程程序而言，同一进程却存在多条独立、并发的执行逻辑流。
+&emsp;&emsp; 如果 <span style="color:red;"> 同一个进程的 </span><span style="color:green;">多条线程</span> 可以<span style="color:red;">同时安全地</span>调用某一函数，那么该函数就是可重入的。此处，“安全”意味着，无论其他线程调用该函数的执行状态如何，函数均可产生预期结果。
+&emsp;&emsp;**SUSv3 对可重入函数的定义是**：函数由两条或多条线程调用时，即便是交叉执行，其效果也与各线程以未定义1顺序依次调用时一致。
+
+### 1.2 什么样的函数是可重入函数？为什么？
+* (1) 不能使用`malloc`系列函数，因为`malloc`函数内部是通过全局链表实现的
+&emsp;&emsp;  `malloc()`和 `free()`维护有一个针对已释放内存块的链表，用于从堆中重新分配内存。如果主程序在调用 malloc()期间为一个同样调用 malloc()的信号处理器函数所中断，那么该链表可能会遭到破坏。因此，`malloc()`函数族以及使用它们的其他库函数都是不可重入的。
+* (2) 不可以调用标准`I/O`库函数，这些库函数很多都不是可重入的
+&emsp;&emsp; 就拿 `stdio`函数库成员 来说吧（`printf()`、 `scanf()`等），它们会为缓冲区 `I/O` 更新内部数据结构。所以，如果在信号处理器函数中调用了 `printf()`， 而主程序又在调用` printf()`或其他 `stdio` 函数期间遭到了处理器函数。
+的中断，那么有时就会看到奇怪的输出，甚至导致程序崩溃或者数据的损坏。
+* (3) 函数不能有全局或者静态变量，否则连线程安全都不满足了
+&emsp;&emsp;更新全局变量或静态数据结构的函数可能是不可重入的。（只用到本地变量的函数肯定是可
+重入的。）如果对函数的两个调用（例如：分别由两条执行线程发起）同时试图更新同一全局变量或数据类型，那么二者很可能会相互干扰并产生不正确的结果。例如，假设某线程正在为一链表数据结构添加一个新的链表项，而另一线程也正试图更新同一链表。由于为链表添加新项涉及对多枚指针的更新，一旦另一线程中断这些步骤并修改了相同的指针，结果就会产生混乱。
+
+
+
+&emsp;
+&emsp; 
+## 2. 线程安全(thread safe)
+### 2.1 什么是线程安全？
+&emsp;&emsp; 若函数可同时供多个线程安全调用，则称之为线程安全函数；反之，如果函数不是线程安全的，则不能并发调用。依据[JCP]， 一个线程安全的class应当满足以下三个条件：
+* (1)多个线程同时访问时， 其表现出正确的行为。
+* (2)无论操作系统如何调度这些线程， 无论这些线程的执行顺序如何交织（interleaving） 。
+* (3)调用端代码无须额外的同步或其他协调动作。
+依据这个定义， C++标准库里的大多数class都不是线程安全的， 包括`std:: string`、`std::vector`、`std::map`等， 因为这些`class`通常需要在外部加锁才能供多个线程同时访问。
+&emsp;&emsp; 从本质上来说，“线程安全”不是指线程的安全，而是指内存的安全。为什么如此说呢？这和操作系统有关。
+&emsp;&emsp; 目前主流操作系统都是多任务的，即多个进程同时运行。为了保证安全，每个进程只能访问分配给自己的内存空间，而不能访问别的进程的，这是由操作系统保障的。
+&emsp;&emsp; 在每个进程的内存空间中都会有一块特殊的公共区域，通常称为堆（内存）。进程内的所有线程都可以访问到该区域，这就是造成问题的潜在原因。
+&emsp;&emsp; 假设某个线程把数据处理到一半，觉得很累，就去休息了一会，回来准备接着处理，却发现数据已经被修改了，不是自己离开时的样子了。可能被其它线程修改了。
+&emsp;&emsp; 比如把你住的小区看作一个进程，小区里的道路/绿化等就属于公共区域。你拿1万块钱往地上一扔，就回家睡觉去了。睡醒后你打算去把它捡回来，发现钱已经不见了。可能被别人拿走了。因为公共区域人来人往，你放的东西在没有看管措施时，一定是不安全的。内存中的情况亦然如此。
+&emsp;&emsp; 所以线程安全指的是，在堆内存中的数据由于可以被任何线程访问到，在没有限制的情况下存在被意外修改的风险。
+&emsp;&emsp; 也就是说，堆内存空间在没有保护机制的情况下，对多线程来说是不安全的地方，因为你放进去的数据，可能被别的线程“破坏”。
+
+### 2.2 线程安全的实现
+#### 2.2.1 有哪些方法可以实现线程安全？它们各自有何优缺点？
+**一共有四种方法：**
+<span style="color:red;font-weight:bold"> ① 用同步原语(互斥锁、共享变量)来协调对共享资源的访问。 </span>
+
+用互斥锁实现线程安全的不足：
+> (1) 由于互斥量的加、解锁开销，故而也带来了性能的下降；
+> (2) 造成并发性能的下降，因为同一时点只能有一个线程运行该函数，仅在函数中操作共享变量（临界区）的代码前后加入互斥锁可以提升并发性能，除非出现多个线程需要同时执行同一临界区的情况。
+> 
+<span style="color:red;font-weight:bold"> ① 线程特有数据(Thread-Specific Data) </span>
+
+优点：
+> 无需修改原有的函数接口；
+> 
+缺点：
+> 写起来比较难
+> 
+<span style="color:red;font-weight:bold"> ③ 线程局部存储(Thread-Local Storage) </span>
+
+优点：
+> 比线程特有数据的使用要简单。要创建线程局部变量，只需简单地在全局或静态变量的声明中包含`__thread` 说明符即可。
+> 也无需修改原有的函数接口；
+> 
+<span style="color:red;font-weight:bold"> ④ 将函数实现为可重入的 </span>
+
+优点：
+> 最有效的方式
+> 
+缺点：
+> 对于一些已存在的库函数，需要修改其接口
+> 
+
+#### 2.2.2 如何 在不改变函数接口定义的情况下 实现线程安全？
+&emsp;&emsp; 在**不改变函数接口定义的情况下**，保障不安全函数的线程安全有两种技术：
+> ① 线程特有数据(Thread-Specific Data)   
+> ② 线程局部存储(Thread-Local Storage)
+> 
+这两种技术均允许函数分配持久的、基于线程的存储。
+&emsp;&emsp; **在单线程程序中**，我们经常要使用全局变量来实现多个函数间共享数据。**在多线程环境下**，由于数据空间是共享的，因此全局变量也为所有线程所共有。但有时在应用程序设计中有必要提供线程私有的全局变量，仅在某个线程中有效，但可以跨多个函数访问，这样每个线程访问它自己独立的数据空间，而不用担心和其它线程的同步访问。
+> 比如：在程序中每个线程都使用同一个指针索引一个链表，并在多个函数内通过指针对链表进行操作，但是每个线程通过指针索引的链表都是自己独有的数据。
+> 
+
+#### 2.2.3  线程特有数据
+POSIX 线程库提供了如下 API 来管理线程特有数据：
+##### (1) 创建 key
+```cpp
+int pthread_key_create(pthread_key_t *key, void (*destructor)(void *));
+```
+> &emsp;&emsp; **第一参数 key** 指向 pthread_key_t 的对象的指针。请注意这里 pthread_key_t 的对象占用的空间是用户事先分配好的，pthread_key_create 不会动态生成 pthread_key_t 对象。
+> &emsp;&emsp; **第二参数 desctructor**，如果这个参数不为空，那么当每个线程结束时，系统将调用这个函数来释放绑定在这个键上的内存块。
+> 
+
+##### (2) 动态数据初始化
+有时我们在线程里初始化时，需要避免重复初始化。我们希望一个线程里只调用 pthread_key_create 一次，这时就要使用 pthread_once与它配合。
+```cpp
+int pthread_once(pthread_once_t *once_control, void (*init_routine)(void));
+```
+> &emsp;&emsp; 第**一个参数 once_control** 指向一个 pthread_once_t 对象，这个对象必须是常量 PTHREAD_ONCE_INIT，否则 pthread_once 函数会出现不可预料的结果。
+> &emsp;&emsp; **第二个参数 init_routine**，是调用的初始化函数，不能有参数，不能有返回值。
+如果成功则返回0，失败返回非0值。
+
+##### (3) 键与线程数据关联
+创建完键后，必须将其与线程数据关联起来。关联后也可以获得某一键对应的线程数据。关联键和数据使用的函数为：
+```cpp
+int pthread_setspecific(pthread_key_t *key, const void *value);
+```
+第一参数 key 指向键。
+第二参数 value 是欲关联的数据。
+函数成功则返回0，失败返回非0值。
+
+注意：用 pthread_setspecific 为一个键指定新的线程数据时，并不会主动调用析构函数释放之前的内存，所以调用线程必须自己释放原有的线程数据以回收内存。
+
+##### (4) 获取键管理的线程数据
+获取与某一个键关联的数据使用函数的函数为：
+```cpp
+void *pthread_getspecific(pthread_key_t *key);
+```
+参数 key 指向键。
+如果有与此键对应的数据，则函数返回该数据，否则返回NULL。
+
+##### (5) 删除一个键
+删除一个键使用的函数为：
+```cpp
+int pthread_key_delete(pthread_key_t key);
+```
+##### (6) 一个实例(摘自TLPI)
+```cpp
+#define _GNU_SOURCE /* Get '_sys_nerr' and '_sys_errlist' declarations from <stdio.h> */
+
+#include <stdio.h>
+#include <string.h> /* Get declaration of strerror() */
+#include <pthread.h>
+#include "tlpi_hdr.h"
+
+static pthread_once_t once = PTHREAD_ONCE_INIT;
+static pthread_key_t strerrorKey;
+
+/* Maximum length of string in per-thread buffer returned by strerror() */
+#define MAX_ERROR_LEN 256 
+
+static void /* Free thread-specific data buffer */
+destructor(void *buf){
+	free(buf);
+}
+
+static void /* One-time key creation function */
+ createKey(void)
+{
+	int s;
+
+	/* Allocate a unique thread-specific data key and save the address
+	of the destructor for thread-specific data buffers */
+
+	s = pthread_key_create(&strerrorKey, destructor);
+	if (s != 0)
+		errExitEN(s, "pthread_key_create");
+}
+
+
+char *
+strerror(int err)
+{
+	int s;
+	char *buf;
+	/* Make first caller allocate key for thread-specific data */
+	s = pthread_once(&once, createKey);
+	if (s != 0)
+		errExitEN(s, "pthread_once");
+	buf = pthread_getspecific(strerrorKey);
+	if (buf == NULL) { /* If first call from this thread, allocate
+						buffer for thread, and save its location */
+		buf = malloc(MAX_ERROR_LEN);
+		if (buf == NULL)
+			errExit("malloc");
+		s = pthread_setspecific(strerrorKey, buf);
+		if (s != 0)
+			errExitEN(s, "pthread_setspecific");
+	}
+	if (err < 0 || err >= _sys_nerr || _sys_errlist[err] == NULL) {
+		snprintf(buf, MAX_ERROR_LEN, "Unknown error %d", err);
+	} else {
+		strncpy(buf, _sys_errlist[err], MAX_ERROR_LEN - 1);
+		buf[MAX_ERROR_LEN - 1] = '\0'; /* Ensure null termination */
+	}
+
+	return buf;
+}
+```
+
+#### 2.2.4 线程局部存储(Thread-Local Storage)
+##### (1) 线程局部存储 的作用是？
+&emsp;&emsp; 类似于线程特有数据，线程局部存储提供了持久的每线程存储。作为非标准特性，诸多其他的 UNIX 实现（例如 Solaris 和 FreeBSD）为其提供了相同，或类似的接口形式。
+##### (2) 线程局部存储的优点是什么？
+&emsp;&emsp; **线程局部存储的主要优点在于**，比线程特有数据的使用要简单。
+##### (3) 如何使用 线程局部存储？
+要创建线程局部变量，只需简单地在 **全局或静态变量的声明中** 包含`__thread` 说明符即可：
+```cpp
+static __thread buf[MAX_ERROR_LEN];
+```
+&emsp;&emsp; 但凡带有这种说明符的变量，每个线程都拥有一份对变量的拷贝。线程局部存储中的变量将一直存在，直至线程终止，届时会自动释放这一存储。
+&emsp;&emsp; 关于线程局部变量的声明和使用，需要注意如下几点。
+* 如果变量声明中使用了关键字 static 或 extern，那么关键字__thread 必须紧随其后。
+* 与一般的全局或静态变量声明一样，线程局部变量在声明时可设置一个初始值。
+* 可以使用 C 语言取址操作符（&）来获取线程局部变量的地址。
+##### (4) 一个实例
+```cpp
+#define _GNU_SOURCE /* Get '_sys_nerr' and '_sys_errlist' declarations from <stdio.h> */
+
+#include <stdio.h>
+#include <string.h> /* Get declaration of strerror() */
+#include <pthread.h>
+
+/* Maximum length of string in per-thread buffer returned by strerror() */
+
+#define MAX_ERROR_LEN 256
+
+static __thread char buf[MAX_ERROR_LEN]; /* Thread-local return buffer */
+
+char *
+strerror(int err)
+{
+	if (err < 0 || err >= _sys_nerr || _sys_errlist[err] == NULL) {
+		snprintf(buf, MAX_ERROR_LEN, "Unknown error %d", err);
+	} else {
+		strncpy(buf, _sys_errlist[err], MAX_ERROR_LEN - 1);
+		buf[MAX_ERROR_LEN - 1] = '\0'; /* Ensure null termination */
+	}
+
+	return buf;
+}
+```
+
+### 2.3 有哪些同步原语可以用在线程上？它们有何特点？
+&emsp;&emsp; 线程提供的强大共享是有代价的。多线程应用程序必须使用互斥量和条件变量等同步原语来协调对共享变量的访问：
+* **互斥量(mutex,即mutual exclusion)** 可以帮助线程同步对共享资源的使用，以防如下情况发生：线程某甲试图访问一共享变量时，线程某乙正在对其进行修改。
+* **条件变量(condition variable)** 则是在此之外的拾遗补缺，允许线程相互通知共享变量（或其他共享资源）的状态发生了变化。
+
+### 2.4 如何使用 同步原语 来保证线程安全？
+见 《Linux/UNIX系统编程手册》 第30章 线程同步
+
+### 2.5 用互斥锁等同步原语实现线程安全有何不足？
+* (1) 由于互斥量的加、解锁开销，故而也带来了性能的下降；
+* (2) 造成并发性能的下降，因为同一时点只能有一个线程运行该函数，仅在函数中操作共享变量（临界区）的代码前后加入互斥锁可以提升并发性能，除非出现多个线程需要同时执行同一临界区的情况。
+
+### 2.6 `malloc()`函数是否线程安全？
+&emsp;&emsp; `malloc()` 函数库中的函数数为堆中的空闲块维护有一个全局链表，显然它是不可重入的，但是过使用互斥，`malloc()`实现了线程安全。
+
+
+
+&emsp; 
+## 3. 可重入函数 和 线程安全函数 有何异同？
+&emsp;&emsp; 两者不是等价的概念，可重入更严格。
+&emsp;&emsp; 如果一个函数的实现 使用了全局或者静态变量，那么这个函数既不是可重入的，也不是线程安全的。
+&emsp;&emsp; 如果放宽条件，这个函数仍然用到了全局或者静态变量，但是在访问这些变量时，通过加锁来保证互斥访问，那么这个函数就可以变成线程安全的函数。但它此时仍然是不可重入的，因为通常加锁是针对不同线程的访问，对同一线程可能出现问题（发生信号软中断，signal handler中恰巧也执行了该函数）。
+&emsp;&emsp; 那么如果把函数中的全局和静态变量都干掉，并保证在该函数中也不调用不可重入的函数，那么这个函数可以做到既是线程安全的，也是可重入的。
+&emsp;&emsp; 综上，可重入函数一般都是线程安全的，线程安全的不一定是可重入的。
+<div align="center"> <img src="./pic/reentrant_threadSafe.png"> </div>
+<center> <font color=black> <b> 图2 线程安全和可重入的关系 </b> </font> </center>
+
+
+
+&emsp; 
+## 4. 异步信号安全函数
+&emsp;&emsp; 异步信号安全的函数是指当从信号处理器函数调用时，可以保证其实现是安全的。如果某一函数是可重入的，又或者信号处理器函数无法将其中断时，就称该函数是异步信号安全的。
+详见 《Linux/UNIX系统编程手册》 第21章 信号：信号处理器函数（pdf第380页）
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# 四、关于多线程的一些问题的解答（摘自muduo的书中）
 ## 1．Linux下能启动的线程数量
 ### 1.1 Linux能同时启动多少个线程？
 系统能创建的线程数量受下面三个影响：
 * ① `/usr/include/bits/local_lim.h`中的PTHREAD_THREADS_MAX限制了进程的最大线程数
 * ② `/proc/sys/kernel/threads-max`中限制了系统的最大线程数
-* ③ 内存的大小，因为一个线程的默认栈为`8Mb`或`10Mb`，从内存大小的的角度来看，系统支持的最大线程数量为：`内存大小 / 线程默认栈大小`
+* ③ 内存的大小，因为一个线程的默认栈为`8Mb`或`10Mb`，从内存大小的的角度来看，系统支持的最大线程数量为：`可支配的内存大小 / 线程默认栈大小`
 
 &emsp;&emsp; 因此，**对于32位的系统**，最多支持`4GiB`内存，其中用户态能访问`3GiB`左右， 而一个线程的默认栈（stack）大小是10MB，心算可知，一个进程大约最多能同时启动300个线程。 如果不改线程的调用栈大小的话， 300左右是上限， 因为程序的其他部分（数据段、代码段、堆、动态库等等）同样要占用内存（地址空间）。
 &emsp;&emsp; **对于64位系统**，线程数目可大大增加，根据系统的配置不同，支持的数量也不一样。
@@ -750,3 +1208,8 @@ https://blog.csdn.net/XiaodunLP/article/details/99061696
 &emsp;
 # 参考文献
 1. [Linux可以运行多少进程,一个进程可以开多少线程](https://www.cnblogs.com/bandaoyu/p/14625291.html)
+2. [可重入和线程安全](https://www.cnblogs.com/lenomirei/p/5666154.html)
+3. [什么是线程安全](https://zhuanlan.zhihu.com/p/67905621)
+4. [异步可重入函数与线程安全函数等价吗？](https://www.zhihu.com/question/21526405/answer/37330407)
+5. [《Linux/UNIX系统编程手册》](https://book.douban.com/subject/25809330/)
+6. [线程特有数据(Thread Specific Data)](https://www.jianshu.com/p/61c2d33877f4)
