@@ -114,6 +114,7 @@
 				- [(2) 线程局部存储的优点是什么？](#2-线程局部存储的优点是什么)
 				- [(3) 如何使用 线程局部存储？](#3-如何使用-线程局部存储)
 				- [(4) 一个实例](#4-一个实例)
+				- [(5) 如何用 `__thread` 来声明自己的类类型？](#5-如何用-__thread-来声明自己的类类型)
 		- [2.3 有哪些同步原语可以用在线程上？它们有何特点？](#23-有哪些同步原语可以用在线程上它们有何特点)
 		- [2.4 如何使用 同步原语 来保证线程安全？](#24-如何使用-同步原语-来保证线程安全)
 		- [2.5 用互斥锁等同步原语实现线程安全有何不足？](#25-用互斥锁等同步原语实现线程安全有何不足)
@@ -1127,36 +1128,174 @@ static __thread buf[MAX_ERROR_LEN];
 ```
 &emsp;&emsp; 但凡带有这种说明符的变量，每个线程都拥有一份对变量的拷贝。线程局部存储中的变量将一直存在，直至线程终止，届时会自动释放这一存储。
 &emsp;&emsp; 关于线程局部变量的声明和使用，需要注意如下几点。
-* 如果变量声明中使用了关键字 static 或 extern，那么关键字__thread 必须紧随其后。
-* 与一般的全局或静态变量声明一样，线程局部变量在声明时可设置一个初始值。
-* 可以使用 C 语言取址操作符（&）来获取线程局部变量的地址。
+* ① 如果变量声明中使用了关键字 static 或 extern，那么关键字__thread 必须紧随其后。
+* ② 与一般的全局或静态变量声明一样，线程局部变量在声明时可设置一个初始值。
+* ③ 可以使用 C 语言取址操作符（&）来获取线程局部变量的地址。
+* ④  __thread 只能修饰`POD`变量，简单的来说可以是如下几种变量
+	> 1). 基本类型 (int , float 等等)
+	> 2). 指针类型
+	> 3). 不带自定义构造函数和析构函数的类，如果希望修饰带自定义构造和析构函数的类，需要用到指针。
+	
 ##### (4) 一个实例
 ```cpp
-#define _GNU_SOURCE /* Get '_sys_nerr' and '_sys_errlist' declarations from <stdio.h> */
-
-#include <stdio.h>
-#include <string.h> /* Get declaration of strerror() */
+#include <iostream>
 #include <pthread.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <assert.h>
+#include <string>
 
-/* Maximum length of string in per-thread buffer returned by strerror() */
+class Student {
+public:
+    //Student(int a , int b):num(a), age(b) { }
+    //Student();
+    int num;
+    int age;
+};
 
-#define MAX_ERROR_LEN 256
+class Teacher {
+public:
+   int num;
+   int age;
+   // 注意，
+   Teacher (int num, int age) {
+      this->num = num;
+      this->age = age;
+   }
+};
 
-static __thread char buf[MAX_ERROR_LEN]; /* Thread-local return buffer */
 
-char *
-strerror(int err)
+static __thread int count;
+static __thread Student stu;
+static __thread Teacher* teacher;
+
+void print(std::string description, int num, Student stu, Teacher* teacher) {
+    std::cout << description << ", before======>" << "pid:" 
+        << getpid() << ", pthread id:" << pthread_self() 
+        << ", count:" << count << std::endl;
+    std::cout << description << ", before======>" << "pid:" 
+        << getpid() << ", pthread id:" << pthread_self() 
+        << ", stu.num:" << stu.num << ", stu.age:"<< stu.age << std::endl;
+    std::cout << description << ", before======>" << "pid:" 
+        << getpid() << ", pthread id:" << pthread_self() 
+        << ", teacher.num:" << teacher->num << ", teacher.age:"
+		<< teacher->age << std::endl << std::endl;
+}
+
+
+void *function1(void *argc)
 {
-	if (err < 0 || err >= _sys_nerr || _sys_errlist[err] == NULL) {
-		snprintf(buf, MAX_ERROR_LEN, "Unknown error %d", err);
-	} else {
-		strncpy(buf, _sys_errlist[err], MAX_ERROR_LEN - 1);
-		buf[MAX_ERROR_LEN - 1] = '\0'; /* Ensure null termination */
-	}
+    count = 2;
+    stu.num = 20210010;
+    stu.age = 17;
+    teacher = new Teacher(10180,30);
+    sleep(1);
+    print("thread1", count, stu, teacher);
+    return 0;
+}
 
-	return buf;
+void *function2(void *argc)
+{
+    stu.num = 20210199;
+    stu.age = 12;
+    count = 3;
+    teacher = new Teacher(10008, 49);
+    sleep(2);
+    print("thread2", count, stu, teacher);
+    return 0;
+}
+
+int main()
+{
+    pthread_t  thread_id[2];
+    int ret;
+
+    stu.num = 1;
+    stu.age = 1;
+    count = 1;
+    teacher = new Teacher(1,1);
+
+    print("main", count, stu, teacher);
+    pthread_create(thread_id, NULL, function1, NULL);
+    pthread_create(thread_id + 1, NULL, function2, NULL);
+    pthread_join(thread_id[0], NULL);
+    pthread_join(thread_id[1], NULL);
+    //print("main", count, stu, teacher);
+
+    return 0;
 }
 ```
+编译后运行：
+```
+main, before======>pid:240852, pthread id:140372816856960, count:1
+main, before======>pid:240852, pthread id:140372816856960, stu.num:1, stu.age:1
+main, before======>pid:240852, pthread id:140372816856960, teacher.num:1, teacher.age:1
+
+thread1, before======>pid:240852, pthread id:140372798891776, count:2
+thread1, before======>pid:240852, pthread id:140372798891776, stu.num:20210010, stu.age:17
+thread1, before======>pid:240852, pthread id:140372798891776, teacher.num:10180, teacher.age:30
+
+thread2, before======>pid:240852, pthread id:140372790499072, count:3
+thread2, before======>pid:240852, pthread id:140372790499072, stu.num:20210199, stu.age:12
+thread2, before======>pid:240852, pthread id:140372790499072, teacher.num:10008, teacher.age:49
+```
+可以看到，主线程、线程1、线程2 所看到的几个`__thread`变量的内容都不一样。
+**分析：**
+> 1). `__thread` 可以修饰`Student`, 因为`Student`没有自定义的构造和析构函数
+> 2). `__thread` 可以修饰`Teacher*`，因为`__thread`可以修饰指针
+> 3). 实验结果表示在不同的线程中，变量不会相互影响。
+> 
+
+##### (5) 如何用 `__thread` 来声明自己的类类型？
+如果要用`__thread`来自定义类类型，有如下两个方法：
+**① 类里面不要有任何自定义的构造函数**
+就拿上面的实例中的`Student`类来说，如果将其改为如下形式：
+```cpp
+class Student {
+public:
+    //Student(int a , int b):num(a), age(b) { }
+    Student();
+    int num;
+    int age;
+};
+```
+编译后报错如下：
+```
+test.cpp:29:25: error: non-local variable ‘stu’ declared ‘__thread’ needs dynamic initialization
+ static __thread Student stu;
+                         ^~~
+test.cpp:29:25: note: C++11 ‘thread_local’ allows dynamic initialization and destruction
+```
+所以说，如果用`__thread` 来声明自己的类类型，就不能自己提供构造函数，即使是自己提供默认构造函数也不行！
+
+**② 定义一个指向该类的指针**
+就拿上面的实例中的`Teacher`类来说，
+```cpp
+class Teacher {
+public:
+   int num;
+   int age;
+   // 注意，
+   Teacher (int num, int age) {
+      this->num = num;
+      this->age = age;
+   }
+};
+```
+`Teacher`类含有了自己的构造函数，于是代码通过定义一个`Teacher*`类型的指针来完成：
+```cpp
+static __thread Teacher* teacher;
+
+int main()
+{
+    // 略...
+
+    teacher = new Teacher(1,1);
+
+	// 略...
+}
+```
+我们从之前的执行结果也可以看出这个方法管用。
 
 ### 2.3 有哪些同步原语可以用在线程上？它们有何特点？
 &emsp;&emsp; 线程提供的强大共享是有代价的。多线程应用程序必须使用互斥量和条件变量等同步原语来协调对共享变量的访问：
@@ -1358,3 +1497,4 @@ https://blog.csdn.net/XiaodunLP/article/details/99061696
 4. [异步可重入函数与线程安全函数等价吗？](https://www.zhihu.com/question/21526405/answer/37330407)
 5. [《Linux/UNIX系统编程手册》](https://book.douban.com/subject/25809330/)
 6. [线程特有数据(Thread Specific Data)](https://www.jianshu.com/p/61c2d33877f4)
+7. [c/c++ __thread](https://blog.csdn.net/simsunny22/article/details/82597859)
