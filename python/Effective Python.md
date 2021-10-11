@@ -38,3 +38,22 @@ sys.version_info(major=3, minor=7, micro=0, releaselevel='alpha', serial=1)
 
 
 ## 条款3：Know the Differences Between bytes and str
+### 1. 如何定义`bytes`和`str`？
+`bytes`一般是形如`b'Hello'`,`str`前面没有`b`
+```python
+bytes_tmp = b'h\x65llo'     # bytes
+str_tmp = 'a\u0300 propos'  # str
+```
+
+
+
+
+
+
+
+
+
+
+```python
+
+```
