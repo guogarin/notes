@@ -45,6 +45,14 @@ bytes_tmp = b'h\x65llo'     # bytes
 str_tmp = 'a\u0300 propos'  # str
 ```
 
+### `python`的`bytes`和`str` 之间有何区别？
+`bytes` 包含的是 **原始数据**(8位无符号值，一般用`ASCII`编码)；
+`str` 包含的是`Unicode`
+```python
+
+```
+
+### `bytes`和`str`之间如何转换？
 
 
 
