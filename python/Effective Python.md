@@ -249,14 +249,17 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf1 in position 0: invalid 
 ## 条款4：Prefer Interpolated F-Strings Over C-style Format Strings and str.format
 ### 1. Python有哪些格式化字符串的方法？
 一共有四种：
-① 使用 `%` 来格式化字符串；
-② 
-③ 
-④ 
+> ① 使用 `%` 来格式化 C风格字符串
+> ② 使用`dic`来格式化 `%` 来格式化 C风格字符串
+> ③ 使用内置的`str`类的`format()`方法
+> ④ 使用插值(interpolated format string，简称f-string)
 
-### 使用 `%` 来格式化字符串
-它的缺点：
-(1) 一旦顺序或类型错了，会在运行时报错：
+####  1.1 方法一：使用 `%` 来格式化 C风格字符串
+##### 1.1.1 优点
+简单
+
+##### 1.1.2 缺点：
+**问题1：一旦顺序或类型错了，会在运行时报错：**
 ```python
 value = 1.234
 formatted_str = '%-10s = %.2f' % (key, value)
@@ -272,7 +275,265 @@ formatted_str = '%-10s = %.2f' % (value, key)
 ```
 为了避免上述错误，我们必须保证类型和顺序的正确性。
 
-(2) 
+**问题2：当要对 准备填进去的值 做处理时，表达式会变得很冗长**
+```python
+pantry = [
+	('avocados', 1.25),
+	('bananas', 2.5),
+	('cherries', 15),
+]
+for i, (item, count) in enumerate(pantry):
+	print('#%d: %-10s = %.2f' % (i, item, count))
+```
+运行结果为：
+```
+#0: avocados   = 1.25
+#1: bananas    = 2.50
+#2: cherries   = 15.00
+```
+如果想让输出的数据更好理解，就需要做一点小小的改动：
+```python
+for i, (item, count) in enumerate(pantry):
+	print('#%d: %-10s = %d' % (
+		i + 1,
+		item.title(), 
+		round(count)))
+```
+运行结果为：
+```
+#1: Avocados   = 1
+#2: Bananas    = 2
+#3: Cherries   = 15
+```
+可以看到的是，代码在修改过之后变得很冗长，可读性变差了。
+
+**问题3：如果想用同一个值来填充格式字符里的多个位置，那就必须在`%`后面的元组中多次重复该值**
+```python
+template = '%s loves food. See %s cook.'
+name = 'Max'
+formatted = template % (name, name) # name变量需要写两次
+print(formatted)
+```
+可以看到的是，`name`变量需要写两次，而且如果需要修改`name`，则需要改两次，这很麻烦，而且还很容易漏。
+
+**问题4：**
+
+### 1.2 方法二：使用`dic`来格式化 `%` 来格式化 C风格字符串
+#### 1.2.1 优点
+用`dic`来替代元组，这可以解决**问题1**和**问题3**：
+解决问题1：
+```python
+key = 'my_var'
+value = 1.23414  
+
+old_way = '%-10s = %.2f' % (key, value)
+
+new_way = '%(key)-10s = %(value).2f' % {
+	'key': key, 'value': value} # Original
+reordered = '%(key)-10s = %(value).2f' % {
+	'value': value, 'key': key} # 调换了位置也不影响
+assert old_way == new_way == reordered
+```
+解决问题3：
+```python
+name = 'Max'
+
+template = '%s loves food. See %s cook.'
+before = template % (name, name) # %右侧为元组
+
+template = '%(name)s loves food. See %(name)s cook.'
+after = template % {'name': name} # %右侧为字典
+
+assert before == after
+```
+
+#### 1.2.2 缺点
+用`dic`来替代元组 让 **问题2** 变得更严重了：
+```python
+for i, (item, count) in enumerate(pantry):
+	before = '#%d: %-10s = %d' % (
+		i + 1,
+		item.title(),
+		round(count))
+
+	after = '#%(loop)d: %(item)-10s = %(count)d' % {
+		'loop': i + 1,
+		'item': item.title(),
+		'count': round(count),
+		}
+
+	assert before == after	
+```
+我们可以看到的是，用`dic`来替代元组后，代码变得更为冗长了，可读性也随之下降。
+
+### 1.3 方法三：使用内置的`str`类的`format()`方法
+`str.formant()`
+
+### 1.4 方法四：使用 插值格式字符串(interpolated format string，简称f-string)
+&emsp;&emsp; 插值格式字符串 是在`Python3.6`中引入的特性，可以完美解决前面提到的问题。
+#### 1.4.1 怎么使用 插值格式字符串？
+① 在格式字符的前面加上`f`，比如`f'{key} : {value}'`；
+② 可以直接在`f-string`的`{}`里面直接引用当前作用域可见的变量；
+③ 还能直接进行函数调用：`{round(count)}`；
+④ 支持`str.format`那套迷你语言(也就是在`{}`内的冒号右侧采用的那套规则)：`{item.title():^20s}`
+```python
+panpantry = [
+    ('avocados', 1.25),
+    ('bananas', 2.5),
+    ('cherries', 15),
+]
+
+for i, (item, count) in enumerate(pantry):
+    print(f"#{i+1}: {item.title():^20s} = {round(count)}") 
+```
+
+#### 1.4.2 `str.format()`方法 和 `f-string`的联系
+&emsp;&emsp; `f-string`支持`str.fformat()`所支持的 那套迷你语言，也就是在`{}`内的冒号右侧采用的那套规则也可以用到`f-sting`里面，而且也可以通过`!`把值转换成`Unicode`及`repr`形式的字符串。
+
+#### 1.4.3 插值格式字符串 好在哪？
+&emsp;&emsp; **可以直接在 格式字符串内 直接引用 变量**，这个特性彻底解决了前面四个问题，既简洁明了，又不存在顺序弄错的问题，下，下面的代码对四种方法进行了对比，结论一目了然：
+```python
+pantry = [
+    ('avocados', 1.25),
+    ('bananas', 2.5),
+    ('cherries', 15),
+]
+
+for i, (item, count) in enumerate(pantry):
+	c_style_tuple = '#%d: %-10s = %d' % (
+		i + 1,
+		item.title(),
+		round(count))
+	print(c_style_tuple)
+
+	c_style_dic = '#%(loop)d: %(item)-10s = %(count)d' % {
+		'loop': i + 1,
+		'item': item.title(),
+		'count': round(count),
+	}
+	print(c_style_dic)
+
+	str_format = '#{}: {:<10s} = {}'.format(
+		i + 1,
+		item.title(),
+		round(count))
+	print(str_format)
+
+	# f-string 一行代码搞定
+    print(f"#{i+1}: {item.title():^20s} = {round(count)}") 
+```
+
+
+
+
+&emsp;
+&emsp;
+## 条款5：Write Helper Functions Instead of Complex Expressions(用辅助函数取代复杂的表达式)
+### 1. 这条规则指的是？
+&emsp;&emsp; 对于那些复杂的表达式，尤其是会重复利用的那种复杂表达式，应该定义一个辅助函数来完成。
+
+### 2. 为什么？
+① 可读性强，更容易被他人理解；
+② 遵循`DRY`原则(Do't Repeat Yourself)，能复用的代码都应该封装成一个函数，可避免代码冗长。
+
+
+
+
+&emsp;
+&emsp;
+## 条款6: Prefer Multiple Assignment Unpacking Over Indexing(把数据直接解包到多个变量里，不要通过下标范围)
+### 1. 为什么不建议使用下标访问？
+使用下标访问会降低程序的可读性，还能减少代码量：
+```python
+snacks = [('bacon', 350), ('donut', 240), ('muffin', 190)]
+
+# 用下标访问
+for i in range(len(snacks)):
+    item = snacks[i]
+    name = item[0]
+    calories = item[1]
+    print(f'#{i+1}: {name} has {calories} calories')
+
+print("*"*30)
+
+# 解包到多个变量中
+for rank, (name, calories) in enumerate(snacks, 1):
+    print(f'#{rank} : {name.title()} has {calories} calories.')
+```
+运行结果：
+```
+#1: bacon has 350 calories
+#2: donut has 240 calories
+#3: muffin has 190 calories
+******************************
+#1 : Bacon has 350 calories.
+#2 : Donut has 240 calories.
+#3 : Muffin has 190 calories.
+```
+显然，用`unpacking`和`enumerate`函数代码量减少了很多，可行性也大大的提高了。
+
+
+
+&emsp;
+&emsp;
+## 条款7:  Prefer enumerate Over range(尽量使用 enumerate 取代 range)
+### 1. 相比于`range()`，`enumerate()`的优势是？
+有时在迭代`list`时，需要获取当前处理的元素在`list`中的位置，`enumerate()`会简洁一些：
+```python
+flavor_list = ['vanilla', 'chocolate', 'pecan', 'strawberry']
+
+for i in range(len(flavor_list)):
+	flavor = flavor_list[i]
+	print(f'{i + 1}: {flavor}')
+
+# 使用 enumerate()
+for i, flavor in enumerate(flavor_list, 1):
+	print(f'{i}: {flavor}')
+```
+这又回到了`item 6`，避免使用下标访问容器。
+
+
+
+&emsp;
+&emsp;
+## 条款8: Use zip to Process Iterators in Parallel(用 zip()函数 同时遍历两个迭代器)
+### 8.1 用zip() 迭代两个迭代器的优势是？
+更为简洁，换句话说就是更`pythonic`，来看一段代码对比：
+```python
+names = ['Cecilia', 'Lise', 'Marie']
+counts = [len(n) for n in names]
+
+longest_name = None
+max_count = 0
+
+# 用range()
+for i in range(len(names)):
+	count = counts[i]
+	if count > max_count:
+		longest_name = names[i]
+		max_count = count
+
+# 用 enumerate()
+for i, name in enumerate(names):
+	count = counts[i]
+	if count > max_count:
+		longest_name = name
+		max_count = count		
+
+# 用 zip() + unpacking机制
+# zip(names, counts)负责将元素封装成元组，然后在用 unpacking机制将元组里的值赋给  name和count
+for name, count in zip(names, counts):
+	if count > max_count:
+		longest_name = name
+		max_count = count		
+```
+
+
+
+&emsp;
+&emsp;
+## 条款9: Avoid else Blocks After for and while Loops
+
 
 
 

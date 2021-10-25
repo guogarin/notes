@@ -69,9 +69,10 @@ if __name__ == "__main__":
     test(*values)
 ```
 输出：
->arg1 : 一
->arg2 : 二
->arg3 : 三
+> arg1 : 一
+> arg2 : 二
+> arg3 : 三
+> 
 **使用`**kwargs`来调用函数：**
 ```python
 def test(arg1, arg2, arg3):
@@ -88,8 +89,10 @@ if __name__ == "__main__":
 > arg2 : two
 > arg3 : one
 >
-仔细看上面的输出，`{"arg3": 'one', "arg2": "two", "arg1": 'three'}`和`(arg1, arg2, arg3)`**是按名字匹配的，而不是按顺序匹配的。**
-
+仔细看上面的输出，`{"arg3": 'one', "arg2": "two", "arg1": 'three'}`和`(arg1, arg2, arg3)`**是按名字匹配的，而不是按顺序匹配的。**为什么会产生上述的效果呢？那是因为`test(**k_values)`会自动解包(unpacking)成：
+```python
+test(arg3='one', arg2=two, arg1=three)
+```
 
 
 
