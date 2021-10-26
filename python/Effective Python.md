@@ -1,5 +1,5 @@
 # 一、Pythonic Thinking
-## 条款1：Know Which Version of Python You’re Using
+## Item 1：Know Which Version of Python You’re Using
 ### 1. 为什么要确定python的版本？
 因为在命令行中，`python`可能意味着`python2`（比如centOS7中）：
 ```shell
@@ -35,7 +35,7 @@ sys.version_info(major=3, minor=7, micro=0, releaselevel='alpha', serial=1)
 
 &emsp;
 &emsp;
-## 条款2：Follow the PEP 8 Style Guide
+## Item 2：Follow the PEP 8 Style Guide
 ### 1. 什么是 PEP 8？
 
 
@@ -43,7 +43,7 @@ sys.version_info(major=3, minor=7, micro=0, releaselevel='alpha', serial=1)
 
 &emsp;
 &emsp;
-## 条款3：Know the Differences Between bytes and str
+## Item 3：Know the Differences Between bytes and str
 ### 1. 如何定义`bytes`和`str`？
 `bytes`一般是形如`b'Hello'`,`str`前面没有`b`
 ```python
@@ -246,7 +246,7 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf1 in position 0: invalid 
 
 &emsp;
 &emsp;
-## 条款4：Prefer Interpolated F-Strings Over C-style Format Strings and str.format
+## Item 4：Prefer Interpolated F-Strings Over C-style Format Strings and str.format
 ### 1. Python有哪些格式化字符串的方法？
 一共有四种：
 > ① 使用 `%` 来格式化 C风格字符串
@@ -428,7 +428,7 @@ for i, (item, count) in enumerate(pantry):
 
 &emsp;
 &emsp;
-## 条款5：Write Helper Functions Instead of Complex Expressions(用辅助函数取代复杂的表达式)
+## Item 5：Write Helper Functions Instead of Complex Expressions(用辅助函数取代复杂的表达式)
 ### 1. 这条规则指的是？
 &emsp;&emsp; 对于那些复杂的表达式，尤其是会重复利用的那种复杂表达式，应该定义一个辅助函数来完成。
 
@@ -439,9 +439,9 @@ for i, (item, count) in enumerate(pantry):
 
 
 
-&emsp;
-&emsp;
-## 条款6: Prefer Multiple Assignment Unpacking Over Indexing(把数据直接解包到多个变量里，不要通过下标范围)
+&emsp; 
+&emsp; 
+## Item 6: Prefer Multiple Assignment Unpacking Over Indexing(把数据直接解包到多个变量里，不要通过下标范围)
 ### 1. 为什么不建议使用下标访问？
 使用下标访问会降低程序的可读性，还能减少代码量：
 ```python
@@ -476,7 +476,7 @@ for rank, (name, calories) in enumerate(snacks, 1):
 
 &emsp;
 &emsp;
-## 条款7:  Prefer enumerate Over range(尽量使用 enumerate 取代 range)
+## Item 7:  Prefer enumerate Over range(尽量使用 enumerate 取代 range)
 ### 1. 相比于`range()`，`enumerate()`的优势是？
 有时在迭代`list`时，需要获取当前处理的元素在`list`中的位置，`enumerate()`会简洁一些：
 ```python
@@ -496,7 +496,7 @@ for i, flavor in enumerate(flavor_list, 1):
 
 &emsp;
 &emsp;
-## 条款8: Use zip to Process Iterators in Parallel(用 zip()函数 同时遍历两个迭代器)
+## Item 8: Use zip to Process Iterators in Parallel(用 zip()函数 同时遍历两个迭代器)
 ### 8.1 用zip() 迭代两个迭代器的优势是？
 更为简洁，换句话说就是更`pythonic`，来看一段代码对比：
 ```python
@@ -532,7 +532,34 @@ for name, count in zip(names, counts):
 
 &emsp;
 &emsp;
-## 条款9: Avoid else Blocks After for and while Loops
+## Item 9: Avoid else Blocks After for and while Loops(不要在while和for循环后面写else块)
+### 1. 为什么要避免使用？
+&emsp;&emsp; 因为 `for … else`、`while … else`，`else` 和 `if/else`的语法不一样，这很容易让人产生误解。
+
+
+
+&emsp;
+&emsp;
+## Item 10: Prevent Repetition with Assignment Expressions(用赋值表达式减少重复代码)
+### 1. 赋值表达式好在哪？
+① 节省代码
+② 可读性好
+
+### 2. 怎么用？
+见其它位置的笔记
+
+
+
+
+
+
+&emsp;
+&emsp;
+# 二、Lists and Dictionaries 
+## Item 11: Know How to Slice Sequences(学会对序列切片)
+### 1. 什么样的类可以进行切片操作？
+&emsp;&emsp; 实现了 `__getitem__ `and `__setitem__` 的类都可以进行切片操作。
+
 
 
 
