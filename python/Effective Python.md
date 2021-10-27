@@ -560,6 +560,23 @@ for name, count in zip(names, counts):
 ### 1. 什么样的类可以进行切片操作？
 &emsp;&emsp; 实现了 `__getitem__ `and `__setitem__` 的类都可以进行切片操作。
 
+### 2. 切片时应该秉承什么样的原则？
+&emsp;&emsp; 切片要尽可能写的简答，如果是从头开始切割，则应该省略左侧的下标`0`；如果是一直取到末尾，那就应该省略冒号右侧的下标
+```python
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+from_start = numbers[:4]
+print(from_start)
+
+print(to_end:=numbers[1:])
+```
+输出的结果：
+```
+[0, 1, 2, 3]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+#### 3. `a = b` 和 `a = b[:]` 有何区别？
 
 
 
