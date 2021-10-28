@@ -33,6 +33,10 @@ sys.version_info(major=3, minor=7, micro=0, releaselevel='alpha', serial=1)
 
 
 
+
+
+
+&emsp;
 &emsp;
 &emsp;
 ## Item 2：Follow the PEP 8 Style Guide
@@ -41,6 +45,9 @@ sys.version_info(major=3, minor=7, micro=0, releaselevel='alpha', serial=1)
 
 
 
+
+
+&emsp;
 &emsp;
 &emsp;
 ## Item 3：Know the Differences Between bytes and str
@@ -244,6 +251,9 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf1 in position 0: invalid 
 
 
 
+
+
+&emsp;
 &emsp;
 &emsp;
 ## Item 4：Prefer Interpolated F-Strings Over C-style Format Strings and str.format
@@ -426,6 +436,9 @@ for i, (item, count) in enumerate(pantry):
 
 
 
+
+
+&emsp;
 &emsp;
 &emsp;
 ## Item 5：Write Helper Functions Instead of Complex Expressions(用辅助函数取代复杂的表达式)
@@ -439,6 +452,9 @@ for i, (item, count) in enumerate(pantry):
 
 
 
+
+
+&emsp;
 &emsp; 
 &emsp; 
 ## Item 6: Prefer Multiple Assignment Unpacking Over Indexing(把数据直接解包到多个变量里，不要通过下标范围)
@@ -474,6 +490,9 @@ for rank, (name, calories) in enumerate(snacks, 1):
 
 
 
+
+
+&emsp;
 &emsp;
 &emsp;
 ## Item 7:  Prefer enumerate Over range(尽量使用 enumerate 取代 range)
@@ -494,6 +513,9 @@ for i, flavor in enumerate(flavor_list, 1):
 
 
 
+
+
+&emsp;
 &emsp;
 &emsp;
 ## Item 8: Use zip to Process Iterators in Parallel(用 zip()函数 同时遍历两个迭代器)
@@ -530,6 +552,10 @@ for name, count in zip(names, counts):
 
 
 
+
+
+
+&emsp;
 &emsp;
 &emsp;
 ## Item 9: Avoid else Blocks After for and while Loops(不要在while和for循环后面写else块)
@@ -538,6 +564,10 @@ for name, count in zip(names, counts):
 
 
 
+
+
+
+&emsp;
 &emsp;
 &emsp;
 ## Item 10: Prevent Repetition with Assignment Expressions(用赋值表达式减少重复代码)
@@ -553,6 +583,7 @@ for name, count in zip(names, counts):
 
 
 
+&emsp;
 &emsp;
 &emsp;
 # 二、Lists and Dictionaries 
@@ -576,7 +607,96 @@ print(to_end:=numbers[1:])
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-#### 3. `a = b` 和 `a = b[:]` 有何区别？
+#### 3. `a`和`b`都是列表，`a = b` 和 `a = b[:]` 有何区别？
+&emsp;&emsp; 切片`a = b[:]` 是 浅拷贝， `a = b`是直接赋值，所以它们之间的区别就是 直接赋值 和 浅拷贝的关系。来写段代码验证一下：
+```python
+a = [0, 1, 2, ['a', 'b', 'c'], 4]
+b = a[:]
+
+if a == b :
+    print("a == b")
+
+a[0] = 'A' 		# 修改列表
+a[3][0] = 100	# 修改子序列
+
+print("a = ", a)
+print("b = ", b)
+```
+运行结果：
+```
+a == b
+a =  ['A', 1, 2, [100, 'b', 'c'], 4]
+b =  [0, 1, 2, [100, 'b', 'c'], 4]
+```
+**结果分析：**
+&emsp;&emsp; 运行结果显示，列表`a`的直接修改没有影响到列表`b`，但是对列表`a`的子序列的修改却影响到了`b`，这显然验证了 切片 是浅拷贝的结论。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 12: Avoid Striding and Slicing in a Single Expression(不要在切片操作里同时指定 起止下标 和 步长)
+### 原因
+&emsp;&emsp; 可读性不好，其他人很难理解
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 13: Prefer Catch-All Unpacking Over Slicing(尽量通过带星号的`unpacking`操作来捕获多个元素，而不是通过切片)
+### 1. 如何通过`unpacking`操作来完成 切片 的功能？
+&emsp;&emsp; 搭配 带星号表达式(starred expressiong) 即可：
+```python
+car_ages = [0, 9, 4, 8, 7, 20, 19, 1, 6, 15]
+car_ages_descending = sorted(car_ages, reverse=True)
+oldest, second_oldest , *others = car_ages_descending
+```
+
+### 2. 相比于切片，`unpacking`操作捕获的优势在哪？
+> ① 简短易读；
+> ② 用切片对序列进行切分的时候更容易出错
+> 
+就拿取序列开头两个元素来举例吧：
+```python
+car_ages = [0, 9, 4, 8, 7, 20, 19, 1, 6, 15]
+car_ages_descending = sorted(car_ages, reverse=True)
+
+# 解包
+oldest, second_oldest , *others = car_ages_descending
+
+print(oldest, second_oldest, others)
+
+# 切片
+oldest = car_ages_descending[0]
+second_oldest = car_ages_descending[1]
+others = car_ages_descending[2:]
+
+print(oldest, second_oldest, others)
+```
+从上面的代码可知，解包操作不但代码少，而且读起来也更通畅；而且切片操作还得注意下标，很容易出错。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 14: Sort by Complex Criteria Using the key Parameter(用 `sort`方法的`key`参数 来表示复杂的排序逻辑)
+### 1. 
+
+
+
+
 
 
 
