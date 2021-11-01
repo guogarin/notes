@@ -692,8 +692,107 @@ print(oldest, second_oldest, others)
 &emsp;
 &emsp;
 ## Item 14: Sort by Complex Criteria Using the key Parameter(用 `sort`方法的`key`参数 来表示复杂的排序逻辑)
-### 1. 
+### 1. 为什么要用`key`参数指定排序逻辑？
+对于一些自定义的类，无法用`sort()`进行排序，此时可通过`key`参数来指定排序规则。
+```python
+class Tool:
+	def __init__(self, name, weight):
+		self.name = name
+		self.weight = weight
+	def __repr__(self):
+		return f'Tool({self.name!r}, {self.weight})'
 
+tools = [
+	Tool('level', 3.5),
+	Tool('hammer', 1.25),
+	Tool('screwdriver', 0.5),
+	Tool('chisel', 0.25),
+]
+
+tools.sort()
+```
+运行结果：
+```
+Traceback (most recent call last):
+  File "test.py", line 15, in <module>
+    tools.sort()
+TypeError: '<' not supported between instances of 'Tool' and 'Tool'
+```
+将上面的代码修改如下：
+```python
+tools.sort(key=lambda x : x.name)
+print(tools)
+```
+运行结果如下：
+```
+[Tool('chisel', 0.25), Tool('hammer', 1.25), Tool('level', 3.5), Tool('screwdriver', 0.5)]
+```
+
+### 2. 如何用多个条件来排序？
+#### 2.1 利用 元组 来实现
+&emsp;&emsp; 我们都知道，两个元组在比较的时候，如果首元素相等，那就比较第二个元素，如果第二个也相等，那就继续往下比较，利用元组的这个特性，我们可以实现多条件排序。
+&emsp;&emsp; 比如我们希望`tools`先以`weight`来排序，在`weight`相等的情况下再以`name`排序。我们可以构造一个元组`(weight, name)`：
+```python
+tools.sort(key=lambda x : (x.weight, x.name))
+print(tools)
+```
+运行结果：
+```
+[Tool('chisel', 0.25), Tool('screwdriver', 0.5), Tool('hammer', 1.25), Tool('level', 3.5)]
+```
+**但是利用元组来实现有一个不足之处：** 如果多个指标中，我们希望一个指标排正序，一个排倒序，元组就不能实现了。
+
+#### 2.2 多次调用`sort()`
+&emsp;&emsp; 因为`sort()`是稳定排序(准确的说是`timsort`，一种改进过的归并排序)，这意味着如果`key`函数认为两个值相等，那么这两个值在排序结果中的先后顺序会与它们在排序前的顺序一致，因此多次调用`sort()`不会有问题。
+
+#### 2.3 如果多个条件中，我们希望一个条件排正序，一个排倒序，应该怎么做？
+**① 用元组**
+&emsp;&emsp; 如果这多个条件中有一个是数字，可以通过对为数字的条件取倒数来完成
+**② 多次调用`sort()`，对需要逆序的那个用`reverse=True`参数来指定逆序。**
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 15: Be Cautious When Relying on dict Insertion Ordering(不要过分依赖给字典添加条目时所用的顺序)
+### 1. 字典的`key`是否有序？
+&emsp; 在`Python3.7`开始，我们可以确信迭代 标准的字典(注意是标准的字典) 时
+> &emsp;&emsp; 在`Python 3.5`之前 的版本中，`dict`所提供的许多方法（包括`keys`、`values`、i`tems`与`popitem`等）都不保证固定的顺序。
+> &emsp;&emsp; 从`Python 3.6`开始，字典会保留这些 键值对 **在添加时所用的顺序**，而且`Python3.7`版的语言规范正式确立了这条规则。
+> 
+
+### 2. 为什么不能总是假设所有的字典都能保留键值对插入时的顺序？
+&emsp;&emsp; 因为在`python`中，我们很容易就拿自定义出 和标准`dict`很像，但本身不是字典的类，而对于这些类型的对象，我们不能假设 迭代时看到的顺序 会和 插入的顺序一致。
+#### 2.2 如何解决这个问题呢？
+① 重新定义函数，让这个函数不依赖插入时的顺序；
+
+② 在函数的开头先判断传进来的对象是不是 标准的`dict`对象：
+```python
+def get_winner(ranks):
+	if not isinstance(ranks, dict):
+		raise TypeError('must provide a dict instance')
+	return next(iter(ranks))
+```
+
+③ 通过 注解(type annotation) 来保证传过来的是 标准的`dict`对象
+&emsp;&emsp; 
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 16: Prefer get Over in and KeyError to Handle Missing Dictionary Keys(用`get`处理键不在字典里的情况，而不是`in`和`KeyError`)
+### 1. 有哪些方法 可以处理 key不在字典里的情况？
+
+### 2. 更推荐哪种方法？为什么？
 
 
 
