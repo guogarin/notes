@@ -791,8 +791,130 @@ def get_winner(ranks):
 &emsp;
 ## Item 16: Prefer get Over in and KeyError to Handle Missing Dictionary Keys(用`get`处理键不在字典里的情况，而不是`in`和`KeyError`)
 ### 1. 有哪些方法 可以处理 key不在字典里的情况？
+① 用`if/else`和`in`表达式；
+② 利用 `KeyError`异常；
+③ 用`dict.get(key, default_value)`来完成
+&emsp;&emsp; 当对`dict`进行`get()`时，若`key`不在将返回`None`，我们可以对其设一个默认值来处理`key`不在的情况。
+④ `setdefaultt(key, default=None)`方法
+&emsp;&emsp; 内置的`dict`类型 提供了`setdefault`方法，这个方法会先查询字典里是否有这个key，如果有就返回对应的值，没有的话就给它一个默认值(默认是`None`)。
 
 ### 2. 更推荐哪种方法？为什么？
+#### 2.1 先说结论
+&emsp;&emsp; 如果和`key`相关联的值是像 计数器 这样的基本类型，那么`get`将是最好的方案；
+&emsp;&emsp; 如果是那种构造起来开销大，或是容器出错的类型，那么可以把`get`与赋值表达式结合起来用：
+```python
+if (names := votes.get(key)) is None:
+	votes[key] = names = []
+names.append(who)
+```
+
+#### 2.2 几个例子
+##### 2.2.1 例子一：
+&emsp;&emsp; 假如我们要给一家三明治设计菜单，想先确定大家喜欢吃哪些类型的面包，于是我们定义了这样的一个字典：`{ 面包类型 : 得票数 }`
+```python
+counters = {
+	'pumpernickel': 2,
+	'sourdough': 1,
+}
+
+# ① 用`if/else`和`in`表达式
+key = 'wheat'
+if key in counters:
+	count = counters[key]
+else:
+	count = 0
+counters[key] = count + 1
+
+# ② 利用 `KeyError`异常；
+try:
+	count = counters[key]
+except KeyError:
+	count = 0
+counters[key] = count + 1
+
+# ③ 用`dict.get(key, default_value)`来完成
+count = counters.get(key, 0)
+counters[key] = count + 1
+```
+从上面可以看到，当`value`为计数类型时，用`get`方法是最简单易懂的。
+
+##### 2.2.2 例子二：
+&emsp;&emsp; 如果需求变了，这次不仅要记录得票数，还要记录投票的人，因此我们需要用一个列表关联起来：
+```python
+votes = {
+'baguette': ['Bob', 'Alice'],
+'ciabatta': ['Coco', 'Deb'],
+}
+key = 'brioche'
+who = 'Elmer'
+
+```
+**① 用`if/else`和`in`表达式；**
+```python
+if key in votes:
+	names = votes[key]
+else:
+	votes[key] = names = []
+names.append(who)
+print(votes)
+```
+
+**② 利用 `KeyError`异常；**
+```python
+try:
+	names = votes[key]
+except KeyError:
+	votes[key] = names = []
+names.append(who)
+```
+**③ 用`dict.get(key, default_value)`来完成**
+```python
+if (names := votes.get(key)) is None:
+	votes[key] = names = []
+names.append(who)
+```
+**④ `setdefault`方法**
+```python
+names = votes.setdefault(key, [])
+names.append(who)
+```
+**结论：**
+&emsp;&emsp; `setdefault`方法用的代码最少，但是这个写法不太好理解，因为该方法的名字 `setdefault`很难让人立即明白它的作用，因此还是更推荐`get()`和赋值表达式的写法。
+
+
+
+```python
+def open_picture(profile_path):
+    try:
+        print("int try")
+        return open(profile_path, 'a+b')
+    except OSError:
+        print(f'Failed to open path {profile_path}')
+        raise
+
+
+class Pictures(dict):
+    def __missing__(self, key):
+        value = open_picture(key)
+        self[key] = value
+        return value
+
+pictures = Pictures()
+handle = pictures["C\practice"]
+handle.seek(0)
+image_data = handle.read()
+print(image_data)
+```
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 17: Prefer defaultdict Over setdefault to Handle Missing Items in Internal State
 
 
 
