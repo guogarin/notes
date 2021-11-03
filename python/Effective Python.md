@@ -883,6 +883,80 @@ names.append(who)
 
 
 
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 17: Prefer defaultdict Over setdefault to Handle Missing Items in Internal State(用`defaultdict`处理缺失的元素，而不是`setdefault`)
+&emsp;&emsp; `Item 17`提到的四种方法适合用在字典不是自己创建的情况，如果字典是自己创建的，那么 内置模块`collections` 提供的 `defaultdict`类 可以轻松解决问题。
+```python
+# --coding:utf8--
+from collections import defaultdict
+
+class Visitors:
+    def __init__(self):
+        self.data = defaultdict(set)
+    
+    def add(self, country, city):
+        self.data[country].add(city)
+
+
+v = Visitors()
+v.add('England', "London")
+v.add("America", "New York")
+v.add("China", "Beijing")
+v.add("China", "Shanghai")
+
+print(v.data)
+```
+运行结果：
+```
+defaultdict(<class 'set'>, {'England': {'London'}, 'America': {'New York'}, 'China': {'Shanghai', 'Beijing'}})
+```
+上面的`add`方法相当简短，而且可以确保访问不存在的键时总会得到一个`set`类型的实例。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 18: Know How to Construct Key-Dependent Default Values with __missing__(学会利用`__missing__`构造依赖建的默认值)
+&emsp;&emsp; Item 17 介绍的`defaultdict`是一个解决`key`不在字典里的好方法，但是有些情况是`defaultdict`处理不了的：
+> &emsp;&emsp; 假设我们要写一个程序，在文件系统里管理社交网络账号中的图片。这个程序应该用字典把这些图片的路径名跟相关的文件句柄关联起来，这样我们就能方便地读取并写入图像了。
+> 
+### (1) 用`defaultdict`来解决：
+```python
+from collections import defaultdict
+
+def open_picture(profile_path):
+    try:
+        return open(profile_path, 'a+b')
+    except OSError:
+        print(f'Failed to open path {profile_path}')
+    raise
+
+path = "c:\test.png"
+pictures = defaultdict(open_picture)
+handle = pictures[path]
+handle.seek(0)
+image_data = handle.read()
+```
+运行结果：
+```
+Traceback (most recent call last):
+  File "d:/code_practice/practice.py", line 12, in <module>
+    handle = pictures[path]
+TypeError: open_picture() missing 1 required positional argument: 'profile_path'
+```
+**结果分析：**
+&emsp;&emsp; 程序出错的原因在于，传给`defaultdict`的只能是一个不需要参数的函数，而我们写的辅助函数`open_picture()`必须接受一个参数来`open`对应的图片，因此`defaultdict`无法完成任务。
+
+### (2) 重载内置`dict`的`__missing__`方法
 ```python
 def open_picture(profile_path):
     try:
@@ -893,18 +967,21 @@ def open_picture(profile_path):
         raise
 
 
-class Pictures(dict):
+class Pictures(dict): # 注意，重载的是内置的dict
     def __missing__(self, key):
         value = open_picture(key)
         self[key] = value
         return value
 
+path = "C\practice"
 pictures = Pictures()
-handle = pictures["C\practice"]
+handle = pictures[path]
 handle.seek(0)
 image_data = handle.read()
 print(image_data)
 ```
+**分析:**
+&emsp;&emsp; 在访问`pictures[path]`时，如果`pictures`里没有这个键，那就会调用`__missing__`方法。这个方法必须根据key参数创建一份新的默认值，系统会把这个默认值插入字典并返回给调用放。以后再访问pictures[path]，就不会调用__missing__了，因为字典里已经有了对应的键与值。
 
 
 
@@ -914,10 +991,26 @@ print(image_data)
 &emsp;
 &emsp;
 &emsp;
-## Item 17: Prefer defaultdict Over setdefault to Handle Missing Items in Internal State
+# 三、函数
+## Item 19: Never Unpack More Than Three Variables When Functions Return Multiple Values(不要把函数返回的多个数值 拆分到三个以上的变量中)
+### 1. 为什么不要这么做？
+有两个原因：
+&emsp;&emsp; ① 返回的变量多了，如果对其进行拆分，很容易弄错顺序，而且这种bug很难排查；
+&emsp;&emsp; ② 对多个变量进行解包时，一行代码很容易变得很长，这和PEP8风格指南相悖，需要拆分成多行，这让代码看起来很别扭。
+
+### 2. 如果函数必须返回3个以上的变量，应该怎么做？
+&emsp;&emsp; 可以将这些变量放在一个`namedtuple`中，然后将这个`namedtuple`返回。
 
 
 
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 20: Prefer Raising Exceptions to Returning None(遇到意外时应该抛异常，而不是返回`None`)
+### 1. 
 
 
 
