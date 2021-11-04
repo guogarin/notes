@@ -2,27 +2,32 @@
 ## 1.1 为什么需要 `global` 和 `nonlocal` 关键字？他俩是用来解决什么问题的？
 ```python
 def func():
-    count = '我是func()里的局部变量count'
-    def func_1():
+	count = '我是func()里的局部变量count'
+	def func_1():
+		print(count)
+	def func_2():
+		count = 1
         print(count)
-    func_1()
+	func_1()
+	func_2()
+	print("-"*20)
+	print(count)
 
 if __name__ == "__main__":
-    func()
+	func()
 ```
 输出：
 ```
-Traceback (most recent call last):
-  File "d:/code_practice/practice.py", line 9, in <module>
-    func()
-  File "d:/code_practice/practice.py", line 6, in func
-    func_1()
-  File "d:/code_practice/practice.py", line 4, in func_1
-    print(count)
-UnboundLocalError: local variable 'count' referenced before assignment
+我是func()里的局部变量count
+1
+--------------------
+我是func()里的局部变量count
 ```
 **结果分析：** 
-&emsp;&emsp; 在`func_1()`中访问外层的`count`变量 时报错了，因为在`func_1()`的作用域内没有定义`count`变量，我们需要显式的告诉解释器，我们希望访问的是外面的`count`变量，而`global` 和 `nonlocal`正是用来完成这个工作的。
+&emsp;&emsp; `func_1()`的输出结果说明我们可以访问到外层的`count`变量；
+&emsp;&emsp; `func_2()`和`func()`的最后那句`print`的输出结果说明我们不能修改外部作用域的变量。
+### 1.1.1 总结
+**而`global` 和 `nonlocal`使我们修改 全局变量(`global`)、外层局部变量(`nonlocal`) 成为了可能。**
 
 ## 1.2 `global` 和 `nonlocal`的作用分别是什么？
 | 关键字     | 作用                                                 |

@@ -1010,7 +1010,83 @@ print(image_data)
 &emsp;
 &emsp;
 ## Item 20: Prefer Raising Exceptions to Returning None(遇到意外时应该抛异常，而不是返回`None`)
-### 1. 
+### 1. 为什么不推荐返回`None`？
+&emsp;&emsp; 一般返回`None`来表示异常情况，但是这么做很容易出错，因为在 条件表达式中 无法区分`None`和`0`(或空`str`)，因为这些值都相当于`False`:
+```python
+def careful_divide(a, b):
+	try:
+		return a / b
+	except ZeroDivisionError:
+		return None
+
+ret = careful_divide(0, 1)
+
+if ret is None:
+	print("Invalid input")
+else:
+	print(ret)
+
+print("-"*20)
+
+if not ret:
+	print("Invalid input")
+else:
+	print(ret)
+```
+运行结果：
+```
+0.0
+--------------------
+Invalid input
+```
+**结果分析：**
+&emsp;&emsp; 除非你明确的判断返回值是否为`None`，要不然在`if`语句中很容易将`0`和空字符串当成`False`，这样就不能将其和`None`区分开来了。
+
+### 2. 既然不推荐返回`None`，那如何解决这个问题呢？
+#### 方法一：
+&emsp;&emsp; 返回两个值：`flag`表示是否成功，`value`表示计算结果
+#### 方法二：
+&emsp;&emsp; 不采用`None`作为特例，而是向调用方抛出异常，并在docstring中说明会抛什么异常，最后调用方负责捕获异常：
+```python
+def careful_divide(a: float, b: float) -> float:
+	"""Divides a by b.
+	Raises:
+	ValueError: When the inputs cannot be divided.
+	"""
+	try:
+		return a / b
+	except ZeroDivisionError as e:
+		raise ValueError('Invalid inputs')
+
+
+def call_careful_divide(x, y):
+	try:
+		result = careful_divide(x, y)
+	except ValueError:
+		print('Invalid inputs')
+	else:
+		print('Result is %.1f' % result)
+
+
+call_careful_divide(2, 5) 
+call_careful_divide(1, 0)
+```
+运行结果：
+```
+Result is 0.4
+Invalid inputs
+```
+上面的代码就很清晰，调用方出错的概率就变得很小了。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 21: Know How Closures Interact with Variable Scope(了解如何在闭包里使用外围作用域中的变量)
 
 
 
