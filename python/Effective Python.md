@@ -1150,12 +1150,126 @@ value : (10, 10, 10, 10, 10, 10, 10, 10, 10, 10)
 &emsp;
 &emsp;
 ## Item 23: Provide Optional Behavior with Keyword Arguments(用关键字参数来表示可选的行为)
+### 1. 什么是 按位置传递参数 和 按关键字传递参数 来调用函数？
+```python
+def remainder(number, divisor):
+	return number % divisor
+
+# 按位置传递参数
+remainder(20, 7) 
+
+# 按关键字传递参数
+remainder(20, divisor=7)
+remainder(number=20, divisor=7)
+```
+
+### 2. 通过关键字指定参数时，需要注意什么？
+**① 如果混用 按位置传递参数 和 按关键字传递参数，则必须将 位置参数 放在前面**
+```python
+def remainder(number, divisor):
+	return number % divisor
+
+remainder(number=20, 7)
+```
+运行结果：
+```
+  File "f:\code\python\test\test.py", line 3
+    remainder(number=20, 7)
+                          ^
+SyntaxError: positional argument follows keyword argument
+```
+**② 每个参数只能指定一次，不能既使用位置参数指定，又使用关键字参数指定**
+```python
+def remainder(number, divisor):
+	return number % divisor
+
+remainder(20, number=7)
+```
+运行结果：
+```
+Traceback (most recent call last):
+  File "f:\code\python\test\test.py", line 4, in <module>
+    remainder(20, number=7)
+TypeError: remainder() got multiple values for argument 'number'
+```
+
+### 3. 如何通过字典来调用关键字参数？
+把`**`加在字典前面，传给函数：
+```python
+def remainder(number, divisor):
+	return number % divisor
+	
+my_kwargs = {
+    'number': 20,
+    'divisor': 7,
+}
+print(remainder(**my_kwargs))
+```
+#### 3.2 字典里的关键字可以有 带调用函数不存在的关键字吗？
+不可以：
+```python
+def remainder(number, divisor):
+	return number % divisor
+	
+my_kwargs = {
+    'number': 20,
+    'divisor': 7,
+    'useless': 1,
+}
+print(remainder(**my_kwargs))
+```
+运行结果：
+```
+Traceback (most recent call last):
+  File "f:\code\python\test\test.py", line 9, in <module>
+    print(remainder(**my_kwargs))
+TypeError: remainder() got an unexpected keyword argument 'useless'
+```
+
+### 4. 关键字参数有何好处？
+**① 用关键字参数调用函数可以让初次阅读代码的人更容易看懂。**
+**② 函数可以带有默认值，通过这个默认值我们可以定义可选行为：**
+&emsp;&emsp; 例如，我们要计算液体流入容器的速率。如果这个容器带刻度，那么可以取前后两个时间点的刻度差，并把它跟这两个时间点的时间差相除，就可以算出流速了。
+```python
+def flow_rate(weight_diff, time_diff):
+	return weight_diff / time_diff
+
+weight_diff = 0.5
+time_diff = 3
+flow = flow_rate(weight_diff, time_diff)
+print(f'{flow:.3} kg per second')
+#  0.167 kg per second
+```
+一般来说，我们用每秒的千克数表示流速。但有时，我们还想估算更长的时间段内的流速结果。只需要给同一个函数加一个`period`参数来表示那个时间段相当于多少秒即可:
+```python
+def flow_rate(weight_diff, time_diff, period):
+	return (weight_diff / time_diff) * period
+```
+这样写有个问题，就是每次调用函数时，都得明确指定`period`参数，哪怕计算每秒中的流速，也可以指定`period`为1。
+```python
+flow_per_second = flow_rate(weight_diff, time_diff, 1)
+```
+为了简化这种用法，我们可以给`period`参数设定默认值：
+```python
+def flow_rate(weight_diff, time_diff, period=1):
+	return (weight_diff / time_diff) * period
+```
+这样`period`就变成可选参数了：
+```python
+flow_per_second = flow_rate(weight_diff, time_diff)
+flow_per_hour = flow_rate(weight_diff, time_diff, period=3600)
+```
+**③ 我们可以很灵活地扩充函数的参数，而不用担心会影响原有的函数调用代码。**
 
 
 
 
 
 
+&emsp;
+&emsp;
+&emsp;
+## Item 24: Use None and Docstrings to Specify Dynamic Default Arg(用`None`和`docstring`来描述默认值会变的参数)
 
 ① 
 ② 
