@@ -1087,7 +1087,7 @@ Invalid inputs
 &emsp;
 &emsp;
 ## Item 21: Know How Closures Interact with Variable Scope(了解如何在闭包里使用外围作用域中的变量)
-
+&emsp;&emsp; 尽量少用`nonlocal`语句，尤其是在那种很长的函数中，因为有bug很难被发现。
 
 
 
