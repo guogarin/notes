@@ -1092,6 +1092,71 @@ Invalid inputs
 
 
 
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 22: Reduce Visual Noise with Variable Positional Arguments(用数量可变的位置参数给函数设计清晰的参数列表)
+
+### 1. 如何把一个已有序列传给参数可变的函数？
+&emsp;&emsp; 在传递序列的时候采用`*`即可：
+```python
+def log(message, *values): # The only difference
+    if not values:
+        print(message)
+    else:
+        values_str = ', '.join(str(x) for x in values)
+        print(f'{message}: {values_str}')
+
+favorites = [7, 33, 99]
+
+log('Favorite numebers', *favorites)
+```
+运行结果：
+```
+Favorite numebers: 7, 33, 99
+```
+
+### 2. 接收数量可变参数的函数 可能存在什么问题？
+有可能导致两个问题：
+**① 如果`*`操作符加在生成器前，那么传递参数时，程序有可能因为内存耗尽而奔溃**
+&emsp;&emsp; 程序总是必须先把 这些可变参数 转化成一个元组，然后才能把它们当成可选的位置参数传给函数。这意味着，如果调用函数时，把带`*`操作符的生成器传了过去，那么程序必须先把这个生成器里面的所有元素迭代完以便形成元组，然后才能继续继续往下执行。这个元组包含生成器所给出的每个值，这可能会耗费大量内存，甚至会让程序奔溃：
+```python
+def my_generator(num):
+    for i in range(num):
+        yield num
+
+def my_varargs(*varargs):
+    print(f"type  : {type(varargs)} \nvalue : {varargs}")
+
+
+a = my_generator(10)
+my_varargs(*a)
+```
+运行结果：
+```
+type  : <class 'tuple'> 
+value : (10, 10, 10, 10, 10, 10, 10, 10, 10, 10)
+```
+**② 可能导致很难排查的bug**
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 23: Provide Optional Behavior with Keyword Arguments(用关键字参数来表示可选的行为)
+
+
+
+
+
+
+
 ① 
 ② 
 ③ 
