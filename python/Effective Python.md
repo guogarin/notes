@@ -1270,6 +1270,283 @@ flow_per_hour = flow_rate(weight_diff, time_diff, period=3600)
 &emsp;
 &emsp;
 ## Item 24: Use None and Docstrings to Specify Dynamic Default Arg(用`None`和`docstring`来描述默认值会变的参数)
+### 1. 如何给函数提供 变化的默认实参？
+#### 1.1 陷阱
+&emsp;&emsp; 有时，我们想把那种不能提前固定的值，当做关键字参数的默认值。例如，记录日志消息时，默认时间应该是触发事件的那一刻。所以，如果调用者没有明确指定时间，那么默认把调用函数的那一刻当成这条日志的记录时间。
+```python
+from time import sleep
+from datetime import datetime
+
+def log(message, when=datetime.now()):
+    print(f'{when}: {message}')
+
+log('Hi there!')
+sleep(0.1)
+log('Hello again!')
+```
+运行结果：
+```
+2021-11-09 14:20:51.545934: Hi there!
+2021-11-09 14:20:51.545934: Hello again!
+```
+**结果分析：**
+&emsp;&emsp; 根据运行结果可发现，两次`log()`记录的时间一模一样，这是因为`datetime.now()`只在加载该模块的时候执行了一次，后续的调用的都是这次的运行结果。也就是说，函数参数的默认值在程序运行时就确定了。
+#### 1.2 破解之法
+&emsp;&emsp; 要想在`Python`中实现 这种效果，惯用的办法是把参数的默认值设为`None`，同时在`docstring`文档里写清楚：
+> 这个参数为`None`时，函数会如何运作，而且在函数里要判断该参数是不是`None`，如果是则把它改为默认值。
+> 
+```python
+def log(message, when=None):
+    """Log a message with a timestamp.
+    Args:
+        message: Message to print.
+        when: datetime of when the message occurred.
+            Defaults to the present time.
+    """
+    if when is None:
+        when = datetime.now()
+    print(f'{when}: {message}')
+
+
+log('Hi there!')
+sleep(0.1)
+log('Hello again!')
+```
+运行结果：
+```
+2021-11-09 15:00:54.230603: Hi there!
+2021-11-09 15:00:54.337931: Hello again!
+```
+**结果分析：**
+&emsp;&emsp; 现在可以看到，两次运行结果的时间戳不一样了。
+
+### 2. 扩展
+&emsp;&emsp; 把参数的默认值写成`None`还有个重要的意义：就是用来表示那种以后可能由调用者修改内容的默认值。
+&emsp;&emsp; 我们要写一个函数对采用JSON格式编码的数据做解码。如果无法解码，那么就返回调用时所指定的默认结果，假如调用者当时没有明确指定，那么久返回一个空`dict`:
+```python
+import json
+
+def decode(data, default={}):
+	try:
+		return json.loads(data)
+	except ValueError:
+		return default
+
+foo = decode('bad data')
+foo['stuff'] = 5
+bar = decode('also bad')
+bar['meep'] = 1
+
+print('Foo:', foo)
+print('Bar:', bar)		
+```
+运行结果：
+```
+Foo: {'stuff': 5, 'meep': 1}
+Bar: {'stuff': 5, 'meep': 1}
+```
+**结果分析：**
+&emsp;&emsp; 我们本意是想让这两次操作得到两个不同的空白字典。但实际上，它们用的是同一个字典，只要修改其中一个字典，另一个就会受到影响。
+**这种错误的根源在于：**
+&emsp;&emsp; `foo`和`bar`其实是同一个字典，都是一开始给`default`的那个确认默认值时所分配的空字典：
+```python
+# 前面如上，略 ...
+
+if foo is bar:
+	print("foo is bar")
+else:
+	print("foo is not bar")
+```
+运行结果：
+```
+foo is bar
+```
+**要解决上面的问题，依然是把默认值设为`None`，并且在`docstring`中说明函数在这个值为`None`时会怎么做：**
+```python
+import json
+
+def decode(data, default=None):
+	"""Load JSON data from a string.
+	Args:
+	data: JSON data to decode.
+	default: Value to return if decoding fails.
+	Defaults to an empty dictionary.
+	"""
+	try:
+		return json.loads(data)
+	except ValueError:
+		if default is None:
+			default = {}
+		return default
+
+foo = decode('bad data')
+foo['stuff'] = 5
+bar = decode('also bad')
+bar['meep'] = 1
+print('Foo:', foo)
+print('Bar:', bar)
+if foo is  bar:
+	print("foo is bar")
+else:
+	print("foo is not bar")
+```
+运行结果：
+```
+Foo: {'stuff': 5}
+Bar: {'meep': 1}
+foo is not bar
+```
+**结果分析：**
+&emsp;&emsp; 可以看到的是，`foo`和`bar`相互独立了。
+
+### 总结
+&emsp;&emsp; 函数的默认实参只会在 **系统把定义该函数的模块加载进来的时候** 计算一次，因此如果默认值将来可能由调用方修改(例如`dict`和`list`等) 或 要随着调用时的情况变化时，那么程序可能会出现奇怪的效果。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 25: Enforce Clarity with Keyword-Only and Positional-Only Arguments(用 只能以关键字指定 和只 能按位置传入 的参数 来设计清晰的参数列表)
+### 1. 只能通过关键字指定的参数(keyword-only argument)
+#### 1.1 什么时候需要使用 keyword-only argument？
+&emsp;&emsp; 一般来说，对于那些比较容易混淆的参数，都建议使用，举个例子：
+```python
+def safe_division(number, divisor, ignore_overflow=False, ignore_zero_division=False):
+	try:
+		return number / divisor
+	except OverflowError:
+		if ignore_overflow:
+			return 0
+		else:
+			raise
+	except ZeroDivisionError:
+		if ignore_zero_division:
+			return float('inf')
+		else:
+			raise
+
+
+print(safe_division_b(1.0, 10**500, ignore_overflow=True))
+print(safe_division_b(1.0, 0, ignore_zero_division=True))
+```
+运行结果：
+```
+0
+inf
+```
+但是，`safe_division()`的`ignore_overflow`和`ignore_zero_division`参数都是可选的，我们没有办法要求调用者必须使用关键字形式来指定这两个参数，比如：
+```python
+safe_division(1.0, 10**500, True, False)
+```
+如果像上面那样调用的话代码就不够清晰了，很容易搞错，这个时候，keyword-only argument 就排上用处了。
+
+#### 1.2 如何使用 keyword-only argument？
+&emsp;&emsp; 在参数列表中使用`*`将参数分成两组，左边是位置参数，右边是 只能用关键字指定的参数：
+```python
+def safe_division(number, divisor, *, ignore_overflow=False, ignore_zero_division=False):
+	try:
+		return number / divisor
+	except OverflowError:
+		if ignore_overflow:
+			return 0
+		else:
+			raise
+	except ZeroDivisionError:
+		if ignore_zero_division:
+			return float('inf')
+		else:
+			raise
+
+
+print(safe_division(1.0, 10**500, True))
+```
+运行结果：
+```
+Traceback (most recent call last):
+  File "d:\code_practice\practice.py", line 16, in <module>
+    print(safe_division(1.0, 10**500, True))
+TypeError: safe_division() takes 2 positional arguments but 3 were given
+```
+将调用代码改成：
+```python
+print(safe_division(1.0, 10**500, ignore_overflow=True))
+print(safe_division(1.0, 0, ignore_zero_division=True))
+```
+程序正常运行
+
+### 2. 只能按位置传递的参数(Positional-Only Arguments)
+#### 2.1 为什么需要？
+按关键字传递参数会存在一个问题：如果我们对函数进行了重构，把函数的形参名修改了，如果在代码中有对这些形参名进行按关键字传递，那么代码可能会报错：
+```python
+def safe_division(a, divisor, *, ignore_overflow=False, ignore_zero_division=False):
+	# 略...
+
+print(safe_division(number=1.0, 10**500, True))
+```
+显然，我们在修改`safe_division()`后，后面对它的调用是错误的。
+
+#### 2.2 如何使用？
+&emsp;&emsp; python3.8 引入了 只能按位置传递的参数(Positional-Only Arguments)：在参数列表中使用`/`符号，表示它左边的那些参数必须按位置指定
+```python
+def safe_division(number, divisor, /, *, ignore_overflow=False, ignore_zero_division=False):
+	try:
+		return number / divisor
+	except OverflowError:
+		if ignore_overflow:
+			return 0
+		else:
+			raise
+	except ZeroDivisionError:
+		if ignore_zero_division:
+			return float('inf')
+		else:
+			raise
+
+
+print(safe_division(number=1.0, 10**500, ignore_overflow=True))
+```
+运行结果：
+```
+  File "d:\code_practice\practice.py", line 16
+    print(safe_division(number=1.0, 10**500, ignore_overflow=True))
+                                                                 ^
+SyntaxError: positional argument follows keyword argument
+```
+
+### 3. `*`和`/`同时出现在参数列表中时，它俩中间的参数必须按什么提供实参？
+&emsp;&emsp; 在`*`和`/` 中间的参数 既可以按关键字提供参数，也可以按位置提供参数，这也是python默认的参数指定方式。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 26: Define Function Decorators with functools.wraps(用`functools.wraps`定义函数装饰器)
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# 四、 Comprehensions and Generators(推导与生成)
+## Item 27: Use Comprehensions Instead of map and filter(用列表推导来替代`map`和`filter`)
+### 1. 
+
+
+
+
+
 
 ① 
 ② 
