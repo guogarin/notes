@@ -1541,7 +1541,84 @@ SyntaxError: positional argument follows keyword argument
 &emsp;
 # 四、 Comprehensions and Generators(推导与生成)
 ## Item 27: Use Comprehensions Instead of map and filter(用列表推导来替代`map`和`filter`)
-### 1. 
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 28: Avoid More Than Two Control Subexpressions in Comprehensions(控制推导逻辑的子表达式不要超过两个)
+&emsp;&emsp; 用推导式本来就是为了使代码更简洁易懂，如果在推导式里面嵌套了太多层就起不到这个效果了。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 29: Avoid Repeated Work in Comprehensions by Using Assignment Expressions(用赋值表达式消除推导式中的重复代码)
+```python
+stock = {
+	'nails': 125,
+	'screws': 35,
+	'wingnuts': 8,
+	'washers': 24,
+}
+
+order = ['screws', 'wingnuts', 'clips']
+
+def get_batches(count, size):
+	return count // size
+
+# ① 使用for循环
+result1 = {}
+for name in order:
+	count = stock.get(name, 0)
+	batches = get_batches(count, 8)
+	if batches:
+		result1[name] = batches	
+print("result1 : ", result1)
+
+
+# ② 使用字典推导
+result2 = {name : get_batches(stock.get(name, 0), 8) for name in order if get_batches(stock.get(name, 0), 8)}
+print("result2 : ", result2)
+
+# ③ 字典推导 + 赋值表达式
+result3 = {name : tenth for name in order if (tenth:=get_batches(stock.get(name, 0), 8))}
+print("result3 : ", result3)
+```
+很显然，用字典推导比用`for`循环简洁，而赋值表达式又更加简洁，而且还减少了一次对`get_batches()`的调用，提高了效率。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 30: Consider Generators Instead of Returning Lists(不要让函数直接返回列表，而应该让它逐个生成列表里的值)
+对于那些要返回一个列表的函数，利用`yield`来实现比较合适：
+> ① 代码更清晰；
+> ② 对于那些大列表，没有内存溢出的风险
+> 
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 31: Be Defensive When Iterating Over Arguments(谨慎的迭代函数所收到的参数)
 
 
 
