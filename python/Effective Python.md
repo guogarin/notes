@@ -1619,6 +1619,225 @@ print("result3 : ", result3)
 &emsp;
 &emsp;
 ## Item 31: Be Defensive When Iterating Over Arguments(谨慎的迭代函数所收到的参数)
+### 1. 当函数收到什么类型的参数时需要谨慎的迭代？为什么？
+&emsp;&emsp; 收到 迭代器 的时候，而函数会对该迭代器进行多次遍历时，需要谨慎，因为迭代器只能进行一次遍历。
+&emsp;&emsp; 假设我们要分析省内各市的游客数量，原始数据保存在一个列表中，列表每个元素标书每年有多少游客到这个城市旅游（单位为万），我们需要统计每个市占的百分比：
+```python
+def normalize(numbers):
+    total = sum(numbers)
+    result = []
+    for value in numbers:
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+
+visits = [15, 35, 80]
+percentages = normalize(visits)
+print(percentages)
+assert sum(percentages) == 100.0
+```
+运行结果：
+```
+[11.538461538461538, 26.923076923076923, 61.53846153846154]
+```
+但为了应对更大的数据，我们现在需要从文件中读数据，文件中每一行包含一个市的数据。因为数据量可能变得很大，因此我们决定使用生成器来实现，以避免占用过多内存：
+```python
+def normalize(numbers):
+    total = sum(numbers)
+    result = []
+    for value in numbers:
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+
+def read_visits(data_path):
+    with open(data_path) as f:
+        for line in f:
+            yield int(line)
+
+it = read_visits("practice.txt")
+percentages = normalize(it)
+print(percentages)
+```
+运行结果：
+```
+[]
+```
+**结果分析：**
+&emsp;&emsp; 奇怪的是，对`read_visits()`返回的迭代器调用`normalize()`后没有得到预期的结果，出现这个问题的原因是：**假如迭代器(或生成器)已经抛出`StopIteration`，继续用它来构造列表或做`for`循环是不会得到任何结果的。**不信我们来验证一下：
+```python
+def read_visits(data_path):
+    with open(data_path) as f:
+        for line in f:
+            yield int(line)
+
+it = read_visits("practice.txt")
+print("sum(it) ：", sum(it))
+print("list(it): ", list(it))
+```
+运行结果：
+```
+sum(it) ： 401
+list(it):  []
+```
+**而且还有一个很让人疑惑的是：为什么对 已经迭代完毕的迭代器 继续迭代 不会报错？** 因为包括`for`循环、`list`构造器和一些标准库函数都认为迭代器在正常的操作中抛出`StopIteration`异常是很正常的行为，因为它们没办法区分这个迭代器是本来就没有数据，还是本来有数据但是已经被迭代完了。
+
+### 2. 如何解决上面的问题？
+为了解决上面的问题，我们有三种方法：
+> ① 我们可以在`normalize()`中将内容拷贝到一个列表中：
+> ② 让`normalize()`接受一个函数，每次都用这个函数获取一个新的迭代器；
+> ③ 新建一个容器类，这个容器类需要实现 迭代器协议
+>  
+**① 我们可以在`normalize()`中将内容拷贝到一个列表中：**
+```python
+def normalize_copy(numbers):
+	numbers_copy = list(numbers) # Copy the iterator
+	# 后面同上，略...
+```
+但问题是，我们用生成器的本意就是为了不占用过多内存，这样将内容拷贝到一个列表中，还不如一开始就给`normalize()`传一个列表。
+
+**② 让`normalize()`接受一个函数，每次都用这个函数获取一个新的迭代器**
+
+```python
+def normalize(get_iter):
+    total = sum(get_iter())
+    result = []
+    for value in get_iter():
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+
+def read_visits(data_path):
+    with open(data_path) as f:
+        for line in f:
+            yield int(line)
+
+percentages = normalize(lambda data_path="practice.txt": read_visits(data_path))
+print(percentages)
+assert sum(percentages) == 100.0
+```
+运行结果：
+```
+[24.93765586034913, 2.9925187032418954, 19.45137157107232, 24.688279301745634, 8.728179551122194, 7.4812967581047385, 5.985037406483791, 5.7356608478802995]
+```
+**结果分析：**
+&emsp;&emsp; 这么做确实可以，但每次都给`normalize()`传一个`lambda`表达式显得有些生硬，不够优雅。
+
+**③ 新建一个容器类，这个容器类需要实现 迭代器协议**
+&emsp;&emsp; 所谓实现 迭代器协议(iterator protocol)，其实就是实现`__iter__()`方法，因为对一个对象进行迭代(如`for`循环)时，其实就是先通过`__iter__()`方法返回一个迭代器，然后再对这个返回的迭代器进行操作，具体原理可以看关于迭代器的笔记。
+&emsp;&emsp; 听起来似乎很复杂，其实就是在实现`__iter__()`方法的时候返回一个生成器就行了：
+```python
+class ReadVisits:
+    def __init__(self, data_path):
+        self.data_path = data_path
+    
+    def __iter__(self):
+        with open(self.data_path) as f:
+            for line in f:
+                yield int(line)
+
+def normalize(numbers):
+    total = sum(numbers)
+    result = []
+    for value in numbers:
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+
+
+percentages = normalize(ReadVisits("practice.txt"))
+print(percentages)
+assert sum(percentages) == 100.0
+```
+运行结果：
+```
+[24.93765586034913, 2.9925187032418954, 19.45137157107232, 24.688279301745634, 8.728179551122194, 7.4812967581047385, 5.985037406483791, 5.7356608478802995]  
+```
+**结果分析：**
+&emsp;&emsp; 从结果可以看出，这么写是没问题的，但是为什么可以成功呢？因为`sum()`和`for`循环都会触发`ReadVisits.__iter__()`，然后得到一个新的迭代器。
+
+### 3. 既然函数收到的实参为迭代器的时候可能会遇到问题，那如何避免这种情况呢？
+&emsp;&emsp; 我们无法限定使用者传过来的参数，但是我们可以在函数中对接收到的实参进行判断，如果接受到的是会引发问题的类型，则返回错误，比如：
+```python
+from collections.abc import Iterator
+
+class ReadVisits:
+    def __init__(self, data_path):
+        self.data_path = data_path
+    
+    def __iter__(self):
+        with open(self.data_path) as f:
+            for line in f:
+                yield int(line)
+
+def normalize(numbers):
+    if isinstance(numbers, Iterator):
+        raise TypeError("The parameter cannot be Iterator.")
+    total = sum(numbers)
+    result = []
+    for value in numbers:
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+
+
+print(normalize(ReadVisits("practice.txt")))
+print(normalize(iter(ReadVisits("practice.txt")))) # 传一个迭代器进去
+```
+运行结果：
+```
+[24.93765586034913, 2.9925187032418954, 19.45137157107232, 24.688279301745634, 8.728179551122194, 7.4812967581047385, 5.985037406483791, 5.7356608478802995]
+Traceback (most recent call last):
+  File "d:\code_practice\practice.py", line 24, in <module>
+    print(normalize(iter(ReadVisits("practice.txt"))))
+  File "d:\code_practice\practice.py", line 14, in normalize
+    raise TypeError("The parameter cannot be Iterator.")
+TypeError: The parameter cannot be Iterator.
+```
+
+### 4. 总结
+&emsp;&emsp; 当函数要对接收到的实参遍历多次时需要格外注意，因为如果为迭代器，那么程序可能得不到预期的结果。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 32: Consider Generator Expressions for Large List Comprehensions(对于数据量较大的列表推导，尽量用生成器表达式来完成)
+### 1. 为什么？
+&emsp;&emsp; 列表推导生成的元素全都会加载到内存里，如果数据量很大的话，有可能挤爆内存。
+
+### 2. 生成器表达式 如何写？
+和列表推导类似，把`[]`换成`()`即可：
+```python
+List_Comprehension = [x for x in range(10)]
+Generator = (x for x in range(10))
+
+print(List_Comprehension)
+print(Generator)
+```
+运行结果：
+```
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+<generator object <genexpr> at 0x000001FC7D659A10>
+```
+
+### 3. 使用生成器表达式需要注意什么？
+&emsp;&emsp; 和迭代器一样，生成器表达式也只能迭代一次，因此如果代码需要对其进行多次迭代，那么就需要多注意，具体可以看Item 31。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 33: Compose Multiple Generators with yield from(通过`yiled from`把多个生成器连起来)
+
 
 
 
@@ -1629,8 +1848,17 @@ print("result3 : ", result3)
 ② 
 ③ 
 ④ 
+
 ```python
 
 ```
+运行结果：
+```
+
+```
+**结果分析：**
+&emsp;&emsp; 
+
+
 # 参考文献
 1. [Python3中的bytes和str类型](https://zhuanlan.zhihu.com/p/102681286)
