@@ -1837,6 +1837,24 @@ print(Generator)
 &emsp;
 &emsp;
 ## Item 33: Compose Multiple Generators with yield from(通过`yiled from`把多个生成器连起来)
+### 1. 为什么建议使用`yiled from`？
+有两个原因：
+&emsp;&emsp; ① 使代码更简洁；
+&emsp;&emsp; ② 解释器对`yiled from`进行了优化，速度要比用`for`循环迭代要快。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 34: Avoid Injecting Data into Generators with send
+
+
+
+
 
 
 
