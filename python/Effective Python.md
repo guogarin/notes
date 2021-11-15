@@ -1850,13 +1850,52 @@ print(Generator)
 &emsp;
 &emsp;
 &emsp;
-## Item 34: Avoid Injecting Data into Generators with send
+## Item 34: Avoid Injecting Data into Generators with send(不要用`send`给生成器注入数据)
+### 1. 为什么不建议使用`send`给生成器注入数据？
+主要有两个原因：
+> ① 代码可读性差，别人很难理解；
+> ② `send()`和`yield from`一起使用时会有奇怪的效果；
+> 
+
+### 2. 既然不推荐使用`send()`向生成器发送数据，那如何和生成器交互？
+&emsp;&emsp; 可以通过迭代器向组合起来的生成器输入数据，具体见书上。TODO:
 
 
 
 
 
 
+&emsp;
+&emsp;
+&emsp;
+## Item 35: Avoid Causing State Transitions in Generators with throw(不要通过`throw`变换生成器的状态)
+&emsp;&emsp; 因为不好懂TODO:
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 36: Consider itertools for Working with Iterators and Generators(考虑用`itertools`来拼装迭代器和生成器)
+### 1. `itertools`模块介绍
+&emsp;&emsp; `itertools`模块有很多函数，可以用来同时处理不同的迭代器。
+
+### 2. 函数介绍
+这个太多了，直接翻书吧。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# 五、类与接口
 
 
 
