@@ -1896,6 +1896,81 @@ print(Generator)
 &emsp;
 &emsp;
 # 五、类与接口
+## Item 37: Compose Classes Instead of Nesting Many Levels of Built-in Types(不要用嵌套的内置类型实现多层结构，而应该通过组合起来的类来实现)
+### 1. 用 嵌套的内置类型 实现多层结构 的缺点是？
+&emsp;&emsp; 多层的嵌套会使其它开发者很难看懂，而且后面维护起来也很麻烦。就像书中的例子一样，要考虑学科、分数 以及该次考试的权重，如果使用内置类型嵌套的话最终的结构为：`{student_name: {subject: [ (weight, score) ] } }`。显然这样的结构很难维护。
+&emsp;&emsp; 一般超过两层结构的话就不应该使用这种嵌套类型，而应该通过类来重构。
+
+### 2. 如何解决上面的困境呢？
+&emsp;&emsp; 可以用类来重构
+```python
+from collections import namedtuple, defaultdict
+
+Grade = namedtuple('Grade', ('score', 'weight'))
+
+class Subject:
+    def __init__(self):
+        self._grades = []
+    
+    def report_grade(self, score, weight):
+        self._grades.append(Grade(score, weight))
+
+    def average_grade(self):
+        total_score, total_weight = 0, 0
+        for grade in self._grades:
+            total_score += grade.score * grade.weight
+            total_weight += grade.weight
+        return total_score / total_weight
+
+
+class Student:
+    def __init__(self):
+        self._subject = defaultdict(Subject)
+
+    def get_subject(self, name):
+        return self._subject[name]
+
+    def average_grade(self):
+        count, total = 0, 0
+        for subject in self._subject.values():
+            total += subject.average_grade()
+            count += 1
+        return total / count
+
+class Gradebook:
+    def __init__(self):
+        self._students = defaultdict(Student)
+
+    def get_student(self, name):
+        return(self._students[name])
+
+book = Gradebook()
+albert = book.get_student('Albert Einstein')
+math = albert.get_subject('Math')
+math.report_grade(75, 0.05)
+math.report_grade(65, 0.15)
+math.report_grade(70, 0.80)
+gym = albert.get_subject('Gym')
+gym.report_grade(100, 0.40)
+gym.report_grade(85, 0.60)
+print(albert.average_grade())
+```
+运行结果：
+```
+80.25
+```
+**结果分析：**
+&emsp;&emsp; 通过类将代码重构后，代码量增加了，但是可读性提高了，而且后面维护起来也更方便。
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 38: Accept Functions Instead of Classes for Simple Interfaces(让简单的接口，)
 
 
 
