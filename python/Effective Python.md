@@ -1970,7 +1970,56 @@ print(albert.average_grade())
 &emsp;
 &emsp;
 &emsp;
-## Item 38: Accept Functions Instead of Classes for Simple Interfaces(让简单的接口，)
+## Item 38: Accept Functions Instead of Classes for Simple Interfaces(让简单的接口接受函数，而不是类的实例)
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 39: Use @classmethod Polymorphism to Construct Objects Generically(通过`@classmethod`多态来构造同一体系中的各类对象)
+### 1. 
+没看明白，后面回来看。TODO: 
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 40: Initialize Parent Classes with super(通过`super()`来初始化父类)
+### 1. 有哪几种初始化父类的方法？
+有两种方法：
+> ① 通过`类名.__init__()`；
+> ② 通过`super()`；
+> 
+
+### 2. 上面的几种初始化父类的方法中，更推荐哪种方法？为什么？
+更推荐用`super()`来初始化父类：
+> 在**简单的类体系**中，两种方法都不会有问题；
+> 但是在**复杂的类体系(菱形继承)**中，，通过`类名.__init__()`来初始化父类会出现重复调用爷爷类的`__init__()`被多次调用的情况，使用`super()`可以避免；具体例子可以看 [类.md](类.md)
+> 
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 41: Consider Composing Functionality with Mix-in Classes(考虑使用`mixin`类来表示可组合的功能)
+### 1. 
+
+
 
 
 
