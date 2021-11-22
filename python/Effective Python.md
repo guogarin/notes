@@ -2017,7 +2017,40 @@ print(albert.average_grade())
 &emsp;
 &emsp;
 ## Item 41: Consider Composing Functionality with Mix-in Classes(考虑使用`mixin`类来表示可组合的功能)
+### 1. 什么时候应该使用`mixin`类？
+&emsp;&emsp; 如果既想通过多重继承来方便地封装逻辑，又想避开多重继承可能带来的问题，这个就应该把 需要被继承的类 写成`Mixin`类。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 42: Prefer Public Attributes Over Private Ones(优先考虑用public属性表示应受保护的数据，而不是用`private`)
+### 1. 为什么应该避免使用`private`？
+&emsp;&emsp; 把成员变量设为`private`会导致程序难以扩展。
+
+### 2. 对于那些不希望被别人访问的成员，我们应该怎么做？
+&emsp;&emsp; 用单下划线`_`，并用文档加以解释。
+
+### 3. 那什么时候适合用`private`？
+当子类和父类的成员变量有可能重名的时候，可以考虑使用`private`。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 43: Inherit from collections.abc for Custom Container Types(自定义的容器类型应该从`collections.abc`继承)
 ### 1. 
+
 
 
 
