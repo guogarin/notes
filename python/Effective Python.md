@@ -2049,9 +2049,89 @@ print(albert.average_grade())
 &emsp;
 &emsp;
 ## Item 43: Inherit from collections.abc for Custom Container Types(自定义的容器类型应该从`collections.abc`继承)
+### 1. `collections.abc`提供的是什么？
+&emsp;&emsp; `collections.abc`中定义了很多跟容器和迭代器 (序列、映射、集合等) 有关的抽象基类。 当我们需要里面的某项功能时，我们可以继承这些抽象基类。
+
+### 2. 假设一个类，我们想让他支持`dict`那样的关键字索引操作(如`obj[key]`)，应该怎么做？
+① 自己实现全套功能
+② 继承 `collections.abc`中的`Mapping`抽象类
+
+### 3. 为什么更推荐直接继承`collections.abc`中的抽象类，而不是自己实现呢？
+&emsp;&emsp; ① 自己写需要多写很多代码，比如想实现`set`的的所有方法，开发者需要编写需要代码，但是直接继承`collections.abc.Set`可以节省绝大部分工作；
+&emsp;&emsp; ② 自己写很容易漏功能，而且出现bug的概率比较高
+
+### 4. 定义一个二叉树类，让它支持内置`list`一样的操作
+```python
+from collections.abc import Sequence
+
+class BinaryNode:
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+class IndexableNode(BinaryNode):
+    def _traverse(self):
+        if self.left is not None:
+            yield from self.left._traverse()
+        yield self
+        if self.right is not None:
+            yield from self.right._traverse()
+
+    def __getitem__(self, index):
+        for i, item in enumerate(self._traverse()):
+            if i == index:
+                return item.value
+        raise IndexError(f'Index {index} is out of range')
+
+class SequenceNode(IndexableNode):
+    def __len__(self):
+        for count, _ in enumerate(self._traverse(), 1):
+            pass
+        return count
+
+class BetterNode(SequenceNode, Sequence):
+    pass
+
+tree = BetterNode(
+    10,
+    left=IndexableNode(
+        5,
+        left=IndexableNode(2),
+        right=IndexableNode(
+            6,
+            right=IndexableNode(7)
+        )
+    ),
+    right=IndexableNode(
+        15,
+        left=IndexableNode(11)
+    )
+
+)
+
+
+print('Index of 7 is', tree.index(7))
+print('Count of 10 is', tree.count(10))
+```
+运行结果：
+```
+Index of 7 is 3
+Count of 10 is 1
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# 六、元类与属性
+## Item 44: Use Plain Attributes Instead of Setter and Getter Methods(用纯属性与修饰器取代旧式的`setter`和`getter`方法)
 ### 1. 
-
-
 
 
 
