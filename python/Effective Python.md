@@ -2131,7 +2131,147 @@ Count of 10 is 1
 &emsp;
 # 六、元类与属性
 ## Item 44: Use Plain Attributes Instead of Setter and Getter Methods(用纯属性与修饰器取代旧式的`setter`和`getter`方法)
+&emsp;&emsp; 主要介绍了`@property`的应用，这些在[类.md](grammar/类.md)中已经总结过了。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 45: Consider @property Instead of Refactoring Attributes(考虑用`@property`实现新的属性访问逻辑，不要着急重构代码)
+### 1. 课文中讲了啥？
+首先，我们用普通的Python对象实现带有 配额(quota)的漏桶(leaky bucket)，这个类可以记录当前的配额以及这份配额的保质期：
+```python
+from datetime import datetime, timedelta
+
+class Bucket:
+    def __init__(self, period):
+        self.period_delta = timedelta(seconds=period) # 保质期
+        self.reset_time = datetime.now()              # 油是什么时候添加的
+        self.quota = 0                                # 配额
+
+    def __repr__(self):
+        return f'Bucket(quota={self.quota})'
+
+# 加油
+def fill(bucket, amount):
+    now = datetime.now()
+    if (now - bucket.reset_time) > bucket.period_delta:
+        bucket.quota = 0
+        bucket.reset_time = now
+    bucket.quota += amount
+
+# 消耗油
+def deduct(bucket, amount):
+    now = datetime.now()
+    if (now - bucket.reset_time) > bucket.period_delta:
+        return False # Bucket hasn't been filled this period
+    if bucket.quota - amount < 0:
+        return False # Bucket was filled, but not enough
+    bucket.quota -= amount
+    return True # Bucket had enough, quota consumed
+
+bucket = Bucket(60)
+fill(bucket, 100)
+print(bucket)
+
+if deduct(bucket, 99):
+    print('Had 99 quota')
+else:
+    print('Not enough for 99 quota')
+print(bucket)    
+```
+运行结果：
+```
+Bucket(quota=100)
+Had 99 quota
+Bucket(quota=1)
+```
+上面的代码可以正常运行，**但是有一个缺点**：我们只知道剩下多少配额，不知道初始配额。
+于是我们重构这个类，把当前时间内的 初始额度(`NewBucket.max_quota`)和 已使用的额度(`NewBucket.quota_consumed`)给记录下来，然后再增加一个`@property`属性`quota`，重构后的代码：
+```python
+from datetime import datetime, timedelta
+
+class NewBucket:
+    def __init__(self, period):
+        self.period_delta = timedelta(seconds=period)
+        self.reset_time = datetime.now()
+        self.max_quota = 0
+        self.quota_consumed = 0
+
+    def __repr__(self):
+        return (f'NewBucket(max_quota={self.max_quota}, '
+                f'quota_consumed={self.quota_consumed})')
+
+    @property
+    def quota(self):
+        return self.max_quota - self.quota_consumed
+    
+    @quota.setter
+    def quota(self, amount):
+        delta = self.max_quota - amount
+        if amount == 0:
+            # Quota being reset for a new period
+            self.quota_consumed = 0
+            self.max_quota = 0
+        elif delta < 0:
+            # Quota being filled for the new period
+            assert self.quota_consumed == 0
+            self.max_quota = amount
+        else:
+            # Quota being consumed during the period
+            assert self.max_quota >= self.quota_consumed
+            self.quota_consumed += delta
+
+
+def fill(bucket, amount):
+    # 同上，略... 
+
+def deduct(bucket, amount):
+    # 同上，略... 
+
+bucket = NewBucket(60)
+fill(bucket, 100)
+print(bucket)
+
+if deduct(bucket, 99):
+    print('Had 99 quota')
+else:
+    print('Not enough for 99 quota')
+print(bucket)    
+```
+运行结果：
+```
+NewBucket(max_quota=100, quota_consumed=0)
+Had 99 quota
+NewBucket(max_quota=100, quota_consumed=99)
+```
+
+### 2. 作者想通过上面的例子表达什么？
+&emsp;&emsp; 通过上面的重构，`fill()`函数和`deduct()`函数都可以继续使用，而且那些使用旧类`Bucket`也依然可以正常使用，这样就做到了最小程度的修改代码。
+&emsp;&emsp; 通过上面的例子我们可以知道，`@property`的一个很大的有点就是可以 逐渐完善数据模型而不影响已经写好的代码。
+
+### 3. 既然`@property`可以做到在不影响现有代码的情况下，对数据模型进行重构，那是不是只要一致用`@property`就行了？
+&emsp;&emsp; `@property`很好用，但是也不能滥用，如果你发现自己总是扩充`@property`方法，那说明你应该重构这个类了，此时就不要继续在沿着糟糕的方案继续写下去了。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 46: Use Descriptors for Reusable @property Methods(用描述符来改写需要复用的`@property`方法)
 ### 1. 
+
+
+
 
 
 
