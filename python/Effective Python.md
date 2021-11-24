@@ -2268,7 +2268,60 @@ NewBucket(max_quota=100, quota_consumed=99)
 &emsp;
 &emsp;
 ## Item 46: Use Descriptors for Reusable @property Methods(用描述符来改写需要复用的`@property`方法)
-### 1. 
+### 1. 内置的`@property`有何缺点？
+&emsp;&emsp; 内置的`@property`有个明显的缺点：**不能复用，受它修饰的方法，无法为同一个类中的其他属性所复用，而且与之无关的类也无法复用这些方法。**
+&emsp;&emsp; 举个例子，要编写一个类，验证学生的家庭作业成绩在0~100之间：
+```python
+class Homework:
+    def __init__(self):
+        self._grade = 0
+
+    @property
+    def grade(self):
+        return self._grade
+
+    @grade.setter
+    def grade(self, value):
+        if not (0 <= value <= 100):
+            raise ValueError('Grade must be between 0 and 100')
+        self._grade = value
+
+galileo = Homework()
+galileo.grade = 95
+```
+上面的代码简单易用，但假设我们还需要些一个类记录学生的考试成绩，而且需要把每一科的成绩记录下来：
+```python
+class Exam:
+    def __init__(self):
+        self._writing_grade = 0
+        self._math_grade = 0
+        
+    @staticmethod
+    def _check_grade(value):
+        if not (0 <= value <= 100):
+            raise ValueError('Grade must be between 0 and 100')
+
+    @property
+    def writing_grade(self):
+        return self._writing_grade
+
+    @writing_grade.setter
+    def writing_grade(self, value):
+        self._check_grade(value)
+        self._writing_grade = value
+
+    @property
+    def math_grade(self):
+        return self._math_grade
+
+    @math_grade.setter
+    def math_grade(self, value):
+        self._check_grade(value)
+        self._math_grade = value            
+```
+上面的这种写法很费事，因为每科的成绩都需要一套`@property`，假如后面需要增加学科，我们还得为这个学科增加一个`@property`。
+
+### 2. 如何解决这个缺点？
 
 
 
