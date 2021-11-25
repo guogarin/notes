@@ -2322,7 +2322,156 @@ class Exam:
 上面的这种写法很费事，因为每科的成绩都需要一套`@property`，假如后面需要增加学科，我们还得为这个学科增加一个`@property`。
 
 ### 2. 如何解决这个缺点？
+#### 2.1 版本一：
+&emsp;&emsp; 在Python中，这样的功能最好通过描述符来实现，
+```python
+class Descriptor:
+    def __init__(self):
+        self._grade = 0
 
+    def __get__(self, instance, instance_type):
+        return self._grade
+
+    def __set__(self, instance, value):
+        if not (0 <= value <= 100):
+            raise ValueError('Grade must be between 0 and 100')
+        self._grade = value
+
+class Exam:
+    _math_grade = Descriptor()
+    writing_grade = Descriptor()
+    science_grade = Descriptor()
+    def __init__(self, n):
+        self.name = n
+
+```
+下面来跑一下试试：
+```python
+jack = Exam("jack")
+
+jack._math_grade = 88
+jack.writing_grade = 99
+
+print(jack._math_grade)
+print(jack.writing_grade)
+```
+运行结果：
+```
+88
+99
+```
+似乎一切正常。但是这有一个问题没有暴露：
+```python
+jack = Exam("jack")
+
+jack._math_grade = 88
+jack.writing_grade = 99
+
+print(jack._math_grade)
+print(jack.writing_grade)
+
+print("*"*20)
+
+lucy = Exam("Lucy")
+print(lucy._math_grade)
+print(lucy.writing_grade)
+```
+运行结果：
+```
+88
+99
+********************
+88
+99
+```
+**结果分析：**
+&emsp;&emsp; 我们可以看到，明明我们没有给`lucy._math_grade`和`lucy.writing_grade`赋值，但是它俩却却和`jack._math_grade`和`jack.writing_grade`实例共性了同一个`Descriptor`实例，这是因为：
+> `_math_grade`、`writing_grade` 、`science_grade`都是类属性，它们只在定义`Exam`类的时候被定义一次，而不是 每创建一个`Exam`实例就会有一个新的`Descriptor`和`_math_grade`、`writing_grade` 、`science_grade`对应。
+> 
+
+#### 2.2 版本二：
+**为了解决这个问题，我们必须把每个`Exam`实例在这个属性上面的取值的记下来，这个我们可以通过字典来实现：**
+```python
+class Descriptor:
+    def __init__(self):
+        self._grades = {} # 改动1：_grades改成了一个字典
+
+    def __get__(self, instance, instance_type):
+        if instance is None:
+            return self
+        # 改动2：key 为 Exam实例 本身，通过 get 解决键值不存在的情况
+        return self._grades.get(instance, "Unset")
+
+    def __set__(self, instance, value):
+        if not (0 <= value <= 100):
+            raise ValueError('Grade must be between 0 and 100')
+        
+        self._grades[instance] = value
+
+class Exam:
+    _math_grade = Descriptor()
+    writing_grade = Descriptor()
+    science_grade = Descriptor()
+    def __init__(self, n):
+        self.name = n
+
+jack = Exam("jack")
+
+jack._math_grade = 88
+jack.writing_grade = 99
+
+print(jack._math_grade)
+print(jack.writing_grade)
+
+print("*"*20)
+
+lucy = Exam("Lucy")
+lucy.writing_grade = 100
+print(lucy._math_grade)
+print(lucy.writing_grade)
+```
+运行结果：
+```
+88
+99
+********************
+Unset
+100
+```
+**结果分析：**
+&emsp;&emsp; 可以看到的是，各个实例之间不再不再互相影响。
+#### 2.3 版本三：
+上面的版本二存在内存泄漏的问题：
+> 在程序的运行中，传给`__set__()`方法的那些`Exam`实例全都被 字典`_grades` 所引用，于是指向那些实例的引用数量就永远不会降到0，这就导致垃圾回收器没办法把那些实例占的空间释放。
+> 
+为了解决内存泄漏的问题，我们可以使用python内置的 `weakref`模块，该模块里面有一个特殊的字典`WeakKeyDictionary`，它有如下的特殊之处：
+> 如果运行时解释器发现`WeakKeyDictionary`中的`key`的引用只剩下一个，而这个引用又是`WeakKeyDictionary`自己的`key`发起的，那么系统会将该引用从这个特殊的字典里删掉，于是这个`key`的引用计数就变成了0，后面垃圾回收器就会把这个`key`释放掉。
+> 
+```python
+from weakref import WeakKeyDictionary
+
+class Descriptor:
+    def __init__(self):
+        self._grades = WeakKeyDictionary() # 使用 WeakKeyDictionary
+
+    def __get__(self, instance, instance_type):
+        ...
+
+    def __set__(self, instance, value):
+        ...
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 47: Use __getattr__, __getattribute__, and __setattr__ for Lazy Attributes(针对懒惰属性使用`__getattr__, __getattribute__, __setattr__`)
+### 1. 
 
 
 
