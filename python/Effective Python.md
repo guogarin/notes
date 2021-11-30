@@ -2178,7 +2178,7 @@ print(albert.average_grade())
 ### 2. 上面的几种初始化父类的方法中，更推荐哪种方法？为什么？
 更推荐用`super()`来初始化父类：
 > 在**简单的类体系**中，两种方法都不会有问题；
-> 但是在**复杂的类体系(菱形继承)**中，，通过`类名.__init__()`来初始化父类会出现重复调用爷爷类的`__init__()`被多次调用的情况，使用`super()`可以避免；具体例子可以看 [类.md](类.md)
+> 但是在**复杂的类体系(菱形继承)**中，，通过`类名.__init__()`来初始化父类会出现重复调用爷爷类的`__init__()`被多次调用的情况，使用`super()`可以避免；具体例子可以看 [类基础.md](grammar/09.%20类基础.md)
 > 
 
 
@@ -2305,7 +2305,7 @@ Count of 10 is 1
 &emsp;
 # 六、元类与属性
 ## Item 44: Use Plain Attributes Instead of Setter and Getter Methods(用纯属性与修饰器取代旧式的`setter`和`getter`方法)
-&emsp;&emsp; 主要介绍了`@property`的应用，这些在[类.md](grammar/类.md)中已经总结过了。
+&emsp;&emsp; 主要介绍了`@property`的应用，这些在[类高级.md](grammar/10.%20类高级.md)中已经总结过了。
 
 
 
