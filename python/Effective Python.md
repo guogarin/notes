@@ -166,7 +166,9 @@
       - [2.2 版本二：](#22-版本二)
       - [2.3 版本三：](#23-版本三)
   - [Item 47: Use __getattr__, __getattribute__, and __setattr__ for Lazy Attributes(针对懒惰属性使用`__getattr__, __getattribute__, __setattr__`)](#item-47-use-getattr-getattribute-and-setattr-for-lazy-attributes针对懒惰属性使用__getattr__-__getattribute__-__setattr__)
-    - [1.](#1-1)
+  - [Item 48 - Item 51](#item-48---item-51)
+- [Concurrency and Parallelism(并发与并行)](#concurrency-and-parallelism并发与并行)
+  - [Item 52: Use subprocess to Manage Child Processes(用`subprocess`管理子进程)](#item-52-use-subprocess-to-manage-child-processes用subprocess管理子进程)
 - [参考文献](#参考文献)
 
 
@@ -2645,9 +2647,31 @@ class Descriptor:
 &emsp;
 &emsp;
 ## Item 47: Use __getattr__, __getattribute__, and __setattr__ for Lazy Attributes(针对懒惰属性使用`__getattr__, __getattribute__, __setattr__`)
-### 1. 
+&emsp;&emsp; 本节就是介绍了这三个特性，这些已在[类高级.md](grammar/10.%20类高级.md)中有详细的介绍。
 
 
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 48 - Item 51
+TODO: 关于元类的后面回来看
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# Concurrency and Parallelism(并发与并行)
+## Item 52: Use subprocess to Manage Child Processes(用`subprocess`管理子进程)
 
 
 
