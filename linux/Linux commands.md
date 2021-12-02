@@ -85,3 +85,21 @@ f1 f2 f3 f4 f5 program
 (1) [Linux crontab 命令](https://www.runoob.com/linux/linux-comm-crontab.html)
 (2) [linux定时备份mysql数据库，及解决crontab执行时生成数据库文件为空的问题](https://www.cnblogs.com/wanghaitao/p/9440332.html)
 
+
+
+&emsp;&emsp; 
+&emsp;&emsp; 
+## 3. `kill`和`kill -9`
+### 3.1  它们有何区别？
+它们发送的信号不一样：
+> `kill`发送的是`SIGTERM`信号
+> `kill -9`发送的是`SIGKILL`信号
+> 
+所以`kill`和`kill -9`的区别可以理解为`SIGTERM`和`SIGKILL`的区别：
+> `SIGTERM`和`SIGKILL`都是用来终止进程的，但是它们之间的区别的主要是能不能被信号处理函数阻塞：
+> &emsp;&emsp; `SIGTERM`是可以被信号处理器阻塞的，如果进程定义了自己的信号处理函数，那么完全可以不杀死自己；
+> &emsp;&emsp; `SIGKILL`是必杀信号，信号处理器也不能将其阻塞。
+> 
+### 3.2 平常用哪个比较好？
+&emsp;&emsp; 正常情况下建议使用`kill`，因为它发送的`SIGTERM`信号会先调用信号处理程序，而且在信号处理程序中可能有一些资源的清理工作，这样可以避免资源泄露的风险。
+&emsp;&emsp; 如果实在杀不掉，再调用`kill -9`。
