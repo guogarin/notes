@@ -167,8 +167,10 @@
       - [2.3 版本三：](#23-版本三)
   - [Item 47: Use __getattr__, __getattribute__, and __setattr__ for Lazy Attributes(针对懒惰属性使用`__getattr__, __getattribute__, __setattr__`)](#item-47-use-getattr-getattribute-and-setattr-for-lazy-attributes针对懒惰属性使用__getattr__-__getattribute__-__setattr__)
   - [Item 48 - Item 51](#item-48---item-51)
-- [Concurrency and Parallelism(并发与并行)](#concurrency-and-parallelism并发与并行)
+- [第七章、Concurrency and Parallelism(并发与并行)](#第七章concurrency-and-parallelism并发与并行)
   - [Item 52: Use subprocess to Manage Child Processes(用`subprocess`管理子进程)](#item-52-use-subprocess-to-manage-child-processes用subprocess管理子进程)
+- [第八章、稳定与性能](#第八章稳定与性能)
+  - [Item 65: Take Advantage of Each Block in `try/except/else/finally`(合理利用`try/except/else/finally`结构中的每个代码块)](#item-65-take-advantage-of-each-block-in-tryexceptelsefinally合理利用tryexceptelsefinally结构中的每个代码块)
 - [参考文献](#参考文献)
 
 
@@ -2670,8 +2672,21 @@ TODO: 关于元类的后面回来看
 &emsp;
 &emsp;
 &emsp;
-# Concurrency and Parallelism(并发与并行)
+# 第七章、Concurrency and Parallelism(并发与并行)
 ## Item 52: Use subprocess to Manage Child Processes(用`subprocess`管理子进程)
+&emsp;&emsp; 书中只是对`subprocess`进行了简单介绍。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# 第八章、稳定与性能
+## Item 65: Take Advantage of Each Block in `try/except/else/finally`(合理利用`try/except/else/finally`结构中的每个代码块)
 
 
 
