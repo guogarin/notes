@@ -171,6 +171,14 @@
   - [Item 52: Use subprocess to Manage Child Processes(用`subprocess`管理子进程)](#item-52-use-subprocess-to-manage-child-processes用subprocess管理子进程)
 - [第八章、稳定与性能](#第八章稳定与性能)
   - [Item 65: Take Advantage of Each Block in `try/except/else/finally`(合理利用`try/except/else/finally`结构中的每个代码块)](#item-65-take-advantage-of-each-block-in-tryexceptelsefinally合理利用tryexceptelsefinally结构中的每个代码块)
+  - [Item 66: Consider contextlib and with Statements for Reusable try/finally Behavior（考虑用`contextlib`和`with`语句来改写可复用的`try/finally`）](#item-66-consider-contextlib-and-with-statements-for-reusable-tryfinally-behavior考虑用contextlib和with语句来改写可复用的tryfinally)
+    - [1. 这一节主要介绍了什么？](#1-这一节主要介绍了什么)
+    - [2. 使用 上下文管理器 来实现可复用的`try/finally`](#2-使用-上下文管理器-来实现可复用的tryfinally)
+  - [Item 67: Use datetime Instead of time for Local Clocks（用`datetime`处理本地时间，而不是`time`）](#item-67-use-datetime-instead-of-time-for-local-clocks用datetime处理本地时间而不是time)
+  - [Item 68: Make pickle Reliable with copyreg （使用`copyreg`实现可靠的`pickle`操作）](#item-68-make-pickle-reliable-with-copyreg-使用copyreg实现可靠的pickle操作)
+    - [1. `pickle`操作存在什么问题？](#1-pickle操作存在什么问题)
+    - [2. 如何解决上面的问题？](#2-如何解决上面的问题-1)
+  - [Item 69: Use decimal When Precision Is Paramount(在需要准确计算的场合，用`decimal`表示相应的数值)](#item-69-use-decimal-when-precision-is-paramount在需要准确计算的场合用decimal表示相应的数值)
 - [参考文献](#参考文献)
 
 
@@ -2687,6 +2695,197 @@ TODO: 关于元类的后面回来看
 &emsp;
 # 第八章、稳定与性能
 ## Item 65: Take Advantage of Each Block in `try/except/else/finally`(合理利用`try/except/else/finally`结构中的每个代码块)
+&emsp;&emsp; 文中就是介绍了一下异常处理的几种方法，已在其它地方做过了笔记。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 66: Consider contextlib and with Statements for Reusable try/finally Behavior（考虑用`contextlib`和`with`语句来改写可复用的`try/finally`）
+### 1. 这一节主要介绍了什么？
+① 介绍了另一种实现 上下文管理器的方法(使对象支持`with`)：`contextlib.contextmanager`
+② 介绍了怎么使用 上下文管理器 来实现可复用的`try/finally`
+
+### 2. 使用 上下文管理器 来实现可复用的`try/finally`
+```python
+import logging
+
+def my_function():
+    logging.debug('Some debug data')
+    logging.error('Error log here')
+    logging.warning('warning log here')
+    logging.info('info log here')
+    logging.debug('More debug data')
+
+my_function()
+```
+运行结果：
+```
+ERROR:root:Error log here
+WARNING:root:warning log here
+```
+**结果分析：**
+&emsp;&emsp; 可以看到的是，只输出了`warning`级别以上的日志，因为默认的级别是`warning`。
+
+如果想暂时的提升日志级别，我们可以通过上下文管理器来做到：
+```python
+import logging
+from contextlib import contextmanager
+
+def my_function():
+    logging.debug('Some debug data')
+    logging.error('Error log here')
+    logging.warning('warning log here')
+    logging.info('info log here')
+    logging.debug('More debug data')
+
+@contextmanager
+def debug_logging(level):
+    logger = logging.getLogger()
+    old_level = logger.getEffectiveLevel()
+    logger.setLevel(level)
+    try:
+        yield # 进入with时，with语句会将函数推进到这，然后返回
+    finally:
+        logger.setLevel(old_level)
+
+with debug_logging(logging.DEBUG):
+    print('* Inside:')
+    my_function()
+
+print('\n* After:')
+my_function()
+```
+运行结果：
+```
+* Inside:
+DEBUG:root:Some debug data
+ERROR:root:Error log here
+WARNING:root:warning log here
+INFO:root:info log here
+DEBUG:root:More debug data
+
+* After:
+ERROR:root:Error log here
+WARNING:root:warning log here
+```
+如果希望`with`语句返回一个值，可以将这么写：
+```python
+@contextmanager
+def log_level(level, name):
+    logger = logging.getLogger(name)
+    old_level = logger.getEffectiveLevel()
+    logger.setLevel(level)
+    try:
+        yield logger
+    finally:
+        logger.setLevel(old_level)
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 67: Use datetime Instead of time for Local Clocks（用`datetime`处理本地时间，而不是`time`）
+&emsp;&emsp; 进行时区转换的时候，建议使用`datetime`（一般配合`pytz`模块使用），更简单，而且不容易出错。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 68: Make pickle Reliable with copyreg （使用`copyreg`实现可靠的`pickle`操作）
+### 1. `pickle`操作存在什么问题？
+&emsp;&emsp; 例如，下面这个对象表示玩家在游戏中的进度，其中记录了玩家当前级别(level)、还剩下几条命(lives)：
+```python
+import pickle
+
+class GameState:
+    def __init__(self):
+        self.level = 0
+        self.lives = 4
+
+state = GameState()
+state.level += 1 # Player beat a level
+state.lives -= 1 # Player had to try again
+print(state.__dict__)
+
+# 退出游戏前，写入文件中
+state_path = 'game_state.bin'
+with open(state_path, 'wb') as f:
+    pickle.dump(state, f)
+
+# 恢复游戏，读取进度
+with open(state_path, 'rb') as f:
+    state_after = pickle.load(f)    
+print(state_after.__dict__)    
+```
+运行结果：
+```
+{'level': 1, 'lives': 3}
+{'level': 1, 'lives': 3}
+```
+但是，上面的代码存在一个问题，就是不能很好的应对将来对游戏功能的扩展，比如我们还想记录玩家的最好成绩，于是我们需要给`GameState`类增加一个字段：
+```python
+class GameState:
+    def __init__(self):
+        self.level = 0
+        self.lives = 4
+        self.points = 0 # New field
+```
+用`pickle`对新版本的`GameState`对象做序列化是没有问题的，但有一个问题，就是我们从文件中恢复的`GameState`对象是没有`points`属性的：
+```python
+import pickle
+
+class GameState:
+    def __init__(self):
+        self.level = 0
+        self.lives = 4
+        self.points = 0 # New field
+
+state_path = 'game_state.bin'
+# 读取
+with open(state_path, 'rb') as f:
+    state_after = pickle.load(f)    
+print(state_after.__dict__)    
+```
+运行结果：
+```
+{'level': 1, 'lives': 3}
+```
+**结果分析：**
+&emsp;&emsp; 可以看到的是，从文件中`pickle`出来的`GameState`对象是没有`points`属性的。
+
+### 2. 如何解决上面的问题？
+&emsp;&emsp; 利用`copyreg`模块可以解决上面的问题，具体做法直接翻书。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 69: Use decimal When Precision Is Paramount(在需要准确计算的场合，用`decimal`表示相应的数值)
+
+
+
 
 
 
