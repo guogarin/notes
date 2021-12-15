@@ -184,8 +184,11 @@
     - [3. 如何解决这个问题？](#3-如何解决这个问题)
     - [4. 使用`Decimal`类时要注意什么？](#4-使用decimal类时要注意什么)
     - [5. 对小数进行四舍五入](#5-对小数进行四舍五入)
-      - [5.1 在python中一般怎么四舍五入？](#51-在python中一般怎么四舍五入)
-      - [5.2 上面指出的四舍五入方法存在什么问题？](#52-上面指出的四舍五入方法存在什么问题)
+      - [5.1 `round()`函数](#51-round函数)
+      - [5.2 自定义小数的舍入规则](#52-自定义小数的舍入规则)
+  - [Item 70: Profile Before Optimizing(先分析性能，然后再进行优化)](#item-70-profile-before-optimizing先分析性能然后再进行优化)
+    - [1. 为什么需要分析性能再进行优化？](#1-为什么需要分析性能再进行优化)
+    - [2.](#2)
 - [参考文献](#参考文献)
 
 
@@ -2960,7 +2963,7 @@ print(Decimal(1.23))
 **因此，如果想要准确答案，那么应该使用`str`字符串来构造`Decimal`。**
 
 ### 5. 对小数进行四舍五入
-#### 5.1 在python中一般怎么四舍五入？
+#### 5.1 `round()`函数
 使用内置函数`round( x [, n]  )`，参数：
 > **x** -- 数值表达式。
 > **n** -- 数值表达式，表示从小数点位数。
@@ -2980,7 +2983,50 @@ print(round(123.55,-1))
 120.0
 ```
 
-#### 5.2 上面指出的四舍五入方法存在什么问题？
+#### 5.2 自定义小数的舍入规则
+&emsp;&emsp; `round()`函数对四舍五入的控制不够精确，而`Decimal`类的`quantize()`方法可以提供更为精确的控制，通过对`quantize()`方法指定`rounding`参数，我们可以自定义舍入规则，`rounding`参数可指定为如下几种：
+> decimal.ROUND_CEILING ： 舍入方向为 Infinity。
+> decimal.ROUND_DOWN ： 舍入方向为零。
+> decimal.ROUND_FLOOR ： 舍入方向为 -Infinity。
+> decimal.ROUND_HALF_DOWN ： 舍入到最接近的数，同样接近则舍入方向为零。
+> decimal.ROUND_HALF_EVEN ： 舍入到最接近的数，同样接近则舍入到最接近的偶数。
+> decimal.ROUND_HALF_UP ： 舍入到最接近的数，同样接近则舍入到零的反方向。
+> decimal.ROUND_UP ： 舍入到零的反方向。
+> decimal.ROUND_05UP  ： 如果最后一位朝零的方向舍入后为 0 或 5 则舍入到零的反方向；否则舍入方向为零。
+> 
+假如我们希望采用 **进一法** 的舍入规则，可以这么写：
+```python
+from decimal import ROUND_UP, Decimal
+
+cost = 5.363
+
+rounded = cost.quantize(Decimal('0.01'), rounding=ROUND_UP)
+print(f'quantize() {cost} to {rounded}')
+print(f'round() {cost} to {round(cost, 2)}')
+```
+运行结果：
+```
+quantize() 5.365 to 5.37
+round() 5.365 to 5.36   
+```
+**结果分析：**
+&emsp;&emsp; 可以看到的是，`cost = 5.363`，小数点后第三位为`3`，按理来说应该要舍去的，但是采用`quantize()`方法，我们将舍入规则改为了 进一法。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 70: Profile Before Optimizing(先分析性能，然后再进行优化)
+### 1. 为什么需要分析性能再进行优化？
+&emsp;&emsp; 因为在Python中，哪些模块耗时最多，凭直觉不靠谱，应该先用工具分析以下哪些代码耗时最多，然后针对性的进行优化，这样才能事半功倍。
+
+### 2. 
+&emsp;&emsp; 
 
 
 
