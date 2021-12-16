@@ -188,7 +188,12 @@
       - [5.2 自定义小数的舍入规则](#52-自定义小数的舍入规则)
   - [Item 70: Profile Before Optimizing(先分析性能，然后再进行优化)](#item-70-profile-before-optimizing先分析性能然后再进行优化)
     - [1. 为什么需要分析性能再进行优化？](#1-为什么需要分析性能再进行优化)
-    - [2.](#2)
+    - [2. 利用工具分析代码性能](#2-利用工具分析代码性能)
+      - [2.1 在Python中，一般用什么工具分析代码性能？更推荐使用哪个？](#21-在python中一般用什么工具分析代码性能更推荐使用哪个)
+      - [2.2 分析程序的性能时，需要注意什么？](#22-分析程序的性能时需要注意什么)
+      - [2.3 如何使用`cProfile`进行性能分析？](#23-如何使用cprofile进行性能分析)
+  - [Item 71: Prefer deque for Producer–Consumer Queues(优先考虑使用`deque`实现 生产者-消费者队列(即`FIFO`))](#item-71-prefer-deque-for-producerconsumer-queues优先考虑使用deque实现-生产者-消费者队列即fifo)
+    - [1. 用`list`实现`FIFO`有何缺点？](#1-用list实现fifo有何缺点)
 - [参考文献](#参考文献)
 
 
@@ -3025,10 +3030,102 @@ round() 5.365 to 5.36
 ### 1. 为什么需要分析性能再进行优化？
 &emsp;&emsp; 因为在Python中，哪些模块耗时最多，凭直觉不靠谱，应该先用工具分析以下哪些代码耗时最多，然后针对性的进行优化，这样才能事半功倍。
 
-### 2. 
-&emsp;&emsp; 
+### 2. 利用工具分析代码性能
+#### 2.1 在Python中，一般用什么工具分析代码性能？更推荐使用哪个？
+> &emsp;在Python中，普遍用下面两种工具来分析代码性能：
+> &emsp;&emsp; ① `profile` : 纯Python版本实现；
+> &emsp;&emsp; ② `cProfile`: C扩展版本
+> 
+一般更推荐使用`cProfile`，因为它对受测程序影响最小，测评结果更准确。
+
+#### 2.2 分析程序的性能时，需要注意什么？
+&emsp;&emsp; 在分析性能的时候，一定要把和外部交互的那部分代码(访问外部网络或读写硬盘) 和 核心代码 区分开来，因为会受到带宽的影响，测评结果不准确。
+
+#### 2.3 如何使用`cProfile`进行性能分析？
+
+```python
+from random import randint
+from cProfile import Profile
+
+def insertion_sort(data):
+    result = []
+    for value in data:
+        insert_value(result, value)
+    return result
+
+def insert_value(array, value):
+    for i, existing in enumerate(array):
+        if existing > value:
+            array.insert(i, value)
+
+max_size = 10**4
+data = [randint(0, max_size) for _ in range(max_size)]
+test = lambda:insertion_sort(data)
+
+profiler = Profile()
+profiler.runcall(test)
+
+from pstats import Stats
+
+stats = Stats(profiler)
+stats.strip_dirs()
+stats.sort_stats('cumulative')
+stats.print_stats()
+```
+运行结果：
+```
+         10003 function calls in 0.013 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.013    0.013 practice.py:17(<lambda>)
+        1    0.005    0.005    0.013    0.013 practice.py:4(insertion_sort)
+    10000    0.007    0.000    0.007    0.000 practice.py:10(insert_value)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+```
+简单介绍下上面测评结果每一列的含义：
+> &emsp;&emsp; ■ **ncalls**: The number of calls to the function during the profiling period.
+> &emsp;&emsp; ■ **tottime**: The number of seconds spent executing the function,excluding time spent executing other functions it calls.
+> &emsp;&emsp; ■ **tottime percall**: The average number of seconds spent in the function each time it is called, excluding time spent executing other functions it calls. This is tottime divided by ncalls.
+> &emsp;&emsp; ■ **cumtime**: The cumulative number of seconds spent executing the function, including time spent in all other functions it calls.
+> &emsp;&emsp; ■ **cumtime percall**: The average number of seconds spent in the function each time it is called, including time spent in all other functions it calls. This is cumtime divided by ncalls.
+> 
+根据上面的分析结果，我们可以知道，`insert_value()`是最耗时的那一个，因此它是我们优化的重点。
+&emsp;&emsp; 我们可以用内置的`bisect`模块来重新实现`insert_value()`：
+```python
+from bisect import bisect_left
+
+def insert_value(array, value):
+    i = bisect_left(array, value)
+    array.insert(i, value)
+```
+运行结果：
+```
+         30003 function calls in 0.041 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.041    0.041 practice.py:17(<lambda>)
+        1    0.005    0.005    0.041    0.041 practice.py:4(insertion_sort)
+    10000    0.008    0.000    0.036    0.000 practice.py:11(insert_value)
+    10000    0.017    0.000    0.017    0.000 {method 'insert' of 'list' objects}
+    10000    0.011    0.000    0.011    0.000 {built-in method _bisect.bisect_left}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+```
 
 
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 71: Prefer deque for Producer–Consumer Queues(优先考虑使用`deque`实现 生产者-消费者队列(即`FIFO`))
+### 1. 用`list`实现`FIFO`有何缺点？
 
 
 
