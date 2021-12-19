@@ -193,7 +193,13 @@
       - [2.2 分析程序的性能时，需要注意什么？](#22-分析程序的性能时需要注意什么)
       - [2.3 如何使用`cProfile`进行性能分析？](#23-如何使用cprofile进行性能分析)
   - [Item 71: Prefer deque for Producer–Consumer Queues(优先考虑使用`deque`实现 生产者-消费者队列(即`FIFO`))](#item-71-prefer-deque-for-producerconsumer-queues优先考虑使用deque实现-生产者-消费者队列即fifo)
-    - [1. 用`list`实现`FIFO`有何缺点？](#1-用list实现fifo有何缺点)
+    - [1. 为什么`deque`比`list`更适合实现`FIFO`？](#1-为什么deque比list更适合实现fifo)
+  - [Item 72: Consider Searching Sorted Sequences with bisect(考虑用`bisect`搜索已排序的序列)](#item-72-consider-searching-sorted-sequences-with-bisect考虑用bisect搜索已排序的序列)
+  - [Item 73: Know How to Use heapq for Priority Queues(使用`heap`制作优先级队列)](#item-73-know-how-to-use-heapq-for-priority-queues使用heap制作优先级队列)
+    - [1. 优先级队列(priority queue)是什么？](#1-优先级队列priority-queue是什么)
+    - [2. 如何使用 优先级队列？](#2-如何使用-优先级队列)
+  - [Item 74: Consider memoryview and bytearray for Zero-Copy Interactions with bytes(考虑使用 `memoryview`和`bytearray` 来实现 零拷贝的`bytes`操作)](#item-74-consider-memoryview-and-bytearray-for-zero-copy-interactions-with-bytes考虑使用-memoryview和bytearray-来实现-零拷贝的bytes操作)
+    - [1.](#1-1)
 - [参考文献](#参考文献)
 
 
@@ -3125,7 +3131,66 @@ def insert_value(array, value):
 &emsp;
 &emsp;
 ## Item 71: Prefer deque for Producer–Consumer Queues(优先考虑使用`deque`实现 生产者-消费者队列(即`FIFO`))
-### 1. 用`list`实现`FIFO`有何缺点？
+### 1. 为什么`deque`比`list`更适合实现`FIFO`？
+这和它俩的底层结构有关系：
+> &emsp;&emsp; **`list`** 的底层实现是数组(准确的说是动态数组，支持动态增长，有点像C++的`vector`)，当我们对其进行`pop(n)`的时候，解释器会把`n`后面的元素都往前移动一个位置；
+> &emsp;&emsp; **`deque`**的底层是链表，`pop(n)`的时候时间是固定的。
+> 
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 72: Consider Searching Sorted Sequences with bisect(考虑用`bisect`搜索已排序的序列)
+&emsp;&emsp; 本节介绍了Python标准库自带的 二分搜索算法`bisect.bisect_left()`（bisection algorith(二分法)），因为它用的是二分法，所以自然要比 对序列中的每个元素进行比较 这种方法要快。
+&emsp;&emsp; 其实这个库里不仅仅有`bisect.bisect_left()`函数，还有其它版本的二分搜索算法，甚至还有二分插入算法，具体可以看官方文档。
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 73: Know How to Use heapq for Priority Queues(使用`heap`制作优先级队列)
+### 1. 优先级队列(priority queue)是什么？
+&emsp;&emsp; `deque`是`FIFO`队列，但是有的时候我们希望 队列里的元素 按优先级来排列，在这种情况下就应该使用 优先级队列。
+
+### 2. 如何使用 优先级队列？
+&emsp;&emsp; 使用python的内置模块`heap`可以做到。但是使用`heap`模块的时候需要注意，添加到优先队列中的元素必须支持比较操作，这个我们可以通过 类修饰器`@functools.total_ordering`，并把描述小于关系的`__lt__()`定义出来即可：
+```python
+import functools
+
+@functools.total_ordering
+class Book:
+    def __init__(self, title, due_date):
+        self.title = title
+        self.due_date = due_date
+
+    def __lt__(self, other):
+        return self.due_date < other.due_date
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+## Item 74: Consider memoryview and bytearray for Zero-Copy Interactions with bytes(考虑使用 `memoryview`和`bytearray` 来实现 零拷贝的`bytes`操作)
+### 1. 
+
+
 
 
 
