@@ -199,8 +199,19 @@
     - [1. 优先级队列(priority queue)是什么？](#1-优先级队列priority-queue是什么)
     - [2. 如何使用 优先级队列？](#2-如何使用-优先级队列)
   - [Item 74: Consider memoryview and bytearray for Zero-Copy Interactions with bytes(考虑使用 `memoryview`和`bytearray` 来实现 零拷贝的`bytes`操作)](#item-74-consider-memoryview-and-bytearray-for-zero-copy-interactions-with-bytes考虑使用-memoryview和bytearray-来实现-零拷贝的bytes操作)
-    - [1.](#1-1)
-- [参考文献](#参考文献)
+    - [1. `bytearray`](#1-bytearray)
+      - [1.1 `bytearray` 和 `bytes`有何异同？](#11-bytearray-和-bytes有何异同)
+      - [1.2 什么场景需要使用 `bytearray` ？](#12-什么场景需要使用-bytearray-)
+      - [1.3 `bytearray`提供了哪些操作？](#13-bytearray提供了哪些操作)
+    - [2. 缓冲协议(buffer protocol)](#2-缓冲协议buffer-protocol)
+      - [2.1 缓冲协议 的作用是？](#21-缓冲协议-的作用是)
+      - [2.2 哪些对象支持缓冲协议？](#22-哪些对象支持缓冲协议)
+    - [3. 内存视图`memoryview`](#3-内存视图memoryview)
+      - [3.1 `memoryview`的作用是？](#31-memoryview的作用是)
+    - [参考文献](#参考文献)
+- [第九章 测试与调试](#第九章-测试与调试)
+  - [tem 75: Use repr Strings for Debugging Output(通过`repr`字符串输出调试信息)](#tem-75-use-repr-strings-for-debugging-output通过repr字符串输出调试信息)
+- [参考文献](#参考文献-1)
 
 
 &emsp;
@@ -3188,12 +3199,48 @@ class Book:
 &emsp;
 &emsp;
 ## Item 74: Consider memoryview and bytearray for Zero-Copy Interactions with bytes(考虑使用 `memoryview`和`bytearray` 来实现 零拷贝的`bytes`操作)
-### 1. 
+### 1. `bytearray`
+#### 1.1 `bytearray` 和 `bytes`有何异同？
+&emsp;&emsp; `bytes`是不可修改的，`bytearray`可以理解为
+&emsp;&emsp; 
+
+#### 1.2 什么场景需要使用 `bytearray` ？
+&emsp;&emsp; 比如，在读取IO数据流的时候，如果使用`bytes`类型接收数据流，那么每次读取一段内容都会生成一个新的对象，每次都需要重新分配内存。
+&emsp;&emsp; 但是`bytearray`不一样，因为`bytearray`是可变对象，有内存分配机制，每次分配内存时都会多分配一点，因此 使用它接收数据流可以减少内存的分配次数。
+&emsp;&emsp; 因此，使用 `bytearray`可以提高性能。
+
+#### 1.3 `bytearray`提供了哪些操作？
+
+
+### 2. 缓冲协议(buffer protocol)
+#### 2.1 缓冲协议 的作用是？
+&emsp;&emsp; 缓冲区协议 允许一个对象公开其内部数据(缓冲区)，而另一个对象可以访问这些缓冲区而无需中间复制。
+&emsp;&emsp; 但我们只能在C-API级别上访问此协议，而不能使用我们的常规代码库。因此，为了将相同的协议公开给普通的Python代码库，需要使用内存视图。
+
+#### 2.2 哪些对象支持缓冲协议？
+&emsp;&emsp; 内建类型`bytes` 和 `bytearray`，扩展类型 `array.array`都支持。
+&emsp;&emsp; 第三方库也可能会为了特殊的目的而定义它们自己的类型，例如用于图像处理和数值分析等。
+
+### 3. 内存视图`memoryview`
+#### 3.1 `memoryview`的作用是？
+&emsp;&emsp; `memoryview`是一个类，它的构造函数`memoryview()`返回给定参数的内存查看对象(memory view)，这个内存查看对象会对支持缓冲区协议的数据进行包装，可以在不需要复制对象基础上使用Python代码进行访问。
+
+### 参考文献
+1. [bytes/bytearray/memoryview](https://zhuanlan.zhihu.com/p/399946068)
+2. [Python使用Zero-Copy和Buffer Protocol实现高性能编程](https://www.cnblogs.com/erhuabushuo/p/10314803.html)
 
 
 
 
 
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# 第九章 测试与调试
+## tem 75: Use repr Strings for Debugging Output(通过`repr`字符串输出调试信息)
 
 
 ① 
