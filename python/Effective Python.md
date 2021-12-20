@@ -208,6 +208,13 @@
       - [2.2 哪些对象支持缓冲协议？](#22-哪些对象支持缓冲协议)
     - [3. 内存视图`memoryview`](#3-内存视图memoryview)
       - [3.1 `memoryview`的作用是？](#31-memoryview的作用是)
+      - [3.2 如何使用 `memoryview`？](#32-如何使用-memoryview)
+        - [(1) 构造函数](#1-构造函数)
+        - [(2) 类属性](#2-类属性)
+        - [(3) 类方法](#3-类方法)
+      - [3.3 `memoryview`一般在什么场景下使用？](#33-memoryview一般在什么场景下使用)
+      - [3.3 `memoryview`构建的内存视图 和 原对象是什么关系？](#33-memoryview构建的内存视图-和-原对象是什么关系)
+      - [3.4 `memoryview`对象能否修改？](#34-memoryview对象能否修改)
     - [参考文献](#参考文献)
 - [第九章 测试与调试](#第九章-测试与调试)
   - [tem 75: Use repr Strings for Debugging Output(通过`repr`字符串输出调试信息)](#tem-75-use-repr-strings-for-debugging-output通过repr字符串输出调试信息)
@@ -3225,9 +3232,113 @@ class Book:
 #### 3.1 `memoryview`的作用是？
 &emsp;&emsp; `memoryview`是一个类，它的构造函数`memoryview()`返回给定参数的内存查看对象(memory view)，这个内存查看对象会对支持缓冲区协议的数据进行包装，可以在不需要复制对象基础上使用Python代码进行访问。
 
+#### 3.2 如何使用 `memoryview`？
+##### (1) 构造函数
+```cpp
+class memoryview(obj)
+```
+创建一个引用 `obj`对象 的 `memoryview` 。 `obj`对象 必须支持缓冲区协议。支持缓冲区协议的内置对象有 `bytes`、`bytearray` 和 `array.array`。
+##### (2) 类属性
+官方文档
+##### (3) 类方法
+见官方文档。
+
+#### 3.3 `memoryview`一般在什么场景下使用？
+&emsp;&emsp; 正如前面说的，对于那些支持缓冲协议的对象，`memoryview`的好处是不会有内存拷贝：
+```python
+data = bytearray(b'0123456789')
+
+print('直接对data进行切片')
+a = data[:5]
+a[0] = 0x70
+a[1] = 0x70
+print(a)
+print(data)
+
+print('\n先对data建立内存视图，然后再进行切片')
+view = memoryview(data)
+a = view[:5]
+a[0] = 0x70
+a[1] = 0x70
+print(a.tobytes())
+print(data)
+```
+运行结果：
+```
+直接对data进行切片
+bytearray(b'pp234')
+bytearray(b'0123456789')
+
+先对data建立内存视图，然后再进行切片
+b'pp234'
+bytearray(b'pp23456789')
+```
+**结果分析：**
+可以看到的是，
+> &emsp;&emsp; ① 如果直接对`data`进行切片，会生成一个新的对象`a`，因此对`a`的修改不会影响到`data`；
+> &emsp;&emsp; ② 但是如果先对`data`建立内存视图，然后再进行切片，对`a`的修改也会影响到`data`。
+> 
+显然，`memoryview`不会触发内存拷贝，这在一些需要处理大量内存数据的程序来说，可以大大的节省效率，比如`socket`编程。
+
+#### 3.3 `memoryview`构建的内存视图 和 原对象是什么关系？
+&emsp;&emsp; 其实可以把内存视图看成是原对象在内存上的映射，这就意味着 通过内存视图对内存进行修改会影响到原对象：
+```python
+data = bytearray(b'shave and a haircut, two bits')
+
+view = memoryview(data) # 构建 内存视图
+chunk = view[0:10]
+
+print(chunk.tobytes())
+print(view.tobytes())
+print(data)
+print('*'*15)
+
+chunk[0] = 0x70 # 通过内存视图对内存进行修改
+chunk[1] = 0x70 
+chunk[2] = 0x70 
+
+print(chunk.tobytes())
+print(view.tobytes())
+print(data)
+```
+运行结果：
+```
+b'shave and '
+b'shave and a haircut, two bits'
+bytearray(b'shave and a haircut, two bits')
+***************
+b'pppve and '
+b'pppve and a haircut, two bits'
+bytearray(b'pppve and a haircut, two bits')
+```
+**结果分析：**
+&emsp;&emsp; 可以看到的是，通过内存视图对内存进行修改 会影响到原对象。
+
+#### 3.4 `memoryview`对象能否修改？
+这个要看，`memoryview`映射的对象是否是可修改的，来看代码：
+```python
+data = bytes(b'shave and a haircut, two bits')
+
+view = memoryview(data) # 构建 内存视图
+chunk = view[0:10]
+
+chunk[0] = 0x70 # 通过内存视图对内存进行修改
+```
+运行结果：
+```
+Traceback (most recent call last):
+  File "f:\code\python\test\test.py", line 6, in <module>
+    chunk[0] = 0x70 # 通过内存视图对内存进行修改
+TypeError: cannot modify read-only memory
+PS F:\code\python\test> 
+```
+**结果分析：**
+&emsp;&emsp; 在上面的代码中，`bytes`是不可修改的，因此通过`chunk`对其修改会报错。
+
 ### 参考文献
 1. [bytes/bytearray/memoryview](https://zhuanlan.zhihu.com/p/399946068)
 2. [Python使用Zero-Copy和Buffer Protocol实现高性能编程](https://www.cnblogs.com/erhuabushuo/p/10314803.html)
+3. [求解释一下python中bytearray和memoryview 的使用 以及适用的场景](https://segmentfault.com/q/1010000007137721)
 
 
 
