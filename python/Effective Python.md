@@ -199,25 +199,30 @@
     - [1. 优先级队列(priority queue)是什么？](#1-优先级队列priority-queue是什么)
     - [2. 如何使用 优先级队列？](#2-如何使用-优先级队列)
   - [Item 74: Consider memoryview and bytearray for Zero-Copy Interactions with bytes(考虑使用 `memoryview`和`bytearray` 来实现 零拷贝的`bytes`操作)](#item-74-consider-memoryview-and-bytearray-for-zero-copy-interactions-with-bytes考虑使用-memoryview和bytearray-来实现-零拷贝的bytes操作)
-    - [1. `bytearray`](#1-bytearray)
-      - [1.1 `bytearray` 和 `bytes`有何异同？](#11-bytearray-和-bytes有何异同)
-      - [1.2 什么场景需要使用 `bytearray` ？](#12-什么场景需要使用-bytearray-)
-      - [1.3 `bytearray`提供了哪些操作？](#13-bytearray提供了哪些操作)
-    - [2. 缓冲协议(buffer protocol)](#2-缓冲协议buffer-protocol)
-      - [2.1 缓冲协议 的作用是？](#21-缓冲协议-的作用是)
+    - [1. 缓冲协议(buffer protocol)](#1-缓冲协议buffer-protocol)
+      - [.1 缓冲协议 的作用是？](#1-缓冲协议-的作用是)
       - [2.2 哪些对象支持缓冲协议？](#22-哪些对象支持缓冲协议)
-    - [3. 内存视图`memoryview`](#3-内存视图memoryview)
-      - [3.1 `memoryview`的作用是？](#31-memoryview的作用是)
-      - [3.2 如何使用 `memoryview`？](#32-如何使用-memoryview)
+    - [2. 内存视图`memoryview`](#2-内存视图memoryview)
+      - [2.1 `memoryview`的作用是？](#21-memoryview的作用是)
+      - [2.2 如何使用 `memoryview`？](#22-如何使用-memoryview)
         - [(1) 构造函数](#1-构造函数)
         - [(2) 类属性](#2-类属性)
         - [(3) 类方法](#3-类方法)
-      - [3.3 `memoryview`一般在什么场景下使用？](#33-memoryview一般在什么场景下使用)
-      - [3.3 `memoryview`构建的内存视图 和 原对象是什么关系？](#33-memoryview构建的内存视图-和-原对象是什么关系)
-      - [3.4 `memoryview`对象能否修改？](#34-memoryview对象能否修改)
+        - [(4) 使用实例](#4-使用实例)
+      - [2.3 `memoryview`一般在什么场景下使用？](#23-memoryview一般在什么场景下使用)
+      - [2.4 `memoryview`构建的内存视图 和 原对象是什么关系？](#24-memoryview构建的内存视图-和-原对象是什么关系)
+      - [2.5 `memoryview`对象能否修改？](#25-memoryview对象能否修改)
+    - [3. `bytearray`](#3-bytearray)
+      - [3.1 `bytearray` 和 `bytes`有何异同？](#31-bytearray-和-bytes有何异同)
+      - [3.2 什么场景需要使用 `bytearray` ？](#32-什么场景需要使用-bytearray-)
+    - [4. 使用`memoryview`和`bytearray`来构建流媒体服务器](#4-使用memoryview和bytearray来构建流媒体服务器)
+      - [4.1 发送数据](#41-发送数据)
+      - [4.2 接收数据](#42-接收数据)
+      - [4.3 实例](#43-实例)
     - [参考文献](#参考文献)
 - [第九章 测试与调试](#第九章-测试与调试)
   - [tem 75: Use repr Strings for Debugging Output(通过`repr`字符串输出调试信息)](#tem-75-use-repr-strings-for-debugging-output通过repr字符串输出调试信息)
+    - [1. `__str__`和`__repr__`的作用](#1-__str__和__repr__的作用)
 - [参考文献](#参考文献-1)
 
 
@@ -3206,21 +3211,8 @@ class Book:
 &emsp;
 &emsp;
 ## Item 74: Consider memoryview and bytearray for Zero-Copy Interactions with bytes(考虑使用 `memoryview`和`bytearray` 来实现 零拷贝的`bytes`操作)
-### 1. `bytearray`
-#### 1.1 `bytearray` 和 `bytes`有何异同？
-&emsp;&emsp; `bytes`是不可修改的，`bytearray`可以理解为
-&emsp;&emsp; 
-
-#### 1.2 什么场景需要使用 `bytearray` ？
-&emsp;&emsp; 比如，在读取IO数据流的时候，如果使用`bytes`类型接收数据流，那么每次读取一段内容都会生成一个新的对象，每次都需要重新分配内存。
-&emsp;&emsp; 但是`bytearray`不一样，因为`bytearray`是可变对象，有内存分配机制，每次分配内存时都会多分配一点，因此 使用它接收数据流可以减少内存的分配次数。
-&emsp;&emsp; 因此，使用 `bytearray`可以提高性能。
-
-#### 1.3 `bytearray`提供了哪些操作？
-
-
-### 2. 缓冲协议(buffer protocol)
-#### 2.1 缓冲协议 的作用是？
+### 1. 缓冲协议(buffer protocol)
+#### .1 缓冲协议 的作用是？
 &emsp;&emsp; 缓冲区协议 允许一个对象公开其内部数据(缓冲区)，而另一个对象可以访问这些缓冲区而无需中间复制。
 &emsp;&emsp; 但我们只能在C-API级别上访问此协议，而不能使用我们的常规代码库。因此，为了将相同的协议公开给普通的Python代码库，需要使用内存视图。
 
@@ -3228,22 +3220,29 @@ class Book:
 &emsp;&emsp; 内建类型`bytes` 和 `bytearray`，扩展类型 `array.array`都支持。
 &emsp;&emsp; 第三方库也可能会为了特殊的目的而定义它们自己的类型，例如用于图像处理和数值分析等。
 
-### 3. 内存视图`memoryview`
-#### 3.1 `memoryview`的作用是？
+### 2. 内存视图`memoryview`
+#### 2.1 `memoryview`的作用是？
 &emsp;&emsp; `memoryview`是一个类，它的构造函数`memoryview()`返回给定参数的内存查看对象(memory view)，这个内存查看对象会对支持缓冲区协议的数据进行包装，可以在不需要复制对象基础上使用Python代码进行访问。
+&emsp;&emsp; 上面的讲解都太官方了，其实可以把`memoryview`看成是系统提供的一套零拷贝的结构，通过`memoryview`可以避免内存复制（当然仅限于支持缓存协议的类型），提高处理效率。
 
-#### 3.2 如何使用 `memoryview`？
+#### 2.2 如何使用 `memoryview`？
 ##### (1) 构造函数
 ```cpp
 class memoryview(obj)
 ```
-创建一个引用 `obj`对象 的 `memoryview` 。 `obj`对象 必须支持缓冲区协议。支持缓冲区协议的内置对象有 `bytes`、`bytearray` 和 `array.array`。
+创建一个引用 `obj`对象 的 `memoryview` 。 `obj`对象 必须支持缓冲区协议。内建类型`bytes` 和 `bytearray`，扩展类型 `array.array`都支持缓冲区协议。
 ##### (2) 类属性
 官方文档
 ##### (3) 类方法
 见官方文档。
 
-#### 3.3 `memoryview`一般在什么场景下使用？
+##### (4) 使用实例
+① 通过 `view = memoryview(obj)`来建立到`obj`的内存映射`view`
+② 操作内存映射对象`view`（如切片等），这样才能发挥内存映射的作用：不触发内存复制；
+③ 
+④ 
+
+#### 2.3 `memoryview`一般在什么场景下使用？
 &emsp;&emsp; 正如前面说的，对于那些支持缓冲协议的对象，`memoryview`的好处是不会有内存拷贝：
 ```python
 data = bytearray(b'0123456789')
@@ -3280,7 +3279,7 @@ bytearray(b'pp23456789')
 > 
 显然，`memoryview`不会触发内存拷贝，这在一些需要处理大量内存数据的程序来说，可以大大的节省效率，比如`socket`编程。
 
-#### 3.3 `memoryview`构建的内存视图 和 原对象是什么关系？
+#### 2.4 `memoryview`构建的内存视图 和 原对象是什么关系？
 &emsp;&emsp; 其实可以把内存视图看成是原对象在内存上的映射，这就意味着 通过内存视图对内存进行修改会影响到原对象：
 ```python
 data = bytearray(b'shave and a haircut, two bits')
@@ -3314,7 +3313,7 @@ bytearray(b'pppve and a haircut, two bits')
 **结果分析：**
 &emsp;&emsp; 可以看到的是，通过内存视图对内存进行修改 会影响到原对象。
 
-#### 3.4 `memoryview`对象能否修改？
+#### 2.5 `memoryview`对象能否修改？
 这个要看，`memoryview`映射的对象是否是可修改的，来看代码：
 ```python
 data = bytes(b'shave and a haircut, two bits')
@@ -3335,6 +3334,44 @@ PS F:\code\python\test>
 **结果分析：**
 &emsp;&emsp; 在上面的代码中，`bytes`是不可修改的，因此通过`chunk`对其修改会报错。
 
+
+### 3. `bytearray`
+#### 3.1 `bytearray` 和 `bytes`有何异同？
+&emsp;&emsp; `bytes`是不可修改的，`bytearray`可以理解为
+&emsp;&emsp; 
+
+#### 3.2 什么场景需要使用 `bytearray` ？
+文件IO的时候经常用得上：
+> &emsp;&emsp; 在读取IO数据流的时候，如果使用`bytes`类型接收数据流，那么每次读取一段内容都会生成一个新的对象，每次都需要重新分配内存。
+> &emsp;&emsp; 但是`bytearray`不一样，因为`bytearray`是可变对象，有内存分配机制，每次分配内存时都会多分配一点，因此 使用它接收数据流可以减少内存的分配次数。
+> 
+
+### 4. 使用`memoryview`和`bytearray`来构建流媒体服务器
+&emsp;&emsp; 使用`memoryview`和`bytearray`可以构建零拷贝。
+#### 4.1 发送数据
+&emsp;&emsp; 通过建立`memoryview`，然后对其进行切片，然后直接发给对端，这样就避免了内存复制。
+
+#### 4.2 接收数据
+&emsp;&emsp; `socket.recv_into()`可以使用缓冲协议来迅速接收数据，他会把接收到的内容直接写入缓冲区，我们可以把`memoryview`所制作的切片传给它，这样就能直接替换底层的数据了。
+
+#### 4.3 实例
+```python
+size = 10*1024*1024 # 一次发10mb
+send_data = ... # 待发送的数据
+recv_cash = ... # 接收缓存
+
+def send2client(sock, offset):
+    send_view = memoryview(send_data)   # 建立到send_data的内存视图
+    send_chunk = send_view[offset : offset + size] # 需发送的数据块
+    sock.send(send_chunk)
+
+def recv_from_client(sock, offset): 
+    recv_array = bytearray(recv_cash) 
+    recv_view = memoryview(recv_array)
+    recv_chunk = recv_view[offset : offset + size] 
+    sock.recv_into(recv_chunk) # 注意要使用recv_into()
+```
+
 ### 参考文献
 1. [bytes/bytearray/memoryview](https://zhuanlan.zhihu.com/p/399946068)
 2. [Python使用Zero-Copy和Buffer Protocol实现高性能编程](https://www.cnblogs.com/erhuabushuo/p/10314803.html)
@@ -3352,6 +3389,9 @@ PS F:\code\python\test>
 &emsp;
 # 第九章 测试与调试
 ## tem 75: Use repr Strings for Debugging Output(通过`repr`字符串输出调试信息)
+### 1. `__str__`和`__repr__`的作用
+
+
 
 
 ① 
