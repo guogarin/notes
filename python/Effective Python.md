@@ -223,6 +223,7 @@
 - [第九章 测试与调试](#第九章-测试与调试)
   - [tem 75: Use repr Strings for Debugging Output(通过`repr`字符串输出调试信息)](#tem-75-use-repr-strings-for-debugging-output通过repr字符串输出调试信息)
     - [1. `__str__`和`__repr__`的作用](#1-__str__和__repr__的作用)
+    - [2. 写log的时候用`repr`输出调试信息有什么好处？](#2-写log的时候用repr输出调试信息有什么好处)
 - [参考文献](#参考文献-1)
 
 
@@ -3390,6 +3391,35 @@ def recv_from_client(sock, offset):
 # 第九章 测试与调试
 ## tem 75: Use repr Strings for Debugging Output(通过`repr`字符串输出调试信息)
 ### 1. `__str__`和`__repr__`的作用
+其它位置的笔记已经做了详细的总结，此处不再重复。
+
+### 2. 写log的时候用`repr`输出调试信息有什么好处？
+格式化字符串时默认使用的是`__str__()`，而看不到对象的类型，
+```python
+int_value = 5
+str_value = '5'
+
+print(int_value)
+print(str_value)
+```
+运行结果：
+```
+5
+5
+```
+如果用`__repr__()`就不一样了，可以看到类型，这样会更直观：
+```python
+int_value = 5
+str_value = '5'
+
+print("%r" % int_value)
+print("%r" % str_value)
+```
+运行结果：
+```
+5
+'5'
+```
 
 
 
