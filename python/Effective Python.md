@@ -33,7 +33,7 @@
   - [Item 5：Write Helper Functions Instead of Complex Expressions(用辅助函数取代复杂的表达式)](#item-5write-helper-functions-instead-of-complex-expressions用辅助函数取代复杂的表达式)
     - [1. 这条规则指的是？](#1-这条规则指的是)
     - [2. 为什么？](#2-为什么)
-  - [Item 6: Prefer Multiple Assignment Unpacking Over Indexing(把数据直接解包到多个变量里，不要通过下标范围)](#item-6-prefer-multiple-assignment-unpacking-over-indexing把数据直接解包到多个变量里不要通过下标范围)
+  - [Item 6: Prefer Multiple Assignment Unpacking Over Indexing(把数据直接解包到多个变量里，不要通过下标访问)](#item-6-prefer-multiple-assignment-unpacking-over-indexing把数据直接解包到多个变量里不要通过下标访问)
     - [1. 为什么不建议使用下标访问？](#1-为什么不建议使用下标访问)
   - [Item 7:  Prefer enumerate Over range(尽量使用 enumerate 取代 range)](#item-7--prefer-enumerate-over-range尽量使用-enumerate-取代-range)
     - [1. 相比于`range()`，`enumerate()`的优势是？](#1-相比于rangeenumerate的优势是)
@@ -688,7 +688,7 @@ for i, (item, count) in enumerate(pantry):
 &emsp;
 &emsp; 
 &emsp; 
-## Item 6: Prefer Multiple Assignment Unpacking Over Indexing(把数据直接解包到多个变量里，不要通过下标范围)
+## Item 6: Prefer Multiple Assignment Unpacking Over Indexing(把数据直接解包到多个变量里，不要通过下标访问)
 ### 1. 为什么不建议使用下标访问？
 使用下标访问会降低程序的可读性，还能减少代码量：
 ```python
