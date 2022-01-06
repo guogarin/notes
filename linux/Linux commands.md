@@ -1,7 +1,7 @@
 ## 1. 查看文件夹大小
 `du -sh` 
--h或--human-readable    以K，M，G为单位，提高信息的可读性。
--s或--summarize 仅      显示总计。
+`-h` 或 --human-readable    以K，M，G为单位，提高信息的可读性。
+`-s` 或 --summarize 仅      显示总计。
 
 
 
@@ -103,3 +103,48 @@ f1 f2 f3 f4 f5 program
 ### 3.2 平常用哪个比较好？
 &emsp;&emsp; 正常情况下建议使用`kill`，因为它发送的`SIGTERM`信号会先调用信号处理程序，而且在信号处理程序中可能有一些资源的清理工作，这样可以避免资源泄露的风险。
 &emsp;&emsp; 如果实在杀不掉，再调用`kill -9`。
+
+
+
+&emsp;&emsp; 
+&emsp;&emsp; 
+## 4. 包管理工具
+### 4.1 Linux有哪几种常见的包格式？
+Linux系统中有两种最常见的安装包格式：
+> ① rpm包 
+> ② deb包
+> 
+rpm包 主要应用在RedHat系列，包括 Fedora、centOS等
+deb包 主要应用于Debian系列，包括现在比较流行的Ubuntu等发行版上。 
+
+### 4.2  `rpm`
+**首先，要区分rpm包和rpm命令**
+在linux中，rpm有两个意思：
+> ① 在红帽子中，安装包的格式(如`xxx.rpm`)；
+> ② 红帽子中，管理rpm包的命令(工具)
+> 
+比如，下面这个命令：
+```bash
+rpm -hvi dejagnu-1.4.2-10.noarch.rpm 
+```
+就是在安装`dejagnu-1.4.2-10.noarch.rpm`包
+
+### 4.3 `yum`
+#### 4.4 简介
+&emsp;&emsp; 由于Linux中的程序大多是小程序。程序与程序之间存在非常复杂的依赖关系。RPM无法解决软件包的依赖关系。
+&emsp;&emsp; `Yum`（全称为 Yellow dog Updater, Modified）是一个在Fedora和RedHat以及SUSE中的Shell前端软件包管理器。基于RPM包管理，能够从指定的服务器自动下载RPM包并且安装，可以自动处理依赖性关系，并且一次安装所有依赖的软体包，无须繁琐地一次次下载、安装。
+&emsp;&emsp; 也就是说，`yum`基于`rpm`，算是对其进行了一层封装，提高了用户友好度。
+
+#### 4.5 使用
+**yum 语法**
+```bash
+yum [options] [command] [package ...]
+```
+> `options` ：可选，选项包括`-h`（帮助），`-y`（当安装过程提示选择全部为 "yes"），`-q`（不显示安装的过程）等等。
+> `command` ：要进行的操作。
+> `package` ：安装的包名。
+> 
+
+
+### 4.4 `apt-get`
+&emsp;&emsp; `apt-get`也是一个包管理工具，属于ubuntu、Debian。

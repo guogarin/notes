@@ -1,229 +1,229 @@
 - [一、Pythonic Thinking](#一pythonic-thinking)
-	- [Item 1：Know Which Version of Python You’re Using](#item-1know-which-version-of-python-youre-using)
-		- [1. 为什么要确定python的版本？](#1-为什么要确定python的版本)
-		- [2. 有哪些方法可以获取python的版本？](#2-有哪些方法可以获取python的版本)
-	- [Item 2：Follow the PEP 8 Style Guide](#item-2follow-the-pep-8-style-guide)
-		- [1. 什么是 PEP 8？](#1-什么是-pep-8)
-	- [Item 3：Know the Differences Between bytes and str](#item-3know-the-differences-between-bytes-and-str)
-		- [1. 如何定义`bytes`和`str`？](#1-如何定义bytes和str)
-		- [2. `python`的`bytes`和`str` 分别表示的是什么？](#2-python的bytes和str-分别表示的是什么)
-			- [2.1 `bytes`](#21-bytes)
-			- [2.2 `str`](#22-str)
-		- [3.  `bytes`和`str`之间如何转换？](#3--bytes和str之间如何转换)
-		- [4. 对于`bytes`数据，为什么 `print()`和`list()`出来的数据不一样呢？](#4-对于bytes数据为什么-print和list出来的数据不一样呢)
-		- [5. `bytes`和`str`的兼容性](#5-bytes和str的兼容性)
-		- [6. 读写文件](#6-读写文件)
-			- [6.1 写文件需要遵守的方针](#61-写文件需要遵守的方针)
-			- [6.2 写文件](#62-写文件)
-			- [6.3 读文件](#63-读文件)
-		- [7. 总结](#7-总结)
-	- [Item 4：Prefer Interpolated F-Strings Over C-style Format Strings and str.format](#item-4prefer-interpolated-f-strings-over-c-style-format-strings-and-strformat)
-		- [1. Python有哪些格式化字符串的方法？](#1-python有哪些格式化字符串的方法)
-			- [1.1 方法一：使用 `%` 来格式化 C风格字符串](#11-方法一使用--来格式化-c风格字符串)
-				- [1.1.1 优点](#111-优点)
-				- [1.1.2 缺点：](#112-缺点)
-		- [1.2 方法二：使用`dic`来格式化 `%` 来格式化 C风格字符串](#12-方法二使用dic来格式化--来格式化-c风格字符串)
-			- [1.2.1 优点](#121-优点)
-			- [1.2.2 缺点](#122-缺点)
-		- [1.3 方法三：使用内置的`str`类的`format()`方法](#13-方法三使用内置的str类的format方法)
-		- [1.4 方法四：使用 插值格式字符串(interpolated format string，简称f-string)](#14-方法四使用-插值格式字符串interpolated-format-string简称f-string)
-			- [1.4.1 怎么使用 插值格式字符串？](#141-怎么使用-插值格式字符串)
-			- [1.4.2 `str.format()`方法 和 `f-string`的联系](#142-strformat方法-和-f-string的联系)
-			- [1.4.3 插值格式字符串 好在哪？](#143-插值格式字符串-好在哪)
-	- [Item 5：Write Helper Functions Instead of Complex Expressions(用辅助函数取代复杂的表达式)](#item-5write-helper-functions-instead-of-complex-expressions用辅助函数取代复杂的表达式)
-		- [1. 这条规则指的是？](#1-这条规则指的是)
-		- [2. 为什么？](#2-为什么)
-	- [Item 6: Prefer Multiple Assignment Unpacking Over Indexing(把数据直接解包到多个变量里，不要通过下标访问)](#item-6-prefer-multiple-assignment-unpacking-over-indexing把数据直接解包到多个变量里不要通过下标访问)
-		- [1. 为什么不建议使用下标访问？](#1-为什么不建议使用下标访问)
-	- [Item 7:  Prefer enumerate Over range(尽量使用 enumerate 取代 range)](#item-7--prefer-enumerate-over-range尽量使用-enumerate-取代-range)
-		- [1. 相比于`range()`，`enumerate()`的优势是？](#1-相比于rangeenumerate的优势是)
-	- [Item 8: Use zip to Process Iterators in Parallel(用 zip()函数 同时遍历两个迭代器)](#item-8-use-zip-to-process-iterators-in-parallel用-zip函数-同时遍历两个迭代器)
-		- [8.1 用zip() 迭代两个迭代器的优势是？](#81-用zip-迭代两个迭代器的优势是)
-	- [Item 9: Avoid else Blocks After for and while Loops(不要在while和for循环后面写else块)](#item-9-avoid-else-blocks-after-for-and-while-loops不要在while和for循环后面写else块)
-		- [1. 为什么要避免使用？](#1-为什么要避免使用)
-	- [Item 10: Prevent Repetition with Assignment Expressions(用赋值表达式减少重复代码)](#item-10-prevent-repetition-with-assignment-expressions用赋值表达式减少重复代码)
-		- [1. 赋值表达式好在哪？](#1-赋值表达式好在哪)
-		- [2. 怎么用？](#2-怎么用)
+  - [Item 1：Know Which Version of Python You’re Using](#item-1know-which-version-of-python-youre-using)
+    - [1. 为什么要确定python的版本？](#1-为什么要确定python的版本)
+    - [2. 有哪些方法可以获取python的版本？](#2-有哪些方法可以获取python的版本)
+  - [Item 2：Follow the PEP 8 Style Guide](#item-2follow-the-pep-8-style-guide)
+    - [1. 什么是 PEP 8？](#1-什么是-pep-8)
+  - [Item 3：Know the Differences Between bytes and str](#item-3know-the-differences-between-bytes-and-str)
+    - [1. 如何定义`bytes`和`str`？](#1-如何定义bytes和str)
+    - [2. `python`的`bytes`和`str` 分别表示的是什么？](#2-python的bytes和str-分别表示的是什么)
+      - [2.1 `bytes`](#21-bytes)
+      - [2.2 `str`](#22-str)
+    - [3.  `bytes`和`str`之间如何转换？](#3--bytes和str之间如何转换)
+    - [4. 对于`bytes`数据，为什么 `print()`和`list()`出来的数据不一样呢？](#4-对于bytes数据为什么-print和list出来的数据不一样呢)
+    - [5. `bytes`和`str`的兼容性](#5-bytes和str的兼容性)
+    - [6. 读写文件](#6-读写文件)
+      - [6.1 写文件需要遵守的方针](#61-写文件需要遵守的方针)
+      - [6.2 写文件](#62-写文件)
+      - [6.3 读文件](#63-读文件)
+    - [7. 总结](#7-总结)
+  - [Item 4：Prefer Interpolated F-Strings Over C-style Format Strings and str.format](#item-4prefer-interpolated-f-strings-over-c-style-format-strings-and-strformat)
+    - [1. Python有哪些格式化字符串的方法？](#1-python有哪些格式化字符串的方法)
+      - [1.1 方法一：使用 `%` 来格式化 C风格字符串](#11-方法一使用--来格式化-c风格字符串)
+        - [1.1.1 优点](#111-优点)
+        - [1.1.2 缺点：](#112-缺点)
+    - [1.2 方法二：使用`dic`来格式化 `%` 来格式化 C风格字符串](#12-方法二使用dic来格式化--来格式化-c风格字符串)
+      - [1.2.1 优点](#121-优点)
+      - [1.2.2 缺点](#122-缺点)
+    - [1.3 方法三：使用内置的`str`类的`format()`方法](#13-方法三使用内置的str类的format方法)
+    - [1.4 方法四：使用 插值格式字符串(interpolated format string，简称f-string)](#14-方法四使用-插值格式字符串interpolated-format-string简称f-string)
+      - [1.4.1 怎么使用 插值格式字符串？](#141-怎么使用-插值格式字符串)
+      - [1.4.2 `str.format()`方法 和 `f-string`的联系](#142-strformat方法-和-f-string的联系)
+      - [1.4.3 插值格式字符串 好在哪？](#143-插值格式字符串-好在哪)
+  - [Item 5：Write Helper Functions Instead of Complex Expressions(用辅助函数取代复杂的表达式)](#item-5write-helper-functions-instead-of-complex-expressions用辅助函数取代复杂的表达式)
+    - [1. 这条规则指的是？](#1-这条规则指的是)
+    - [2. 为什么？](#2-为什么)
+  - [Item 6: Prefer Multiple Assignment Unpacking Over Indexing(把数据直接解包到多个变量里，不要通过下标访问)](#item-6-prefer-multiple-assignment-unpacking-over-indexing把数据直接解包到多个变量里不要通过下标访问)
+    - [1. 为什么不建议使用下标访问？](#1-为什么不建议使用下标访问)
+  - [Item 7:  Prefer enumerate Over range(尽量使用 enumerate 取代 range)](#item-7--prefer-enumerate-over-range尽量使用-enumerate-取代-range)
+    - [1. 相比于`range()`，`enumerate()`的优势是？](#1-相比于rangeenumerate的优势是)
+  - [Item 8: Use zip to Process Iterators in Parallel(用 zip()函数 同时遍历两个迭代器)](#item-8-use-zip-to-process-iterators-in-parallel用-zip函数-同时遍历两个迭代器)
+    - [8.1 用zip() 迭代两个迭代器的优势是？](#81-用zip-迭代两个迭代器的优势是)
+  - [Item 9: Avoid else Blocks After for and while Loops(不要在while和for循环后面写else块)](#item-9-avoid-else-blocks-after-for-and-while-loops不要在while和for循环后面写else块)
+    - [1. 为什么要避免使用？](#1-为什么要避免使用)
+  - [Item 10: Prevent Repetition with Assignment Expressions(用赋值表达式减少重复代码)](#item-10-prevent-repetition-with-assignment-expressions用赋值表达式减少重复代码)
+    - [1. 赋值表达式好在哪？](#1-赋值表达式好在哪)
+    - [2. 怎么用？](#2-怎么用)
 - [二、Lists and Dictionaries](#二lists-and-dictionaries)
-	- [Item 11: Know How to Slice Sequences(学会对序列切片)](#item-11-know-how-to-slice-sequences学会对序列切片)
-		- [1. 什么样的类可以进行切片操作？](#1-什么样的类可以进行切片操作)
-		- [2. 切片时应该秉承什么样的原则？](#2-切片时应该秉承什么样的原则)
-			- [3. 切片得到的对象 和 原对象 的关系是？](#3-切片得到的对象-和-原对象-的关系是)
-	- [Item 12: Avoid Striding and Slicing in a Single Expression(不要在切片操作里同时指定 起止下标 和 步长)](#item-12-avoid-striding-and-slicing-in-a-single-expression不要在切片操作里同时指定-起止下标-和-步长)
-		- [原因](#原因)
-	- [Item 13: Prefer Catch-All Unpacking Over Slicing(尽量通过带星号的`unpacking`操作来捕获多个元素，而不是通过切片)](#item-13-prefer-catch-all-unpacking-over-slicing尽量通过带星号的unpacking操作来捕获多个元素而不是通过切片)
-		- [1. 如何通过`unpacking`操作来完成 切片 的功能？](#1-如何通过unpacking操作来完成-切片-的功能)
-		- [2. 相比于切片，`unpacking`操作捕获的优势在哪？](#2-相比于切片unpacking操作捕获的优势在哪)
-	- [Item 14: Sort by Complex Criteria Using the key Parameter(用 `sort`方法的`key`参数 来表示复杂的排序逻辑)](#item-14-sort-by-complex-criteria-using-the-key-parameter用-sort方法的key参数-来表示复杂的排序逻辑)
-		- [1. 为什么要用`key`参数指定排序逻辑？](#1-为什么要用key参数指定排序逻辑)
-		- [2. 如何用多个条件来排序？](#2-如何用多个条件来排序)
-			- [2.1 利用 元组 来实现](#21-利用-元组-来实现)
-			- [2.2 多次调用`sort()`](#22-多次调用sort)
-			- [2.3 如果多个条件中，我们希望一个条件排正序，一个排倒序，应该怎么做？](#23-如果多个条件中我们希望一个条件排正序一个排倒序应该怎么做)
-	- [Item 15: Be Cautious When Relying on dict Insertion Ordering(不要过分依赖给字典添加条目时所用的顺序)](#item-15-be-cautious-when-relying-on-dict-insertion-ordering不要过分依赖给字典添加条目时所用的顺序)
-		- [1. 字典的`key`是否有序？](#1-字典的key是否有序)
-		- [2. 为什么不能总是假设所有的字典都能保留键值对插入时的顺序？](#2-为什么不能总是假设所有的字典都能保留键值对插入时的顺序)
-			- [2.2 如何解决这个问题呢？](#22-如何解决这个问题呢)
-	- [Item 16: Prefer get Over in and KeyError to Handle Missing Dictionary Keys(用`get`处理键不在字典里的情况，而不是`in`和`KeyError`)](#item-16-prefer-get-over-in-and-keyerror-to-handle-missing-dictionary-keys用get处理键不在字典里的情况而不是in和keyerror)
-		- [1. 有哪些方法 可以处理 key不在字典里的情况？](#1-有哪些方法-可以处理-key不在字典里的情况)
-		- [2. 更推荐哪种方法？为什么？](#2-更推荐哪种方法为什么)
-			- [2.1 先说结论](#21-先说结论)
-			- [2.2 几个例子](#22-几个例子)
-				- [2.2.1 例子一：](#221-例子一)
-				- [2.2.2 例子二：](#222-例子二)
-	- [Item 17: Prefer defaultdict Over setdefault to Handle Missing Items in Internal State(用`defaultdict`处理缺失的元素，而不是`setdefault`)](#item-17-prefer-defaultdict-over-setdefault-to-handle-missing-items-in-internal-state用defaultdict处理缺失的元素而不是setdefault)
-	- [Item 18: Know How to Construct Key-Dependent Default Values with __missing__(学会利用`__missing__`构造依赖建的默认值)](#item-18-know-how-to-construct-key-dependent-default-values-with-missing学会利用__missing__构造依赖建的默认值)
-		- [(1) 用`defaultdict`来解决：](#1-用defaultdict来解决)
-		- [(2) 重载内置`dict`的`__missing__`方法](#2-重载内置dict的__missing__方法)
+  - [Item 11: Know How to Slice Sequences(学会对序列切片)](#item-11-know-how-to-slice-sequences学会对序列切片)
+    - [1. 什么样的类可以进行切片操作？](#1-什么样的类可以进行切片操作)
+    - [2. 切片时应该秉承什么样的原则？](#2-切片时应该秉承什么样的原则)
+      - [3. 切片得到的对象 和 原对象 的关系是？](#3-切片得到的对象-和-原对象-的关系是)
+  - [Item 12: Avoid Striding and Slicing in a Single Expression(不要在切片操作里同时指定 起止下标 和 步长)](#item-12-avoid-striding-and-slicing-in-a-single-expression不要在切片操作里同时指定-起止下标-和-步长)
+    - [原因](#原因)
+  - [Item 13: Prefer Catch-All Unpacking Over Slicing(尽量通过带星号的`unpacking`操作来捕获多个元素，而不是通过切片)](#item-13-prefer-catch-all-unpacking-over-slicing尽量通过带星号的unpacking操作来捕获多个元素而不是通过切片)
+    - [1. 如何通过`unpacking`操作来完成 切片 的功能？](#1-如何通过unpacking操作来完成-切片-的功能)
+    - [2. 相比于切片，`unpacking`操作捕获的优势在哪？](#2-相比于切片unpacking操作捕获的优势在哪)
+  - [Item 14: Sort by Complex Criteria Using the key Parameter(用 `sort`方法的`key`参数 来表示复杂的排序逻辑)](#item-14-sort-by-complex-criteria-using-the-key-parameter用-sort方法的key参数-来表示复杂的排序逻辑)
+    - [1. 为什么要用`key`参数指定排序逻辑？](#1-为什么要用key参数指定排序逻辑)
+    - [2. 如何用多个条件来排序？](#2-如何用多个条件来排序)
+      - [2.1 利用 元组 来实现](#21-利用-元组-来实现)
+      - [2.2 多次调用`sort()`](#22-多次调用sort)
+      - [2.3 如果多个条件中，我们希望一个条件排正序，一个排倒序，应该怎么做？](#23-如果多个条件中我们希望一个条件排正序一个排倒序应该怎么做)
+  - [Item 15: Be Cautious When Relying on dict Insertion Ordering(不要过分依赖给字典添加条目时所用的顺序)](#item-15-be-cautious-when-relying-on-dict-insertion-ordering不要过分依赖给字典添加条目时所用的顺序)
+    - [1. 字典的`key`是否有序？](#1-字典的key是否有序)
+    - [2. 为什么不能总是假设所有的字典都能保留键值对插入时的顺序？](#2-为什么不能总是假设所有的字典都能保留键值对插入时的顺序)
+      - [2.2 如何解决这个问题呢？](#22-如何解决这个问题呢)
+  - [Item 16: Prefer get Over in and KeyError to Handle Missing Dictionary Keys(用`get`处理键不在字典里的情况，而不是`in`和`KeyError`)](#item-16-prefer-get-over-in-and-keyerror-to-handle-missing-dictionary-keys用get处理键不在字典里的情况而不是in和keyerror)
+    - [1. 有哪些方法 可以处理 key不在字典里的情况？](#1-有哪些方法-可以处理-key不在字典里的情况)
+    - [2. 更推荐哪种方法？为什么？](#2-更推荐哪种方法为什么)
+      - [2.1 先说结论](#21-先说结论)
+      - [2.2 几个例子](#22-几个例子)
+        - [2.2.1 例子一：](#221-例子一)
+        - [2.2.2 例子二：](#222-例子二)
+  - [Item 17: Prefer defaultdict Over setdefault to Handle Missing Items in Internal State(用`defaultdict`处理缺失的元素，而不是`setdefault`)](#item-17-prefer-defaultdict-over-setdefault-to-handle-missing-items-in-internal-state用defaultdict处理缺失的元素而不是setdefault)
+  - [Item 18: Know How to Construct Key-Dependent Default Values with __missing__(学会利用`__missing__`构造依赖建的默认值)](#item-18-know-how-to-construct-key-dependent-default-values-with-missing学会利用__missing__构造依赖建的默认值)
+    - [(1) 用`defaultdict`来解决：](#1-用defaultdict来解决)
+    - [(2) 重载内置`dict`的`__missing__`方法](#2-重载内置dict的__missing__方法)
 - [三、函数](#三函数)
-	- [Item 19: Never Unpack More Than Three Variables When Functions Return Multiple Values(不要把函数返回的多个数值 拆分到三个以上的变量中)](#item-19-never-unpack-more-than-three-variables-when-functions-return-multiple-values不要把函数返回的多个数值-拆分到三个以上的变量中)
-		- [1. 为什么不要这么做？](#1-为什么不要这么做)
-		- [2. 如果函数必须返回3个以上的变量，应该怎么做？](#2-如果函数必须返回3个以上的变量应该怎么做)
-	- [Item 20: Prefer Raising Exceptions to Returning None(遇到意外时应该抛异常，而不是返回`None`)](#item-20-prefer-raising-exceptions-to-returning-none遇到意外时应该抛异常而不是返回none)
-		- [1. 为什么不推荐返回`None`？](#1-为什么不推荐返回none)
-		- [2. 既然不推荐返回`None`，那如何解决这个问题呢？](#2-既然不推荐返回none那如何解决这个问题呢)
-			- [方法一：](#方法一)
-			- [方法二：](#方法二)
-	- [Item 21: Know How Closures Interact with Variable Scope(了解如何在闭包里使用外围作用域中的变量)](#item-21-know-how-closures-interact-with-variable-scope了解如何在闭包里使用外围作用域中的变量)
-	- [Item 22: Reduce Visual Noise with Variable Positional Arguments(用数量可变的位置参数给函数设计清晰的参数列表)](#item-22-reduce-visual-noise-with-variable-positional-arguments用数量可变的位置参数给函数设计清晰的参数列表)
-		- [1. 如何把一个已有序列传给参数可变的函数？](#1-如何把一个已有序列传给参数可变的函数)
-		- [2. 接收数量可变参数的函数 可能存在什么问题？](#2-接收数量可变参数的函数-可能存在什么问题)
-	- [Item 23: Provide Optional Behavior with Keyword Arguments(用关键字参数来表示可选的行为)](#item-23-provide-optional-behavior-with-keyword-arguments用关键字参数来表示可选的行为)
-		- [1. 什么是 按位置传递参数 和 按关键字传递参数 来调用函数？](#1-什么是-按位置传递参数-和-按关键字传递参数-来调用函数)
-		- [2. 通过关键字指定参数时，需要注意什么？](#2-通过关键字指定参数时需要注意什么)
-		- [3. 如何通过字典来调用关键字参数？](#3-如何通过字典来调用关键字参数)
-			- [3.2 字典里的关键字可以有 带调用函数不存在的关键字吗？](#32-字典里的关键字可以有-带调用函数不存在的关键字吗)
-		- [4. 关键字参数有何好处？](#4-关键字参数有何好处)
-	- [Item 24: Use None and Docstrings to Specify Dynamic Default Arg(用`None`和`docstring`来描述默认值会变的参数)](#item-24-use-none-and-docstrings-to-specify-dynamic-default-arg用none和docstring来描述默认值会变的参数)
-		- [1. 如何给函数提供 变化的默认实参？](#1-如何给函数提供-变化的默认实参)
-			- [1.1 陷阱](#11-陷阱)
-			- [1.2 破解之法](#12-破解之法)
-		- [2. 扩展](#2-扩展)
-		- [总结](#总结)
-	- [Item 25: Enforce Clarity with Keyword-Only and Positional-Only Arguments(用 只能以关键字指定 和只 能按位置传入 的参数 来设计清晰的参数列表)](#item-25-enforce-clarity-with-keyword-only-and-positional-only-arguments用-只能以关键字指定-和只-能按位置传入-的参数-来设计清晰的参数列表)
-		- [1. 只能通过关键字指定的参数(keyword-only argument)](#1-只能通过关键字指定的参数keyword-only-argument)
-			- [1.1 什么时候需要使用 keyword-only argument？](#11-什么时候需要使用-keyword-only-argument)
-			- [1.2 如何使用 keyword-only argument？](#12-如何使用-keyword-only-argument)
-		- [2. 只能按位置传递的参数(Positional-Only Arguments)](#2-只能按位置传递的参数positional-only-arguments)
-			- [2.1 为什么需要？](#21-为什么需要)
-			- [2.2 如何使用？](#22-如何使用)
-		- [3. `*`和`/`同时出现在参数列表中时，它俩中间的参数必须按什么提供实参？](#3-和同时出现在参数列表中时它俩中间的参数必须按什么提供实参)
-	- [Item 26: Define Function Decorators with functools.wraps(用`functools.wraps`定义函数装饰器)](#item-26-define-function-decorators-with-functoolswraps用functoolswraps定义函数装饰器)
+  - [Item 19: Never Unpack More Than Three Variables When Functions Return Multiple Values(不要把函数返回的多个数值 拆分到三个以上的变量中)](#item-19-never-unpack-more-than-three-variables-when-functions-return-multiple-values不要把函数返回的多个数值-拆分到三个以上的变量中)
+    - [1. 为什么不要这么做？](#1-为什么不要这么做)
+    - [2. 如果函数必须返回3个以上的变量，应该怎么做？](#2-如果函数必须返回3个以上的变量应该怎么做)
+  - [Item 20: Prefer Raising Exceptions to Returning None(遇到意外时应该抛异常，而不是返回`None`)](#item-20-prefer-raising-exceptions-to-returning-none遇到意外时应该抛异常而不是返回none)
+    - [1. 为什么不推荐返回`None`？](#1-为什么不推荐返回none)
+    - [2. 既然不推荐返回`None`，那如何解决这个问题呢？](#2-既然不推荐返回none那如何解决这个问题呢)
+      - [方法一：](#方法一)
+      - [方法二：](#方法二)
+  - [Item 21: Know How Closures Interact with Variable Scope(了解如何在闭包里使用外围作用域中的变量)](#item-21-know-how-closures-interact-with-variable-scope了解如何在闭包里使用外围作用域中的变量)
+  - [Item 22: Reduce Visual Noise with Variable Positional Arguments(用数量可变的位置参数给函数设计清晰的参数列表)](#item-22-reduce-visual-noise-with-variable-positional-arguments用数量可变的位置参数给函数设计清晰的参数列表)
+    - [1. 如何把一个已有序列传给参数可变的函数？](#1-如何把一个已有序列传给参数可变的函数)
+    - [2. 接收数量可变参数的函数 可能存在什么问题？](#2-接收数量可变参数的函数-可能存在什么问题)
+  - [Item 23: Provide Optional Behavior with Keyword Arguments(用关键字参数来表示可选的行为)](#item-23-provide-optional-behavior-with-keyword-arguments用关键字参数来表示可选的行为)
+    - [1. 什么是 按位置传递参数 和 按关键字传递参数 来调用函数？](#1-什么是-按位置传递参数-和-按关键字传递参数-来调用函数)
+    - [2. 通过关键字指定参数时，需要注意什么？](#2-通过关键字指定参数时需要注意什么)
+    - [3. 如何通过字典来调用关键字参数？](#3-如何通过字典来调用关键字参数)
+      - [3.2 字典里的关键字可以有 带调用函数不存在的关键字吗？](#32-字典里的关键字可以有-带调用函数不存在的关键字吗)
+    - [4. 关键字参数有何好处？](#4-关键字参数有何好处)
+  - [Item 24: Use None and Docstrings to Specify Dynamic Default Arg(用`None`和`docstring`来描述默认值会变的参数)](#item-24-use-none-and-docstrings-to-specify-dynamic-default-arg用none和docstring来描述默认值会变的参数)
+    - [1. 如何给函数提供 变化的默认实参？](#1-如何给函数提供-变化的默认实参)
+      - [1.1 陷阱](#11-陷阱)
+      - [1.2 破解之法](#12-破解之法)
+    - [2. 扩展](#2-扩展)
+    - [总结](#总结)
+  - [Item 25: Enforce Clarity with Keyword-Only and Positional-Only Arguments(用 只能以关键字指定 和只 能按位置传入 的参数 来设计清晰的参数列表)](#item-25-enforce-clarity-with-keyword-only-and-positional-only-arguments用-只能以关键字指定-和只-能按位置传入-的参数-来设计清晰的参数列表)
+    - [1. 只能通过关键字指定的参数(keyword-only argument)](#1-只能通过关键字指定的参数keyword-only-argument)
+      - [1.1 什么时候需要使用 keyword-only argument？](#11-什么时候需要使用-keyword-only-argument)
+      - [1.2 如何使用 keyword-only argument？](#12-如何使用-keyword-only-argument)
+    - [2. 只能按位置传递的参数(Positional-Only Arguments)](#2-只能按位置传递的参数positional-only-arguments)
+      - [2.1 为什么需要？](#21-为什么需要)
+      - [2.2 如何使用？](#22-如何使用)
+    - [3. `*`和`/`同时出现在参数列表中时，它俩中间的参数必须按什么提供实参？](#3-和同时出现在参数列表中时它俩中间的参数必须按什么提供实参)
+  - [Item 26: Define Function Decorators with functools.wraps(用`functools.wraps`定义函数装饰器)](#item-26-define-function-decorators-with-functoolswraps用functoolswraps定义函数装饰器)
 - [四、 Comprehensions and Generators(推导与生成)](#四-comprehensions-and-generators推导与生成)
-	- [Item 27: Use Comprehensions Instead of map and filter(用列表推导来替代`map`和`filter`)](#item-27-use-comprehensions-instead-of-map-and-filter用列表推导来替代map和filter)
-	- [Item 28: Avoid More Than Two Control Subexpressions in Comprehensions(控制推导逻辑的子表达式不要超过两个)](#item-28-avoid-more-than-two-control-subexpressions-in-comprehensions控制推导逻辑的子表达式不要超过两个)
-	- [Item 29: Avoid Repeated Work in Comprehensions by Using Assignment Expressions(用赋值表达式消除推导式中的重复代码)](#item-29-avoid-repeated-work-in-comprehensions-by-using-assignment-expressions用赋值表达式消除推导式中的重复代码)
-	- [Item 30: Consider Generators Instead of Returning Lists(不要让函数直接返回列表，而应该让它逐个生成列表里的值)](#item-30-consider-generators-instead-of-returning-lists不要让函数直接返回列表而应该让它逐个生成列表里的值)
-	- [Item 31: Be Defensive When Iterating Over Arguments(谨慎的迭代函数所收到的参数)](#item-31-be-defensive-when-iterating-over-arguments谨慎的迭代函数所收到的参数)
-		- [1. 当函数收到什么类型的参数时需要谨慎的迭代？为什么？](#1-当函数收到什么类型的参数时需要谨慎的迭代为什么)
-		- [2. 如何解决上面的问题？](#2-如何解决上面的问题)
-		- [3. 既然函数收到的实参为迭代器的时候可能会遇到问题，那如何避免这种情况呢？](#3-既然函数收到的实参为迭代器的时候可能会遇到问题那如何避免这种情况呢)
-		- [4. 总结](#4-总结)
-	- [Item 32: Consider Generator Expressions for Large List Comprehensions(对于数据量较大的列表推导，尽量用生成器表达式来完成)](#item-32-consider-generator-expressions-for-large-list-comprehensions对于数据量较大的列表推导尽量用生成器表达式来完成)
-		- [1. 为什么？](#1-为什么)
-		- [2. 生成器表达式 如何写？](#2-生成器表达式-如何写)
-		- [3. 使用生成器表达式需要注意什么？](#3-使用生成器表达式需要注意什么)
-	- [Item 33: Compose Multiple Generators with yield from(通过`yiled from`把多个生成器连起来)](#item-33-compose-multiple-generators-with-yield-from通过yiled-from把多个生成器连起来)
-		- [1. 为什么建议使用`yiled from`？](#1-为什么建议使用yiled-from)
-	- [Item 34: Avoid Injecting Data into Generators with send(不要用`send`给生成器注入数据)](#item-34-avoid-injecting-data-into-generators-with-send不要用send给生成器注入数据)
-		- [1. 为什么不建议使用`send`给生成器注入数据？](#1-为什么不建议使用send给生成器注入数据)
-		- [2. 既然不推荐使用`send()`向生成器发送数据，那如何和生成器交互？](#2-既然不推荐使用send向生成器发送数据那如何和生成器交互)
-	- [Item 35: Avoid Causing State Transitions in Generators with throw(不要通过`throw`变换生成器的状态)](#item-35-avoid-causing-state-transitions-in-generators-with-throw不要通过throw变换生成器的状态)
-	- [Item 36: Consider itertools for Working with Iterators and Generators(考虑用`itertools`来拼装迭代器和生成器)](#item-36-consider-itertools-for-working-with-iterators-and-generators考虑用itertools来拼装迭代器和生成器)
-		- [1. `itertools`模块介绍](#1-itertools模块介绍)
-		- [2. 函数介绍](#2-函数介绍)
+  - [Item 27: Use Comprehensions Instead of map and filter(用列表推导来替代`map`和`filter`)](#item-27-use-comprehensions-instead-of-map-and-filter用列表推导来替代map和filter)
+  - [Item 28: Avoid More Than Two Control Subexpressions in Comprehensions(控制推导逻辑的子表达式不要超过两个)](#item-28-avoid-more-than-two-control-subexpressions-in-comprehensions控制推导逻辑的子表达式不要超过两个)
+  - [Item 29: Avoid Repeated Work in Comprehensions by Using Assignment Expressions(用赋值表达式消除推导式中的重复代码)](#item-29-avoid-repeated-work-in-comprehensions-by-using-assignment-expressions用赋值表达式消除推导式中的重复代码)
+  - [Item 30: Consider Generators Instead of Returning Lists(不要让函数直接返回列表，而应该让它逐个生成列表里的值)](#item-30-consider-generators-instead-of-returning-lists不要让函数直接返回列表而应该让它逐个生成列表里的值)
+  - [Item 31: Be Defensive When Iterating Over Arguments(谨慎的迭代函数所收到的参数)](#item-31-be-defensive-when-iterating-over-arguments谨慎的迭代函数所收到的参数)
+    - [1. 当函数收到什么类型的参数时需要谨慎的迭代？为什么？](#1-当函数收到什么类型的参数时需要谨慎的迭代为什么)
+    - [2. 如何解决上面的问题？](#2-如何解决上面的问题)
+    - [3. 既然函数收到的实参为迭代器的时候可能会遇到问题，那如何避免这种情况呢？](#3-既然函数收到的实参为迭代器的时候可能会遇到问题那如何避免这种情况呢)
+    - [4. 总结](#4-总结)
+  - [Item 32: Consider Generator Expressions for Large List Comprehensions(对于数据量较大的列表推导，尽量用生成器表达式来完成)](#item-32-consider-generator-expressions-for-large-list-comprehensions对于数据量较大的列表推导尽量用生成器表达式来完成)
+    - [1. 为什么？](#1-为什么)
+    - [2. 生成器表达式 如何写？](#2-生成器表达式-如何写)
+    - [3. 使用生成器表达式需要注意什么？](#3-使用生成器表达式需要注意什么)
+  - [Item 33: Compose Multiple Generators with yield from(通过`yiled from`把多个生成器连起来)](#item-33-compose-multiple-generators-with-yield-from通过yiled-from把多个生成器连起来)
+    - [1. 为什么建议使用`yiled from`？](#1-为什么建议使用yiled-from)
+  - [Item 34: Avoid Injecting Data into Generators with send(不要用`send`给生成器注入数据)](#item-34-avoid-injecting-data-into-generators-with-send不要用send给生成器注入数据)
+    - [1. 为什么不建议使用`send`给生成器注入数据？](#1-为什么不建议使用send给生成器注入数据)
+    - [2. 既然不推荐使用`send()`向生成器发送数据，那如何和生成器交互？](#2-既然不推荐使用send向生成器发送数据那如何和生成器交互)
+  - [Item 35: Avoid Causing State Transitions in Generators with throw(不要通过`throw`变换生成器的状态)](#item-35-avoid-causing-state-transitions-in-generators-with-throw不要通过throw变换生成器的状态)
+  - [Item 36: Consider itertools for Working with Iterators and Generators(考虑用`itertools`来拼装迭代器和生成器)](#item-36-consider-itertools-for-working-with-iterators-and-generators考虑用itertools来拼装迭代器和生成器)
+    - [1. `itertools`模块介绍](#1-itertools模块介绍)
+    - [2. 函数介绍](#2-函数介绍)
 - [五、类与接口](#五类与接口)
-	- [Item 37: Compose Classes Instead of Nesting Many Levels of Built-in Types(不要用嵌套的内置类型实现多层结构，而应该通过组合起来的类来实现)](#item-37-compose-classes-instead-of-nesting-many-levels-of-built-in-types不要用嵌套的内置类型实现多层结构而应该通过组合起来的类来实现)
-		- [1. 用 嵌套的内置类型 实现多层结构 的缺点是？](#1-用-嵌套的内置类型-实现多层结构-的缺点是)
-		- [2. 如何解决上面的困境呢？](#2-如何解决上面的困境呢)
-	- [Item 38: Accept Functions Instead of Classes for Simple Interfaces(让简单的接口接受函数，而不是类的实例)](#item-38-accept-functions-instead-of-classes-for-simple-interfaces让简单的接口接受函数而不是类的实例)
-	- [Item 39: Use @classmethod Polymorphism to Construct Objects Generically(通过`@classmethod`多态来构造同一体系中的各类对象)](#item-39-use-classmethod-polymorphism-to-construct-objects-generically通过classmethod多态来构造同一体系中的各类对象)
-		- [1.](#1)
-	- [Item 40: Initialize Parent Classes with super(通过`super()`来初始化父类)](#item-40-initialize-parent-classes-with-super通过super来初始化父类)
-		- [1. 有哪几种初始化父类的方法？](#1-有哪几种初始化父类的方法)
-		- [2. 上面的几种初始化父类的方法中，更推荐哪种方法？为什么？](#2-上面的几种初始化父类的方法中更推荐哪种方法为什么)
-	- [Item 41: Consider Composing Functionality with Mix-in Classes(考虑使用`mixin`类来表示可组合的功能)](#item-41-consider-composing-functionality-with-mix-in-classes考虑使用mixin类来表示可组合的功能)
-		- [1. 什么时候应该使用`mixin`类？](#1-什么时候应该使用mixin类)
-	- [Item 42: Prefer Public Attributes Over Private Ones(优先考虑用public属性表示应受保护的数据，而不是用`private`)](#item-42-prefer-public-attributes-over-private-ones优先考虑用public属性表示应受保护的数据而不是用private)
-		- [1. 为什么应该避免使用`private`？](#1-为什么应该避免使用private)
-		- [2. 对于那些不希望被别人访问的成员，我们应该怎么做？](#2-对于那些不希望被别人访问的成员我们应该怎么做)
-		- [3. 那什么时候适合用`private`？](#3-那什么时候适合用private)
-	- [Item 43: Inherit from collections.abc for Custom Container Types(自定义的容器类型应该从`collections.abc`继承)](#item-43-inherit-from-collectionsabc-for-custom-container-types自定义的容器类型应该从collectionsabc继承)
-		- [1. `collections.abc`提供的是什么？](#1-collectionsabc提供的是什么)
-		- [2. 假设一个类，我们想让他支持`dict`那样的关键字索引操作(如`obj[key]`)，应该怎么做？](#2-假设一个类我们想让他支持dict那样的关键字索引操作如objkey应该怎么做)
-		- [3. 为什么更推荐直接继承`collections.abc`中的抽象类，而不是自己实现呢？](#3-为什么更推荐直接继承collectionsabc中的抽象类而不是自己实现呢)
-		- [4. 定义一个二叉树类，让它支持内置`list`一样的操作](#4-定义一个二叉树类让它支持内置list一样的操作)
+  - [Item 37: Compose Classes Instead of Nesting Many Levels of Built-in Types(不要用嵌套的内置类型实现多层结构，而应该通过组合起来的类来实现)](#item-37-compose-classes-instead-of-nesting-many-levels-of-built-in-types不要用嵌套的内置类型实现多层结构而应该通过组合起来的类来实现)
+    - [1. 用 嵌套的内置类型 实现多层结构 的缺点是？](#1-用-嵌套的内置类型-实现多层结构-的缺点是)
+    - [2. 如何解决上面的困境呢？](#2-如何解决上面的困境呢)
+  - [Item 38: Accept Functions Instead of Classes for Simple Interfaces(让简单的接口接受函数，而不是类的实例)](#item-38-accept-functions-instead-of-classes-for-simple-interfaces让简单的接口接受函数而不是类的实例)
+  - [Item 39: Use @classmethod Polymorphism to Construct Objects Generically(通过`@classmethod`多态来构造同一体系中的各类对象)](#item-39-use-classmethod-polymorphism-to-construct-objects-generically通过classmethod多态来构造同一体系中的各类对象)
+    - [1.](#1)
+  - [Item 40: Initialize Parent Classes with super(通过`super()`来初始化父类)](#item-40-initialize-parent-classes-with-super通过super来初始化父类)
+    - [1. 有哪几种初始化父类的方法？](#1-有哪几种初始化父类的方法)
+    - [2. 上面的几种初始化父类的方法中，更推荐哪种方法？为什么？](#2-上面的几种初始化父类的方法中更推荐哪种方法为什么)
+  - [Item 41: Consider Composing Functionality with Mix-in Classes(考虑使用`mixin`类来表示可组合的功能)](#item-41-consider-composing-functionality-with-mix-in-classes考虑使用mixin类来表示可组合的功能)
+    - [1. 什么时候应该使用`mixin`类？](#1-什么时候应该使用mixin类)
+  - [Item 42: Prefer Public Attributes Over Private Ones(优先考虑用public属性表示应受保护的数据，而不是用`private`)](#item-42-prefer-public-attributes-over-private-ones优先考虑用public属性表示应受保护的数据而不是用private)
+    - [1. 为什么应该避免使用`private`？](#1-为什么应该避免使用private)
+    - [2. 对于那些不希望被别人访问的成员，我们应该怎么做？](#2-对于那些不希望被别人访问的成员我们应该怎么做)
+    - [3. 那什么时候适合用`private`？](#3-那什么时候适合用private)
+  - [Item 43: Inherit from collections.abc for Custom Container Types(自定义的容器类型应该从`collections.abc`继承)](#item-43-inherit-from-collectionsabc-for-custom-container-types自定义的容器类型应该从collectionsabc继承)
+    - [1. `collections.abc`提供的是什么？](#1-collectionsabc提供的是什么)
+    - [2. 假设一个类，我们想让他支持`dict`那样的关键字索引操作(如`obj[key]`)，应该怎么做？](#2-假设一个类我们想让他支持dict那样的关键字索引操作如objkey应该怎么做)
+    - [3. 为什么更推荐直接继承`collections.abc`中的抽象类，而不是自己实现呢？](#3-为什么更推荐直接继承collectionsabc中的抽象类而不是自己实现呢)
+    - [4. 定义一个二叉树类，让它支持内置`list`一样的操作](#4-定义一个二叉树类让它支持内置list一样的操作)
 - [六、元类与属性](#六元类与属性)
-	- [Item 44: Use Plain Attributes Instead of Setter and Getter Methods(用纯属性与修饰器取代旧式的`setter`和`getter`方法)](#item-44-use-plain-attributes-instead-of-setter-and-getter-methods用纯属性与修饰器取代旧式的setter和getter方法)
-	- [Item 45: Consider @property Instead of Refactoring Attributes(考虑用`@property`实现新的属性访问逻辑，不要着急重构代码)](#item-45-consider-property-instead-of-refactoring-attributes考虑用property实现新的属性访问逻辑不要着急重构代码)
-		- [1. 课文中讲了啥？](#1-课文中讲了啥)
-		- [2. 作者想通过上面的例子表达什么？](#2-作者想通过上面的例子表达什么)
-		- [3. 既然`@property`可以做到在不影响现有代码的情况下，对数据模型进行重构，那是不是只要一致用`@property`就行了？](#3-既然property可以做到在不影响现有代码的情况下对数据模型进行重构那是不是只要一致用property就行了)
-	- [Item 46: Use Descriptors for Reusable @property Methods(用描述符来改写需要复用的`@property`方法)](#item-46-use-descriptors-for-reusable-property-methods用描述符来改写需要复用的property方法)
-		- [1. 内置的`@property`有何缺点？](#1-内置的property有何缺点)
-		- [2. 如何解决这个缺点？](#2-如何解决这个缺点)
-			- [2.1 版本一：](#21-版本一)
-			- [2.2 版本二：](#22-版本二)
-			- [2.3 版本三：](#23-版本三)
-	- [Item 47: Use __getattr__, __getattribute__, and __setattr__ for Lazy Attributes(针对懒惰属性使用`__getattr__, __getattribute__, __setattr__`)](#item-47-use-getattr-getattribute-and-setattr-for-lazy-attributes针对懒惰属性使用__getattr__-__getattribute__-__setattr__)
-	- [Item 48 - Item 51](#item-48---item-51)
+  - [Item 44: Use Plain Attributes Instead of Setter and Getter Methods(用纯属性与修饰器取代旧式的`setter`和`getter`方法)](#item-44-use-plain-attributes-instead-of-setter-and-getter-methods用纯属性与修饰器取代旧式的setter和getter方法)
+  - [Item 45: Consider @property Instead of Refactoring Attributes(考虑用`@property`实现新的属性访问逻辑，不要着急重构代码)](#item-45-consider-property-instead-of-refactoring-attributes考虑用property实现新的属性访问逻辑不要着急重构代码)
+    - [1. 课文中讲了啥？](#1-课文中讲了啥)
+    - [2. 作者想通过上面的例子表达什么？](#2-作者想通过上面的例子表达什么)
+    - [3. 既然`@property`可以做到在不影响现有代码的情况下，对数据模型进行重构，那是不是只要一致用`@property`就行了？](#3-既然property可以做到在不影响现有代码的情况下对数据模型进行重构那是不是只要一致用property就行了)
+  - [Item 46: Use Descriptors for Reusable @property Methods(用描述符来改写需要复用的`@property`方法)](#item-46-use-descriptors-for-reusable-property-methods用描述符来改写需要复用的property方法)
+    - [1. 内置的`@property`有何缺点？](#1-内置的property有何缺点)
+    - [2. 如何解决这个缺点？](#2-如何解决这个缺点)
+      - [2.1 版本一：](#21-版本一)
+      - [2.2 版本二：](#22-版本二)
+      - [2.3 版本三：](#23-版本三)
+  - [Item 47: Use __getattr__, __getattribute__, and __setattr__ for Lazy Attributes(针对懒惰属性使用`__getattr__, __getattribute__, __setattr__`)](#item-47-use-getattr-getattribute-and-setattr-for-lazy-attributes针对懒惰属性使用__getattr__-__getattribute__-__setattr__)
+  - [Item 48 - Item 51](#item-48---item-51)
 - [第七章、Concurrency and Parallelism(并发与并行)](#第七章concurrency-and-parallelism并发与并行)
-	- [Item 52: Use subprocess to Manage Child Processes(用`subprocess`管理子进程)](#item-52-use-subprocess-to-manage-child-processes用subprocess管理子进程)
+  - [Item 52: Use subprocess to Manage Child Processes(用`subprocess`管理子进程)](#item-52-use-subprocess-to-manage-child-processes用subprocess管理子进程)
 - [第八章、稳定与性能](#第八章稳定与性能)
-	- [Item 65: Take Advantage of Each Block in `try/except/else/finally`(合理利用`try/except/else/finally`结构中的每个代码块)](#item-65-take-advantage-of-each-block-in-tryexceptelsefinally合理利用tryexceptelsefinally结构中的每个代码块)
-	- [Item 66: Consider contextlib and with Statements for Reusable try/finally Behavior（考虑用`contextlib`和`with`语句来改写可复用的`try/finally`）](#item-66-consider-contextlib-and-with-statements-for-reusable-tryfinally-behavior考虑用contextlib和with语句来改写可复用的tryfinally)
-		- [1. 这一节主要介绍了什么？](#1-这一节主要介绍了什么)
-		- [2. 使用 上下文管理器 来实现可复用的`try/finally`](#2-使用-上下文管理器-来实现可复用的tryfinally)
-	- [Item 67: Use datetime Instead of time for Local Clocks（用`datetime`处理本地时间，而不是`time`）](#item-67-use-datetime-instead-of-time-for-local-clocks用datetime处理本地时间而不是time)
-	- [Item 68: Make pickle Reliable with copyreg （使用`copyreg`实现可靠的`pickle`操作）](#item-68-make-pickle-reliable-with-copyreg-使用copyreg实现可靠的pickle操作)
-		- [1. `pickle`操作存在什么问题？](#1-pickle操作存在什么问题)
-		- [2. 如何解决上面的问题？](#2-如何解决上面的问题-1)
-	- [Item 69: Use decimal When Precision Is Paramount(在需要准确计算的场合，用`decimal`表示相应的数值)](#item-69-use-decimal-when-precision-is-paramount在需要准确计算的场合用decimal表示相应的数值)
-		- [1. python的浮点数存在什么问题？](#1-python的浮点数存在什么问题)
-		- [2. 为什么python的浮点数会有这样的问题？](#2-为什么python的浮点数会有这样的问题)
-		- [3. 如何解决这个问题？](#3-如何解决这个问题)
-		- [4. 使用`Decimal`类时要注意什么？](#4-使用decimal类时要注意什么)
-		- [5. 对小数进行四舍五入](#5-对小数进行四舍五入)
-			- [5.1 `round()`函数](#51-round函数)
-			- [5.2 自定义小数的舍入规则](#52-自定义小数的舍入规则)
-	- [Item 70: Profile Before Optimizing(先分析性能，然后再进行优化)](#item-70-profile-before-optimizing先分析性能然后再进行优化)
-		- [1. 为什么需要分析性能再进行优化？](#1-为什么需要分析性能再进行优化)
-		- [2. 利用工具分析代码性能](#2-利用工具分析代码性能)
-			- [2.1 在Python中，一般用什么工具分析代码性能？更推荐使用哪个？](#21-在python中一般用什么工具分析代码性能更推荐使用哪个)
-			- [2.2 分析程序的性能时，需要注意什么？](#22-分析程序的性能时需要注意什么)
-			- [2.3 如何使用`cProfile`进行性能分析？](#23-如何使用cprofile进行性能分析)
-	- [Item 71: Prefer deque for Producer–Consumer Queues(优先考虑使用`deque`实现 生产者-消费者队列(即`FIFO`))](#item-71-prefer-deque-for-producerconsumer-queues优先考虑使用deque实现-生产者-消费者队列即fifo)
-		- [1. 为什么`deque`比`list`更适合实现`FIFO`？](#1-为什么deque比list更适合实现fifo)
-	- [Item 72: Consider Searching Sorted Sequences with bisect(考虑用`bisect`搜索已排序的序列)](#item-72-consider-searching-sorted-sequences-with-bisect考虑用bisect搜索已排序的序列)
-	- [Item 73: Know How to Use heapq for Priority Queues(使用`heap`制作优先级队列)](#item-73-know-how-to-use-heapq-for-priority-queues使用heap制作优先级队列)
-		- [1. 优先级队列(priority queue)是什么？](#1-优先级队列priority-queue是什么)
-		- [2. 如何使用 优先级队列？](#2-如何使用-优先级队列)
-	- [Item 74: Consider memoryview and bytearray for Zero-Copy Interactions with bytes(考虑使用 `memoryview`和`bytearray` 来实现 零拷贝的`bytes`操作)](#item-74-consider-memoryview-and-bytearray-for-zero-copy-interactions-with-bytes考虑使用-memoryview和bytearray-来实现-零拷贝的bytes操作)
-		- [1. 缓冲协议(buffer protocol)](#1-缓冲协议buffer-protocol)
-			- [.1 缓冲协议 的作用是？](#1-缓冲协议-的作用是)
-			- [2.2 哪些对象支持缓冲协议？](#22-哪些对象支持缓冲协议)
-		- [2. 内存视图`memoryview`](#2-内存视图memoryview)
-			- [2.1 `memoryview`的作用是？](#21-memoryview的作用是)
-			- [2.2 如何使用 `memoryview`？](#22-如何使用-memoryview)
-				- [(1) 构造函数](#1-构造函数)
-				- [(2) 类属性](#2-类属性)
-				- [(3) 类方法](#3-类方法)
-				- [(4) 使用实例](#4-使用实例)
-			- [2.3 `memoryview`一般在什么场景下使用？](#23-memoryview一般在什么场景下使用)
-			- [2.4 `memoryview`构建的内存视图 和 原对象是什么关系？](#24-memoryview构建的内存视图-和-原对象是什么关系)
-			- [2.5 `memoryview`对象能否修改？](#25-memoryview对象能否修改)
-		- [3. `bytearray`](#3-bytearray)
-			- [3.1 `bytearray` 和 `bytes`有何异同？](#31-bytearray-和-bytes有何异同)
-			- [3.2 什么场景需要使用 `bytearray` ？](#32-什么场景需要使用-bytearray-)
-		- [4. 使用`memoryview`和`bytearray`来构建流媒体服务器](#4-使用memoryview和bytearray来构建流媒体服务器)
-			- [4.1 发送数据](#41-发送数据)
-			- [4.2 接收数据](#42-接收数据)
-			- [4.3 实例](#43-实例)
-		- [参考文献](#参考文献)
+  - [Item 65: Take Advantage of Each Block in `try/except/else/finally`(合理利用`try/except/else/finally`结构中的每个代码块)](#item-65-take-advantage-of-each-block-in-tryexceptelsefinally合理利用tryexceptelsefinally结构中的每个代码块)
+  - [Item 66: Consider contextlib and with Statements for Reusable try/finally Behavior（考虑用`contextlib`和`with`语句来改写可复用的`try/finally`）](#item-66-consider-contextlib-and-with-statements-for-reusable-tryfinally-behavior考虑用contextlib和with语句来改写可复用的tryfinally)
+    - [1. 这一节主要介绍了什么？](#1-这一节主要介绍了什么)
+    - [2. 使用 上下文管理器 来实现可复用的`try/finally`](#2-使用-上下文管理器-来实现可复用的tryfinally)
+  - [Item 67: Use datetime Instead of time for Local Clocks（用`datetime`处理本地时间，而不是`time`）](#item-67-use-datetime-instead-of-time-for-local-clocks用datetime处理本地时间而不是time)
+  - [Item 68: Make pickle Reliable with copyreg （使用`copyreg`实现可靠的`pickle`操作）](#item-68-make-pickle-reliable-with-copyreg-使用copyreg实现可靠的pickle操作)
+    - [1. `pickle`操作存在什么问题？](#1-pickle操作存在什么问题)
+    - [2. 如何解决上面的问题？](#2-如何解决上面的问题-1)
+  - [Item 69: Use decimal When Precision Is Paramount(在需要准确计算的场合，用`decimal`表示相应的数值)](#item-69-use-decimal-when-precision-is-paramount在需要准确计算的场合用decimal表示相应的数值)
+    - [1. python的浮点数存在什么问题？](#1-python的浮点数存在什么问题)
+    - [2. 为什么python的浮点数会有这样的问题？](#2-为什么python的浮点数会有这样的问题)
+    - [3. 如何解决这个问题？](#3-如何解决这个问题)
+    - [4. 使用`Decimal`类时要注意什么？](#4-使用decimal类时要注意什么)
+    - [5. 对小数进行四舍五入](#5-对小数进行四舍五入)
+      - [5.1 `round()`函数](#51-round函数)
+      - [5.2 自定义小数的舍入规则](#52-自定义小数的舍入规则)
+  - [Item 70: Profile Before Optimizing(先分析性能，然后再进行优化)](#item-70-profile-before-optimizing先分析性能然后再进行优化)
+    - [1. 为什么需要分析性能再进行优化？](#1-为什么需要分析性能再进行优化)
+    - [2. 利用工具分析代码性能](#2-利用工具分析代码性能)
+      - [2.1 在Python中，一般用什么工具分析代码性能？更推荐使用哪个？](#21-在python中一般用什么工具分析代码性能更推荐使用哪个)
+      - [2.2 分析程序的性能时，需要注意什么？](#22-分析程序的性能时需要注意什么)
+      - [2.3 如何使用`cProfile`进行性能分析？](#23-如何使用cprofile进行性能分析)
+  - [Item 71: Prefer deque for Producer–Consumer Queues(优先考虑使用`deque`实现 生产者-消费者队列(即`FIFO`))](#item-71-prefer-deque-for-producerconsumer-queues优先考虑使用deque实现-生产者-消费者队列即fifo)
+    - [1. 为什么`deque`比`list`更适合实现`FIFO`？](#1-为什么deque比list更适合实现fifo)
+  - [Item 72: Consider Searching Sorted Sequences with bisect(考虑用`bisect`搜索已排序的序列)](#item-72-consider-searching-sorted-sequences-with-bisect考虑用bisect搜索已排序的序列)
+  - [Item 73: Know How to Use heapq for Priority Queues(使用`heap`制作优先级队列)](#item-73-know-how-to-use-heapq-for-priority-queues使用heap制作优先级队列)
+    - [1. 优先级队列(priority queue)是什么？](#1-优先级队列priority-queue是什么)
+    - [2. 如何使用 优先级队列？](#2-如何使用-优先级队列)
+  - [Item 74: Consider memoryview and bytearray for Zero-Copy Interactions with bytes(考虑使用 `memoryview`和`bytearray` 来实现 零拷贝的`bytes`操作)](#item-74-consider-memoryview-and-bytearray-for-zero-copy-interactions-with-bytes考虑使用-memoryview和bytearray-来实现-零拷贝的bytes操作)
+    - [1. 缓冲协议(buffer protocol)](#1-缓冲协议buffer-protocol)
+      - [.1 缓冲协议 的作用是？](#1-缓冲协议-的作用是)
+      - [2.2 哪些对象支持缓冲协议？](#22-哪些对象支持缓冲协议)
+    - [2. 内存视图`memoryview`](#2-内存视图memoryview)
+      - [2.1 `memoryview`的作用是？](#21-memoryview的作用是)
+      - [2.2 如何使用 `memoryview`？](#22-如何使用-memoryview)
+        - [(1) 构造函数](#1-构造函数)
+        - [(2) 类属性](#2-类属性)
+        - [(3) 类方法](#3-类方法)
+        - [(4) 使用实例](#4-使用实例)
+      - [2.3 `memoryview`一般在什么场景下使用？](#23-memoryview一般在什么场景下使用)
+      - [2.4 `memoryview`构建的内存视图 和 原对象是什么关系？](#24-memoryview构建的内存视图-和-原对象是什么关系)
+      - [2.5 `memoryview`对象能否修改？](#25-memoryview对象能否修改)
+    - [3. `bytearray`](#3-bytearray)
+      - [3.1 `bytearray` 和 `bytes`有何异同？](#31-bytearray-和-bytes有何异同)
+      - [3.2 什么场景需要使用 `bytearray` ？](#32-什么场景需要使用-bytearray-)
+    - [4. 使用`memoryview`和`bytearray`来构建流媒体服务器](#4-使用memoryview和bytearray来构建流媒体服务器)
+      - [4.1 发送数据](#41-发送数据)
+      - [4.2 接收数据](#42-接收数据)
+      - [4.3 实例](#43-实例)
+    - [参考文献](#参考文献)
 - [第九章 测试与调试](#第九章-测试与调试)
-	- [tem 75: Use repr Strings for Debugging Output(通过`repr`字符串输出调试信息)](#tem-75-use-repr-strings-for-debugging-output通过repr字符串输出调试信息)
-		- [1. `__str__`和`__repr__`的作用](#1-__str__和__repr__的作用)
-		- [2. 写log的时候用`repr`输出调试信息有什么好处？](#2-写log的时候用repr输出调试信息有什么好处)
+  - [tem 75: Use repr Strings for Debugging Output(通过`repr`字符串输出调试信息)](#tem-75-use-repr-strings-for-debugging-output通过repr字符串输出调试信息)
+    - [1. `__str__`和`__repr__`的作用](#1-__str__和__repr__的作用)
+    - [2. 写log的时候用`repr`输出调试信息有什么好处？](#2-写log的时候用repr输出调试信息有什么好处)
 - [参考文献](#参考文献-1)
 
 
@@ -519,12 +519,12 @@ formatted_str = '%-10s = %.2f' % (value, key)
 **问题2：当要对 准备填进去的值 做处理时，表达式会变得很冗长**
 ```python
 pantry = [
-	('avocados', 1.25),
-	('bananas', 2.5),
-	('cherries', 15),
+    ('avocados', 1.25),
+    ('bananas', 2.5),
+    ('cherries', 15),
 ]
 for i, (item, count) in enumerate(pantry):
-	print('#%d: %-10s = %.2f' % (i, item, count))
+    print('#%d: %-10s = %.2f' % (i, item, count))
 ```
 运行结果为：
 ```
@@ -535,10 +535,10 @@ for i, (item, count) in enumerate(pantry):
 如果想让输出的数据更好理解，就需要做一点小小的改动：
 ```python
 for i, (item, count) in enumerate(pantry):
-	print('#%d: %-10s = %d' % (
-		i + 1,
-		item.title(), 
-		round(count)))
+    print('#%d: %-10s = %d' % (
+        i + 1,
+        item.title(), 
+        round(count)))
 ```
 运行结果为：
 ```
@@ -570,9 +570,9 @@ value = 1.23414
 old_way = '%-10s = %.2f' % (key, value)
 
 new_way = '%(key)-10s = %(value).2f' % {
-	'key': key, 'value': value} # Original
+    'key': key, 'value': value} # Original
 reordered = '%(key)-10s = %(value).2f' % {
-	'value': value, 'key': key} # 调换了位置也不影响
+    'value': value, 'key': key} # 调换了位置也不影响
 assert old_way == new_way == reordered
 ```
 解决问题3：
@@ -592,18 +592,18 @@ assert before == after
 用`dic`来替代元组 让 **问题2** 变得更严重了：
 ```python
 for i, (item, count) in enumerate(pantry):
-	before = '#%d: %-10s = %d' % (
-		i + 1,
-		item.title(),
-		round(count))
+    before = '#%d: %-10s = %d' % (
+        i + 1,
+        item.title(),
+        round(count))
 
-	after = '#%(loop)d: %(item)-10s = %(count)d' % {
-		'loop': i + 1,
-		'item': item.title(),
-		'count': round(count),
-		}
+    after = '#%(loop)d: %(item)-10s = %(count)d' % {
+        'loop': i + 1,
+        'item': item.title(),
+        'count': round(count),
+        }
 
-	assert before == after	
+    assert before == after	
 ```
 我们可以看到的是，用`dic`来替代元组后，代码变得更为冗长了，可读性也随之下降。
 
@@ -641,26 +641,26 @@ pantry = [
 ]
 
 for i, (item, count) in enumerate(pantry):
-	c_style_tuple = '#%d: %-10s = %d' % (
-		i + 1,
-		item.title(),
-		round(count))
-	print(c_style_tuple)
+    c_style_tuple = '#%d: %-10s = %d' % (
+        i + 1,
+        item.title(),
+        round(count))
+    print(c_style_tuple)
 
-	c_style_dic = '#%(loop)d: %(item)-10s = %(count)d' % {
-		'loop': i + 1,
-		'item': item.title(),
-		'count': round(count),
-	}
-	print(c_style_dic)
+    c_style_dic = '#%(loop)d: %(item)-10s = %(count)d' % {
+        'loop': i + 1,
+        'item': item.title(),
+        'count': round(count),
+    }
+    print(c_style_dic)
 
-	str_format = '#{}: {:<10s} = {}'.format(
-		i + 1,
-		item.title(),
-		round(count))
-	print(str_format)
+    str_format = '#{}: {:<10s} = {}'.format(
+        i + 1,
+        item.title(),
+        round(count))
+    print(str_format)
 
-	# f-string 一行代码搞定
+    # f-string 一行代码搞定
     print(f"#{i+1}: {item.title():^20s} = {round(count)}") 
 ```
 
@@ -733,12 +733,12 @@ for rank, (name, calories) in enumerate(snacks, 1):
 flavor_list = ['vanilla', 'chocolate', 'pecan', 'strawberry']
 
 for i in range(len(flavor_list)):
-	flavor = flavor_list[i]
-	print(f'{i + 1}: {flavor}')
+    flavor = flavor_list[i]
+    print(f'{i + 1}: {flavor}')
 
 # 使用 enumerate()
 for i, flavor in enumerate(flavor_list, 1):
-	print(f'{i}: {flavor}')
+    print(f'{i}: {flavor}')
 ```
 这又回到了`item 6`，避免使用下标访问容器。
 
@@ -761,24 +761,24 @@ max_count = 0
 
 # 用range()
 for i in range(len(names)):
-	count = counts[i]
-	if count > max_count:
-		longest_name = names[i]
-		max_count = count
+    count = counts[i]
+    if count > max_count:
+        longest_name = names[i]
+        max_count = count
 
 # 用 enumerate()
 for i, name in enumerate(names):
-	count = counts[i]
-	if count > max_count:
-		longest_name = name
-		max_count = count		
+    count = counts[i]
+    if count > max_count:
+        longest_name = name
+        max_count = count		
 
 # 用 zip() + unpacking机制
 # zip(names, counts)负责将元素封装成元组，然后在用 unpacking机制将元组里的值赋给  name和count
 for name, count in zip(names, counts):
-	if count > max_count:
-		longest_name = name
-		max_count = count		
+    if count > max_count:
+        longest_name = name
+        max_count = count		
 ```
 
 
@@ -930,17 +930,17 @@ print(oldest, second_oldest, others)
 对于一些自定义的类，无法用`sort()`进行排序，此时可通过`key`参数来指定排序规则。
 ```python
 class Tool:
-	def __init__(self, name, weight):
-		self.name = name
-		self.weight = weight
-	def __repr__(self):
-		return f'Tool({self.name!r}, {self.weight})'
+    def __init__(self, name, weight):
+        self.name = name
+        self.weight = weight
+    def __repr__(self):
+        return f'Tool({self.name!r}, {self.weight})'
 
 tools = [
-	Tool('level', 3.5),
-	Tool('hammer', 1.25),
-	Tool('screwdriver', 0.5),
-	Tool('chisel', 0.25),
+    Tool('level', 3.5),
+    Tool('hammer', 1.25),
+    Tool('screwdriver', 0.5),
+    Tool('chisel', 0.25),
 ]
 
 tools.sort()
@@ -1007,9 +1007,9 @@ print(tools)
 ② 在函数的开头先判断传进来的对象是不是 标准的`dict`对象：
 ```python
 def get_winner(ranks):
-	if not isinstance(ranks, dict):
-		raise TypeError('must provide a dict instance')
-	return next(iter(ranks))
+    if not isinstance(ranks, dict):
+        raise TypeError('must provide a dict instance')
+    return next(iter(ranks))
 ```
 
 ③ 通过 注解(type annotation) 来保证传过来的是 标准的`dict`对象
@@ -1038,7 +1038,7 @@ def get_winner(ranks):
 &emsp;&emsp; 如果是那种构造起来开销大，或是容器出错的类型，那么可以把`get`与赋值表达式结合起来用：
 ```python
 if (names := votes.get(key)) is None:
-	votes[key] = names = []
+    votes[key] = names = []
 names.append(who)
 ```
 
@@ -1047,23 +1047,23 @@ names.append(who)
 &emsp;&emsp; 假如我们要给一家三明治设计菜单，想先确定大家喜欢吃哪些类型的面包，于是我们定义了这样的一个字典：`{ 面包类型 : 得票数 }`
 ```python
 counters = {
-	'pumpernickel': 2,
-	'sourdough': 1,
+    'pumpernickel': 2,
+    'sourdough': 1,
 }
 
 # ① 用`if/else`和`in`表达式
 key = 'wheat'
 if key in counters:
-	count = counters[key]
+    count = counters[key]
 else:
-	count = 0
+    count = 0
 counters[key] = count + 1
 
 # ② 利用 `KeyError`异常；
 try:
-	count = counters[key]
+    count = counters[key]
 except KeyError:
-	count = 0
+    count = 0
 counters[key] = count + 1
 
 # ③ 用`dict.get(key, default_value)`来完成
@@ -1086,9 +1086,9 @@ who = 'Elmer'
 **① 用`if/else`和`in`表达式；**
 ```python
 if key in votes:
-	names = votes[key]
+    names = votes[key]
 else:
-	votes[key] = names = []
+    votes[key] = names = []
 names.append(who)
 print(votes)
 ```
@@ -1096,15 +1096,15 @@ print(votes)
 **② 利用 `KeyError`异常；**
 ```python
 try:
-	names = votes[key]
+    names = votes[key]
 except KeyError:
-	votes[key] = names = []
+    votes[key] = names = []
 names.append(who)
 ```
 **③ 用`dict.get(key, default_value)`来完成**
 ```python
 if (names := votes.get(key)) is None:
-	votes[key] = names = []
+    votes[key] = names = []
 names.append(who)
 ```
 **④ `setdefault`方法**
@@ -1248,24 +1248,24 @@ print(image_data)
 &emsp;&emsp; 一般返回`None`来表示异常情况，但是这么做很容易出错，因为在 条件表达式中 无法区分`None`和`0`(或空`str`)，因为这些值都相当于`False`:
 ```python
 def careful_divide(a, b):
-	try:
-		return a / b
-	except ZeroDivisionError:
-		return None
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return None
 
 ret = careful_divide(0, 1)
 
 if ret is None:
-	print("Invalid input")
+    print("Invalid input")
 else:
-	print(ret)
+    print(ret)
 
 print("-"*20)
 
 if not ret:
-	print("Invalid input")
+    print("Invalid input")
 else:
-	print(ret)
+    print(ret)
 ```
 运行结果：
 ```
@@ -1283,23 +1283,23 @@ Invalid input
 &emsp;&emsp; 不采用`None`作为特例，而是向调用方抛出异常，并在docstring中说明会抛什么异常，最后调用方负责捕获异常：
 ```python
 def careful_divide(a: float, b: float) -> float:
-	"""Divides a by b.
-	Raises:
-	ValueError: When the inputs cannot be divided.
-	"""
-	try:
-		return a / b
-	except ZeroDivisionError as e:
-		raise ValueError('Invalid inputs')
+    """Divides a by b.
+    Raises:
+    ValueError: When the inputs cannot be divided.
+    """
+    try:
+        return a / b
+    except ZeroDivisionError as e:
+        raise ValueError('Invalid inputs')
 
 
 def call_careful_divide(x, y):
-	try:
-		result = careful_divide(x, y)
-	except ValueError:
-		print('Invalid inputs')
-	else:
-		print('Result is %.1f' % result)
+    try:
+        result = careful_divide(x, y)
+    except ValueError:
+        print('Invalid inputs')
+    else:
+        print('Result is %.1f' % result)
 
 
 call_careful_divide(2, 5) 
@@ -1387,7 +1387,7 @@ value : (10, 10, 10, 10, 10, 10, 10, 10, 10, 10)
 ### 1. 什么是 按位置传递参数 和 按关键字传递参数 来调用函数？
 ```python
 def remainder(number, divisor):
-	return number % divisor
+    return number % divisor
 
 # 按位置传递参数
 remainder(20, 7) 
@@ -1401,7 +1401,7 @@ remainder(number=20, divisor=7)
 **① 如果混用 按位置传递参数 和 按关键字传递参数，则必须将 位置参数 放在前面**
 ```python
 def remainder(number, divisor):
-	return number % divisor
+    return number % divisor
 
 remainder(number=20, 7)
 ```
@@ -1415,7 +1415,7 @@ SyntaxError: positional argument follows keyword argument
 **② 每个参数只能指定一次，不能既使用位置参数指定，又使用关键字参数指定**
 ```python
 def remainder(number, divisor):
-	return number % divisor
+    return number % divisor
 
 remainder(20, number=7)
 ```
@@ -1431,8 +1431,8 @@ TypeError: remainder() got multiple values for argument 'number'
 把`**`加在字典前面，传给函数：
 ```python
 def remainder(number, divisor):
-	return number % divisor
-	
+    return number % divisor
+    
 my_kwargs = {
     'number': 20,
     'divisor': 7,
@@ -1443,8 +1443,8 @@ print(remainder(**my_kwargs))
 不可以：
 ```python
 def remainder(number, divisor):
-	return number % divisor
-	
+    return number % divisor
+    
 my_kwargs = {
     'number': 20,
     'divisor': 7,
@@ -1466,7 +1466,7 @@ TypeError: remainder() got an unexpected keyword argument 'useless'
 &emsp;&emsp; 例如，我们要计算液体流入容器的速率。如果这个容器带刻度，那么可以取前后两个时间点的刻度差，并把它跟这两个时间点的时间差相除，就可以算出流速了。
 ```python
 def flow_rate(weight_diff, time_diff):
-	return weight_diff / time_diff
+    return weight_diff / time_diff
 
 weight_diff = 0.5
 time_diff = 3
@@ -1477,7 +1477,7 @@ print(f'{flow:.3} kg per second')
 一般来说，我们用每秒的千克数表示流速。但有时，我们还想估算更长的时间段内的流速结果。只需要给同一个函数加一个`period`参数来表示那个时间段相当于多少秒即可:
 ```python
 def flow_rate(weight_diff, time_diff, period):
-	return (weight_diff / time_diff) * period
+    return (weight_diff / time_diff) * period
 ```
 这样写有个问题，就是每次调用函数时，都得明确指定`period`参数，哪怕计算每秒中的流速，也可以指定`period`为1。
 ```python
@@ -1486,7 +1486,7 @@ flow_per_second = flow_rate(weight_diff, time_diff, 1)
 为了简化这种用法，我们可以给`period`参数设定默认值：
 ```python
 def flow_rate(weight_diff, time_diff, period=1):
-	return (weight_diff / time_diff) * period
+    return (weight_diff / time_diff) * period
 ```
 这样`period`就变成可选参数了：
 ```python
@@ -1561,10 +1561,10 @@ log('Hello again!')
 import json
 
 def decode(data, default={}):
-	try:
-		return json.loads(data)
-	except ValueError:
-		return default
+    try:
+        return json.loads(data)
+    except ValueError:
+        return default
 
 foo = decode('bad data')
 foo['stuff'] = 5
@@ -1587,9 +1587,9 @@ Bar: {'stuff': 5, 'meep': 1}
 # 前面如上，略 ...
 
 if foo is bar:
-	print("foo is bar")
+    print("foo is bar")
 else:
-	print("foo is not bar")
+    print("foo is not bar")
 ```
 运行结果：
 ```
@@ -1600,18 +1600,18 @@ foo is bar
 import json
 
 def decode(data, default=None):
-	"""Load JSON data from a string.
-	Args:
-	data: JSON data to decode.
-	default: Value to return if decoding fails.
-	Defaults to an empty dictionary.
-	"""
-	try:
-		return json.loads(data)
-	except ValueError:
-		if default is None:
-			default = {}
-		return default
+    """Load JSON data from a string.
+    Args:
+    data: JSON data to decode.
+    default: Value to return if decoding fails.
+    Defaults to an empty dictionary.
+    """
+    try:
+        return json.loads(data)
+    except ValueError:
+        if default is None:
+            default = {}
+        return default
 
 foo = decode('bad data')
 foo['stuff'] = 5
@@ -1620,9 +1620,9 @@ bar['meep'] = 1
 print('Foo:', foo)
 print('Bar:', bar)
 if foo is  bar:
-	print("foo is bar")
+    print("foo is bar")
 else:
-	print("foo is not bar")
+    print("foo is not bar")
 ```
 运行结果：
 ```
@@ -1650,18 +1650,18 @@ foo is not bar
 &emsp;&emsp; 一般来说，对于那些比较容易混淆的参数，都建议使用，举个例子：
 ```python
 def safe_division(number, divisor, ignore_overflow=False, ignore_zero_division=False):
-	try:
-		return number / divisor
-	except OverflowError:
-		if ignore_overflow:
-			return 0
-		else:
-			raise
-	except ZeroDivisionError:
-		if ignore_zero_division:
-			return float('inf')
-		else:
-			raise
+    try:
+        return number / divisor
+    except OverflowError:
+        if ignore_overflow:
+            return 0
+        else:
+            raise
+    except ZeroDivisionError:
+        if ignore_zero_division:
+            return float('inf')
+        else:
+            raise
 
 
 print(safe_division_b(1.0, 10**500, ignore_overflow=True))
@@ -1682,18 +1682,18 @@ safe_division(1.0, 10**500, True, False)
 &emsp;&emsp; 在参数列表中使用`*`将参数分成两组，左边是位置参数，右边是 只能用关键字指定的参数：
 ```python
 def safe_division(number, divisor, *, ignore_overflow=False, ignore_zero_division=False):
-	try:
-		return number / divisor
-	except OverflowError:
-		if ignore_overflow:
-			return 0
-		else:
-			raise
-	except ZeroDivisionError:
-		if ignore_zero_division:
-			return float('inf')
-		else:
-			raise
+    try:
+        return number / divisor
+    except OverflowError:
+        if ignore_overflow:
+            return 0
+        else:
+            raise
+    except ZeroDivisionError:
+        if ignore_zero_division:
+            return float('inf')
+        else:
+            raise
 
 
 print(safe_division(1.0, 10**500, True))
@@ -1717,7 +1717,7 @@ print(safe_division(1.0, 0, ignore_zero_division=True))
 按关键字传递参数会存在一个问题：如果我们对函数进行了重构，把函数的形参名修改了，如果在代码中有对这些形参名进行按关键字传递，那么代码可能会报错：
 ```python
 def safe_division(a, divisor, *, ignore_overflow=False, ignore_zero_division=False):
-	# 略...
+    # 略...
 
 print(safe_division(number=1.0, 10**500, True))
 ```
@@ -1727,18 +1727,18 @@ print(safe_division(number=1.0, 10**500, True))
 &emsp;&emsp; python3.8 引入了 只能按位置传递的参数(Positional-Only Arguments)：在参数列表中使用`/`符号，表示它左边的那些参数必须按位置指定
 ```python
 def safe_division(number, divisor, /, *, ignore_overflow=False, ignore_zero_division=False):
-	try:
-		return number / divisor
-	except OverflowError:
-		if ignore_overflow:
-			return 0
-		else:
-			raise
-	except ZeroDivisionError:
-		if ignore_zero_division:
-			return float('inf')
-		else:
-			raise
+    try:
+        return number / divisor
+    except OverflowError:
+        if ignore_overflow:
+            return 0
+        else:
+            raise
+    except ZeroDivisionError:
+        if ignore_zero_division:
+            return float('inf')
+        else:
+            raise
 
 
 print(safe_division(number=1.0, 10**500, ignore_overflow=True))
@@ -1799,24 +1799,24 @@ SyntaxError: positional argument follows keyword argument
 ## Item 29: Avoid Repeated Work in Comprehensions by Using Assignment Expressions(用赋值表达式消除推导式中的重复代码)
 ```python
 stock = {
-	'nails': 125,
-	'screws': 35,
-	'wingnuts': 8,
-	'washers': 24,
+    'nails': 125,
+    'screws': 35,
+    'wingnuts': 8,
+    'washers': 24,
 }
 
 order = ['screws', 'wingnuts', 'clips']
 
 def get_batches(count, size):
-	return count // size
+    return count // size
 
 # ① 使用for循环
 result1 = {}
 for name in order:
-	count = stock.get(name, 0)
-	batches = get_batches(count, 8)
-	if batches:
-		result1[name] = batches	
+    count = stock.get(name, 0)
+    batches = get_batches(count, 8)
+    if batches:
+        result1[name] = batches	
 print("result1 : ", result1)
 
 
@@ -1898,7 +1898,7 @@ print(percentages)
 []
 ```
 **结果分析：**
-&emsp;&emsp; 奇怪的是，对`read_visits()`返回的迭代器调用`normalize()`后没有得到预期的结果，出现这个问题的原因是：**假如迭代器(或生成器)已经抛出`StopIteration`，继续用它来构造列表或做`for`循环是不会得到任何结果的。**不信我们来验证一下：
+&emsp;&emsp; 奇怪的是，对`read_visits()`返回的迭代器调用`normalize()`后没有得到预期的结果，出现这个问题的原因是：**假如迭代器(或生成器)已经抛出`StopIteration`，继续用它来构造列表或做`for`循环是不会得到任何结果的。** 不信我们来验证一下：
 ```python
 def read_visits(data_path):
     with open(data_path) as f:
@@ -1925,8 +1925,8 @@ list(it):  []
 **① 我们可以在`normalize()`中将内容拷贝到一个列表中：**
 ```python
 def normalize_copy(numbers):
-	numbers_copy = list(numbers) # Copy the iterator
-	# 后面同上，略...
+    numbers_copy = list(numbers) # Copy the iterator
+    # 后面同上，略...
 ```
 但问题是，我们用生成器的本意就是为了不占用过多内存，这样将内容拷贝到一个列表中，还不如一开始就给`normalize()`传一个列表。
 
