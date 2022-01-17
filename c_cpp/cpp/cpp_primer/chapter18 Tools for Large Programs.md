@@ -78,12 +78,61 @@ namespace cplusplus_primer {
 &emsp;&emsp; 定义在某个命名空间中的名字可以被该命名空间内的其它成员直接访问，也可以被这些成员内嵌的任何单位访问：
 ```cpp
 namespace cplusplus_primer {
-    class Sales_data { / * ... * /};
+    class Query { /* ... */ };
 
-    Sales_data s; // 直接访问同一命名空间内的Sales_data类
+    Query q = Query("hello"); // 直接访问同一命名空间内的Sales_data类
 } 
 ```
-&emsp;&emsp; 
+&emsp;&emsp; 如果需要在该命名空间之外，则需要明确指出所用的名字属于哪个命名空间：
+```cpp
+// 需明确指出命名空间
+cplusplus_primer::Query q =  cplusplus_primer::Query("hello"); 
+
+AddisonWesley::Query q = AddisonWesley::Query("hello");
+```
+
+## 5. 命名空间定义的连续性
+### 5.1 命名空间是否可以不连续？
+&emsp;&emsp; 这其它作用域不太一样的是，命名空间可以是不连续的，它可以定义的在几个不同的部分：
+```cpp
+#include <iostream>
+
+using namespace std;
+
+namespace Discontiguous{
+    void print_hello(){
+        cout << "Hello world!" << endl;
+    }
+}
+
+
+namespace Discontiguous{
+    void print_greeting(){
+        cout << "How are you doing?" << endl;
+    }
+}
+
+
+int main()
+{
+    Discontiguous::print_hello();
+    Discontiguous::print_greeting();
+}
+```
+运行结果：
+```
+Hello world!
+How are you doing?
+```
+### 5.2 这个特性有何作用？
+&emsp;&emsp; 命名空间的定义可以不连续的特性 使得我们可以将几个独立的接口和实现文件组成一个命名空间，此时，命名空间的组织方式类似于我们管理自定义类及函数的方式：
+> ① 命名空间的一部分成员的作用是定义类、**声明**作为类接口函数及对象，这部分成员应该位于头文件中；
+> ② 命名空间成员的**定义部分**则位于其它源文件中。
+> 
+**总结一下就是：** 
+> 类的定义、函数的声明放在头文件中；类成员的定义、函数的定义都放在源文件中；
+> 
+目的和之前一样，都是为了做到 接口和实现分离。
 
 
 
