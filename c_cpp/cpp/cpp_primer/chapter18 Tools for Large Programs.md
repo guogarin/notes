@@ -143,9 +143,9 @@ How are you doing?
 #include <string>
 
 namespace cplusplus_primer {
-class Sales_data { /* ... */};
+    class Sales_data { /* ... */};
     Sales_data operator+(const Sales_data&,
-    const Sales_data&);
+                          const Sales_data&);
     // 其它接口的声明
 }
 ```
@@ -228,8 +228,43 @@ nested::inner_2::num : 100
 ## 8. 内联命名空间(inline namespace)
 &emsp;&emsp; 内联命名空间是C++11引入的一种新的嵌套命名空间，和普通嵌套命名空间不一样的是，内联命名空间中的名字可以被外层命名空间直接使用，也就是说，我们可以无需在内联命名空间的名字前添加表示该命名空间的前缀，通过外层命名空间的名字就可以直接访问它：
 &emsp;&emsp; 定义内联命名空间的方式就是在关键字`namespace`前添加关键字`inline`：
-https://blog.csdn.net/craftsman1970/article/details/82872497
+```cpp
+#include <iostream>
+using namespace std;
 
+namespace A {
+    inline namespace inlineA1 {
+       void funcA1() {
+           cout << "inlineA1()" << endl;
+       }
+    }
+    inline namespace inlineA2 {
+        void funcA2() {
+            cout << "inlineA2()" << endl;
+        }
+    }
+}
+int main() {
+    // A::inlineA1::funcA1();  //不需要指定inlineA1
+    A::funcA2();  //inlineA2()
+    return 0;
+}
+```
+运行结果：
+```
+inlineA2()
+```
+
+&emsp;
+## 9. 未命名的命名空间
+### 9.1 什么是 未命名的命名空间？
+&emsp;&emsp; 未命名的命名空间(unnamed namespace)是指 关键字`namespace`后紧跟花括号括起来的一系列声明语句：
+```cpp
+namespace { // 注意，namespace后面没有名字
+    class Sales_data { /* ... */};
+}
+```
+### 9.2 
 
 &emsp;
 ## 是否可以在命名空间内`include`头文件？
