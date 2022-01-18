@@ -70,10 +70,11 @@ namespace cplusplus_primer {
 ```
 上面的代码定义了一个名为`cplusplus_primer`的命名空间，该命名空间包含四个成员：3个类 和 一个重载的`+`运算符。
 
-
+&emsp;
 ## 3. 为什么命名空间可以解决命名冲突？
 &emsp;&emsp; 因为每个命名空间都是一个单独的作用域，所以在不同的命名空间内可以有相同的名字。
 
+&emsp;
 ## 4. 如何访问一个命名空间内的成员？
 &emsp;&emsp; 定义在某个命名空间中的名字可以被该命名空间内的其它成员直接访问，也可以被这些成员内嵌的任何单位访问：
 ```cpp
@@ -91,6 +92,7 @@ cplusplus_primer::Query q =  cplusplus_primer::Query("hello");
 AddisonWesley::Query q = AddisonWesley::Query("hello");
 ```
 
+&emsp;
 ## 5. 命名空间定义的连续性
 ### 5.1 命名空间是否可以不连续？
 &emsp;&emsp; 这其它作用域不太一样的是，命名空间可以是不连续的，它可以定义的在几个不同的部分：
@@ -132,8 +134,106 @@ How are you doing?
 **总结一下就是：** 
 > 类的定义、函数的声明放在头文件中；类成员的定义、函数的定义都放在源文件中；
 > 
-目的和之前一样，都是为了做到 接口和实现分离。
+这么做的目的和之前一样，都是为了做到 接口和实现分离。
+&emsp;&emsp; 通过这个特性，我们可以将`cplusplus_primer`库定义在几个不同的文件中。
+`Sales_data`的类声明及其函数放在`Sales_data.h`中：
+```cpp
+// ---- Sales_data.h----
+// #includes should appear before opening the namespace
+#include <string>
+
+namespace cplusplus_primer {
+class Sales_data { /* ... */};
+    Sales_data operator+(const Sales_data&,
+    const Sales_data&);
+    // 其它接口的声明
+}
+```
+实现文件放在`Sales_data.cc`文件中：
+```cpp
+// ---- Sales_data.cc----
+// be sure any #includes appear before opening the namespace
+#include "Sales_data.h"
+
+namespace cplusplus_primer {
+    // Sales_data成员及重载运算符的定义
+}
+```
+如果程序想使用`cplusplus_primer`库，则需要包含这些该文件：
+```cpp
+// ---- user.cc----
+// names in the Sales_data.h header are in the cplusplus_primer namespace
+#include "Sales_data.h"
+
+int main()
+{
+    using cplusplus_primer::Sales_data;
+    Sales_data trans1, trans2;
+    // ...
+    return 0;
+}
+```
+
+&emsp;
+## 6. 全局命名空间(global namespace)
+### 6.1 什么是 全局命名空间？
+&emsp;&emsp; 在全局作用域中定义的名字 也就是定义在了全局命名空间中：
+```cpp
+#include<iostream>
+
+using namespace std;
+
+int num = 100; // num变量 是一个定义在全局作用域的名字，换句话说，它被定义在了全局命名空间中。
+```
+### 6.2 如何访问全局命名空间中的成员？
+&emsp;&emsp; 作用域运算符同样可以用于全局作用域的成员，因为全局作用域是隐式的，所以它没有名字，下面是它的访问形式：
+```cpp
+::member_name
+```
+
+&emsp;
+## 7. 嵌套的命名空间(Nested Namespaces)
+&emsp;&emsp; 嵌套的命名空间是指 定义在其它命名空间中的命名空间，和过往的规则一样，内层命名空间的声明将隐藏外层命名空间声明的同名成员：
+```cpp
+#include <iostream>
+
+using namespace std;
+
+namespace nested{
+    int num = 0;
+    namespace inner_1{
+        int num = 50;
+    }
+
+    namespace inner_2{
+        int num = 100;
+    }
+}
+
+int main()
+{
+    cout << "nested::num          : " << nested::num << endl;
+    cout << "nested::inner_1::num : " << nested::inner_1::num << endl;
+    cout << "nested::inner_2::num : " << nested::inner_2::num << endl;
+}
+```
+运行结果：
+```
+nested::num          : 0
+nested::inner_1::num : 50
+nested::inner_2::num : 100
+```
+
+&emsp;
+## 8. 内联命名空间(inline namespace)
+&emsp;&emsp; 内联命名空间是C++11引入的一种新的嵌套命名空间，和普通嵌套命名空间不一样的是，内联命名空间中的名字可以被外层命名空间直接使用，也就是说，我们可以无需在内联命名空间的名字前添加表示该命名空间的前缀，通过外层命名空间的名字就可以直接访问它：
+&emsp;&emsp; 定义内联命名空间的方式就是在关键字`namespace`前添加关键字`inline`：
+https://blog.csdn.net/craftsman1970/article/details/82872497
 
 
+&emsp;
+## 是否可以在命名空间内`include`头文件？
 
-### 可以在`miain`函数内定义命名空间吗？
+
+&emsp;
+## 可以在`miain`函数内定义命名空间吗？
