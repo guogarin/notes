@@ -345,8 +345,8 @@ static int num;
 namespace {
     int num;
 }
-
 ```
+
 &emsp;
 ## 10. 使用命名空间成员
 ### 10.1 有哪些方法使用命名空间成员？
@@ -372,16 +372,88 @@ using namespace std;
 ```
 但是，在实际编程中禁止使用`using`指示，因为它会引入整个命名空间的标识符号从而污染命名空间。
 
-### 10.2 在实际应用中，为什么不建议使用`using`指示？
+### 10.2 using指示
+#### 10.2.1 在实际应用中，为什么不建议使用`using`指示？
 &emsp; 除了`using`指示都可以，因为`using`指示会一次性注入某个命名空间中的所有名字，这种用法充满风险：
 > 命名空间中所有的成员变得可见了。
 > 
-相比于使用`using`指示，在程序中对命名空间的每个成员分别使用`using`声明效果更好，这样可以减少注入到命名空间中的名字数量。
+因此，相比于使用`using`指示，在程序中对命名空间的每个成员分别使用`using`声明效果更好，这样可以减少注入到命名空间中的名字数量。
+#### 10.2.2 using指示有什么正面作用吗？
 &emsp; 当然，`using`指示也并非一无是处，例如在命名空间本身的实现文件中就可以使用。
+
+&emsp; 
+## 11. 实参相关的查找与类类型形参
+<div align="center"> <img src="./pic/chapter18/实参相关的朝招与类类型形参.png"> </div>
+
+
+&emsp; 
+## 12. 查找`std::move`和`std::forward`
+<div align="center"> <img src="./pic/chapter18/move和forward.png"> </div>
+
+&emsp; 
+## 13. 友元声明和实参相关的查找
+<div align="center"> <img src="./pic/chapter18/友元声明和实参相关的查找.png"> </div>
+
+&emsp; 
+## 14. 重载与using声明
+### 14.1 `using`声明引入的是什么？
+using声明语句声明的是一个名字，而非一个特定的函数：
+```cpp
+using NS::print(int);   // 错误: 不能指定形参列表
+using NS::print;        // 正确: using声明只声明一个名字
+```
+我们为函数书写`using`声明时，该函数的所有版本都被引入到当前作用域中。
+
+&emsp; 
+## 15.1 重载与using指示
+&emsp;&emsp; `using`指示将命名空间的成员 提升到 外层作用中，如果命名空间中的某个函数 和 该命名空间所属作用域的函数同名，则命名空间的函数将被添加到重载集合中：
+```cpp
+namespace libs_R_us {
+    extern void print(int);
+    extern void print(double);
+}
+// ordinary declaration
+void print(const std::string &);
+// this using directive adds names to the candidate set for calls to print:、
+
+using namespace libs_R_us;
+// the candidates for calls to print at this point in the program are:
+//    ① print(int) from libs_R_us
+//    ② print(double) from libs_R_us
+//    ③ print(const std::string &) declared explicitly
+
+void fooBar(int ival)
+{
+    print("Value: "); // calls global print(const string &)
+    print(ival); // calls libs_R_us::print(int)
+}
+```
+如果存在多个`using`指示，则来自每个命名空间的名字都会成为候选函数的一部分：
+```cpp
+namespace AW {
+    int print(int);
+}
+
+namespace Primer {
+    double print(double);
+}
+​
+// using指示从不同的命名空间中创建了一个重载函数集合
+using namespace AW;
+using namespace Primer;
+
+long double print(long double);
+int main() {
+    print(1);   // 调用AW::print(int)
+    print(3.1); // 调用Primer::print(double)
+    return 0;
+}
+```
+在全局作用域中，函数`print`的重载集合包括`print(int)`, `print(double)`, 以及 `print(long double)`，尽管它们来自不同的作用域，但是它们都属于`main`函数中`print`调用的候选函数集。
 
 &emsp;
 ## 是否可以在命名空间内`include`头文件？
-
+TODO:
 
 &emsp;
 ## 命名空间和类有什么区别？
@@ -410,6 +482,34 @@ class A {
 };
 ```
 
-
 &emsp;
 ## 可以在`miain`函数内定义命名空间吗？
+不可以，如果在`miain`函数内定义命名空间，编译时就会报错：
+```cpp
+#include <iostream>
+
+int main()
+{
+    namespace test{
+        int num = 100;
+    }
+}
+```
+运行结果：
+```
+test.cpp: 在函数‘int main()’中:
+test.cpp:5:5: 错误：在这里不允许使用‘namespace’定义
+     namespace test{
+     ^
+```
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp; 
+# 三、多重继承和虚继承
+## 1. 
