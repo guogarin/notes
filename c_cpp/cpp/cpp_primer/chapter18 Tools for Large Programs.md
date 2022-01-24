@@ -42,14 +42,170 @@
 
 &emsp;
 ## 4. 异常对象(Exception Object)
-### 4.1 
-&emsp;&emsp; 异常对象是一种特殊的对象，编译器使用异常抛出表达式来对异常对象进行拷贝初始化。因此，throw语句中的表达式必须拥有完全类型(参见7.3.3节，第250页)。而且如果该表达式是类类型的话，则相应的类必须含有一个可访问的析构函数和一个可访问的拷贝或移动构造函数。如果该表达式是数组类型或函数类型，则表达式将被转换成与之对应的指针类型。
-&emsp;&emsp; 异常对象位于由编译器管理的空间中，编译器确保无论最终调用的是哪个catch子句都能访问该空间。当异常处理完毕后，异常对象被销毁。
+&emsp;&emsp; 异常对象是一种特殊的对象，编译器使用异常抛出表达式来对异常对象进行拷贝初始化。因此，`throw`语句中的表达式必须拥有完全类型(参见7.3.3节，第250页)。而且如果该表达式是类类型的话，则相应的类必须含有一个可访问的析构函数和一个可访问的拷贝或移动构造函数。如果该表达式是数组类型或函数类型，则表达式将被转换成与之对应的指针类型。
+&emsp;&emsp; 异常对象位于由编译器管理的空间中，编译器确保无论最终调用的是哪个`catch`子句都能访问该空间。当异常处理完毕后，异常对象被销毁。
 &emsp;&emsp; 
-&emsp;&emsp; 当我们抛出一个表达式时，该表达式的静态编译时类型决定了异常对象的类型。比如，如果一个throw表达式解引用一个基类指针，而该指针实际指向的是派生类对象，则抛出的对象将被切掉一部分，只有基类的部分被成功抛出。
-## catch 在匹配过程中的类型转换
-http://c.biancheng.net/cpp/biancheng/view/3283.html
+&emsp;&emsp; 当我们抛出一个表达式时，该表达式的静态编译时类型决定了异常对象的类型。比如，如果一个`throw`表达式解引用一个基类指针，而该指针实际指向的是派生类对象，则抛出的对象将被切掉一部分，只有基类的部分被成功抛出。
+
+&emsp;
+## 5. 捕获异常
+### 5.1 多级catch
+一个`try` 后面可以跟多个 `catch`：
+```cpp
+try{
+    //可能抛出异常的语句
+}catch (exception_type_1 e){
+    //处理异常的语句
+}catch (exception_type_2 e){
+    //处理异常的语句
+}
+//其他的catch
+catch (exception_type_n e){
+    //处理异常的语句
+}
+```
+当异常发生时，程序会按照从上到下的顺序，将异常类型和 `catch` 所能接收的类型逐个匹配。一旦找到类型匹配的 `catch` 就停止检索，并将异常交给当前的 `catch` 处理（其他的 `catch` 不会被执行）。如果最终也没有找到匹配的 `catch`，就只能交给系统处理，终止程序的运行。
+
+### 5.2 在搜寻`catch`语句的过程中，匹配规则是怎样的？
+&emsp;&emsp; 在搜寻`catch`语句的过程中，我们并不能总是能找到异常的最佳匹配，相反的是，挑选出来的应该是第一个和异常匹配的语句，例如下面的代码：
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class Base{ };
+class Derived: public Base{ };
+
+int main()
+{
+    try{
+        throw Derived();  //抛出自己的异常类型，实际上是创建一个Derived类型的匿名对象
+        cout<<"This statement will not be executed."<<endl;
+    }catch(int){
+        cout<<"Exception type: int"<<endl;
+    }catch(Base){  //匹配成功（向上转型）
+        cout<<"Exception type: Base"<<endl;
+    }catch(Derived){
+        cout<<"Exception type: Derived"<<endl;
+    }
+    return 0;
+}
+```
+运行结果：
+```
+Exception type: Base
+```
+**结果分析：**
+&emsp;&emsp; 在上面的代码中，最佳匹配应该是`catch(Derived)`，但是却被`catch(Base)`截胡了，因为在匹配过程中是允许子类到父类的类型转换的，因此`catch(Base)`是第一个和异常匹配的`catch`字句。
+
+### 5.3 `catch`语句中的 类型转换
+和函数的形参和实参匹配规则相比，异常和`catch`异常声明的匹配规则受到了更多的限制，
+> ① 允许从非常量向常量的类型转换，也就是说，一条非常量对象的 `throw` 语句可以匹配一个接受常量引用的 `catch` 语句。
+> ② 允许从派生类向基类的类型转换。
+> ③ 数组被转换成指向数组（元素）类型的指针，函数被转换成指向该函数类型的指针。
+> 
+除此之外，包括标准算术类型转换和类类型转换在内，其它规则都不能在匹配`catch`的过程中使用。
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    try{
+        throw 100;  //抛出自己的异常类型，实际上是创建一个Derived类型的匿名对象
+        cout<<"This statement will not be executed."<<endl;
+    }catch(float){
+        cout<<"Exception type: float"<<endl;
+    }catch(int){
+        cout<<"Exception type: int"<<endl;
+    }
+        return 0;
+}
+```
+运行结果：
+```
+Exception type: int
+```
+**结果分析：**
+&emsp;&emsp; 结果也证明了，不会发生`int`到`float`的转换。
+
+### 5.4 在编写`try-catch`时，应该注意什么？
+&emsp;&emsp; 前面已经提到，在某些情况下`catch`语句会发生类型转换，因此越是专门的`catch`越是应该放在整个`catch`列表的前端：
+① 非常量类型 应该 写在 常量前面，如：
+```cpp
+try{
+    // 略... 
+}catch(string){
+    // 略...
+}catch(const string){
+    // 略...
+}
+```
+② 如果多个`catch`语句的类型存在着继承关系，则应该吧继承链最底端的类放在前面，而将继承链最顶端的类放在后面，举个例子，假设有爷爷类`Grandfather`、父类`Father`、子类`Son`类，则应该这么写：
+```cpp
+try{
+    // 略... 
+}catch(Son){
+    // 略...
+}catch(Father){
+    // 略...
+}catch(Grandfather){
+    // 略...
+}
+```
+
+### 5.5 重新抛出(rethrowing)
+#### 5.5.1 为什么会需要重新抛出？
+&emsp;&emsp; 有时，一个单独的`catch`语句不能完整的处理某个异常，因此在执行了某些矫正操作之后，当前的`catch`可能会决定由调用链更上一层的函数接着处理。
+#### 5.5. 如何重新抛出？
+&emsp;&emsp; 一条 catch 语句通过重新抛出的操作将异常传递给另外一个catch语句。这里的重新抛出仍然是一条throw语句，只不过不包含任何表达式:
+```cpp
+throw;
+```
+&emsp;&emsp;空的`throw`语句只能出现在`catch` 语句或`catch`语句直接或间接调用的函数之内。如果在处理代码之外的区域遇到了空`throw`语句，编译器将调用 `terminate`。
+&emsp;&emsp;一个重新抛出语句并不指定新的表达式，而是将当前的异常对象沿着调用链向上传递。很多时候，`catch` 语句会改变其参数的内容。如果在改变了参数的内容后`catch`语句重新抛出异常，则只有当`catch` 异常声明是引用类型时我们对参数所做的改变才会被保留并继续传播：
+```cpp
+catch (my_error &eObj) { // specifier is a reference type
+    eObj.status = errCodes::severeErr; // modifies the exception object
+    throw; // the status member of the exception object is severeErr
+} catch (other_error eObj) { // specifier is a nonreference type
+    eObj.status = errCodes::badErr; // modifies the local copy only
+    throw; // the status member of the exception object is unchanged
+}
+```
+
+### 5.6 在一个`catch`语句中捕获所有异常
+#### 5.6.1 如何捕获所有异常的处理代码？
+&emsp;&emsp; 我们可以使用省略号作为异常声明，这样的处理代码被称为捕获所有异常(catch-all)的处理代码，形如：`catch(...)`，它可以和任何类型的异常匹配：
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    try{
+        throw 100;  
+        cout<<"This statement will not be executed."<<endl;
+    }catch(const char *){
+        cout<<"Exception type: const char *"<<endl;
+    }catch(...){
+        cout<<"Exception type: ..."<<endl;
+    }
+        return 0;
+}
+```
+运行结果：
+```
+Exception type: ...
+```
+
+#### 5.6.2 使用捕获所有异常(catch-all)的处理代码时要注意什么？
+&emsp;&emsp; 如果`catch(...)`和其它的`catch`语句一起出现，则`catch(...)`应该出现在最后，因为出现`catch(...)`后面的`catch`永远不会被捕获。
+
 https://codeleading.com/article/15605892710/
+
 ## 参考文献
 1. [C++异常类型以及多级catch](http://c.biancheng.net/cpp/biancheng/view/3283.html)
 
