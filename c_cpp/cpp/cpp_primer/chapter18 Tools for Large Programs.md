@@ -26,6 +26,7 @@
 > ② 一旦程序开始执行异常处理代码，则沿着调用链创建的对象将被销毁。
 > 
 
+
 &emsp;
 ## 2. 异常的匹配过程是怎样的？如果没有匹配上会发生什么？
 ### 2.1 匹配过程
@@ -35,10 +36,12 @@
 ### 2.2 如果没匹配上，将发生什么？
 &emsp;&emsp; 如果一个异常没有被捕获，则它将终止当前程序。
 
+
 &emsp;
 ## 3. 析构函数 和 异常
 ### 3.1 析构函数可以抛异常吗？
 &emsp;&emsp; C++并不阻止在类的析构函数中抛出异常，但它不鼓励这么做。
+
 
 &emsp;
 ## 4. 异常对象(Exception Object)
@@ -46,6 +49,23 @@
 &emsp;&emsp; 异常对象位于由编译器管理的空间中，编译器确保无论最终调用的是哪个`catch`子句都能访问该空间。当异常处理完毕后，异常对象被销毁。
 &emsp;&emsp; 
 &emsp;&emsp; 当我们抛出一个表达式时，该表达式的静态编译时类型决定了异常对象的类型。比如，如果一个`throw`表达式解引用一个基类指针，而该指针实际指向的是派生类对象，则抛出的对象将被切掉一部分，只有基类的部分被成功抛出。
+在在 C++ 中，我们使用 throw 关键字来显式地抛出异常，它的用法为：
+```cpp
+throw exceptionData;
+```
+exceptionData 是“异常数据”的意思，它可以包含任意的信息，完全有程序员决定。exceptionData 可以是 int、float、bool 等基本类型，也可以是指针、数组、字符串、结构体、类等聚合类型，请看下面的例子：
+```cpp
+char str[] = "http://c.biancheng.net";
+char *pstr = str;
+class Base{};
+Base obj;
+
+throw 100;   // int 类型
+throw str;   // 数组类型
+throw pstr;  // 指针类型
+throw obj;   // 对象类型
+```
+
 
 &emsp;
 ## 5. 捕获异常
@@ -158,12 +178,12 @@ try{
 ### 5.5 重新抛出(rethrowing)
 #### 5.5.1 为什么会需要重新抛出？
 &emsp;&emsp; 有时，一个单独的`catch`语句不能完整的处理某个异常，因此在执行了某些矫正操作之后，当前的`catch`可能会决定由调用链更上一层的函数接着处理。
-#### 5.5. 如何重新抛出？
+#### 5.5.2 如何重新抛出？
 &emsp;&emsp; 一条 catch 语句通过重新抛出的操作将异常传递给另外一个catch语句。这里的重新抛出仍然是一条throw语句，只不过不包含任何表达式:
 ```cpp
 throw;
 ```
-&emsp;&emsp;空的`throw`语句只能出现在`catch` 语句或`catch`语句直接或间接调用的函数之内。如果在处理代码之外的区域遇到了空`throw`语句，编译器将调用 `terminate`。
+&emsp;&emsp;空的`throw`语句**只能出现在**`catch` 语句或`catch`语句直接或间接调用的函数之内。如果在处理代码之外的区域遇到了空`throw`语句，编译器将调用 `terminate`。
 &emsp;&emsp;一个重新抛出语句并不指定新的表达式，而是将当前的异常对象沿着调用链向上传递。很多时候，`catch` 语句会改变其参数的内容。如果在改变了参数的内容后`catch`语句重新抛出异常，则只有当`catch` 异常声明是引用类型时我们对参数所做的改变才会被保留并继续传播：
 ```cpp
 catch (my_error &eObj) { // specifier is a reference type
@@ -204,10 +224,184 @@ Exception type: ...
 #### 5.6.2 使用捕获所有异常(catch-all)的处理代码时要注意什么？
 &emsp;&emsp; 如果`catch(...)`和其它的`catch`语句一起出现，则`catch(...)`应该出现在最后，因为出现`catch(...)`后面的`catch`永远不会被捕获。
 
-https://codeleading.com/article/15605892710/
+### 5.7 函数 try 语句块与构造函数
+#### 5.7.1 为什么在构造函数体内`try-catch`不能完全解决构造函数可能发生的异常？
+&emsp;&emsp; 通常情况下，程序执行的任何时刻都可能发生异常，特别是异常可能发生在处理构造函数初始值的过程中。构造函数在进入其函数体之前先执行初始值列表，若在执行初始值列表时抛出异常，但此时函数体内的`try`语句块还未生效，所以构造函数体内的`catch`语句无法处理构造函数初始值列表抛出的异常。
+#### 5.7.2 如何处理构造函数初始值抛出的异常？
+&emsp;&emsp; 需要将构造函数写成 函数`try`语句块(函数测试块，function block)的形式。
+&emsp;&emsp; 函数`try`语句块使得一组`catch`语句既可以处理构造函数体(或析构函数体)，也能处理构造函数的初始化过程(或析构函数的析构过程)。
+&emsp;&emsp; 举个例子来说明函数`try`语句块怎么用：
+```cpp
+template <typename T>
+Blob<T>::Blob(std::initializer_list<T> il) try :
+                data(std::make_shared<std::vector<T>>(il)) 
+{
+    /* empty body */
+} catch(const std::bad_alloc &e) { handle_out_of_memory(e); }
+```
+注意，关键字`try`出现在表示构造函数初始值列表的冒号前面。
+
+
+&emsp; 
+## 6. noexcept 异常说明
+### 6.1 `noexcept`的作用是？ 
+&emsp;&emsp; 在C++11标准中，可以通过提供`noexcept`说明来指定某个函数不会抛出异常。
+
+### 6.2 如何使用`noexcept`？
+其形式是关键字`noexcept`紧跟在函数的参数列表后面，用以标识该函数不会抛出异常：
+```cpp
+void recoup(int) noexcept;  // won't throw
+void alloc(int);            // might throw
+```
+对于一个函数来说，`noexcept` 说明要么出现在该函数的所有声明语句和定义语句中，要么一次也不出现。该说明应该在函数的尾置返回类型（参见6.3.3节，第206页) 之前。我们也可以在函数指针的声明和定义中指定 `noexcept`。在 `typedef` 或类型别名中则不能出现 `noexcept`。在成员函数中，`noexcept`说明符需要跟在`const` 及引用限定符之后，而在`final`、`override`或虚函数的 `= 0`之前。
+
+### 6.3 函数声明为`noexcept`有何优点？
+&emsp; 对于用户及编译器来说，预先知道某个函数不会抛出异常显然大有裨益：
+> &emsp;&emsp; 首先，知道函数不会抛出异常有助于简化调用该函数的代码；
+> &emsp;&emsp; 其次，如果编译器确认函数不会抛出异常，它就能执行某些特殊的优化操作，而这些优化操作并不适用于可能出错的代码。
+> 
+
+### 6.4 若在一个声明为`noexcept`的函数内部`throw`了一个异常，能通过编译吗？
+&emsp;&emsp; 可以，因为编译器不会在编译的时候检查`noexcept`说明，实际上，如果一个函数在说明了`noexcept`的同时又包含了`throw`语句或调用给你了其它可能抛出异常的函数，编译器将顺利编译通过，并不会因为这种违反异常说明的情况而报错(当然不排除个别编译器会对这种用法提出警告)：
+
+### 6.5 异常说明的实参
+&emsp;&emsp; `noexcept` 说明符接受一个可选的实参，该实参必须能转换为`bool`类型: 如果实参是`true`，则函数不会抛出异常；如果实参是`false`，则函数可能抛出异常:
+```cpp
+void recoup(int) noexcept (true);	//recoup不会抛出异常
+void alloc(int) noexcept (false);	//alloc可能抛出异常
+```
+
+### 6.6 `noexcept` 运算符
+&emsp;&emsp; `noexcept` 说明符的实参常常与 `noexcept` 运算符（noexcept operator）混合使用。`noexcept`运算符是一个一元运算符，它的返回值是一个 `bool` 类型的右值常量表达式，用于表示给定的表达式是否会抛出异常。和 `sizeof`类似，`noexcept`也不会求其运算对象的值：
+```cpp
+noexcept(recoup(i)) // 如果recoup不抛出异常则结果为true，否则为false
+```
+更普通的形式是：
+```cpp
+noexcept(e);
+```
+当 `e` 调用的所有函数都做了不抛出说明且`e`本身不含有`throw`语句时，上述表达式为`true`；否则`noexcept(e)` 返回`false`。
+我们可以使用`noexcept`运算符得到如下的异常说明：
+```cpp
+void f() noexcept(noexcept(g())); // f 和 g 的异常说明一致
+```
+如果函数`g`承诺了不抛异常，则`f`也不会抛异常。
+
+### 6.7 异常说明与指针、虚函数和拷贝控制
+尽管
+#### 6.7.1 指针
+&emsp;&emsp; 函数指针和该指针所指的函数 必须具有一致的异常说明。也就是说，如果我们为某个指针做了不抛出异常的声明，则该指针将只能指向不抛出异常的函数。相反，如果我们显式或隐式地说明了指针可能抛出异常，则该指针可以指向任何函数，即使是承诺了不抛出异常的函数也可以。
+```cpp
+//  recoup 和 pf1 都承诺不会抛出异常
+void recoup(int) noexcept (true);
+void (*pf1)(int) noexcept = recoup;
+
+// 错误: alloc 可能抛异常，但是pf1已经说明了自己不抛异常
+pf1 = alloc; 
+
+// 正确: recoup 不会抛出异常，pf2可能抛异常，二者之间互不干扰
+void (*pf2)(int) = recoup;
+```
+#### 6.7.2 虚函数
+&emsp;&emsp; 若基类的虚函数承诺了它不会抛出异常，则后续派生出来的虚函数也必须做出同样的承诺；
+&emsp;&emsp; 相反，如果基类的虚函数允许抛出异常，则派生类的对应函数既可以允许抛出异常，也可以不允许抛出异常。
+```cpp
+class Base {
+public:
+    virtual double f1(double) noexcept; // 不抛异常
+    virtual int f2() noexcept(false);   // 可能抛异常
+    virtual void f3();                  // 可能抛异常
+};
+
+class Derived : public Base {
+public:
+    double f1(double);          // 错误: Base::f1 承诺不抛异常
+    int f2() noexcept(false);   // 正确: 和 Base::f2 一致
+    void f3() noexcept;         // 正确: Derived::f3做了更严格的限定，这是允许的
+};
+```
+
+### 6.8 `noexcept`总结
+`noexcept`有两层含义：
+> ① 当跟在函数参数列表后面时它是异常说明符；
+> ② 而当做为`noexcept`异常说明的`bool`实参出现时，它是一个运算符
+> 
+
+
+&emsp; 
+## 7. 如何限定函数可以`throw`的异常类型？
+&emsp;&emsp; 在早期的C++版本中，有更为详细的异常说明方案，该方案可以指定某个函数可能抛出的异常类型：
+```cpp
+double func (char param) throw (int);
+```
+上面的语句声明了一个名为 `func` 的函数，此函数只能抛出 `int` 类型的异常。如果抛出其他类型的异常，try 将无法捕获，只能终止程序。
+**需要注意的是，这个特性已经在C++11标准中取消了。**但这并不意味着这个特性就没用了，它可以提供和 `noexcept`一样的功能：
+```cpp
+void recoup(int) noexcept; // recoup doesn't throw
+void recoup(int) throw(); // equivalent declaration
+```
+上面两条声明语句时等价的，它们都承诺`recoup`函数不会抛异常。
+
+
+&emsp; 
+## 8. 异常类层次
+### 8.1 标准库异常类
+#### 8.1.1 标准异常及其层次关系
+&emsp;&emsp; C++语言本身或者标准库抛出的异常都是 `exception` 的子类，称为标准异常（Standard Exception）定义在 `<exception>` 中。下图展示了 exception 类的继承层次：
+<div align="center"> <img src="./pic/chapter18/标准异常.jpg"> </div>
+
+先来看一下 `exception` 类的直接派生类：
+| 异常名称            | 说  明                                                                                                                                                                                                    |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `logic_error`       | 逻辑错误。                                                                                                                                                                                                |
+| `runtime_error`     | 运行时错误。                                                                                                                                                                                              |
+| `bad_alloc`         | 使用 new 或 new[ ] 分配内存失败时抛出的异常。                                                                                                                                                             |
+| `bad_typeid`        | 使用 typeid 操作一个 NULL 指针，而且该指针是带有虚函数的类，这时抛出 bad_typeid 异常。                                                                                                                    |
+| `bad_cast`          | 使用 dynamic_cast 转换失败时抛出的异常。                                                                                                                                                                  |
+| `ios_base::failure` | io 过程中出现的异常。                                                                                                                                                                                     |
+| `bad_exception`     | 这是个特殊的异常，如果函数的异常列表里声明了 `bad_exception` 异常，当函数内部抛出了异常列表中没有的异常时，如果调用的 `unexpected()` 函数中抛出了异常，不论什么类型，都会被替换为  `bad_exception` 类型。 |
+
+`logic_error` 的派生类：
+| 异常名称           | 说  明                                                                                                    |
+| ------------------ | --------------------------------------------------------------------------------------------------------- |
+| `length_error`     | 试图生成一个超出该类型最大长度的对象时抛出该异常，例如 vector 的 resize 操作。                            |
+| `domain_error`     | 参数的值域错误，主要用在数学函数中，例如使用一个负值调用只能操作非负数的函数。                            |
+| `out_of_range`     | 超出有效范围。                                                                                            |
+| `invalid_argument` | 参数不合适。在标准库中，当利用string对象构造 bitset 时，而 string 中的字符不是 0 或1 的时候，抛出该异常。 |
+
+`runtime_error` 的派生类：
+ | 异常名称          | 说  明                           |
+ | ----------------- | -------------------------------- |
+ | `range_error`     | 计算结果超出了有意义的值域范围。 |
+ | `overflow_error`  | 算术计算上溢。                   |
+ | `underflow_error` | 算术计算下溢。                   |
+
+#### 8.1.2 标准异常的基类`exception`
+&emsp;&emsp; `exception`仅仅定义了拷贝构造函数、拷贝赋值运算符、虚析构函数以及一个名为`what`的虚成员，该成员返回一个`const char*`，该指针指向一个以`null`结尾的字符数组，并且保证不会抛异常。
+
+#### 8.1.3 `what`成员
+
+#### 8.1.4 如何捕获所有的的标准异常？
+&emsp;&emsp; 标准异常（Standard Exception）都是`exception`的子类，我们可以通过下面的语句来捕获所有的标准异常：
+```cpp
+try{
+    //可能抛出异常的语句
+}catch(exception &e){
+    //处理异常的语句
+}
+```
+上面之所以使用引用，是为了提高效率。如果不使用引用，就要经历一次对象拷贝（要调用拷贝构造函数）的过程。
+
+### 8.2 定义自己的异常类
+&emsp;&emsp; 用户可以通过继承和重载 exception 类来定义新的异常。下面的实例演示了如何使用 std::exception 类来实现自己的异常：
+```cpp
+
+```
 
 ## 参考文献
 1. [C++异常类型以及多级catch](http://c.biancheng.net/cpp/biancheng/view/3283.html)
+2. [C++ 异常处理](https://www.runoob.com/cplusplus/cpp-exceptions-handling.html)
+3. https://codeleading.com/article/15605892710/
 
 
 
