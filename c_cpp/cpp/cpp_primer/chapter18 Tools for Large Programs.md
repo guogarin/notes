@@ -378,8 +378,19 @@ void recoup(int) throw(); // equivalent declaration
 
 #### 8.1.2 标准异常的基类`exception`
 &emsp;&emsp; `exception`仅仅定义了拷贝构造函数、拷贝赋值运算符、虚析构函数以及一个名为`what`的虚成员，该成员返回一个`const char*`，该指针指向一个以`null`结尾的字符数组，并且保证不会抛异常。
+```cpp
+class exception{
+public:
+    exception () throw();  //构造函数
+    exception (const exception&) throw();  //拷贝构造函数
+    exception& operator= (const exception&) throw();  //运算符重载
+    virtual ~exception() throw();  //虚析构函数
+    virtual const char* what() const throw();  //虚函数
+}
+```
 
 #### 8.1.3 `what`成员
+&emsp;&emsp; 首先，`what`是一个虚函数，正如它的名字“what”一样，`what`成员可以粗略地告诉你这是什么异常。不过C++标准并没有规定这个字符串的格式，各个编译器的实现也不同，所以 what() 的返回值仅供参考。
 
 #### 8.1.4 如何捕获所有的的标准异常？
 &emsp;&emsp; 标准异常（Standard Exception）都是`exception`的子类，我们可以通过下面的语句来捕获所有的标准异常：
@@ -393,9 +404,36 @@ try{
 上面之所以使用引用，是为了提高效率。如果不使用引用，就要经历一次对象拷贝（要调用拷贝构造函数）的过程。
 
 ### 8.2 定义自己的异常类
-&emsp;&emsp; 用户可以通过继承和重载 exception 类来定义新的异常。下面的实例演示了如何使用 std::exception 类来实现自己的异常：
+&emsp;&emsp; 用户可以通过继承和重载 exception 类来定义新的异常。下面的实例演示了如何使用 `std::exception `类来实现自己的异常：
 ```cpp
-
+#include <iostream>
+#include <exception>
+using namespace std;
+ 
+class MyException : public exception
+{
+public:
+    const char * what () const noexcept{
+        return "MyException.";
+    }
+};
+ 
+int main()
+{
+  try{
+        throw MyException();
+    }catch(MyException& e){
+        std::cout << "MyException caught" << std::endl;
+        std::cout << e.what() << std::endl;
+    }catch(std::exception& e){
+        //其他的标准错误
+    }
+}
+```
+运行结果：
+```
+MyException caught
+MyException.
 ```
 
 ## 参考文献
@@ -893,4 +931,17 @@ test.cpp:5:5: 错误：在这里不允许使用‘namespace’定义
 &emsp;
 &emsp; 
 # 三、多重继承和虚继承
-## 1. 
+## 1. 多重继承(multiple inheritance)
+### 1.1 什么是多重继承？如何使用？
+&emsp;&emsp; 多重继承是指多个直接基类中产生派生类的能力。多重继承的派生类继承了所有父类的属性。
+&emsp;&emsp; 定义多重继承时，只要在派生列表中包含这些父类即可，但每个基类都需要包含一个可选的访问说明符(若省略则为`private`)：
+```cpp
+class Bear : public ZooAnimal { /* ... */ };
+class Panda : public Bear, public Endangered { /* ... */ };    
+```
+和单继承一样，多重继承的派生列表也只能包含已经被定义过的类，而且这些类不能是`final`（类被`final`修饰，不能被继承）的。
+
+### 1.2 
+```cpp
+
+```
