@@ -941,7 +941,32 @@ class Panda : public Bear, public Endangered { /* ... */ };
 ```
 和单继承一样，多重继承的派生列表也只能包含已经被定义过的类，而且这些类不能是`final`（类被`final`修饰，不能被继承）的。
 
-### 1.2 
+### 1.2 多重继承的派生类 的结构是怎样的？
+&emsp;&emsp; 在多重继承关系中，派生类的对象 包含有 每个基类的子对象，例如对于下面的`Panda`类：
 ```cpp
-
+class Bear : public ZooAnimal { /* ... */ };
+class Panda : public Bear, public Endangered { /* ... */ };  
 ```
+它的对象的概念结构为：
+<div align="center"> <img src="./pic/chapter18/Panda对象的概念结构.png"> </div>
+
+### 1.3 多重继承的派生类 的初始化
+&emsp;&emsp; 构造一个派生类的对象将同时构造并初始化它的所有基类子对象，和从一个基类进行派生一样，多重继承的派生类也只能初始化它的直接基类：
+```cpp
+// 显示初始化所有基类
+Panda::Panda(std::string name, bool onExhibit)
+        : Bear(name, onExhibit, "Panda"),
+            Endangered(Endangered::critical) { }
+
+// 隐式地使用Bear的默认构造函数初始化Bear子对象
+Panda::Panda()
+        : Endangered(Endangered::critical) { }
+```
+派生类的构造函数初始值列表将实参分别传递给每个直接基类。其中基类的构造顺序和派生列表中的基类出现顺序保持一致，而与派生类构造函数初始值列表中基类的顺序无关。一个`Panda`对象按照如下次序进行初始化：
+> ① `ZooAnimal` 是层次结构的最终基类，是 `Panda` 的第一个直接基类 `Bear` 的基类，它首先被初始化。
+> ② `Bear` 是第一个直接基类，第二个被初始化。
+> ③ `Endangered` 是第二个直接基类，第三个被初始化。
+> ④ `Panda` 是最后的派生类，最后被初始化。
+> 
+
+https://blog.csdn.net/HPP_CSDN/article/details/112780427
