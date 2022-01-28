@@ -962,11 +962,37 @@ Panda::Panda(std::string name, bool onExhibit)
 Panda::Panda()
         : Endangered(Endangered::critical) { }
 ```
-派生类的构造函数初始值列表将实参分别传递给每个直接基类。其中基类的构造顺序和派生列表中的基类出现顺序保持一致，而与派生类构造函数初始值列表中基类的顺序无关。一个`Panda`对象按照如下次序进行初始化：
+派生类的构造函数初始值列表将实参分别传递给每个直接基类。
+
+### 1.4 多重继承的派生类 的初始化顺序是怎样的？
+&emsp;&emsp; 其中基类的构造顺序和派生列表中的基类出现顺序保持一致，而与派生类构造函数初始值列表中基类的顺序无关。一个`Panda`对象按照如下次序进行初始化：
 > ① `ZooAnimal` 是层次结构的最终基类，是 `Panda` 的第一个直接基类 `Bear` 的基类，它首先被初始化。
 > ② `Bear` 是第一个直接基类，第二个被初始化。
 > ③ `Endangered` 是第二个直接基类，第三个被初始化。
 > ④ `Panda` 是最后的派生类，最后被初始化。
 > 
+
+### 1.5 多重继承 中 从父类继承的构造函数
+&emsp;&emsp; 在C++11标准中，派生类可以从一个或多个基类继承其构造函数。但是，从多个基类中继承相同的构造函数（即具有相同形参列表的构造函数）是错误的：
+```cpp
+struct Base1 {
+    Base1() = default;
+    Base1(const std::string&);
+    Base1(std::shared_ptr<int>);
+};
+
+struct Base2 {
+    Base2() = default;
+    Base2(const std::string&);
+    Base2(int);
+};
+
+// error: D1 attempts to inherit D1::D1 (const string&) from both base classes
+struct D1: public Base1, public Base2 {
+    using Base1::Base1; // inherit constructors from Base1
+    using Base2::Base2; // inherit constructors from Base2
+};
+```
+
 
 https://blog.csdn.net/HPP_CSDN/article/details/112780427
