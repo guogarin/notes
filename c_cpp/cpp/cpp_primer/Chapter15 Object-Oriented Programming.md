@@ -144,7 +144,9 @@
     - [48.3 派生类的 析构函数](#483-派生类的-析构函数)
       - [48.3.1 如何编写？](#4831-如何编写)
       - [48.3.2 派生类对象在析构时，资源的释放顺序是怎样的？](#4832-派生类对象在析构时资源的释放顺序是怎样的)
-  - [49 继承的构造函数](#49-继承的构造函数)
+  - [49 继承的构造函数(Inheriting Constructor)](#49-继承的构造函数inheriting-constructor)
+  - [49.1 简介](#491-简介)
+    - [49.2 注意事项](#492-注意事项)
   - [50 容器与继承](#50-容器与继承)
     - [50.1 下面的代码将发生什么？如何修改？](#501-下面的代码将发生什么如何修改)
     - [50.2 使用容器来存放继承体系中的对象时，需要注意什么？为什么？](#502-使用容器来存放继承体系中的对象时需要注意什么为什么)
@@ -1974,10 +1976,197 @@ public:
 
 &emsp;
 &emsp;
-## 49 继承的构造函数
-.TODO: 没看懂。。。
+## 49 继承的构造函数(Inheriting Constructor)
+## 49.1 简介
+&emsp;&emsp; 在C++11之前，子类为完成基类初始化，需要在初始化列表调用基类的构造函数，从而完成构造函数的传递。如果基类拥有多个构造函数，那么子类也需要实现多个与基类构造函数对应的构造函数：
+```cpp
+class Base{
+public:
+    Base(int va) :m_value(va), m_c(‘0’){}
+    Base(char c) :m_c(c) , m_value(0){}
+private:
+    int m_value;
+    char m_c;
+};
+
+class Derived :public Base{
+public:
+    //初始化基类需要透传基类的各个构造函数，那么这是很麻烦的
+    Derived(int va) :Base(va) {}
+    Derived(char c) :Base(c) {}
+
+    //假设派生类只是添加了一个普通的函数
+    void display()
+    {
+        //dosomething       
+    }
+};
+```
+书写多个派生类构造函数只为传递参数完成基类的初始化，这种方式无疑给开发人员带来麻烦，降低了编码效率。于是从C++11开始，推出了 继承构造函数(Inheriting Constructor)，这个特性使用`using`来声明继承基类的构造函数：
+&emsp;&emsp; 通常情况下，`using`声明语句只是令某个名字在当前作用域可见。而当其作用于构造函数时，`using`声明语句 将令编译器产生代码，对于基类的每个构造函数，编译器都将生成一个与之对应的构造函数。 换句话说，对于基类的每个构造函数，编译器都在派生类中生成一个生成一个形参列表完全相同的构造函数，这些编译器生成的构造函数形如：
+```cpp
+derived(parms) : base(args) { }
+```
+其中`derived`是派生类的名字，`base`是基类的名字，`parms`是构造函数的形参列表，`args`将派生类构造函数的形参传递给基类构造函数。在我们的`Bulk_quote`类中：
+```cpp
+class Bulk_quote : public Disc_quote {
+public:
+    using Disc_quote::Disc_quote; // 继承Disc_quote的构造函数
+    double net_price(std::size_t) const;
+};
+```
+继承的构造函数等价于
+```cpp
+// 注意，Bulk_quote是派生类，Disc_quote是父类
+Bulk_quote(const std::string& book, double price,
+            std::size_t qty, double disc):
+        Disc_quote(book, price, qty, disc) { }
+```
+
+对于前面的例子，使用using来声明继承基类的构造函数，我们可以这样书写：
+```cpp
+class Base{
+public:
+    Base(int va) :m_value(va), m_c('0') {}
+    Base(char c) :m_c(c), m_value(0) {}
+private:
+    int m_value;
+    char m_c;
+};
+
+class Derived :public Base{
+public:
+    //使用继承构造函数
+    using Base::Base;
+
+    //假设派生类只是添加了一个普通的函数
+    void display(){
+        //dosomething       
+    }
+};
+```
+对于上面的`Derived`类，继承的构造函数等价于：
+```cpp
+Derived(int va) : Base(va) { }
+Derived(char c) : Base(c)  { }
+```
+上面代码中，我们通过`using Base::Base`把基类构造函数继承到派生类中，不再需要书写多个派生类构造函数来完成基类的初始化。更为巧妙的是，C++11标准规定，继承构造函数与类的一些默认函数（默认构造、析构、拷贝构造函数等）一样，是隐式声明，如果一个继承构造函数不被相关代码使用，编译器不会为其产生真正的函数代码。这样比通过派生类构造函数“透传构造函数参数”来完成基类初始化的方案，总是需要定义派生类的各种构造函数更加节省目标代码空间。
 
 
+### 49.2 注意事项
+**（1）继承构造函数无法初始化派生类数据成员**
+&emsp;&emsp; 继承构造函数的功能是初始化基类，对于派生类数据成员的初始化则无能为力。解决的办法主要有两个： 
+一是使用C++11特性就地初始化成员变量，可以通过`=`、`{}`对非静态成员快速地就地初始化，以减少多个构造函数重复初始化变量的工作，注意初始化列表会覆盖就地初始化操作。
+```cpp
+class Derived :public Base{
+public:
+    //使用继承构造函数
+    using Base::Base;
+
+    void display(){
+        //dosomething       
+    }
+private:
+    //派生类新增数据成员
+    double m_double{0.0};
+};
+```
+二是新增派生类构造函数，使用构造函数初始化列表初始化。
+```cpp
+class Derived :public Base{
+public:
+    //使用继承构造函数
+    using Base::Base;
+
+    //新增派生类构造函数
+    Derived(int a, double b):Base(a),m_double(b){}
+
+    void display(){
+        //dosomething       
+    }
+private:
+    //派生类新增数据成员
+    double m_double{0.0};
+}
+```
+相比之下，第二种方法需要新增构造函数，明显没有第一种方法简洁；但第二种方法可由用户控制初始化值，更加灵活。各有优劣，两种方法需结合具体场景使用。
+
+**（2）构造函数拥有默认值会产生多个构造函数版本，且继承构造函数无法继承基类构造函数的默认参数，所以我们在使用有默认参数构造函数的基类时就必须要小心。**
+```cpp
+class A
+{
+public:
+    A(int a = 3, double b = 4):m_a(a), m_b(b){}
+    void display()
+    {
+        cout<<m_a<<" "<<m_b<<endl;
+    }
+
+private:
+    int m_a;
+    double m_b;
+};
+
+class B:public A
+{
+public:
+    using A::A;
+};
+```
+那么A中的构造函数会有下面几个版本：
+```cpp
+A()
+A(int)
+A(int, double)
+A(const A&)
+```
+那么B中对应的继承构造函数将会包含如下几个版本：
+```cpp
+B()
+B(int)
+B(int, double)
+B(const B&)
+```
+可以看出，参数默认值会导致多个构造函数版本的产生，因此在使用时需格外小心。
+
+**（3）多继承的情况下，继承构造函数会出现“冲突”的情况，因为多个基类中的部分构造函数可能导致派生类中的继承构造函数的函数名、参数（即函数签名）相同。**考察如下代码：
+```cpp
+class A
+{
+public:
+    A(int i){}
+};
+
+class B
+{
+public:
+    B(int i){}
+};
+
+class C : public A,public B
+{
+public:
+    using A::A;
+    using B::B;  //编译出错，重复定义C(int)
+};
+```
+为避免继承构造函数冲突，可以通过显示定义继承类冲突的构造函数，组织隐式生成相应的继承构造函数：
+```cpp
+class C : public A,public B
+{
+public:
+    using A::A;
+    using B::B;  //编译出错，重复定义C(int)
+
+    //显示定义继承构造函数C(int)
+    C(int i):A(i),B(i){}
+};
+```
+此外，使用继承构造函数时，还需要注意以下几点： 
+> （4）如果基类构造函数被申明为私有成员函数，或者派生类是从基类中虚继承的 ，那么就不能在派生类中申明继承构造函数； 
+> （5）一旦使用继承构造函数，编译器就不会再为派生类生成默认构造函数了。
+> 
+https://zhuanlan.zhihu.com/p/26916022
 
 
 
