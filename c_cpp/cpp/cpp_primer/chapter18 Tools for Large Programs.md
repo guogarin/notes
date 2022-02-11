@@ -972,9 +972,16 @@ Panda::Panda()
 > ④ `Panda` 是最后的派生类，最后被初始化。
 > 
 
-### 1.5 多重继承 中 从父类继承的构造函数
+### 1.5 继承的构造函数 与 多重继承
+#### 1.5.1 多重继承中，从父类继承的构造函数可能造成冲突
 &emsp;&emsp; 在C++11标准中，派生类可以从一个或多个基类继承其构造函数。但是，从多个基类中继承相同的构造函数（即具有相同形参列表的构造函数）是错误的：
 ```cpp
+#include <iostream>
+#include <string>
+#include <memory>
+
+using namespace std;
+
 struct Base1 {
     Base1() = default;
     Base1(const std::string&);
@@ -992,7 +999,88 @@ struct D1: public Base1, public Base2 {
     using Base1::Base1; // inherit constructors from Base1
     using Base2::Base2; // inherit constructors from Base2
 };
+
+
+int main()
+{
+    D1 d;
+}
 ```
+编译时报错：
+```
+test.cpp:22:18: 错误：‘D1::D1(const string&)’ inherited from ‘Base2’
+     using Base2::Base2; // inherit constructors from Base2
+                  ^
+test.cpp:21:18: 错误：conflicts with version inherited from ‘Base1’
+     using Base1::Base1; // inherit constructors from Base1
+                  ^
+```
+**结果分析：**
+&emsp;&emsp; 在上面的例子中，`using Base1::Base1`和`using Base2::Base2`分别相当于：
+```cpp
+D1(const std::string& s) : Base1(s) { }
+```
+`using Base2::Base2`分别相当于：
+```cpp
+D1(const std::string& s) : Base2(s) { }
+```
+显然，它俩冲突了，因为这两个构造函数的形参列表相同，都接收一个`const std::string&`实参。
+
+#### 1.5.2 如何解决呢？
+&emsp;&emsp; 如果一个类从它的多个基类中继承了相同的构造函数，则这个类必须为该构造函数定义它自己的版本：
+```cpp
+#include <iostream>
+#include <exception>
+#include <string>
+#include <memory>
+using namespace std;
+
+struct Base1 {
+    Base1() = default;
+    Base1(const std::string&);
+    Base1(std::shared_ptr<int>);
+};
+
+struct Base2 {
+    Base2() = default;
+    Base2(const std::string&);
+    Base2(int);
+};
+
+struct D1: public Base1, public Base2 {
+    using Base1::Base1; // inherit constructors from Base1
+    using Base2::Base2; // inherit constructors from Base2
+    
+    // 必须定义一个接收string的构造函数
+    D1(const std::string& s) : Base1(s), Base2(s) {}
+
+    // 一旦D1定义了自己的构造函数，则编译器就不会为D1生成默认构造函数了，
+    // 因此我们需要主动要求编译器生成默认构造函数
+    D1() =default;
+};
+
+
+int main()
+{
+    D1 d;
+}
+```
+上面的代码顺利通过编译。
+
+### 1.6 析构函数与多重继承
+&emsp;&emsp; 和往常一样，派生类中的析构函数只负责清理派生类本身分配的资源，派生类的成员和所有基类被自动销毁。合成析构函数有一个空函数体。
+&emsp;&emsp; 析构函数调用的顺序总是与构造函数运行顺序相反。对于一个`Panda`对象，析构函数的调用顺序是 `~Panda`，`~Endangered`，`~Bear`，`~ZooAnimal`。
+```cpp
+class Bear : public ZooAnimal { /* ... */ };
+class Panda : public Bear, public Endangered { /* ... */ };  
+```
+
+### 1.7 多重继承的派生类 的拷贝、移动操作
+&emsp;&emsp; 和只有一个基类的继承一样，派生类如果定义了自己的拷贝、移动操作，则应该调用基类中对应的操作来完成基类部分的拷贝(移动)。
+
+### 1.8 类型转换 与 多个基类
+&emsp;&emsp; 在单一继承下，指向派生类的指针或引用可以自动转换为指向可访问基类的指针或引用。多重继承也是如此。我们可以令某个可访问基类指向任何对象（可访问）基类的指针或引用可用于指向或引用派生对象。
+&emsp;&emsp; 
 
 
 https://blog.csdn.net/HPP_CSDN/article/details/112780427
