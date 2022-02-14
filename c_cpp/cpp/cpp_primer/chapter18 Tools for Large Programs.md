@@ -1079,8 +1079,48 @@ class Panda : public Bear, public Endangered { /* ... */ };
 &emsp;&emsp; 和只有一个基类的继承一样，派生类如果定义了自己的拷贝、移动操作，则应该调用基类中对应的操作来完成基类部分的拷贝(移动)。
 
 ### 1.8 类型转换 与 多个基类
-&emsp;&emsp; 在单一继承下，指向派生类的指针或引用可以自动转换为指向可访问基类的指针或引用。多重继承也是如此。我们可以令某个可访问基类指向任何对象（可访问）基类的指针或引用可用于指向或引用派生对象。
+#### 1.8.1 能转换吗？
+&emsp;&emsp; 在单一继承下，派生类对象 可以绑定到 指向其基类的指针或引用。多重继承也是如此。我们可以令 派生类对象 绑定到 指向其基类的指针或引用。例如：
+```cpp
+// operations that take references to base classes of type Panda
+void print(const Bear&);
+void highlight(const Endangered&);
+ostream& operator<<(ostream&, const ZooAnimal&);
+
+// ying_yang 是派生类对象
+Panda ying_yang("ying_yang");
+print(ying_yang); // passes Panda to a reference to Bear
+highlight(ying_yang); // passes Panda to a reference to Endangered
+cout << ying_yang << endl; // passes Panda to a reference to ZooAnimal
+```
+
+#### 1.8.2 在多继承中，编译器如何在 多个可选的类型转换中 做出选择？
+&emsp;&emsp; 但需要注意的是，编译器不会在派生类的几种转换中进行比较和选择，因为在它看来转换到任意一种积累都一样好。例如如果存在下面两个`print()`重载形式，则通过`Panda`对象对不带前缀限定符的`print()`进行调用将产生变异性错误：
+```cpp
+void print(const Bear&);C++ Primer, Fifth Edition
+void print(const Endangered&);
+
+Panda ying_yang("ying_yang");
+print(ying_yang); // error: ambiguous
+```
+
+#### 1.8.3 基于指针类型或引用类型的查找
+&emsp;&emsp; 和单继承一样，对象、指针或引用的静态类型 决定了可以使用哪些成员。就拿前面的例子来说：
+```cpp
+class Bear : public ZooAnimal { /* ... */ };
+class Panda : public Bear, public Endangered { /* ... */ };  
+```
+> ① 如果使用 `ZooAnimal` 指针，则只有定义在`ZooAnimal`中的操作可以使用，`Panda` 接口中的 `Bear`、`Panda` 和 `Endangered`特有的部分 是看不见的；
+> ② 类似地，`Bear` 指针或引用 只知道 `Bear` 和 `ZooAnimal` 成员；
+> ③ `Endangered` 指针或引用仅限于 `Endangered` 成员。
+> 
+
+### 1.9 多重继承下的的类作用域
+&emsp;&emsp; 在单一继承下，派生类的作用域嵌套在其直接和间接基类的作用域中。查找是通过向上搜索继承层次结构，直到找到给定的名字。派生类中定义的名字将隐藏基类中的同名成员。
+&emsp;&emsp; 在多重继承下，相同的查找过程在所有直接基类中**同时发生**。如果一个名字通过多个基类找到，则该名字的使用是具有二义性的。
+&emsp;&emsp; 例如，如果通过 `Panda`的对象、指针或引用 使用了某个名字，则程序会并行的在`Endangered` 和 `Bear`/`ZooAnimal` 这两颗子树中查找。如果在多个子树中找到该名字，则该名字的使用具有二义性。
 &emsp;&emsp; 
+
 
 
 https://blog.csdn.net/HPP_CSDN/article/details/112780427
