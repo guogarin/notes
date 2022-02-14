@@ -1115,11 +1115,103 @@ class Panda : public Bear, public Endangered { /* ... */ };
 > ③ `Endangered` 指针或引用仅限于 `Endangered` 成员。
 > 
 
-### 1.9 多重继承下的的类作用域
+### 1.9 多重继承下 可能产生的二义性
+#### 1.9.1 什么情况下调用会产生二义性？
 &emsp;&emsp; 在单一继承下，派生类的作用域嵌套在其直接和间接基类的作用域中。查找是通过向上搜索继承层次结构，直到找到给定的名字。派生类中定义的名字将隐藏基类中的同名成员。
 &emsp;&emsp; 在多重继承下，相同的查找过程在所有直接基类中**同时发生**。如果一个名字通过多个基类找到，则该名字的使用是具有二义性的。
 &emsp;&emsp; 例如，如果通过 `Panda`的对象、指针或引用 使用了某个名字，则程序会并行的在`Endangered` 和 `Bear`/`ZooAnimal` 这两颗子树中查找。如果在多个子树中找到该名字，则该名字的使用具有二义性。
-&emsp;&emsp; 
+&emsp;&emsp; 一个类继承多个同名成员是完全合法的。但是，如果要使用该名字，必须指定要使用的版本。
+&emsp;&emsp; 例如，如果 `ZooAnimal` 和 `Endangered` 都定义了一个名为 `max_weight` 的成员，而 `Panda` 没有定义该成员，则下面的调用是一个错误：
+```cpp
+double d = ying_yang.max_weight();
+```
+`Panda`在派生的过程中拥有了两个名为 `max_weight` 的成员，这是合法的，派生仅仅是产生了潜在的二义性，只要 `Panda` 对象不调用 `max_weight`，这种二义性就可以避免。
+&emsp;&emsp; 另外，如果每次对 `max_weight` 的调用都明确指出要运行哪个版本：`ZooAnimal::max_weight` 或`Endangered::max_weight`，也可以避免此错误，只有在要调用哪个函数含糊不清的时候程序才会报错。
+&emsp;&emsp; 在上面的例子中，派生类`Panda`继承的两个 `max_weight` 成员的二义性是相当明显的。而且情况更复杂的是：
+> 即使两个继承函数的形参列表不同，也会产生错误。
+> 此外，即使 `max_weight` 在一个类中是 `private`，而在另一个类中是 `public` 或 `protected`，这也是错误的。
+> 如果 `max_weight` 是在 `Bear` 中定义的，而不是在 `ZooAnimal` 中定义的，调用仍然会出错。
+> 
+和往常一样，名字查找发生在类型检查之前。当编译器在两个不同的作用域中找到 `max_weight` 时，它会生成一个错误，指出调用具有二义性。
+#### 1.9.2 如何避免这样的二义性？
+&emsp;&emsp; **避免潜在二义性的最佳方法是**，在派生类中定义该函数的一个版本来解决二义性。例如，应该给 Panda 类一个 max_weight 函数来解决二义性：
+```cpp
+double Panda::max_weight() const
+{
+    return std::max(ZooAnimal::max_weight(),
+                     Endangered::max_weight());
+}
+```
+
+
+&emsp; 
+## 2. 虚继承
+### 2.1 虚继承是用来解决什么问题的？
+&emsp;&emsp; 尽管一个类的派生列表中相同的基类只能出现一次，但一个类可以多次从同一基类继承。它可以从它自己的两个直接基类间接继承同一个基类，也可以通过它的另一个基类直接和间接地继承一个特定的类。
+&emsp;&emsp; 例如，IO库中，`istream`和`ostream`分别继承了一个共同的名为`basic_ios`的抽象基类，负责保存流的缓冲内容，并管理流的条件状态：
+```mermaid
+graph LR
+A[basic_ios 类] 
+    A --> B(istream 类)
+    A --> C(ostream 类)
+
+    B --> N[iostream 类]
+    C --> N[iostream 类]       
+```
+`iostream`是另外一个类，他从`istream`和`ostream`直接继承而来，可以同时读写流的内容，因为`istream`和`ostream`都是继承自`basic_ios`，所以`iostream`继承了`basic_ios`两次，一次通过`istream`，另一次通过`ostream`。
+&emsp;&emsp; 默认情况下，派生对象包含其派生链中的每个类对应的单独子部分。如果同一基类在派生中出现多次，则派生对象将具有多个该类型的子对象。
+&emsp;&emsp; 这种默认情况不适用于 `iostream` 这样的类。`iostream` 对象希望使用相同的缓冲区进行读写操作，并希望其条件状态同时反映输入和输出操作。如果一个 `iostream` 对象包含 `basic_ios` 类的两个副本，那么这种共享是不可能的。
+&emsp;&emsp; 在C++中，解决这类问题可通过使用**虚继承 (virtual inheritance)**。虚继承允许类指定它愿意共享其基类。共享的基类子对象称为**虚基类 (virtual base class)**。不管相同的虚基类在继承层次结构中出现多少次，派生对象只包含该虚基类的一个共享子对象。
+
+&emsp;&emsp; 在过去，关于熊猫是属于浣熊科(Raccoon)还是熊科(Bear)有一些争论。为了反映这场争论，将 `Panda` 改为同时继承 `Bear` 和 `Raccoon`。为了避免赋予 `Panda` 两个 `ZooAnimal` 基类部分，将定义 `Bear` 和 `Raccoon` 继承 `ZooAnimal`的方式改为虚继承。下图描述了新的继承体系：
+<div align="center"> <img src="./pic/chapter18/虚继承.png"> </div>
+
+&emsp;&emsp; 观察上面的新层次结构，注意到虚继承的一个不太直观的特征：必须在虚派生的真实需求出现之前完成。
+例如，只有在定义 `Panda` 时才需要虚继承。然而，如果 `Bear` 和 `Raccoon` 不是从 `ZooAnimal` 虚派生得到的，那么`Panda 类的设计者就不走运了。
+&emsp;&emsp; 在实际编程时，中间层次的基类将其继承指定为虚继承很少引起什么问题。通常，使用虚继承的类层次结构是由一个人或一个项目设计组一次设计完成的。对于一个独立开发的类来说，很少需要基类中的某一个是虚基类，况且新基类的开发者也无法改变已存在的类体系。
+&emsp;&emsp; 值得注意的是，虚派生只影响从指定了虚基类的派生类中进一步派生出来的类，它不会影响派生类本身。
+
+### 2.2 如何使用虚继承？
+我们指定虚基类的方式是在派生列表中添加关键字`virtual`：
+```cpp
+// the order of the keywords public and virtual is not significant
+class Raccoon : public virtual ZooAnimal { /* ... */ };
+class Bear : virtual public ZooAnimal { /* ... */ };
+```
+通过上面的代码，我们将`ZooAnimal`定义为`Bear` 和 `Raccoon`的虚基类。
+如果某个类指定了虚基类，则该类的派生仍按常规方式进行：
+```cpp
+class Panda : public Bear,
+public Raccoon, public Endangered {
+};
+```
+`Panda` 通过`Bear` 和 `Raccoon`继承了`ZooAnimal`，因为`Bear` 和 `Raccoon`继承`ZooAnimal`的方式都是虚继承，所以在`Panda` 中只有一个`ZooAnimal`部分。
+
+### 2.3 虚继承会影响派生类向基类的转换吗？
+&emsp;&emsp; 派生类的对象可以通过指向可访问的基类类型的指针或引用进行操作，不论基类是否是虚基类。例如，以下所有 Panda 基类的转换都是合法的：
+```cpp
+void dance(const Bear&);
+void rummage(const Raccoon&);
+ostream& operator<<(ostream&, const ZooAnimal&);
+
+Panda ying_yang;
+dance(ying_yang);   // ok: passes Panda object as a Bear
+rummage(ying_yang); // ok: passes Panda object as a Raccoon
+cout << ying_yang;  // ok: passes Panda object as a ZooAnimal
+```
+
+### 2.4 虚基类成员的可见性
+&emsp;&emsp; 因为每个共享的虚基类中只有唯一一个共享子的对象，所以该基类中的成员可以被直接访问，并不会产生二义性。此外，如果虚基类中的成员仅沿一个派生路径被覆盖，则仍然可以直接访问这个被覆盖的成员。但如果成员被多个基类覆盖，则派生类一般必须定义自己的版本。
+&emsp;&emsp; 例如，假设类 `B` 定义了一个名为 `x` 的成员；类 `D1` 和类 `D2` 都从 `B` 虚继承；类 `D` 继承自 `D1` 和 `D2`。在 `D` 的作用域中，`x` 通过它的两个基类都是可见的。如果通过一个 `D` 对象使用 `x`，有三种可能：
+> 如果 `x` 在 `D1` 或 `D2` 中都没有定义，它将被解析为 `B` 中的成员；没有二义性。一个 `D` 对象只包含一个 `x` 的实例。
+> 如果 `x` 是 `D1` 和 `D2` 其中一个类中的成员，没有二义性，派生类中的 `x` 版本优先于共享虚基类 `B` 中的 x。
+> 如果在 `D1` 和 `D2` 中都定义了 `x`，那么直接访问该成员具有二义性。
+> 
+与非虚多重继承层次结构类似，解决这种二义性问题最好是在派生类为该成员提供自己的实例。
+
+### 2.5 构造函数与虚继承
+
+
 
 
 
