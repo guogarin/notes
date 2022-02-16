@@ -1,3 +1,4 @@
+
 - [第十五章 面向对象程序设计](#第十五章-面向对象程序设计)
   - [1. 面向对象程序设计 有哪些原则？](#1-面向对象程序设计-有哪些原则)
   - [2. 数据抽象](#2-数据抽象)
@@ -162,6 +163,8 @@
     - [虚函数、动态绑定、运行时多态之间的关系](#虚函数动态绑定运行时多态之间的关系)
   - [C++ 类在内存中的存储方式](#c-类在内存中的存储方式)
   - [参考文献](#参考文献)
+
+
 # 第十五章 面向对象程序设计
 
 ## 1. 面向对象程序设计 有哪些原则？
@@ -1413,14 +1416,14 @@ class Sneaky : public Base { // 这个public 是 继承访问说明符
 
 ### 34.2 有哪些继承方式？它们之间有何区别？
 ### 34.2.1 哪几种？
-&emsp;&emsp; 有 public继承、protected继、private继
+&emsp;&emsp; 有 public继承、protected继承、private继承
 ### 34.2.2 区别
 （1）通过public继承：派生类中基类部分成员的访问说明符在基类中为public或protected的，在派生类中类型保持不变，private的成员不可访问。
 （2）通过protected继承：派生类中基类部分成员的访问说明符在基类中为public或protected的，在派生类中类型为protected，private的成员不可访问。
 （3）通过private继承：派生类中基类部分成员的访问说明符在基类中为public或protected的，在派生类中类型为private，private的成员不可访问。
 | 派生方式        | 基类的public成员  | 基类的protected成员 | 基类的private成员| 概括       |
 | -----------    | ---------------- | ------------------- |-----------     |----------- |
-| `public`派生    | 仍为public       | 仍为private         |  不可见        | 所有的都**不变** |
+| `public`派生    | 仍为public       | 仍为protected         |  不可见        | 所有的都**不变** |
 | `protected`派生 | 变为protected    | 变为protected       |  不可见      | 基类的成员级别都**升一级** |
 | `private`派生   | 变为private      | 变为private         |  不可见      | 基类的成员级别都**升到最高级`private`**|
 其实可以这么理解，派生方法对基类成员的影响，可以说是在 成员本身的保护类型 和 派生的类型 中 取一个最严格的：
@@ -1454,7 +1457,7 @@ struct Priv_Derv : private Base {
     int f1() const { return prot_mem; }
 };
 ```
-从上面的代码我们可以看到，我们可以在类内的内部访问基类的``public成员`和`protected成员`，即使该派生类采用的是私有继承，我们再来看下面的代码：
+从上面的代码我们可以看到，我们可以在类内的内部访问基类的`public成员`和`protected成员`，即使该派生类采用的是私有继承，我们再来看下面的代码：
 ```cpp
 Pub_Derv d1; // members inherited from Base are public
 Priv_Derv d2; // members inherited from Base are private
