@@ -40,20 +40,32 @@ b : 4294967295
 > 
 
 ## 1.2 强制(显示)类型转换
-### 1.2.1 旧有的C风格的强制类型转换
+在C++中，强制转换可以分为两类：
+> &emsp;&emsp; ① C风格的强制类型转换
+> &emsp;&emsp; ② C++ 提供的强制类型转换
+> 
+
+&emsp;
+## 1.3 旧有的C风格的强制类型转换
 &emsp;&emsp; 此方法不推荐，因为此方法在代码中不显眼，容易被忽略， 而且旧式强制转换实际上是困难且容易出错的。
 ```cpp
 int a = 1;
 (double) a;
 ```
-### 1.2.2 C++ 提供的强制类型转换
+
+&emsp;
+## 1.4 C++ 提供的强制类型转换
 C++ 提供四种转换操作符来实现显式类型转换：
 > ① `static_cast`
 > ② `const_cast`
 > ③ `reinterpret_cast`
 > ④ `dynamic_cast`
 > 
-#### (1)`static_cast`
+C++ 强制类型转换运算符的用法如下：
+```cpp
+强制类型转换运算符 <要转换到的类型> (待转换的表达式)
+```
+### 1.4.1 `static_cast`
 供四种转换操作符来实现显式类型转换：
 ```cpp
 static_cast <new_type> (expression)
@@ -99,15 +111,31 @@ int main()
 **运行结果：**
 &emsp;&emsp; 代码成功通过编译。
 
-#### (4)`dynamic_cast`
-基本用法：
+
+
+
+### 1.4.2 `const_cast`
+&emsp;&emsp; `const_cast`用于移除类型的`const`、`volatile`和`__unaligned`属性，而且它也是四个强制类型转换运算符中**唯一**能够去除 `const` 属性的运算符：
+```cpp 
+const_cast<type>(expression)
+```
+参数要求：
+> `type` : 转换的目标类型，必须是一个指针、引用
+> `expression`: 被转换的值
+> 
+
+
+### 1.4.3 `reinterpret_cast`
+
+### 1.4.4 `dynamic_cast`
+
 ```cpp 
 dynamic_cast<type_id> (expression)
 ```
-
-
-#### (3)`const_cast`
-#### (4)`reinterpret_cast`
+参数要求：
+> `type_id` : 必须是一个指针、引用
+> `expression`: 
+> 
 
 ## 参考文献
 1. [c++ 四种强制类型转换介绍](https://blog.csdn.net/ydar95/article/details/69822540)
