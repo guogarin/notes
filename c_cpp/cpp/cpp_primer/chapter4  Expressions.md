@@ -63,7 +63,8 @@ C++ 提供四种转换操作符来实现显式类型转换：
 > 
 C++ 强制类型转换运算符的用法如下：
 ```cpp
-强制类型转换运算符 <要转换到的类型> (待转换的表达式)
+// 强制类型转换运算符 <要转换到的类型> (待转换的表达式)
+cast-name<type>(expression);
 ```
 ### 1.4.1 `static_cast`
 供四种转换操作符来实现显式类型转换：
@@ -111,11 +112,16 @@ int main()
 **运行结果：**
 &emsp;&emsp; 代码成功通过编译。
 
-
-
-
 ### 1.4.2 `const_cast`
-&emsp;&emsp; `const_cast`用于移除类型的`const`、`volatile`和`__unaligned`属性，而且它也是四个强制类型转换运算符中**唯一**能够去除 `const` 属性的运算符：
+#### (1) 作用
+&emsp; `const_cast`有如下作用：
+> &emsp;&emsp; 修改（增加或去除皆可）表达式的底层`const`属性（而且它也是四个强制类型转换运算符中**唯一**能够**去除** `const` 属性的运算符，添加`const`属性还可以用其他转换符，如`static_const`）；
+> `const_cast`也能用于移除类型的`const`、`volatile`和`__unaligned`属性，：
+> 
+ 
+
+#### (2) 使用
+&emsp;&emsp; 
 ```cpp 
 const_cast<type>(expression)
 ```
@@ -124,16 +130,28 @@ const_cast<type>(expression)
 > `expression`: 被转换的值
 > 
 
+#### `const_cast`是唯一可以修改`const`属性的运算符吗？
+&emsp;&emsp; 准确的说不是，但`const_cast`是唯一可以**去除** `const` 属性的运算符，添加`const`属性还可以用其他转换符，如`static_const`。
+
+#### `const_cast`可以改变表达式的`const`属性，那是不是意味着可以改变`const`对象的值？
+
 
 ### 1.4.3 `reinterpret_cast`
+```cpp 
+
+```
+参数要求：
+> `type_id` : 
+> `expression`: 
+> 
 
 ### 1.4.4 `dynamic_cast`
 
 ```cpp 
-dynamic_cast<type_id> (expression)
+
 ```
 参数要求：
-> `type_id` : 必须是一个指针、引用
+> `type_id` : 
 > `expression`: 
 > 
 
