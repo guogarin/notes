@@ -678,7 +678,7 @@ for i, (item, count) in enumerate(pantry):
 
 ### 2. 为什么？
 ① 可读性强，更容易被他人理解；
-② 遵循`DRY`原则(Do't Repeat Yourself)，能复用的代码都应该封装成一个函数，可避免代码冗长。
+② 遵循`DRY`原则(Don't Repeat Yourself)，能复用的代码都应该封装成一个函数，可避免代码冗长。
 
 
 
