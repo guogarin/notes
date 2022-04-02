@@ -192,7 +192,7 @@ LeetCode和书上不太一样，书上要求的是通过实参传进去的指针
 
 &emsp;
 &emsp; 
-# 剑指 Offer 06. 从尾到头打印链表
+# 面试题 06. 从尾到头打印链表
 ## 1 题目详情
 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。示例 1：
 ```
@@ -245,7 +245,7 @@ public:
 
 &emsp;
 &emsp; 
-# 剑指 Offer 07：重建二叉树
+# 面试题 07：重建二叉树
 ## 1. 题目详情
 复习了几种遍历再来 TODO:
 
@@ -257,7 +257,7 @@ public:
 
 &emsp;
 &emsp; 
-# 剑指 Offer 08：
+# 面试题 08：
 复习了几种遍历再来 TODO:
 
 
@@ -267,7 +267,7 @@ public:
 
 &emsp;
 &emsp; 
-# 剑指 Offer 09：用两个栈实现队列
+# 面试题 09：用两个栈实现队列
 ## 1. 题目详情
 &emsp;&emsp; 用两个栈实现一个队列。队列的声明如下，请实现它的两个函数 `appendTail` 和 `deleteHead` ，分别完成在队列尾部插入整数和在队列头部删除整数的功能。(若队列中没有元素，`deleteHead` 操作返回 `-1` )
 示例 1：
@@ -336,7 +336,7 @@ public:
 
 &emsp;
 &emsp; 
-# 剑指 Offer 10- I. 斐波那契数列
+# 面试题 10- I. 斐波那契数列
 ## 1. 题目详情
 写一个函数，输入 n ，求斐波那契（Fibonacci）数列的第 n 项（即 F(N)）。斐波那契数列的定义如下：
 ```
@@ -388,7 +388,7 @@ public:
 
 &emsp;
 &emsp; 
-# 剑指 Offer 10- II. 青蛙跳台阶问题
+# 面试题 10- II. 青蛙跳台阶问题
 ## 1. 题目详情
 一只青蛙一次可以跳上`1`级台阶，也可以跳上`2`级台阶。求该青蛙跳上一个 `n` 级的台阶总共有多少种跳法。
 答案需要取模 `1e9+7（1000000007）`，如计算初始结果为：`1000000008`，请返回 `1`。
@@ -420,7 +420,7 @@ TODO: 书上还有另一个扩展，也看看
 
 &emsp;
 &emsp; 
-# 剑指 Offer 11. 旋转数组的最小数字
+# 面试题 11. 旋转数组的最小数字
 ## 1. 题目详情
 &emsp;&emsp; 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。
 &emsp;&emsp; 给你一个可能存在 重复 元素值的数组 `numbers` ，它原来是一个升序排列的数组，并按上述情形进行了一次旋转。请返回旋转数组的最小元素。例如，数组 `[3,4,5,1,2]` 为 `[1,2,3,4,5]` 的一次旋转，该数组的最小值为`1`。  
@@ -469,7 +469,7 @@ TODO:
 
 &emsp;
 &emsp; 
-# 剑指 Offer 12. 矩阵中的路径
+# 面试题 12. 矩阵中的路径
 ## 1. 题目详情
 
 ## 2. 解答
@@ -515,7 +515,7 @@ private:
 
 &emsp;
 &emsp; 
-# 剑指 Offer 13. 机器人的运动范围
+# 面试题 13. 机器人的运动范围
 TODO:
 
 
@@ -525,7 +525,7 @@ TODO:
 
 &emsp;
 &emsp; 
-# 剑指 Offer 14- I. 剪绳子
+# 面试题 14- I. 剪绳子
 ## 1. 题目详情
 &emsp;&emsp; 给你一根长度为 `n` 的绳子，请把绳子剪成整数长度的 `m` 段（`m、n`都是整数，`n>1`并且`m>1`），每段绳子的长度记为 `k[0],k[1]...k[m-1]` 。请问 `k[0]*k[1]*...*k[m-1]` 可能的最大乘积是多少？例如，当绳子的长度是`8`时，我们把它剪成长度分别为`2、3、3`的三段，此时得到的最大乘积是`18`。
 
@@ -620,7 +620,7 @@ public:
 };
 ```
 
-# 剑指 Offer 14- II. 剪绳子 II
+# 面试题 14- II. 剪绳子 II
 &emsp;&emsp; 这题和之前有些不一样，前面那题`2 <= n <= 58`，而这题`n`可以到`120`，这可能会导致算数溢出的问题。
 &emsp;&emsp; 为了解决潜在的算数溢出问题，标准库`math.pow()`就不能用了，需要自己编写一个`pow()`方法，每次迭代的时候对`1000000007`取余。
 ```cpp
@@ -663,7 +663,7 @@ private:
 
 &emsp;
 &emsp; 
-# 剑指 Offer 15. 二进制中1的个数
+# 面试题 15. 二进制中1的个数
 ## 1. 题目详情 
 &emsp;&emsp; 编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 '1' 的个数（也被称为 汉明重量).）。
 
@@ -729,7 +729,7 @@ public:
 
 &emsp;
 &emsp; 
-# 剑指 Offer 16. 数值的整数次方
+# 面试题 16. 数值的整数次方
 ## 1. 题目详情
 实现 `pow(x, n)` ，即计算 `x` 的 `n` 次幂函数。不得使用库函数，同时不需要考虑大数问题。
 示例 1：
@@ -795,7 +795,7 @@ private:
 
 &emsp;
 &emsp; 
-# 剑指 Offer 17. 打印从1到最大的n位数
+# 面试题 17. 打印从1到最大的n位数
 ## 1. 题目详情
 输入数字 n，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。
 示例 1:
@@ -820,7 +820,7 @@ TODO: 要考虑大数问题
 
 &emsp;
 &emsp; 
-# 剑指 Offer 18. 删除链表的节点
+# 面试题 18. 删除链表的节点
 ## 1. 题目详情
 给定单向链表的头指针和一个要删除的节点的值，定义一个函数删除该节点。
 返回删除后的链表的头节点。
@@ -929,3 +929,633 @@ void DeleteNode(ListNode** pListHead, ListNode* pToBeDeleted)
 ```
 &emsp;&emsp; 接下来我们分析这种思路的时间复杂度。对于`n－1`个非尾结点而言，我们可以在`O（1）`时把下一个结点的内存复制覆盖要删除的结点，并删除下一个结点；对于尾结点而言，由于仍然需要顺序查找，时间复杂度是`O（n）`。因此总的平均时间复杂度是`[（n－1）*O（1）＋O（n）]/n`，结果还是`O（1）`，符合面试官的要求。
 &emsp;&emsp; 值得注意的是，上述代码仍然不是完美的代码，因为它基于一个假设：要删除的结点的确在链表中。我们需要`O（n）`的时间才能判断链表中是否包含某一结点。受到`O（1）`时间的限制，我们不得不把确保结点在链表中的责任推给了函数`DeleteNode`的调用者。在面试的时候，我们可以和面试官讨论这个假设，这样面试官就会觉得我们考虑问题非常全面。
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 19. 正则表达式匹配
+TODO: 这个超时了，后面再回来看
+```cpp
+class Solution {
+public:
+    bool isMatch(string s, string p) {
+        return match_core(s, p, 0, 0);        
+    }
+private:
+    bool match_core(string s, string p, size_t m_s, size_t m_p){
+        cout << m_s << m_p << endl;
+        if(m_s >= s.size() && m_p >= p.size())
+            return true;
+        if(m_s < s.size() && m_p >= p.size())
+            return false;
+
+        if(m_p+1 < p.size() && p[m_p+1] == '*'){
+            if(s[m_s] == p[m_p] || (p[m_p] == '.' && m_s < s.size())){
+                return match_core(s, p, m_s+1, m_p+2)  // ① 字符* 匹配1次
+                    || match_core(s, p, m_s+1, m_p)    // ② 字符* 匹配多次
+                    || match_core(s, p, m_s, m_p+2);
+
+            }else
+                return match_core(s, p, m_s, m_p+2);   // ③ 字符* 匹配0次
+        }
+
+        if(s[m_s] == p[m_p] || (p[m_p] == '.' && m_s < s.size()))
+            return match_core(s, p, m_s+1, m_p+1);
+
+        return false;
+    }
+};
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 20. 表示数值的字符串
+TODO:
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 21. 调整数组顺序使奇数位于偶数前面
+## 1. 题目详情
+输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有奇数在数组的前半部分，所有偶数在数组的后半部分。
+示例：
+```
+输入：nums = [1,2,3,4]
+输出：[1,3,2,4] 
+注：[3,1,2,4] 也是正确的答案之一。
+```
+提示：
+```
+0 <= nums.length <= 50000
+0 <= nums[i] <= 10000
+```
+
+## 2. 解答
+这个用双指针法，一个指向头，一个指向尾：
+```cpp
+class Solution {
+public:
+    vector<int> exchange(vector<int>& nums) {
+        if(nums.size() == 0){
+            return nums;
+        }
+        auto start = nums.begin(), end = nums.end() - 1;
+        while(start < end){
+            if(!is_even(*start) && is_even(*end)){ // 奇偶，两个指针都往前(后)移动
+                ++start;
+                --end;
+            }else if(!is_even(*start) && !is_even(*end)){ // 奇奇，只有开头的指针需要往前移
+                ++start;
+            }else if(is_even(*start) && is_even(*end)){ // 偶偶，只有后面那个指针才要移动
+                --end;
+            }else if(is_even(*start) && !is_even(*end)){ // 偶奇，先交换，然后两个指针都移动
+                swap(*start, *end);
+                ++start;
+                --end;                
+            }
+        }
+        return nums;
+    }
+private:
+    bool is_even(int n){
+        return (n & 1) == 0;
+    }
+};
+```
+&emsp;&emsp; 书上的考点还有另一个：扩展性。如果需求变了，要求按大小排序了。要怎么做才能做到以后的扩展性更强呢？
+&emsp;&emsp; 书中的做法是写一个函数来判断数字是奇是偶，然后通过函数指针来调用它：
+```cpp
+class Solution {
+public:
+    // 这里修改了函数的形参，leecode不能运行。
+    vector<int> exchange(vector<int>& nums, bool(*compare)(int)) {
+        if(nums.size() == 0){
+            return nums;
+        }
+        auto start = nums.begin(), end = nums.end() - 1;
+        while(start < end){
+            if(!is_even(*start) && is_even(*end)){ // 奇偶，两个指针都往前(后)移动
+                ++start;
+                --end;
+            }else if(!is_even(*start) && !is_even(*end)){ // 奇奇，只有开头的指针需要往前移
+                ++start;
+            }else if(is_even(*start) && is_even(*end)){ // 偶偶，只有后面那个指针才要移动
+                --end;
+            }else if(is_even(*start) && !is_even(*end)){ // 偶奇，先交换，然后两个指针都移动
+                swap(*start, *end);
+                ++start;
+                --end;                
+            }
+        }
+        return nums;
+    }
+private:
+    bool compare(int n){
+        return (n & 1) == 0;
+    }
+};
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 22. 链表中倒数第k个节点
+## 1. 题目详情
+输入一个链表，输出该链表中倒数第k个节点。为了符合大多数人的习惯，本题从1开始计数，即链表的尾节点是倒数第`1`个节点。
+例如，一个链表有 `6` 个节点，从头节点开始，它们的值依次是 `1、2、3、4、5、6`。这个链表的倒数第 `3` 个节点是值为 `4` 的节点。
+示例：
+```
+给定一个链表: 1->2->3->4->5, 和 k = 2.
+
+返回链表 4->5.
+```
+
+## 2. 解答
+使用快慢指针，先让快指针走k步，然后两个指针同步走，当快指针走到头时，慢指针就是链表倒数第k个节点。
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* getKthFromEnd(ListNode* head, int k) {
+        size_t n = 0;
+        ListNode *pre = head, *post =head;
+        while(n++ < k-1)
+            post = post->next;
+        while(post->next != NULL){
+            post = post -> next;
+            pre = pre -> next;
+        }
+        return pre;
+    }
+};
+```
+看了书上的讲解，发现还有如下几点需要考虑：
+> (1) `head`指针没判空；
+> (2) 目标链表的长度可能小于`k`；
+> 
+代码改进如下：
+```cpp
+class Solution {
+public:
+    ListNode* getKthFromEnd(ListNode* head, int k) {
+        if(head == NULL) // 判空
+            return NULL;
+
+        size_t n = 0;
+        ListNode *pre = head, *post =head;
+        while(n++ < k-1 && post != NULL)
+            post = post->next;
+
+        // 若链表的长度小于k
+        if(post == NULL)
+            return NULL;
+
+        while(post->next != NULL){
+            post = post -> next;
+            pre = pre -> next;
+        }
+        return pre;
+    }
+};
+```
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题23：链表中环的入口结点
+这题Leecode没有，是在牛客网刷的
+## 1. 题目详情
+描述
+给一个长度为n链表，若其中包含环，请找出该链表的环的入口结点，否则，返回null。
+
+数据范围： `n≤10000，1<=结点值<=10000`
+要求：空间复杂度 `O(1)`，时间复杂度 `O(n)`
+
+例如，输入`{1,2},{3,4,5}`时，对应的环形链表如下图所示：
+```mermaid
+graph LR
+A[1] 
+    A --> B(2)
+
+    B --> C[3]
+    C --> D[4] 
+    D --> E[5]
+    E --> C      
+```
+可以看到环的入口结点的结点值为3，所以返回结点值为3的结点。
+输入描述：
+> 输入分为2段，第一段是入环前的链表部分，第二段是链表环的部分，后台会根据第二段是否为空将这两段组装成一个无环或者有环单链表
+> 
+返回值描述：
+> 返回链表的环的入口结点即可，我们后台程序会打印这个结点对应的结点值；若没有，则返回对应编程语言的空结点即可。
+> 
+示例1
+
+```
+输入：{1,2},{3,4,5}
+返回值：3
+说明：返回环形链表入口结点，我们后台程序会打印该环形链表入口结点对应的结点值，即3    
+```
+示例2
+```
+输入：{1},{}
+返回值："null"
+说明：没有环，返回对应编程语言的空结点，后台程序会打印"null"   
+```
+示例3
+```
+输入：{},{2}
+返回值：2
+说明： 环的部分只有一个结点，所以返回该环形链表入口结点，后台程序打印该结点对应的结点值，即2 
+```
+
+## 2. 解答
+### 2.1 书中的解法
+(1) 先通过快慢指针判断是否有环，并算出环内有几个节点`num`。
+> &emsp; 慢指针走一步，快指针走两步：
+> &emsp;&emsp; 当快慢指针第一次相遇的节点一定是在环内；
+> &emsp;&emsp; 若快指针到了`NULL`，说明目标链表没有环；
+> 
+(2) 再次使用快慢指针，快指针先走`num`步(环内节点的数量)，当快慢节点第一次相遇的时候就是环的入口节点。
+```cpp
+/*
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    ListNode(int x) :
+        val(x), next(NULL) {
+    }
+};
+*/
+class Solution {
+public:
+    ListNode* EntryNodeOfLoop(ListNode* pHead) {
+        if(pHead == NULL)
+            return NULL;
+        size_t loop_num  = HasLoop(pHead);
+        // 是否有环
+        if(loop_num == 0) 
+            return NULL;
+        
+        ListNode *ahead = pHead, *behind = pHead;
+        while(loop_num-- > 0)
+            ahead = ahead->next;
+        while(ahead != behind){
+            ahead = ahead->next;
+            behind = behind -> next;
+        }
+        return behind;
+    }
+private:
+    size_t HasLoop(ListNode* pHead){
+        ListNode *ahead = pHead, *behind = pHead;
+        size_t loop_num = 0;
+        while(ahead != NULL){
+            if(ahead == NULL || ahead->next == NULL || ahead->next->next == NULL)
+                return loop_num;            
+            ahead = (ahead -> next) -> next;
+            behind = behind -> next;
+            if(ahead == behind)
+                break;
+        }
+        // 计算环内的节点数量
+        do{
+            ahead = ahead->next;
+            ++loop_num;
+        }while(ahead != behind);
+            
+        cout << loop_num << endl;
+        return loop_num;
+    }
+};
+```
+### 2.2 牛客官方的解法
+TODO: 牛客有更好的解法，时间复杂度和上面一样都是`O(n)`，但是遍历的次数少一点。
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题24. 反转链表
+## 1. 题目
+定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。
+示例:
+```
+输入: 1->2->3->4->5->NULL
+输出: 5->4->3->2->1->NULL
+```
+限制：
+```
+0 <= 节点个数 <= 5000
+```
+
+## 2. 解答
+用三个指针即可做到只遍历一次：
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    typedef ListNode* Node;
+    ListNode* reverseList(ListNode* head) {
+        if(head == NULL || head->next == NULL)
+            return head;
+
+        Node pre = head, mid = head->next, post = (head->next)->next;
+        while(post != NULL){
+            mid->next = pre;
+            pre = mid;
+            mid = post;
+            post = post ->next;
+        }
+
+        mid->next = pre;
+        head->next = NULL;
+
+        return mid;
+    }
+};
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题25. 合并两个排序的链表
+## 1. 题目
+输入两个递增排序的链表，合并这两个链表并使新链表中的节点仍然是递增排序的。
+示例1：
+```
+输入：1->2->4, 1->3->4
+输出：1->1->2->3->4->4
+```
+限制：
+```
+0 <= 链表长度 <= 1000
+```
+
+## 2. 解答
+需要注意的地方：
+> 需要及时断开连接，而且要在断开要在最后做。
+> 
+```cpp
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        if(l1 == NULL)
+            return l2;
+        else if(l2 == NULL)
+            return l1;
+        
+        // 确保待返回的list的头结点是较小的那个
+        ListNode *cur1=l1, *cur2=l2, *list_ret=NULL;
+        if(cur1->val <= cur2->val){
+            list_ret = cur1;
+            cur1 = cur1 -> next;
+            list_ret -> next == NULL; // 刚开始的时候忘了断开了                        
+        }else{
+            list_ret = cur2;
+            cur2 = cur2 -> next;
+            list_ret -> next == NULL; 
+        }
+
+        ListNode * merged_list = list_ret;
+        while(cur1 != NULL && cur2 != NULL){
+            if(cur1->val <= cur2->val){
+                list_ret->next = cur1;
+                list_ret = list_ret->next;
+                cur1 = cur1 -> next;        
+                list_ret -> next == NULL;         
+            }else{
+                list_ret->next = cur2;
+                list_ret = list_ret->next;
+                cur2 = cur2 -> next;
+                list_ret -> next == NULL;                  
+            }
+        }
+
+        if(cur1 != NULL){
+            list_ret->next = cur1;
+            list_ret = list_ret->next;            
+        }else if(cur2 != NULL){
+            list_ret->next = cur2;
+            list_ret = list_ret->next;            
+        }else if(cur1 == NULL && cur2 == NULL){
+            list_ret->next = NULL;
+        }
+
+        return merged_list;
+    }
+};
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题29. 顺时针打印矩阵
+## 1. 题目
+输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。
+示例 1：
+```
+输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]
+输出：[1,2,3,6,9,8,7,4,5]
+```
+示例 2：
+```
+输入：matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+输出：[1,2,3,4,8,12,11,10,9,5,6,7]
+```
+限制：
+```
+0 <= matrix.length <= 100
+0 <= matrix[i].length <= 100
+```
+
+## 2. 解答
+TODO:思路对了，但是老是调不通
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题30. 包含min函数的栈
+## 题目详情
+定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 `min` 函数在该栈中，调用 `min`、`push` 及 `pop` 的时间复杂度都是 `O(1)`。
+示例:
+```
+MinStack minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+minStack.min();   --> 返回 -3.
+minStack.pop();
+minStack.top();      --> 返回 0.
+minStack.min();   --> 返回 -2.
+```
+提示：
+```
+各函数的调用总次数不超过 20000 次
+```
+
+## 2. 解答
+&emsp;&emsp; 看到这个问题，我们的第一反应可能是每次压入一个新元素进栈时，将栈里的所有元素排序，让最小的元素位于栈顶，这样就能在O（1）时间得到最小元素了。但这种思路不能保证最后压入栈的元素能够最先出栈，因此这个数据结构已经不是栈了。
+&emsp;&emsp; 我们接着想到在栈里添加一个成员变量存放最小的元素。每次压入一个新元素进栈的时候，如果该元素比当前最小的元素还要小，则更新最小元素。面试官听到这种思路之后就会问：如果当前最小的元素被弹出栈了，如何得到下一个最小的元素呢？
+&emsp;&emsp; 分析到这里我们发现仅仅添加一个成员变量存放最小元素是不够的，也就是说当最小元素被弹出栈的时候，我们希望能够得到次小元素。因此在压入这个最小元素之前，我们要把次小元素保存起来。
+&emsp;&emsp; 是不是可以把每次的最小元素（之前的最小元素和新压入栈的元素两者的较小值）都保存起来放到另外一个辅助栈里呢？我们不妨举几个例子来分析一下把元素压入或者弹出栈的过程（如下图所示）：
+&emsp;&emsp; 首先往空的数据栈里压入数字3，显然现在3是最小值，我们也把这个最小值压入辅助栈。接下来往数据栈里压入数字4。由于4大于之前的最小值，因此我们仍然往辅助栈里压入数字3。第三步继续往数据栈里压入数字2。由于2小于之前的最小值3，因此我们把最小值更新为2，并把2压入辅助栈。同样当压入数字1时，也要更新最小值，并把新的最小值1压入辅助栈。
+&emsp;&emsp; 从下图中我们可以看出，如果每次都把最小元素压入辅助栈，那么就能保证辅助栈的栈顶一直都是最小元素。当最小元素从数据栈内被弹出之后，同时弹出辅助栈的栈顶元素，此时辅助栈的新栈顶元素就是下一个最小值。比如第四步之后，栈内的最小元素是1。当第五步在数据栈内弹出1后，我们把辅助栈的栈顶弹出，辅助栈的栈顶元素2就是新的最小元素。接下来继续弹出数据栈和辅助栈的栈顶之后，数据栈还剩下3、4两个数字，3是最小值。此时位于辅助栈的栈顶数字正好也是3，的确是最小值。这说明我们的思路是正确的。
+<div align="center"><img src="./pic//JianZhiOffer/30.jpg" height="75%" width="75%" ></div>
+
+当我们想清楚上述过程之后，就可以写代码了：
+```cpp
+class MinStack {
+public:
+    /** initialize your data structure here. */
+    MinStack() {
+        /** 构造函数清空栈容器  */
+        while(!stk_main.empty()) {
+            stk_main.pop();
+        }
+        while(!stk_help.empty()) {
+            stk_help.pop();
+        }
+        /* 初始化最小栈的栈顶元素为最大值为了防止top访问空指针报错 */
+        stk_help.push(INT_MAX);
+    }
+    
+    void push(int x) {
+        stk_main.push(x);
+        if(stk_help.top() > x)
+            stk_help.push(x);
+        else
+            stk_help.push(stk_help.top());
+    }
+    
+    void pop() {
+        if(!stk_main.empty())
+            stk_main.pop();
+        if(!stk_help.empty())
+            stk_help.pop();
+    }
+    
+    int top() {
+        return stk_main.top();
+    }
+    
+    int min() {
+        return stk_help.top();
+    }
+private:
+    stack<int> stk_main;
+    stack<int> stk_help;
+};
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack* obj = new MinStack();
+ * obj->push(x);
+ * obj->pop();
+ * int param_3 = obj->top();
+ * int param_4 = obj->min();
+ */
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题31. 栈的压入、弹出序列
+## 1. 题目
+输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如，序列 {1,2,3,4,5} 是某栈的压栈序列，序列 {4,5,3,2,1} 是该压栈序列对应的一个弹出序列，但 {4,3,5,1,2} 就不可能是该压栈序列的弹出序列。
+
+ 
+
+示例 1：
+```
+输入：pushed = [1,2,3,4,5], popped = [4,5,3,2,1]
+输出：true
+解释：我们可以按以下顺序执行：
+push(1), push(2), push(3), push(4), pop() -> 4,
+push(5), pop() -> 5, pop() -> 3, pop() -> 2, pop() -> 1
+```
+示例 2：
+```
+输入：pushed = [1,2,3,4,5], popped = [4,3,5,1,2]
+输出：false
+解释：1 不能在 2 之前弹出。
+ ```
+提示：
+```
+0 <= pushed.length == popped.length <= 1000
+0 <= pushed[i], popped[i] < 1000
+pushed 是 popped 的排列。
+```
+## 2. 解答
+
