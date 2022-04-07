@@ -1533,10 +1533,7 @@ private:
 &emsp; 
 # 面试题31. 栈的压入、弹出序列
 ## 1. 题目
-输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如，序列 {1,2,3,4,5} 是某栈的压栈序列，序列 {4,5,3,2,1} 是该压栈序列对应的一个弹出序列，但 {4,3,5,1,2} 就不可能是该压栈序列的弹出序列。
-
- 
-
+&emsp;&emsp; 输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如，序列 {1,2,3,4,5} 是某栈的压栈序列，序列 {4,5,3,2,1} 是该压栈序列对应的一个弹出序列，但 {4,3,5,1,2} 就不可能是该压栈序列的弹出序列。
 示例 1：
 ```
 输入：pushed = [1,2,3,4,5], popped = [4,5,3,2,1]
@@ -1550,7 +1547,7 @@ push(5), pop() -> 5, pop() -> 3, pop() -> 2, pop() -> 1
 输入：pushed = [1,2,3,4,5], popped = [4,3,5,1,2]
 输出：false
 解释：1 不能在 2 之前弹出。
- ```
+```
 提示：
 ```
 0 <= pushed.length == popped.length <= 1000
@@ -1558,4 +1555,66 @@ push(5), pop() -> 5, pop() -> 3, pop() -> 2, pop() -> 1
 pushed 是 popped 的排列。
 ```
 ## 2. 解答
+借用一个辅助栈，可以做到时间复杂度为`O(n)`：
+```cpp
+class Solution {
+public:
+    bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {
+        if(pushed.size() != popped.size())
+            return false;
 
+        // 建立辅助栈并初始化
+        stack<int> st;
+        while(!st.empty())
+            st.pop();
+
+        size_t j = 0;
+        for(size_t i = 0; i < pushed.size(); ++i){
+            st.push(pushed[i]);
+            while(!st.empty()){
+                int tmp = st.top();
+                if(tmp == popped[j]){
+                    st.pop();
+                    ++j;
+                }else
+                    break;
+            }
+        }
+        while(!st.empty()){
+            if(st.top() == popped[j]){
+                ++j;
+                st.pop();
+            }else
+                return false;
+        }
+        return true;                    
+    }
+};
+```
+为防止忘记代码逻辑，可以在纸上推演一下以下几种情况：
+```
+[1,2,3,4,5]
+[4,5,3,2,1]
+
+[1,2,3,4,5]
+[4,3,5,1,2]
+
+[2,1,0]
+[1,2,0]
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题35. 复杂链表的复制
+## 1.题目详情
+&emsp;&emsp; 请实现 copyRandomList 函数，复制一个复杂链表。在复杂链表中，每个节点除了有一个 next 指针指向下一个节点，还有一个 random 指针指向链表中的任意节点或者 null。
+<div align="center"><img src="./pic//JianZhiOffer/35.jpg" height="80%" width="80%" ></div>
+
+## 2. 解答
+### 2.1 解法一：时间复杂度和空间复杂度均为`O(n)`
