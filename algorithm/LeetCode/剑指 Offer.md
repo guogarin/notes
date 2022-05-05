@@ -1617,4 +1617,182 @@ public:
 <div align="center"><img src="./pic//JianZhiOffer/35.jpg" height="80%" width="80%" ></div>
 
 ## 2. 解答
+&emsp;&emsp; 这题有两种解法,解题思路见：[复杂链表的复制（哈希表 / 拼接与拆分，清晰图解）](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/solution/jian-zhi-offer-35-fu-za-lian-biao-de-fu-zhi-ha-xi-/)
 ### 2.1 解法一：时间复杂度和空间复杂度均为`O(n)`
+&emsp; 借助哈希表，并对目标链表进行两次遍历，大致思路如下：
+> &emsp;&emsp; ① 使用一个哈希表`mp`来记录 新旧链表节点的对应关系；
+> &emsp;&emsp; ② 遍历旧链表，对`randan`以外的成员进行复制，并在遍历的过程中在`mp`中记录新旧链表节点的对应关系；
+> &emsp;&emsp; ③ 再次遍历链表，利用`mp`中新旧链表节点的对应关系，对`random`成员进行复制。
+> 
+```cpp
+/*
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    Node* next;
+    Node* random;
+    
+    Node(int _val) {
+        val = _val;
+        next = NULL;
+        random = NULL;
+    }
+};
+*/
+class Solution {
+public:
+    Node* copyRandomList(Node* head) {
+        if(head == NULL)
+            return head;
+
+        map<Node*, Node*> mp;
+        Node *curOld = head, *newHead = new Node(0); // 注意new的使用
+        Node *curNew = newHead, *preNew = NULL;
+        while(curOld != NULL){
+            curNew->val = curOld->val;
+            curNew->random = curOld->random;
+            mp[curOld] = curNew;
+            preNew = curNew;
+            if(curOld->next != NULL){
+                curNew = new Node(0);
+                preNew->next = curNew;            
+            }
+            curOld=curOld->next;
+        }
+        curNew = newHead;
+        while(curNew != NULL){
+            curNew->random = mp[curNew->random];
+            curNew = curNew->next;
+        }
+        return newHead;
+    }
+};
+```
+### 2.2 解法二：时间复杂度为`O(n)`，空间复杂度均为`O(1)`的解法
+.TODO:
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题38 字符串的排列
+## 1.题目详情
+&emsp;&emsp; 输入一个字符串，打印出该字符串中字符的所有排列。你可以以任意顺序返回这个字符串数组，但里面不能有重复元素。
+示例:
+```
+输入：s = "abc"
+输出：["abc","acb","bac","bca","cab","cba"]
+```
+限制：
+```
+1 <= s 的长度 <= 8
+```
+## 2. 解答
+TODO:
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 39. 数组中出现次数超过一半的数字
+## 1.题目详情
+&emsp;&emsp; 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。你可以假设数组是非空的，并且给定的数组总是存在多数元素。
+示例 1:
+```
+输入: [1, 2, 3, 2, 2, 2, 5, 4, 2]
+输出: 2
+```
+限制：
+```
+1 <= 数组长度 <= 50000
+```
+## 2. 解答
+### 2.1 几种解法的比较
+| 解法                 | 时间复杂度 | 空间复杂度 |
+| -------------------- | ---------- | ---------- |
+| 将目标数组排序       | `O(nlogn)` | `O(1)`     |
+| 哈希表法             | `O(n)`     | `O(n)`     |
+| `Boyer-Moore` 投票算法 | `O(n)`     | `O(1)`     |
+### 2.2 时间复杂度`O(n)`，空间复杂度`O(1)`的解法
+这个方法就是`Boyer-Moore`算法
+#### 2.2.1 思路
+&emsp;&emsp; 如果我们把众数记为 +1+1，把其他数记为 -1−1，将它们全部加起来，显然和大于 0，从结果本身我们可以看出众数比其他数多。
+#### 2.2.2 算法
+&emsp; `Boyer-Moore` 算法的本质和方法四中的分治十分类似。我们首先给出 `Boyer-Moore` 算法的详细步骤：
+> &emsp; (1) 我们维护一个候选众数 `candidate` 和它出现的次数 `count`。初始时 `candidate` 可以为任意值，`count` 为 `0`；
+> &emsp; (2) 遍历数组 `nums` 中的所有元素，对于每个元素 `x`，在判断 `x` 之前，如果 `count` 的值为 `0`，我们先将 `x` 的值赋予 `candidate`，随后我们判断 `x`：
+> &emsp;&emsp;&emsp; ① 如果 `x` 与 `candidate` 相等，那么计数器 `count` 的值增加 `1`；
+> &emsp;&emsp;&emsp; ② 如果 `x` 与 `candidate` 不等，那么计数器 `count` 的值减少 `1`。
+> &emsp; (3) 在遍历完成后，`candidate` 即为整个数组的众数。
+> 
+我们举一个具体的例子，例如下面的这个数组：
+```python
+[7, 7, 5, 7, 5, 1 | 5, 7 | 5, 5, 7, 7 | 7, 7, 7, 7]
+```
+在遍历到数组中的第一个元素以及每个在 `|` 之后的元素时，`candidate` 都会因为 `count` 的值变为 `0` 而发生改变。最后一次 `candidate` 的值从 `5` 变为 `7`，也就是这个数组中的众数。
+#### 2.2.3 代码实现
+```cpp
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        if(nums.size() == 0)
+            return 0;
+        int candidate = nums[0];
+        size_t count = 1;
+        for(size_t i = 1; i < nums.size(); ++i){
+            if(nums[i] == candidate)
+                ++count;
+            else{
+                --count;
+                if(count < 1){
+                    candidate = nums[i];
+                    count = 1;
+                }
+            }
+        }
+        return candidate;
+    }
+};
+```
+#### 2.2.4 复杂度分析
+**时间复杂度**：`O(n)`。Boyer-Moore 算法只对数组进行了一次遍历。
+**空间复杂度**：`O(1)`。Boyer-Moore 算法只需要常数级别的额外空间。
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 40. 最小的k个数
+输入整数数组 `arr` ，找出其中最小的 `k` 个数。例如，输入`4、5、1、6、2、7、3、8`这`8`个数字，则最小的`4`个数字是`1、2、3、4`。
+示例 1：
+```
+输入：arr = [3,2,1], k = 2
+输出：[1,2] 或者 [2,1]
+```
+示例 2：
+```
+输入：arr = [0,1,2,1], k = 1
+输出：[0]
+```
+限制：
+```
+0 <= k <= arr.length <= 10000
+0 <= arr[i] <= 10000
+```
+### 编写代码时遇到的问题
+如何用一个vector的前k个元素来构造一个新的vector？
+
+如何给一个vector排序？

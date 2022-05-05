@@ -1,0 +1,171 @@
+- [1. 基础](#1-基础)
+	- [1.1 在linux中，目录的本质是什么？](#11-在linux中目录的本质是什么)
+	- [1.2 根目录](#12-根目录)
+- [2. 挂载在根目录下的目录](#2-挂载在根目录下的目录)
+- [3. 详细介绍Linux目录](#3-详细介绍linux目录)
+	- [3.1 `/etc`文件系统](#31-etc文件系统)
+		- [3.1.1 /etc/rc或/etc/rc.d或/etc/rc?.d](#311-etcrc或etcrcd或etcrcd)
+		- [3.1.2 /etc/passwd](#312-etcpasswd)
+		- [3.1.3 /etc/fdprm](#313-etcfdprm)
+		- [3.1.4 /etc/fstab](#314-etcfstab)
+		- [3.1.5 /etc/group](#315-etcgroup)
+		- [3.1.6 /etc/inittab](#316-etcinittab)
+		- [3.1.7 /etc/issue](#317-etcissue)
+		- [3.1.8 /etc/magic](#318-etcmagic)
+		- [3.1.9 /etc/motd](#319-etcmotd)
+		- [3.1.10 /etc/mtab](#3110-etcmtab)
+		- [3.1.11 /etc/shadow](#3111-etcshadow)
+		- [3.1.12 /etc/login.defs](#3112-etclogindefs)
+		- [3.1.13 /etc/printcap](#3113-etcprintcap)
+		- [3.1.14 /etc/profile、/etc/csh.login、/etc/csh.cshrc](#3114-etcprofileetccshloginetccshcshrc)
+		- [3.1.15 /etc/securetty](#3115-etcsecuretty)
+		- [3.1.16 /etc/shells](#3116-etcshells)
+		- [3.1.17 /etc/termcap](#3117-etctermcap)
+	- [3.2 /dev文件系统](#32-dev文件系统)
+
+
+# 1. 基础
+## 1.1 在linux中，目录的本质是什么？
+&emsp;&emsp; “**`Linux`下一切皆文件**” 是`Linux`的基本哲学之一。换句话说，目录也是一种文件。
+
+## 1.2 根目录
+&emsp; `Linux`的目录系统中，根目录（即`/`）最为重要（没有之一），其原因有以下 2 点：
+> &emsp;&emsp; ① 所有目录都是由根目录衍生出来的；
+> &emsp;&emsp; ② 根目录与系统的开机、修复、还原密切相关；
+> 
+因此，根目录必须包含开机软件、核心文件、开机所需程序、函数库、修复系统程序等文件，
+
+
+
+&emsp;
+&emsp; 
+# 2. 挂载在根目录下的目录
+在命令行输入以下命令：
+```bash
+# -L 是限制目录层级
+[alpha@localhost /]$ tree / -L 1
+```
+得到如下结果：
+```
+/
+├── bin -> usr/bin
+├── boot
+├── dev
+├── etc
+├── home
+├── lib -> usr/lib
+├── lib64 -> usr/lib64
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── run
+├── sbin -> usr/sbin
+├── srv
+├── sys
+├── tmp
+├── usr
+└── var
+```
+上面这些都是一级目录，它的作用如下表：
+| 一级目录 | 对应的英文 | 功能（作用）                                                                                                                                                                                                          |
+| -------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| /bin/    |   Binaries (二进制文件)    | 存放系统命令，普通用户和 root 都可以执行。放在 /bin 下的命令在单用户模式下也可以执行                                                                                                                                  |
+| /boot/   |     boot(启动)       | 系统启动目录，保存与系统启动相关的文件，如内核文件和启动引导程序（grub）文件等                                                                                                                                        |
+| /dev/    |    evice(设备)         | 设备文件保存位置                                                                                                                                                                                                      |
+| /etc/    |     Etcetera(等等)      | 配置文件保存位置。系统内所有采用默认安装方式（rpm 安装）的服务配置文件全部保存在此目录中，如用户信息、服务的启动脚本、常用服务的配置文件等                                                                            |
+| /home/   |     home(家)       | 普通用户的主目录（也称为家目录）。在创建用户时，每个用户要有一个默认登录和保存自己数据的位置，就是用户的主目录，所有普通用户的主目录是在 /home/ 下建立一个和用户名相同的目录。如用户 liming 的主目录就是 /home/liming |
+| /lib/    |   Library(库)  | 系统调用的函数库保存位置                                                                                                                                                                                              |
+| /media/  |   media(媒体)         | 挂载目录。系统建议用来挂载媒体设备，如软盘和光盘                                                                                                                                                                      |
+| /mnt/    |   MouNT(挂载)         | 挂载目录。早期 Linux 中只有这一个挂载目录，并没有细分。系统建议这个目录用来挂载额外的设备，如 U 盘、移动硬盘和其他操作系统的分区                                                                                      |
+| /misc/   |            | 挂载目录。系统建议用来挂载 NFS 服务的共享目录。虽然系统准备了三个默认挂载目录 /media/、/mnt/、/misc/，但是到底在哪个目录中挂载什么设备可以由管理员自己决定。例如，Linux 在早先的时候，默认挂载目录只有 /mnt/|
+| /opt/    |   optional(可选)    | 第三方安装的软件保存位置。这个目录是放置和安装其他软件的位置，手工安装的源码包软件都可以安装到这个目录中。不过笔者还是习惯把软件放到 /usr/local/ 目录中，也就是说，/usr/local/ 目录也可以用来安装软件                 |
+| /proc/ | Processes(进程)  | /proc 是一种伪文件系统（也即虚拟文件系统），该目录中的数据并不保存在硬盘上，而是保存到内存中。主要保存系统的内核、进程、外部设备状态和网络状态等。如 /proc/cpuinfo 是保存 CPU 信息的，/proc/devices 是保存设备驱动的列表的，/proc/filesystems 是保存文件系统列表的，/proc/net 是保存网络协议信息的......|
+| /root/   |    root(超级用户)        | root 的主目录。普通用户主目录在 /home/ 下，root 主目录直接在“/”下                                                                                                                                                     |
+| /run/ |  |  是一个临时文件系统，存储系统启动以来的信息。当系统重启时，这个目录下的文件应该被删掉或清除。如果你的系统上有 /var/run 目录，应该让它指向 run。 |
+| /sbin/   | Superuser Binaries (超级用户的二进制文件)| 保存与系统环境设置相关的命令，只有 root 可以使用这些命令进行系统环境设置，但也有些命令可以允许普通用户查看                                                                                                            |
+| /srv/    | SeRVices(服务) | 服务数据目录。一些系统服务启动之后，可以在这个目录中保存所需要的数据                                                                                                                                                  |
+| /sys/ | SYStem(系统) | 虚拟文件系统。和 /proc/ 目录相似，该目录中的数据都保存在内存中，主要保存与内核相关的信息 |
+| /tmp/    | temporary(临时) | 临时目录。系统存放临时文件的目录，在该目录下，所有用户都可以访问和写入。建议此目录中不能保存重要数据，最好每次开机都把该目录清空                                                                                      |
+| /usr/ | unix shared resources(共享资源)  | |
+| /var/ | VARiable(变量)  | 这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。 |
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 3. 详细介绍Linux目录
+## 3.1 `/etc`文件系统
+&emsp;&emsp; /etc目录包含各种系统配置文件，下面说明其中的一些。其他的你应该知道它们属于哪个程序，并阅读该程序的man页。许多网络配置文件也在/etc中。
+### 3.1.1 /etc/rc或/etc/rc.d或/etc/rc?.d
+启动、或改变运行级时运行的脚本或脚本的目录。
+### 3.1.2 /etc/passwd
+&emsp;&emsp; 用户数据库，其中的域给出了用户名、真实姓名、用户起始目录、加密口令和用户的其他信息。
+### 3.1.3 /etc/fdprm
+&emsp;&emsp; 软盘参数表，用以说明不同的软盘格式。可用setfdprm进行设置。更多的信息见setfdprm的帮助页。
+### 3.1.4 /etc/fstab
+&emsp;&emsp; 指定启动时需要自动安装的文件系统列表。也包括用swapon-a启用的swap区的信息。
+### 3.1.5 /etc/group
+&emsp;&emsp; 类似/etc/passwd，但说明的不是用户信息而是组的信息。包括组的各种数据。
+### 3.1.6 /etc/inittab
+&emsp;&emsp; init的配置文件。
+### 3.1.7 /etc/issue
+&emsp;&emsp; 包括用户在登录提示符前的输出信息。通常包括系统的一段短说明或欢迎信息。具体内容由系统管理员确定。
+### 3.1.8 /etc/magic
+&emsp;&emsp; “file”的配置文件。包含不同文件格式的说明，“file”基于它猜测文件类型。
+### 3.1.9 /etc/motd
+&emsp;&emsp; motd是messageoftheday的缩写，用户成功登录后自动输出。内容由系统管理员确定。常用于通告信息，如计划关机时间的警告等。
+### 3.1.10 /etc/mtab
+&emsp;&emsp; 当前安装的文件系统列表。由脚本(scritp)初始化，并由mount命令自动更新。当需要一个当前安装的文件系统的列表时使用(例如df命令)。
+### 3.1.11 /etc/shadow
+&emsp;&emsp; 在安装了影子(shadow)口令软件的系统上的影子口令文件。影子口令文件将/etc/passwd文件中的加密口令移动到/etc/shadow中，而后者只对超级用户(root)可读。这使破译口令更困难，以此增加系统的安全性。
+### 3.1.12 /etc/login.defs
+&emsp;&emsp; login命令的配置文件。
+### 3.1.13 /etc/printcap
+&emsp;&emsp; 类似/etc/termcap，但针对打印机。语法不同。
+### 3.1.14 /etc/profile、/etc/csh.login、/etc/csh.cshrc
+&emsp;&emsp; 登录或启动时bourne或cshells执行的文件。这允许系统管理员为所有用户建立全局缺省环境。
+### 3.1.15 /etc/securetty
+&emsp;&emsp; 确认安全终端，即哪个终端允许超级用户(root)登录。一般只列出虚拟控制台，这样就不可能(至少很困难)通过调制解调器(modem)或网络闯入系统并得到超级用户特权。
+### 3.1.16 /etc/shells
+&emsp;&emsp; 列出可以使用的shell。chsh命令允许用户在本文件指定范围内改变登录的shell。提供一台机器ftp服务的服务进程ftpd检查用户shell是否列在/etc/shells文件中，如果不是，将不允许该用户登录。
+### 3.1.17 /etc/termcap
+&emsp;&emsp; 终端性能数据库。说明不同的终端用什么“转义序列”控制。写程序时不直接输出转义序列(这样只能工作于特定品牌的终端)，而是从/etc/termcap中查找要做的工作的正确序列。这样，多数的程序可以在多数终端上运行。
+
+## 3.2 /dev文件系统
+&emsp;&emsp; 
+
+
+https://zhuanlan.zhihu.com/p/45176704
+https://zhuanlan.zhihu.com/p/381747912
+https://www.runoob.com/linux/linux-system-contents.html
+
+
+
+```mermaid
+graph LR
+A[根目录' \ '] 
+    A --> B()
+    A --> C()
+    A --> D()
+    A --> E()
+    A --> F()
+    A --> G()
+    A --> H()
+    A --> I()
+    A --> J()
+    A --> K()
+    A --> L()
+    A --> M()
+    A --> O()
+    A --> P()
+    A --> Q()
+    A --> R()
+    A --> S()
+    A --> T()
+    A --> U()
+```

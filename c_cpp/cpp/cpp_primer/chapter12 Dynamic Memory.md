@@ -149,7 +149,11 @@ int *pi = new int;          // int是内置类型，因此pi指向一个未初�
 string *ps = new string;    // string是类，将调用其默认构造函数进行初始化，因此ps为空string
 ```
 ### 1.4 如何初始化new出来的对象？
-&emsp;&emsp; 可以使用 直接初始化、传统的构造方式(用圆括号)、列表初始化（花括号，C++11标准）：
+&emsp; 可以使用如下几种方式来初始化：
+> &emsp;&emsp; ① 直接初始化；
+> &emsp;&emsp; ② 传统的构造方式(用圆括号)；
+> &emsp;&emsp; ③ 列表初始化（花括号，C++11标准）
+> 
 ```cpp
 int *pi = new int(1024);    // 直接初始化
 vector<int> * pvec = new vector<int>{1, 2, 3, 4, 5, 6}; // 列表初始化
@@ -161,6 +165,23 @@ string *ps2 = new string();     // 值初始化为空string
 
 int * pi1 = new int;    // 默认初始化，*pi1的值是未定义的
 int * pi2 = new int();  // 值初始化为0
+
+/*自定义类型*/
+class Node {
+public:
+    int val;
+    Node* next;
+    Node* random;
+    
+    Node(int _val) {
+        val = _val;
+        next = NULL;
+        random = NULL;
+    }
+};
+
+Node *node1 = new Node(); // 错误，因为Node类没有默认构造函数
+Node *node2 = new Node(0); // 正确，调用构造函数来构造Node对象，并用0来初始化val成员变量。
 ```
 **注意：**
 >① 对于类类型，是否通过圆括号来要求编译器对其进行值初始化没有什么区别，因为不管不怎么样编译器都会调用其默认构造函数来对其进行初始化；
