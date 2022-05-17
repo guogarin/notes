@@ -155,7 +155,7 @@ $ git merge
 ```bash
 $ git pull
 ```
-换句话说，`pull=fetch+merge`，pull的话，下拉远程分支并与本地分支合并。fetch只是下拉远程分支，怎么合并，可以自己再做选择。
+换句话说，`pull=fetch + merge`，`pull`的话，下拉远程分支并与本地分支合并。`fetch`只是下拉远程分支，怎么合并，可以自己再做选择。
 
 ## 5. 查询
 ```bash
