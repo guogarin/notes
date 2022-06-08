@@ -200,8 +200,8 @@
     - [2. 如何使用 优先级队列？](#2-如何使用-优先级队列)
   - [Item 74: Consider memoryview and bytearray for Zero-Copy Interactions with bytes(考虑使用 `memoryview`和`bytearray` 来实现 零拷贝的`bytes`操作)](#item-74-consider-memoryview-and-bytearray-for-zero-copy-interactions-with-bytes考虑使用-memoryview和bytearray-来实现-零拷贝的bytes操作)
     - [1. 缓冲协议(buffer protocol)](#1-缓冲协议buffer-protocol)
-      - [.1 缓冲协议 的作用是？](#1-缓冲协议-的作用是)
-      - [2.2 哪些对象支持缓冲协议？](#22-哪些对象支持缓冲协议)
+      - [1.1 缓冲协议 的作用是？](#11-缓冲协议-的作用是)
+      - [1.2 哪些对象支持缓冲协议？](#12-哪些对象支持缓冲协议)
     - [2. 内存视图`memoryview`](#2-内存视图memoryview)
       - [2.1 `memoryview`的作用是？](#21-memoryview的作用是)
       - [2.2 如何使用 `memoryview`？](#22-如何使用-memoryview)
@@ -2919,8 +2919,67 @@ print(state_after.__dict__)
 &emsp;&emsp; 可以看到的是，从文件中`pickle`出来的`GameState`对象是没有`points`属性的。
 
 ### 2. 如何解决上面的问题？
-&emsp;&emsp; 利用`copyreg`模块可以解决上面的问题，具体做法直接翻书。
+&emsp;&emsp; 利用`copyreg`模块可以解决上面的问题，
+&emsp;&emsp; 修改构造函数，将所有的类属性都赋予默认值，保证`unpickle`操作还原的`GameState`对象总是具备应有的属性：
+```python
+class GameState:
+    def __init__(self, level=0, lives=4, points=0):
+        self.level = level
+        self.lives = lives
+        self.points = points
+```
+要想用这个带默认实参的构造函数 做`pickle`，应该定义如下的辅助函数：
+> ① 此函数接收一个`GameState`对象，并把该对象转换为一个元组；
+> ② 该元组的第一个元素是负责处理`unpickle`操作的函数；第二个元组本身也是一个元组，用来表示哪个函数所接收的参数。
+```python
+def pickle_game_state(game_state):
+    kwargs = game_state.__dict__
+    return unpickle_game_state, (kwargs,)
+```
+然后是另一个辅助函数，这个函数负责接收上面那个辅助函数`pickle_game_state()`所返回的`kwargs`参数，并用这些参数里面的序列化数据来构造`GameState`对象：
+```python
+def unpickle_game_state(kwargs):
+    return GameState(**kwargs)
+```
+现在，我们使用`copyreg`模块来注册这两个函数：
+```python
+import copyreg
 
+copyreg.pickle(GameState, pickle_game_state)
+```
+注册之后，我们就能正确的序列化和反序列化`GameState`对象了
+```python
+import copyreg
+import pickle
+
+class GameState:
+    def __init__(self, level=0, lives=4, points=0):
+        self.level = level
+        self.lives = lives
+        self.points = points
+
+def pickle_game_state(game_state):
+    kwargs = game_state.__dict__
+    return unpickle_game_state, (kwargs,)
+
+def unpickle_game_state(kwargs):
+    return GameState(**kwargs)
+
+# 注册
+copyreg.pickle(GameState, pickle_game_state)            
+
+
+state = GameState()
+state.points += 1000
+serialized = pickle.dumps(state)
+state_after = pickle.loads(serialized)
+print(state_after.__dict__)
+```
+输出结果：
+```
+{'level': 0, 'lives': 4, 'points': 1000}
+```
+TODO: 还有一部分没做笔记
 
 
 
@@ -3216,11 +3275,11 @@ class Book:
 &emsp;
 ## Item 74: Consider memoryview and bytearray for Zero-Copy Interactions with bytes(考虑使用 `memoryview`和`bytearray` 来实现 零拷贝的`bytes`操作)
 ### 1. 缓冲协议(buffer protocol)
-#### .1 缓冲协议 的作用是？
+#### 1.1 缓冲协议 的作用是？
 &emsp;&emsp; 缓冲区协议 允许一个对象公开其内部数据(缓冲区)，而另一个对象可以访问这些缓冲区而无需中间复制。
 &emsp;&emsp; 但我们只能在C-API级别上访问此协议，而不能使用我们的常规代码库。因此，为了将相同的协议公开给普通的Python代码库，需要使用内存视图。
 
-#### 2.2 哪些对象支持缓冲协议？
+#### 1.2 哪些对象支持缓冲协议？
 &emsp;&emsp; 内建类型`bytes` 和 `bytearray`，扩展类型 `array.array`都支持。
 &emsp;&emsp; 第三方库也可能会为了特殊的目的而定义它们自己的类型，例如用于图像处理和数值分析等。
 
