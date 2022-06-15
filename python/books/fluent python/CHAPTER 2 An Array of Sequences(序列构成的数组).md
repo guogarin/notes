@@ -6,6 +6,15 @@
   - [2.1 `+=` 和 `*=` 对应的魔术方法是？](#21--和--对应的魔术方法是)
   - [2.2 `a += b`会调用哪个方法？](#22-a--b会调用哪个方法)
   - [2.3](#23)
+- [3 `list.sort`方法 和 内置函数`sorted`](#3-listsort方法-和-内置函数sorted)
+  - [3.1 `list.sort`方法 和 内置函数`sorted` 是就地排序还是返回一个新的列表？](#31-listsort方法-和-内置函数sorted-是就地排序还是返回一个新的列表)
+  - [3.2 `key`参数](#32-key参数)
+- [4. 用`bisect`模块管理已排序的序列](#4-用bisect模块管理已排序的序列)
+  - [4.1 `bisect`模块提供了什么操作？](#41-bisect模块提供了什么操作)
+  - [4.2 `bisect`模块 主要提供哪些函数？](#42-bisect模块-主要提供哪些函数)
+  - [4.3 使用实例](#43-使用实例)
+- [5. 当列表不是首选时](#5-当列表不是首选时)
+  - [5.1](#51)
 
 
 
@@ -127,3 +136,70 @@ l4: [1, 2, 3, ['@@', 'b', 'c'], 1, 2, 3, ['@@', 'b', 'c'], 1, 2, 3, ['@@', 'b', 
 
 ## 2.3 
 
+
+
+
+
+
+&emsp; 
+&emsp;  
+# 3 `list.sort`方法 和 内置函数`sorted`
+## 3.1 `list.sort`方法 和 内置函数`sorted` 是就地排序还是返回一个新的列表？
+他俩有些不一样：
+&emsp;&emsp; `list.sort`方法会就地排序列表， 也就是说不会把原列表复制一份。 这也是这个方法的返回值是 `None` 的原因， 提醒你本方法不会新建一个列表。 在这种情况下返回 `None` 其实是 Python 的一个惯例： 如果一个函数或者方法对对象进行的是就地改动， 那它就应该返回 `None`， 好让调用者知道传入的参数发生了变动， 而且并未产生新的对象。 例如， `random.shuffle`函数也遵守了这个惯例。
+&emsp;&emsp; 内置函数`sorted`会新建一个列表作为返回值。
+
+## 3.2 `key`参数
+
+
+
+
+
+
+&emsp; 
+&emsp;  
+# 4. 用`bisect`模块管理已排序的序列
+## 4.1 `bisect`模块提供了什么操作？
+&emsp; &emsp;  `bisect`是一个内置模块，它为数组提供了`bisection algorith(二分法`)查找算法。
+
+## 4.2 `bisect`模块 主要提供哪些函数？
+看了下`bisect`模块的源码(3.10版本)，它包含了如下4个函数：
+> ① `bisect.bisect_left(a, x, lo=0, hi=len(a), *, key=None)` :
+> > > &emsp; &emsp;  在 `a` 中找到 `x` 合适的插入点以维持有序。参数 `lo` 和 `hi` 可以被用于确定需要考虑的子集；默认情况下整个列表都会被使用。如果 `x` 已经在 `a` 里存在，那么插入点会在已存在元素之前（也就是左边）。
+> 
+> ② `bisect.bisect_right(a, x, lo=0, hi=len(a), *, key=None)` :
+> > > &emsp; &emsp;  类似于 `bisect_left()`，但是返回的插入点是 `a` 中已存在元素 `x` 的右侧。
+> 
+> ③ `bisect.insort_left(a, x, lo=0, hi=len(a), *, key=None)` :
+> > > &emsp; &emsp; 按照已排序顺序将 `x` 插入到 `a` 中已存在元素 `x` 的坐侧。
+> 
+> ④ `bisect.insort_right(a, x, lo=0, hi=len(a), *, key=None)` :
+> > > &emsp; &emsp; 类似于 `insort_left()`，但是把 `x` 插入到 `a` 中已存在元素 `x` 的右侧。
+> 
+至于`bisect()` 和 `insort()`，他们都只是别名而已：
+```python
+# 下面是部分源码：
+
+# Create aliases
+bisect = bisect_right
+insort = insort_right
+```
+
+## 4.3 使用实例
+```python
+
+```
+运行结果：
+```
+
+```
+
+
+
+
+
+
+&emsp; 
+&emsp;  
+# 5. 当列表不是首选时
+## 5.1 
