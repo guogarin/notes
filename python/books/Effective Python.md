@@ -64,7 +64,7 @@
     - [1. 字典的`key`是否有序？](#1-字典的key是否有序)
     - [2. 为什么不能总是假设所有的字典都能保留键值对插入时的顺序？](#2-为什么不能总是假设所有的字典都能保留键值对插入时的顺序)
       - [2.2 如何解决这个问题呢？](#22-如何解决这个问题呢)
-  - [Item 16: Prefer get Over in and KeyError to Handle Missing Dictionary Keys(用`get`处理键不在字典里的情况，而不是`in`和`KeyError`)](#item-16-prefer-get-over-in-and-keyerror-to-handle-missing-dictionary-keys用get处理键不在字典里的情况而不是in和keyerror)
+  - [Item 16: Prefer `get()` Over `in` and `KeyError` to Handle Missing Dictionary Keys(用`get`处理键不在字典里的情况，而不是`in`和`KeyError`)](#item-16-prefer-get-over-in-and-keyerror-to-handle-missing-dictionary-keys用get处理键不在字典里的情况而不是in和keyerror)
     - [1. 有哪些方法 可以处理 key不在字典里的情况？](#1-有哪些方法-可以处理-key不在字典里的情况)
     - [2. 更推荐哪种方法？为什么？](#2-更推荐哪种方法为什么)
       - [2.1 先说结论](#21-先说结论)
@@ -1004,13 +1004,13 @@ def get_winner(ranks):
 &emsp;
 &emsp;
 &emsp;
-## Item 16: Prefer get Over in and KeyError to Handle Missing Dictionary Keys(用`get`处理键不在字典里的情况，而不是`in`和`KeyError`)
+## Item 16: Prefer `get()` Over `in` and `KeyError` to Handle Missing Dictionary Keys(用`get`处理键不在字典里的情况，而不是`in`和`KeyError`)
 ### 1. 有哪些方法 可以处理 key不在字典里的情况？
 ① 用`if/else`和`in`表达式；
 ② 利用 `KeyError`异常；
 ③ 用`dict.get(key, default_value)`来完成
 &emsp;&emsp; 当对`dict`进行`get()`时，若`key`不在将返回`None`，我们可以对其设一个默认值来处理`key`不在的情况。
-④ `setdefaultt(key, default=None)`方法
+④ `dict.setdefaultt(key, default=None)`方法
 &emsp;&emsp; 内置的`dict`类型 提供了`setdefault`方法，这个方法会先查询字典里是否有这个key，如果有就返回对应的值，没有的话就给它一个默认值(默认是`None`)。
 
 ### 2. 更推荐哪种方法？为什么？
@@ -1105,7 +1105,7 @@ names.append(who)
 &emsp;
 &emsp;
 ## Item 17: Prefer defaultdict Over setdefault to Handle Missing Items in Internal State(用`defaultdict`处理缺失的元素，而不是`setdefault`)
-&emsp;&emsp; `Item 17`提到的四种方法适合用在字典不是自己创建的情况，如果字典是自己创建的，那么 内置模块`collections` 提供的 `defaultdict`类 可以轻松解决问题。
+&emsp;&emsp; `Item 16`提到的四种方法适合用在字典不是自己创建的情况，如果字典是自己创建的，那么 内置模块`collections` 提供的 `defaultdict`类 可以轻松解决问题。
 ```python
 # --coding:utf8--
 from collections import defaultdict
@@ -1182,7 +1182,7 @@ def open_picture(profile_path):
         raise
 
 
-class Pictures(dict): # 注意，重载的是内置的dict
+class Pictures(dict): # 注意，继承的是内置的dict
     def __missing__(self, key):
         value = open_picture(key)
         self[key] = value
