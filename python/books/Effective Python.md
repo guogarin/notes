@@ -1057,12 +1057,11 @@ counters[key] = count + 1
 &emsp;&emsp; 如果需求变了，这次不仅要记录得票数，还要记录投票的人，因此我们需要用一个列表关联起来：
 ```python
 votes = {
-'baguette': ['Bob', 'Alice'],
-'ciabatta': ['Coco', 'Deb'],
+    'baguette': ['Bob', 'Alice'],
+    'ciabatta': ['Coco', 'Deb'],
 }
 key = 'brioche'
 who = 'Elmer'
-
 ```
 **① 用`if/else`和`in`表达式；**
 ```python

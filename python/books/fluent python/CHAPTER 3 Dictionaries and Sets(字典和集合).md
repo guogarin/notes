@@ -6,7 +6,12 @@
   - [2.2 什么样的数据类型是 可哈希的？](#22-什么样的数据类型是-可哈希的)
     - [2.2.1 官方文档](#221-官方文档)
   - [2.3 内建类型哪些是可哈希的？](#23-内建类型哪些是可哈希的)
-- [3.](#3)
+- [3. `UserDict`](#3-userdict)
+  - [3.1 `UserDict`的作用是？](#31-userdict的作用是)
+  - [在实现映射类型(mapping type)时，更建议继承`UserDict`，而不是内置`dict`？](#在实现映射类型mapping-type时更建议继承userdict而不是内置dict)
+- [4. 不可修改的映射类型](#4-不可修改的映射类型)
+  - [4.1 标准库有哪些 不可修改的映射类型？](#41-标准库有哪些-不可修改的映射类型)
+  - [4.2 如何使用不可修改的映射类型？](#42-如何使用不可修改的映射类型)
 
 
 
@@ -102,5 +107,58 @@ TypeError: unhashable type: 'list'
 &emsp;
 &emsp;
 &emsp;
-# 3. 
+# 3. `UserDict`
+## 3.1 `UserDict`的作用是？
+
+## 在实现映射类型(mapping type)时，更建议继承`UserDict`，而不是内置`dict`？
+&emsp; 建议继承 `UserDict` 而不是从 dict 继承的主要原因是：
+> &emsp;&emsp; 内置`dict`的有些方法在实现的时候走一些捷径，如果我们继承内置`dict`，这导致我们不得不要在子类中重写这些方法。但是如果继承`UserDict`，我们就可以直接继承而不需要重写这些方法。
+> 
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# 4. 不可修改的映射类型
+## 4.1 标准库有哪些 不可修改的映射类型？
+&emsp;&emsp; 标准库里所有的映射类型都是可变的。
+## 4.2 如何使用不可修改的映射类型？
+&emsp;&emsp; 从 Python 3.3 开始， `types`模块中引入了一个封装类名叫 `MappingProxyType`。 如果给这个类一个映射，它会返回一个只读的映射视图。 虽然是个只读视图， 但是它是动态的。 这意味着如果对原映射做出了改动， 我们通过这个视图可以观察到， 但是无法通过这个视图对原映射做出修改。 示例如下：
+```python
+from types import MappingProxyType
+
+# 首先，先把字典建好，里面的内容也写好
+d = {
+    1 : 'A',
+    2 : 'B',
+    3 : 'C',
+}
+# 然后，把建好的字典传给 MappingProxyType，它会返回一个映射视图
+d_proxy = MappingProxyType(d)
+
+# 现在可以使用了
+print(f'd_proxy : {d_proxy}\n')
+
+print(f'd_proxy[2] : {d_proxy[2]}\n')
+
+# 尝试通过映射视图修改字典
+d_proxy[2] = "TTT"
+```
+运行结果：
+```
+d_proxy : {1: 'A', 2: 'B', 3: 'C'}
+
+d_proxy[2] : B
+
+Traceback (most recent call last):
+  File "d:\code_practice\practice.py", line 14, in <module>
+    d_proxy[2] = "TTT"
+TypeError: 'mappingproxy' object does not support item assignment
+```
+
+
 
