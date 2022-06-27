@@ -9,7 +9,10 @@
     - [2. `python`的`bytes`和`str` 分别表示的是什么？](#2-python的bytes和str-分别表示的是什么)
       - [2.1 `bytes`](#21-bytes)
       - [2.2 `str`](#22-str)
-    - [3.  `bytes`和`str`之间如何转换？](#3--bytes和str之间如何转换)
+    - [3.  `bytes`和`str`之间的转换](#3--bytes和str之间的转换)
+      - [3.1 编码 和 解码 分别表示什么？](#31-编码-和-解码-分别表示什么)
+      - [3.2 编码和解码的概念很容易混淆，应该如何记忆？](#32-编码和解码的概念很容易混淆应该如何记忆)
+      - [3.3 `bytes`和`str`之间如何转换？](#33-bytes和str之间如何转换)
     - [4. 对于`bytes`数据，为什么 `print()`和`list()`出来的数据不一样呢？](#4-对于bytes数据为什么-print和list出来的数据不一样呢)
     - [5. `bytes`和`str`的兼容性](#5-bytes和str的兼容性)
     - [6. 读写文件](#6-读写文件)
@@ -279,13 +282,18 @@ str_tmp = 'a\u0300 propos'  # str
 &emsp;&emsp; 前面已经提到，`bytes`里存的是原始数据，它的存在形式是`01010001110`这种。我们无论是在写代码，还是阅读文章的过程中，肯定不会有人直接阅读这种比特流，它必须有一个编码方式，使得它变成有意义的比特流，而不是一堆晦涩难懂的`01`组合。
 &emsp;&emsp; 和`bytes`相对的是，`str` 中包含的是表示人类语言文本字符的`Unicode`数据，这样人们看的时候就方便了。
 
-### 3.  `bytes`和`str`之间如何转换？
-> 要将`Unicode`数据转换为二进制数据，必须调用str的`encode`方法。
-> 要将二进制数据转换为`Unicode`，必须调用bytes的 `decode` 方法
-> 
+### 3.  `bytes`和`str`之间的转换
+#### 3.1 编码 和 解码 分别表示什么？
+编码(encode) : 人类可读的文本 --→ 字节序列
+解码 (decode): 字节序列 --→ 人类可读的文本
+#### 3.2 编码和解码的概念很容易混淆，应该如何记忆？
 其实可以这么理解：
 > `str`保存的是人能看懂的数据，因此`str`到`bytes`的转换就是 加密(encode)；
 > `bytes`保存的是人看不懂的二进制数据，因此`bytes`到`str`的转换就是 解密(decode)。
+> 
+#### 3.3 `bytes`和`str`之间如何转换？
+> 要将`Unicode`数据转换为二进制数据，必须调用str的`encode`方法。
+> 要将二进制数据转换为`Unicode`，必须调用bytes的 `decode` 方法
 > 
 书中有这样一句话是：
 > &emsp;&emsp; Importantly, str instances do not have an associated binary encoding, and bytes instances do not have an associated text encoding.（str实例没有相关联的二进制编码，而bytes实例也没有相关联的文本编码）
