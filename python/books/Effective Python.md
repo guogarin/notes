@@ -63,6 +63,7 @@
       - [2.1 利用 元组 来实现](#21-利用-元组-来实现)
       - [2.2 多次调用`sort()`](#22-多次调用sort)
       - [2.3 如果多个条件中，我们希望一个条件排正序，一个排倒序，应该怎么做？](#23-如果多个条件中我们希望一个条件排正序一个排倒序应该怎么做)
+    - [3. `operator`模块中`itemgetter`和`attrgetter`](#3-operator模块中itemgetter和attrgetter)
   - [Item 15: Be Cautious When Relying on dict Insertion Ordering(不要过分依赖给字典添加条目时所用的顺序)](#item-15-be-cautious-when-relying-on-dict-insertion-ordering不要过分依赖给字典添加条目时所用的顺序)
     - [1. 字典的`key`是否有序？](#1-字典的key是否有序)
     - [2. 为什么不能总是假设所有的字典都能保留键值对插入时的顺序？](#2-为什么不能总是假设所有的字典都能保留键值对插入时的顺序)
@@ -972,6 +973,45 @@ print(tools)
 **① 用元组**
 &emsp;&emsp; 如果这多个条件中有一个是数字，可以通过对为数字的条件取倒数来完成
 **② 多次调用`sort()`，对需要逆序的那个用`reverse=True`参数来指定逆序。**
+
+### 3. `operator`模块中`itemgetter`和`attrgetter`
+`operator`模块中`itemgetter`和`attrgetter`可以取代`lambda`函数，简化代码的编写，如：
+```python
+from operator import itemgetter
+
+metro_data = [
+    ['Tokyo', 'JP', 36.933, (35.689722, 139.691667)],
+    ['Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)],
+    ['Mexico City', 'MX', 20.142, (19.433333, -99.133333)],
+    ['New York-Newark', 'US', 20.104, (40.808611, -74.020386)],
+    ['Sao Paulo', 'BR', 19.649, (-23.547778, -46.635833)],
+]
+
+print("用itemgetter:")
+for city in sorted(metro_data, key=itemgetter(1)):
+    print(city)
+
+print("\n用lambda:")
+for city in sorted(metro_data, key=lambda x : x[1]):
+    print(city)    
+```
+运行结果：
+```
+用itemgetter:
+['Sao Paulo', 'BR', 19.649, (-23.547778, -46.635833)]
+['Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)]
+['Tokyo', 'JP', 36.933, (35.689722, 139.691667)]
+['Mexico City', 'MX', 20.142, (19.433333, -99.133333)]
+['New York-Newark', 'US', 20.104, (40.808611, -74.020386)]
+
+用lambda:
+['Sao Paulo', 'BR', 19.649, (-23.547778, -46.635833)]
+['Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)]
+['Tokyo', 'JP', 36.933, (35.689722, 139.691667)]
+['Mexico City', 'MX', 20.142, (19.433333, -99.133333)]
+['New York-Newark', 'US', 20.104, (40.808611, -74.020386)]
+```
+**如果想多标准排序，可以指定几个参数，让`itemgetter`返回一个元组，依次完成多标准排序**
 
 
 
