@@ -179,3 +179,4 @@ print( list( map(triple, range(6)) ) )
 24
 [0, 3, 6, 9, 12, 15]
 ```
+
