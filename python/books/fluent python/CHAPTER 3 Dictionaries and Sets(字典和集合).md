@@ -1,11 +1,7 @@
 - [1. `Mapping` 和 `MutableMapping`](#1-mapping-和-mutablemapping)
   - [1.1 他俩是什么？](#11-他俩是什么)
   - [1.2 他俩的作用是？](#12-他俩的作用是)
-- [2. 可哈希类型(hashable object)](#2-可哈希类型hashable-object)
-  - [2.1 什么是可哈希(Hashable)？](#21-什么是可哈希hashable)
-  - [2.2 什么样的数据类型是 可哈希的？](#22-什么样的数据类型是-可哈希的)
-    - [2.2.1 官方文档](#221-官方文档)
-  - [2.3 内建类型哪些是可哈希的？](#23-内建类型哪些是可哈希的)
+- [2.](#2)
 - [3. `UserDict`](#3-userdict)
   - [3.1 `UserDict`的作用是？](#31-userdict的作用是)
   - [在实现映射类型(mapping type)时，更建议继承`UserDict`，而不是内置`dict`？](#在实现映射类型mapping-type时更建议继承userdict而不是内置dict)
@@ -56,63 +52,7 @@ isinstance(my_dict, abc.Mapping)
 &emsp;
 &emsp;
 &emsp;
-# 2. 可哈希类型(hashable object)
-## 2.1 什么是可哈希(Hashable)？
-官方文档是这么说的：
-> &emsp;&emsp; An object is hashable if it has a hash value which never changes during its lifetime (it needs a `__hash__()` method), and can be compared to other objects (it needs an `__eq__()` method). Hashable objects which compare equal must have the same hash value.
-> 
-翻一下就是：
-> &emsp;&emsp; 如果一个对象是可哈希的， 那么在这个对象的生命周期中， 它的散列值是不变的， 而且这个对象需要实现 `__hash__()`方法。 另外可哈希对象还要有 `__eq__()`方法， 这样才能跟其他键做比较。 如果两个可哈希对象是相等的， 那么它们的哈希值一定是一样的。
-> 
-
-## 2.2 什么样的数据类型是 可哈希的？
-### 2.2.1 官方文档
-官方文档是这么说的：
-> &emsp;&emsp; ① Most of Python’s immutable built-in objects are hashable; mutable containers (such as lists or dictionaries) are not; immutable containers (such as tuples and frozensets) are only hashable if their elements are hashable. 
-> &emsp;&emsp; ② Objects which are instances of user-defined classes are hashable by default. They all compare unequal (except with themselves), and their hash value is derived from their `id()`.
-> 
-翻一下就是：
-> 
-> &emsp;&emsp; ① 在python的内建类型中，大部分不可变类型的都是可哈希的，可变类型(比如`list`和`dict`)都是不可哈希的。不可变类型只有在它包含的元素是可哈希时才是可哈希的(如`tuple`和`frozenset`)。
-> &emsp;&emsp; ② 一般情况下，用户自定义的类型的对象都是可散列的，它们的哈希值就是`id()`函数的返回值， 所以所有这些对象在比较的时候都是不相等的。 
-> 
-
-## 2.3 内建类型哪些是可哈希的？
-&emsp;&emsp; 首先，**可变类型**都是不可哈希的；
-&emsp;&emsp; 对于**不可变类型**，`str`、 `bytes` 和`number`都是可哈希的；而元组虽然也是不可变类型，但是元组里面的元素可能是其他可变类型的引用，而只有在元组里面包含的元素都是可哈希类型的时候，元组才是可哈希的。
-| 数据类型         | 是否可哈希                                                         |
-| ---------------- | ------------------------------------------------------------------ |
-| `list`           | 不可哈希，因为是可变类型                                           |
-| `dict`           | 不可哈希，因为是可变类型                                           |
-| `bytearray`      | 不可哈希，因为是可变类型                                           |
-| `set`      | 不可哈希，因为是可变类型                                           |
-| `str`            | 可哈希                                                             |
-| `bytes`          | 可哈希                                                             |
-| `number`         | 可哈希                                                             |
-| `tuple`          | 取决于元组内部的元素，若内部元素都可哈希，则可哈希；反之则不可哈希 |
-| 用户自定义的类型 | 一般情况下都是可散列的，它们的哈希值就是`id()`函数的返回值         |
-
-来看看实例：
-```python
-# 可哈希
-t1 = (1, 2, (30, 40))
-print(hash(t1))
-
-# 不可哈希，因为元组中包含了list
-t2 = (1, 2, [30, 40])
-print(hash(t2))
-```
-运行结果：
-```
--3907003130834322577
-Traceback (most recent call last):
-  File "d:\code_practice\practice.py", line 5, in <module>
-    print(hash(t2))
-TypeError: unhashable type: 'list'
-```
-
-
-
+# 2. 
 
 
 
