@@ -102,9 +102,6 @@
   - [Item 25: Enforce Clarity with Keyword-Only and Positional-Only Arguments(用 只能以关键字指定 和 只能按位置传入的参数 来设计清晰的参数列表)](#item-25-enforce-clarity-with-keyword-only-and-positional-only-arguments用-只能以关键字指定-和-只能按位置传入的参数-来设计清晰的参数列表)
     - [1. 只能通过关键字指定的参数(keyword-only argument)](#1-只能通过关键字指定的参数keyword-only-argument)
     - [2. 只能按位置传递的参数(Positional-Only Arguments)](#2-只能按位置传递的参数positional-only-arguments)
-      - [2.1 为什么需要？](#21-为什么需要)
-      - [2.2 如何使用？](#22-如何使用)
-    - [3. `*`和`/`同时出现在参数列表中时，它俩中间的参数必须按什么提供实参？](#3-和同时出现在参数列表中时它俩中间的参数必须按什么提供实参)
   - [Item 26: Define Function Decorators with functools.wraps(用`functools.wraps`定义函数装饰器)](#item-26-define-function-decorators-with-functoolswraps用functoolswraps定义函数装饰器)
 - [四、 Comprehensions and Generators(推导与生成)](#四-comprehensions-and-generators推导与生成)
   - [Item 27: Use Comprehensions Instead of map and filter(用列表推导来替代`map`和`filter`)](#item-27-use-comprehensions-instead-of-map-and-filter用列表推导来替代map和filter)
@@ -2494,8 +2491,7 @@ class Descriptor:
 &emsp;
 &emsp;
 ## Item 47: Use __getattr__, __getattribute__, and __setattr__ for Lazy Attributes(针对懒惰属性使用`__getattr__, __getattribute__, __setattr__`)
-&emsp;&emsp; 本节就是介绍了这三个特性，这些已在[类高级.md](grammar/10.%20类高级.md)中有详细的介绍。
-
+&emsp;&emsp; 本节就是介绍了这三个特性，这些已在[魔术方法和内置属性.md](../grammar/11.%20魔术方法和内置属性.md)中有详细的介绍。
 
 
 
