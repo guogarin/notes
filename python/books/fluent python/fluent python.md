@@ -6,6 +6,7 @@
   - [Vector类第3版： 动态存取属性](#vector类第3版-动态存取属性)
   - [Vector类第4版： 散列和快速等值测试](#vector类第4版-散列和快速等值测试)
 - [CHAPTER 11 Interfaces: From Protocols to ABCs(接口： 从协议到抽象基类)](#chapter-11-interfaces-from-protocols-to-abcs接口-从协议到抽象基类)
+- [CHAPTER 12 Inheritance: For Good or For Worse(继承的优缺点)](#chapter-12-inheritance-for-good-or-for-worse继承的优缺点)
 
 
 
@@ -163,4 +164,14 @@ def __eq__(self, other):
 &emsp;
 &emsp;
 # CHAPTER 11 Interfaces: From Protocols to ABCs(接口： 从协议到抽象基类)
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# CHAPTER 12 Inheritance: For Good or For Worse(继承的优缺点)
 
