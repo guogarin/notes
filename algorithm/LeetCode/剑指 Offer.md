@@ -1776,6 +1776,7 @@ public:
 &emsp;
 &emsp; 
 # 面试题 40. 最小的k个数
+## 1.题目详情
 输入整数数组 `arr` ，找出其中最小的 `k` 个数。例如，输入`4、5、1、6、2、7、3、8`这`8`个数字，则最小的`4`个数字是`1、2、3、4`。
 示例 1：
 ```
@@ -1796,3 +1797,165 @@ public:
 如何用一个vector的前k个元素来构造一个新的vector？
 
 如何给一个vector排序？
+
+## 2. 解答
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 42. 连续子数组的最大和
+## 1.题目详情
+输入一个整型数组，数组中的一个或连续多个整数组成一个子数组。求所有子数组的和的最大值。要求时间复杂度为`O(n)`。
+示例1:
+```
+输入: nums = [-2,1,-3,4,-1,2,1,-5,4]
+输出: 6
+解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。
+```
+提示：
+```
+1 <= arr.length <= 10^5
+-100 <= arr[i] <= 100
+```
+## 2. 解答
+### 2.1 第一次提交
+#### 2.1.1 遇到的问题
+获取最大值：
+int : max()
+vector : max_element(begin, end)，注意，它的返回值为一个 迭代器
+
+求和：accumulate()
+#### 2.1.2 代码
+```c++
+class Solution {
+private:
+    int maxSubN(vector<int>& nums, size_t n) {
+        auto itr = nums.begin() + n;
+        int maxSum = accumulate(nums.begin(), itr, 0);
+        while(itr !=  nums.end()){
+            maxSum = max(maxSum, accumulate(itr-n+1, itr+1, 0));
+            ++itr;
+            cout << maxSum << endl;
+        }
+        return maxSum;
+    }
+public:
+    int maxSubArray(vector<int>& nums) {
+        int maxSum = *max_element(nums.begin(), nums.end());
+        for(size_t i = 2; i <= nums.size(); ++i){
+            maxSum = max(maxSum, maxSubN(nums, i));
+        }
+        return maxSum;
+    }
+};
+```
+显示 `超出时间限制`
+
+### 2.2 官方解法1：动态规划
+#### 2.2.1 原理
+详细见： 
+> [面试题42. 连续子数组的最大和（动态规划，清晰图解）](https://leetcode.cn/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/solution/mian-shi-ti-42-lian-xu-zi-shu-zu-de-zui-da-he-do-2/)
+> 
+这个原理有点像 滑动窗口，可以模拟一下一个数组的计算过程，这样就很清晰了。
+
+#### 2.2.2 代码实现
+```c++
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int pre = 0, maxAns = nums[0];
+        for (const auto &x: nums) {
+            pre = max(pre + x, x);
+            maxAns = max(maxAns, pre);
+        }
+        return maxAns;
+    }
+};
+```
+复杂度:
+> 时间复杂度：O(n)O(n)，其中 nn 为 \textit{nums}nums 数组的长度。我们只需要遍历一遍数组即可求得答案。
+> 空间复杂度：O(1)O(1)。我们只需要常数空间存放若干变量。
+> 
+
+#### 2.2.2 解法2
+
+```c++
+
+```
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 50. 第一个只出现一次的字符
+## 1.题目详情
+在字符串 `s` 中找出第一个只出现一次的字符。如果没有，返回一个单空格。 `s` 只包含小写字母。
+示例 1:
+```
+输入：s = "abaccdeff"
+输出：'b'
+```
+示例 2:
+```
+输入：s = "" 
+输出：' '
+```
+限制：
+```
+0 <= s 的长度 <= 50000
+```
+## 2. 解答
+### 2.1 第一次提交
+解题思路如下：
+> (1) 新建一个字典，然后遍历目标字符串`s`，将里面所有字符出现的次数统计一下；
+> (2) 再次遍历`s`，然后关联前面的字典，将第一个只出现一次的字符找出并返回，若没有则返回空串' '
+> 
+```c++
+class Solution {
+public:
+    char firstUniqChar(string s) {
+        map<char, size_t> mp;
+        // 先统计所有字符出现的次数
+        for(size_t i = 0; i < s.size(); ++i){
+            if(mp.find(s[i]) == mp.end())
+                mp[s[i]] = 1;
+            else
+                ++mp[s[i]];
+        }
+        // 然后找到第一个只出现一次的字符并将其返回，若没有则返回空串' '
+        for(size_t i = 0; i < s.size(); ++i){
+            if(mp[s[i]] == 1)
+                return s[i];
+        }
+        return ' ';
+    }
+};
+```
+### 2.2 改进版
+思路没变，就是改进了代码：
+```c++
+class Solution {
+public:
+    char firstUniqChar(string s) {
+        // (1) 换成了无序字典unordered_map，这比 map 效率高
+        unordered_map<char, size_t> mp; 
+        // (2) 简化了第一个for循环；
+        for(size_t i = 0; i < s.size(); ++i) {
+            ++mp[s[i]];
+        }
+        for(size_t i = 0; i < s.size(); ++i){
+            if(mp[s[i]] == 1){
+                return s[i];
+            }
+        }
+        return ' ';
+    }
+};
+```
