@@ -30,6 +30,58 @@ IFNULL(expression, alt_value)
 NVL(expression, alt_value)
 ```
 
+## `MAX()` 函数
+### 作用
+&emsp;&emsp; `MAX()`函数返回指定列的最大值。
+
+### `MAX()` 语法
+```sql
+SELECT MAX(column_name) FROM table_name;
+```
+
+### 实例
+#### 数据和要求
+某`user_profile`表如下:
+| id  | device_id | gender | age  | university | gpa |
+| --- | --------- | ------ | ---- | ---------- | --- |
+| 1   | 2234      | male   | 21   | 北京大学   | 3.2 |
+| 2   | 2235      | male   | NULL | 复旦大学   | 3.8 |
+| 3   | 2236      | female | 20   | 复旦大学   | 3.5 |
+| 4   | 2237      | female | 23   | 浙江大学   | 3.3 |
+| 5   | 2238      | male   | 25   | 复旦大学   | 3.1 |
+| 6   | 2239      | male   | 25   | 北京大学   | 3.6 |
+| 7   | 2240      | male   | NULL | 清华大学   | 3.3 |
+| 8   | 2241      | female | NULL | 北京大学   | 3.7 |
+运营想要知道复旦大学学生gpa最高值是多少，请你取出相应数据，根据输入，你的查询应返回以下结果，结果保留到小数点后面1位(1位之后的四舍五入):
+| gpa |
+| --- |
+| 3.8 |
+
+#### 解答
+```sql
+select max(gpa)  from user_profile where university = '复旦大学';
+```
+另外，这个用`limit`子句也能做到。
+
+## `avg()` 函数
+### 作用
+&emsp;&emsp; `AVG()` 函数返回数值列的平均值。
+
+### AVG() 语法
+```sql
+SELECT AVG(column_name) FROM table_name;
+```
+
+### 实例
+#### 数据和要求
+&emsp;&emsp; `user_profile`表同`MAX()`函数给出的数据。
+&emsp;&emsp; 现在运营想要看一下男性用户有多少人以及他们的平均gpa是多少，用以辅助设计相关活动，请你取出相应数据。
+```sql
+select count(*) as male_num, 
+        avg(gpa) as avg_gpa 
+            from user_profile 
+                where gender='male';
+```
 
 
 
@@ -61,8 +113,69 @@ LIMIT y, x
 <div align="center"> <img src="./pic/sql_grammar/LIMIT子句.png"> </div>
 <center> <font color=black> <b> LIMIT子句 </b> </font> </center>
 
+## 实例
+### 题目
+描述
+> &emsp;&emsp; 题目：现在运营只需要查看前2个用户明细设备ID数据，请你从用户信息表 user_profile 中取出相应结果。
+> 
+示例：
+| id  | device_id | gender | age | university | province |
+| --- | --------- | ------ | --- | ---------- | -------- |
+| 1   | 2138      | male   | 21  | 北京大学   | Beijing  |
+| 2   | 3214      | male   |     | 复旦大学   | Shanghai |
+| 3   | 6543      | female | 20  | 北京大学   | Beijing  |
+| 4   | 2315      | female | 23  | 浙江大学   | ZheJiang |
+| 5   | 5432      | male   | 25  | 山东大学   | Shandong |
+根据输入，你的查询应返回以下结果：
+
+| device_id |
+| --------- |
+| 2138      |
+| 3214      |
+
+### 解答
+```sql
+select device_id
+    from user_profile 
+        order by id 
+            limit 2 offset 0;
+```
 
 
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# 过滤空值
+### 题目
+描述
+> &emsp;&emsp; 题目：现在运营想要对用户的年龄分布开展分析，在分析时想要剔除没有获取到年龄的用户，请你取出所有年龄值不为空的用户的设备ID，性别，年龄，学校的信息。
+> 
+示例：
+| id  | device_id | gender | age | university | province |
+| --- | --------- | ------ | --- | ---------- | -------- |
+| 1   | 2138      | male   | 21  | 北京大学   | Beijing  |
+| 2   | 3214      | male   |     | 复旦大学   | Shanghai |
+| 3   | 6543      | female | 20  | 北京大学   | Beijing  |
+| 4   | 2315      | female | 23  | 浙江大学   | ZheJiang |
+| 5   | 5432      | male   | 25  | 山东大学   | Shandong |
+根据输入，你的查询应返回以下结果：
+| device_id | gender | age | university |
+| --------- | ------ | --- | ---------- |
+| 2138      | male   | 21  | 北京大学   |
+| 6543      | female | 20  | 北京大学   |
+| 2315      | female | 23  | 浙江大学   |
+| 5432      | male   | 25  | 山东大学   |
+### 解答
+&emsp;&emsp; 注意，在查询`NULL`时，不能使用比较运算符(`=`或者`< >`)，需要使用`IS NULL`运算符或者`IS NOT NULL`运算符：
+```sql
+select device_id, gender,age,university 
+    from user_profile 
+        where age is not null; -- 划重点！
+```
 
 
 
@@ -113,4 +226,109 @@ LIMIT y, x
 > 
 
 ## `join`默认是左连接还是右连接？
+&emsp;&emsp; 默认是`INNER JOIN`
 
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# `UNION` 操作符
+## `union`的作用
+&emsp;&emsp; `union` 操作符合并两个或多个 `SELECT` 语句的结果。
+&emsp;&emsp; 请需要注意的是，`UNION` 内部的每个 `SELECT` 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每个 `SELECT` 语句中的列的顺序必须相同。
+
+## `union`的语法
+```sql
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+```
+
+## `UNION ALL`的作用和语法
+&emsp;&emsp; 默认地，`UNION` 操作符选取不同的值；`UNION ALL`允许重复的值
+```sql
+SELECT column_name(s) FROM table1
+UNION ALL
+SELECT column_name(s) FROM table2;
+```
+
+## 使用 `union`的注意事项
+&emsp;&emsp; 使用`UNION`命令时需要注意，只能在最后使用一个`ORDER BY`命令，是将两个查询结果合在一起之后，再进行排序！绝对不能写两个`ORDER BY`命令。
+
+## 使用实例
+### 表数据
+下面是选自 `Websites` 表的数据：
+```sql
+mysql> SELECT * FROM Websites;
+
++----+---------------+---------------------------+-------+---------+
+| id | name          | url                       | alexa | country |
++----+---------------+---------------------------+-------+---------+
+| 1  | Google        | https://www.google.cm/    | 1     | USA     |
+| 2  | 淘宝          | https://www.taobao.com/   | 13    | CN      |
+| 3  | 菜鸟教程      | http://www.runoob.com/    | 4689  | CN      |
+| 4  | 微博          | http://weibo.com/         | 20    | CN      |
+| 5  | Facebook      | https://www.facebook.com/ | 3     | USA     |
+| 7  | stackoverflow | http://stackoverflow.com/ |   0 | IND     |
++----+---------------+---------------------------+-------+---------+
+```
+下面是 `apps` APP 的数据：
+```sql
+mysql> SELECT * FROM apps;
+
++----+------------+-------------------------+---------+
+| id | app_name   | url                     | country |
++----+------------+-------------------------+---------+
+|  1 | QQ APP     | http://im.qq.com/       | CN      |
+|  2 | 微博 APP   | http://weibo.com/       | CN      |
+|  3 | 淘宝 APP   | https://www.taobao.com/ | CN      |
++----+------------+-------------------------+---------+
+3 rows in set (0.00 sec)
+```
+
+### `UNION` 实例
+```sql
+SELECT country FROM Websites
+UNION
+SELECT country FROM apps
+ORDER BY country;
+```
+运行结果：
+```
++---------+
+| country |
++---------+
+| CN      |
+| IND     |
+| USA     |
++---------+
+```
+
+### `UNION ALL` 实例
+```sql
+SELECT country FROM Websites
+UNION ALL
+SELECT country FROM apps
+ORDER BY country;
+```
+运行结果：
+```
++---------+
+| country |
++---------+
+| CN      |
+| CN      |
+| CN      |
+| CN      |
+| CN      |
+| IND     |
+| USA     |
+| USA     |
+| USA     |
++---------+
+```
+### 对比
+&emsp;&emsp; 显然，`UNION`得到的结果没有重复，而 `UNION ALL` 得到的结果是包含重复的内容的。
