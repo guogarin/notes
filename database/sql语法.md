@@ -1,14 +1,4 @@
-- [](#)
-- [SQL 连接(JOIN)](#sql-连接join)
-  - [有哪几种连接？这几种连接有哪些用法？](#有哪几种连接这几种连接有哪些用法)
-  - [`left outer join`和`left join`有何区别？](#left-outer-join和left-join有何区别)
-  - [在对多表进行连接时，后台发生了什么？](#在对多表进行连接时后台发生了什么)
-  - [如何理解连接中的 左 和 右？](#如何理解连接中的-左-和-右)
-  - [有哪些外连接？如何理解外连接？](#有哪些外连接如何理解外连接)
-  - [在`left join`(`right join`)时，`on`和`where`各自起什么作用？](#在left-joinright-join时on和where各自起什么作用)
-  - [`join`默认是左连接还是右连接？](#join默认是左连接还是右连接)
-
-
+[toc]
 
 
 
@@ -18,29 +8,44 @@
 &emsp;
 &emsp;
 &emsp;
-# 函数
-## 空值替换函数
-在MySQL中是`IFNULL`：
-```sql
-IFNULL(expression, alt_value)
-```
-如果第一个参数的表达式 `expression` 为 `NULL`，则返回第二个参数的备用值。
-在Oracle中则为：`NVL`
-```sql
-NVL(expression, alt_value)
-```
+# 1. 函数
+## 1.1 聚合(Aggregate)函数和标量(Scalar) 函数
+### 1.1.1 有哪些聚合函数？
+| 函数名    | 作用                 |
+| --------- | -------------------- |
+| `AVG()`   | 返回平均值           |
+| `COUNT()` | 返回行数             |
+| `FIRST()` | 返回第一个记录的值   |
+| `LAST()`  | 返回最后一个记录的值 |
+| `MAX()`   | 返回最大值           |
+| `MIN()`   | 返回最小值           |
+| `SUM()`   | 返回总和             |
 
-## `MAX()` 函数
-### 作用
+### 1.1.2 有哪些标量函数？
+Scalar函数基于输入值，返回一个单一的值：
+| 函数名        | 作用                                              |
+| ------------- | ------------------------------------------------- |
+| `UCASE()`     | 将某个字段转换为大写                              |
+| `LCASE()`     | 将某个字段转换为小写                              |
+| `MID()`       | 从某个文本字段提取字符，MySql 中使用              |
+| `SubString()` | `SubString(字段，1，end)`，从某个文本字段提取字符 |
+| `LEN()`       | 返回某个文本字段的长度                            |
+| `ROUND()`     | 对某个数值字段进行指定小数位数的四舍五入          |
+| `NOW()`       | 返回当前的系统日期和时间                          |
+| `FORMAT()`    | 格式化某个字段的显示方式                          |
+
+&emsp;
+## 1.2 `MAX()` 函数
+### 1.2.1 作用
 &emsp;&emsp; `MAX()`函数返回指定列的最大值。
 
-### `MAX()` 语法
+### 1.2.2 `MAX()` 语法
 ```sql
 SELECT MAX(column_name) FROM table_name;
 ```
 
-### 实例
-#### 数据和要求
+### 1.2.3 实例
+#### (1) 数据和要求
 某`user_profile`表如下:
 | id  | device_id | gender | age  | university | gpa |
 | --- | --------- | ------ | ---- | ---------- | --- |
@@ -57,31 +62,223 @@ SELECT MAX(column_name) FROM table_name;
 | --- |
 | 3.8 |
 
-#### 解答
+#### (2) 解答
 ```sql
 select max(gpa)  from user_profile where university = '复旦大学';
 ```
 另外，这个用`limit`子句也能做到。
 
-## `avg()` 函数
-### 作用
+&emsp;
+## 1.3 `avg()` 函数
+### 1.3.1 作用
 &emsp;&emsp; `AVG()` 函数返回数值列的平均值。
 
-### AVG() 语法
+### 1.3.2 AVG() 语法
 ```sql
 SELECT AVG(column_name) FROM table_name;
 ```
 
-### 实例
+### 1.3.3 AVG()使用实例
 #### 数据和要求
 &emsp;&emsp; `user_profile`表同`MAX()`函数给出的数据。
 &emsp;&emsp; 现在运营想要看一下男性用户有多少人以及他们的平均gpa是多少，用以辅助设计相关活动，请你取出相应数据。
 ```sql
-select count(*) as male_num, 
-        avg(gpa) as avg_gpa 
-            from user_profile 
-                where gender='male';
+select 
+    count(*) as male_num, 
+    avg(gpa) as avg_gpa 
+from 
+    user_profile 
+where 
+    gender='male';
 ```
+
+&emsp;
+## 1.4 空值替换函数
+在`MySQL`中是`IFNULL`：
+```sql
+IFNULL(expression, alt_value)
+```
+如果第一个参数的表达式 `expression` 为 `NULL`，则返回第二个参数的备用值。
+在`Oracle`中则为：`NVL`
+```sql
+NVL(expression, alt_value)
+```
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# 2. `GROUP BY` 语句
+## 2.1 `GROUP BY` 的作用
+&emsp;&emsp; `GROUP BY` 语句可结合一些聚合函数来使用。
+
+## 2.2 `GROUP BY` 语法
+```sql
+SELECT column_name, aggregate_function(column_name)
+FROM table_name
+WHERE column_name operator value
+GROUP BY column_name;
+```
+
+## 2.3 原理
+下面这个文章讲的不错：
+> &emsp;&emsp; [group by 详解](https://zhuanlan.zhihu.com/p/460005395)
+> 
+
+## 2.4 实例
+### 2.4.1 数据
+下面是选自 `Websites` 表的数据：
+```sql
+mysql> SELECT * FROM Websites;
+
++----+---------------+---------------------------+-------+---------+
+| id | name          | url                       | alexa | country |
++----+---------------+---------------------------+-------+---------+
+| 1  | Google        | https://www.google.cm/    | 1     | USA     |
+| 2  | 淘宝          | https://www.taobao.com/   | 13    | CN      |
+| 3  | 菜鸟教程      | http://www.runoob.com/    | 4689  | CN      |
+| 4  | 微博          | http://weibo.com/         | 20    | CN      |
+| 5  | Facebook      | https://www.facebook.com/ | 3     | USA     |
+| 7  | stackoverflow | http://stackoverflow.com/ |   0 | IND     |
++----+---------------+---------------------------+-------+---------+
+```
+下面是`access_log` 网站访问记录表的数据：
+```sql
+mysql> SELECT * FROM access_log;
+
++-----+---------+-------+------------+
+| aid | site_id | count | date       |
++-----+---------+-------+------------+
+|   1 |       1 |    45 | 2016-05-10 |
+|   2 |       3 |   100 | 2016-05-13 |
+|   3 |       1 |   230 | 2016-05-14 |
+|   4 |       2 |    10 | 2016-05-14 |
+|   5 |       5 |   205 | 2016-05-14 |
+|   6 |       4 |    13 | 2016-05-15 |
+|   7 |       3 |   220 | 2016-05-15 |
+|   8 |       5 |   545 | 2016-05-16 |
+|   9 |       3 |   201 | 2016-05-17 |
++-----+---------+-------+------------+
+```
+
+### 2.4.2 `GROUP BY`简单应用: 统计 `access_log` 各个 `site_id` 的访问量：
+```sql
+mysql> SELECT site_id, SUM(access_log.count) AS nums
+        FROM access_log GROUP BY site_id;
+
++---------+------+
+| site_id | nums |
++---------+------+
+|       1 |  275 |
+|       2 |   10 |
+|       3 |  521 |
+|       4 |   13 |
+|       5 |  750 |
++---------+------+
+```
+
+### 2.4.3 `GROUP BY`多表连接: 统计有记录的网站的记录数量
+```sql
+mysql> SELECT Websites.name,COUNT(access_log.aid) AS nums FROM access_log
+        LEFT JOIN Websites
+        ON access_log.site_id=Websites.id
+        GROUP BY Websites.name;
+
++----------+------+
+| name     | nums |
++----------+------+
+| Facebook |   2  |
+| Google   |   2  |
+| 微博     |   1  |
+| 淘宝     |   1  |
+| 菜鸟教程 |   3  |
+```
+
+## 2.5 牛客网的`GROUP BY`练习题
+### 2.5.1 SQL18
+#### (1) 题目
+[SQL18 分组计算练习题](https://www.nowcoder.com/practice/009d8067d2df47fea429afe2e7b9de45?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
+#### (2) 解答
+```sql
+-- SQL18 分组计算练习题
+
+select 
+    gender, 
+    university, 
+    count(id) as user_num, -- 注意用的是 count()函数
+    avg(active_days_within_30), 
+    avg(question_cnt)
+from user_profile
+group by gender, university;
+```
+
+### 2.5.2 SQL19 
+#### (1) 题目
+[SQL19 分组过滤练习题](https://www.nowcoder.com/practice/ddbcedcd9600403296038ee44a172f2d?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
+
+#### (2) 解答
+```sql
+-- SQL19 分组过滤练习题
+
+select
+    university,
+    avg(question_cnt) as avg_question_cnt,
+    avg(answer_cnt) as avg_answer_cnt
+from
+    user_profile
+group by
+    university
+having -- 注意，此处不能用where，因为 where不能和聚合函数一起使用。
+    avg_question_cnt < 5 or avg_answer_cnt < 20;
+```
+
+### 2.5.3 SQL20 
+#### (1) 题目
+[]()
+#### (2) 解答
+```sql
+-- SQL19 分组过滤练习题
+
+select
+    university,
+    avg(question_cnt) as avg_question_cnt
+from
+    user_profile
+group by
+    university
+order by
+    avg_question_cnt;
+```
+
+
+
+
+
+
+&emsp;
+&emsp;
+&emsp;
+# `HAVING` 子句
+## `HAVING` 子句 的作用
+在 SQL 中增加 `HAVING` 子句原因是: 
+> &emsp;&emsp; `WHERE` 关键字无法与聚合函数一起使用。
+> 
+通过`HAVING`子句，我们可以 筛选 分组后的 各组数据。
+
+## `HAVING`子句 和 `WHERE`关键字 的区别
+`WHERE` 和`HAVING`之后都是筛选条件，但是有区别的：
+> &emsp;&emsp; ① 语法上有个执行先后的差别: 先执行`where`，然后是`group by`， 最后是`having`；
+> &emsp;&emsp; ② 功能上有个筛选的区别，`where`只能筛选记录行，不能筛选聚合后的记录行，`having`主要用来筛选分组聚合后的结果集。
+> &emsp;&emsp; ③ `having`可以和`count、sum、avg、max、min`等聚合函数一起使用，而`where`则不能，否则会报错。
+> 
+
+## 
+见本文的 SQL19
+
 
 
 
@@ -140,8 +337,6 @@ select device_id
         order by id 
             limit 2 offset 0;
 ```
-
-
 
 
 
@@ -227,6 +422,7 @@ select device_id, gender,age,university
 
 ## `join`默认是左连接还是右连接？
 &emsp;&emsp; 默认是`INNER JOIN`
+
 
 
 
@@ -332,3 +528,45 @@ ORDER BY country;
 ```
 ### 对比
 &emsp;&emsp; 显然，`UNION`得到的结果没有重复，而 `UNION ALL` 得到的结果是包含重复的内容的。
+
+
+
+
+
+
+# 多表查询
+## 1. SQL21 浙江大学用户题目回答情况
+### 题目详情
+[SQL21 浙江大学用户题目回答情况](https://www.nowcoder.com/practice/55f3d94c3f4d47b69833b335867c06c1?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
+
+### 解法1
+最开始的解法：
+```sql
+select
+  t1.device_id,
+  t1.question_id,
+  t1.result 
+from
+  question_practice_detail t1,
+  user_profile t2 
+where
+  t1.device_id = t2.device_id 
+  and t2.university = '浙江大学';
+```
+
+### 解法2
+这题还能使用连接(`join`)：
+```sql
+select
+  t1.device_id,
+  t1.question_id,
+  t1.result
+from
+  question_practice_detail t1
+  join user_profile t2 on t1.device_id = t2.device_id
+where
+  t2.university = '浙江大学';
+```
+
+## 2. 
+
