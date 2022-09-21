@@ -104,6 +104,92 @@ IFNULL(expression, alt_value)
 NVL(expression, alt_value)
 ```
 
+&emsp;
+## 1.5 条件函数
+### 1.5.1 基本语法
+```sql
+IF(exp, val1, val12)
+```
+> 如果`exp`为`True`，返回值`val1`；若为`False`，返回值`val2`。
+> 
+
+### 1.5.2 如果要用`if`进行多个分类，应该怎么做？
+&emsp; 当分类大于两种或者以上时，就可以使用`IF`函数嵌套。例如：
+> &emsp;&emsp; 在学生表中，将学生编号小于等于`3`的学生，分为`1`班，学生编号在`4-6`的学生，分为`2`班，学生编号大于等于`7`的学生，分为`3`班，最后显示`Sid`,`Sname`,所在班级这三列。
+> 
+使用嵌套的`IF`，我们可以这么写：
+```sql
+select 
+    Sid as '学生编号',
+    Sname as '学生姓名',
+    IF(
+        Sid <= 3,'1班',
+        IF(Sid >= 7,'3班','2班')
+        ) as '所在班级'
+from 
+    students
+order by Sid;
+```
+执行结果如下：
+<div align="center"> <img src="./pic/sql_grammar/if函数_1.png"> </div>
+<center> <font color=black> <b> 示例结果 </b> </font> </center>
+
+### 1.5.3 `IF` + 聚合函数
+IF 还经常与聚合函数一起结合使用
+实例3：将学生表和教师结合使用，计算班主任所带的学生数量，大于等于5人以上的显示：5人以上，人数小于5人的显示：5人以下。
+```sql
+select 
+    t.Tname as '老师姓名',
+    count(*) as '人数',
+    IF(
+        count(*) >= 5,'5人以上','5人以下'
+    ) as '分类'
+from 
+    teachers as t
+join 
+    students as s
+on 
+    Tid
+GROUP BY 
+    t.Tname;
+```
+<div align="center"> <img src="./pic/sql_grammar/if函数_2.png"> </div>
+
+### 1.5.4 牛客实例： SQL26 计算25岁以上和以下的用户数量
+#### 题目
+[SQL26 计算25岁以上和以下的用户数量](https://www.nowcoder.com/practice/30f9f470390a4a8a8dd3b8e1f8c7a9fa?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
+
+#### 解答
+```sql
+select 
+    if(age >= 25, "25岁及以上", "25岁以下") as age_cut,
+    count(*)
+from 
+    user_profile
+group by
+    age_cut;
+```
+
+### 1.5.5 牛客实例：SQL27 查看不同年龄段的用户明细
+#### 题目
+[SQL27 查看不同年龄段的用户明细](https://www.nowcoder.com/practice/ae44b2b78525417b8b2fc2075b557592?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
+
+#### 解答
+```sql
+select
+    device_id,
+    gender,
+    if(
+        age > 19 and age < 25, "20-24岁", 
+            if(age > 24, "25岁及以上", "其他")
+    ) as age_cut
+from user_profile;
+```
+
+&emsp;
+## 1.6 `case`函数
+### 1.6.1 
+
 
 
 
@@ -114,14 +200,34 @@ NVL(expression, alt_value)
 &emsp;
 # 2. `GROUP BY` 语句
 ## 2.1 `GROUP BY` 的作用
-&emsp;&emsp; `GROUP BY` 语句可结合一些聚合函数来使用。
+&emsp;&emsp; `GROUP BY`一般用于分组统计，它表达的逻辑就是根据一定的规则，进行分组，它可结合一些聚合函数来使用。
 
 ## 2.2 `GROUP BY` 语法
+### 2.2.1 基本语法
 ```sql
 SELECT column_name, aggregate_function(column_name)
 FROM table_name
 WHERE column_name operator value
 GROUP BY column_name;
+```
+### 2.2.2 `GROUP BY` 多个字段
+```sql
+select
+    t1.university,
+    t3.difficult_level,
+    count(university)/count(distinct t2.device_id) as avg_answer_cnt
+from 
+    user_profile t1
+join 
+    question_practice_detail t2 
+on 
+    t1.device_id = t2.device_id
+join
+    question_detail t3
+on 
+    t2.question_id = t3.question_id
+group by
+    t1.university, t3.difficult_level; -- group by 多个字段
 ```
 
 ## 2.3 原理
@@ -129,8 +235,20 @@ GROUP BY column_name;
 > &emsp;&emsp; [group by 详解](https://zhuanlan.zhihu.com/p/460005395)
 > 
 
-## 2.4 实例
-### 2.4.1 数据
+## 2.4 GROUP BY 引发的报错
+### 2.4.1
+报错信息：
+```
+SQL_ERROR_INFO: "Expression #1 of SELECT list is not in GROUP BY clause and contains 
+nonaggregated column 't1.university' which is not functionally dependent on columns in GROUP 
+BY clause; this is incompatible with sql_mode=only_full_group_by"
+```
+报错原因：
+> ONLY_FULL_GROUP_BY ： 对于`GROUP BY`聚合操作，如果在`SELECT`中的列，没有在`GROUP BY`中出现，那么这个SQL是不合法的，因为列不在`GROUP BY`从句中。
+> 
+
+## 2.5 实例
+### 2.5.1 数据
 下面是选自 `Websites` 表的数据：
 ```sql
 mysql> SELECT * FROM Websites;
@@ -143,7 +261,7 @@ mysql> SELECT * FROM Websites;
 | 3  | 菜鸟教程      | http://www.runoob.com/    | 4689  | CN      |
 | 4  | 微博          | http://weibo.com/         | 20    | CN      |
 | 5  | Facebook      | https://www.facebook.com/ | 3     | USA     |
-| 7  | stackoverflow | http://stackoverflow.com/ |   0 | IND     |
+| 7  | stackoverflow | http://stackoverflow.com/ |   0   | IND     |
 +----+---------------+---------------------------+-------+---------+
 ```
 下面是`access_log` 网站访问记录表的数据：
@@ -165,7 +283,7 @@ mysql> SELECT * FROM access_log;
 +-----+---------+-------+------------+
 ```
 
-### 2.4.2 `GROUP BY`简单应用: 统计 `access_log` 各个 `site_id` 的访问量：
+### 2.5.2 `GROUP BY`简单应用: 统计 `access_log` 各个 `site_id` 的访问量：
 ```sql
 mysql> SELECT site_id, SUM(access_log.count) AS nums
         FROM access_log GROUP BY site_id;
@@ -181,7 +299,7 @@ mysql> SELECT site_id, SUM(access_log.count) AS nums
 +---------+------+
 ```
 
-### 2.4.3 `GROUP BY`多表连接: 统计有记录的网站的记录数量
+### 2.5.3 `GROUP BY`多表连接: 统计有记录的网站的记录数量
 ```sql
 mysql> SELECT Websites.name,COUNT(access_log.aid) AS nums FROM access_log
         LEFT JOIN Websites
@@ -198,8 +316,8 @@ mysql> SELECT Websites.name,COUNT(access_log.aid) AS nums FROM access_log
 | 菜鸟教程 |   3  |
 ```
 
-## 2.5 牛客网的`GROUP BY`练习题
-### 2.5.1 SQL18
+## 2.6 牛客网的`GROUP BY`练习题
+### 2.6.1 SQL18
 #### (1) 题目
 [SQL18 分组计算练习题](https://www.nowcoder.com/practice/009d8067d2df47fea429afe2e7b9de45?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
 #### (2) 解答
@@ -216,7 +334,7 @@ from user_profile
 group by gender, university;
 ```
 
-### 2.5.2 SQL19 
+### 2.6.2 SQL19 
 #### (1) 题目
 [SQL19 分组过滤练习题](https://www.nowcoder.com/practice/ddbcedcd9600403296038ee44a172f2d?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
 
@@ -236,7 +354,7 @@ having -- 注意，此处不能用where，因为 where不能和聚合函数一�
     avg_question_cnt < 5 or avg_answer_cnt < 20;
 ```
 
-### 2.5.3 SQL20 
+### 2.6.3 SQL20 
 #### (1) 题目
 []()
 #### (2) 解答
@@ -431,7 +549,7 @@ select device_id, gender,age,university
 &emsp;
 &emsp;
 &emsp;
-# `UNION` 操作符
+# 联合查询：`UNION` 操作符
 ## `union`的作用
 &emsp;&emsp; `union` 操作符合并两个或多个 `SELECT` 语句的结果。
 &emsp;&emsp; 请需要注意的是，`UNION` 内部的每个 `SELECT` 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每个 `SELECT` 语句中的列的顺序必须相同。
@@ -568,5 +686,147 @@ where
   t2.university = '浙江大学';
 ```
 
-## 2. 
+&emsp;
+## 2. SQL22 统计每个学校的答过题的用户的平均答题数
+### 题目详情
+[SQL22 统计每个学校的答过题的用户的平均答题数](https://www.nowcoder.com/practice/88aa923a9a674253b861a8fa56bac8e5?tpId=199&tqId=1975674&ru=/exam/oj&qru=/ta/sql-quick-study/question-ranking&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
+### 解法
+#### 思路
+&emsp;&emsp; ① 学校和答题信息在不同的表，需要做连接；
+&emsp;&emsp; ② 统计的是每个学校的答题情况，因此要 按学校分组；
+&emsp;&emsp; ③ 要获取平均答题数量，可以在每个学校的分组内，用 该校总答题数量 除以 该校总人数。
 
+#### 代码
+```sql
+select 
+    university,
+    -- 因为已经分组了
+    count(university)/count(distinct t2.device_id) as avg_answer_cnt
+from
+    user_profile t1
+join
+    question_practice_detail t2
+on
+    t1.device_id = t2.device_id
+group by university;
+```
+
+&emsp;
+## 3 SQL23 统计每个学校各难度的用户平均刷题数
+### 题目详情
+[SQL23 统计每个学校各难度的用户平均刷题数](https://www.nowcoder.com/practice/5400df085a034f88b2e17941ab338ee8?tpId=199&tqId=1975674&ru=%2Fexam%2Foj&qru=%2Fta%2Fsql-quick-study%2Fquestion-ranking&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
+
+### 解法
+#### 思路
+
+#### 代码
+```sql
+select
+    t1.university,
+    t3.difficult_level,
+    count(university)/count(distinct t2.device_id) as avg_answer_cnt
+from 
+    user_profile t1
+join 
+    question_practice_detail t2 
+on 
+    t1.device_id = t2.device_id
+join
+    question_detail t3
+on 
+    t2.question_id = t3.question_id
+group by
+    t1.university, t3.difficult_level;
+```
+
+&emsp;
+## 4. SQL24 统计每个用户的平均刷题数
+### 题目详情
+[SQL24 统计每个用户的平均刷题数](https://www.nowcoder.com/practice/f4714f7529404679b7f8909c96299ac4?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
+
+### 解法
+#### 思路
+这题和 [SQL23 统计每个学校各难度的用户平均刷题数]()就多了个分组后的筛选
+#### 代码
+```sql
+select
+    university,
+    difficult_level,
+    count(*) / count(distinct t2.device_id) as avg_answer_cnt
+from
+    user_profile t1
+join
+    question_practice_detail t2
+on 
+    t1.device_id = t2.device_id
+join
+    question_detail t3 
+on 
+    t2.question_id = t3.question_id
+group by
+    t1.university, t3.difficult_level
+having
+    t1.university = '山东大学';
+```
+
+&emsp;
+## 5. SQL25 查找山东大学或者性别为男生的信息
+### 题目详情
+[SQL25 查找山东大学或者性别为男生的信息](https://www.nowcoder.com/practice/979b1a5a16d44afaba5191b22152f64a?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
+
+### 解法
+#### 思路
+
+#### 代码
+第一次解答：
+```sql
+select
+    device_id,
+    gender, 
+    age,
+    gpa
+from 
+    user_profile t1
+where
+    university = '山东大学' or gender='male';
+```
+结果不满足要求，因为题目要求：
+> 先输出学校为山东大学 再输出 性别为男生 的信息
+> 
+为满足上述要求，需要用到联合查询，而且题目要求 **不去重**，因此要用 `union all`：
+```sql
+select
+  device_id,
+  gender,
+  age,
+  gpa
+from
+  user_profile t1
+where
+  university = '山东大学'
+
+union all
+
+select
+  device_id,
+  gender,
+  age,
+  gpa
+from
+  user_profile t1
+where
+  gender = 'male';
+```
+
+&emsp;
+## 
+### 题目详情
+
+
+### 解法
+#### 思路
+
+#### 代码
+```sql
+
+```
