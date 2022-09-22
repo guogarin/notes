@@ -190,6 +190,111 @@ from user_profile;
 ## 1.6 `case`函数
 ### 1.6.1 
 
+&emsp;
+## 1.7 文本(字符串)函数
+### 1.7.1 mysql主要有哪些字符串函数？语法是怎样的？
+MySQL字符串截取函数主要有四种：
+> ① `left()`, 
+> ② `right()`, 
+> ③ `substring()`, 
+> ④ `substring_index()`, 
+> 
+各自非语法如下：
+
+### 1.7.2 这些字符串函数的语法是怎样的？
+(1) **`left()`**
+&emsp; `LEFT(s,n)`返回字符串 `s` 的前 `n` 个字符	
+```sql
+-- 返回字符串 runoob 中的前两个字符：
+SELECT LEFT('runoob', 2) -- ru
+```
+(2) **`right()`** 
+&emsp; `RIGHT(s,n)`返回字符串`s`的后 `n`个字符，例如：
+```sql
+-- 返回字符串 runoob 的后两个字符：
+SELECT RIGHT('runoob', 2) -- ob
+```
+(3) **substring**
+&emsp; `SUBSTRING(s, start, length)`从字符串 `s` 的 `start` 位置截取长度为 `length` 的子字符串，等同于 `SUBSTR(s, start, length)`。
+&emsp; 另外，目标字符串`s`是从`1`开始计数的，例如：
+```sql
+-- 从字符串 RUNOOB 中的第 2 个位置截取 3个 字符：
+SELECT SUBSTRING("RUNOOB", 2, 3) AS ExtractString; -- UNO
+```
+(4) `SUBSTRING_INDEX()`
+&emsp; `SUBSTRING_INDEX(s, delimiter, number)`	返回从字符串 `s` 的第 `number` 个出现的分隔符 `delimiter` 之后的子串。
+> 如果 `number` 是正数，返回第 `number` 个字符左边的字符串。
+> 如果 `number` 是负数，返回第(`number` 的绝对值(从右边数))个字符右边的字符串。
+> 
+```sql
+SELECT SUBSTRING_INDEX('a*b','*',1) -- a
+SELECT SUBSTRING_INDEX('a*b','*',-1)    -- b
+SELECT SUBSTRING_INDEX(SUBSTRING_INDEX('a*b*c*d*e','*',3),'*',-1)    -- c
+```
+
+注意，`string`是从`1`开始算的
+### 1.7.3 SQL28 计算用户8月每天的练题数量
+#### (1) 题目
+[SQL28 计算用户8月每天的练题数量](https://www.nowcoder.com/practice/847373e2fe8d47b4a2c294bdb5bda8b6?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
+
+#### (2) 解答
+**第一次解答：**
+```sql
+select
+  SUBSTRING(date, 9, 2) as day,
+  count(*) as question_cnt 
+from
+  question_practice_detail 
+group by
+  date #
+having
+  SUBSTRING(date, 6, 2) = 08
+```
+**其他人的题解：**
+> 他用的是`day()`和`month`函数，这比处理字符串要容易一些：
+> 
+```sql
+Select
+  day(date) as day,
+  count(question_id) as question_cnt
+From
+  question_practice_detail
+Where
+  year(date) = 2021
+  and month(date) = 08
+Group by
+  day;
+```
+
+### 1.7.4
+#### (1) 题目
+
+#### (2) 解答
+```sql
+
+```
+
+### 1.7.5 SQL32 截取出年龄
+#### (1) 题目
+[SQL32 截取出年龄](https://www.nowcoder.com/practice/b8d8a87fe1fc415c96f355dc62bdd12f?tpId=199&tqId=1975684&ru=/exam/oj&qru=/ta/sql-quick-study/question-ranking&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
+#### (2) 解答
+这题需要用 嵌套的`substring_index()`函数：
+```sql
+select 
+    substring_index(substring_index(profile,',', '3'), ',', -1) as age,
+    count(device_id) as number
+from 
+    user_submit
+group by
+    age;
+```
+
+&emsp;
+## 1.8 窗口函数 
+### 1.8.1 什么是 窗口函数？
+&emsp;&emsp; 窗口函数也称为`OLAP（Online Analytical Processing）`函数，意思是对数据库数据进行实时分析处理，窗口函数在`Oracle`和`SQL Server` 中也被称为 分析函数，
+
+### 1.8.2 有哪些窗口函数？
 
 
 
@@ -830,3 +935,5 @@ where
 ```sql
 
 ```
+
+
