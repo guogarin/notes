@@ -1,10 +1,52 @@
+[toc]
+
+
+
+
+
+
+&emsp;
+&emsp;
+# 一、 Nginx
+## 1. Nginx在里面起到了什么作用？
+在这里`Nginx`主要有如下几个作用：
+> (1) 反向代理(Reverse Proxy)
+> (2) 动静分离
+> 
+**① 反向代理(Reverse Proxy)**
+&emsp; 反向代理 隐藏了 原始资源服务器，它带来了如下几个优点：
+> &emsp;&emsp; ① `Nginx`在其中扮演了隔离墙的角色，这提高了资源的安全性，还可以拦截攻击；
+> &emsp;&emsp; ② 负载均衡，提高了并发性(具体怎么提高见其它笔记)。
+> 
+
+**(2) 动静分离**
+&emsp;&emsp;  动静分离是指在web服务器架构中，将静态页面与动态页面(或静态内容接口和动态内容接口)分开不同系统访问的架构设计方法，进而提升整个服务访问性能和可维护性，简单点来说，就是：
+> &emsp;&emsp; 若用户只是简单的访问 图片，html等静态的请求时，`Nginx`直接返回，无需发给应用程序，这减小了应用程序的负担；
+> &emsp;&emsp; 如果是发送动态请求时候(需要应用程序进行处理的请求)，就由`Nginx` 把请求发送给程序，进行动态处理。
+> 
+换句话说，动静分离是 一种为应用程序减小负担的技术。
+
+## 2. 如何配置Nginx？
+```shell
+
+```
+
+https://blog.csdn.net/qq_60387497/article/details/121512895
+
+https://www.cnblogs.com/xiaoxiamiaichiyu/p/14116240.html
+
+
+
+&emsp;
+&emsp;
+# 二、 wsgi相关
 ## 1. WSGI
 #### &emsp;1.1 WSGI是什么？
 &emsp;&emsp; WSGI，全称 Web Server Gateway Interface，或者 Python Web Server Gateway Interface ，是为 Python 语言定义的 **Web服务器 和 Web应用程序或框架 之间的** 一种 **简单而通用的接口规范** ，以提高web应用在一系列web服务器间的移植性。
 &emsp;&emsp;Web 应用通常部署在服务器上（Apache、Nginx 等），服务器负责处理客户端请求，应用则专注业务实现。为了方便开发封装一些常用功能，就成了各种 Web 框架（如 Django、Flask、Tornado），不同的框架各有差异，但都需要与服务器交互才能提供服务。为了方便应用在不同服务器间迁移，实现高拓展性，就需要一个统一的标准，服务器和应用按照统一的通信标准实现，就可以方便应用的迁移拓展。Python Web 开发中，在 PEP 333 中定义了该标准，即 The Web Server Gateway Interface（WSGI）。
 从以上介绍我们可以看出：
 > (1) WSGI是**一套接口标准协议/规范**；
-> (2) **通信（作用）区间是 **Web服务器和Python Web应用程序之间；
+> (2) **通信（作用）区间是** Web服务器和Python Web应用程序之间；
 > (3) **目的是**制定标准，以保证不同Web服务器可以和不同的Python程序之间相互通信
 
 &emsp;&emsp; 也就是说,WSGI 不是Server、不是python模块、不是python框架，也不是用python编写的软件，而是一个python标准(协议)，由 PEP 3333描述,它用来规定Web Server如何与python应用程序通信。
