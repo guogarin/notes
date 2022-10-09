@@ -1,11 +1,94 @@
+[toc]
+
+
+
+
+
+&emsp;
+&emsp; 
 # 面试题3：数组中重复的数字
-TODO: 太乱了，后面回来做
-## 1. 可以修改目标数组
+## 1. 题目详情
+&emsp;&emsp;  找出数组中重复的数字。
+&emsp;&emsp;  在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。
+示例 ：
+```
+输入：
+[2, 3, 1, 0, 2, 5, 3]
+输出：2 或 3 
+```
+限制：
+```
+2 <= n <= 100000
+```
+## 2. 解答
+## 2.1 不能修改目标数组
+**方法1：用数组索引法** 
+```cpp
+class Solution {
+public:
+    int findRepeatNumber(vector<int>& nums) {
+        if(nums.size() == 0)
+            return -1;
+        // 首先新建一个长度为`nums.size()`大小的数组，并将所有元素初始化为-1；
+        vector<int> arr(nums.size(), -1);
+        // 因为nums中的元素都在 0 ~ nums.size()-1 之间，所以我们可以遍历原数组nums
+        for(size_t i = 0; i < nums.size(); ++i){
+            // 若 arr[nums[i]]不为-1，则 nums[i] 肯定是第一个重复的数字
+            if(arr[nums[i]] == -1){
+                arr[nums[i]] = i;
+                continue;
+            }
+            return nums[i];
+        }
+        return -1; // 若走到这里，则说明数组中没有重复的数字
+    }
+};
+```
+**方法2： 哈希表法**
+```cpp
+class Solution {
+public:
+    int findRepeatNumber(vector<int>& nums) {
+        if(nums.size() == 0)
+            return -1;
+        unordered_set<int> st; // 无序容器比有序容器效率高
+        for(size_t i = 0; i < nums.size(); ++i){
+            // 若在set中找不到，则插入，反之则返回该元素
+            if(st.find(nums[i]) == st.end())
+                st.insert(nums[i]);
+            else
+                return nums[i];
+        }
+        return -1;
+    }
+};
+```
 
-## 2. 不能修改目标数组
-
-
-
+## 2.1 可以修改目标数组
+**方法3：数组索引法的就地修改版**
+这个方法和 方法1：用数组索引法 类似，但是这个方法空间复杂度为`O(1)`，因为是直接修改目标数组：
+```cpp
+class Solution {
+public:
+    int findRepeatNumber(vector<int>& nums) {
+        if(nums.size() == 0)
+            return -1;
+        size_t i = 0;
+        while(i < nums.size()){ // 注意，这里不能用 for循环
+            if (i == nums[i]){
+                // 直有在当前index内的值和index相等时才能往下推进（即i == nums[i]时）
+                ++i; 
+                continue;
+            }                
+            else if(nums[i] != nums[nums[i]])
+                swap(nums[i], nums[nums[i]]);
+            else
+                return nums[i];
+        }
+        return -1;
+    }
+};
+```
 
 
 
@@ -1693,8 +1776,8 @@ public:
 1 <= s 的长度 <= 8
 ```
 ## 2. 解答
-TODO:
-
+### 2.1 思路
+这也是树相关的，到时候统一做TODO: 
 
 
 
@@ -1799,6 +1882,18 @@ public:
 如何给一个vector排序？
 
 ## 2. 解答
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 41 数据流中的中位数
+最大堆和最小堆相关，到时候统一做TODO: 
+
 
 
 
