@@ -1,37 +1,11 @@
-- [一、 Reactor](#一-reactor)
-  - [1. 介绍](#1-介绍)
-    - [1.1 什么是Reactor？](#11-什么是reactor)
-  - [2 关于Reactor的 几个问题](#2-关于reactor的-几个问题)
-    - [2.1  Reactor 和 IO多路复用 的关系是？](#21--reactor-和-io多路复用-的关系是)
-    - [2.2 Reactor 解决的是什么问题？为什么需要 Reactor ？](#22-reactor-解决的是什么问题为什么需要-reactor-)
-    - [2.3 Reactor模式 主要由哪几部分组成？它们的作用分别是？](#23-reactor模式-主要由哪几部分组成它们的作用分别是)
-  - [3 Reactor模式有哪些实现方式？](#3-reactor模式有哪些实现方式)
-  - [4 Reactor模式 的工作原理是怎样的？](#4-reactor模式-的工作原理是怎样的)
-    - [4.1 单 Reactor + 单进程/线程 处理资源池](#41-单-reactor--单进程线程-处理资源池)
-      - [4.1.1 如何实现？](#411-如何实现)
-      - [4.1.2 单Reactor + 单进程/线程 处理资源池 的优缺点是什么？](#412-单reactor--单进程线程-处理资源池-的优缺点是什么)
-      - [4.1.3 单Reactor + 单进程/线程 处理资源池 适合什么样的场景？](#413-单reactor--单进程线程-处理资源池-适合什么样的场景)
-    - [4.2 单 Reactor + 多进程/线程 处理资源池](#42-单-reactor--多进程线程-处理资源池)
-      - [4.2.1 如何实现？](#421-如何实现)
-      - [4.2.2 单Reactor + 多进程/线程处理资源池 优缺点是什么？](#422-单reactor--多进程线程处理资源池-优缺点是什么)
-      - [4.2.3 单Reactor + `多进程`处理资源池 和 单Reactor + 多进`线程`处理资源池，哪个用的多？为什么？](#423-单reactor--多进程处理资源池-和-单reactor--多进线程处理资源池哪个用的多为什么)
-    - [4.3 多Reactor + 多进程/线程 处理资源池](#43-多reactor--多进程线程-处理资源池)
-      - [4.3.1 如何实现？](#431-如何实现)
-  - [5. Reactor模式中，哪个线程/进程 负责将响应报文 发给client？](#5-reactor模式中哪个线程进程-负责将响应报文-发给client)
-  - [6 有哪些软件使用的是Reactor？](#6-有哪些软件使用的是reactor)
-- [二、 Proactor](#二-proactor)
-  - [1. 什么是 Proactor](#1-什么是-proactor)
-  - [2. Proactor 工作原理](#2-proactor-工作原理)
-  - [3. 在工作中是否应该尽量使用 Proactor？](#3-在工作中是否应该尽量使用-proactor)
-- [三、Reactor 和 Proactor 对比](#三reactor-和-proactor-对比)
-  - [1. Reactor 和 Proactor 有何区别？](#1-reactor-和-proactor-有何区别)
-  - [2. Reactor 和 Proactor 哪种是基于事件分发的？](#2-reactor-和-proactor-哪种是基于事件分发的)
-  - [2. 工作中应该 使用 Reactor 还是 Proactor ？](#2-工作中应该-使用-reactor-还是-proactor-)
-- [四 总结](#四-总结)
-- [参考文献](#参考文献)
+[toc]
 
 
 
+
+
+&emsp;
+&emsp;
 # 一、 Reactor
 ## 1. 介绍
 ### 1.1 什么是Reactor？
