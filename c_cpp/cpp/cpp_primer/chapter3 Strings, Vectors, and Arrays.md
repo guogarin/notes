@@ -1,63 +1,65 @@
 [toc]
 
 
-
-
-
 &emsp;
 # 第3章 字符串、向量和数组
 
-
 &emsp;
 ## 1.为什么需要命名空间？
-为了解决命名冲突，想象这样的情况：
-程序员可能会写一个名为 xyz() 的函数，在另一个可用的库中也存在一个相同的函数 xyz()。这样，编译器就无法判断您所使用的是哪一个 xyz() 函数。
-因此，引入了 命名空间 这个概念，专门用于解决上面的问题，它可作为附加信息来区分不同库中相同名称的函数、类、变量等。使用了命名空间即定义了上下文。
+命名空间的存在是 **为了解决命名冲突**，想象这样的情况：
+> &emsp;&emsp; 程序员可能会写一个名为 `xyz()` 的函数，在另一个可用的库中也存在一个相同的函数 `xyz()`。这样，编译器就无法判断您所使用的是哪一个 `xyz()` 函数。
+> &emsp;&emsp; 因此，引入了 命名空间 这个概念，专门用于解决上面的问题，它可作为附加信息来区分不同库中相同名称的函数、类、变量等。使用了命名空间即定义了上下文。
+> 
 
 
 
 &emsp;
 ## 2.为什么需要 命名空间的using声明？
-我们想使用标准输出的时候需要写成“std::cout ” ，但每次都要带上“std::”太麻烦了，此时可以通过 命名空间的using声明吧 来解决这个问题。
+&emsp;&emsp; 我们想使用标准输出的时候需要写成`std::cout`，但每次都要带上`std::`太麻烦了，此时可以通过 命名空间的`using`声明来解决这个问题。
 
 
 
 &emsp;
 ## 3.如何使用 命名空间的using声明？
-以 cin、cout、endl举例：
-1.using std::cin;  
-2.using std::cout; 
-3.using std::endl;  
-
+以 `cin、cout、endl`举例：
+```cpp
+using std::cin;  
+using std::cout; 
+using std::endl;  
+```
 
 
 &emsp;
 ## 4.头文件和using声明
-头文件不应该包含 using声明， 因为 头文件中的内容会被拷贝到引用它的文件里面去，如果头文件包含了 using声明， 则所有引用该头文件的文件都会有这个using声明，这可能会引发 名字冲突。
+&emsp;&emsp; 头文件不应该包含`using`声明， 因为 头文件中的内容会被拷贝到引用它的文件里面去，如果头文件包含了 `using`声明， 则所有引用该头文件的文件都会有这个`using`声明，这可能会引发 名字冲突。
 
 
 
 &emsp;
 ## 5.string 是内置类型么？
-不是，它是 标准库类型。
+&emsp;&emsp; 不是，它是 标准库类型。
 
 
 
 &emsp;
 ## 6.string 属于哪个命名空间？
-string 定义在 命名空间std中。
-	using std::string;
+&emsp;&emsp; string 定义在 命名空间`std`中。
+```cpp
+using std::string;
+```
 
 
 
 &emsp;
 ## 7.初始化string的几种方法
-1.string s1;			// 默认初始化，s1 是一个空串
-2.string s2(s1);		// 直接初始化，s2是s1的副本  
-3.string s2 = s1;		// 拷贝初始化，等价于s2(s1),s2是s1的副本  
-4.string s3("value");	// 直接初始化，s3是字面值"value"的副本，除了结尾的’\0’ 
-5.string s3 = "value"; // 拷贝初始化，等价于s3("value"), 是字面值"value"的副本
-6.string s4(n,'c');    // 直接初始化，把s4初始化为由连续n个字符'c'组成的串  
+```cpp
+string s1;			// 默认初始化，s1 是一个空串
+string s2(s1);		// 直接初始化，s2是s1的副本  
+string s2 = s1;		// 拷贝初始化，等价于s2(s1),s2是s1的副本  
+string s3("value");	// 直接初始化，s3是字面值"value"的副本，除了结尾的’\0’ 
+string s3 = "value";  // 拷贝初始化，等价于s3("value"), 是字面值"value"的副本
+string s4(n,'c');    // 直接初始化，把s4初始化为由连续n个字符'c'组成的串  
+```
 
 
 
@@ -65,25 +67,28 @@ string 定义在 命名空间std中。
 ## 8.string 的直接初始化 和 拷贝初始化
 拷贝初始化：用了  等于号（=）；
 直接初始化：没有用等于号（=）；
-1.string s5 = "hiya";  // 拷贝初始化  
-2.string s6("hiya");   // 直接初始化 
-3.string s7(10, 'c');  // 直接初始化; s7 为 cccccccccc 
+```cpp
+string s5 = "hiya";  // 拷贝初始化  
+string s6("hiya");   // 直接初始化 
+string s7(10, 'c');  // 直接初始化; s7 为 cccccccccc 
+```
 
 
 
 &emsp;
 ## 9.string s8 = string(10, 'c'); 发生了什么？
 相当于创建了了一个临时变量，然后拷贝给了 s8，这条语句相当于：
-1.string temp(10, 'c'); // temp is cccccccccc  
-2.string s8 = temp; // copy temp into s8  
-
+```cpp
+string temp(10, 'c'); // temp is cccccccccc  
+string s8 = temp; // copy temp into s8  
+```
 
 
 &emsp;
-## 10.C++ 有几种 getline()操作？
+## 10.C++ 有几种 `getline()`操作？
 两种：
-一种在头文件<istream>中，是istream类的成员函数。
-一种在头文件<string>中，是普通函数。
+一种在头文件`<istream>`中，是`istream`类的成员函数。
+一种在头文件`<string>`中，是普通函数。
 
 
 
@@ -91,13 +96,15 @@ string 定义在 命名空间std中。
 ## 11. cin >> string 和 string的getline() 有什么区别？
 cin 
 会忽略开头的空白，然后从第一个非空白字符开始读起，直到遇到下一个空格停止。
-1.	int main()  
-2.{  
-3.string s; // empty string  
-4.cin >> s; // read a whitespace-separated string into s  
-5.cout << s << endl; // write s to the output  
-6.return 0;  
-7.}  
+```cpp
+int main()  
+{  
+    string s; // empty string  
+    cin >> s; // read a whitespace-separated string into s  
+    cout << s << endl; // write s to the output  
+    return 0;  
+}  
+```
 如果输入“  Hello World!  ”（注意开头、中间的空格），则输出则为“Hello”，没有开头的空格、后面的World，因为cin忽略了开头的空格，遇到中间的空格就停止读取了。
 getline() 
 直接读取一行，保留所有空白
@@ -106,13 +113,13 @@ getline()
 
 &emsp;
 ## 12. sting::size_type类型是什么？
-它是sring.size()的返回类型，是一个unsigned
+它是`sring.size()`的返回类型，是一个`unsigned`
 
 
 
 &emsp;
 ## 13. 使用string的size()操作需要注意什么？
-因为size()返回的是 sting::size_type类型，而sting::size_type类型是一个 无符号类型，因此用了size()之后就不要用int类型了，这样可以避免混用int和unsigned可能带来的问题。
+&emsp;&emsp; 因为`size()`返回的是 `sting::size_type`类型，而`sting::size_type`类型是一个 无符号类型，因此用了`size()`之后就不要用`int`类型了，这样可以避免混用`int`和`unsigned`可能带来的问题。
 
 
 
@@ -126,32 +133,43 @@ getline()
 &emsp;
 ## 15.两个string相加的规则
 按从左往右的顺序连起来，比如：
-1.string s1 = "hello, ", s2 = "world\n";  
-2.string s3 = s1 + s2; 	// s3 is hello, world\n  
-3.s1 += s2; 			// equivalent to s1 = s1 + s2  
+```cpp
+string s1 = "hello, ", s2 = "world\n";  
+string s3 = s1 + s2; 	// s3 is hello, world\n  
+s1 += s2; 			    // equivalent to s1 = s1 + s2  
+```
 
 
 
 &emsp;
 ## 16.字面值和string对象相加
-规则：当混用 string对象、字符字面值、字符字面值的时候，需要保证每个“+”的两边至少有一个string对象。看下面的例子：
-1.	string s1 = "hello", s2 = "world"; // no punctuation in s1 or s2  
-2.string s3 = s1 + ", " + s2 + '\n';  // 正确：“+”的两边至少有一个string对象
-3.string s4 = s1 + ", "; 			// ok: adding a string and a literal  
-4.string s5 = "hello" + ", "; 		// 错误: 没有string对象  
-5.string s6 = s1 + ", " + "world"; 	// 正确: 原因见下  
-6.string s7 = "hello" + ", " + s2; 	// error: can't add string literals  
-为什么 string s6 = s1 + ", " + "world"; 正确呢？第二个“+”的两边不都是字面值吗？这条语句其实相当于 ：
+### (1) 规则：
+> 当混用 string对象、字符字面值、字符字面值的时候，需要保证**每个“+”的两边**至少有一个string对象。看下面的例子：
+> 
+```cpp
+string s1 = "hello", s2 = "world"; // no punctuation in s1 or s2  
+string s3 = s1 + ", " + s2 + '\n';  // 正确：“+”的两边至少有一个string对象
+string s4 = s1 + ", "; 			// ok: adding a string and a literal  
+string s5 = "hello" + ", "; 		// 错误: 没有string对象  
+string s6 = s1 + ", " + "world"; 	// 正确: 原因见下  
+string s7 = "hello" + ", " + s2; 	// error: can't add string literals  
+```
+### (2) 为什么 string s6 = s1 + ", " + "world"; 正确呢？第二个“+”的两边不都是字面值吗？
+`string s6 = s1 + ", " + "world";`这条语句其实相当于 ：
+```cpp
 string s6 = (s1 + ", ") + "world"; 
-(s1 + ", ") 的结果是一个string对象，这个对象和 后面的字面值 "world" 相加，因此它是对的。
+```
+`(s1 + ", ") `的结果是一个`string`对象，这个对象和 后面的字面值 "world" 相加，因此它是对的。
 但下面这个是错的：
-	string s7 = "hello" + ", " + s2; // 错误: "hello"  和  ", " 都是字面值  
+```cpp
+string s7 = "hello" + ", " + s2; // 错误: "hello"  和  ", " 都是字面值  
+```
 
 
 
 &emsp;
 ## 17. 注意区分C++中 string对象 和 字符串字面值
-因为某些历史原因，也为了与 C 兼容，所以 C++ 语言中的字符串字面值 并不是标准库类型 string 的对象，切记，字符串字面值与 string 是不同的类型。
+&emsp;&emsp; 因为某些历史原因，也为了与 C 兼容，所以 C++ 语言中的字符串字面值 并不是标准库类型 string 的对象，切记，字符串字面值与 string 是不同的类型。
 
 
 
