@@ -181,74 +181,88 @@ cctype头文件
 
 &emsp;
 ## 19.cctype 和 ctype.h有什么不同？
-C语言的头文件形如name.h，C++将这些文件命名为cname。也就是掉了.h后缀，而在文件名name前加了字母c，此处c表示这是一个属于C语言标准库的头文件。因此， cctype头文件和ctype.h头文件内容其实是一样的。
+&emsp;&emsp; C语言的头文件形如`name.h`，C++将这些文件命名为`cname`。也就是掉了`.h`后缀，而在文件名`name`前加了字母`c`，此处`c`表示这是一个属于C语言标准库的头文件。因此， `cctype`头文件和`ctype.h`头文件内容其实是一样的。
 
 
 
 
 &emsp;
 ## 20.如何使用范围for语句
-1.for (declaration : expression)  
-2.    statement  
-declaration ：用来定义变量，该变量被用于访问序列的基础元素；
-expression  ：用于表示一个序列
-statement   ：你要做的操作
+```cpp
+for (declaration : expression)  
+    statement  
+```
+> declaration ：用来定义变量，该变量被用于访问序列的基础元素；
+> expression  ：用于表示一个序列
+> statement   ：你要做的操作
+> 
 
 
 
 &emsp;
 ## 21.如何用范围for语句遍历 string str("some string"); ？
 注意可以用 auto来定义变量！
-1.string str("some string");  
-2.for (auto c : str) // for every char in str  
-3.    cout << c << endl; //
+```cpp
+string str("some string");  
+for (auto c : str) // for every char in str  
+    cout << c << endl; //
+```
 
 
 
 &emsp;
 ## 22.如何通过范围for语句将 string str("some string"); 改成大写？
-把循环变量的定义改成引用类型即可，如：0
-1.string s("Hello World!!!");  
-2.for (auto &c : s) // 注意！c是引用！ 
-3.    c = toupper(c); // 
-4.cout << s << endl;  
-结果是：
-	HELLO WORLD!!!
-
+把循环变量的定义改成引用类型即可，如：
+```cpp
+string s("Hello World!!!");  
+for (auto &c : s) // 注意！c是引用！ 
+    c = toupper(c); // 
+cout << s << endl;  
+// 结果是：
+//	HELLO WORLD!!!
+```
 
 
 &emsp;
 ## 23. 范围for语句里为什么可以重新绑定引用？
 因为 range-based for 是在每个迭代里绑定一个元素，看下面的代码：
-1.for (auto& c : s)  
-2.    c = toupper(c);  
-3.  
-4.// 等价于  
-5.for (auto itr = s.begin(); itr != s.end(); ++itr) {  
-6.    auto& c = *itr; // <- 每个迭代中用一个新引用绑定一个元素  
-7.    c = toupper(c);  
-8.}  
+```cpp
+for (auto& c : s)  
+    c = toupper(c);  
+
+// 等价于  
+for (auto itr = s.begin(); itr != s.end(); ++itr) {  
+    auto& c = *itr; // <- 每个迭代中用一个新引用绑定一个元素  
+    c = toupper(c);  
+}  
+```
 
 
 
 &emsp;
-## 24.如何正确使用下表迭代string对象？
-想通过下表遍历string对象，需要先用 string.size() 获取该string的大小，然后从0开始遍历，如：
-1.for (int index = 0; index < s.size(); ++index)  
-2.    cout<< s[index] << endl;  
-这里存在一个问题，因为 string.size() 返回的是unsigned类型的，而 index是 int类型的，因此for循环里将 它们 进行比较是有风险的。
-怎么解决这个问题呢？这个时候我们可以用 decltype类型指示符，代码如下：
-1.for (decltype(s.size()) index = 0; index != s.size() ; ++index)  
-2.    cout<< s[index] << endl;   
-其实最安全的是用 迭代器访问
+## 24.如何正确使用下标迭代string对象？
+想通过下表遍历string对象，需要先用 `string.size()` 获取该`string`的大小，然后从`0`开始遍历，如：
+```cpp
+for (int index = 0; index < s.size(); ++index)  
+    cout<< s[index] << endl;  
+```
+这里存在一个问题，因为 `string.size()` 返回的是`unsigned`类型的，而 `index是` `int`类型的，因此`for`循环里将 它们 进行比较是有风险的。
+**怎么解决这个问题呢？**这个时候我们可以用 `decltype`类型指示符，代码如下：
+```cpp
+for (decltype(s.size()) index = 0; index != s.size() ; ++index)  
+    cout<< s[index] << endl;   
+```
+**其实最安全的是用 迭代器访问**
 
 
 
 &emsp;
 ## 25. 使用vector需要包含什么？
-1.#include <vector>  
-2.using std::vector;  
-
+包含头文件 和 `using`声明：
+```cpp
+#include <vector>  
+using std::vector;  
+```
 
 
 &emsp;
@@ -260,227 +274,264 @@ statement   ：你要做的操作
 &emsp;
 ## 27. vector的默认初始化
 如下：
+```cpp
 vector<string> svec; // default initialization; svec has no elements  
+```
 
 
 
 &emsp;
 ## 28.vector的拷贝初始化和直接初始化
-1.vector<int> ivec; // initially empty  
-2.// 在此时给 ivec 赋一些值 
-3.vector<int> ivec2(ivec);  // 直接初始化(有括号)： ivec的内容拷贝到了ivec2  
-4.vector<int> ivec3 = ivec; // 拷贝初始化(有等于号：ivec的内容拷贝到了ivec3  
-5.vector<string> svec(ivec2); // 错误: svec 的元素对象是 string,而ivec是int
-
+```cpp
+vector<int> ivec; // initially empty  
+// 在此时给 ivec 赋一些值 
+vector<int> ivec2(ivec);  // 直接初始化(有括号)： ivec的内容拷贝到了ivec2  
+vector<int> ivec3 = ivec; // 拷贝初始化(有等于号：ivec的内容拷贝到了ivec3  
+vector<string> svec(ivec2); // 错误: svec 的元素对象是 string,而ivec是int
+```
 
 
 &emsp;
 ## 29.vector的列表初始化
 当用列表初始化的时候，列表内的初始值的个数之和 等于 vector对象的大小
-1.vector<string> v1{"a", "an", "the"}; // 列表初始化，v1含有三个string对象  
-2.vector<string> v2("a", "an", "the"); // 错误，应该用 花括号
-
+```cpp
+vector<string> v1{"a", "an", "the"}; // 列表初始化，v1含有三个string对象  
+vector<string> v2("a", "an", "the"); // 错误，应该用 花括号
+```
 
 
 &emsp;
 ## 30.vector的值初始化
-当只提供vector对象容纳元素数量而不提供初始值的时候此时库会创建一个值初始化元素初值，并把它赋给容器内的所有元素，初值由元素的类型决定：
-	 内置类型，如int，元素自动初始化为0；
-	 其他类型进行默认初始化。
-1.vector<int> ivec(10);     // 10个元素，每个都被初始化为0
-2.vector<string> svec(10); // 10个元素，每个都是空串 
+&emsp;&emsp; 当只提供vector对象容纳元素数量而不提供初始值的时候此时库会创建一个值初始化元素初值，并把它赋给容器内的所有元素，初值由元素的类型决定：
+> 内置类型，如int，元素自动初始化为0；
+> 其他类型进行默认初始化。
+> 
+```cpp
+vector<int> ivec(10);     // 10个元素，每个都被初始化为0
+vector<string> svec(10);  // 10个元素，每个都是空串 
+```
 
 
 
 &emsp;
 ## 31.C++ vector内存增长
-当我们插入一个元素时它的预分配空间不够时，它会重新申请一段新空间，将原空间上的元素 复制到新的空间上去，然后再把新加入的元素放到新空间的尾部，以满足vector元素要求连续存储的目的。而后原空间会被系统撤销或征做他用，于是指向原 空间的迭代器就成了类似于“悬垂指针”一样的东西，指向了一片非法区域。
+&emsp;&emsp; 当我们插入一个元素时它的预分配空间不够时，它会重新申请一段新空间，将原空间上的元素 复制到新的空间上去，然后再把新加入的元素放到新空间的尾部，以满足vector元素要求连续存储的目的。
+### vector的内存增长会引发什么后果？
+&emsp;&emsp; vector的内存增长后(进行了插入操作)，原空间会被系统撤销或征做他用，于是指向原 空间的迭代器就成了类似于“悬垂指针”一样的东西，指向了一片非法区域。
 
 
 
 &emsp;
 ## 32.vector预分配的内存不够时，下一次的分批比例是多少？
-每次都是之前的1.5倍，因为
+&emsp;&emsp; 增长比例`k`一般介于`1 < k <= 2`，最佳比例大约是`1.5`
 
 
 
 &emsp;
 ## 33. 范围for语句和 vector的push_back()操作
-如果需要在循环体内部向vector增加元素的话，则不能使用范围for语句，原因见5.4.3
+&emsp;&emsp; 如果需要在循环体内部向`vector`增加元素的话，则不能使用范围for语句，原因见5.4.3
 
 
 
 &emsp;
 ## 34.如何使用范围for语句 将vector<int> v{1,2,3,4,5,6,7,8,9}; 的值变为平方？
 如下：
-1.vector<int> v{1,2,3,4,5,6,7,8,9};  
-2.for (auto &i : v) // for each element in v (note: i is a reference)  
-3.    i *= i; // square the element value  
-4.for (auto i : v) // for each element in v  
-5.    cout << i << " "; // print the element  
-6.cout << endl;  
+```cpp
+vector<int> v{1,2,3,4,5,6,7,8,9};  
+for (auto &i : v) // for each element in v (note: i is a reference)  
+    i *= i; // square the element value  
+for (auto i : v) // for each element in v  
+    cout << i << " "; // print the element  
+cout << endl;  
+```
 
 
 
 &emsp;
 ## 35.能否用下表范围给vector添加元素？
-显然不可以，下表访问只能用来访问已存在的元素。
+&emsp;&emsp; 显然不可以，下表访问只能用来访问已存在的元素。
 
 
 
 &emsp;
 ## 36.string有迭代器吗？
-虽然string不是容器，但是它也有迭代器。
+&emsp;&emsp; 虽然`string`不是容器，但是它也有迭代器。
 
 
 
 &emsp;
 ## 37.尾后迭代器指向的是哪里？
-指向的是 最后一个节点的下一个节点。
+&emsp;&emsp; 指向的是 最后一个节点的下一个节点。
 
 
 
 &emsp;
 ## 38.如果容器为空，begin和end返回什么？
-它们返回的是同一个迭代器，都是尾后迭代器。
+&emsp;&emsp; 它们返回的是同一个迭代器，都是尾后迭代器。
 
 
 
 &emsp;
 ## 39. 如何利用迭代器将string对象改为大写？
-1.string str("Some string");  
-2.for(auto itr= str.begin(); itr!= str.end() && !isspace(*itr); ++itr)  
-3.    *itr = toupper(*itr); 
-
+```cpp
+string str("Some string");  
+for(auto itr= str.begin(); itr!= str.end() && !isspace(*itr); ++itr)  
+    *itr = toupper(*itr); 
+```
 
 
 &emsp;
 ## 40. 迭代器是什么类型？
-和 size_type一样，我们也不知道（也不用知道）迭代器的精确类型，我们平常使用iterator 和 const_iterator
-1.vector<int>::iterator it; // it can read and write vector<int> elements  
-2.string::iterator it2;	 // it2 can read and write characters in a string  
-3.vector<int>::const_iterator it3; // it3 can read but not write elements  
-4.string::const_iterator it4; // it4 can read but not write  
-
+和 `size_type`一样，我们也不知道（也不用知道）迭代器的精确类型，我们平常使用`iterator `和 `const_iterator`
+```cpp
+vector<int>::iterator it; 	// it can read and write vector<int> elements  
+string::iterator it2;	 	// it2 can read and write characters in a string  
+vector<int>::const_iterator it3; // it3 can read but not write elements  
+string::const_iterator it4; 	 // it4 can read but not write  
+```
 
 
 &emsp;
 ## 41. cbegin() 和 cend() 是什么？
-它返回 const_iterator，有点类似于常量指针，只能访问指向的内容，但是不能修改。
+&emsp;&emsp; 它返回 `const_iterator`，有点类似于常量指针，只能访问指向的内容，但是不能修改。
 
 
 
 &emsp;
 ## 42. 解引用运算符 和 点运算符谁的优先级高？
-点运算符的优先级比较高
+&emsp;&emsp; 点运算符的优先级比较高
 
 
 
 &emsp;
 ## 43.解引用一个迭代器得到的是什么？
-注意，解引用迭代器，得到的是该迭代器 所指向元素的引用
+&emsp;&emsp; 注意，解引用迭代器，得到的是该迭代器 所指向元素的引用(所以我们可以通过迭代器修改容器)。
 
 
 
 &emsp;
 ## 44.如果一个迭代器指向的是一个类，如何通过迭代器进行成员访问？
-对于一个包含string的vector来说，想看迭代器it指向的字符串是否为空，可以这么做：
- 先解引用迭代器，再用点运算符；
- 用 箭头运算符（->）（C语言也有这个特性）
-1.(*it).empty() //   
-2.it->empty()   // 
+举个例子，对于一个包含`string`的`vector`来说，想看迭代器`it`指向的字符串是否为空，可以这么做：
+> ① 先解引用迭代器，再用点运算符；
+> ② 用 箭头运算符（->）（C语言也有这个特性）
+> 
+```cpp
+(*it).empty() //   
+it->empty()   // 
+```
 如果想先解引用迭代器，再用点运算符，千万不能这么写：
-		*it.empty() // 错误：因为 点运算符 的优先级比 解引用 高
+```cpp
+*it.empty() // 错误：因为 点运算符 的优先级比 解引用 高
+```
 
 
 
 &emsp;
 ## 45. 哪些 对vector的操作 会使迭代器失效？
-任何一种改变vector容量的操作都会使迭代器失效，比如 push_back()
+&emsp;&emsp; 任何一种改变`vector`容量的操作都会使迭代器失效，比如 `push_back()`
 
 
 
 &emsp;
 ## 46.为什么迭代器会失效呢？
 任何一种改变vector容量的操作都会使迭代器失效，比如 push_back()，原因如下：
-当我们插入一个元素时它的预分配空间不够时，它会重新申请一段新空间，将原空间上的元素 复制到新的空间上去，然后再把新加入的元素放到新空间的尾部，以满足vector元素要求连续存储的目的。而后原空间会被系统撤销或征做他用，于是指向原 空间的迭代器就成了类似于“悬垂指针”一样的东西，指向了一片非法区域。
+> &emsp;&emsp; 当我们插入一个元素时它的预分配空间不够时，它会重新申请一段新空间，将原空间上的元素 复制到新的空间上去，然后再把新加入的元素放到新空间的尾部，以满足vector元素要求连续存储的目的。而后原空间会被系统撤销或征做他用，于是指向原 空间的迭代器就成了类似于“悬垂指针”一样的东西，指向了一片非法区域。
+> 
 
 
 
 &emsp;
 ## 47. 迭代器向减得到的是什么类型？
-得到的是一个 difference_type类型，它实际上是一个 带符号的整形（因为有可能是负值）。
+&emsp;&emsp; 得到的是一个 `difference_type`类型，它实际上是一个 **带符号**的整型（因为有可能是负值）。
 
 
 
 &emsp;
 ## 48. 该使用vector还是数组？
-因为数组不能随意增加元素，因此如果不确定元素的确切个数，应该使用vector。
+&emsp;&emsp; 因为数组不能随意增加元素，因此如果不确定元素的确切个数，应该使用`vector`。
 
 
 
 &emsp;
 ## 49. 定义数组的时候需要注意什么？
-定义数组的时候，数组的个数 必须是 常量表达式，看下面的代码：
-1.unsigned cnt = 42; 		  // 非 常量表达式  
-2.constexpr unsigned sz = 42; // 常量表达式  
-3.int arr[10]; 				 // 正确：数组个数是字面值  
-4.int *parr[sz];			 // 正确：常量表达式  
-5.string bad[cnt]; 			 // 错误: cnt 不是 常量表达式  
-6.string strs[get_size()];    // 只有在 get_size() 是常量表达式时才正确。
+定义数组的时候，数组的个数 **必须是** 常量表达式，看下面的代码：
+```cpp
+unsigned cnt = 42; 		  	// 非 常量表达式  
+constexpr unsigned sz = 42; // 常量表达式  
+
+int arr[10]; 				 	// 正确：数组个数是字面值  
+int *parr[sz];			 		// 正确：常量表达式  
+string bad[cnt]; 			 	// 错误: cnt 不是 常量表达式  
+string strs[get_size()];    	// 只有在 get_size() 是常量表达式时才正确。
+```
 
 
 
 &emsp;
 ## 50. 如果实在不确定 数组的个数怎么办？
-用malloc() 函数动态分配。
+用`malloc()` 函数动态分配。
 
 
 
 &emsp;
 ## 51. 如何用malloc()分配n个int类型
-int * ptr = (int *) malloc(10 *  sizeof(int));  
+```cpp
+int * ptr = (int *) malloc(10 *  sizeof(int));
+```
 
 
 
 &emsp;
 ## 52. 为什么数组不允许拷贝和赋值？
-1.int a[] = {0, 1, 2};  //  
-2.int a2[] = a; 		// 错误: 不能对数组进行拷贝初始化  
-3.a2 = a; 				// 错误: 数组不能赋值  
-原因：数组名是一个地址常量，其值和第一个元素的地址值相同，不可修改。，所以他们不能直接赋值
+```cpp
+int a[] = {0, 1, 2};  //  
+int a2[] = a; 		// 错误: 不能对数组进行拷贝初始化  
+a2 = a; 			// 错误: 数组不能赋值  
+```
+原因：
+> 数组名是一个地址常量，其值和第一个元素的地址值相同，不可修改。所以他们不能直接赋值。
+> 
 
 
 
 &emsp;
 ## 53. C++的 数组元素不能是什么类型？为什么呢？
-1.int &refs[10] = /* ? */; // 错误: 不存在引用的数组  
+```cpp
+int &refs[10] = /* ? */; // 错误: 不存在引用的数组  
+```
 不能是引用。
 因为 引用并不是变量，只是一个别名：
-	c++中，引用可以说只是某个变量的别名，所谓别名，是和指针类型区分开的，指针类型可以指向某个变量，而且指针类型本身也是一个变量，而引用本身实际上不是一个变量。更本质来说，可以理解为引用没有自身的地址，不占用内存空间，因此，声明引用数组没有办法分配内存空间，因为根本就没有空间可以分配给引用，所以不能声明和定义引用数组。（其实引用的内部实现是一个常量指针，它的大小也和指针一样。）
+> &emsp;&emsp; 在C++中，引用可以说只是某个变量的别名，所谓别名，是和指针类型区分开的，指针类型可以指向某个变量，而且指针类型本身也是一个变量，而引用本身实际上不是一个变量。更本质来说，可以理解为引用没有自身的地址，不占用内存空间，因此，声明引用数组没有办法分配内存空间，因为根本就没有空间可以分配给引用，所以不能声明和定义引用数组。（其实引用的内部实现是一个常量指针，它的大小也和指针一样。）
+> 
 
 
 
 &emsp;
-## 54. 如何理解 int (*Parray)[10] = &arr; ？
-1.int arr[10]   
-2.int (*Parray)[10] = &arr; // Parray 是一个指向含有10个整数的数字
+## 54. 如何理解 `int (*Parray)[10] = &arr`;？
+```cpp
+int arr[10]   
+int (*Parray)[10] = &arr; // Parray 是一个指向含有10个整数的数字
+```
 要想理解 数组声明 的含义，最好的办法就是从数组的名字开始 按由内向外的顺序 阅读：
-1) 由 (*Parray) 可以看出 Parray 是一个指针；
-2) 再看等号的右边，可以知道指向的是大小为10的数组；
-3) 最后观察左边，知道数组元素为 int类型。
-
-同理，下面这个声明： (&arrRef) 是arrRef一个引用，它引用的是一个大小为10的int数组。
+> (1) 由 `(*Parray) `可以看出 `Parray` 是一个指针；
+> (2) 再看等号的右边，可以知道指向的是大小为`10`的数组；
+> (3) 最后观察左边，知道数组元素为 `int`类型。
+> 
+同理，下面这个声明： `(&arrRef)` 是`arrRef`一个引用，它引用的是一个大小为`10`的`int`数组。
+```cpp
 int (&arrRef)[10] = arr; // arrRef refers to an array of ten ints
+```
 
 
 
 &emsp;
 ## 55.如何引用数组？
 在引用一个数组时，我们需要带上数组的长度才行：
+```cpp
 1.int n3[3] = {2, 4, 6};
 2.int (&rn3)[3] = n3;     //数组的引用
-rn3 就是数组的引用，它引用了n3
+```
+`rn3` 就是数组的引用，它引用了`n3`
 
 
 
@@ -493,88 +544,106 @@ rn3 就是数组的引用，它引用了n3
 &emsp;
 ## 57. 使用数组作为auto变量的初始值时，得到的是什么类型？
 得到的是指针：
-1.int ia[] = {0,1,2,3,4,5,6,7,8,9};   
-2.auto ia2(ia); 			// ia2 是 int* 类型  
-3.ia2 = 42; 				// 错误: ia2 是指针  
+```cpp
+int ia[] = {0,1,2,3,4,5,6,7,8,9};   
+auto ia2(ia); 			// ia2 是 int* 类型  
+ia2 = 42; 				// 错误: ia2 是指针  
+```
 
 
 
 &emsp;
 ## 58. 数组有begin() 和 end() 吗？
 有的，但是调用方式和容器不一样，因为数组毕竟不是容器，数组的begin() 和 end()的调用方式和函数一样：
+```cpp
 1.int ia[] = {0,1,2,3,4,5,6,7,8,9}; // ia is an array of ten ints  
 2.int *beg = begin(ia); // 指向 ia 的首元素
 3.int *last = end(ia); // 指向ia的尾后，即ia最后一个元素的下一个位置。  
-begin() 	：指向数组的首元素。
-end()	：和尾后迭代器一样，指向数组的最后一个元素 的下一个位置。
+```
+`begin()` ：指向数组的首元素。
+`end()`	：和尾后迭代器一样，指向数组的最后一个元素 的下一个位置。
 
 
 
 &emsp;
 ## 59. 两个指针相减得到的是什么类型？
-ptrdiff_t ， 类似于 size_t，因为可能是负值，所以是个带符号类型。
+&emsp;&emsp; `ptrdiff_t`， 类似于 `size_t`，因为可能是负值，所以是个**带符号**类型。
 
 
 
 &emsp;
 ## 60. 指向数组的指针 的比较 有什么限制呢？
 相互比较的 两个 指向数组的指针 必须指向同一个数组的元素：
-1.int *b = arr, *e = arr + sz;  
-2.while (b < e) {  // 正确，b 和 e 指向 同一个数组
-3.    ++b;  
-4.}  
+```cpp
+int *b = arr, *e = arr + sz;  
+while (b < e) {  // 正确，b 和 e 指向 同一个数组
+    ++b;  
+}  
+```
 下面这样是错误的：
-1.int i = 0, sz = 42;  
-2.int *p = &i, *e = &sz;  
-3.while (p < e){  // 错误，p 和 e 指向 两个不同的数组
-4.    ++b;   
-5.}  
+```cpp
+int i = 0, sz = 42;  
+int *p = &i, *e = &sz;  
+while (p < e){  // 错误，p 和 e 指向 两个不同的数组
+    ++b;   
+}
+```
 
 
 
 &emsp;
-## 61.char a[] = {'a', 'b', 'c', 'd'，'e'} 和 char a[] = "abcde" 有何区别？
+## 61. char a[] = {'a', 'b', 'c', 'd'，'e'} 和 char a[] = "abcde" 有何区别？
 它们含有的元素不一样：
-	列表初始化那个是5个；
-	用"abcde"初始化那个是6个，这是因为编译器会主动在后面加一个”\0”上去。
-1.char a[] = {'a','b','c','d','e'}; // 数组长度和初始化列表里的个数一样，5个 
-2.char b[] = "abcde";               // 编译器会主动在后面加一个”\0”上去，6个
+> 列表初始化那个是5个；
+> 用"abcde"初始化那个是6个，这是因为编译器会主动在后面加一个”\0”上去。
+> 
+```cpp
+char a[] = {'a','b','c','d','e'}; // 数组长度和初始化列表里的个数一样，5个 
+char b[] = "abcde";               // 编译器会主动在后面加一个”\0”上去，6个
+```
 
-62.char message1[] = "Hello"; 和 char *message2 = "Hello";有何区别？
+
+
+## 62.char message1[] = "Hello"; 和 char *message2 = "Hello";有何区别？
 这两个初始化看上去很像， 但它们具有不同的含义：
-char message1[] = "Hello";  ： 初始化一个字符数组的元素，存放在 栈区 或 堆区 ；
-char *message2 = "Hello";   ：这是一个真正的字符串常量，这个指针变量被初始化为指向这个字符串常量的存储位置， 存放在 全局静态区，修改它会产生段错误；
+```cpp
+char message1[] = "Hello"; // 初始化一个字符数组的元素，存放在 栈区 或 堆区 ；
+char *message2 = "Hello";  // 这是一个真正的字符串常量，这个指针变量被初始化为指向这个字符串常量的存储位置， 存放在 全局静态区，修改它会产生段错误；
+```
 如下图所示：
-
+<div align="center"> <img src="./pic/chapter3/图片1.png"> </div>
 
 
 
 &emsp;
-## 63.char *str1 = "Hello"; 和 char *str2 = "Hello";指向的地址一样吗？
-是的，它们指向同一地址。
+## 63.char *str1 = "Hello" 和 char *str2 = "Hello" 指向的地址一样吗？
+&emsp;&emsp; 是的，它们指向同一地址。
 
 
 
 
 &emsp;
 ## 64. vector 和 string分别对应 c语言的什么？
-vector	：数组；
-1.int int_arr[] = {0, 1, 2, 3, 4, 5};   
-2.vector<int> ivec{0, 1, 2, 3, 4, 5};  
-string	：c风格字符串。
+(1) vector	：数组；
+```cpp
+int int_arr[] = {0, 1, 2, 3, 4, 5};   
+vector<int> ivec{0, 1, 2, 3, 4, 5};  
+```
+(2) string	：c风格字符串。
+```cpp
 1.string str1("Hello World"); //   
 2.char str2[] = "Hello World"; //  
+```
 
 
 
 &emsp;
 ## 65. 混用string对象和c风格字符串需要注意什么？
-可以用 c风格字符串 初始化 string对象，反过来却不行。
+&emsp;&emsp; 可以用 c风格字符串 初始化 string对象，反过来却不行。
 
 
 
 &emsp;
 ## 66. 二维数组在内存中的存储方式是怎样的？
-在C中， 多维数组的元素存储顺序按照 最右边的下标率先变化 的原则， 称为
-行主序(row major order)。
+&emsp;&emsp; 在C中，多维数组的元素存储顺序按照 最右边的下标率先变化 的原则，称为**行主序(row major order)**。
 
