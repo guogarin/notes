@@ -288,11 +288,14 @@ string finalgrade = (grade < 60) ? "fail" : "pass";  
 
 &emsp;
 ## 24. 用条件运算符将成绩分为三档：优秀(大于90)、合格、不及格
-1.finalgrade = (grade > 90) ? "high pass"  : (grade < 60) ? "fail" : "pass";
+```cpp
+finalgrade = (grade > 90) ? "high pass"  : (grade < 60) ? "fail" : "pass";
+```
 上面语句的执行顺序：
-先执行 (grade > 90) ? "high pass" ，
-如果为真则返回 "high pass"，
-如果为假，则执行 (grade < 60) ? "fail" : "pass";
+> 先执行 `(grade > 90) ? "high pass"` ，
+> 如果为真则返回 "high pass"，
+> 如果为假，则执行 `(grade < 60) ? "fail" : "pass"`
+> 
 
 
 
@@ -300,24 +303,30 @@ string finalgrade = (grade < 60) ? "fail" : "pass";  
 
 &emsp;
 ## 25.使用条件运算符时需要注意什么？
-1) 嵌套的条件运算符最好不要超多3条，要不然可读性太差；
-2) 条件运算符优先级很低，因此嵌套了条件运算子表达式时，通常需要在它的两端加上括号，看下面的代码：
-1.cout << ((grade < 60) ? "fail" : "pass"); // prints pass or fail  
-2.cout << (grade < 60) ? "fail" : "pass"; // prints 1 or 0!  
-3.cout << grade < 60 ? "fail" : "pass"; // error: compares cout to 60  
+(1) 嵌套的条件运算符最好不要超多3条，要不然可读性太差；
+(2) 条件运算符优先级很低，因此嵌套了条件运算子表达式时，通常需要在它的两端加上括号，看下面的代码：
+```cpp
+cout << ((grade < 60) ? "fail" : "pass"); // prints pass or fail  
+cout << (grade < 60) ? "fail" : "pass";   // prints 1 or 0!  
+cout << grade < 60 ? "fail" : "pass";     // error: compares cout to 60  
+```
 对于第二个语句，它相当于：
-1.	cout << (grade < 60); //输出 0 或 1   
-2.cout ? "fail" : "pass"; // 根据 cout的值是true还是false产生对应的输出
+```cpp
+cout << (grade < 60);   // 输出 0 或 1   
+cout ? "fail" : "pass"; // 根据 cout的值是true还是false产生对应的输出
+```
 对于第三个语句，它相当于：
-1.	cout << grade; 				// “<”的优先级比”<<”低，所以先输出 grade
-2.cout < 60 ? "fail" : "pass"; 	// 然后比较 cout和60，决定输出fail还是pass
+```cpp
+cout << grade; 				    // “<”的优先级比”<<”低，所以先输出 grade
+cout < 60 ? "fail" : "pass"; 	// 然后比较 cout和60，决定输出fail还是pass
+```
 
 
 
 
 &emsp;
 ## 26.  sizeof运算符返回的是什么？
-返回的是 字节数
+&emsp;&emsp; 返回的是 **字节数**
 
 
 
@@ -325,7 +334,7 @@ string finalgrade = (grade < 60) ? "fail" : "pass";  
 
 &emsp;
 ## 27.  sizeof运算符的求值发生在什么阶段？
-最开始的c标准规定sizeof只能编译时求值，后来c99又补充规定sizeof可以运行时求值。
+&emsp;&emsp; 最开始的c标准规定sizeof只能编译时求值，后来c99又补充规定sizeof可以运行时求值。
 
 
 
@@ -341,18 +350,30 @@ sizeof(引用) ：该引用所引用的对象所占空间
 
 &emsp;
 ## 29.sizeof(指针)、sizeof(解引用指针)、sizeof(数组名)返回什么？
-sizeof(指针) ：指针本身的大小，64位OS是8字节
-sizeof(解引用指针) ：该指针指向对象所占空间
-sizeof(数组名) ：整个数组所占空间（注意！sizeof运算符不会讲数组转换为指针来处理！）
-
+如下：
+> &emsp;&emsp; ① sizeof(指针) ：指针本身的大小，64位OS是8字节
+> &emsp;&emsp; ② sizeof(解引用指针) ：该指针指向对象所占空间
+> &emsp;&emsp; ③ sizeof(数组名) ：整个数组所占空间（注意！sizeof运算符不会讲数组转换为指针来处理！），例如对于`int a[3]`，`sizeof(a)`等于`4*sizeof(int)`
+> 
+```cpp
+int main()
+{
+    int a[3];
+    cout<< "sizeof(a) : " << sizeof(a) << endl;
+}
+```
+运行结果：
+```
+sizeof(a) : 12
+```
 
 
 
 
 &emsp;
-## 30.sizeof(string对象) 、sizeof(vector对象)返回什么？
+## 30. sizeof(string对象) 、sizeof(vector对象)返回什么？
 只计算固定部分的大小，不会计算对象中的元素占了多少空间
-TODO：比较复杂，后面再看
+
 
 
 
@@ -368,22 +389,22 @@ TODO：比较复杂，后面再看
 &emsp;
 ## 32. 逗号表达式 的结果哪一个？
 整个逗号表达式的值为 系列中最后一个表达式的值。
-1.#include <iostream>  
-2.using namespace std;  
-3.   
-4.int main()  
-5.{  
-6.   int i, j;  
-7.     
-8.   j = 10;  
-9.   i = (j++, j+100, 999+j);  
-10.   
-11.   cout << i;  
-12.     
-13.   return 0;  
-14.}  
-结果： 1010，
-对于语句 i = (j++, j+100, 999+j);  等号右侧的的一系列运算从左开始按顺序执行，先是j+，此时j为 11 ，因为整个逗号表达式的值为 系列中最后一个表达式的值，所以  j+100 并没有起作用，(j++, j+100, 999+j); 的值为 999+j，即 1010 
+```cpp
+int main()  
+{  
+   int i, j;  
+     
+   j = 10;  
+   i = (j++, j+100, 999+j);  
+   
+   cout << i;  
+     
+   return 0;  
+}  
+```
+> 结果： 1010，
+> 
+对于语句 `i = (j++, j+100, 999+j)`，等号右侧的的一系列运算从左开始按顺序执行，先是`j++`，此时`j`为 `11 `，因为整个逗号表达式的值为 系列中最后一个表达式的值，所以  `j+100` 并没有起作用，`(j++, j+100, 999+j)`; 的值为 `999+j`，即 `1010` 
 
 
 
@@ -391,7 +412,7 @@ TODO：比较复杂，后面再看
 
 &emsp;
 ## 33.什么是 隐式转换？
-隐式转换是系统跟据程序的需要而自动转换的，无需程序员介入，有时甚至不需要程序员了解。
+&emsp;&emsp; 隐式转换是系统跟据程序的需要而自动转换的，无需程序员介入，有时甚至不需要程序员了解。
 
 
 
@@ -399,9 +420,9 @@ TODO：比较复杂，后面再看
 
 &emsp;
 ## 34.OS是怎么执行 int ival = 3.541 + 3; 的？
-1)  3被转换成了double类型，即 3.0
-2)  3.541 和 3.0 相加，即 6.541
-3)  执行 ival的初始化，此时ival的类型无法改变，只能将 6.541 转为 int，即 6 赋给ival。
+(1)  `3`被转换成了`double`类型，即 `3.0`
+(2)  `3.541` 和 `3.0` 相加，即 `6.541`
+(3)  执行 `ival`的初始化，此时`ival`的类型无法改变，只能将 `6.541` 转为 `int`，即 `6` 赋给`ival`。
 
 
 
@@ -409,75 +430,130 @@ TODO：比较复杂，后面再看
 
 &emsp;
 ## 35. 什么时候会发生隐式转换？
-1) 在条件中，非布尔转换为 布尔类型；
-2) 在初始化过程中，初始值 转换为 变量的类型；
-3) 在赋值语句中，右侧对象 转换为 左侧运算对象 的类型；
-4) 算数运算 或 关系运算时，若有多种类型，需要转换为 同一种类型。
-5) 将数组名赋给一个指针时
-1.	int ia[10];	 	// array of ten ints  
-2.int* ip = ia; 	// ia被转换为指向数组首元素的指针  
-6) 将指针、算数类型作为条件时：
-1.char *cp = get_string();  
-2.if (cp) /* ... */ // true if the pointer cp is not zero  
-3.while (*cp) /* ... */ // true if *cp is not the null character  
-7) 将非常量类型的指针赋给常量指针时
-1.	int i;  
-2.const int &j = i; 	 	// 非常量转换为 const int  
-3.const int *p = &i; 	// 非常量的地址转换为 const地址
-4.int &r = j, *q = p; 	// 错误: 不允许const转换成非常量
+(1) 在条件中，非布尔转换为 布尔类型；
 
-值得注意的是，算术类型之间的转换被设计得尽可能避免损失精度，如：
-	auto ival = 3.541 + 3 // ival为double或float  
+(2) 在初始化过程中，初始值 转换为 变量的类型；
 
+(3) 在赋值语句中，右侧对象 转换为 左侧运算对象 的类型；
+
+(4) 算数运算 或 关系运算时，若有多种类型，需要转换为 同一种类型。
+
+(5) 将数组名赋给一个指针时
+```cpp
+int ia[10];	 	// array of ten ints  
+int* ip = ia; 	// ia被转换为指向数组首元素的指针  
+```
+
+(6) 将指针、算数类型作为条件时：
+```cpp
+char *cp = get_string();  
+if (cp) /* ... */ // true if the pointer cp is not zero  
+while (*cp) /* ... */ // true if *cp is not the null character  
+```
+
+(7) 将非常量类型的指针赋给常量指针时
+```cpp
+int i;  
+const int &j = i; 	 	// 非常量转换为 const int  
+const int *p = &i; 	// 非常量的地址转换为 const地址
+int &r = j, *q = p; 	// 错误: 不允许const转换成非常量
+```
+**值得注意的是**，算术类型之间的转换被设计得尽可能避免损失精度，如：
+```cpp
+auto ival = 3.541 + 3 // ival为double或float  
+```
 
 
 
 
 &emsp;
 ## 36. 整形提升
-整形提升负责把 小整数类型 转换为较大的整数类型，对于bool, char, signed char, unsigned char, short, and unsigned short 来说，只要它们所有的值都能存在int里，它们就会转换为int类型。
-对于较大的char 类型(wchar_t, char16_t, and char32_t)将提升成 unsigned int, long, unsigned long, long long和unsigned long long中 最小的一种类型，前提是转换后的类型要能容纳原类型的所有值。
+&emsp;&emsp; 整形提升负责把 小整数类型 转换为较大的整数类型，对于`bool, char, signed char, unsigned char, short, and unsigned short` 来说，只要它们所有的值都能存在`int`里，它们就会转换为`int`类型。
+&emsp;&emsp; 对于较大的`char` 类型(`wchar_t, char16_t, and char32_t`)将提升成 `unsigned int, long, unsigned long, long long和unsigned long long`中 最小的一种类型，前提是转换后的类型要能容纳原类型的所有值。
 
-37.无符号类型的算数转换
-有符号数 和 无符号数进行算术运算的时候，有无符号数会被转换为无符号数。
 
-38. 类型转换的例子
-1.bool flag; char cval;  
-2.short sval; unsigned short usval;  
-3.int ival; unsigned int uival;  
-4.long lval; unsigned long ulval;  
-5.float fval; double dval;  
-6.3.14159L + 'a'; 	// 'a' 提升为int, 然后该 int转换为 long double  
-7.dval + ival; 	// ival converted to double  
-8.dval + fval; 	// fval converted to double  
-9.ival = dval; 	// dval converted (by truncation) to int  
-10.flag = dval; 	// if dval is 0, then flag is false, otherwise true  
-11.cval + fval; 	// cval promoted to int, then that int converted to float
-12.sval + cval; 	// sval and cval promoted to int  
-13.cval + lval; 	// cval converted to long  
-14.ival + ulval; 	// ival converted to unsigned long  
-15.usval + ival; 	// promotion depends on the size of unsigned short and int
-16.uival + lval; 	// conversion depends on the size of unsigned int and long
 
-39.两个char类型进行运算会发生什么？
+
+
+&emsp;
+## 37.无符号类型的算数转换
+&emsp;&emsp; 有符号数 和 无符号数进行算术运算的时候，有符号数 会被转换为 无符号数。
+
+
+
+
+
+&emsp;
+## 38. 类型转换的例子
+```cpp
+bool flag; char cval;  
+short sval; unsigned short usval;  
+int ival; unsigned int uival;  
+long lval; unsigned long ulval;  
+float fval; double dval;  
+
+3.14159L + 'a'; 	// 'a' 提升为int, 然后该 int转换为 long double  
+
+dval + ival; 	// ival converted to double  
+
+dval + fval; 	// fval converted to double  
+
+ival = dval; 	// dval converted (by truncation) to int  
+
+flag = dval; 	// if dval is 0, then flag is false, otherwise true  
+
+cval + fval; 	// cval promoted to int, then that int converted to float
+
+sval + cval; 	// sval and cval promoted to int  
+
+cval + lval; 	// cval converted to long  
+
+ival + ulval; 	// ival converted to unsigned long  
+
+usval + ival; 	// promotion depends on the size of unsigned short and int
+
+uival + lval; 	// conversion depends on the size of unsigned int and long
+```
+
+
+
+
+&emsp;
+## 39.两个char类型进行运算会发生什么？
 来看《C和指针》里面的一个例子：
-1.char a, b, c;  
-2.char a = '1';  
-3.char b = '2'  
-4.c = a + b; // a和b的值被提升为普通整型， 然后再执行加法运算,加法运算的结果将被截短， 然后再存储于c中  
+```cpp
+char a, b, c;  
 
-40. char字符变量可以和int整型数值加减么？ 需要强制类型转换吗？
-可以进行加减，因为char类型是可以转换为int类型的（计算过程中自定进行转换，不需要强制转换的）。
+char a = '1';  
+char b = '2'  
 
-41. 显示类型转换
+c = a + b; 
+// a和b的值被提升为普通整型， 然后再执行加法运算,加法运算的结果将被截短， 然后再存储于c中  
+```
+
+
+
+
+&emsp;
+## 40. char字符变量可以和int整型数值加减么？ 需要强制类型转换吗？
+&emsp;&emsp; 可以进行加减，因为`char`类型是可以转换为`int`类型的（计算过程中自定进行转换，不需要强制转换的）。
+
+
+
+
+
+&emsp;
+## 41. 显示类型转换
 C语言的类型转换比较自由，但也带来了一些问题，这些问题大多由程序员自行控制和解决。对于庞大的C++语言机制而言，这种简单粗暴的类型转换方式显然是个巨大的负担，因此C++引入4种类型转换运算符，更加严格的限制允许的类型转换，使转换过程更加规范。
 static_cast
 1 ) 除了 包含底层const，都可以使用static_cast
 2 ) 对于较大算术类型转换为较小的算术类型，static_cast可以关闭警告信息。
 3 ) static_cast对于编译器无法自动执行的类型转换也非常有用，例如可以找回存于void*指针中的值:
+```cpp
 1.void* p = &d; // 正确: 任何非常量对象的地址都能存入 void*  
 2.// 正确: 将void* 转换回初始的指针类型  
 3.double *dp = static_cast<double*>(p);  
+```
 4 ) static_cast它能在内置的数据类型间互相转换，对于类只能在有联系的指针类型间进行转换。可以在继承体系中把指针转换来、转换去，但是不能转换成继承体系外的一种类型
 
 dynamic_cast
@@ -489,37 +565,23 @@ dynamic_cast
 
 const_cast
 const_cast 唯一能做的 就是 改变底层const、volatile属性（也只有它能做到）；
+```cpp
 1.const char *pc;  
 2.char *p = const_cast<char*>(pc); // 正确: 但是通过p写值是未定义的行为
+```
 const_cast 还常用于函数重载的上下文中。
 
 reinterpret_cast.
 reinterpret_cast为运算对象的位模式提供较低层次上的重新解释，即它会产生一个新的值，这个值会有与原始表达式有完全相同的比特位。使用reinterpret_cast非常危险，本质上依赖于机器。
-
-42. C++提供的几个显示类型转换运算符分别发生在什么阶段？
-其他三种都是编译时完成的，dynamic_cast是运行时处理的。
-
-static_cast	编译期
-dynamic_cast	运行时
-const_cast	编译期
-reinterpret_cast	编译期
-
-
-43. 旧式的强制类型转换
-
-
-44.为什么在 C++ 中不提倡 C 风格的强制类型转换？
-1 ) C++ 具有继承，static_cast  和  dynamic_cast可表示向下转型。使用多个关键字来做不同的 casting，能减少歧义，令代码更清晰易理解。
-2) 表现形式不够清晰，追踪起来比较困难
-
-45.为什么要尽量避免 强制类型转换
-因为强制类型转换干扰了 正常的类型检查。
 
 
 
 
 
 # 1. 类型转换
+## 0.1 为什么要尽量避免 强制类型转换
+&emsp;&emsp; 因为强制类型转换干扰了 正常的类型检查。
+
 ## 1.1 隐式类型转换
 &emsp;&emsp; 隐式类型转换是自动执行的，无需显式的操作符。 隐式类型转换发生在很多地方，比如：
 > 函数实参到形参的类型转换;
@@ -562,8 +624,8 @@ b : 4294967295
 
 ## 1.2 强制(显示)类型转换
 在C++中，强制转换可以分为两类：
-> &emsp;&emsp; ① C风格的强制类型转换
-> &emsp;&emsp; ② C++ 提供的强制类型转换
+> &emsp; ① C风格的强制类型转换
+> &emsp; ② C++ 提供的强制类型转换
 > 
 
 &emsp;
@@ -730,16 +792,16 @@ using namespace std;
 int main()
 {
     // 情况一：合法
-	int i = 1; // i不是常量
-	const int * pi = &i;
-	int * pi2 = const_cast<int *>(pi);
-	*pi2 = 100;
-	
-	// 情况二：不合法：
-	int ci = 1; // ci是const
-	const int * pi3 = &ci;
-	int * pi4 = const_cast<int *>(pi);
-	*pi3 = 100; // 报错 
+    int i = 1; // i不是常量
+    const int * pi = &i;
+    int * pi2 = const_cast<int *>(pi);
+    *pi2 = 100;
+
+    // 情况二：不合法：
+    int ci = 1; // ci是const
+    const int * pi3 = &ci;
+    int * pi4 = const_cast<int *>(pi);
+    *pi3 = 100; // 报错 
 }
 
 ```
@@ -796,7 +858,7 @@ int main()
 
 ### 1.4.3 `reinterpret_cast`
 #### (1) 作用
-&emsp; `reinterpret_cast`t意为 **“重新解释，就是为运算对象的位模式提供较低层次的重新解释*”**，它是C++中最接近于C风格强制类型转换的一个关键字。它让程序员能够将一种对象类型转换为另一种，不管它们是否相关。，顾名思义，举个例子，假设有如下的转换：
+&emsp; `reinterpret_cast`t意为 **“重新解释，就是为运算对象的位模式提供较低层次的重新解释”**，它是C++中最接近于C风格强制类型转换的一个关键字。它让程序员能够将一种对象类型转换为另一种，不管它们是否相关。，顾名思义，举个例子，假设有如下的转换：
 ```cpp 
 int *ip;
 char pc = reinterpret_cast<char> (ip) ;
@@ -842,6 +904,18 @@ reinterpret_cast<type_id> (expression)
 > &emsp;&emsp; 其他强制类型转换，比如 `static_cast` 和 `dynamic_cast` 都不应该频繁使用。每次书写了一条强制类型转换语句，都应该反复斟酌能否以其他方式实现相同的目标。
 > &emsp;&emsp; 就算实在无法避免，也应该尽量限制类型转换值的作用域，并且记录对相关类型的所有假定，这样可以减少错误发生的机会。
 > 
+
+
+&emsp;
+## 1.6 C++提供的几个显示类型转换运算符分别发生在什么阶段？
+除了`dynamic_cast`是运行时处理的外，其他三种都是编译时完成的：
+| 类型转换运算符   | 发生阶段 |
+| ---------------- | -------- |
+| static_cast      | 编译期   |
+| dynamic_cast     | 运行时   |
+| const_cast       | 编译期   |
+| reinterpret_cast | 编译期   |
+
 
 ## 参考文献
 1. [C++ 四种强制类型转换](https://www.cnblogs.com/Allen-rg/p/6999360.html)
