@@ -51,337 +51,388 @@ void print(vector<int>::const_iterator beg, vector<int>::const_iterator end)
 
 &emsp;
 ## 9. 函数的声明次数
-类似于变量，函数可以声明多次，但只能定义一次
+&emsp;&emsp; 类似于变量，函数可以声明多次，但只能定义一次
 
 
 &emsp;
 ## 10.什么是分离式编译？
-一个项目由若干个源文件共同实现，而每个源文件(.cpp)单独编译成目标文件(.obj)，最后将所有目标文件连接起来形成单一的可执行文件(.out 或 .exe)的过程。
+&emsp;&emsp; 一个项目由若干个源文件共同实现，而每个源文件(`.cpp`)单独编译成目标文件(`.obj`)，最后将所有目标文件连接起来形成单一的可执行文件(`.out` 或 `.exe`)的过程。
 
 
 &emsp;
 ## 11.C++ 有哪几种参数传递方式？
-传值调用 和 传引用调用
+&emsp;&emsp; 传值调用 和 传引用调用
 
 
 &emsp;
 ## 12. 在传参时，传引用和传指针有何异同？
-相同点：
-	都可以修改指向对象的值
-不同点：
-	传指针和传值一样，都是拷贝给了另一个对象，拷贝完成之后，它们是两个不同的对象，只不过它们有着相同的值，改变一个不会影响另一个。
+**(1) 相同点**：
+> 都可以修改指向对象的值
+> 
+**(2) 不同点**：
+> 传指针和传值一样，都是拷贝给了另一个对象，拷贝完成之后，它们是两个不同的对象，只不过它们有着相同的值，改变一个不会影响另一个。
+> 
 在C++中，推荐使用使用传引用，而不是传指针。
 
 
 &emsp;
 ## 13. 传引用有何好处？
-效率高，因为它避免了拷贝
+&emsp;&emsp; 效率高，因为它避免了拷贝
 
 
 &emsp;
 ## 14.传引用的时候需要注意什么？
-如果不希望改变引用对象的值，应该声明为const引用
+&emsp;&emsp; 如果不希望改变引用对象的值，应该声明为`const`引用
 
 
 &emsp;
 ## 15. 为什么要将函数不会改变形参设为const引用？有什么好处？
-1 ) 会给调用者误导，即函数可以修改它的实参值；
-2 ) 限制了函数能接受的类型
-我们不能把const对象、字面值、或需要类型转换的对象传给普通的引用实参，比如：
-1.int func(int & a);    // func接受的是普通的int引用
-2.int b = 1;    
-3.const int &c = b;    // 常量int引用
-4.func(c)		//错误：不能用const int&（常量引用）初始化int &    
+(1) 会给调用者误导，即函数可以修改它的实参值；
+(2) 限制了函数能接受的类型
+&emsp;&emsp; 我们不能把const对象、字面值、或需要类型转换的对象传给普通的引用实参，比如：
+```cpp
+int func(int & a);    // func接受的是普通的int引用
+int b = 1;    
+const int &c = b;    // 常量int引用
+func(c)		//错误：不能用const int&（常量引用）初始化int &    
+```
 上面之所以会报错，这很好理解，这就有点像可以用非const变量初始化const变量，但是不能用const变量初始化非const变量一样：
-1.const int ci = 1024; 
-2.int i = 2048;
-3.const int &r1 = ci; // 正确: r1 和 ci都是 const 
-4.int &r2 = ci;		  // 错误: 非常量引用不能引用常量对象    
-5.const int &r3 = i;  // ok: 
-3 ) 避免函数调用时的一种特殊的情况：
+```cpp
+const int ci = 1024; 
+int i = 2048;
+const int &r1 = ci; // 正确: r1 和 ci都是 const 
+int &r2 = ci;		  // 错误: 非常量引用不能引用常量对象    
+const int &r3 = i;  // ok: 
+```
+(3) 避免函数调用时的一种特殊的情况：
 	
 
 &emsp;
 ## 16. 以下声明有何区别？
-1.void print(const int*);    
-2.void print(const int[]); 
-3.void print(const int[10]);  
-
+```cpp
+void print(const int*);    
+void print(const int[]); 
+void print(const int[10]);  
+```
 它们没有区别，因为数组有两个特性：
-1 ) 不允许拷贝数组，原因：数组名是一个地址常量，其值和第一个元素的地址值相同，不可修改。，所以他们不能直接赋值：
-1.int a[] = {0, 1, 2}; // array of three ints    
-2.int a2[] = a; // 错误: 不能拷贝数组，因此不能用一个数组初始化另一个数组；    
-3.a2 = a; 		// 错误: 不能拷贝数组，因此不能将数组直接赋给另一个数组    ；
-2 ) 使用数组时，通常会将其转换成指针。
+(1) 不允许拷贝数组，原因：数组名是一个地址常量，其值和第一个元素的地址值相同，不可修改。，所以他们不能直接赋值：
+```cpp
+int a[] = {0, 1, 2}; // array of three ints    
+int a2[] = a; // 错误: 不能拷贝数组，因此不能用一个数组初始化另一个数组；    
+a2 = a; 		// 错误: 不能拷贝数组，因此不能将数组直接赋给另一个数组    ；
+```
+(2) 使用数组时，通常会将其转换成指针。
 因此对于上面几个函数原型：
-1.void print(const int*);    
-2.void print(const int[]); 	 // 函数的意图是作用于一个数组
-3.void print(const int[10]); // 这里的维度表示我们期望数组含有多少元素，但是不一定
+```cpp
+void print(const int*);    
+void print(const int[]); 	 // 函数的意图是作用于一个数组
+void print(const int[10]);	 // 这里的维度表示我们期望数组含有多少元素，但是不一定
+```
 尽管这几个函数原型表现形式不同，但它们都是等价的：
- 每个函数的唯一形参都是 const int* ；
- 当编译器处理对print函数的调用时，只检查传入的参数是否为 const int* 
+> 每个函数的唯一形参都是 `const int*` ；
+> 当编译器处理对`print`函数的调用时，只检查传入的参数是否为 `const int*` 
+>
 
 
 &emsp;
 ## 17.使用数组引用形参时需要注意什么？
-1.void print(int (&arr)[10])    // 注意！维度是类型的一部分
-2.{    
-3.for (auto elem : arr)    
-i.cout << elem << endl;    
-4.}    
-
-1 ) 需要注意数组名两端的括号：
-1.void f(int &arr[10]) 	 // 错误: 将arr声明成了引用的数组     
-2.void f(int (&arr)[10]) // 正确: arr 引用了 具有10个int的数组    
+```cpp
+void print(int (&arr)[10]){    // 注意！维度是类型的一部分
+    for (auto elem : arr)    
+        cout << elem << endl;    
+}    
+```
+需要注意数组名两端的括号：
+```cpp
+void f(int &arr[10]) 	 // 错误: 将arr声明成了引用的数组     
+void f(int (&arr)[10]) // 正确: arr 引用了 具有10个int的数组    
+```
 
 
 &emsp;
 ## 18.使用数组引用形参有什么缺点？有什么办法解决呢？
-缺点：通用性太差，因为维度(length)也是形参类型的一部分，所以只能接受大小为length 的数组：
-1.int i = 0, j[2] = {0, 1};    
-2.int k[10] = {0,1,2,3,4,5,6,7,8,9};        
-3.print(j); // 错误: 实参的大小为2，print
-4.print(k); // 正确: 数组k的大小为10    
-解决办法：用函数模板
+缺点：
+> &emsp; 通用性太差，因为 维度(length) 也是形参类型的一部分，所以只能接受大小为length 的数组：
+> 
+```cpp
+int i = 0, j[2] = {0, 1};    
+int k[10] = {0,1,2,3,4,5,6,7,8,9};        
+print(j); // 错误: 实参的大小为2，print
+print(k); // 正确: 数组k的大小为10    
+```
+解决办法：
+> &emsp; 用函数模板
+> 
 
 
 &emsp;
 ## 19. 如何传递多维数组？
 假设有一个遍历二维数组的函数，我们可以这么写：
-1 )  void print_values_one(int (*matrix)[5], int i) // *a两边的括号必不可少！
-注意 int (*matrix)[5] 和 int * matrix [5] 的区别：
-1.int * matrix [5] 	 // matrix是一个数组，里面含有5个int
-2.int (*matrix)[5]	 // matrix是一个指针，指向 含有5个int的数组
+**(1) 写法一**
+```cpp
+ void print_values_one(int (*matrix)[5], int i) // *a两边的括号必不可少！
+```
+注意 `int (*matrix)[5]` 和 `int * matrix [5]` 的区别：
+```cpp
+int * matrix [5] 	 // matrix是一个数组，里面含有5个int*
+int (*matrix)[5]	 // matrix是一个指针，指向 含有5个int的数组
+```
 
-2 )  void print_values_two(int matrix [][5], int i)
-当且仅当matrix作为函数的参数时，才可以这样声明：
-1.int sum2(int ar[][], int rows); // 错误的声明    
-2.int sum2(int ar[][4], int rows); // 有效声明    
-3.int sum2(int ar[3][4], int rows); // 有效声明， 但是3将被忽略    
+**(2) 写法二**
+```cpp
+void print_values_two(int matrix [][5], int i);
+```
+当且仅当`matrix`作为函数的参数时，才可以这样声明：
+```cpp
+int sum2(int ar[][], int rows);   // 错误的声明    
+int sum2(int ar[][4], int rows);  // 有效声明    
+int sum2(int ar[3][4], int rows); // 有效声明， 但是3将被忽略    
+```
 一般而言， 声明一个指向N维数组的指针时， 只能省略最左边方括号中的值：
-		int sum4d(int ar[][12][20][30], int rows); 
+```cpp
+int sum4d(int ar[][12][20][30], int rows); 
+```
 因为第1对方括号只用于表明这是一个指针， 而其他的方括号则用于描述指针所指向数据对象的类型。下面的声明与该声明等价：    
-1.int sum4d(int (*ar)[12][20][30], int rows); // ar是一个指针    
-
-3 )  void print_values_three(int ** matrix, int i, int j)
-
+```cpp
+int sum4d(int (*ar)[12][20][30], int rows); // ar是一个指针    
+```
+**(3) 写法三**
+```cpp
+void print_values_three(int ** matrix, int i, int j)
+```
 下面是这几个函数的实现：
-1./** 
-2.     * @param 1:a 是int[5]类型的指针 
-3.     * @param 2:i 边界 
-4.    */    
-5.    void print_values_one(int (*a)[5], int i)    
-6.    {    
-7.                for(int m = 0; m < i; ++ m)    
-8.                {    
-9.                        for(int n = 0; n < 5; ++n)    
-10.                        {    
-11.                                cout << a[m][n] << " ";    
-12.                        }    
-13.                        cout << endl;    
-14.                }    
-15.     }    
-16.     
-17./** 
-18.* @param 1:a 元素是二维数组,每行是5个元素的一维数组 
-19.* @param 2:i 边界 
-20.*/    
-21.void print_values_two(int a[][5], int i)    
-22.{    
-23.        for(int m = 0; m < i; ++ m)    
-24.        {    
-25.                for(int n = 0; n < 5; ++n)    
-26.                {    
-27.                        cout << a[m][n] << " ";    
-28.                }    
-29.                cout << endl;    
-30.        }    
-31.}    
-32.     
-33.        /** 
-34.        * @param 1:a 是一个指向 int* 类型的指针 
-35.        * @param 2:i 边界 
-36.        * @param 3:j 边界 
-37.        */    
-38.void print_values_three(int ** a, int i, int j)    
-39.{    
-40.        for(int m = 0; m < i; ++ m)    
-41.        {    
-42.                for(int n = 0; n < j; ++n)    
-43.                {    
-44.                        cout << *( *(a + m) + n)<< " ";    
-45.                }    
-46.                cout << endl;    
-47.        }    
-48.}    
+```cpp
+/** 
+     * @param 1:a 是int[5]类型的指针 
+     * @param 2:i 边界 
+*/    
+void print_values_one(int (*a)[5], int i){    
+    for(int m = 0; m < i; ++ m){    
+        for(int n = 0; n < 5; ++n){    
+                cout << a[m][n] << " ";    
+        }
+        cout << endl;    
+    }
+}    
+     
+/** 
+    * @param 1:a 元素是二维数组,每行是5个元素的一维数组 
+    * @param 2:i 边界 
+*/    
+void print_values_two(int a[][5], int i){    
+    for(int m = 0; m < i; ++ m){    
+        for(int n = 0; n < 5; ++n){    
+                cout << a[m][n] << " ";    
+        }    
+        cout << endl;    
+    }    
+}    
+     
+/** 
+    * @param 1:a 是一个指向 int* 类型的指针 
+    * @param 2:i 边界 
+    * @param 3:j 边界 
+*/    
+void print_values_three(int ** a, int i, int j){    
+    for(int m = 0; m < i; ++ m){    
+        for(int n = 0; n < j; ++n){    
+            cout << *( *(a + m) + n)<< " ";    
+        }    
+        cout << endl;    
+    } 
+}    
+```
 
 
 &emsp;
 ## 20. 处理含有可变形参的函数
-方法一：initializer_list 形参
-1 ) 何时使用initializer_list 形参？
- 实参数量未知；
- 全部实参类型相同；
-2 ) initializer_list是什么类型？
-	和vector一样，它是一种模板类型。
-3 ) initializer_list有何特点？
- initializer_list对象中的元素永远是常量值，我们无法修改initializer_list对象中元素。
- 拷贝或赋值一个initializer_list对象不会拷贝列表中的元素，其实只是引用而已，原始列表和副本共享元素。
-4 )用 initializer_list 写一个参数不定的错误输出函数，另一个形参是ErrCode 
-1.void error_msg(ErrCode e, initializer_list<string> il)    
-2.{    
-3.        cout << e.msg() << ": ";    
-4.        for (const auto &elem : il)    
-5.                cout << elem << " " ;    
-6.        cout << endl;    
-7.}    
+**方法一：`initializer_list` 形参**
+(1) 何时使用`initializer_list` 形参？
+> &emsp; 实参数量未知；
+> &emsp; 全部实参类型相同；
+> 
+(2) `initializer_list`是什么类型？
+> &emsp; 和`vector`一样，它是一种模板类型。
+> 
+(3) `initializer_list`有何特点？
+> &emsp; `initializer_list`对象中的元素永远是常量值，我们无法修改`initializer_list`对象中元素。
+> &emsp; 拷贝或赋值一个`initializer_list`对象不会拷贝列表中的元素，其实只是引用而已，原始列表和副本共享元素。
+(4)用 `initializer_list` 写一个参数不定的错误输出函数，另一个形参是`ErrCode` 
+```cpp
+void error_msg(ErrCode e, initializer_list<string> il)    
+{    
+    cout << e.msg() << ": ";    
+    for (const auto &elem : il)    
+        cout << elem << " " ;    
+    cout << endl;    
+}    
+```
 
-
-方法二：省略符形参
+**方法二：省略符形参**
 	省略符形参是为了方便C++程序访问某些特殊的C代码而设置。
 省略符形参只能出现在形参列表的最后一个位置，它的形式无非下面两种：
-1.void foo(parm_list, ...);    
-2.void foo(...);    
+```cpp
+void foo(parm_list, ...);    
+void foo(...);    
+```
 
 
 &emsp;
 ## 21.函数在返回值的时候需要注意什么？
-不要返回局部对象的引用或指针，因为函数结束后，它所占的空间都被释放了，访问它们将引发未定义的行为。
+&emsp;&emsp; &emsp;不要返回局部对象的引用或指针，因为函数结束后，它所占的空间都被释放了，访问它们将引发未定义的行为。
 
 
 &emsp;
 ## 22. 函数什么时候返回左值？ 返回的左值有什么用？
-1 ) 函数什么时候返回左值？
-	调用一个 返引用的函数 将得到左值（因为引用返回的是变量本身，而不是对象的副本），其它返回类型得到右值。
+(1) 函数什么时候返回左值？
+&emsp;调用一个 返引用的函数 将得到左值（因为引用返回的是变量本身，而不是对象的副本），其它返回类型得到右值。
 
-2 ) 如何使用函数返回的左值？
-	我们可以给返回的左值赋值
+(2) 如何使用函数返回的左值？
+&emsp; 我们可以给返回的左值赋值
 
 
 &emsp;
 ## 23.如何使用函数返回的左值？
-1.// 注意！形参类型、返回值类型都是引用！
-2.char &get_val(string &str, string::size_type ix)    
-3.{    
-4.        return str[ix]; // get_val assumes the given index is valid    
-5.}    
-6.int main()    
-7.{    
-8.        string s("a value");    
-9.        cout << s << endl; // prints a value    
-10.        get_val(s, 0) = 'A'; // changes s[0] to A    
-11.        cout << s << endl; // prints A value    
-12.        return 0;    
-13.}    
+```cpp
+// 注意！形参类型、返回值类型都是引用！
+char &get_val(string &str, string::size_type ix){    
+    return str[ix]; // get_val assumes the given index is valid    
+}    
+int main()    
+{    
+    string s("a value");    
+    cout << s << endl; // prints a value    
+    get_val(s, 0) = 'A'; // changes s[0] to A    
+    cout << s << endl; // prints A value    
+    return 0;    
+}    
+```
 将函数调用写在赋值语句的左边看起来可能怪怪的，但是这其实没什么特别的：
-因为get_val函数返回的是引用，因此调用后返回的是左值，既然它返回的是左值，那么意味着它可以和其它左值一样出现在赋值语句的左侧。
+> &emsp;&emsp; 因为get_val函数返回的是引用，因此调用后返回的是左值，既然它返回的是左值，那么意味着它可以和其它左值一样出现在赋值语句的左侧。
+> 
 
 
 &emsp;
 ## 24. 列表初始化 返回值
 背景：
-在C++11之前，如果我们想要返回一组数据，我们必须在子函数中构造一个对应的容器，借助容器来进行返回。
-1.vector<int> process()    
-2.{    
-3. vector<int> v={1,2,3,4}    
-4. return v;    
-5.}    
-在新标准下，我们可以直接返回字面值，该字面值会用于容器的构造，而无需我们自己去构造：
-1.vector<int> process()    
-2.{    
-3. return {1,2,3,4};    
-4.}    
+> &emsp;&emsp; 在以前，如果我们想要返回一组数据，我们必须在子函数中构造一个对应的容器，借助容器来进行返回：
+> 
+```cpp
+vector<int> process(){    
+    vector<int> v={1,2,3,4};
+    return v;    
+}    
+```
+在C++11标准下，我们可以直接返回字面值，该字面值会用于容器的构造，而无需我们自己去构造：
+```cpp
+vector<int> process(){    
+    return {1,2,3,4};    
+}    
+```
 C++ primer的例子：
-1.vector<string> process()    
-2.{    
-3.        // . . .    
-4.        // expected and actual are strings    
-5.        if (expected.empty())    
-6.                return {}; // return an empty vector    
-7.        else if (expected == actual)    
-8.                return {"functionX", "okay"}; // return list-initialized vector    
-9.        else    
-10.                return {"functionX", expected, actual};    
-11.}    
+```cpp
+vector<string> process(){    
+    // . . .    
+    // expected and actual are strings    
+    if (expected.empty())    
+        return {}; // return an empty vector    
+    else if (expected == actual)    
+        return {"functionX", "okay"}; // return list-initialized vector    
+    else    
+        return {"functionX", expected, actual};    
+}    
+```
 
 
 &emsp;
 ## 25. 主函数main的返回值可以省略吗？
-可以的，如果控制流程到了main函数的结尾 且没有return语句，编译器将隐式的插入一条返回0的return语句。
+&emsp;&emsp; 可以的，如果控制流程到了`main`函数的结尾 且没有`return`语句，编译器将隐式的插入一条返回`0`的`return`语句。
 
 
 &emsp;
 ## 26. 函数返回类型为void就一定要有return语句吗？
-是的，输了main函数，因为编译器将隐式的插入一条返回0的return语句。
+&emsp;&emsp; 是的，输了main函数，因为编译器将隐式的插入一条返回0的return语句。
 
 
 &emsp;
 ## 27. 什么函数不能调用自己？
-main函数。
+&emsp;&emsp; `main`函数。
 
 
 &emsp;
 ## 28. C++可以返回数组吗？
-和C语言一样，C++也不能返回指针，因为C++在return的时候是传值，因此需要对返回的变量进行复制，而数组是不能被复制的，因此不能返回数组。
+&emsp;&emsp; 和C语言一样，C++也不能返回数组，因为C++在`return`的时候是传值，因此需要对返回的变量进行复制，而数组是不能被复制的，因此不能返回数组。
 
 
 &emsp;
 ## 29. 有其它办法返回数组吗？
-可以返回数组的指针和引用。
+&emsp;&emsp; 可以返回数组的指针和引用。
 
 
 &emsp;
 ## 30.声明一个 接受一个int参数，返回指向10个int的指针 的函数
-和typedef定义数组别名一样，数组维度得放在函数名字的后面，两端的括号也不能少：
-typedef定义数组别名：							
+和`typedef`定义数组别名一样，数组维度得放在函数名字的后面，两端的括号也不能少：
+`typedef`定义数组别名：	
+```cpp						
 int (*arra)[10]; 
+```
 一个int参数，返回指向10个int的指针 的函数：	
+```
 int (*func(int i))[10];    
+```
+
 
 
 &emsp;
 ## 31.用typedef简化 int (*func(int i))[10];
-1.typedef int arrT[10];    // 或: using arrT = int[10];
-2.arrT * func(int i); 
+```cpp
+typedef int arrT[10];    // 或: using arrT = int[10];
+arrT * func(int i); 
+```
 
 
 &emsp;
 ## 32.还有办法可以简化函数返回数组的指针？
-如果我们知道 函数返回的指针 指向哪个数组，那么就可以使用decltype关键字来声明返回类型，比如：
-1.int odd[] = {1,3,5,7,9};    
-2.int even[] = {0,2,4,6,8};    
-3.// 返回一个指针，该指针指向含有5个整数的数组    
-4.decltype(odd) *arrPtr(int i)    
-5.{    
-6.        return (i % 2) ? &odd : &even; // returns a pointer to the array    
-7.}    
-需要注意的是，decltype关键字并不负责把数组类型转换成对应的指针，所以decltype的结果是个数组，若想要表示arrPtr函数返回数组的指针，则需要在函数声明的时候加上一个 * 
+如果我们知道 函数返回的指针 指向哪个数组，那么就可以使用`decltype`关键字来声明返回类型，比如：
+```cpp
+int odd[] = {1,3,5,7,9};    
+int even[] = {0,2,4,6,8};    
+// 返回一个指针，该指针指向含有5个整数的数组    
+
+decltype(odd) *arrPtr(int i){    
+    return (i % 2) ? &odd : &even; // returns a pointer to the array    
+}
+```
+需要注意的是，`decltype`关键字并不负责把数组类型转换成对应的指针，所以`decltype`的结果是个数组，若想要表示`arrPtr`函数返回数组的指针，则需要在函数声明的时候加上一个 `*` 
 
 
 &emsp;
 ## 33. 重载、重写、重定义有什么区别？
 把它们放在一起比较好理解。
-一、重载（overload）
+**一、重载（overload）**
 指函数名相同，但是它的参数表列个数或顺序，类型不同。但是不能靠返回类型来判断。
-（1）相同的范围（在同一个作用域中） ；
-（2）函数名字相同；
-（3）形参列表不同；
-（4）virtual 关键字可有可无。
-（5）返回值可以不同；
-二、重写（也称为覆盖 override）
+> （1）相同的范围（在同一个作用域中） ；
+> （2）函数名字相同；
+> （3）形参列表不同；
+> （4）virtual 关键字可有可无。
+> （5）返回值可以不同；
+> 
+**二、重写（也称为覆盖 override）**
 是指派生类重新定义基类的虚函数，特征是：
-（1）不在同一个作用域（分别位于派生类与基类） ；
-（2）函数名字相同；
-（3）参数相同；
-（4）基类函数必须有 virtual 关键字，不能有 static 。
-（5）返回值相同（或是协变），否则报错；
-（6）重写函数的访问修饰符可以不同。尽管 virtual 是 private 的，派生类中重写改写为 public,protected 也是可以的
-三、重定义（也称为隐藏，Overwrite）
-（1）不在同一个作用域（分别位于派生类与基类） ；
-（2）函数名字相同；
-（3）返回值可以不同；
-（4）参数不同。此时，不论有无 virtual 关键字，基类的函数将被隐藏（注意别与重载以及覆盖混淆） 。
-（5）参数相同，但是基类函数没有 virtual关键字。此时，基类的函数被隐藏（注意别与覆盖混淆） 。
+> （1）不在同一个作用域（分别位于派生类与基类） ；
+> （2）函数名字相同；
+> （3）参数相同；
+> （4）基类函数必须有 virtual 关键字，不能有 static 。
+> （5）返回值相同（或是协变），否则报错；
+> （6）重写函数的访问修饰符可以不同。尽管 virtual 是 private 的，派生类中重写改写为 public,protected 也是可以的
+> 
+**三、重定义（也称为隐藏，Overwrite）**
+> （1）不在同一个作用域（分别位于派生类与基类） ；
+> （2）函数名字相同；
+> （3）返回值可以不同；
+> （4）参数不同。此时，不论有无 virtual 关键字，基类的函数将被隐藏（注意别与重载以及覆盖混淆） 。
+> （5）参数相同，但是基类函数没有 virtual关键字。此时，基类的函数被隐藏（注意别与覆盖混淆） 。
+> 
 
 
 &emsp;
