@@ -106,8 +106,12 @@ eofbit  : 2
 
 &emsp;
 ## 9.如何查询流的状态？
-
-
+| 函数     | 描述                                         |
+| -------- | -------------------------------------------- |
+| `eof()`  | 若流s的`eofbit`置位，则返回`true `           |
+| `fail()` | 若流s的`failbit`或`badbit`置位，则返回`true` |
+| `bad()`  | 若流s的`badbit`置位，则返回`true`            |
+| `good()` | 若流s处于有效状态，则返回`true`              |
 
 
 &emsp;
@@ -124,29 +128,28 @@ eofbit  : 2
 
 &emsp;
 ## 12. C++中io库的clear(flags) 和setstate(flags) 的区别？
-clear()函数：
-cin.clear(ios::failbit);
+### clear()函数：
+**`cin.clear(ios::failbit)`**
 　　使 得cin的流状态将按照ios::failbit所描述的样子进行设置：failbit标记位为1，eofbit标记位为0，badbit标记位为0。无 需担心goodbit标记位，failbit、eofbit、badbit任何一个为1，则goodbit为0。(goodbit是另一种流状态的表示方 法）
-cin.clear(ios::goodbit);
+**`cin.clear(ios::goodbit)`**
 　　使得cin的流状态将按照ios::goodbit所描述的样子进行设置：failbit标记位为0，eofbit标记位为0，badbit标记位为0。此时goodbit标记位为1，从另一个角度表示cin的流状态正常。
 　　因此clear() 函数作用是：将流状态设置成括号内参数所代表的状态，强制覆盖掉流的原状态。
-setstate()函数：
+### setstate()函数
 与clear()函数不同，setstate()函数并不强制覆盖流的原状态，而是将括号内参数所代表的状态叠加到原始状态上。
 比如，假设cin流状态初始正常： 
 ```cpp
-1.cin.setstate (ios::failbit); //在cin流的原状态的基础上将failbit标记位置为1
-2.cin.setstate (ios::eofbit); //在上一步的基础上，将cin流的eofbit标记位置为1  
+cin.setstate (ios::failbit); //在cin流的原状态的基础上将failbit标记位置为1
+cin.setstate (ios::eofbit); //在上一步的基础上，将cin流的eofbit标记位置为1  
 ```
 3.//上面两条语句结束后，cin的faibit标记位和eofbit标记位均为1，badbit标记位为0  
 对比clear()函数的效果：  
 ```cpp
-1.cin.clear (ios::failbit);      //将cin的流状态置为ios::failbit所描述的状态  
-2.cin.clear (ios::eofbit);     //将cin的流状态置为ios::eofbit所描述的状态  
+cin.clear (ios::failbit);      //将cin的流状态置为ios::failbit所描述的状态  
+cin.clear (ios::eofbit);     //将cin的流状态置为ios::eofbit所描述的状态  
 ```
-总结，假设流cin的状态为 old_state，那么：
-
-cin.clear(flags)   ：将流cin的状态直接改为flags（覆盖）；
-cin.setstate(flags) ：将流cin原来的基础上，将flags叠加到old_state上；
+### 总结，假设流`cin`的状态为 `old_state`，那么：
+`cin.clear(flags)`   ：将流cin的状态直接改为flags（覆盖）；
+`cin.setstate(flags) `：将流cin原来的基础上，将flags叠加到old_state上；
 
 
 
@@ -154,36 +157,34 @@ cin.setstate(flags) ：将流cin原来的基础上，将flags叠加到old_state�
 &emsp;
 ## 13.如何在操作cin之前保存条件状态，使用完后恢复操作前的条件状态？
 ```cpp
-1.auto old_state = cin.rdstate(); 	// 记住 cin的当前状态
-2.cin.clear(); 					// 使cin 有效  
-3.process_input(cin); 				// 使用cin  
-4.cin.setstate(old_state); 			// 恢复cin的原有状态  
+auto old_state = cin.rdstate(); 	// 记住 cin的当前状态
+cin.clear(); 						// 使cin 有效  
+process_input(cin); 				// 使用cin  
+cin.setstate(old_state); 			// 恢复cin的原有状态  
 ```
 
 
 &emsp;
-## 14.在C++中，缓冲区有几个？
-在C++中，每个I/O对象管理一个缓冲区，因此程序里有几个IO对象，就会有几个缓冲区。
-
+## 14.缓冲区是什么？它的作用是什么？
+### 是什么？
+&emsp;&emsp; 缓冲区是用来存储程序读写的数据的一个区域；
+### 有什么用？
+&emsp;&emsp; 因为写数据需要用到系统调用`write()`写到设备中，如果每次读取一部分数据都直接写到设备，那将会是很大的开销，但是如果设置一个缓冲区，把数据写入到这个缓冲区中，等到合适的时候再写到设备中，那么将提高系统性能。
 
 
 &emsp;
-## 15.缓冲区是什么？它的作用是什么？
-是什么？
-缓冲区是用来存储程序读写的数据的一个区域；
-有什么用？
-	因为写数据需要用到系统调用write()写到设备中，如果每次读取一部分数据都直接写到设备，那将会是很大的开销，但是如果设置一个缓冲区，把数据写入到这个缓冲区中，等到合适的时候再写到设备中，那么将提高系统性能。
-
+## 15. 在C++中，缓冲区有几个？
+&emsp;&emsp; 在C++中，每个 I/O对象 管理一个缓冲区，因此程序里有几个IO对象，就会有几个缓冲区。
 
 
 &emsp;
 ## 16.什么情况下会导致 缓冲刷新？
-(1) 程序正常结束：
+**(1) 程序正常结束**：
 作为main()返回工作的一部分，将清空所有输出缓存区；
 注意：如果程序不正常结束，输出缓冲区将不会刷新。在尝试调试已经崩溃的程序时，通常会根据最后的输出找出程序发生错误的区域。如果崩溃出现在某个特定的输出语句后面，则可能是在程序的这个位置之后出错。
-(2) 缓冲区满了：
+**(2) 缓冲区满了**：
 在这种情况下，缓冲区将会在写下一个值前刷新；
-(3) 使用操作符显示地刷新缓冲区：
+**(3) 使用操作符显示地刷新缓冲区**：
  flush ：刷新缓冲区，但不输出任何额外的字符；
  ends ：向缓冲区插入一个空字符，然后刷新缓冲区；
  endl ：输出一个换行符，并刷新缓冲区。
