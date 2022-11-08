@@ -293,400 +293,445 @@ int main()
 
 &emsp;
 ## 32.deque的空间真的是连续的？
-&emsp;&emsp; 准确的说是分段连续的，用户看起来deque使用的是连续空间
+&emsp;&emsp; 准确的说是分段连续的，用户看起来`deque`使用的是连续空间
 
 
 
 &emsp;
 ## 33.deque底层是怎么实现的？
-deque有一个中控器，即所谓的map（不是STL的那个map）作为主控，map是一小块连续的空间，它里面的每一个元素都是一个指针，指向的是另一段连续的空间，称为缓冲区，这个缓冲区用来存储deque的元素
-在下图中，buffer称为缓冲区，显示map size的一段连续空间就是中控器：
-
+&emsp;&emsp; `deque`有一个中控器，即所谓的`map`（不是STL的那个`map`）作为主控，`map`是一小块连续的空间，它里面的每一个元素都是一个指针，指向的是另一段连续的空间，称为缓冲区，这个缓冲区用来存储`deque`的元素
+&emsp;&emsp; 在下图中，`buffer`称为缓冲区，显示`map size`的一段连续空间就是中控器：
+<div align="center"> <img src="./pic/chapter9/deque底层.png" > </div>
 
 
 
 &emsp;
 ## 34.既然vector和deque都可以随机访问，而且deque在头部插入还那么快，为什么不用deque呢？
-因为deque的实现特点决定了它的随机访问性能远不如vector。
+&emsp;&emsp; 因为`deque`的实现特点决定了它的随机访问性能远不如`vector`。
 
 
 
 &emsp;
 ## 35.当内存不够时，deque和vector的内存重分配策略是一样的吗？
-不一样，deque的要效率高很多
-vector的内存重分配一般是：另觅更大的空间；将原数据复制过去；释放原空间，
-deque若需要在头部或尾部增加新空间，只要配置一段连续的空间然后将其串连在deque的头部或尾部即可，这就避开了“重新配置空间、复制、释放原空间”的循环，所以deque在内存不够用时插入数据效率比较高。
+&emsp; 不一样，`deque`的要效率高很多:
+> &emsp;&emsp; `vector`的内存重分配一般是：另觅更大的空间；将原数据复制过去；释放原空间，
+> &emsp;&emsp; `deque`若需要在头部或尾部增加新空间，只要配置一段连续的空间然后将其串连在`deque`的头部或尾部即可，这就避开了“重新配置空间、复制、释放原空间”的循环，所以`deque`在内存不够用时插入数据效率比较高。
+> 
 
 
 
 &emsp;
 ## 36.deque的迭代器和vector在实现上是一样的吗？
-不一样，为了使得这些分段的连续空间看起来像是一个整体，deque的迭代器必须有这样的能力：它必须能够指出分段连续空间在哪里，判断自己所指的位置是否位于某一个缓冲区的边缘，如果位于边缘，则执行operator-- 或operator++时要能够自动跳到下一个缓冲区。因此，尽管deque的迭代器也是Ramdon Access Iterator 迭代器，但它的实现要比vector的复杂太多。（具体实现要看《STL源码剖析》）
+&emsp;&emsp; 不一样，为了使得这些分段的连续空间看起来像是一个整体，`deque`的迭代器必须有这样的能力：
+> &emsp;&emsp; 它必须能够指出分段连续空间在哪里，判断自己所指的位置是否位于某一个缓冲区的边缘，如果位于边缘，则执行`operator--` 或`operator++`时要能够自动跳到下一个缓冲区。因此，尽管`deque`的迭代器也是`Ramdon Access Iterator` 迭代器，但它的实现要比`vector`的复杂太多。（具体实现要看《STL源码剖析》）
+> 
 
 
 
 
 &emsp;
 ## 37.STL中有哪些容器是连续的内存空间？
-vector、deque（看起来是）、array
+&emsp;&emsp; `vector`、`deque`（看起来是）、`array`
 
 
 
 &emsp;
-## 38.为什么说除array外，其它stl容器执行swap都很快？
-因为除array外，swap不对任何元素进行拷贝、删除或插入，只是交换了两个容器的内部数据结构，因此可以保证在常数时间内完成
+## 38.为什么说除`array`外，其它`stl`容器执行`swap`都很快？
+&emsp;&emsp; 因为除`array`外，`swap`不对任何元素进行拷贝、删除或插入，只是交换了两个容器的内部数据结构，因此可以保证在常数时间内完成。
 
 
 
 &emsp;
-## 39.使用swap( )交换stl容器的时候发生了什么？
- 除array外，swap不对任何元素进行拷贝、删除或插入，只是交换了两个容器的内部数据结构，因此可以保证在常数时间内完成；
- 对于array，会在两个array变量中进行交换，耗费时间与array中的元素成正比。
+## 39.使用`swap()`交换`stl`容器的时候发生了什么？
+&emsp;&emsp; 除`array`外，`swap`不对任何元素进行拷贝、删除或插入，只是交换了两个容器的内部数据结构，因此可以保证在常数时间内完成；
+&emsp;&emsp; 对于`array`，会在两个`array`变量中进行交换，耗费时间与`array`中的元素成正比。
 
 
 
 &emsp;
-## 40.swap操作会使迭代器失效吗？
-因为swap操作后，元素并不会被移动，这意味着，string除外，指向容器的迭代器、引用和指针在swap操作后不会失效。它们仍指向swap操作之前的那些元素。但在swap之后，这些元素已经属于不同的容器了。例如有两个容器vec1和vec2，假定iter1在swap前指向vec1[3]， 在swap之后它指向vec2[3]。  
-但是，对一个string调用swap会导致迭代器、引用和指针失效。
-对array调用swap会导致迭代器、引用和指针失效，因为对array调用swap会交换元素，迭代器肯定会失效了。
-下面通过代码来看对vector执行swap后迭代器的情况：
+## 40.`swap`操作会使迭代器失效吗？
+&emsp;&emsp; 因为`swap`操作后，元素并不会被移动，这意味着，`string`除外，指向容器的迭代器、引用和指针在`swap`操作后不会失效。它们仍指向`swap`操作之前的那些元素。但在`swap`之后，这些元素已经属于不同的容器了。例如：
+> &emsp;&emsp; 假设有两个容器`vec1`和`vec2`，`iter1`指向`vec1[3]`，但在`swap`之后它就指向了`vec2[3]`。  
+> 
+&emsp;&emsp; 但是，对一个`string`调用`swap`会导致迭代器、引用和指针失效。
+&emsp;&emsp; 对`array`调用`swap`会导致迭代器、引用和指针失效，因为对`array`调用`swap`会交换元素，迭代器肯定会失效了。
+&emsp;&emsp; 下面通过代码来看对vector执行swap后迭代器的情况：
 ```c++
-1.int main ()  
-2.{  
-3.    vector<int> vec1 = {0, 1, 2, 3, 4};  
-4.    vector<int> vec2 = {5, 6, 7 ,8, 9};  
-5.  
-6.    vector<int>::iterator itr1 = vec1.begin();  
-7.    vector<int>::iterator itr2 = vec2.begin();  
-8.  
-9.    cout <<"itr1:   "<< *itr1 << ";  itr2:   "<< *itr2 << endl;  
-10.       
-11.    swap(vec1, vec2);  
-12.       
-13.    cout <<"vec1[0]:"<< vec1[0] << ";  vec2[0]:" << vec2[0] << endl;  
-14.    cout <<"itr1:   "<< *itr1   << ";  itr2:   "<< *itr2 << endl;  
-15.           
-16.    return 0;  
-17.}  
+int main ()  
+{  
+    vector<int> vec1 = {0, 1, 2, 3, 4};
+    vector<int> vec2 = {5, 6, 7 ,8, 9};  
+  
+    vector<int>::iterator itr1 = vec1.begin();  
+    vector<int>::iterator itr2 = vec2.begin();  
+  
+    cout <<"itr1:   "<< *itr1 << ";  itr2:   "<< *itr2 << endl;  
+        
+    swap(vec1, vec2);  
+       
+    cout <<"vec1[0]:"<< vec1[0] << ";  vec2[0]:" << vec2[0] << endl;  
+    cout <<"itr1:   "<< *itr1   << ";  itr2:   "<< *itr2 << endl;  
+           
+    return 0;  
+}
 ```
-运行结果如下图，这说明经过了swap操作，迭代器也交换了，它们仍指向swap操作之前的那些元素（跟着老东家一起跑了）
+运行结果如下图，这说明经过了`swap`操作，迭代器也交换了，它们仍指向`swap`操作之前的那些元素（跟着老东家一起跑了）
+```
+itr1:   0;  itr2:   5
+vec1[0]:5;  vec2[0]:0
+itr1:   0;  itr2:   5
+```
 
-将上面的代码中的vector改为array后：
+将上面的代码中的`vector`改为`array`后：
 ```c++
-1.int main ()  
-2.{  
-3.    array<int, 5> arr1 = {0, 1, 2, 3, 4};  
-4.    array<int, 5> arr2 = {5, 6, 7 ,8, 9};  
-5.  
-6.    array<int, 5>::iterator itr1 = arr1.begin();  
-7.    array<int, 5>::iterator itr2 = arr2.begin();  
-8.  
-9.    cout <<"itr1:   "<< *itr1   << ";  itr2:   "<< *itr2 << endl;  
-10.       
-11.    swap(arr1, arr2);  
-12.       
-13.    cout <<"arr1[0]:"<< arr1[0] << ";  arr2[0]:" << arr2[0] << endl;  
-14.    cout <<"itr1:   "<< *itr1   << ";  itr2:   "<< *itr2 << endl;  
-15.           
-16.    return 0;  
-17.}  
+int main ()  
+{  
+    array<int, 5> arr1 = {0, 1, 2, 3, 4};  
+    array<int, 5> arr2 = {5, 6, 7 ,8, 9};  
+
+    array<int, 5>::iterator itr1 = arr1.begin();  
+    array<int, 5>::iterator itr2 = arr2.begin();  
+  
+    cout <<"itr1:   "<< *itr1   << ";  itr2:   "<< *itr2 << endl;  
+        
+    swap(arr1, arr2);  
+       
+    cout <<"arr1[0]:"<< arr1[0] << ";  arr2[0]:" << arr2[0] << endl;  
+    cout <<"itr1:   "<< *itr1   << ";  itr2:   "<< *itr2 << endl;  
+           
+    return 0;  
+}  
+
 ```
 运行结果如下，迭代器已经还是指向原来的的位置（老东家跑了，迭代器不愿意跟着，还指向原来的地址），所以它失效了
-
-
-
-
-&emsp;
-## 41.string调用swap会导致迭代器、引用和指针失效吗？为什么？
-会的，默认情况下，C++的std::string都是存储在heap中，导致访问std::string需要经过一次寻址过程，速度较慢，并且这种实现的空间局部性不好，对cache的利用较低。
-　　很多string的字符串长度很小，这个时候，我们可以把字符串存储到栈上，从而不需要进行内存分配，优化创建速度，并且访问栈上数据的局部性很好，速度比较快。
-即C++会自动把较短的字符串放到对象内部，较长的字符串放到动态内存。
-假如 std::string 用 SSO 实现，而待交换的两个对象中的字符串恰好一长一短，则原先指向短字符串中的迭代器会全部失效。
-
-
-
-&emsp;
-## 42.assign操作有什么作用？
-assign提供了三个版本：
-
- 传两个迭代器的版本允许我们从一个不同但相容的类型赋值，或者从容器的一个子序列赋值：
-```c++
-1.list<string> names;  
-2.vector<const char*> oldstyle;  
-3.names = oldstyle; // 错误: 容器类型不匹配  
-4.// 正确: 可将 const char*转为string  
-5.names.assign(oldstyle.cbegin(), oldstyle.cend());  
 ```
-版本seq.assign(n, t)将指定的数目且具有相同的给定值的元素替换容器原有的元素：
+itr1:   0;  itr2:   5
+arr1[0]:5;  arr2[0]:0
+itr1:   5;  itr2:   0
+```
+
+
+
+&emsp;
+## 41. `string`调用`swap`会导致迭代器、引用和指针失效吗？为什么？
+&emsp;&emsp; 会的，默认情况下，C++的`std::string`都是存储在`heap`中，导致访问`std::string`需要经过一次寻址过程，速度较慢，并且这种实现的空间局部性不好，对`cache`的利用较低。
+&emsp;&emsp; 很多`string`的字符串长度很小，这个时候，我们可以把字符串存储到栈上，从而不需要进行内存分配，优化创建速度，并且访问栈上数据的局部性很好，速度比较快。
+&emsp;&emsp; 即C++会自动把较短的字符串放到对象内部，较长的字符串放到动态内存。
+&emsp;&emsp; 假如 `std::string` 用 SSO 实现，而待交换的两个对象中的字符串恰好一长一短，则原先指向短字符串中的迭代器会全部失效。
+
+
+
+&emsp;
+## 42. `assign`操作有什么作用？
+assign提供了三个版本：
+|                   |                                                                    |
+| ----------------- | ------------------------------------------------------------------ |
+| `seq.assign(b,e)` | 将seq中的元素替换成迭代器`b`和`e`间的元素(b和e不能指向seq中的元素) |
+| `seq.assign(il)`  | 将seq中的元素替换为初始化列表il中的元素                            |
+| `seq.assign(n,t)` | 将seq中的元素替换成n个职值为t的元素                                |
+(1) 传两个迭代器的版本`seq.assign(b,e)`允许我们从一个不同但相容的类型赋值，或者从容器的一个子序列赋值：
 ```c++
-1.// 等价于： slist1.clear();  
-2.list<string> slist1(1); // slist1含一个元素, 是一个空 string  
-3.// 等价于：slist1.insert(slist1.begin(), 10, "Hiya!"); 
-4.slist1.assign(10, "Hiya!"); // 10个元素; 每一个都是 Hiya !
+list<string> names;  
+vector<const char*> oldstyle;  
+
+names = oldstyle;  // 错误: 容器类型不匹配  
+
+// 正确: 可将 const char*转为string  
+names.assign(oldstyle.cbegin(), oldstyle.cend());  
+```
+版本`seq.assign(n,t`)将指定的数目且具有相同的给定值的元素替换容器原有的元素：
+```c++
+// 等价于： slist1.clear();  
+list<string> slist1(1); // slist1含一个元素, 是一个空 string  
+
+// 等价于：slist1.insert(slist1.begin(), 10, "Hiya!"); 
+slist1.assign(10, "Hiya!"); // 10个元素; 每一个都是 Hiya !
 ```
 
 
 
 &emsp;
 ## 43.assign有什么特殊的地方？
-顺序容器才有assign，关联容器没有！
+&emsp;&emsp; 顺序容器才有`assign`，关联容器没有！
 
 
 
 &emsp;
-## 44.为什么forward_list不提供size()操作？
-为了提供常量时间的size成员函数，内部需要记录一个forward_list大小的成员变量，这样会增加额外的存储空间，也会影响插入和删除的操作效率，所以实现中没有为forward_list提供size操作。可以用distance计算begin和end之间的距离，这个操作是线性时间复杂度。
+## 44.为什么`forward_list`不提供`size()`操作？
+&emsp;&emsp; 为了提供常量时间的`size`成员函数，内部需要记录一个`forward_list`大小的成员变量，这样会增加额外的存储空间，也会影响插入和删除的操作效率，所以实现中没有为`forward_list`提供`size`操作。可以用`std::distance`计算`begin`和`end`之间的距离，这个操作是线性时间复杂度。
 
 
 
 &emsp;
 ## 45.容器支持关系运算符吗？
-所有容器都支持相等运算符（== 和 !=）;
-但只有顺序容器支持关系运算符（>、>=、<、<=）
+&emsp; 所有容器都支持相等运算符（`==` 和 `!=`）;
+&emsp; 但只有顺序容器支持关系运算符（`>`、`>=`、`<`、`<=`）
 
 
 
 &emsp;
 ## 46.容器的比较规则是怎样的？
-如果两个容器具有相同的大小，且所有元素都两两对应相对，则这两个容器相等，否则不等。
-如果两个容器大小不同，但较小容器的每个元素都等于较大容器中的对应元素，则较小容器小于较大容器。
-如果两个容器都不是另一个容器的前缀子序列，则它们的比较结果取决于第一个不相等的元素的比较结果。
+&emsp;&emsp; 如果两个容器具有相同的大小，且所有元素都两两对应相对，则这两个容器相等，否则不等。
+&emsp;&emsp; 如果两个容器大小不同，但较小容器的每个元素都等于较大容器中的对应元素，则较小容器小于较大容器。
+&emsp;&emsp; 如果两个容器都不是另一个容器的前缀子序列，则它们的比较结果取决于第一个不相等的元素的比较结果。
 
 
 
 &emsp;
 ## 47.下列容器的比较结果是怎样的？
 ```c++
-1.vector<int> v1 = { 1, 3, 5, 7, 9, 12 };  
-2.vector<int> v2 = { 1, 3, 9 };  
-3.vector<int> v3 = { 1, 3, 5, 7 };  
-4.vector<int> v4 = { 1, 3, 5, 7, 9, 12 };  
-5.v1 < v2   
-6.v1 < v3   
-7.v1 == v4   
-8.v1 == v2  
+vector<int> v1 = { 1, 3, 5, 7, 9, 12 };  
+vector<int> v2 = { 1, 3, 9 };  
+vector<int> v3 = { 1, 3, 5, 7 };  
+vector<int> v4 = { 1, 3, 5, 7, 9, 12 };  
+
+v1 < v2   
+v1 < v3   
+v1 == v4   
+v1 == v2  
 ```
 结果：
 ```c++
-1.v1 < v2 // true; v1 and v2 differ at element [2]: v1[2] is less than v2[2]  
-2.v1 < v3 // false; all elements are equal, but v3 has fewer of them;  
-3.v1 == v4 // true; each element is equal and v1 and v4 have the same size()  
-4.v1 == v2 // false; v2 has fewer elements than v1 
+v1 < v2 // true; v1 and v2 differ at element [2]: v1[2] is less than v2[2]  
+v1 < v3 // false; all elements are equal, but v3 has fewer of them;  
+v1 == v4 // true; each element is equal and v1 and v4 have the same size()  
+v1 == v2 // false; v2 has fewer elements than v1 
 ```
 
 
 
 &emsp;
 ## 48.容器的关系运算符的使用有何限制？
-因为容器的关系运算符是通过元素的关系运算符完成比较的，因此只有元素类型定义了比较运算符时，我们才能使用关系运算符来比较两个容器。
-这就意味着，如果容器内的元素类型是自定义的类型，要对容器使用关系运算符，那必须的定义该类型的关系运算符：
+&emsp;&emsp; 因为容器的关系运算符是通过元素的关系运算符完成比较的，因此只有 元素类型定义了比较运算符时，我们才能使用关系运算符来比较两个容器。这就意味着：
+> &emsp; 如果容器内的元素类型是自定义的类型，要对容器使用关系运算符，那必须的定义该类型的关系运算符：
+> 
 ```c++
-1.vector<Sales_data> storeA, storeB;  
-2.    if (storeA < storeB) // error: Sales_data has no less-than operator  
+vector<Sales_data> storeA, storeB;  
+if (storeA < storeB) // depends on whether Sales_data has less-than operator  
 ```
 
 
 
 &emsp;
-## 49.哪些容器不支持push_back和emplace_back？为什么？
-array和forward_list都不支持：
-array是定长的，不能动态插入元素；
-forward_list是单向链表，所以我们如果想要访问尾元素，都要从首元素开始跌代，算法复杂度为O(n)，所以不支持push_back( )。
+## 49.哪些容器不支持`push_back`和`emplace_back`？为什么？
+`array`和`forward_list`都不支持：
+> &emsp; ① `array`是定长的，不能动态插入元素；
+> &emsp; ② `forward_list`是单向链表，所以我们如果想要访问尾元素，都要从首元素开始跌代，算法复杂度为`O(n)`，所以不支持`push_back()`。
+> 
 
 
 
 &emsp;
-## 50.哪些容器不支持push_front和emplace_front？为什么？
-array、vector和string都不支持：
-array是定长的，不能动态插入元素；
-vector和string在内存中是连续的，对它们进行push_front和emplace_front操作的话，时间复杂度会很高（要重新申请空间然后复制过去），所以不提供看似高效实则低效的操作，以免误用。
+## 50.哪些容器不支持`push_front`和`emplace_front`？为什么？
+`array`、`vector`和`string`都不支持：
+> &emsp; ① `array`是定长的，不能动态插入元素；
+> &emsp; ② `vector`和`string`在内存中是连续的，对它们进行`push_front`和`emplace_front`操作的话，时间复杂度会很高（要重新申请空间然后复制过去），所以不提供看似高效实则低效的操作，以免误用。
+> 
 
 
 
 
 &emsp;
 ## 51.vector如何实现在头部插入元素？
-vector没有push_front操作，因此只能通过vec.insert(0)实现在头部插入元素。
+&emsp;&emsp; `vector`没有`push_front`操作，因此只能通过`vec.insert(0)`实现在头部插入元素。
 
 
 
 &emsp;
-## 52.vector有push_front吗？为什么？
-没有，vector的设计就是为了O(1)的push_back( )，而push_front对vector来说性能等同于O(n)的insert，所以就不提供push_back，避免误用（如果提供了，会给用户一种push_front和push_back复杂度一样的错觉），而这正是 STL 接口（concept）的优点，也是泛型编程优于面向对象的方面：明确的时间复杂度，不提供看似高效实则低效的操作，以免误用（例如 list 就没有 operator[]）。
+## 52. `vector`有`push_front`吗？为什么？
+&emsp;&emsp; 没有，`vector`的设计就是为了`O(1)`的`push_back()`，而`push_front`对`vector`来说性能等同于`O(n)`的`insert`，所以就不提供`push_back`，避免误用（如果提供了，会给用户一种p`ush_front`和`push_back`复杂度一样的错觉），而这正是 STL 接口（concept）的优点，也是泛型编程优于面向对象的方面：
+> 明确的时间复杂度，不提供看似高效实则低效的操作，以免误用（例如 `list` 就没有 `operator[]`）。
+> 
 
 
 
 &emsp;
 ## 53.STL容器的插入操作（insert）中，是在给定元素前面还是后面插入新元素？
-除forward_list外，其他所有STL容器都是在指定位置之前插入元素（除了std::array，它不允许插入）。
+&emsp;&emsp; 除`forward_list`外，其他所有STL容器都是在**指定位置之前**插入元素（除了`std::array`，它不允许插入）。
 
 
 
 &emsp;
 ## 54.顺序容器有哪几个insert( )操作？
-
-
+| 版本                | 解释                                                                                                                 |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `c.insert(p, t)`    | 在迭代器p指向的元素之前创建一个值是t的元素，返回指向新元素的迭代器                                                   |
+| `c.insert(p, n, t)` | 在迭代器p指向的元素之前插入n个值为t的元素，返回指向第一个新元素的迭代器；如果n是0，则返回p                           |
+| `c.insert(p, b, e)` | 将迭代器b和e范围内的元素，插入到p指向的元素之前；返回指向新添加的第一个元素的迭代器；如果范围为空，则返回p           |
+| `c.insert(p, il)`   | il是一个花括号包围中的元素值列表，将其插入到p指向的元素之前；返回指向新添加的第一个元素的迭代器；如果il是空，则返回p |
 
 
 &emsp;
 ## 55.下面这个代码正确吗？为什么？
 ```c++
-1.vector<string> svec;  
-2.list<string> slist;  
-3.vector<string> v = {"quasi", "simba", "frollo", "scar"};  
-4.slist.insert(slist.begin(), v.end() - 2, v.end());  
-5.slist.insert(slist.end(), {"these", "words", "will",  "go", "at", "the", "end"});  
-6.slist.insert(slist.begin(), slist.begin(), slist.end());  
+vector<string> svec;  
+list<string> slist;  
+vector<string> v = {"quasi", "simba", "frollo", "scar"};  
+
+slist.insert(slist.begin(), v.end() - 2, v.end());  
+slist.insert(slist.end(), {"these", "words", "will",  "go", "at", "the", "end"});  
+slist.insert(slist.begin(), slist.begin(), slist.end());  
 ```
 解答：
 ```c++
-1.// 运行时错误：迭代器表示要拷贝的范围，不能指向与目的位置相同的迭代器
-2.slist.insert(slist.begin(), slist.begin(), slist.end());  
+// 运行时错误：迭代器表示要拷贝的范围，不能指向与目的位置相同的迭代器
+slist.insert(slist.begin(), slist.begin(), slist.end());  
 ```
 
 
 
 &emsp;
 ## 56.insert操作的返回值是什么？
-insert( )将返回一个迭代器，这个迭代器指向的是刚刚插入的新元素。
+&emsp;&emsp; `insert()`将返回一个迭代器，这个迭代器指向的是刚刚插入的新元素。
 
 
 
 &emsp;
 ## 57.有哪些emplace操作？
-有三个emplace操作emplace_front、emplace,和emplace_back，分别对应push_front, insert和push_back，emplace操作采用构造而不是拷贝元素到容器中。
+&emsp;&emsp; 有三个`emplace`操作`emplace_front`、`emplace`,和`emplace_back``，分别对应push_front`, `insert`和`push_back`，`emplace`操作采用构造 而不是 拷贝元素到容器中。
 
 
 
 &emsp;
 ## 58.emplace和insert有何区别？
-当调用insert时，我们将元素类型的对象传递给insert，元素的对象被拷贝到容器中；
-而当我们使用emplace时，我们将参数传递元素类型的构造函数，emplace使用这些参数在容器管理的内存空间中直接构造元素。
+&emsp;&emsp; 当调用`insert`时，我们将元素类型的对象传递给`insert`，元素的对象**被拷贝**到容器中；
+&emsp;&emsp; 而当我们使用`emplace`时，我们将参数传递元素类型的构造函数，`emplace`使用这些参数在容器管理的内存空间中直接构造元素。
 ```c++
-1.// 在c的末尾构造一个 Sales_data 对象
-2.// 使用三个参数的 Sales_data 构造函数
-3.c.emplace_back("978-0590353403", 25, 15.99);  
-4.// 错误: 没有接受三个参数的 push_back 版本  
-5.c.push_back("978-0590353403", 25, 15.99);  
-6.// 正确: 先创建一个Sales_data 的临时对象，然后通过 push_back插入末尾  
-7.c.push_back(Sales_data("978-0590353403", 25, 15.99));  
-8.
-9.// iter refers to an element in c, which holds Sales_data elements  
-10.c.emplace_back(); // 使用Sales_data的默认构造函数  
-11.// 使用 Sales_data(string)，插入到迭代器iter前
-12.c.emplace(iter, "999-999999999");  
-13.// 使用 Sales_data 的接受一个 ISBN, 一个 count, 和一个 price的构造函数函数
-14.c.emplace_front("978-0590353403", 25, 15.99);  
+// 在c的末尾构造一个 Sales_data 对象
+
+// 使用三个参数的 Sales_data 构造函数
+c.emplace_back("978-0590353403", 25, 15.99);  
+
+// 错误: 没有接受三个参数的 push_back 版本  
+c.push_back("978-0590353403", 25, 15.99);  
+
+// 正确: 先创建一个Sales_data 的临时对象，然后通过 push_back插入末尾  
+c.push_back(Sales_data("978-0590353403", 25, 15.99));  
+
+// iter refers to an element in c, which holds Sales_data elements  
+c.emplace_back(); // 使用Sales_data的默认构造函数  
+
+// 使用 Sales_data(string)，插入到迭代器iter前
+c.emplace(iter, "999-999999999");  
+
+// 使用 Sales_data 的接受一个 ISBN, 一个 count, 和一个 price的构造函数函数
+c.emplace_front("978-0590353403", 25, 15.99);  
 ```
 
 
 
 &emsp;
 ## 59.使用emplace操作需要注意什么？
-emplace函数在容器中直接构造元素，传递给emplace函数的参数必须与元素类型的构造函数相匹配。
+&emsp;&emsp; `emplace`函数在容器中直接构造元素，传递给`emplace`函数的参数必须与元素类型的构造函数相匹配。
 
 
 
 &emsp;
-## 60.既然可以使用构造函数构造一个对象传给insert函数，那为什么还需要emplace呢？
-使用emplace向容器中添加新元素时，是在容器管理的内存空间中构造新元素； 而insert是创建一个临时对象，然后插入容器中；相比之下，emplace操作省去了构造临时对象，减少了内存开销。
+## 60.既然可以使用构造函数构造一个对象传给`insert`函数，那为什么还需要`emplace`呢？
+`insert`和`emplace`的插入原理：
+> &emsp;&emsp; 使用`emplace`向容器中添加新元素时，是在容器管理的内存空间中构造新元素； 
+> &emsp;&emsp; 而`insert`是创建一个临时对象，然后插入容器中；
+> 
+相比之下，`emplace`操作省去了构造临时对象，减少了内存开销。
 
 
 
 &emsp;
-## 61. emplace_back能完全代替push_back吗？
-不能，
+## 61. `emplace_back`能完全代替`push_back`吗？
+不能：
 ```c++
-1.std::vector<std::vector<int>> v;  
-2.v.push_back({1,2,3}); // OK  
-3.v.emplace_back({1,2,3}); // error，emplace_back是模板函数，对于{0}它无法确定是什么东西。而push_back不是模板函数，它会直接构造一个对应的对象拷过去。
-4.v.emplace_back(std::vector<int>{1,2,3}); // OK  
-5.v.emplace_back<std::vector<int>>({1,2,3}); // OK  
+std::vector<std::vector<int>> v;  
+
+v.push_back({1,2,3}); // OK  
+v.emplace_back({1,2,3}); // error，emplace_back是模板函数，对于{0}它无法确定是什么东西。而push_back不是模板函数，它会直接构造一个对应的对象拷过去。
+
+v.emplace_back(std::vector<int>{1,2,3}); // OK  
+v.emplace_back<std::vector<int>>({1,2,3}); // OK  
 ```
-emplace_back的直接构造也不一定就是好事
+`emplace_back`的直接构造也不一定就是好事
 ```c++
-1.std::vector<std::regex> v;  
-2.v.push_back(nullptr); // 编译出错  
-3.v.emplace_back(nullptr); // 通过编译，但运行时抛出异常并且难以定位
+std::vector<std::regex> v;  
+v.push_back(nullptr); // 编译出错  
+v.emplace_back(nullptr); // 通过编译，但运行时抛出异常并且难以定位
 ```
-PS：emplace操作也不一定比insert高效。
+PS：`emplace`操作也不一定比`insert`高效。
 
 
 
 &emsp;
-## 62.emplace_back内部原理是怎样的？push_back呢？
-emplcae_back 接收一个右值引用，调用其移动构造函数，将对象移动到容器中，而之前的push_back 是调用一次对象的拷贝构造函数， 容器中存储的是拷贝后的副本。
+## 62. `emplace_back`内部原理是怎样的？`push_back`呢？
+&emsp;&emsp; `emplcae_back` `接收一个右值引用，调用其移动构造函数，将对象移动到容器中，而之前的push_back` 是调用一次对象的拷贝构造函数，容器中存储的是拷贝后的副本。
 
 
 
 &emsp;
-## 63.front和back成员函数的作用是？
-front和back成员函数分别返回首元素和尾元素的引用。
+## 63. front和back成员函数的作用是？
+&emsp;&emsp; `front`和`back`成员函数分别返回首元素和尾元素的引用。
 
 
 
 &emsp;
 ## 64.哪个顺序容器没有back成员函数？
-forward_list没有back成员函数
+&emsp;&emsp; `forward_list`没有`back`成员函数
 
 
 
 &emsp;
 ## 65.使用front和back成员函数的时候要注意什么？
-要先检查容器是否非空，因为对一个空容器调用front和back就像使用一个越界的下表一样，是一种严重的程序设计错误。
+&emsp;&emsp; 要先检查容器是否非空，因为对一个空容器调用`front`和`back`就像使用一个越界的下表一样，是一种严重的程序设计错误。
 
 
 
 &emsp;
-## 66.vec.[6]和vec.at(6)有何区别？
-1) vec.at(6)如果发生了下标越界，则会抛出一个out_of_range异常；而vec.[6]将会发生运行时错误。
-2) vec.at(6)用的是小括号，而不是中括号！
+## 66.vec[6]和vec.at(6)有何区别？
+(1) `vec.at(6)`如果发生了下标越界，则会抛出一个`out_of_range`异常；而`vec[6]`将会发生运行时错误。
+(2) `vec.at(6)`用的是小括号，而不是中括号！
 
 
 
 &emsp;
 ## 67.顺序容器有哪些删除操作？
+<div align="center"> <img src="./pic/chapter9/顺序容器的删除操作.png" > </div>
 
 
 
 
 &emsp;
-## 68.哪些顺序容器不支持pop_back( ) ?
-array，因为它是定长数组
-forward_list不支持pop_back( )，因为效率太低了，如果需要从forward_list中删除尾元素，则需要自己遍历到最后，然后erase( )。
+## 68.哪些顺序容器不支持`pop_back()` ?
+&emsp;&emsp; `array`，因为它是定长数组
+&emsp;&emsp; `forward_list`不支持`pop_back()`，因为效率太低了，如果需要从`forward_list`中删除尾元素，则需要自己遍历到最后，然后`erase()`。
 
 
 
 &emsp;
 ## 69.哪些顺序容器不支持pop_front( )
-array，因为它是定长数组；
-vector、string也不支持，因为对于这两个容器来说，弹出首元素效率太低了，为了避免用户不知道这个操作效率低，所以stl不提供。
+`array`，因为它是定长数组；
+`vector`、`string`也不支持，因为对于这两个容器来说，弹出首元素效率太低了，为了避免用户不知道这个操作效率低，所以stl不提供。
 
 
 
 &emsp;
 ## 70.为什么STL对有些容器不实现相关操作？比如vector就没有push_front
-这正是 STL 接口（concept）的优点，也是泛型编程优于面向对象的方面：明确的时间复杂度，不提供看似高效实则低效的操作，以免误用。
-例如vector、string都不支持往头部插入（删除）元素，因为这首先需要重新申请内存，然后往头部插入（删除）元素，最后将旧元素复制过去，这样效率就很低了，如果提供了这种操作，用户会觉得这样用也没问题，造成程序效率低。
+&emsp;&emsp; 这正是 STL 接口（concept）的优点，也是泛型编程优于面向对象的方面：明确的时间复杂度，不提供看似高效实则低效的操作，以免误用。
+&emsp;&emsp; 例如vector、string都不支持往头部插入（删除）元素，因为这首先需要重新申请内存，然后往头部插入（删除）元素，最后将旧元素复制过去，这样效率就很低了，如果提供了这种操作，用户会觉得这样用也没问题，造成程序效率低。
 
 
 
 &emsp;
-## 71.顺序容器的erase( )操作返回什么？
-上面的图有答案。
+## 71.顺序容器的erase()操作返回什么？
+&emsp;&emsp; 上面的图有答案。
 
 
 
 &emsp;
 ## 72.forward_list有insert、empalce、erase吗？
-没有，STL为forward_list提供了insert_after、empalce_after和erase_after
+&emsp;&emsp; 没有，STL为forward_list提供了`insert_after`、`empalce_after`和`erase_after`
 
 
 
 &emsp;
-## 73.为什么forward_list需要提供特殊的插入和删除操作？
-和list不一样，forward_list是单向链表，里面的元素只有一个指针指向它的下一个元素，而没有指向它前面元素的指针，所以他需要提供特殊版本的插入和删除操作。
+## 73. 为什么forward_list需要提供特殊的插入和删除操作？
+&emsp;&emsp; 和`list`不一样，`forward_list`是单向链表，里面的元素只有一个指针指向它的下一个元素，而没有指向它前面元素的指针，所以他需要提供特殊版本的插入和删除操作。
 
 
 
@@ -697,128 +742,131 @@ vector、string也不支持，因为对于这两个容器来说，弹出首元�
 
 
 &emsp;
-## 75.resize( )的作用是？
+## 75.resize()的作用是？
 增大或缩小容器：
-	如果当前大小 大于 所要求的大小，容器后面的元素都会被删除；
-	如果当前大小 小于 所要求的大小，会将新元素加到容器后部。
-
-
+> 如果当前大小 大于 所要求的大小，容器后面的元素都会被删除；
+> 如果当前大小 小于 所要求的大小，会将新元素加到容器后部。
+> 
 
 
 &emsp;
-## 76.如果当前大小 小于 所要求的大小，vec.resize(n)将对vec将新增的元素进行什么初始化？
-值初始化
-
+## 76.如果当前大小 小于 所要求的大小，`vec.resize(n)`将对vec将新增的元素进行什么初始化？
+&emsp;&emsp; 值初始化
 
 
 
 &emsp;
 ## 77.有哪几个resize函数？
-
+<div align="center"> <img src="./pic/chapter9/resize函数.png" > </div>
 
 
 
 &emsp;
 ## 78.下面的代码的意思是？
 ```c++
-1.list<int> ilist(10, 42);   
-2.ilist.resize(15);   
-3.ilist.resize(25, -1); 
-4.ilist.resize(5); 
+list<int> ilist(10, 42);   
+
+ilist.resize(15);   
+ilist.resize(25, -1); 
+ilist.resize(5); 
 ```
 解答：
 ```c++
-1.list<int> ilist(10, 42); // ten ints: each has value 42  
-2.ilist.resize(15); // adds five elements of value 0 to the back of ilist  
-3.ilist.resize(25, -1); // adds ten elements of value -1 to the back of ilist
-4.ilist.resize(5); // erases 20 elements from the back of ilist 
+list<int> ilist(10, 42); // ten ints: each has value 42  
+
+ilist.resize(15); // adds five elements of value 0 to the back of ilist  
+
+ilist.resize(25, -1); // adds ten elements of value -1 to the back of ilist
+
+ilist.resize(5); // erases 20 elements from the back of ilist 
 ```
 
 
 
 &emsp;
 ## 79.什么情况下迭代器会失效？
-1) 在容器中添加元素后
-如果容器是vector或string，且存储空间被重新分配，则指向容器的迭代器、指针和引用都会失效；如果存储空间未重新分配，指向插入位置之前的元素迭代器、指针和引用仍有效，但指向插入位置之后元素的迭代器、指针和引用均会失效；
-对于deque，插入到首尾位置之外的任何位置都会导致迭代器、指针和引用失效。如果在首尾位置添加元素，迭代器会失效，但指向存在的元素的引用和指针不会失效
-对于list和forward_list，指向容器的迭代器（包括首前和尾后迭代器）、指针和引用仍有效；
-2) 在容器中删除元素后
-对于list和forward_list，指向容器其他位置的迭代器（包括首前和尾后迭代器）、指针和引用仍然有效（它使用了不连续分配的内存，并且它的erase方法也会返回下一个有效的iterator，所以其使用迭代器前移或者使用erase返回的迭代器均可）；
-对于deque，如果在首尾之外的任何位置删除位置，那么指向被删除元素外其他元素的迭代器、引用或指针也会失效。如果是删除deque的首元素或尾元素，则尾后迭代器也会失效，但其他迭代器、引用和指针不受影响；
-对于vector和string，指向被删除元素之前元素的迭代器、引用和指针仍有效，之后的全部失效。注意：当我们删除元素时，尾后迭代器总是会失效。（删除当前的iterator会使后面所有元素的iterator都失效。这是因为vetor,deque使用了连续分配的内存，删除一个元素导致后面所有的元素会向前移动一个位置。还好erase方法可以返回下一个有效的iterator，即后面的迭代器全部前移后的位置）
-对于关联容器(如map, set, multimap,multiset)，删除当前的iterator，仅仅会使当前的iterator失效，只要在erase时，递增当前iterator即可。这是因为map之类的容器，使用了红黑树来实现，插入、删除一个结点不会对其他结点造成影响。
+**(1) 在容器中添加元素后**
+&emsp;&emsp; 如果容器是vector或string，且存储空间被重新分配，则指向容器的迭代器、指针和引用都会失效；如果存储空间未重新分配，指向插入位置之前的元素迭代器、指针和引用仍有效，但指向插入位置之后元素的迭代器、指针和引用均会失效；
+&emsp;&emsp; 对于deque，插入到首尾位置之外的任何位置都会导致迭代器、指针和引用失效。如果在首尾位置添加元素，迭代器会失效，但指向存在的元素的引用和指针不会失效
+&emsp;&emsp; 对于list和forward_list，指向容器的迭代器（包括首前和尾后迭代器）、指针和引用仍有效；
+**(2) 在容器中删除元素后**
+&emsp;&emsp; 对于list和forward_list，指向容器其他位置的迭代器（包括首前和尾后迭代器）、指针和引用仍然有效（它使用了不连续分配的内存，并且它的erase方法也会返回下一个有效的iterator，所以其使用迭代器前移或者使用erase返回的迭代器均可）；
+&emsp;&emsp; 对于deque，如果在首尾之外的任何位置删除位置，那么指向被删除元素外其他元素的迭代器、引用或指针也会失效。如果是删除deque的首元素或尾元素，则尾后迭代器也会失效，但其他迭代器、引用和指针不受影响；
+&emsp;&emsp; 对于vector和string，指向被删除元素之前元素的迭代器、引用和指针仍有效，之后的全部失效。注意：当我们删除元素时，尾后迭代器总是会失效。（删除当前的iterator会使后面所有元素的iterator都失效。这是因为vetor,deque使用了连续分配的内存，删除一个元素导致后面所有的元素会向前移动一个位置。还好erase方法可以返回下一个有效的iterator，即后面的迭代器全部前移后的位置）
+&emsp;&emsp; 对于关联容器(如map, set, multimap,multiset)，删除当前的iterator，仅仅会使当前的iterator失效，只要在erase时，递增当前iterator即可。这是因为map之类的容器，使用了红黑树来实现，插入、删除一个结点不会对其他结点造成影响。
 
 
 
 &emsp;
 ## 80.在向迭代器中添加或删除元素后，如何确保代码的准确性？
-最小化要求迭代器，在进行了添加或删除元素后进行正确的重定位迭代器。
+&emsp;&emsp; 最小化要求迭代器，在进行了添加或删除元素后进行正确的重定位迭代器。
 
 
 
 &emsp;
 ## 81.使用失效的迭代器有什么后果？
-和使用试下的指针、引用一样，会造成严重的运行时错误。
+&emsp;&emsp; 和使用试下的指针、引用一样，会造成严重的运行时错误。
 
 
 
 &emsp;
 ## 82.下面的代码存在什么问题？
 ```c++
-1.auto begin = v.begin(),  
-2.end = v.end();  
-3.while (begin != end) {  
-4.    // do some processing  
-5.    ++begin; // advance begin because we want to insert after this element  
-6.    begin = v.insert(begin, 42); // insert the new value  
-7.    ++begin; // advance begin past the element we just added  
-8.}  
+auto begin = v.begin(), end = v.end();  
+while (begin != end) {  
+    // do some processing  
+    ++begin; // advance begin because we want to insert after this element  
+    begin = v.insert(begin, 42); // insert the new value  
+    ++begin; // advance begin past the element we just added  
+}  
 ```
-上面的代码保存了end()返回的迭代器，但在while循环里又进行了容器v进行了insert操作，这会导致end迭代器失效，此代码是未定义的，正确的做法是不保存end()返回的迭代器：
+上面的代码保存了`end()`返回的迭代器，但在`while`循环里又进行了容器`v`进行了`insert`操作，这会导致end迭代器失效，此代码是未定义的，正确的做法是不保存`end()`返回的迭代器：
 ```c++
-1.//safer: recalculate end on each trip whenever the loop adds/erases elements
-2.while (begin != v.end()) {  
-3.    // do some processing  
-4.    ++begin; // advance begin because we want to insert after this element  
-5.    begin = v.insert(begin, 42); // insert the new value  
-6.    ++begin; // advance begin past the element we just added  
-7.}  
+//safer: recalculate end on each trip whenever the loop adds/erases elements
+while (begin != v.end()) {  
+    // do some processing  
+    ++begin; // advance begin because we want to insert after this element  
+    begin = v.insert(begin, 42); // insert the new value  
+    ++begin; // advance begin past the element we just added  
+}  
 ```
 
 
 
 &emsp;
-## 83.vector的备用空间耗尽了怎么办？
-当继续向容器中加入元素导致备用空间被用光（超过了容量 capacity），此时再加入元素时vector的内存管理机制便会扩充容量至两倍，如果两倍容量仍不足，就扩张至足够大的容量。容量扩张必须经历“重新配置、元素移动、释放原空间”这个浩大的工程。按照《STL源码剖析》中提供的vector源码，vector的内存配置原则为：
-如果vector原大小为0，则配置1，也即一个元素的大小。
-如果原大小不为0，则配置原大小的两倍。
+## 83. vector的备用空间耗尽了怎么办？
+&emsp;&emsp; 当`vector`中加入元素导致备用空间被用光（超过了容量 capacity），此时再加入元素时·的内存管理机制便会扩充容量至两倍，如果两倍容量仍不足，就扩张至足够大的容量。容量扩张必须经历“重新配置、元素移动、释放原空间”这个浩大的工程。按照《STL源码剖析》中提供的vector源码，vector的内存配置原则为：
+> 如果`vector`原大小为0，则配置`1`，也即一个元素的大小。
+> 如果原大小不为`0`，则配置原大小的两倍。
+> 
 整个的流程是：
-1.先申请两倍内存，判断够不够，够进入2；否则，分配需要的大小；
-2.拷贝要插入点之前的内容
-3.构造插入元素顺次添加到后面
-4.接着把之前插入点后面的内容拷贝到新的空间中
-5.释放原来空间
-当然，vector的每种实现都可以自由地选择自己的内存分配策略，分配多少内存取决于其实现方式，不同的库采用不同的分配策略。
-
+> (1) 先申请两倍内存，判断够不够，够进入(2)；否则，继续分配需要的大小；
+> (2) 拷贝要插入点之前的内容
+> (3) 构造插入元素顺次添加到后面
+> (4) 接着把之前插入点后面的内容拷贝到新的空间中
+> (5) 释放原来空间
+> 
+当然，`vector`的每种实现都可以自由地选择自己的内存分配策略，分配多少内存取决于其实现方式，不同的库采用不同的分配策略。
+<div align="center"> <img src="./pic/chapter9/vector的内存再分配策略.png" > </div>
 
 
 
 &emsp;
 ## 84.vector是怎么知道的备用空间耗尽了的？
-当迭代器finish等于迭代器end_of_storage时，备用空间就耗尽了：
-
+当迭代器finish等于迭代器`end_of_storage`时，备用空间就耗尽了：
+<div align="center"> <img src="./pic/chapter9/判断备用空间耗尽.png" > </div>
 
 
 
 &emsp;
 ## 85.vector的capacity()和size()
-size()     ：	(大小)指容器当前拥有元素的个数；
-capacity() ： (容量)指容器当前的容量，即在必须分配存储空间之前可以存储元素的总数；
+`size()`     ：	(大小)指容器当前拥有元素的个数；
+`capacity()` ： (容量)指容器当前的容量，即在必须分配存储空间之前可以存储元素的总数；
 
 
 
 &emsp;
-## 86.reserve( )的作用是？
+## 86.reserve()的作用是？
 reserve()改变的是当前容器的最大容量（capacity），它不会生成元素，只是确定这个容器允许放入多少对象，对于reserve(len)：
 如果len的值大于当前的capacity()：那么会重新分配一块能存len个对象的空间，然后把之前v.size()个对象通过copy construtor复制过来，销毁之前的内存；只有当容器内元素数（size）大于capcity时，容器才会改变地址；
 如果len小于等于当前的capacity()的：那reserve什么也不做。
@@ -1133,13 +1181,13 @@ is_heap(first,last,comp)	检查 [first,last) 区域内的元素，是否为堆�
 &emsp;
 ## 117.什么是满二叉树、完全二叉树、平衡二叉树？
 一、满二叉树
-　　一棵二叉树的结点要么是叶子结点，要么它有两个子结点（如果一个二叉树的层数为K，且结点总数是(2^k) -1，则它就是满二叉树。）
+  一棵二叉树的结点要么是叶子结点，要么它有两个子结点（如果一个二叉树的层数为K，且结点总数是(2^k) -1，则它就是满二叉树。）
 
 二、完全二叉树
-　　若设二叉树的深度为k，除第 k 层外，其它各层 (1～k-1) 的结点数都达到最大个数，第k 层所有的结点都连续集中在最左边，这就是完全二叉树。
+  若设二叉树的深度为k，除第 k 层外，其它各层 (1～k-1) 的结点数都达到最大个数，第k 层所有的结点都连续集中在最左边，这就是完全二叉树。
 
 三、平衡二叉树
-　　它或者是一颗空树，或它的左子树和右子树的深度之差(平衡因子)的绝对值不超过1，且它的左子树和右子树都是一颗平衡二叉树。
+  它或者是一颗空树，或它的左子树和右子树的深度之差(平衡因子)的绝对值不超过1，且它的左子树和右子树都是一颗平衡二叉树。
 
 
 
