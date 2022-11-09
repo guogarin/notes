@@ -11,7 +11,7 @@
 
 &emsp;
 ## 2.C++标准库提供了哪些顺序容器？
-|                |                                                                          |
+| 顺序容器       |                                                                          |
 | -------------- | ------------------------------------------------------------------------ |
 | `vector`       | 可变大小的数组。支持快速随机访问，在尾部之外插入或者删除元素可能会很慢   |
 | `deque`        | 双端队列，支持快速随机访问，在头尾位置插入/删除元素速度很快              |
@@ -61,8 +61,8 @@
 &emsp;
 ## 8.有哪些容器支持额外的迭代器操作？为什么？
 `string`、`vector`、`deque`和`array`的迭代器可进行的额外操作：
-> 迭代器运算：				`iter+n、 iter-n 、iter1- iter2`
-> 除!=和==之外的关系运算：	`> 、 >= 、 < 、 <=`
+> 迭代器运算：    `iter+n、 iter-n 、iter1- iter2`
+> 除!=和==之外的关系运算： `> 、 >= 、 < 、 <=`
 > 
 原因：
 > &emsp; vector、string和deque本质上是数组，它们是有序的，拿iter+n来说：
@@ -165,7 +165,7 @@ array<int>::size_type j; // error: array<int> is not a type
 ## 18.如何定义一个array容器的迭代器？
 ```c++
 array<int, 10>:: iterator iter1; // 正确  
-array<int>:: iterator iter2; 	  // 错误: array<int> 不是一个类型！
+array<int>:: iterator iter2;    // 错误: array<int> 不是一个类型！
 ```
 
 
@@ -860,38 +860,45 @@ while (begin != v.end()) {
 
 &emsp;
 ## 85.vector的capacity()和size()
-`size()`     ：	(大小)指容器当前拥有元素的个数；
+`size()`     ： (大小)指容器当前拥有元素的个数；
 `capacity()` ： (容量)指容器当前的容量，即在必须分配存储空间之前可以存储元素的总数；
 
 
 
 &emsp;
 ## 86.reserve()的作用是？
-reserve()改变的是当前容器的最大容量（capacity），它不会生成元素，只是确定这个容器允许放入多少对象，对于reserve(len)：
-如果len的值大于当前的capacity()：那么会重新分配一块能存len个对象的空间，然后把之前v.size()个对象通过copy construtor复制过来，销毁之前的内存；只有当容器内元素数（size）大于capcity时，容器才会改变地址；
-如果len小于等于当前的capacity()的：那reserve什么也不做。
+&emsp;&emsp; `reserve()`改变的是当前容器的最大容量（`capacity`），它不会生成元素，只是确定这个容器允许放入多少对象，对于`reserve(len)`：
+> &emsp;&emsp; ① 如果`len`的值大于当前的`capacity()`：那么会重新分配一块能存`len`个对象的空间，然后把之前`v.size()`个对象通过`copy construtor`复制过来，销毁之前的内存；只有当容器内元素数（size）大于`capcity`时，容器才会改变地址；
+> &emsp;&emsp; ② 如果`len`小于等于当前的`capacity()`的：那`reserve()`什么也不做。
+> 
 
 
 
 &emsp;
-## 87.resize( )和reserve( )的区别
+## 87.resize()和reserve()的区别
+### resize()
+```cpp
 vector<int> v;
 v.resize(len);
-当v.resize(len) 中 len>v.capacity()，则v中的size和capacity均设置为len，并将增加的空间进行值初始化；
-当v.resize(len) 中 len<=v.capacity()，则v中的size设置为len（len到size之间的元素被置空），而capacity不变; 如果此时len<v.size(),那么多出的那些对象(v[len], v[len+1]…)会被销毁，v[0]-v[len-1]仍保留在原地。
+```
+&emsp;&emsp; ① 当`v.resize(len)` 中 `len>v.capacity()`，则`v`中的`size`和`capacity`均设置为`len`，并将增加的空间进行值初始化；
+&emsp;&emsp; ② 当`v.resize(len)` 中 `len<=v.capacity()`，则`v`中的`size`设置为`len`（len到size之间的元素被置空），而`capacity`不变; 如果此时`len<v.size()`,那么多出的那些对象(`v[len]`、`v[len+1]…`)会被销毁，`v[0]-v[len-1]`仍保留在原地。
+### reserve()
+```cpp
 v.reserve(len);
-当v.reserve(len)中len>v.capacity()，则v中的capacity变为len，size不变，size只跟容器中元素数和resize有关（v.resize(len)将原来不存在的元素设为初值0）。
-当v.reserve(len)中len<=v.capacity()，则v中的capacity不变，size不变，即不对容器做任何改变。
-总结：
-	resize( )会改变capacity和size；
-但reserve( )只会改变capacity。
-resize( )和reserve( )都只会增大capacity，而不会减小capacity，因为没有必要这么做（空间大一点也无所谓，留着不用就是了）。
+```
+&emsp;&emsp; 当`v.reserve(len)`中`len>v.capacity()`，则`v`中的`capacity`变为`len`，`size`不变，`size`只跟容器中元素数和`resize`有关（`v.resize(len)`将原来不存在的元素设为初值0）。
+&emsp;&emsp; 当`v.reserve(len)`中`len<=v.capacity()`，则`v`中的`capacity`不变，`size`不变，即不对容器做任何改变。
+### 总结
+&emsp;&emsp; ① `resize()`会改变`capacity`和`size`；
+&emsp;&emsp; ② 但`reserve()`只会改变`capacity`。
+&emsp;&emsp; ③ `resize()`和`reserve()`都只会增大`capacity`，而不会减小`capacity`，因为没有必要这么做（空间大一点也无所谓，留着不用就是了）。
 
 
 
 &emsp;
-## 88.reserve( )在什么情况下使用？
-如果有大量的数据需要进行push_back操作，应当使用reserve( )函数提前设定其容量大小，否则会出现许多次容量扩充操作，导致效率低下。
+## 88.reserve()在什么情况下使用？
+&emsp;&emsp; 如果有大量的数据需要进行`push_back`操作，应当使用`reserve()`函数提前设定其容量大小，否则会出现许多次容量扩充操作，导致效率低下。
 
 
 
@@ -902,264 +909,272 @@ resize( )可以，因为通过resize得到的内存会进行值初始化；
 reserve( )不可以，它得到的是野指针，不能直接访问。
 看下列代码：
 ```c++
-1.#include<iostream>  
-2.#include<vector>  
-3.  
-4.using namespace std;  
-5.  
-6.  
-7.int main ()  
-8.{  
-9.    vector<int>vec_resize;  
-10.    vector<int>vec_reserve;  
-11.  
-12.    cout<<"Size of vec_resize  : "<<vec_resize.size()<<endl;  
-13.    cout<<"Size of vec_reserve :"<<vec_reserve.size()<<endl;  
-14.      
-15.    vec_resize.resize(2);   
-16.    vec_reserve.reserve(2);  
-17.        
-18.    cout<<"vec_resize.at(0):  "<<vec_resize.at(0)<<endl;  
-19.    cout<<"vec_reserveat(0):  "<<vec_reserve.at(0)<<endl;  
-20.  
-21.    return 0;  
-22.}   
+#include<iostream>  
+#include<vector>  
+  
+using namespace std;  
+  
+  
+int main ()  
+{  
+    vector<int>vec_resize;  
+    vector<int>vec_reserve;  
+  
+    cout<<"Size of vec_resize  : "<<vec_resize.size()<<endl;  
+    cout<<"Size of vec_reserve :"<<vec_reserve.size()<<endl;  
+      
+    vec_resize.resize(2);   
+    vec_reserve.reserve(2);  
+        
+    cout<<"vec_resize.at(0):  "<<vec_resize.at(0)<<endl;  
+    cout<<"vec_reserveat(0):  "<<vec_reserve.at(0)<<endl;  
+  
+    return 0;  
+}   
 ```
 运行结果如下：
-
+```
+Size of vec_resize  : 0
+Size of vec_reserve :0
+vec_resize.at(0):  0
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check
+已放弃(吐核)
+```
 
 
 
 &emsp;
 ## 90.vector的内存分配策略需要遵循什么原则？
-每个vector的实现都可以选择自己的内存分配策略，但是必须遵守的是：只有在迫不得已的时候才能分配新的内存空间，迫不得已指的是下面的几种情况：
- 执行insert操作时size和capacity相等；
- 调用resize或reserve时 给定大小 大于 当前capacity；
+每个vector的实现都可以选择自己的内存分配策略，但是必须遵守的是：
+> &emsp; 只有在迫不得已的时候才能分配新的内存空间，迫不得已指的是下面的几种情况：
+> &emsp;&emsp; ① 执行`insert`操作时`size`和`capacity`相等；
+> &emsp;&emsp; ② 调用`resize(len)`或`reserve(len)`时 `len` 大于 当前`capacity`；
+> 
 
 
 
 &emsp;
 ## 91.什么是 容器适配器？
-适配器是一种设计模式(设计模式是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结)，适配器是将一个类的接口转换成客户希望的另外一个接口。
-举个栗子, 咱们香港的插头和我们内地是不一的, 如下图, 这种插头在咱们内地是不方便使用的, 要是香港同胞到对岸深圳转一转, 被繁华的深圳所吸引, 不禁多留了两天, 那这时候手机要充电怎么充电啊, 不过没关系, 我们有适配器, 其实真正给手机充电的还是手机充电器, 适配器只是方便了人们的使用而已. 
+### 什么是适配器？
+&emsp;&emsp; 适配器是一种设计模式(设计模式是一套被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结)，适配器是将一个类的接口转换成客户希望的另外一个接口。
+举个栗子, 咱们香港的插头和我们内地是不一的, 如下图：
+<div align="center"> <img src="./pic/chapter9/适配器.png" > </div>
+&emsp;&emsp; 从左往右是 港版充电器、适配器、适配器的使用
 
-港版充电器                                          适配器                               适配器的使用
-常见的容器适配器有stack , queue,  priority_queue,  它们就相当于上图的适配器, 真正给手机充电的是还是充电头, 同样的道理, 它们底层是靠别的容器实现的
-适配器（adaptor）是标准库的一个通用概念，容器、迭代器、函数都有适配器，本质上，一个适配器是一种机制，能使某种事物的行为看起来像另外一种事物一样。
-容器适配器接受一种已存在的容器类型，使其行为看起来像一种不同的类型。
+这种插头在咱们内地是不方便使用的, 要是香港同胞到对岸深圳转一转, 被繁华的深圳所吸引, 不禁多留了两天, 那这时候手机要充电怎么充电啊, 不过没关系, 我们有适配器, 其实真正给手机充电的还是手机充电器, 适配器只是方便了人们的使用而已. 
+&emsp;&emsp; 常见的容器适配器有`stack` , `queue`,  `priority_queue`, 它们就相当于上图的适配器, 真正给手机充电的是还是充电头, 同样的道理, 它们底层是靠别的容器实现的
+### 标准库中的 适配器 和 容器适配器
+&emsp;&emsp; **适配器（adaptor）** 是标准库的一个通用概念，容器、迭代器、函数都有适配器，本质上，一个适配器是一种机制，能使某种事物的行为看起来像另外一种事物一样。
+&emsp;&emsp; **容器适配器**接受一种已存在的容器类型，使其行为看起来像一种不同的类型。
 
 
 
 &emsp;
 ## 92.容器适配器本质上是什么类型？
-容器适配器是一个封装了序列容器的类模板，它在一般序列容器的基础上提供了一些不同的功能。之所以称作适配器类，是因为它可以通过适配容器现有的接口来提供不同的功能。
+&emsp;&emsp; 容器适配器是一个封装了序列容器的类模板，它在一般序列容器的基础上提供了一些不同的功能。之所以称作适配器类，是因为它可以通过适配容器现有的接口来提供不同的功能。
 
 
 
 &emsp;
 ## 93.STL容器适配器有哪几种？基础容器必须支持哪些成员？默认使用的基础容器是什么？还可以使用哪些基础容器？
-容器适配器	基础容器筛选条件	默认使用的基础容器
-stack 	基础容器需包含以下成员函数：  
-  empty()
-  size()
-  back()
-  push_back()
-  pop_back()
-满足条件的基础容器有: 
-vector、deque、list。	deque
-queue	基础容器需包含以下成员函数：
-  empty()
-  size()
-  front()
-  back()
-  push_back()
-  pop_front()
-满足条件的基础容器有: deque、list。	deque
-priority_queue	基础容器需包含以下成员函数：
-  empty()
-  size()
-  front()
-  push_back()
-  pop_back()
-满足条件的基础容器:
-vector、deque。	vector
+| 容器适配器       | 基础容器筛选条件                                                                                                                                        | 默认使用的基础容器 |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `stack`          | 基础容器需包含以下成员函数：<br>`empty()` <br>`size()` <br>`back()` <br>`push_back()` <br>`pop_back()` <br>满足条件的基础容器有: `vector、deque、list`  | `deque`            |
+| `queue`          | 基础容器需包含以下成员函数：<br>`empty()`<br>`size()`<br>`front()`<br>`back()`<br>`push_back()`<br>`pop_front()`<br>满足条件的基础容器有: `deque、list` | `deque`            |
+| `priority_queue` | 基础容器需包含以下成员函数： <br>`empty()` <br>`size()` <br>`front()` <br>`push_back()` <br>`pop_back()`<br> 满足条件的基础容器: `vector、deque`        | `vector`           |
 
 
 
 &emsp;
 ## 94. C++中既然有vector了，为什么还要有stack呢？
-从功能上来说，stack能完成的，用vector一样可以，但作为一个类的设计者，不仅要考虑类的用户所需要的的功能，也要考虑如何限制类用户的不当操作：stack可以避免用户从中间访问，在中间插入删除，但vector不能提供这样的保护措施。
-Milo Yip在知乎的回答：
-std::vector 是容器，而 std::stack 是容器适配器。
-std::stack只提供和堆栈相关的接口，其中主要是 push()、emplace()、pop()、top()和empty()。使用 std::stack时只需关心这些接口，而非内在用了哪个具体容器。改变容器类型也不需要修改调用方的代码。这个设计应该可说是乎合 SOLID 中的 I ──接口隔离原则(interface segregation principle)。
-std::stack 可适配的标准容器有 std::vector、std::list、std::deque，而 std::deque 是缺省的，因为它提供  的push_back()，而 std::vector::push_back()是均摊（amortized）。
+&emsp;&emsp; 从功能上来说，`stack`能完成的，用`vector`一样可以，但作为一个类的设计者，不仅要考虑类的用户所需要的的功能，也要考虑如何限制类用户的不当操作：
+> &emsp;&emsp; `stack`可以避免用户从中间访问，在中间插入、删除，但`vector`不能提供这样的保护措施。
+> 
+下面是`Milo Yip`在知乎的回答：
+> &emsp;&emsp; `std::vector` 是容器，而 `std::stack` 是容器适配器。
+> &emsp;&emsp; `std::stack`只提供和堆栈相关的接口，其中主要是 push()、emplace()、pop()、top()和empty()。使用 > &emsp;&emsp; `std::stack`时只需关心这些接口，而非内在用了哪个具体容器。改变容器类型也不需要修改调用方的代码。这个设计应该可说是乎合 SOLID 中的 I ──接口隔离原则(interface segregation principle)。
+> &emsp;&emsp; `std::stack` 可适配的标准容器有 std::vector、std::list、std::deque，而 std::deque 是缺省的，因为它提供  的push_back()，而 std::vector::push_back()是均摊（amortized）。
+> 
 
 
 
 &emsp;
 ## 95.stack适配器不能接收什么顺序容器？为什么？
-array和forward_list:
-array长度不能改变，因此array不具备添加额删除元素的能力，所以不能是array；
-	forward_list不支持push_back和pop_back，不能满足要求
+`array`和`forward_list`:
+&emsp;&emsp; `array`长度不能改变，因此`array`不具备添加额删除元素的能力，所以不能是`array`；
+&emsp;&emsp; `forward_list`不支持`push_back`和`pop_back`，不能满足要求
 
 
 
 &emsp;
 ## 96.如何使用默认的基础容器定义一个元素类型为int 的stack？
-1.std::stack<int> values;  
+```cpp
+std::stack<int> values;  
+```
 
 
 
 &emsp;
 ## 97.如何用vector为基础容器定义一个元素类型为string的stack？
-1.std::stack<std::string, std::list<int>> values;  
+```cpp
+std::stack<std::string, std::list<int>> values;  
+```
 
 
 
 &emsp;
 ## 98.用一个 顺序容器变量 来初始化 stack 适配器时要注意什么？
-需要保证该容器的类型和 stack 底层使用的基础容器类型相同
+&emsp;&emsp; 需要保证该容器的类型和 `stack` 底层使用的基础容器类型相同
 
 
 
 
 &emsp;
 ## 99.如何用一个list类型的变量初始化一个stack？
-1.std::list<int> values {1, 2, 3};  
-2.std::stack<int,std::list<int>> my_stack (values);  
-上面的代码中，改变my_stack 适配器是否会改变values ？
-不会，因为my_stack 适配器的数据是经过拷贝得来的，操作 my_stack 适配器，并不会对 values 容器有任何影响；反过来也是如此。
+```cpp
+std::list<int> values {1, 2, 3};  
+std::stack<int, std::list<int>> my_stack (values);  
+```
+上面的代码中，改变`my_stack` 适配器是否会改变`values` ？
+> &emsp;&emsp;不会，因为`my_stack` 适配器的数据是经过拷贝得来的，操作 `my_stack` 适配器，并不会对 values 容器有任何影响；反过来也是如此。
+> 
 
 
 
 &emsp;
 ## 100.如何用一个元素类型为int的stack来初始化另一个stack？
 ```c++
-1.std::list<int> values{ 1, 2, 3 };  
-2.std::stack<int, std::list<int>> my_stack1(values);  
-3.std::stack<int, std::list<int>> my_stack=my_stack1;  
+std::list<int> values{ 1, 2, 3 };  
+std::stack<int, std::list<int>> my_stack1(values);  
+std::stack<int, std::list<int>> my_stack=my_stack1;  
 ```
 上面的代码中，改变my_stack1 适配器是否会改变values ？
-不会，因为my_stack1 适配器的数据是经过拷贝得来的，操作 my_stack1 适配器，并不会对 values 容器有任何影响；反过来也是如此。
+> 不会，因为my_stack1 适配器的数据是经过拷贝得来的，操作 my_stack1 适配器，并不会对 values 容器有任何影响；反过来也是如此。
+>
 
 
 
 &emsp;
 ## 101.stack容器适配器支持的成员函数
-成员函数	功能		
-empty()	当 stack 栈中没有元素时，该成员函数返回 true；反之，返回 false。		
-size()	返回 stack 栈中存储元素的个数。		
-top()	返回一个栈顶元素的引用，类型T&。如果栈为空，程序会报错。		
-push(const T& val)	先复制 val，再将 val 副本压入栈顶。这是通过调用底层容器的 push_back() 函数完成的。		
-push(T&& obj)	以移动元素的方式将其压入栈顶。这是通过调用底层容器的有右值引用参数的 push_back() 函数完成的。		
-pop()	弹出栈顶元素。		
-emplace(arg...)	arg... 可以是一个参数，也可以是多个参数，但它们都只用于构造一个对象，并在栈顶直接生成该对象，作为新的栈顶元素。		
-swap(stack<T> & other_stack)	将两个 stack 适配器中的元素进行互换，需要注意的是，进行互换的 2 个 stack 适配器中存储的元素类型以及底层采用的基础容器类型，都必须相同。		
+| 成员函数                       | 功能                                                                                                                                       |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `empty()`                      | 当 stack 栈中没有元素时，该成员函数返回 true；反之，返回 false。                                                                           |
+| `size()`                       | 返回 stack 栈中存储元素的个数。                                                                                                            |
+| `top()`                        | 返回一个栈顶元素的引用，类型T&。如果栈为空，程序会报错。                                                                                   |
+| `push(const T& val)`           | 先复制 val，再将 val 副本压入栈顶。这是通过调用底层容器的 push_back() 函数完成的。                                                         |
+| `push(T&& obj)`                | 以移动元素的方式将其压入栈顶。这是通过调用底层容器的有右值引用参数的 push_back() 函数完成的。                                              |
+| `pop()`                        | 弹出栈顶元素。                                                                                                                             |
+| `emplace(arg...)`              | `arg...`可以是一个参数，也可以是多个参数，但它们都只用于构造一个对象，并在栈顶直接生成该对象，作为新的栈顶元素。                           |
+| `swap(stack<T> & other_stack)` | 将两个 stack 适配器中的元素进行互换，需要注意的是，进行互换的 2 个 stack 适配器中 存储的元素类型 以及 底层采用的基础容器类型，都必须相同。 |
 
 
 
 &emsp;
 ## 102.适配器可以使用 它的基础容器 提供的操作吗？
-不能，每个容器适配器都基于底层容器类型的操作定义了自己的 特殊操作，我们只能使用适配器操作，而不能使用底层容器类型的操作。
+&emsp;&emsp; 不能，每个容器适配器都基于底层容器类型的操作定义了自己的 特殊操作，我们只能使用适配器操作，而不能使用底层容器类型的操作。
 
 
 
 &emsp;
 ## 103.queue适配器不能接收什么顺序容器？为什么？
-queue适配器其实就是队列，而队列需要从头弹出（pop_front）和从尾部插入（push_back），而vector没有pop_front操作，因此不能用vector作queue的基础容器。
+&emsp; `vector`不可以：
+> &emsp;&emsp; `queue`适配器其实就是队列，而队列需要从头弹出（pop_front）和从尾部插入（push_back），而`vector没`有`pop_front`操作，因此不能用`vector`作`queue`的基础容器。
+> 
 
 
 
 &emsp;
 ## 104.按下列要求定义适配器
-创建一个空的 queue 容器适配器，其基础容器选择默认的 deque 容器
+### 创建一个空的 `queue` 容器适配器，其基础容器选择默认的 `deque` 容器
 ```c++
-1.std::queue<int> values;  
+std::queue<int> values;  
 ```
-创建一个使用 list 容器作为基础容器的空 queue 容器适配器
+### 创建一个使用 `list` 容器作为基础容器的空 `queue` 容器适配器
 ```c++
-1.std::queue<int, std::list<int>> values;  
+std::queue<int, std::list<int>> values;  
 ```
 
 
 
 &emsp;
-## 105.用一个 顺序容器变量 来初始化 queue 适配器时要注意什么？
-需要保证该容器的类型和 queue 底层使用的基础容器类型相同
+## 105.用一个 顺序容器变量 来初始化 `queue` 适配器时要注意什么？
+&emsp;&emsp; 需要保证该容器的类型和 `queue` 底层使用的基础容器类型相同
 
 
 
 &emsp;
 ## 106.STL queue本质上是什么？
-STL queue 容器适配器模拟的就是队列这种存储结构，因此对于任何需要用队列进行处理的序列来说，使用 queue 容器适配器都是好的选择。
+&emsp;&emsp; STL queue 容器适配器模拟的就是队列这种存储结构，因此对于任何需要用队列进行处理的序列来说，使用 queue 容器适配器都是好的选择。
 
 
 
 &emsp;
 ## 107.queue容器适配器支持的成员函数
-成员函数	功能
-empty()	如果 queue 中没有元素的话，返回 true。
-size()	返回 queue 中元素的个数。
-front()	返回 queue 中第一个元素的引用。如果 queue 是常量，就返回一个常引用；如果 queue 为空，返回值是未定义的。
-back()	返回 queue 中最后一个元素的引用。如果 queue 是常量，就返回一个常引用；如果 queue 为空，返回值是未定义的。
-push(const T& obj)	在 queue 的尾部添加一个元素的副本。这是通过调用底层容器的成员函数 push_back() 来完成的。
-emplace()	在 queue 的尾部直接添加一个元素。
-push(T&& obj)	以移动的方式在 queue 的尾部添加元素。这是通过调用底层容器的具有右值引用参数的成员函数 push_back() 来完成的。
-pop()	删除 queue 中的第一个元素。
-swap(queue<T> &other_queue)	将两个 queue 容器适配器中的元素进行互换，需要注意的是，进行互换的 2 个 queue 容器适配器中存储的元素类型以及底层采用的基础容器类型，都必须相同。
+| 成员函数               | 功能                                                                                                                                                |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `empty()`              | 如果 `queue` 中没有元素的话，返回 true。                                                                                                            |
+| `size()`               | 返回 `queue` 中元素的个数。                                                                                                                         |
+| `front()`              | 返回 `queue` 中第一个元素的引用。如果 `queue` 是常量，就返回一个常引用；如果 `queue` 为空，返回值是未定义的。                                       |
+| `back() `              | 返回 `queue` 中最后一个元素的引用。如果 `queue` 是常量，就返回一个常引用；如果 `queue` 为空，返回值是未定义的。                                     |
+| `push(const T& obj)`   | 在 `queue` 的尾部添加一个元素的副本。这是通过调用底层容器的成员函数 push_back() 来完成的。                                                          |
+| `emplace()`            | 在 `queue` 的尾部直接添加一个元素。                                                                                                                 |
+| `push(T&& obj)`        | 以移动的方式在 `queue` 的尾部添加元素。这是通过调用底层容器的具有右值引用参数的成员函数 push_back() 来完成的。                                      |
+| `pop()`                | 删除 `queue` 中的第一个元素。                                                                                                                       |
+| `swap(queue<T> &que2)` | 将两个 `queue` 容器适配器中的元素进行互换，需要注意的是，进行互换的 2 个 `queue` 容器适配器中存储的元素类型以及底层采用的基础容器类型，都必须相同。 |
 
 
 
 
 &emsp;
 ## 108.priority_queue适配器不能接收什么顺序容器？为什么？
-priority_queue需要随机访问能力，因此不能用list构造。
+&emsp;&emsp; `priority_queue`需要随机访问能力，因此不能用`list`构造。
 
 
 
 &emsp;
 ## 109.priority_queue适配器 是什么？
-priority_queue 优先级队列是一个拥有权值概念的单向队列queue，队列中，所有元素是按优先级排列的（也可以认为queue是个按进入队列的先后做为优先级的优先队列——先进入队列的元素优先权要高于后进入队列的元素）。
-在计算机操作系统中，优先级队列的使用是相当频繁的，进线程调度都会用到。
+&emsp;&emsp; `priority_queue` 优先级队列是一个拥有权值概念的单向队列`queue`，队列中，所有元素是按优先级排列的（也可以认为`queue`是个按进入队列的先后做为优先级的优先队列——先进入队列的元素优先权要高于后进入队列的元素）。
+&emsp;&emsp; 在计算机操作系统中，优先级队列的使用是相当频繁的，进线程调度都会用到。
 
 
 
 &emsp;
 ## 110.使用默认基础容器时，priority_queue是什么是 数据结构？
-最大堆（max-heap），因为最大堆可以做到“依权值高低自动递减排序”。
+&emsp;&emsp; 最大堆（max-heap），因为最大堆可以做到“依权值高低自动递减排序”。
 
 
 
 &emsp;
-## 111.priority_queue一般在什么情况下使用？
- 进线程调度时需要根据进程的优先级进行调度，可以用priority_queue实现；
- 所有需要用到堆的时候，都可以考虑使用priority_queue。注意: (默认情况下priority_queue是大堆。)
+## 111. `priority_queue`一般在什么情况下使用？
+&emsp;&emsp; 进线程调度时 需要根据进程的优先级进行调度，可以用`priority_queue`实现；
+&emsp;&emsp; 所有需要用到堆的时候，都可以考虑使用`priority_queue`。注意: (默认情况下`priority_queue`是大堆。)
 
 
 
 &emsp;
 ## 112.如何遍历STL容器适配器？
-因为stack、queue 、priority_queue 都没有迭代器，因此访问元素的唯一方式是遍历容器，通过不断移除访问过的元素，去访问下一个元素。
+&emsp;&emsp; 因为`stack`、`queue` 、`priority_queue` 都没有迭代器，因此访问元素的唯一方式是遍历容器，通过不断移除访问过的元素，去访问下一个元素。
 
 
 
 &emsp;
-## 113.priority_queue如何做到pop出来的肯定是优先级最高的呢？
-priority_queue 优先级队列之所以总能保证优先级最高的元素位于队头，最重要的原因是其底层采用堆数据结构存储结构。
+## 113.priority_queue如何做到`pop`出来的肯定是优先级最高的呢？
+&emsp;&emsp; `priority_queue` 优先级队列之所以总能保证优先级最高的元素位于队头，最重要的原因是其底层采用堆数据结构存储结构。
 
 
 
 &emsp;
-## 114.priority_queue 底层明明采用的是vector 或 deque 容器存储数据吗，这里又说使用堆结构存储数据，它们之间不冲突吗？
-首先，vector 和 deque 是用来存储元素的容器，而堆是一种数据结构，其本身无法存储数据，只能依附于某个存储介质，辅助其组织数据存储的先后次序。其次，priority_queue 底层采用 vector 或者 deque 作为基础容器，这毋庸置疑。但由于 vector 或 deque 容器并没有提供实现 priority_queue 容器适配器 优先级高的先出列 特性的功能，因此 STL 选择使用堆来重新组织 vector 或 deque 容器中存储的数据，从而实现该特性。
-也就是说数据还是用vector存放，但是使用堆来组织数据以达到“优先级高的先出列”的特性。
-注意，虽然不使用堆结构，通过编写算法调整 vector 或者 deque 容器中存储元素的次序，也能使其具备 “优先级高的先出列” 的特性，但执行效率通常没有使用堆结构高。
+## 114. priority_queue 底层明明采用的是vector 或 deque 容器存储数据吗，这里又说使用堆结构存储数据，它们之间不冲突吗？
+&emsp;&emsp; 首先，`vector` 和 `deque` 是用来存储元素的容器，而堆是一种数据结构，其本身无法存储数据，只能依附于某个存储介质，辅助其组织数据存储的先后次序。其次，`priority_queue` 底层采用 `vector` 或者 `deque` 作为基础容器，这毋庸置疑。但由于 `vector` 或 `deque` 容器并没有提供实现 `priority_queue` 容器适配器 优先级高的先出列 特性的功能，因此 STL 选择使用堆来重新组织 `vector` 或 `deque` 容器中存储的数据，从而实现该特性。
+&emsp;&emsp; 也就是说数据还是用`vector`存放，但是使用堆来组织数据以达到“优先级高的先出列”的特性。
+&emsp;&emsp; 注意，虽然不使用堆结构，通过编写算法调整 `vector` 或者 `deque` 容器中存储元素的次序，也能使其具备 “优先级高的先出列” 的特性，但执行效率通常没有使用堆结构高。
 
 
 
 &emsp;
-## 115.实现priority_queue用到了哪些STL算法？
-能做到“优先级高的先出列”的特性，就是因为使用了heap，而heap并不是STL容器组件，它是个幕后英雄，扮演者priority_queue的助手
+## 115.实现`priority_queue`用到了哪些STL算法？
+&emsp;&emsp; 能做到“优先级高的先出列”的特性，就是因为使用了`heap`，而`heap`并不是STL容器组件，它是个幕后英雄，扮演者`priority_queue`的助手
 
 
 
@@ -1168,38 +1183,14 @@ priority_queue 优先级队列之所以总能保证优先级最高的元素位�
 ## 116.STL中的heap是什么？
 heap并不是STL容器组件，它是个幕后英雄，扮演者priority_queue的助手
 下表列出了常用的几个和堆存储结构相关的方法。
-函数	功能
-make_heap(first,last,comp)	选择位于 [first,last) 区域内的数据，并根据 comp 排序规则建立堆，其中 fist 和 last 可以是指针或者迭代器，默认是建立大顶堆。
-push_heap(first,last,comp)	当向数组或容器中添加数据之后，此数据可能会破坏堆结构，该函数的功能是重建堆。
-pop_heap(first,last,comp)	将位于序列头部的元素（优先级最高）移动序列尾部，并使[first,last-1] 区域内的元素满足堆存储结构。
-sort_heap(first,last,comp)	对 [first,last) 区域内的元素进行堆排序，将其变成一个有序序列。
-is_heap_until(first,last,comp)	发现[first,last)区域内的最大堆。
-is_heap(first,last,comp)	检查 [first,last) 区域内的元素，是否为堆结构。
-
-
-
-&emsp;
-## 117.什么是满二叉树、完全二叉树、平衡二叉树？
-一、满二叉树
-  一棵二叉树的结点要么是叶子结点，要么它有两个子结点（如果一个二叉树的层数为K，且结点总数是(2^k) -1，则它就是满二叉树。）
-
-二、完全二叉树
-  若设二叉树的深度为k，除第 k 层外，其它各层 (1～k-1) 的结点数都达到最大个数，第k 层所有的结点都连续集中在最左边，这就是完全二叉树。
-
-三、平衡二叉树
-  它或者是一颗空树，或它的左子树和右子树的深度之差(平衡因子)的绝对值不超过1，且它的左子树和右子树都是一颗平衡二叉树。
-
-
-
-
-&emsp;
-## 118.什么是最大堆和最小堆？
-简单的理解堆，它在是完全二叉树的基础上，要求树中所有的父节点和子节点之间，都要满足既定的排序规则：
-如果排序规则为从大到小排序，则表示堆的完全二叉树中，每个父节点的值都要不小于子节点的值，这种堆通常称为大顶堆；
-如果排序规则为从小到大排序，则表示堆的完全二叉树中，每个父节点的值都要不大于子节点的值，这种堆通常称为小顶堆；
-下图展示了一个由 {10,20,15,30,40,25,35,50,45} 这些元素构成的大顶堆和小顶堆。其中经大顶堆组织后的数据先后次序变为 {50,45,40,20,25,35,30,10,15}，而经小顶堆组织后的数据次序为{10,20,15,25,50,30,40,35,45}。
-
-图 使用堆结构重新组织数据
+| 成员函数                         | 功能                                                                                                                             |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `make_heap(first,last,comp)`     | 选择位于 `[first,last)` 区域内的数据，并根据 comp 排序规则建立堆，其中 `fist` 和 `last` 可以是指针或者迭代器，默认是建立大顶堆。 |
+| `push_heap(first,last,comp)`     | 当向数组或容器中添加数据之后，此数据可能会破坏堆结构，该函数的功能是重建堆。                                                     |
+| `pop_heap(first,last,comp) `     | 将位于序列头部的元素（优先级最高）移动序列尾部，并使`[first,last-1]` 区域内的元素满足堆存储结构。                                |
+| `sort_heap(first,last,comp)`     | 对 `[first,last)` 区域内的元素进行堆排序，将其变成一个有序序列。                                                                 |
+| `is_heap_until(first,last,comp)` | 发现`[first,last)`区域内的最大堆。                                                                                               |
+| `is_heap(first,last,comp)`       | 检查`[first,last)` 区域内的元素，是否为堆结构。                                                                                  |
 
 
 
