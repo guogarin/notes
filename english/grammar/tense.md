@@ -21,12 +21,24 @@
 <div align="center"> <img src="./pic/时态的时间轴.png"> </div>
 
 ## 1.3 状态
+### 1.3.1 状态的定义
+&emsp;&emsp; 状态指的是在某个时刻这个动作所处于的状态。
+
+### 1.3.2 状态的种类
 状态分为四种： 
-> ① 一般
-> ② 进行
-> ③ 完成 
-> ④ 完成进行
+**① 一般**
 >
+>
+**② 进行**
+>
+>
+**③ 完成**
+>
+>
+**④ 完成进行**
+>
+>
+
 
 ## 1.4 16种时态汇总
 | 状态 \ 时间  | 过去                                 | 过去将来                                      | 现在                                   | 将来                                     |
@@ -41,6 +53,8 @@
 &emsp;
 &emsp; 
 # 2. 一般时
+<div align="center"> <img src="./pic/一般时.png"> </div>
+
 ## 2.1 一般现在时
 (1) 表示 知觉、状态、所有
 > ① I smell something burning.
@@ -107,6 +121,8 @@
 &emsp;
 &emsp; 
 # 3. 完成时
+<div align="center"> <img src="./pic/完成时.jpg"> </div>
+
 ## 3.1 现在完成时
 **(1) 用于表示到现在为止完成的动作 (表示一件已发生的事，而且这件已发生事和现在的情况有联系)**
 > ① I have just finished my homework.
@@ -160,15 +176,63 @@
 > &emsp; I guessed that Helen would have told her something.
 > 
 
-(1) 
-(2) 
-(3) 
-(4) 
-(5) 
-(6) 
 
 
 
+
+&emsp;
+&emsp; 
+# 4. 进行时
+<div align="center"> <img src="./pic/进行时.png"> </div>
+
+## 4.1 现在进行时
+be (am/ is/ are) doing
+&emsp;&emsp; 表示动作正在进行、持续进行（上图中的红色直箭头表示持续）。发生时间在现在，参照时间也是现在，表示持续进行状态。
+
+## 4.2 过去进行时
+be (was/ were) doing
+表示过去正在进行、持续进行。发生时间在过去，参照时间也是过去，表示持续进行状态。
+> The plane <u>was flying</u> over my head <u>last midnight</u>.
+> &emsp;&emsp;&emsp;&emsp; 过去进行时 &emsp;&emsp;&emsp;&emsp; 参照时间是昨晚(过去)
+> 
+
+## 4.3 将来进行时
+will be doing
+表示动作将来正在进行、持续进行。发生时间在将来，参照时间则是现在，表示持续进行状态。
+
+## 4.4 过去将来进行时
+would be doing
+
+
+
+
+
+&emsp;
+&emsp; 
+# 5 完成进行时<div align="center"> <img src="./pic/完成进行时.jpg"> </div>
+
+## 4.1 现在完成进行时
+have been doing
+&emsp;&emsp; 表示过去开始的某动作已经完成相当一部分，持续到现在正在进行，并且对现在有影响。发生时间在过去持续到现在，参照时间是现在，表示部分完成并持续的状态。
+> I have been working for 30 days without a rest.
+> 
+## 4.2 过去完成进行时
+had been doing
+&emsp;&emsp; 表示过去的过去开始的某动作已经完成相当一部分，持续到过去某个时间点仍然正在进行，并且对过去这个时间点有影响。发生时间在过去的过去持续到过去，参照时间是过去，表示部分完成并持续的状态。
+> She had been carrying out her plot to be the queen three months earlier.
+> 
+
+## 4.3 将来完成进行时
+will have been doing
+&emsp;&emsp; 表示到将来某个时间点，某动作已经完成了相当一部分，持续到将来这个时间点仍然正在进行，并且对将来这个时间点有影响。发生时间在将来，首先参照现在表示将来某时间1发生的动作，其次参照将来某时间2表示部分完成并持续（2晚于1）。
+> The play is coming off in August. By then the play will have been running for three months.
+> 
+
+## 4.4 过去将来完成进行时
+would have been doing
+&emsp;&emsp; 表示到过去将来某个时间点，某动作已经完成了相当一部分，持续到过去将来这个时间点仍然正在进行，并且对过去将来这个时间点有影响。发生时间在过去的将来，首先参照过去表示过去的将来某时间1发生的动作，其次参照过去的将来某时间2表示部分完成并持续（2晚于1）。
+> Up to that time he would have been translating those books．
+> 
 
 
 
