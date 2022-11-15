@@ -1,3 +1,12 @@
+[toc]
+
+
+
+
+
+# 七、类基础
+&emsp;
+&emsp;
 ## 1.	类的基本思想是？
 &emsp;&emsp; 类的基本思想是 数据抽象（data abstraction）和封装（encapsulation）。
 
@@ -1578,16 +1587,21 @@ item.combine(string("9-999-99999-9"));
 item.combine(Sales_data("9-999-99999-9"));  
 item.combine(cin);  
 ```
-1 ) `item.combine(string("9-999-99999-9"))`：
-		① "9-999-99999-9"显式 地转换为string；
-		②  string隐式的转换为Sales_data；
+(1) `item.combine(string("9-999-99999-9"))`：
+> ① "9-999-99999-9"显式 地转换为string；
+> ②  string隐式的转换为Sales_data；
+> 
 也就是说只执行了一步 隐式 类型转换，因此是正确的；
-2 ) `item.combine(Sales_data("9-999-99999-9"))`：
-		① "9-999-99999-9" 隐式 地转换为string；（注意，上一句是显示的转换为string）
-		② string 显式 的转换为Sales_data；
+
+(2) `item.combine(Sales_data("9-999-99999-9"))`：
+> ① "9-999-99999-9" 隐式 地转换为string；（注意，上一句是显示的转换为string）
+> ② string 显式 的转换为Sales_data；
+> 
 注意上面发的是隐式还是显式类型转换。
-3 ) `item.combine(cin)`：
-	隐式的将cin转换成Sales_data，这个转换
+
+(3) `item.combine(cin)`：
+> 隐式的将cin转换成Sales_data，这个转换
+> 
 
 
 
@@ -1597,7 +1611,7 @@ item.combine(cin);
 &emsp;
 &emsp;
 ## 85.	如何抑制 构造函数定义的 的隐式转换？
-通过将 构造函数 声明为explicit加以阻止。
+通过将 构造函数 声明为`explicit`加以阻止。
 ```cpp
 class Sales_data {  
 public:  
@@ -1618,8 +1632,8 @@ public:
 &emsp;
 &emsp;
 ## 86.	编写和使用 explicit构造函数 时要注意什么？
-1 ) 关键字explicit只对于 一个实参的构造函数 有效，因为多个实参的构造函数不能用于隐式转换，所以没必要将这些构造函数指定为explicit；
-2 ) 只能在类内声明构造函数的时候加explicit关键字，在类外定义的时候不应该加explicit：
+&emsp;&emsp; (1) 关键字`explicit`只对于 实参数量为1个的构造函数 有效，因为多个实参的构造函数不能用于隐式转换，所以没必要将这些构造函数指定为`explicit`；
+&emsp;&emsp; (2) 只能在类内声明构造函数的时候加`explicit`关键字，在类外定义的时候不应该加`explicit`：
 ```cpp
 class Sales_data {  
 public:  
@@ -1628,23 +1642,25 @@ public:
     explicit Sales_data(std::istream&);  
     // remaining members as before  
 };  
+
 // 错误，类外定义的生活不应该加 explicit关键字  
 explicit Sales_data::Sales_data(istream& is)  {  
     read(is, *this);  
 }  
 ```
-3 ) explicit构造函数 只能用于显示初始化，不能用于拷贝形式的初始化
+&emsp;&emsp; (3) `explicit`构造函数 只能用于显示初始化，不能用于拷贝形式的初始化
 ```cpp
 string null_book = "9-999-99999-9";  
 // 错误:  
 Sales_data item2 = null_book;  
 ```
 错误的原因：
-	因为null_book是一个string类型的变量，而将null_book赋给Sales_data类型的item2 ，这意味着它将调用构造函数 
+> &emsp;&emsp; 因为null_book是一个string类型的变量，而将null_book赋给Sales_data类型的item2 ，这意味着它将调用构造函数:
+> 
 ```cpp
 explicit Sales_data(const std::string &s): bookNo(s) { }
 ```
-来进行类型转换，而这个构造函数是explicit 的，所以会报错
+来进行类型转换，而这个构造函数是`explicit` 的，所以会报错
 
 
 
@@ -1654,7 +1670,7 @@ explicit Sales_data(const std::string &s): bookNo(s) { }
 &emsp;
 &emsp;
 ## 87. 什么是 explicit构造函数？
-&emsp;&emsp; 在只有一个实参的构造函数前面加explicit关键字，用来阻止通过该构造函数来进行隐式类型转换。
+&emsp;&emsp; 在只有一个实参的构造函数前面加`explicit`关键字，用来阻止通过该构造函数来进行隐式类型转换。
 
 
 

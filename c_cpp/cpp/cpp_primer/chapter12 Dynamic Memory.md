@@ -216,7 +216,6 @@ if(p && p->empty)
 #### 3.4.1 作用是？
 &emsp;&emsp; make_shared 函数用于分配**动态内存**，可以说是最安全的分配和使用动态内存的方法，此函数 在动态内存中分配一个对象 并初始化它，然后返回指向此对象的 shared_ptr
 #### 3.4.2 怎么用？
-&emsp;&emsp; 
 ```cpp
 shared_ptr<int> p1 = make_shared<int>(42);
 shared_ptr<string> p2 = make_shared<string>(10, "9");
@@ -283,7 +282,7 @@ shared_ptr<T>p(p2)      // p是 shared_ptr对象p2的拷贝
 shared_ptr<T>p(p2, d)   // 和上面一样，p是 shared_ptr对象p2的拷贝，但是会使用d来替换delete释放资源
 ```
 ### 3.10 使用new出来的指针初始化 shared_ptr时要注意什么？为什么？
-&emsp;&emsp; **使用new初始化shared_ptr时**必须使用直接初始化，因为 `shared_ptr`类 中接收 指针参数 的构造函数是 `explicit` 的，因此我们不能使用 内置指针(new出来的指针) 隐式转换为一个智能指针：
+&emsp;&emsp; **使用new初始化shared_ptr时** 不能进行拷贝初始化，而必须使用直接初始化，因为 `shared_ptr`类 中接收 指针参数 的构造函数是 `explicit` 的，所以我们不能使用 内置指针(new出来的指针) 隐式转换为一个智能指针：
 ```cpp
 shared_ptr<int> p1 = new int(1024);     // 错误：不能用拷贝初始化，必须使用 直接初始化
 shared_ptr<int> p2(new int(1024));      // 正确: 直接初始化
@@ -291,7 +290,7 @@ shared_ptr<int> p2(new int(1024));      // 正确: 直接初始化
 这个错误在返回`shared_ptr`指针时很容易犯：
 ```cpp
 shared_ptr<int> clone(int p){
-    return new int(p); // 错误：映射转换为 shared_ptr
+    return new int(p); // 错误：隐式转换为 shared_ptr
 }
 ```
 应该这么写才对：
@@ -540,7 +539,7 @@ void f(destination &d /*其它参数*/)
 ### 5.2 为什么要引入 weak_ptr ？
 &emsp;&emsp; 智能指针一个很重要的概念是“所有权”，所有权意味着当这个智能指针被销毁的时候，它指向的内存（或其它资源）也要一并销毁。这技术可以利用智能指针的生命周期，来自动地处理程序员自己分配的内存，避免显示地调用delete，是自动资源管理的一种重要实现方式。
 &emsp;&emsp; 为什么要引入“弱引用”指针呢？弱引用指针就是没有“所有权”的指针。有时候我只是想找个指向这块内存的指针，但我不想把这块内存的生命周期与这个指针关联。这种情况下，弱引用指针就代表“我指向这东西，但这东西什么时候释放不关我事儿……”
-&emsp;&emsp;  有些地方为了方便，直接用原始指针（raw pointer）来表示弱引用。然后用这种原始指针，其弱引用的含义不够明确，万一原始指针指向的动态内存被释放了，你再实用原始指针访问这块内存就危险了，而`weak_ptr`的访问是通过`lock()`此函数将检查`weak_ptr`指向的对象是否存在，如果存在则返回返回一个指向w的对象的`shared_ptr`，否则返回一个空指针，这就避免了访问被释放过的内存的可能。
+&emsp;&emsp;  有些地方为了方便，直接用原始指针（raw pointer）来表示弱引用。然后用这种原始指针，其弱引用的含义不够明确，万一原始指针指向的动态内存被释放了，你再实用原始指针访问这块内存就危险了，而`weak_ptr`的访问是通过`lock()`函数检查`weak_ptr`指向的对象是否存在，如果存在则返回返回一个指向w的对象的`shared_ptr`，否则返回一个空指针，这就避免了访问被释放过的内存的可能。
 ### 5.3 weak_ptr 的操作
 | Column A            | Column B                                                                       |
 | ------------------- | ------------------------------------------------------------------------------ |
@@ -671,7 +670,9 @@ for(int i = 0; i < 10; ++i)
 &emsp;&emsp; 但我们**在分配一大块内存时**，我们通常会希望在这块内存上按需构造对象，也就是说希望将 内存分配 和 对象的构造 分离，这意味着我们可以分配大块内存，但只有在真正需要的时候才执行对象创建构造。
 我们来看下面的代码：
 ```cpp
-string *const p = new string[n]; // 构造 n个 空string(第一次赋值：n个string对象都被默认初始化为空string)
+// 构造 n个 空string(第一次赋值：n个string对象都被默认初始化为空string)
+string *const p = new string[n]; 
+
 string s;
 string *q = p; // q 指向第一个 string
 while (cin >> s && q != p + n)
@@ -686,13 +687,17 @@ delete[] p; // 释放
 
 &emsp;&emsp; 如果我们可以做到将 内存分配 和 对象的构造 分离，那上面两个问题能得到解决，但我们都知道 new运算符 在分配大块内存时将 内存的分配 和 对象的构造 组合在了一起，因此我们需要一个方法可以实现 在分配一大块内存时将 内存分配 和 对象的构造 分离，而allocator类就可以做到这一点。
 &emsp;&emsp; **还有很重要的一点**： 使用new动态分配数组时，需要依赖 默认构造函数，万一类没有定义默认构造函数的话，这就意味着这个类不能动态分配数组。
-**总结：** alocator类可以做到 在分配一大块内存时将 内存分配 和 对象的构造 分离。
+**总结：** 
+> &emsp;&emsp; alocator类可以做到 在分配一大块内存时将 内存分配 和 对象的构造 分离。
+> 
+
 ### 7.2 allocator类 是用什么实现的？
-&emsp;&emsp;和vector一样，是通过模板实现的。
+&emsp;&emsp; 和vector一样，是通过模板实现的。
+
 ### 7.3 allocator类 定在哪个头文件？
 &emsp;&emsp;定义在`memory`头文件中
+
 ### 7.4 allocator类 支持哪些操作？
-&emsp;&emsp;
 | 操作                   | 说明                                                                                                                                                                                                    |
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `allocator<T> a	     ` | 定义一个名为a的allocator对象，它可以为类型为T的对象分配内存，然后返回一个指针                                                                                                                           |
@@ -701,27 +706,28 @@ delete[] p; // 释放
 | `a.construct(p, args)` | 在p指向的内存中构造一个对象，p必须是一个类型为T*的指针，指向一块原始内存；args可以是零个或多个参数，用来初始化构造的对象                                                                                |
 | `a.destroy(p)	     `   | 对p指向的对象执行析构函数，p为T*类型的指针                                                                                                                                                              |
 ### 7.5 如何使用 allocator类？
-(1) 构造allocator对象
+**(1) 构造allocator对象**
 需要指明这个allocator可以分配的对象类型：
 ```cpp
 allocator<string> alloc;
 ```
-(2) 分配内存
+**(2) 分配内存**
 分配内存时需要指定元素个数：
 ```cpp
 const size_t n = 10; 
 auto const p = alloc.allocate(n);
 ```
-(3) 构造元素
+**(3) 构造元素**
 &emsp;&emsp; 用 `allocate`分配的内存是未构造的，需要通过`construct()`成员函数来在分配的内存中构造对象。
 &emsp;&emsp; `construct()`成员函数接收 一个指针 和 零个或多个额外参数，用力啊在给定位置构造一个元素，这些额外参数必须是与构造对象的类型相匹配的合法的初始化器。
-(4) 销毁元素
+**(4) 销毁元素**
 &emsp;&emsp; 销毁p指向的对象，但是不会释放空间，也就意味着，这段空间依然可以使用。
-(5) 释放内存
+**(5) 释放内存**
 &emsp;&emsp; 传给`deallocate()`的指针不能为空，且必须指向前面由`allocate`分配的内存；并且传给`deallocate()`的大小必须参数必须和调用`allocate`请求分配内存时一样。
 ```cpp
 alloc.deallocate(p, n); 
 ```
+
 ```cpp
 int main ()
 {
@@ -918,8 +924,8 @@ Aborted (core dumped)
 ### 9.3 如何避免？
 (1) 混用指针
 &emsp;&emsp; 上面的情况都是 使用原始指针构造`shared_ptr`造成的，只要遵循规范，就能避免，比如使用`make_shared`来构造`shared_ptr`
-(2) 类内直接通过`this`来构造`shared_ptr`
-&emsp;&emsp; 使用 `std::enable_shared_from_this`。
+(2) 类内直接通过`this`来构造`shared_ptr`时：
+&emsp;&emsp; 应该使用 `std::enable_shared_from_this`。
 
 
 
