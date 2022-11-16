@@ -1101,7 +1101,7 @@ Aborted (core dumped)
 &emsp;
 &emsp; 
 ## 12  `shared_ptr` 是否是线程安全的？
-&emsp;&emsp; `shared_ptr`的引用计数本身是安全且无锁的，也就是说shared_ptr的引用计数增加和减少的操作都是原子的。但对象的读写则不是，因为 shared_ptr 有两个数据成员，读写操作不能原子化。 `shared_ptr` 的线程安全级别和内建类型、标准库容器、`std::string` 一样，即：
+&emsp;&emsp; 不是。`shared_ptr`的引用计数本身是安全且无锁的，也就是说shared_ptr的引用计数增加和减少的操作都是原子的。但对象的读写则不是，因为 shared_ptr 有两个数据成员，读写操作不能原子化。 `shared_ptr` 的线程安全级别和内建类型、标准库容器、`std::string` 一样，即：
 > * 一个 shared_ptr 对象实体可被多个线程同时读取；
 > * 两个 shared_ptr 对象实体可以被两个线程同时写入，“析构”算写操作；
 > * 如果要从多个线程读写同一个 `shared_ptr` 对象，那么需要加锁
