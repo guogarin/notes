@@ -1,17 +1,26 @@
+[toc]
 
+
+
+
+
+&emsp;
+&emsp;
 # 第十三章 拷贝控制
 
 ## 1. 拷贝控制操作
 ### 1.1 有哪些拷贝控制操作？
-拷贝构造函数(copy constructor)
-拷贝赋值运算符(copy assignment operator)
-移动构造函数(move constructor)
-移动赋值运算符(move assignment operator)
-析构函数(destructor)
+① 拷贝构造函数(copy constructor)
+② 拷贝赋值运算符(copy assignment operator)
+③ 移动构造函数(move constructor)
+④ 移动赋值运算符(move assignment operator)
+⑤ 析构函数(destructor)
+
 ### 1.2 这些拷贝控制操作各自的作用分别是什么？
-拷贝构造函数、移动构造函数定义了: 当用同类型的另一个对象 初始化本对象时 做什么。
-拷贝赋值运算符、移动赋值运算符定义了: 将一个对象 赋予同类型的另一个对象时 做什么。
-析构函数定义了:当此类型对象销毁时做什么。
+① 拷贝构造函数、移动构造函数定义了: 当用同类型的另一个对象 初始化本对象时 做什么。
+② 拷贝赋值运算符、移动赋值运算符定义了: 将一个对象 赋予同类型的另一个对象时 做什么。
+③ 析构函数定义了:当此类型对象销毁时做什么。
+
 ### 1.3 为什么要自己定义 控制操作？
 &emsp;&emsp; 如果我们不自己显示定义这些操作，那编译器会帮我们定义，但问题是编译器定义的版本的行为并不是我们想要的，依赖这些编译器定义的操作有可能会造成灾难。
 
@@ -56,7 +65,8 @@ public:
 &emsp;&emsp; 编译器会为我们生成 **合成拷贝构造函数**
 
 ### 2.6 合成默认构造函数 和 合成拷贝构造函数 的生成规则有何不同？
-&emsp;&emsp; **合成默认构造函数** 只有在 类里没有任何构造函数时（包括 移动构造函数），编译器才会帮忙生成；而**合成拷贝构造函数**就不一样了，只要没有自己定义 拷贝构造函数，即使你定义了其它 构造函数，编译器也会帮你生成 合成拷贝构造函数。
+&emsp;&emsp; ① **合成默认构造函数** 只有在 类里没有任何构造函数时（包括 移动构造函数），编译器才会帮忙生成；
+&emsp;&emsp; ② **合成拷贝构造函数** 就不一样了，只要没有自己定义 拷贝构造函数，即使你定义了其它 构造函数，编译器也会帮你生成 合成拷贝构造函数。
 
 我们来看下面的代码：
 ```cpp
@@ -539,8 +549,9 @@ private:
 
 ### 7.6 将函数声明为`=default` 和 `=delete` 时 有何不同？ 为什么？
 (1) `=default`既可以和声明一起出现在类的内部，也可以作为定义出现在类的外部，而`=delete`必须出现在函数第一次声明的时候，原因如下：
-&emsp;&emsp; 一个默认成员只影响为这个成员生成的代码，因此`=default`直到编译器生成代码的时候才需要；
-&emsp;&emsp; 而另一方面，编译器需要知道一个函数是否为删除的，以便从一开始就禁止使用这个被删除的函数
+> &emsp;&emsp; 一个默认成员只影响为这个成员生成的代码，因此`=default`直到编译器生成代码的时候才需要；
+> &emsp;&emsp; 而另一方面，编译器需要知道一个函数是否为删除的，以便从一开始就禁止使用这个被删除的函数
+>
 (2) 我们可以对任何函数指定`=delete`，但只能对 具有合成版本的 成员函数 使用`=default`（即 默认构造函数、拷贝控制成员）
 
 ### 7.7 哪些函数不能是 删除的成员？为什么？
@@ -849,7 +860,7 @@ void swap(Foo &rhs, Foo &lhs)
 void swap(Foo &rhs, Foo &lhs)
 {
     using std::swap;
-    swap(rhs.hp, lhs.hp); // 使用的是 标准库版本的swap
+    swap(rhs.hp, lhs.hp); // 使用的是 HasPtr类自己的swap()
     /* 交换其它成员 */
 }
 ```
@@ -861,7 +872,7 @@ void swap(Foo &rhs, Foo &lhs)
 ### 9.5 如何在赋值运算符中使用`swap`？
 代码如下：
 ```cpp
-HasPtr & operator=(HasPtr rhs)
+HasPtr & operator=(HasPtr rhs) // 注意，rhs不是引用
 {
     swap(*this, rhs);
     return *this;
@@ -1201,7 +1212,7 @@ void StrVec::reallocate()
 &emsp;&emsp; `move()`调用告诉编译器：我们有一个左值，但我们希望像一个右值一样使用它。但我们必须意识到的是，调用`move()`就意味着承诺：除了 对`rr1`赋值 或 销毁它 以外。我们将不再使用它，也就是说在调用`move()`之后，我们不能对移后源对象的值做任何假设。
 
 ### 16.2 使用 `move()`函数时需要注意什么？
-&emsp;&emsp; 使用 `move()`函数时应该使用 `std::move()`，而不是使用'using std::move()`，这样可以避免潜在的名字冲突。
+&emsp;&emsp; 使用 `move()`函数时应该直接使用 `std::move()`，而不是使用`using std::move()`，这样可以避免潜在的名字冲突。
 
 
 
@@ -1291,7 +1302,7 @@ StrVec::StrVec(StrVec &&) noexcept: elements(s.elements),first_free(s.first_free
 ```cpp
 StrVec& StrVec::operator=(StrVec &&rhs) noexcept
 {
-    if(this != &rhs) // 通过比较地址来判断是否自赋值
+    if(this != &rhs) {// 通过比较地址来判断是否自赋值
         free(); // 先释放左侧资源
         elements = s.elements
         first_free = s.first_free
