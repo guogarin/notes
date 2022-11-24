@@ -1,27 +1,7 @@
-- [1. 基础](#1-基础)
-	- [1.1 在linux中，目录的本质是什么？](#11-在linux中目录的本质是什么)
-	- [1.2 根目录](#12-根目录)
-- [2. 挂载在根目录下的目录](#2-挂载在根目录下的目录)
-- [3. 详细介绍Linux目录](#3-详细介绍linux目录)
-	- [3.1 `/etc`文件系统](#31-etc文件系统)
-		- [3.1.1 /etc/rc或/etc/rc.d或/etc/rc?.d](#311-etcrc或etcrcd或etcrcd)
-		- [3.1.2 /etc/passwd](#312-etcpasswd)
-		- [3.1.3 /etc/fdprm](#313-etcfdprm)
-		- [3.1.4 /etc/fstab](#314-etcfstab)
-		- [3.1.5 /etc/group](#315-etcgroup)
-		- [3.1.6 /etc/inittab](#316-etcinittab)
-		- [3.1.7 /etc/issue](#317-etcissue)
-		- [3.1.8 /etc/magic](#318-etcmagic)
-		- [3.1.9 /etc/motd](#319-etcmotd)
-		- [3.1.10 /etc/mtab](#3110-etcmtab)
-		- [3.1.11 /etc/shadow](#3111-etcshadow)
-		- [3.1.12 /etc/login.defs](#3112-etclogindefs)
-		- [3.1.13 /etc/printcap](#3113-etcprintcap)
-		- [3.1.14 /etc/profile、/etc/csh.login、/etc/csh.cshrc](#3114-etcprofileetccshloginetccshcshrc)
-		- [3.1.15 /etc/securetty](#3115-etcsecuretty)
-		- [3.1.16 /etc/shells](#3116-etcshells)
-		- [3.1.17 /etc/termcap](#3117-etctermcap)
-	- [3.2 /dev文件系统](#32-dev文件系统)
+[toc]
+
+
+
 
 
 # 1. 基础
