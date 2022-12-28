@@ -2,6 +2,9 @@
 
 
 
+
+
+
 &emsp;
 &emsp; 
 # 1. C 和 C++ 的区别和联系
@@ -13,7 +16,8 @@
 
 &emsp;
 &emsp; 
-# 2. new 和 malloc 有何区别？
+# 2. new 和 malloc
+## 2.1 new 和 malloc 有何区别？
 **① 最大的区别**
 > &emsp;&emsp; `new`在申请空间的时候会调用构造函数，`malloc`不会调用
 >
@@ -38,8 +42,9 @@
 > &emsp;&emsp; C++允许重载`new/delete`操作符，特别的，布局`new`的就不需要为对象分配内存，而是指定了一个地址作为内存起始区域，`new`在这段内存上为对象调用构造函数完成初始化工作，并返回地址。`malloc`不允许重载。
 > 
 
-
-
+## 2.2 new 的实现原理
+&emsp;&emsp; 如果是简单类型，则直接调用 `operator new()`，在 `operator new()`函数中会调用 `malloc()`函数，如果调用 `malloc()` 失败会调用 `_callnewh()`，如果 `_callnewh()` 返回 `0` 则抛出 `bac_alloc` 异常，返回非零则继续分配内存。 
+&emsp;&emsp; 如果是复杂类型，先调用 `operator new()`函数，然后在分配的内存上调用构造函数。 
 
 
 
@@ -88,3 +93,16 @@
 &emsp;&emsp; 首先，`volatile`限定符是用来告诉计算机，所修饰的变量的值随时都会改变。用于防止编译器对代码的优化，换句话说，就是编译器在用到这个变量的时候都要从内存中重新读取这个变量的值，而不是使用保存在寄存器中的备份。
 &emsp;&emsp; 而`const`所修饰的变量的值在代码中不能进行修改，和`volatile`限定符不冲突，可以一起使用
 。
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 7 const 和 `#define`的区别是？
+&emsp; &emsp; 见 c++ primer第二章的笔记
+
+
