@@ -550,9 +550,9 @@ static_cast
 2 ) 对于较大算术类型转换为较小的算术类型，static_cast可以关闭警告信息。
 3 ) static_cast对于编译器无法自动执行的类型转换也非常有用，例如可以找回存于void*指针中的值:
 ```cpp
-1.void* p = &d; // 正确: 任何非常量对象的地址都能存入 void*  
-2.// 正确: 将void* 转换回初始的指针类型  
-3.double *dp = static_cast<double*>(p);  
+void* p = &d; // 正确: 任何非常量对象的地址都能存入 void*  
+// 正确: 将void* 转换回初始的指针类型  
+double *dp = static_cast<double*>(p);  
 ```
 4 ) static_cast它能在内置的数据类型间互相转换，对于类只能在有联系的指针类型间进行转换。可以在继承体系中把指针转换来、转换去，但是不能转换成继承体系外的一种类型
 
@@ -566,8 +566,8 @@ dynamic_cast
 const_cast
 const_cast 唯一能做的 就是 改变底层const、volatile属性（也只有它能做到）；
 ```cpp
-1.const char *pc;  
-2.char *p = const_cast<char*>(pc); // 正确: 但是通过p写值是未定义的行为
+const char *pc;  
+char *p = const_cast<char*>(pc); // 正确: 但是通过p写值是未定义的行为
 ```
 const_cast 还常用于函数重载的上下文中。
 
