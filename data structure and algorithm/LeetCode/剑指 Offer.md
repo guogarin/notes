@@ -1796,10 +1796,12 @@ public:
 1 <= s 的长度 <= 8
 ```
 ## 2. 解答
+### 做题情况
+&emsp;&emsp; 第一次没有做出来，看了解析才解答出来。
 ### 2.1 思路
-这也是树相关的，到时候统一做TODO: 
-
-
+&emsp; 把所有的排列组合都列出来，然后借助`set`去重即可。难点是如何把字符所有的排列组合列出来：
+> &emsp;&emsp; [剑指 Offer 38. 字符串的排列（回溯法，清晰图解）](https://leetcode.cn/problems/zi-fu-chuan-de-pai-lie-lcof/solution/mian-shi-ti-38-zi-fu-chuan-de-pai-lie-hui-su-fa-by/)
+> 
 
 
 
