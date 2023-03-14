@@ -1803,6 +1803,64 @@ public:
 > &emsp;&emsp; [剑指 Offer 38. 字符串的排列（回溯法，清晰图解）](https://leetcode.cn/problems/zi-fu-chuan-de-pai-lie-lcof/solution/mian-shi-ti-38-zi-fu-chuan-de-pai-lie-hui-su-fa-by/)
 > 
 
+```cpp
+class Solution {
+public:
+    vector<string> permutation(string s) {
+        vector<string> ret_vec;
+        if(s.size() == 0)
+            return ret_vec;
+        get_permutation(s, 0, ret_vec);
+        return ret_vec;
+    }
+private:
+    void get_permutation(string s, int pos,vector<string>& vec){
+        if(pos == s.size() && find(vec.begin(), vec.end(), s) == vec.end())
+            vec.push_back(s);
+        else{// 注意，这个else很重要
+            for(int i = pos; i < s.size(); ++i){
+                swap(s[pos], s[i]);
+                get_permutation(s, pos+1, vec);
+                swap(s[pos], s[i]);
+            }
+        }
+    }
+};
+```
+当目标字符串为`"vpvptjzh"`时，运行超时，可以看到字符串`"vpvptjzh"`有两个字母`p`，所以我们可以针对它做一下剪枝以提高效率：
+> 所谓剪枝就是建一个`set`记录字符`c`是否在位置`pos`是否出现过，出现过就`continue`
+> 
+```cpp
+class Solution {
+public:
+    vector<string> permutation(string s) {
+        vector<string> ret_vec;
+        if(s.size() == 0)
+            return ret_vec;
+        get_permutation(s, 0, ret_vec);
+        return ret_vec;
+    }
+private:
+    void get_permutation(string s, int pos, vector<string>& vec){
+        // 剪枝了就不需要这样去重了
+        if(pos == s.size()-1/* && find(vec.begin(), vec.end(), s) == vec.end()*/){
+            vec.push_back(s);
+            return; 
+        }
+        set<char>st;
+        for(int i = pos; i < s.size(); ++i){
+            if(st.find(s[i]) != st.end())
+                continue;       // 重复，因此剪枝
+            st.insert(s[i]);
+            swap(s[pos], s[i]); // 交换，将 s[i] 固定在第 x 位
+            get_permutation(s, pos+1, vec); // 开启固定第 x + 1 位字符
+            swap(s[pos], s[i]);             // 恢复交换
+        }
+    }
+};
+```
+
+
 
 
 
@@ -2024,7 +2082,9 @@ public:
 ```
 
 ## 2. 解答
+```c++
 
+```
 
 
 
