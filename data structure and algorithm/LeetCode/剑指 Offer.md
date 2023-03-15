@@ -2082,6 +2082,7 @@ public:
 ```
 
 ## 2. 解答
+这个是有规律的，详解见 [面试题43. 1～n 整数中 1 出现的次数（清晰图解）](https://leetcode.cn/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/solution/mian-shi-ti-43-1n-zheng-shu-zhong-1-chu-xian-de-2/)
 ```c++
 
 ```
@@ -2186,3 +2187,175 @@ public:
     }
 };
 ```
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 52 两个链表的第一个公共节点
+## 1.题目详情
+&emsp;&emsp; 输入两个链表，找出它们的第一个公共节点: [剑指 Offer 52. 两个链表的第一个公共节点](https://leetcode.cn/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/?favorite=xb9nqhhg)，但是需要注意：
+> 如果两个链表没有交点，返回 null.
+> 在返回结果后，两个链表仍须保持原有的结构。
+> 可假定整个链表结构中没有循环。
+> 程序尽量满足 `O(n)` 时间复杂度，且仅用 `O(1)` 内存。
+> 
+
+## 2. 解答
+&emsp;&emsp; 因为要求仅用 `O(1)` 内存，因此就不能用`set`来做了。
+&emsp;&emsp; 可以用双指针来做，具体步骤如下:
+> 
+```c++
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        if(headA == NULL or headB == NULL)
+            return NULL;
+            
+        // 首先，获取两个链表的长度    
+        ListNode* nodeA = headA, *nodeB = headB;
+        int coutA = 0, coutB = 0;
+        while(nodeA != NULL){
+            ++coutA;
+            nodeA = nodeA->next;
+        }
+        while(nodeB != NULL){
+            ++coutB;
+            nodeB = nodeB->next;
+        }
+
+        // 第二，看哪个列表更长
+        int diff = 0;
+        ListNode* longerNode= NULL, *shorterNode = NULL;
+        if(coutA > coutB){
+            longerNode = headA;
+            shorterNode = headB;
+            diff = coutA - coutB;
+        }else{
+            longerNode = headB;
+            shorterNode = headA;
+            diff = coutB - coutA;            
+        }
+
+        // 第三，将更长的那个链表推进diff个节点，使A、B两个链表
+        //   和公共节点的距离一致
+        while(diff-- != 0)
+            longerNode = longerNode->next;
+
+        // 最后，查找第一个公共节点
+        while(longerNode != NULL && shorterNode != NULL){
+            if(longerNode == shorterNode)
+                return shorterNode;
+            shorterNode = shorterNode->next;
+            longerNode = longerNode->next;
+        }
+        return NULL;
+    }
+};
+```
+### 2.2 改进版
+官方有更好的解法TODO:
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 53 - I. 在排序数组中查找数字I
+## 1.题目详情
+&emsp;&emsp;统计一个数字在排序数组中出现的次数。
+示例 1:
+```
+输入: nums = [5,7,7,8,8,10], target = 8
+输出: 2
+```
+示例 2:
+```
+输入: nums = [5,7,7,8,8,10], target = 6
+输出: 0
+```
+
+提示：
+> ① 0 <= nums.length <= 105
+> ② -109 <= nums[i] <= 109
+> ③ nums 是一个非递减数组
+> ④ -109 <= target <= 109
+> 
+
+## 2. 解答
+&emsp;&emsp; 目标数组是已排序的，显然这是二分查找的变形版：
+```c++
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        if(nums.size() == 0)
+            return 0;
+        int start = 0, end = nums.size(), mid = nums.size()/2;
+        while(start == end){
+            if(nums[mid] == target)
+                break;
+            else if(nums[mid] > target){
+                end = mid;
+            }else{
+                start = mid;
+            }
+        }
+
+        int count = 0;     
+        // 向前找和target相等的数字
+        for(int i = mid; i >= 0; --i){
+            if(nums[i] == target)
+                ++count;
+        }
+        // 向后找和target相等的数字
+        for(int i = mid+1; i < nums.size(); ++i){
+            if(nums[i] == target)
+                ++count;
+        }
+        return count;
+    }
+};
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 53 - II. `0～n-1`中缺失的数字
+&emsp;&emsp; 一个长度为`n-1`的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围`0～n-1`之内。在范围`0～n-1`内的`n`个数字中有且只有一个数字不在该数组中，请找出这个数字。
+示例 1:
+```
+输入: [0,1,3]
+输出: 2
+```
+示例 2:
+```
+输入: [0,1,2,3,4,5,6,7,9]
+输出: 8
+```
+
+限制：
+```
+1 <= 数组长度 <= 10000
+```
+
+## 2. 解答
+&emsp;&emsp; 
