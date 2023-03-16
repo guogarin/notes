@@ -2471,6 +2471,7 @@ public:
 &emsp;
 &emsp; 
 # 面试题  57-II. 和为s的连续正数序列
+## 1.题目详情
 &emsp;&emsp; 输入一个正整数 `target` ，输出所有和为 `target` 的连续正整数序列（至少含有两个数）。
 &emsp;&emsp; 序列内的数字由小到大排列，不同序列按照首个数字从小到大排列。
 示例 1：
@@ -2489,6 +2490,7 @@ public:
 ```
 
 ## 2. 解答
+&emsp;&emsp; 这个一下子没想出来，看了题解后发现这题适合用 [滑动窗口法](https://leetcode.cn/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/solution/jian-zhi-offer-57-ii-he-wei-s-de-lian-xu-t85z/):
 ```c++
 
 ```
@@ -2501,6 +2503,93 @@ public:
 
 
 
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题58-I. 翻转单词顺序
+## 1.题目详情
+&emsp;&emsp; 输入一个英文句子，翻转句子中单词的顺序，但单词内字符的顺序不变。为简单起见，标点符号和普通字母一样处理。例如输入字符串`"I am a student. "`，则输出`"student. a am I"`。
+示例 1：
+```
+输入: "the sky is blue"
+输出: "blue is sky the"
+```
+示例 2：
+```
+输入: "  hello world!  "
+输出: "world! hello"
+解释: 输入字符串可以在前面或者后面包含多余的空格，但是反转后的字符不能包括。
+```
+示例 3：
+```
+输入: "a good   example"
+输出: "example good a"
+解释: 如果两个单词间有多余的空格，将反转后单词间的空格减少到只含一个。
+```
+
+说明：
+```
+无空格字符构成一个单词。
+输入字符串可以在前面或者后面包含多余的空格，但是反转后的字符不能包括。
+如果两个单词间有多余的空格，将反转后单词间的空格减少到只含一个。
+```
+## 2. 解答
+这个可以直接用Python作弊：
+```python
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        l = s.split()
+        return " ".join(l[::-1])
+```
+```c++
+
+```
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题58 - II. 左旋转字符串
+&emsp;&emsp; 字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串`"abcdefg"`和数字`2`，该函数将返回左旋转两位得到的结果`"cdefgab"`。
+示例 1：
+```
+输入: s = "abcdefg", k = 2
+输出: "cdefgab"
+```
+示例 2：
+```
+输入: s = "lrloseumgh", k = 6
+输出: "umghlrlose"
+```
+限制：
+```
+1 <= k < s.length <= 10000
+```
+
+## 2. 解答
+这个就比较简单了
+```c++
+class Solution {
+public:
+    string reverseLeftWords(string s, int n) {
+        if(n < 1)
+            return s;
+        // 对于 s = "lrloseumgh", k = 6
+        // res1为 umgh
+        // res2为 lrlose
+        string res1(s.begin() + n, s.end()),    
+                res2(s.begin(), s.begin() + n); 
+        return res1 + res2;
+    }
+};
+```
 
 
 
