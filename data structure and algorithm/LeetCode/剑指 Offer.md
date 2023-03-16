@@ -2277,7 +2277,7 @@ public:
 &emsp; 
 # 面试题 53 - I. 在排序数组中查找数字I
 ## 1.题目详情
-&emsp;&emsp;统计一个数字在排序数组中出现的次数。
+&emsp;&emsp; 统计一个数字在排序数组中出现的次数。
 示例 1:
 ```
 输入: nums = [5,7,7,8,8,10], target = 8
@@ -2340,6 +2340,7 @@ public:
 &emsp;
 &emsp; 
 # 面试题 53 - II. `0～n-1`中缺失的数字
+## 1.题目详情
 &emsp;&emsp; 一个长度为`n-1`的递增排序数组中的所有数字都是唯一的，并且每个数字都在范围`0～n-1`之内。在范围`0～n-1`内的`n`个数字中有且只有一个数字不在该数组中，请找出这个数字。
 示例 1:
 ```
@@ -2358,4 +2359,159 @@ public:
 ```
 
 ## 2. 解答
+&emsp;&emsp; 很显然，还是用二分法：
+```c++
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        if(nums.size() == 0)
+            return 0;
+
+        int start = 0, mid = nums.size()/2, end = nums.size()-1;
+        while(start != end){
+            if(nums[mid] == mid){
+                start = mid + 1;
+                mid = (start + end) / 2;
+            }else if(nums[mid] > mid){
+                end = mid - 1;
+                mid = (start + end) / 2;
+            }
+        }
+        return mid;
+    }
+};
+```
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题56 - I. 数组中数字出现的次数
+## 1.题目详情
+&emsp;&emsp; 一个整型数组 `nums` 里除两个数字之外，其他数字都出现了两次。请写程序找出这两个只出现一次的数字。要求时间复杂度是`O(n)`，空间复杂度是`O(1)`。
+示例 1：
+```
+输入：nums = [4,1,4,6]
+输出：[1,6] 或 [6,1]
+```
+示例 2：
+```
+输入：nums = [1,2,10,4,1,4,3,3]
+输出：[2,10] 或 [10,2]
+```
+限制：
+```
+2 <= nums.length <= 10000
+```
+
+## 2. 解答
+&emsp;&emsp; 因为要求时间复杂度为`O(n)`，因此排序肯定是不行的；空间复杂度要求为`O(1)`，因此也不能建立辅助数组。
 &emsp;&emsp; 
+
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 57. 和为`s`的两个数字
+## 1.题目详情
+&emsp;&emsp; 输入一个递增排序的数组和一个数字`s`，在数组中查找两个数，使得它们的和正好是`s`。如果有多对数字的和等于s，则输出任意一对即可。
+示例 1：
+```
+输入：nums = [2,7,11,15], target = 9
+输出：[2,7] 或者 [7,2]
+```
+示例 2：
+```
+输入：nums = [10,26,30,31,47,60], target = 40
+输出：[10,30] 或者 [30,10]
+```
+限制：
+```
+1 <= nums.length <= 10^5
+1 <= nums[i] <= 10^6
+```
+
+## 2. 解答
+&emsp;&emsp; 看到排序数组，首先想到的是二分法，时间复杂度为$O({log_2{n}})$，但这题最合适的其实是 [双指针法](https://leetcode.cn/problems/he-wei-sde-liang-ge-shu-zi-lcof/solution/mian-shi-ti-57-he-wei-s-de-liang-ge-shu-zi-shuang-/)：
+```c++
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        if(nums.size() == 0 || nums[0] >= target)
+            return vector<int>();
+        int start = 0, end = nums.size() - 1;
+        while(start != end){
+            int sum = nums[start] + nums[end];
+            if(sum == target)
+                return vector<int>{nums[start], nums[end]};
+            else if(sum > target)
+                --end;
+            else if(sum < target)
+                ++start;
+        }
+        return vector<int>();
+    }
+};
+```
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题  57-II. 和为s的连续正数序列
+&emsp;&emsp; 输入一个正整数 `target` ，输出所有和为 `target` 的连续正整数序列（至少含有两个数）。
+&emsp;&emsp; 序列内的数字由小到大排列，不同序列按照首个数字从小到大排列。
+示例 1：
+```
+输入：target = 9
+输出：[[2,3,4],[4,5]]
+```
+示例 2：
+```
+输入：target = 15
+输出：[[1,2,3,4,5],[4,5,6],[7,8]]
+```
+限制：
+```
+1 <= target <= 10^5
+```
+
+## 2. 解答
+```c++
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 
+
+## 2. 解答
+```c++
+
+```
