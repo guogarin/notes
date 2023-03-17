@@ -2492,18 +2492,36 @@ public:
 ## 2. 解答
 &emsp;&emsp; 这个一下子没想出来，看了题解后发现这题适合用 [滑动窗口法](https://leetcode.cn/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/solution/jian-zhi-offer-57-ii-he-wei-s-de-lian-xu-t85z/):
 ```c++
-
+class Solution {
+public:
+    vector<vector<int>> findContinuousSequence(int target) {
+        vector<vector<int>> res;
+        if(target < 1)
+            return res;        
+        int begin = 1, end = 2, sum = 3; 
+        // 因为至少是两个数之和，所以最多只要遍历到 target/2 + 1
+        while(end <= (target/2 + 1)){          
+            if(sum == target){
+                vector<int> v;
+                v.resize(end-begin+1);
+                int tmp = begin;
+                for(int i = 0; i < end-begin+1; ++i)
+                    v[i] = tmp++;
+                res.push_back(v);
+                sum -= begin;
+                ++begin;
+            }else if(sum > target){
+                sum -= begin;
+                ++begin;
+            }else{
+                ++end;
+                sum += end;
+            }                
+        }
+        return res;
+    }
+};
 ```
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2556,7 +2574,8 @@ class Solution:
 
 &emsp;
 &emsp; 
-# 面试题58 - II. 左旋转字符串
+# 面试题58-II 左旋转字符串
+## 1.题目详情
 &emsp;&emsp; 字符串的左旋转操作是把字符串前面的若干个字符转移到字符串的尾部。请定义一个函数实现字符串左旋转操作的功能。比如，输入字符串`"abcdefg"`和数字`2`，该函数将返回左旋转两位得到的结果`"cdefgab"`。
 示例 1：
 ```
@@ -2589,6 +2608,69 @@ public:
         return res1 + res2;
     }
 };
+```
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 60. n个骰子的点数
+## 1.题目详情
+&emsp;&emsp; 把n个骰子扔在地上，所有骰子朝上一面的点数之和为s。输入n，打印出s的所有可能的值出现的概率。
+&emsp;&emsp; 你需要用一个浮点数数组返回答案，其中第 i 个元素代表这 n 个骰子所能掷出的点数集合中第 i 小的那个的概率。
+示例 1:
+```
+输入: 1
+输出: [0.16667,0.16667,0.16667,0.16667,0.16667,0.16667]
+```
+示例 2:
+```
+输入: 2
+输出: [0.02778,0.05556,0.08333,0.11111,0.13889,0.16667,0.13889,0.11111,0.08333,0.05556,0.02778]
+```
+限制：
+```
+1 <= n <= 11
+```
+
+## 2. 解答
+```c++
+
+```
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 63. 股票的最大利润
+## 1.题目详情
+&emsp;&emsp; 假设把某股票的价格按照时间先后顺序存储在数组中，请问买卖该股票一次可能获得的最大利润是多少？
+示例 1:
+```
+输入: [7,1,5,3,6,4]
+输出: 5
+解释: 在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。
+     注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格。
+```
+示例 2:
+```
+输入: [7,6,4,3,1]
+输出: 0
+解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
+```
+限制：
+```
+0 <= 数组长度 <= 10^5
+```
+
+## 2. 解答
+```c++
+
 ```
 
 
