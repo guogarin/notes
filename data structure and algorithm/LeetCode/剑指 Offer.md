@@ -2647,6 +2647,98 @@ public:
 
 &emsp;
 &emsp; 
+# 面试题61. 扑克牌中的顺子
+&emsp;&emsp; 从若干副扑克牌中随机抽 `5` 张牌，判断是不是一个顺子，即这`5`张牌是不是连续的。`2～10`为数字本身，`A`为`1`，`J`为`11`，`Q`为12，`K`为`13`，而大、小王为 `0` ，可以看成任意数字。`A` 不能视为 `14`。
+示例 1:
+```
+输入: [1,2,3,4,5]
+输出: True
+```
+示例 2:
+```
+输入: [0,0,1,2,5]
+输出: True
+```
+限制：
+```
+数组长度为 5 
+数组的数取值为 [0, 13] .
+```
+
+## 2. 解答
+这题的解答挺巧的，题解： [面试题61. 扑克牌中的顺子](https://leetcode.cn/problems/bu-ke-pai-zhong-de-shun-zi-lcof/solution/mian-shi-ti-61-bu-ke-pai-zhong-de-shun-zi-ji-he-se/)
+```c++
+class Solution {
+public:
+    bool isStraight(vector<int>& nums) {
+        if(nums.size() != 5)
+            return false;
+        set<int> st;
+        int min = 14, max = 0;
+        for(int i = 0; i < nums.size(); ++i){
+            if(nums[i] == 0)
+                continue;
+            if(st.find(nums[i]) == st.end())
+                st.insert(nums[i]);
+            else
+                return false; // 如果有除了0以外的重复数字，那肯定不是顺子
+            if(nums[i] < min)
+                min = nums[i];
+            if(nums[i] > max)
+                max = nums[i];
+        }
+        cout << max << endl << min << endl;
+        // 这个判断很巧妙，不懂的话可以看题解
+        return max-min < 5;
+    }
+};
+```
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 62. 圆圈中最后剩下的数字
+&emsp;&emsp; `0,1,···,n-1`这`n`个数字排成一个圆圈，从数字`0`开始，每次从这个圆圈里删除第`m`个数字（删除后从下一个数字开始计数）。求出这个圆圈里剩下的最后一个数字。
+&emsp;&emsp; 例如，`0、1、2、3、4`这`5`个数字组成一个圆圈，从数字`0`开始每次删除第`3`个数字，则删除的前4个数字依次是`2、0、4、1`，因此最后剩下的数字是`3`。
+示例 1：
+```
+输入: n = 5, m = 3
+输出: 3
+```
+示例 2：
+```
+输入: n = 10, m = 17
+输出: 2
+```
+限制：
+```
+1 <= n <= 10^5
+1 <= m <= 10^6
+```
+
+## 2. 解答
+&emsp;&emsp; 实际上，本题是 约瑟夫环 问题。
+解法一：
+> &emsp;&emsp; 构建链表，然后一边遍历一边删除出局的数字，但时间复杂度太高，为`O(mn)`，空间复杂度为`O(n)`，这显然不可接受；
+> 
+解法二：
+> &emsp;&emsp; 动态规划，找规律：[剑指 Offer 62. 圆圈中最后剩下的数字](https://leetcode.cn/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/solution/jian-zhi-offer-62-yuan-quan-zhong-zui-ho-dcow/)
+> 
+```c++
+
+```
+
+
+
+
+
+
+&emsp;
+&emsp; 
 # 面试题 63. 股票的最大利润
 ## 1.题目详情
 &emsp;&emsp; 假设把某股票的价格按照时间先后顺序存储在数组中，请问买卖该股票一次可能获得的最大利润是多少？
@@ -2675,9 +2767,6 @@ public:
 
 
 
-
-
-
 &emsp;
 &emsp; 
 # 面试题 
@@ -2686,3 +2775,7 @@ public:
 ```c++
 
 ```
+
+
+
+
