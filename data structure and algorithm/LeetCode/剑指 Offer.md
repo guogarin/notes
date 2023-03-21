@@ -1699,6 +1699,57 @@ public:
 
 
 
+&emsp;
+&emsp; 
+# 面试题 34. 二叉树中和为某一值的路径
+## 1.题目详情
+&emsp;&emsp; 给你二叉树的根节点 `root` 和一个整数目标和 `targetSum` ，找出所有 从根节点到叶子节点 路径总和等于给定目标和的路径(叶子节点 是指没有子节点的节点)。
+
+## 2. 解答
+&emsp;&emsp; 这题需要注意的是，终点必须是叶子节点（没有子节点的节点）。
+```cpp
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<vector<int>> pathSum(TreeNode* root, int target) {
+        if(root == NULL)
+            return res;
+        vector<int> vec;
+        get_path_sum(root, target, vec);
+        return res;
+    }
+private:
+    vector<vector<int>> res;
+    void get_path_sum(TreeNode* node, int target, vector<int> vec){
+        vec.push_back(node->val);
+        if(node->left == NULL 
+          && node->right == NULL 
+          && accumulate(vec.begin(), vec.end(), 0) == target){
+            res.push_back(vec);
+            return;
+        }            
+        if(node->left != NULL)
+            get_path_sum(node->left, target, vec);
+        if(node->right != NULL)
+            get_path_sum(node->right, target, vec);
+        return;
+    }
+};
+```
+
+
+
+
 
 
 &emsp;
@@ -2091,6 +2142,7 @@ public:
 
 
 
+
 &emsp;
 &emsp; 
 # 面试题 44. 数字序列中某一位的数字
@@ -2113,6 +2165,90 @@ public:
 ```
 
 # 2. 解答
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 46. 把数字翻译成字符串
+## 1. 题目详情
+&emsp;&emsp; 给定一个数字，我们按照如下规则把它翻译为字符串：`0` 翻译成 `“a”` ，`1` 翻译成 `“b”`，……，`11` 翻译成 `“l”`，……，`25` 翻译成 `“z”`。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。
+示例 1:
+```
+输入: 12258
+输出: 5
+解释: 12258有5种不同的翻译，分别是"bccfi", "bwfi", "bczi", "mcfi"和"mzi"
+```
+提示：
+```
+0 <= num < 231
+```
+
+## 2. 解答
+这题用递归来做会比较容易：
+```cpp
+class Solution {
+public:
+    int translateNum(int num) {
+        if(num < 0)
+            return 0;
+        get_count(to_string(num), 0);
+        return count;
+    }
+private:
+    int count = 0;
+    void get_count(string num, int begin){
+        if(begin >= num.size()){
+            ++count;
+            return;
+        }
+        get_count(num, begin+1);
+        // 如果以1开头，则会有两种翻译方法
+        if(num[begin] == '1' && begin+1 <num.size()
+        // 如果以2开头，而且下一位 <=5，那也可以有两种解法
+          || (num[begin] == '2' && begin+1 <num.size() && num[begin+1] <= '5')){
+            get_count(num, begin+2);
+            cout << num[begin] << endl;
+          }
+        return;
+    }
+};
+```
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 47. 礼物的最大价值
+&emsp;&emsp; 在一个 `m*n` 的棋盘的每一格都放有一个礼物，每个礼物都有一定的价值（价值大于 `0`）。你可以从棋盘的左上角开始拿格子里的礼物，并每次向右或者向下移动一格、直到到达棋盘的右下角。给定一个棋盘及其上面的礼物的价值，请计算你最多能拿到多少价值的礼物？
+示例 1:
+```
+输入: 
+[
+  [1,3,1],
+  [1,5,1],
+  [4,2,1]
+]
+输出: 12
+解释: 路径 1→3→5→2→1 可以拿到最多价值的礼物
+```
+提示：
+```
+0 < grid.length <= 200
+0 < grid[0].length <= 200
+```
+
+## 2. 解答
+
+```cpp
+
+```
 
 
 
