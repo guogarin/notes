@@ -2245,11 +2245,40 @@ private:
 ```
 
 ## 2. 解答
-
+**解法一：递归**
+结果但是时间超时了：
+```cpp
+class Solution {
+public:
+    int maxValue(vector<vector<int>>& grid) {
+        if(grid.size() == 0)
+            return 0;
+        vector<int> vec;
+        get_value(grid, 0, 0, vec);
+        return max_val;
+    }
+private:
+    int max_val = 0;
+    void get_value(const vector<vector<int>>& grid, int row, int col, vector<int> vec){
+        vec.push_back(grid[row][col]);
+        if(row >= grid.size()-1 && col >= grid[0].size()-1){
+            int sum = accumulate(vec.begin(), vec.end(), 0);
+            cout << sum << endl;
+            max_val = sum > max_val ? sum : max_val;
+            return;
+        }
+        //cout << grid[row][col] << endl;
+        if(row+1 < grid.size())
+            get_value(grid, row+1, col, vec);
+        if(col+1 < grid[0].size())
+            get_value(grid, row, col+1, vec);
+    }
+};
+```
+**解法二：动态规划**
 ```cpp
 
 ```
-
 
 
 
