@@ -1699,6 +1699,25 @@ public:
 
 
 
+
+
+&emsp;
+&emsp; 
+# 面试题 33 二叉搜索树的后序遍历序列
+## 1.题目详情
+&emsp;&emsp; 输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历结果。如果是则返回 `true`，否则返回 `false`。假设输入的数组的任意两个数字都互不相同。
+
+
+## 2. 解答
+```cpp
+
+```
+
+
+
+
+
+
 &emsp;
 &emsp; 
 # 面试题 34. 二叉树中和为某一值的路径
@@ -2332,8 +2351,27 @@ s.length <= 40000
 ```
 
 ## 2. 解答
+&emsp;&emsp; 用哈希表加双指针即可将时间复杂度降到`O(n)`，具体双指针如何推进，可以用`arabcacfr`推演一遍，题解：[面试题48. 最长不含重复字符的子字符串](https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/solution/mian-shi-ti-48-zui-chang-bu-han-zhong-fu-zi-fu-d-9/)，代码如下：
 ```c++
-
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        if(s.size() <= 1)
+            return s.size();
+        map<char, int> mp;
+        int head = -1, tail = 0, max_len = 0; 
+        while(tail != s.size()){
+            if(mp.find(s[tail]) != mp.end()){
+                head = max(head, mp[s[tail]]);
+            }
+            int cur_len = tail - head;
+            max_len = max(cur_len, max_len);
+            mp[s[tail]] = tail;       
+            ++tail;
+        }
+        return max_len;
+    }
+};
 ```
 
 
@@ -2631,9 +2669,13 @@ public:
 
 ## 2. 解答
 &emsp;&emsp; 因为要求时间复杂度为`O(n)`，因此排序肯定是不行的；空间复杂度要求为`O(1)`，因此也不能建立辅助数组。
-&emsp;&emsp; 
+&emsp;&emsp; 要按题目要求完成这题，需要用到一个知识点：
+> &emsp;&emsp; 相同的数异或为0，0和任何数异或等于这个数本身，即 `x^x=0，x^0=x`
+> 
+但这题是有两个不同的数字，因此还需要分组，题解： [剑指 Offer 56 - I. 数组中数字出现的次数](https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/solution/jian-zhi-offer-56-i-shu-zu-zhong-shu-zi-tykom/)
+```c++
 
-
+```
 
 
 
