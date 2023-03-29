@@ -2670,11 +2670,38 @@ public:
 ## 2. 解答
 &emsp;&emsp; 因为要求时间复杂度为`O(n)`，因此排序肯定是不行的；空间复杂度要求为`O(1)`，因此也不能建立辅助数组。
 &emsp;&emsp; 要按题目要求完成这题，需要用到一个知识点：
-> &emsp;&emsp; 相同的数异或为0，0和任何数异或等于这个数本身，即 `x^x=0，x^0=x`
+> &emsp;&emsp; 相同的数异或为`0`，`0`和任何数异或等于这个数本身，即 `x^x=0，x^0=x`
 > 
 但这题是有两个不同的数字，因此还需要分组，题解： [剑指 Offer 56 - I. 数组中数字出现的次数](https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/solution/jian-zhi-offer-56-i-shu-zu-zhong-shu-zi-tykom/)
+另外一个需要注意的细节是：
+> &emsp;&emsp; **位运算符`&`、`|`、`^`的优先级比 `==` 低**
+> 
 ```c++
+class Solution {
+public:
+    vector<int> singleNumbers(vector<int>& nums) {
+        if(nums.size() < 2)
+            return nums;
+        int x = 0, y = 0, n = 0;  // m 
+        // 1. 获取n， n其实就是 x^y        
+        for(int i = 0; i < nums.size(); ++i)
+            n ^= nums[i];
+        
+        // 2. 获取一个不同的 位(bit)
+        int m = 1;        
+        while((n & m) == 0) // (n & m) 的括号千万不能漏！
+            m <<= 1;
 
+        // 3. 按位分组，并求得两个只出现一次的数字
+        for(int i = 0; i < nums.size(); ++i){
+            if((nums[i] & m) == 0) // (nums[i] & m)的括号千万不能漏！
+                x ^= nums[i];
+            else
+                y ^= nums[i];
+        }
+        return vector<int> {x, y};
+    }
+};
 ```
 
 
@@ -2872,6 +2899,37 @@ public:
     }
 };
 ```
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 面试题 59-I. 滑动窗口的最大值
+给定一个数组 `nums` 和滑动窗口的大小 `k`，请找出所有滑动窗口里的最大值。
+
+示例:
+```
+输入: nums = [1,3,-1,-3,5,3,6,7], 和 k = 3
+输出: [3,3,5,5,6,7] 
+解释: 
+
+  滑动窗口的位置                最大值
+---------------               -----
+[1  3  -1] -3  5  3  6  7       3
+ 1 [3  -1  -3] 5  3  6  7       3
+ 1  3 [-1  -3  5] 3  6  7       5
+ 1  3  -1 [-3  5  3] 6  7       5
+ 1  3  -1  -3 [5  3  6] 7       6
+ 1  3  -1  -3  5 [3  6  7]      7
+```
+提示：
+```
+你可以假设 k 总是有效的，在输入数组 不为空 的情况下，1 ≤ k ≤ nums.length。
+```
+
 
 
 
