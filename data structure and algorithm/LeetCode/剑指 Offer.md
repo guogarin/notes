@@ -2973,6 +2973,9 @@ public:
 你可以假设 k 总是有效的，在输入数组 不为空 的情况下，1 ≤ k ≤ nums.length。
 ```
 
+## 2. 解答
+
+
 
 
 
@@ -3000,6 +3003,7 @@ public:
 ```
 
 ## 2. 解答
+
 ```c++
 
 ```
@@ -3136,7 +3140,7 @@ public:
 
 &emsp;
 &emsp; 
-# 面试题 
+# 面试题 65. 不用加减乘除做加法
 ## 1.题目详情
 写一个函数，求两个整数之和，要求在函数体内不得使用 “+”、“-”、“*”、“/” 四则运算符号。
 
@@ -3164,7 +3168,21 @@ a, b 均可能是负数或 0
 > &emsp;&emsp;第三步把前两个步骤的结果相加。第三步相加的过程依然是重复前面两步，直到不产生进位为止。
 > 
 ```c++
-
+class Solution {
+public:
+    int add(int a, int b) {
+        int xor_res = a ^ b; // 先处理不用进位的bit
+        // c++不支持负值左移，需要强制转换为无符号数
+        int and_res = ((unsigned int)(a & b)) << 1;
+        while(and_res != 0){
+            a = xor_res;
+            xor_res = xor_res ^ and_res;
+            //  c++不支持负值左移，需要强制转换为无符号数
+            and_res = ((unsigned int)(a & and_res)) << 1;
+        }
+        return xor_res;
+    }
+};
 ```
 
 
