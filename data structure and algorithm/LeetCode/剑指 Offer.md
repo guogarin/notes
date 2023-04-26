@@ -3129,8 +3129,25 @@ public:
 ```
 
 ## 2. 解答
-```c++
+### 2.1 方法一
+暴力求解，时间复杂度`O(n*n)`，性能不够完美。
 
+### 2.2 方法二
+[面试题63. 股票的最大利润](https://leetcode.cn/problems/gu-piao-de-zui-da-li-run-lcof/solution/mian-shi-ti-63-gu-piao-de-zui-da-li-run-dong-tai-2/)
+```c++
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        if(prices.size() == 0)
+            return 0;
+        int max_value = 0;
+        for(int i = 0; i < prices.size(); ++i){
+            int tmp = *max_element(prices.begin()+i, prices.end()) - prices[i];
+            max_value = max(tmp, max_value); // tmp > max_value ? tmp : max_value;
+        }
+        return max_value;
+    }
+};
 ```
 
 
