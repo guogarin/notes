@@ -5,8 +5,9 @@
 
 ## 1. 查看文件夹大小
 `du -sh` 
-`-h` 或 --human-readable    以K，M，G为单位，提高信息的可读性。
-`-s` 或 --summarize 仅      显示总计。
+① `du` 是 Disk Usage 的缩写
+② `-h` 或 --human-readable    以K，M，G为单位，提高信息的可读性。
+③ `-s` 或 --summarize 仅      显示总计。
 
 
 
