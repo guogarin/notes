@@ -56,7 +56,7 @@ cd bin
 ```
 没有报错并能成功监听3306端口即表示启动成功
 ```shell
-netstat -tln | grep 3306
+netstat -nlt | grep 3306
 ```
 ## 错误排查
 &emsp;&emsp; 若未能正常启动，可以看 `error.log ` ，错误信息都在里面，文件路径就是在 `my.cnf` 里的那个。

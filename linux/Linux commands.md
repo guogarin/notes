@@ -154,3 +154,86 @@ yum [options] [command] [package ...]
 
 ### 4.4 `apt-get`
 &emsp;&emsp; `apt-get`也是一个包管理工具，属于ubuntu、Debian。
+
+
+
+&emsp;&emsp; 
+&emsp;&emsp; 
+## 5. 网络编程中常用的命令和工具
+### 5.1 网络编程有哪些常用的命令？
+| 命令      | 对应英文       | 作用 |
+| --------- | -------------- | ---- |
+| `tcpdump` |                |      |
+| `nc`      |                |      |
+| `strace`  |                |      |
+| `lsof`    | list open file |      |
+| `netstat` |                |      |
+| `vmstat`  |                |      |
+| `ifstat`  |                |      |
+| `mpstat`  |                |      |
+
+### netstat
+&emsp;&emsp; `netstat`是一个功能很强大的网络信息统计工具。 它可以打印本地网卡接口上的全部连接、 路由表信息、 网卡接口信息等。
+`netstat`命令常用的选项包括：
+| 选项                       | 作用                                       |
+| -------------------------- | ------------------------------------------ |
+| -a 或–all                  | 显示连接的套接字(包括 LISTEN、ESTABLISHED) |
+| -A <网络类型>或–<网络类型> | 列出该网络类型连线中的相关地址。           |
+| -c 或–continuous           | 每隔1 s输出一次                            |
+| -C 或–cache                | 显示路由器配置的快取信息。                 |
+| -e 或–extend               | 显示网络其他相关信息。                     |
+| -F 或–fib                  | 显示FIB。                                  |
+| -g 或–groups               | 显示多重广播功能群组组员名单。             |
+| -h 或–help                 | 在线帮助。                                 |
+| -i 或–interfaces           | 显示网络界面信息表单。                     |
+| -l 或–listening            | 显示LISTEN状态的服务器的Socket。           |
+| -M 或–masquerade           | 显示伪装的网络连线。                       |
+| -n 或–numeric              | 直接使用IP地址，而不通过域名服务器。       |
+| -N 或–netlink或–symbolic   | 显示网络硬件外围设备的符号连接名称。       |
+| -o 或–timers               | 显示socket定时器（比如保活定时器） 的信息  |
+| -p 或–programs             | 显示socket所属的进程的PID和名字            |
+| -r 或–route                | 显示Routing Table。                        |
+| -s 或–statistice           | 显示网络工作信息统计表。                   |
+| -t 或–tcp                  | 仅显示TCP连接                              |
+| -u 或–udp                  | 仅显示UDP连接                              |
+| -v 或–verbose              | 显示指令执行过程。                         |
+| -V 或–version              | 显示版本信息。                             |
+| -w 或–raw                  | 显示RAW传输协议的连线状况。                |
+| -x 或–unix                 | 此参数的效果和指定”-A unix”参数相同。      |
+| –ip 或–inet                | 此参数的效果和指定”-A inet”参数相同。      |
+
+#### 常用组合
+**(1) 查看某个端口是否被占用**
+```shell
+netstat -nlt # -l 只显示LISTEN状态的服务
+netstat -nat # -a 不仅仅显示LISTEN状态的服务，ESTABLISHED状态的也显示
+```
+然后搭配管道和`grep`进行筛选：
+```shell
+netstat -nat | grep 3306 # 查看3306端口是否被占用
+```
+来看看`netstat -nat`结果：
+```
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN     
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN     
+tcp6       0      0 :::111                  :::*                    LISTEN     
+tcp6       0      0 :::22                   :::*                    LISTEN     
+tcp6       0      0 ::1:631                 :::*                    LISTEN     
+tcp6       0      0 ::1:25                  :::*                    LISTEN   
+```
+可以看到`netstat`的每行输出都包含如下`6`个字段（默认情况） ：
+|                     |                                                  |
+| ------------------- | ------------------------------------------------ |
+| ① `Proto`           | 协议名（tcp或udp）。                             |
+| ② `Recv-Q`          | socket内核接收缓冲区中尚未被应用程序读取的数据量 |
+| ③ `Send-Q`          | 未被对方确认的数据量。                           |
+| ④ `Local Address`   | 本端的IP地址和端口号。                           |
+| ⑤ `Foreign Address` | 对方的IP地址和端口号。                           |
+| ⑥ `State`           | socket的状态。                                   |
+注：
+> &emsp;&emsp; 对于无状态协议，比如UDP协议，这一字段将显示为空。而对面向连接的协议而言，netstat支持的State包括`ESTABLISHED、 SYN_SENT、 SYN_RCVD、 FIN_WAIT1、 FIN_WAIT2、TIME_WAIT、CLOSE、CLOSE_WAIT、 LAST_ACK、 LISTEN、 CLOSING、 UNKNOWN`。
+> 

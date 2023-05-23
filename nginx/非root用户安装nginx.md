@@ -83,5 +83,5 @@ make install
 ### 5.3 验证
 ```shell
 ps -ef | grep nginx      # 看服务起来了没有   
-netstat -tln | grep 2000 # 查看端口有没有监听起来
+netstat -nlt | grep 2000 # 查看端口有没有监听起来
 ```
