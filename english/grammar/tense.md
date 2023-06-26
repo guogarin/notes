@@ -576,18 +576,34 @@
 
 
 &emsp;
-## 3.2 过去完成时
+## 3.2 过去完成时(pluperfect tense, past perfect)
+### 3.2.1 过去完成时的作用
 **用于表示截止到 过去某时为止 所完成 的动作或经历：**
-> ① He had studied English for 10 years before he left for the states.
-> ② He had already left when I came.
-> ③ He was angry because he hadn't seen Mary.
-> ④ He told me that he had seen the movie once.
+> ① When I arrived Jane had just left. 
+> 我到时简刚刚离开。
 > 
-另外需要注意的是，**过去完成时不能单独存在！** 而是要和另一个 一般过去时从句(或表示之前的副词短语)连用，即在过去不同时间发生的两种动作：
+> ② The play had already started when we got to the theatre. 
+> 我们到剧场时戏已经开始了。
+> 
+> ③ Up till then we had only covered half the distance. 
+> 到那时我们才走了一半路程。
+> 
+> ④ She had rushed out of the door before I could stop her. 
+> 我还没来得及拦阻她已冲出门去了。
+> 
+> ⑤ By the end of June they had treated over 10,000 patients. 
+> 到六月底他们已治疗了一万多病人。
+> 
+
+### 3.2.2 过去完成时的使用
+&emsp;&emsp; 一般情况下，过去完成时不能单独存在，而是要和另一个 一般过去时从句(或表示之前的副词短语)连用，即在过去不同时间发生的两种动作：
 > 先发生的动作：用过去完成时表示；
 > 后发生的动作：用一般过去时表示
 > I <u>lost</u> the book which my father <u>had given</u> me.
 > 一般过去时 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 过去完成时
+> 
+但有时当根据上下文可判定当前讲述的是过去的事的时候，不和过去式一起使用也是可以的。比如新概念英语中有些叙述性的文章的基础时态就是过去式(而不是现在时)，因此这个时候可以不和过去式一起使用，比如《Lesson 5 The facts 确切数字》中：
+> &emsp;&emsp; A week later, the editor at last received a telegram from the journalist. Not only had the poor man been arrested, but he had been sent to prison as well.
 > 
 
 
@@ -597,8 +613,10 @@
 用来表示 将来某时为止 所完成(或仍在继续) 的动作或经历：
 > ① 明天这个时候，他将已抵达芝加哥。
 > &emsp; He will have arrived in Chicago by this time tomorrow.
+> 
 > ② 你来的时候，每一件事将已全部完成。
 > &emsp; By the time you come, everythig will have been finished.
+> 
 > ③ 到月底，他就在此地住满10年了。
 > &emsp; He will have lived here for 10 years by the end of this month.
 > 
