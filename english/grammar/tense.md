@@ -610,12 +610,12 @@
 
 &emsp;
 ## 3.3 将来完成时(The Future Perfect Tense)
-### 3.3.1 构成
+### 3.3.1 基本结构
 第一人称：`will/shall` + `have` + `done`
 二三人称：`will` + `have` + `done`
 
 ### 3.3.2 使用场景
-**(1) 表示到将来某个时间点，某动作（状态）已完成，并且对将来这个时间点有影响（关系）**。例：
+**(1) 表示到将来某个时间点，某动作（状态）将已完成，并且对将来这个时间点有影响（关系）**。例：
 > ① Pick me up at 8 o'clock,I will have had breakfast by then.
 > 早上8点钟你来接我，到时我已经吃完早饭了。
 > ② We shall（will） have learned 12 units by the end of this term.
@@ -634,27 +634,75 @@
 ### 3.3.3 和一般完成时的对比
 对比如下：
 > **一般完成时**：到现在为止，一件已发生的事（动作或状态），而且这件已发生事和现在的情况有联系 
-> **将来完成时**：到将来某个时间点，某动作（状态）已完成，并且对将来这个时间点有影响（关系）
+> **将来完成时**：到将来某个时间点，某动作（状态）将已完成，并且对将来这个时间点有影响（关系）
 > 
 
 ### 3.3.3 will have don的其它作用
 `will have done` 除了可以用作将来完成时外，也可以用作表示完成动作的推测。两者的区别是：
 > 如果句子意思强调客观事实，则为将来完成时；
-> 如果句子意思强调主观判断，则为表推测用法。比较并体会下面两组句子：
+> 如果句子意思强调主观判断，则为表推测用法。
 > 
-https://www.cpsenglish.com/question/8263
+下面的句子是将来完成时：
+> I will have retired by the year 2020. 到2020年我将已退休。
+> The old currency will have been phased out by 2019. 旧币分阶段至2019年将全部禁止流通。
+> By the time the case comes to trial, he will have spent a year in prison. 到这个案件开庭审理时，他将已经在监狱里呆了一年了。
+> 
+下面的句子是表推测的用法：
+> Frost will have blown a compression joint. 准是霜冻使压缩式接头爆裂了。
+> That will have been Roland. He said he’d be back at 7. 准是罗兰。他说他7点钟回来。
+> As you will have noticed, there is a new secretary in the front office. 也许你们已经注意到了，前面的办公室来了一位新秘书。
+> If someone has been in captivity for a long time, he will have changed as a result of his experience. 如果某人遭到长时间囚禁，他会因为他的经历而有所改变。
+> 
+比较：
+> That will be Roland. I can hear him at the door. 
+> 那一定是罗兰。我听到他在门口的声音。（will be对现在情况的推测）
+> That will have been Roland. He said he’d be back at 7. 
+> （当时）那人一定是罗兰。他说7点钟回来。（will have been对过去情况的推测）
+> 
+`will have done`也表示对将来情况的推测，但这类用法通常也可以视为将来完成时。如：
+> Maybe by then you will have changed your mind. 
+> 也许到时候你已经改变主意了。（可以视为将来完成时，也可以视为对将来情况的推测）
+> Planning so far ahead makes no sense—so many things will have changed by next year. 
+> 提前这么久就计划并不明智——到明年，许多事情都会发生变化。（可以视为将来完成时，也可以视为对将来情况的推测）
+> 
+
 
 
 
 &emsp;
-## 3.4 过去将来完成时
-（would have done）过去将来完成时表示：站在某个过去的时间点，对一个之后的时间点已经发生了的动作做总结。
-> ① 他说第二个月末她肯定已经动身去伦敦了。
-> &emsp; He said he would have left for London by the end of next month.
-> ② 
-> &emsp; I guessed that Helen would have told her something.
+## 3.4 过去将来完成时(The Past Future Perfect Tense)
+### 3.4.1 基本结构
+若表示与过去事实相反的虚拟语气，此时条件从句的谓语用过去完成时(had+过去分词)，而主句谓语则通常用过去将来完成时（`would have done`），当然，主句谓语也可根据情况使用 `should(could, might) + have + done`。
+
+
+### 3.4.2 使用场景
+站在过去的某个时间点 看 将来某时 某动作 将已完成：
+> ① I thought you'd have left by this time. 
+> 我想到这时你会已经走了。
+> 
+> ② She hoped that they would have got everything ready before she got back. 
+> 她希望在她回来以前他们已把一切都准备好。
+> 
+> ③ He told them he would have finished by 8 o'clock. 
+> 他告诉他们他八点前就会干完。
 > 
 
+### 3.4.3 would + have + done 的情态用法
+> ① Only somebody with a small mind would have refused to help;
+> 只有心胸狭窄的人才不肯帮助别人。（表推测）
+> 
+> ② Few men would have bared their soul to a woman as he had;
+> 很少有男人能像他一样对一个女人敞开心扉。（表怀疑）
+> 
+> ③ I’m surprised you didn’t like the film. I would have thought it was just your kind of thing;
+> 你不喜欢这部电影，这让我感到奇怪。我本来还觉得正对你的路呢。（表过去的想法）
+> 
+> ④ My father would have driven me to Cornwall, but we decided it would be quicker by train;
+> 父亲原本要开车送我去康沃尔，但我们还是觉得坐火车更快。（表过去的想法）
+> 
+> ⑤ The scar added interest to a face that otherwise would have appeared too bland.
+> 这处伤疤为本显得平淡无奇的脸增添了些吸引力。（表示未曾发生的情况）
+> 
 
 
 
@@ -664,9 +712,136 @@ https://www.cpsenglish.com/question/8263
 # 4. 进行时
 <div align="center"> <img src="./pic/进行时.png"> </div>
 
-## 4.1 现在进行时
-be (am/ is/ are) doing
-&emsp;&emsp; 表示动作正在进行、持续进行（上图中的红色直箭头表示持续）。发生时间在现在，参照时间也是现在，表示持续进行状态。
+## 4.1 现在进行时(The Present Continuous Tense)
+### 4.5.1 基本结构
+`be doing`
+
+### 4.5.2 使用场景
+&emsp;&emsp; 表示动作正在进行、持续进行（上图中的红色直箭头表示持续）。发生时间在现在，参照时间也是现在，表示持续进行状态。拆开来讲的话，时和态分别是：
+> 动作发生的时间: **（持续到）现在**
+> 动作的状态是: **正在进行中**
+> 
+#### (1) 表示现在 正在进行的 动作 和 发生的事
+> ① What are you doing？ ——I'm reading a play by Shaw. 你在干什么？ ——我在看萧伯纳的一个剧本。
+> ② How are things going? 现在情况怎么样？
+> ③ Mary is knitting and listening to the radio. 玛丽在打毛线， 听收音机。
+> ④ It's snowing hard. 天正下着大雪。
+> ⑤ What are they quarrelling about? 他们在为什么事争吵？
+> ⑥ Why aren't you wearing a coat? It's so cold. 天这么冷， 你怎么没穿大衣？
+> ⑦ They're travelling in India. 他们在印度旅行。
+>   
+
+#### (2) 现阶段正发生的事，此刻动作不一定正在进行
+> ① Hello, Tom, are you still working in that bank? 嗨， 汤姆， 你还在那家银行工作吗？
+> ② She's teaching at a night school. 她在夜校教书。
+> ③ I'm writing a book about ecology. 我在写一本关于生态学的书。
+> ④ Sorry, you can't take the typewriter away, I'm using it. 对不起， 你不能把打字机拿走， 我在用。
+>  
+
+#### (3) 当句中出现的表示时间的词是`now`，`at the moment`等时，表示句子要说明的是现在正在发生的事，动词应用现在进行时
+> ① Linda's brother is watching TV in his bedroom now.
+> 现在，琳达的哥哥正在他的卧室里看电视。
+> 
+> ② We're far from home. What are our parents doing at the moment?
+> 现在，我们远离家了，我们的父母此刻在干什么呢？
+> 
+
+#### (4) 当句中出现的时间状语是`these days`，`this week`，`this month`,`this term` 等时，若句子所要表达的意义是在这一阶段正在发生的事，则动词应用现在进行时
+> ① These days we are helping the farmers work on the farm. 
+> 这些天我们在农场帮农民们干活。
+> 
+> ② They're having a test this week. 
+> 这一周，他们在进行一次考试。
+> 
+> ③ Mr Cheng is visiting our village this month. 
+> 这个月，程先生在我们村访问。
+> 
+
+#### (5) 在句中出现了`Look`，`Listen`，`Can't you see?` 等暗示词时，说明后面谓语动词的动作正在发生，该动词应用现在进行时
+> ① Look! Maria and Tom are dancing under the tree.
+看！玛丽亚和汤姆正在树下跳舞。
+
+> ② Listen! Our English teacher is singing the popular English song.
+> 听！我们英语老师正在唱那首流行的英文歌曲。
+> 
+> ③ Many children are swimming in the river. Can't you see?
+> 许多小孩在河里游泳，你难道看不见吗？
+> 
+
+#### (6) 有些动词一般不能用于现在进行时
+&emsp;&emsp; 对于那些表示状态和感觉的词，不能表示正在进行的动作，特别是`know`， `love`， `like`， `belong`， `detest`， `hate`这类词，例如：
+> ① I hear someone singing. 
+> 我正听见有人唱歌。
+>
+> ② Do you see anyone over there? 
+> 你看到那里有什么人吗？
+>
+> ③ What does he think of it? 
+> 他觉得这怎么样？
+>
+如果这些词使用正在进行时态，句子带有某种感情色彩。例如：
+> ① Are you seeing someone off?
+> 你在给谁送行吗？
+> ② They are hearing an English talk.
+> 他们在听一个英语报告。
+> 
+| 表示状态或感觉                            | 表示动作（可用于进行时）                              |
+| ----------------------------------------- | ----------------------------------------------------- |
+| She looks tired. 她显得很疲倦。           | She is looking at a bird. 她在看鸟。                  |
+| The food smells nice. 这菜闻着很香。      | He's smelling the flowers. 他在闻花。                 |
+| The juice tastes good. 果汁味很好。       | I'm tasting the wine. 我在品尝酒。                    |
+| It sounds a good idea. 这似乎是个好主意。 | Why are you sounding the horn? 你为什么按喇叭？       |
+| I think you are right. 我想你是对的。     | What are you thinking of? 你在想什么？                |
+| Do you see that tree? 你看到那棵树吗？    | I'm seeing Ted off. 我在给特德送行。                  |
+| It holds two gallons. 它能装两加仑。      | What are you holding in your hand? 你手上拿的是什么？ |
+| She has two sisters. 她有两个姐妹。       | She is having lunch. 她在吃午饭。                     |
+
+#### (7) 现在进行时表示将来动作
+2、现在进行时还有另外一种含义，即它们能表达即将发生的事情，相当于一般将来时。能够用来表示将来状况的动词有：arrive，come，do，get，go，leave，meet，play，return，see，spend，start，stay，wear，work 等。
+◇We are leaving on Friday。
+我们星期五离开。
+◇Are you going anywhere tomorrow？
+你明 天准备去哪儿？
+◇A foreign guest is giving a lecture this afternoon。
+今 天下午一个外国客人将给我们作报告。
+◇Are you staying here till next week?
+你打算在这里呆到下个星期吗？
+
+#### (8) 现在进行时表示经常性动作
+&emsp;&emsp; 现在进行时还可以用来表示经常性的动作， 常和`always，constantly，forever`这类副词连用， 表示厌
+烦、 赞美等情绪：
+> ① He is always losing his keys. 
+> 他老是丢钥匙。 （不以为然）
+> 
+> ② I'm always making that mistake. 
+> 我老犯那个错。 （不耐烦）
+> 
+> ③ She's always working. 
+> 她总是在工作。 （赞赏）
+> 
+> ④ You're always thinking of others. 
+> 你总是想到别人。 （赞美）
+> 
+> ⑤ She's constantly changing her mind. 
+> 她老是改变主意。 （不满）
+> 
+> ⑥ The baby is constantly screaming. 
+> 宝宝老是尖叫。 （不耐烦）
+> 
+> ⑦ He's forever finding fault with what I do. 
+> 他老是找我的茬。 （厌烦）
+> 
+> ⑧ She's perpetually nagging. 
+> 她老爱唠叨。 （厌烦）
+> 
+上面这类句子也可用一般现在时，这时只说明事实，但用现在进行时则表示某种情绪，试比较下面句子：
+| 用一般现在时（说明事实）       | 用现在进行时（表示某种情绪）                  |
+| ------------------------------ | --------------------------------------------- |
+| How do you feel today?         | How are you feeling today? （关切）           |
+| We haul in lots of fish today. | We're hauling in lots of fish today. （欣慰） |
+| She does fine work at school.  | She's doing fine work at school. （赞美）     |
+| He often complains of his job. | He's always complaining of his job. （厌烦）  |
+
 
 ## 4.2 过去进行时
 be (was/ were) doing
