@@ -9,7 +9,7 @@
 &emsp; 
 # 1. 综述
 ## 1.1 什么是 时态？
-&emsp;&emsp; 所谓 时态，就是 **时间 + 状态**。
+&emsp;&emsp; 所谓 时态，就是 **时间 + 状态**，“时“ 指动作发生的时间，”态“ 指动作的样子和状态。
 ## 1.2 时间
 时间分为
 > ① 过去
@@ -609,17 +609,40 @@
 
 
 &emsp;
-## 3.3 将来完成时
-用来表示 将来某时为止 所完成(或仍在继续) 的动作或经历：
-> ① 明天这个时候，他将已抵达芝加哥。
-> &emsp; He will have arrived in Chicago by this time tomorrow.
+## 3.3 将来完成时(The Future Perfect Tense)
+### 3.3.1 构成
+第一人称：`will/shall` + `have` + `done`
+二三人称：`will` + `have` + `done`
+
+### 3.3.2 使用场景
+**(1) 表示到将来某个时间点，某动作（状态）已完成，并且对将来这个时间点有影响（关系）**。例：
+> ① Pick me up at 8 o'clock,I will have had breakfast by then.
+> 早上8点钟你来接我，到时我已经吃完早饭了。
+> ② We shall（will） have learned 12 units by the end of this term.
+> 到这个学期末，我们将学完12个单元。
+> ③ By the time you get home， I will have cleaned the house from top to bottom.
+> 你到家之前我将把房子彻底打扫一遍。
+> ④ He will have lived here for 10 years by the end of this month.
+> 到月底，他就在此地住满10年了。
+>
+
+**表示某种状态一直持续到说话人所提及的时间**
+> We will have been married a year on June 25th. 
+> 到6月25日我们俩结婚就满1年了
 > 
-> ② 你来的时候，每一件事将已全部完成。
-> &emsp; By the time you come, everythig will have been finished.
+
+### 3.3.3 和一般完成时的对比
+对比如下：
+> **一般完成时**：到现在为止，一件已发生的事（动作或状态），而且这件已发生事和现在的情况有联系 
+> **将来完成时**：到将来某个时间点，某动作（状态）已完成，并且对将来这个时间点有影响（关系）
 > 
-> ③ 到月底，他就在此地住满10年了。
-> &emsp; He will have lived here for 10 years by the end of this month.
+
+### 3.3.3 will have don的其它作用
+`will have done` 除了可以用作将来完成时外，也可以用作表示完成动作的推测。两者的区别是：
+> 如果句子意思强调客观事实，则为将来完成时；
+> 如果句子意思强调主观判断，则为表推测用法。比较并体会下面两组句子：
 > 
+https://www.cpsenglish.com/question/8263
 
 
 
@@ -690,6 +713,8 @@ would have been doing
 > Up to that time he would have been translating those books．
 > 
 
+
+## should be done TODO
 
 
 (1) 
