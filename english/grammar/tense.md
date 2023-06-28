@@ -797,6 +797,71 @@
 | She has two sisters. 她有两个姐妹。       | She is having lunch. 她在吃午饭。                     |
 
 #### (7) 现在进行时表示将来动作
+##### 1）在口语中用现在进行时表示将来的时候，常有一个表示未来时间的状语，多指已计划安排好的事：
+> ① I'm meeting Peter tonight. He's taking me to the theatre. 
+> 今晚我要和彼得见面，他将带我去看戏。 
+> 
+> ② I'm flying to Hong Kong tomorrow. 
+> 我明天飞香港。 
+> 
+> ③ Are you doing anything tomorrow afternoon？——Yes , I'm playing tennis with Betty. 
+> 你明天下午有活 动吗？——有，我要和贝蒂打网球。 
+> 
+> ④ I'm not going out tonight. I'm staying at home. 
+> 今晚我不出去，我要待在家里。 
+> 
+> ⑤ When is Helen coming home? 
+> 海伦什么时候回家？ 
+> 
+> ⑥ They're getting married next month. 
+> 他们下月结婚。 
+> 
+> ⑦ They're spending the summer at Switzerland. 
+> 他们准备在瑞士过夏天。
+> 
+**〔注〕 在以事物作主语时多用一般现在时表示按时间安排的活动：**
+> ① The train leaves at 9:30． 火车九点半开。
+> ② The fashion show starts at 7. 时装表演七点开始。
+> ③ The programme begins at 10.  这个节目十点开始。
+> 
+**以人为主语时，多用现在进行时表示计划要做的事：**
+> Nancy isn't coming to the party．南希不来参加晚会了。
+> 
+#### 2）现在进行时也可用在时间和条件从句中表示未来情况
+> ① You can do some reading while you are waiting for the train. 
+> 你等火车时可以看看书。 
+> 
+> ② You must visit Switzerland when you are travelling in Europe. 
+> 你在欧洲旅行时一定要访问瑞士。 
+> 
+> ③ If she's still waiting, tell her to go home. 
+> 如果她还在等，可以让她回家。 
+> 
+> ④ Suppose it's still raining tomorrow, shall we go? 
+> 假定明天还在下雨，我们要去吗？
+> 
+#### 3）be going to结构
+a） 准备或打算做某事： 
+> He's going to buy a new car. 他准备买一辆新车。  
+> Is he going to lecture in English or in Chinese? 他打算用英语还是用汉语讲课？ 
+> He's going to be a dentist when he grows up. 他长大了打算当牙医。 
+> What are you going to do when you get your degree? 你拿了学位后打算干什么？ 
+> I'm going to think about it. 我要考虑考虑。 
+> 
+b） 即将发生的事或要发生的事
+> There's going to be a thunderstorm. 雷雨即将来临。 
+> It's going to be warm tomorrow. 明天天气会很暖和。 
+> My cousin is going to have a baby. 我表姐要生孩子了。 
+> Amy is going to leave soon, isn't she? 艾米不久就要走了，是吗？ 
+> I'm going to be sick. 我要病倒了。 
+> We're all going to die some day. 总有一天我们都会死的。 
+> 
+在这种结构后也可跟go， come这类词
+> Where are you going to go during the holiday? 假期你准备去哪里？ 
+> They're going to come with me. 他们准备和我一道去。
+> 
+
+
 2、现在进行时还有另外一种含义，即它们能表达即将发生的事情，相当于一般将来时。能够用来表示将来状况的动词有：arrive，come，do，get，go，leave，meet，play，return，see，spend，start，stay，wear，work 等。
 ◇We are leaving on Friday。
 我们星期五离开。
@@ -808,8 +873,7 @@
 你打算在这里呆到下个星期吗？
 
 #### (8) 现在进行时表示经常性动作
-&emsp;&emsp; 现在进行时还可以用来表示经常性的动作， 常和`always，constantly，forever`这类副词连用， 表示厌
-烦、 赞美等情绪：
+&emsp;&emsp; 现在进行时还可以用来表示经常性的动作， 常和`always，constantly，forever`这类副词连用， 表示厌烦、 赞美等情绪：
 > ① He is always losing his keys. 
 > 他老是丢钥匙。 （不以为然）
 > 
@@ -842,22 +906,225 @@
 | She does fine work at school.  | She's doing fine work at school. （赞美）     |
 | He often complains of his job. | He's always complaining of his job. （厌烦）  |
 
-
-## 4.2 过去进行时
-be (was/ were) doing
-表示过去正在进行、持续进行。发生时间在过去，参照时间也是过去，表示持续进行状态。
-> The plane <u>was flying</u> over my head <u>last midnight</u>.
-> &emsp;&emsp;&emsp;&emsp; 过去进行时 &emsp;&emsp;&emsp;&emsp; 参照时间是昨晚(过去)
+#### (9) 现在进行时的一些特殊用法 
+##### 1) 用在戏剧式的描绘中，表示过去的动作
+> I'm driving along a country road and I'm completely lost. Then I see this old fellow. He's leaning against a gate. 
+> 我开车顺着一条乡村的道路前行，我已经完全迷路了。这时我看到了这位老人，他倚靠在 篱笆门上。 
+> 
+##### 2) 表示暂时的情况
+> Her car has broken down. She's going to work by bike. 
+> 她的小汽车坏了，现在骑自行车上班。 
+> 
+> I'm not hearing very well these days. 
+> 近来我听力不太好。 
+> 
+> His house is being renovated. So he's staying with us. 
+> 他的房子在翻修，因此他暂时在我们家住。 
+> 
+> My secretary is ill. Mary's filling in for her. 
+> 我的秘书病了，玛丽暂时接替她的工作。 
+> 
+##### 3) 用在戏剧性的描述中
+> Here's this Scotsman, you see, and he's walking through the jungle when he meets a gorilla. And the gorilla's eating something. So the Scotsman goes up to the gorilla. 
+> 这里，你瞧，是一个苏格兰人。当 他在丛林中穿行时碰到一只大猩猩。大猩猩在吃东西，于是这苏格兰人向大猩猩走去。
 > 
 
-## 4.3 将来进行时
-will be doing
-表示动作将来正在进行、持续进行。发生时间在将来，参照时间则是现在，表示持续进行状态。
 
+
+&emsp;
+## 4.2 过去进行时(The Past Continuous Tens)
+### 4.2.1 基本结构
+`was/were + doing`
+
+### 4.2.2 使用场景
+#### (1) 表示过去在某一时间段或某一段时间内正在发生或进行的动作
+过去进行时表示过去正在进行、持续进行。发生时间在过去，参照时间也是过去，表示持续进行状态。
+> ① The plane <u>was flying</u> over my head <u>last midnight</u>.
+>  &emsp;&emsp;&emsp;&emsp; 过去进行时 &emsp;&emsp;&emsp;&emsp; 参照时间是昨晚(过去)
+> 
+> ② You were then working in the post office, weren't you? 
+> 那时你在邮局工作，对吧？ 
+> 
+> I was writing a letter when she called. 她来时我正在写信。 
+> 
+> I was busy yesterday. I was preparing for the exams. 昨天我很忙，我在准备考试。 
+> 
+> At that moment, I wasn't doing anything. 那会儿我什么也没干。 
+> 
+> I was thinking of you all those years. 那些年我一直惦记着你。
+> 
+过去进行时**不会**单独出现，除非上下文清楚地表明了是“过去的过去”，才可以单独使用，比如：
+> ① Jane was in town. She was doing some shopping. 简在城里，在买东西
+> ② Someone was following her. She was scared. 有人跟着她，她很害怕
+> 
+#### (2) 用在记叙的文字中
+过去进行时可以用来描绘一幅景象，作为描绘的开始： 
+> A fire was burning and a cat was sleeping in front of it. A girl was playing the piano and singing softly to herself. Then there was a knock at the door. 
+> 炉火烧着，一只猫睡在炉火前。一个女孩在弹钢琴，轻 声对自己唱着，这时有人敲门。 
+> 
+> She was sitting at the window, watching the evening invade the avenue. Suddenly she heard someone calling her from downstairs, and she recognized the voice. She stood up quickly. 
+> 她坐在窗前，看着暮色渐渐笼罩大街。突然她听到楼下有人叫她。她听出了这声音，迅速站了起来。 
+> 
+在故事中间也可用这时态来描绘一幅景象： 
+> At last we got to the top of the mountain. White snow covered everything. People were sitting in groups of three and four. Some were lying on their backs. When they saw us, they were very happy and shouted: "We thought you had lost your way!" 
+> 最后我们爬上了山顶。白雪覆盖着一切，人们三五成群地坐 着，有的人仰面躺着。他们看到我们时非常高兴，高声叫到：“我们还以为你们迷路了哩！” 在小说中我们常可看到这样的段落
+> 
+个人理解：
+> &emsp;&emsp; 上面提到过去进行时可以用来描绘一幅景象，这是因为文章的总体上下文用的是过去式，因此在描述正在进行的动作时要用 过去进行时，而不是现在进行时
+> 
+#### (3) 有时用过去进行时表示现在的想法，可以显得客气一点
+> I was wondering whether you could give me some advice. 不知你能否帮我出点主意。 
+> I was thinking maybe he could go by taxi. 我在想或许他可以坐的士去。 
+> I was hoping you could reconsider our proposal. 我希望你能再考虑一下我们的建议。
+>
+#### (4) 表示过去某时预计要发生情况
+过去进行时表示过去某时预计要发生情况（仅限于come， go， leave这类动词）： 
+> He was busy packing， for he was leaving that night. 他忙着收拾行李，因为那晚他就要走了。 
+> Mr. Brown was coming to dinner. 布朗先生要来吃晚饭。 
+> She told me she was going to Boston. 她告诉我她准备去波士顿。 
+> We were very excited as we were flying to Europe the next morning. 我们很激动，因为第二天早晨我们 就要飞往欧洲了
+> 
+#### (5) 和现在进行时类似，过去进行时也可表示满意、称赞、惊讶、厌恶等感情色彩，也通常与 `always,forever,continually`等副词连用，例如： 
+> ① He was always ringing me up. 他老是给我打电话。（厌烦） 
+> ② She was always working. 她总是不停地干活。（赞扬） 
+> ③ The old lady was forever grumbling. 这老太太老是嘀嘀咕咕。（厌烦）
+> ④ He was constantly changing his mind. 他老是改变主意。（不以为然）
+> 
+
+#### (6)动词be的过去进行时也可表示过去一时的表现或暂时的状态。
+比较：
+> He was friendly. 他很友好。（过去长期如此）
+> He was being friendly. 他当时显得很友好。（指当时一时的表现）
+> 
+
+### 4.2.3 过去进行时和一般过去时的比较
+#### (1) 过去进行时和一般过去时的基本差别是：
+> 过去进行时表示 一个正在进行的动作，
+> 一般过去时表示 一个业已完成的动作。
+> 
+试比较下面的句子：
+> ① I was writing an essay．我在写一篇论文。 （可能还没写完）
+> &emsp; I wrote an essay yesterday． 我昨天写了一篇论文。（已写完）
+>
+> ② They were building a skyscraper， 他们在建一座摩天大楼。（在修建）
+> &emsp; They built a skyscraper.他们盖了一座摩天大楼。（已盖好）
+> 
+> ③ She was kniting a sweater for Tom.她在给汤姆织一件毛衣。
+> &emsp; She knitted a sweater for Tom. 她给汤姆织了一件毛衣。
+> 
+> ④ He was doing his homework in the afternoon. 下午他在做作业。
+> &emsp; He did his homework in the afternoon.下午他把作业做完了。
+> 
+有些动词本身并不表示动作完成，如`rain， snow， cough， wear， feel， wait， stay， work`等，这 时用两种时态意思上差别不大：
+> ① 下了一整夜的雪。
+> It showed all night.
+> It was snowing all night.
+> 
+> ② 她穿着一件蓝外套。
+> She wore a blue coat
+> She was wearing a blue coat
+> 
+> ③ 他感到有点不自在。
+> He felt a bit uneasy
+> He was feeling a bit uneasy
+> 
+> ④ 我们住在旅馆里。
+> We stayed in a hotel
+> We were staying in a hotel
+> 
+
+#### (2) 句中有a moment ago之类的短语一般用一般过去时。
+
+#### (3) 句中有`at this time last Sunday`, `from 8 to 9 yesterday` 之类的状语一般用过去进行时。
+
+
+
+&emsp;
+## 4.3 将来进行时(The Future Continuous Tens)
+### 4.3.1 基本结构
+`shall/will` + `be` + `doing`
+
+### 4.3.2 基本用法
+#### (1) 表示将来某时将正在进行的动作
+显然，将来进行时 要 配合一个表示将来的时间一起使用：
+> ① Next Wednesday We'll be flying to Sydney. 下星期三我们将飞往悉尼。 
+> 
+> ② What will you be doing on Saturday? 星期六你会在干什么？ 
+> 
+> T③ his time tomorrow we'll be sitting in the cinema and watching a film. 明天这时我们会坐在电影院看电 影。 
+> 
+> ④ On Saturday morning, Bill will be working in the garden and Ann will be shopping. 星期六早上，比尔会 在花园里干活,安会去买东西。
+> 
+
+#### (2) 表示未来安排要做的事或预计会发生的事
+> ① He'll be taking his exam next week. 他下星期考试。 
+> ② He won't be coming to the party. 他不会来参加聚会。 
+> ③ I'll be seeing you tomorrow. 我明天会见到你的。 
+> ④ We'll be getting in touch with you. 我们将和你联系。
+> 
+
+#### (3) 将来进行时在口语中用得比较多，有时可以和现在进行时换用
+> ① 明晚我会和她见面。
+> I am meeting her lomorrow ovening，
+> I'll be meeting her lomorrow ovening，
+> 
+> ② 他们什么时候动身？
+> When are they leaving？
+> When will they be leaving？
+> 
+
+#### (4) 表示预定的将来动作或对将来的预测。　　
+> After you take the medicine， you will be feeling much better.服药之后，你会感觉好得多。　　
+> You will be making a mistake. 你会出错的。
+> 
+#### (5) 表示委婉的请求。　　
+> When shall we be meeting again?我们什么时候再见面？
+> 
+#### (6) 表示原因。　　
+> Please come tomorrow afternoon，I'll be having a meeting tomorrow morning.请你明天下午来吧，明天上午我有一个会议。
+> 
+#### (7) 表示结果。　　
+> Stop the child or he will be falling over.制止那孩子，要不他会掉下去。
+> 
+#### (8) 表示对将来的打算（区别于对将来的预测）。　　
+> My duties will be ending in July ， and I'll be returning to Shanghai.我的工作将在七月结束，我会回上海。
+> 
+
+
+
+&emsp;
 ## 4.4 过去将来进行时
-would be doing
+### 4.4.1 基本结构
+`should(would)` + `be` + `doing`
 
+### 4.4.2 基本用法
+#### (1) 过去将来进行时表示 从过去观点看 将来某时 会正在进行 的动作
+> ① I thought Richard would be looking after her. 我想里查德会照顾她的。 
+> ② She didn't know when she would be seeing them again. 她不知道她什么时候会再见到他们。 
+> ③ I asked him what he would be doing that night. 我问他那天晚上他将会干什么。 
+> ④ He said he would be watching TV that night. 他说那天晚上他将看电视
+> 
 
+#### (2) 过去将来完成时表示从过去观点看将来某时前会已发生的事
+> ① I thought you'd have left by this time. 我想到这时你会已经走了。 
+> ② She hoped that they would have got everything ready before she got back. 她希望在她回来以前他们已把 一切都准备好。 
+> ③ He told them he would have finished by 8 o'clock. 他告诉他们他八点前就会干完。 
+> ④ I guessed that Helen would have told her something. 我猜海伦会已告诉她一些情况。 
+> 
+
+#### (3) 这个时态和将来进行时是相似的，只不过是把观点移到过去而已
+过去将来完成进行时用得很少，但用法和将来完成进行时是一致的，只是把观点移向过去而已： 
+> She said she would have been teaching for twenty years by this summer. 
+> （比较：She will have been teaching for twenty years by this summer.）她说到今年暑期她教书就已满二十年了。 
+> 
+> They told me that by the end of the year they would have been working together for thirty years. 他们告诉 我到今年年底他们在一起工作就满三十年了。
+> 
+| 将来进行时                                                | 过去将来进行时                                              |
+| --------------------------------------------------------- | ----------------------------------------------------------- |
+| I'll be waiting for you outside.                          | He said he'd be waiting for me outside.                     |
+| Tomorrow we'll be flying to Paris.                        | We'd be flying to Paris the next day.                       |
+| Soon we'll be crossing the border.                        | Soon we'd be crossing the Border.                           |
+| Who will be looking after the children while we are away? | Who would be looking after the children while we were away? |
 
 
 
@@ -865,22 +1132,41 @@ would be doing
 &emsp; 
 # 5 完成进行时<div align="center"> <img src="./pic/完成进行时.jpg"> </div>
 
-## 4.1 现在完成进行时
+## 5.1 现在完成进行时
+### 5.1.1 基本结构
 have been doing
+
+### 5.1.2 基本用法
 &emsp;&emsp; 表示过去开始的某动作已经完成相当一部分，持续到现在正在进行，并且对现在有影响。发生时间在过去持续到现在，参照时间是现在，表示部分完成并持续的状态。
 > I have been working for 30 days without a rest.
 > 
-## 4.2 过去完成进行时
+## 5.2 过去完成进行时
 had been doing
 &emsp;&emsp; 表示过去的过去开始的某动作已经完成相当一部分，持续到过去某个时间点仍然正在进行，并且对过去这个时间点有影响。发生时间在过去的过去持续到过去，参照时间是过去，表示部分完成并持续的状态。
 > She had been carrying out her plot to be the queen three months earlier.
 > 
 
-## 4.3 将来完成进行时
+## 5.3 将来完成进行时
 will have been doing
 &emsp;&emsp; 表示到将来某个时间点，某动作已经完成了相当一部分，持续到将来这个时间点仍然正在进行，并且对将来这个时间点有影响。发生时间在将来，首先参照现在表示将来某时间1发生的动作，其次参照将来某时间2表示部分完成并持续（2晚于1）。
 > The play is coming off in August. By then the play will have been running for three months.
 > 
+
+### 5.3.3 将来完成时 和 将来完成进行时
+(1) 将来完成时 表示将来某时某动作业已完成或某事情业已发生： 
+> ① By the end of the year I'll have saved £1,000. 到年底时我就存了1,000英镑了。 
+> ② Tom will have had his exam by 18 December. 汤姆12月18号就已经考完试了。 
+> ③ By this summer we'll have been here for five years. 到今年夏天我们在这里就满五年了。 
+> ④ The train will have left when we get to the station. 我们到车站时火车会已经开了。 
+> 
+(2) 将来完成进行时 表示在将来某时某个动作已进行多久了： 
+> ① By the end of the year she'll have been acting for twenty years. 到今年年底她演戏将满二十年。 
+> ② By this summer he'll have been training horses for ten years. 到今年夏天他干训马工作就满十年了。 
+> ③ In another month's time I'll have been studying here for three years. 再过一个月我在这里学习就满三年 了。 
+> ④ On November 1 we'll have been living in this flat for thirty years. 到十一月一号我们在这套房子里就住 满三十年了。
+> 
+
+
 
 ## 4.4 过去将来完成进行时
 would have been doing
