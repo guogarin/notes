@@ -1033,9 +1033,9 @@ b） 即将发生的事或要发生的事
 > We were staying in a hotel
 > 
 
-#### (2) 句中有a moment ago之类的短语一般用一般过去时。
+#### (2) 句中有`a moment ago`之类的短语一般用一般过去时
 
-#### (3) 句中有`at this time last Sunday`, `from 8 to 9 yesterday` 之类的状语一般用过去进行时。
+#### (3) 句中有`at this time last Sunday`, `from 8 to 9 yesterday` 之类的状语一般用过去进行时
 
 
 
@@ -1132,22 +1132,159 @@ b） 即将发生的事或要发生的事
 &emsp; 
 # 5 完成进行时<div align="center"> <img src="./pic/完成进行时.jpg"> </div>
 
-## 5.1 现在完成进行时
+## 5.1 现在完成进行时(Present Perfect progressive)
 ### 5.1.1 基本结构
-have been doing
+`have been doing`
 
 ### 5.1.2 基本用法
-&emsp;&emsp; 表示过去开始的某动作已经完成相当一部分，持续到现在正在进行，并且对现在有影响。发生时间在过去持续到现在，参照时间是现在，表示部分完成并持续的状态。
-> I have been working for 30 days without a rest.
+#### (1)  表示从过去某时开始一直持续到现在的动作，并且还将持续下去。
+&emsp;&emsp; 现在完成进行时 表示过去开始的某动作已经完成相当一部分，持续到现在正在进行，并且对现在有影响。发生时间在过去，动作（状态）一直持续到现在，参照时间是现在，表示部分完成并持续的状态：
+> ① I've been waiting (for) an hour and he still hasn't turned up. 
+> 我等了一个钟头， 他还没来。(人还没到，如同在电话里说的，还会继续等)
 > 
-## 5.2 过去完成进行时
-had been doing
-&emsp;&emsp; 表示过去的过去开始的某动作已经完成相当一部分，持续到过去某个时间点仍然正在进行，并且对过去这个时间点有影响。发生时间在过去的过去持续到过去，参照时间是过去，表示部分完成并持续的状态。
-> She had been carrying out her plot to be the queen three months earlier.
+> ② What have you been doing all these years? 
+> 这些年来你一直在干什么？（干的事情从过去持续到现在，而且将做下去）
+> 
+> ③ I'm very tired. I've been working all morning. 
+> 我很累， 我干了一上午了。（后面还得接着干）
+> 
+> ④ I've been looking for my dog and still haven't found it. 
+> 我一直在找我的狗， 还没有找到。
+> 
+> ⑤ Your fingers are brown. You've been smoking too much. 
+> 你手指都黄了， 你抽烟太多。
+> 
+> ⑥ Tom has been digging in the garden. I've been helping him. 
+> 汤姆一直在花园里挖土， 我在帮他。
 > 
 
-## 5.3 将来完成进行时
-will have been doing
+#### (2) 表示现在以前一直在进行的动作强调动作的未完成性
+> ① It has been raining for 3 days。已经下了3天的雨了（现在还没停止）
+> 
+
+#### (3) 这个时态常和`how long`，`long`这类状语一起用：
+> ① How long have you been wearing glasses? 你戴眼镜有多少年头了？
+> ② How long has he been doing this work? 这工作他干多久了？
+> ③ Have you been waiting long? 你等了很久吗？
+> ④ This has been going on all day long. 这已进行了一整天了。
+> ⑤ She's been expecting a long distance call all night long. 她等长途电话等了一夜了。
+> 
+还可以和`since`及`for`引导的状语一起用：
+> ①  We've been living in this city since 1980. 从1980年起我们一直住在这座城市。
+> ②  They have been quarrelling ever since they got married. 自结婚以来他们一直争吵不休。
+> ③  It has been raining for two hours now. 雨已经下了两个小时了。
+> ④  Her phone has been ringing for ten minutes. Why doesn't she answer it? 她的电话铃响了十分钟了， 她为什么不接呢？
+> 
+
+#### (4) 在不少情况下这动作和现在状态有联系
+> ① I've been shopping all day and I haven't a penny left. 我买了一天的东西， 身上一文钱都不剩了。
+> ② Her eyes are red. Has she been crying? 她眼睛红红的， 是不是哭来着？
+> ③ He is out of breath. He's been running. 他气喘吁吁， 他一直在跑。
+> ④ Aren't you tired? You've been standing for two hours. 你不累吗？ 你站了两个钟头了。
+>   
+
+#### (4) 有时表示动作的重复
+> ① He hasn't been eating regularly recently. 近来他吃饭不规律。
+> ② He has been coughing a lot lately. He ought to give up smoking. 最近他一直咳嗽， 他应当戒烟。
+> ③ I've been using this typewriter for 6 years. 这台打字机我已用了六年。
+> ④ You've often been making mistakes like this. 你老犯这样的错误。
+> 
+
+##### (5) 表示状态的动词不能用于现在完成进行时，而应该用现在完成时
+`love，like，hate，think`等静态动词都只能用于完成时而不能用于完成进行时。
+~~I have been knowing~~ 是错的，而应该是：
+> I have known him for years.我认识他已经好几年了。
+> 
+其它例子：
+> I've known that for a long time. 这事我已知道很久了。
+> The strike has lasted six months. 这次罢工已持续了六个月。
+> Nobody has seen him since last week. 从上周起就没人见到过他。
+> We've had terrible weather for nearly two weeks. 几乎有两星期天气都很恶劣。
+> They've owned the house for many years. 这房子他们已拥有许多年了。
+> I've always thought you're right. 我一向认为你是对的。
+> 
+但也有特例，当动词的意思发生转变时也可能用于完成进行时：
+> I've been thinking of doing so for a long time. 我好久以来一直想这样做。
+> Tom has been seeing about a work permit for you. 汤姆一直在设法帮你取得工作许可证。
+> Which judge has been hearing the case? 哪位法官在审这个案子？
+> She has been having a tooth out. 她在拔牙。
+> The children have been looking forward to this holiday for months. 孩子们好几个月来一直盼望着这个节日。
+> 
+另外，`want`这个动词有时可用于完成进行时，表示“一直想”
+> You're the very man I've been wanting to meet. 你正是我一直想见的人。
+> 
+这类不能用于现在完成进行时的动词还有：love爱，like喜欢，hate讨厌，think想等等
+
+### 5.1.3 现在完成时和现在完成进行时的比较
+#### (1) 这两个时态的主要差别
+|              |                                                        |
+| ------------ | ------------------------------------------------------ |
+| 现在完成时   | 动作业已完成                                           |
+| 现在完成进行 | 动作业不一定已完成，可能刚刚完成，也可能仍然要继续下去 |
+
+> ① I've made a cake.我做了一个蛋糕。(已做好
+> &emsp; I've been making a cake. 我一直在做蛋糕。(不一定做好了)
+> 
+> ② She has painted a picture. 她画了一张画。(已画好)
+> &emsp; She’s been painting a picture. 她在画一张画。(可能还没画好)
+> 
+> ③ They’ve built a bridge. 他们建了一座桥。(已建好)
+> &emsp; They’ve been building a bridge. 他们一直在建一座桥。(可能还在建)
+> 
+> ④ He’s writtenanovel.他写了一部小说。(已完成)
+> &emsp; He’s been writing anovel. 他在写一部小说。(可能尚未完成)
+> 
+
+
+
+&emsp;
+## 5.2 过去完成进行时(The Past Perfect Progressiv)
+### 5.1.1 基本结构
+`had been doing`
+
+### 5.1.2 基本用法
+&emsp;&emsp; 表示过去的过去开始的某动作已经完成相当一部分，持续到过去某个时间点仍然正在进行，并且对过去这个时间点有影响。发生时间在过去的过去持续到过去，参照时间是过去，表示部分完成并持续的状态。
+> ① He was tired. He had been working since dawn. 他很累， 天亮起就一直在工作。
+> ② It had been snowing all night. The ground was covered with thick snow. 下了一夜的雪， 地上覆盖着厚厚一层白雪。
+> ③ They were just back. They had been skiing in the mountains. 他们刚回来， 他们一直在山里滑雪。
+> ④ The war had been going on for two years until they agreed on a cease-fire.战争进行了两年直到他们达成了一项停火协议。
+> ⑤ She had been trying to find a job. She still hadn't found one. 她一直在设法找工作， 但仍没找到。
+> ⑥ He asked how long I had been waiting. 他问我等多久了。
+> 
+过去完成进行时 和 现在完成进行时 的用法是一致的， 只不过是把时间从现在移到了过去：
+| 现在完成进行时                        | 过去完成进行时                        |
+| ------------------------------------- | ------------------------------------- |
+| I've often been thinking of you.      | I had often been thinking of you.     |
+| He's been worrying about her safety.  | He'd been worrying about her safety.  |
+| Obviously she's been crying.          | Obviously she'd been crying.          |
+| All these years he's been travelling. | All these years he'd been travelling. |
+过去完成进行时常可用在某些从句中：
+> I didn't know you had been waiting for me. 我不知道你一直在等我。
+> He couldn't guess where she had been hiding. 他猜不出她躲在哪里。
+> Nancy told me she'd been looking for me. 南希告诉我她一直在找我。
+> That was what I had been trying to do. 那正是我一直想要做的事。
+> That was the letter she had been expecting. 这正是她一直盼着的信。
+> 
+
+### 5.1.3 过去完成时和过去完成进行时的差别
+`过去完成时与过去完成进行时的差别` 和 `现在完成时与现在完成进行时` 的差别类似：
+> 过去完成时表示动作业已完成， 过去完成进行时表示动作一直在继续（可能还在进行） 
+> 
+| 过去完成时（动作业已完成）      | 过去完成进行时（动作可能还在进行）    |
+| ------------------------------- | ------------------------------------- |
+| He had painted the street door. | He had been painting the street door. |
+| She had cleaned the kitchen.    | She had been cleaning the kitchen.    |
+| They had repaired the engine.   | They had been repairing the engine.   |
+| We had redecorated the room.    | We had been redecorating the room.    |
+
+
+
+&emsp;
+## 5.3 将来完成进行时(The Future Perfect Continuous tense)
+### 5.1.1 基本结构
+`will/shall have been doing`
+
+### 5.1.2 基本用法
 &emsp;&emsp; 表示到将来某个时间点，某动作已经完成了相当一部分，持续到将来这个时间点仍然正在进行，并且对将来这个时间点有影响。发生时间在将来，首先参照现在表示将来某时间1发生的动作，其次参照将来某时间2表示部分完成并持续（2晚于1）。
 > The play is coming off in August. By then the play will have been running for three months.
 > 
@@ -1168,7 +1305,8 @@ will have been doing
 
 
 
-## 4.4 过去将来完成进行时
+&emsp;
+## 5.4 过去将来完成进行时
 would have been doing
 &emsp;&emsp; 表示到过去将来某个时间点，某动作已经完成了相当一部分，持续到过去将来这个时间点仍然正在进行，并且对过去将来这个时间点有影响。发生时间在过去的将来，首先参照过去表示过去的将来某时间1发生的动作，其次参照过去的将来某时间2表示部分完成并持续（2晚于1）。
 > Up to that time he would have been translating those books．
