@@ -1222,7 +1222,7 @@ b） 即将发生的事或要发生的事
 | 现在完成时   | 动作业已完成                                           |
 | 现在完成进行 | 动作业不一定已完成，可能刚刚完成，也可能仍然要继续下去 |
 
-> ① I've made a cake.我做了一个蛋糕。(已做好
+> ① I've made a cake.我做了一个蛋糕。(已做好)
 > &emsp; I've been making a cake. 我一直在做蛋糕。(不一定做好了)
 > 
 > ② She has painted a picture. 她画了一张画。(已画好)
@@ -1239,10 +1239,10 @@ b） 即将发生的事或要发生的事
 
 &emsp;
 ## 5.2 过去完成进行时(The Past Perfect Progressiv)
-### 5.1.1 基本结构
+### 5.2.1 基本结构
 `had been doing`
 
-### 5.1.2 基本用法
+### 5.2.2 基本用法
 &emsp;&emsp; 表示过去的过去开始的某动作已经完成相当一部分，持续到过去某个时间点仍然正在进行，并且对过去这个时间点有影响。发生时间在过去的过去持续到过去，参照时间是过去，表示部分完成并持续的状态。
 > ① He was tired. He had been working since dawn. 他很累， 天亮起就一直在工作。
 > ② It had been snowing all night. The ground was covered with thick snow. 下了一夜的雪， 地上覆盖着厚厚一层白雪。
@@ -1266,7 +1266,7 @@ b） 即将发生的事或要发生的事
 > That was the letter she had been expecting. 这正是她一直盼着的信。
 > 
 
-### 5.1.3 过去完成时和过去完成进行时的差别
+### 5.2.3 过去完成时和过去完成进行时的差别
 `过去完成时与过去完成进行时的差别` 和 `现在完成时与现在完成进行时` 的差别类似：
 > 过去完成时表示动作业已完成， 过去完成进行时表示动作一直在继续（可能还在进行） 
 > 
@@ -1281,12 +1281,15 @@ b） 即将发生的事或要发生的事
 
 &emsp;
 ## 5.3 将来完成进行时(The Future Perfect Continuous tense)
-### 5.1.1 基本结构
+### 5.3.1 基本结构
 `will/shall have been doing`
 
-### 5.1.2 基本用法
+### 5.3.2 基本用法
 &emsp;&emsp; 表示到将来某个时间点，某动作已经完成了相当一部分，持续到将来这个时间点仍然正在进行，并且对将来这个时间点有影响。发生时间在将来，首先参照现在表示将来某时间1发生的动作，其次参照将来某时间2表示部分完成并持续（2晚于1）。
-> The play is coming off in August. By then the play will have been running for three months.
+> By the end of the year she'll have been acting for twenty years. 到今年年底她演戏将满二十年。 
+> By this summer he'll have been training horses for ten years. 到今年夏天他干训马工作就满十年了。 
+> In another month's time I'll have been studying here for three years. 再过一个月我在这里学习就满三年 了。 
+> On November 1 we'll have been living in this flat for thirty years. 到十一月一号我们在这套房子里就住 满三十年了。
 > 
 
 ### 5.3.3 将来完成时 和 将来完成进行时
@@ -1306,8 +1309,11 @@ b） 即将发生的事或要发生的事
 
 
 &emsp;
-## 5.4 过去将来完成进行时
-would have been doing
+## 5.4 过去将来完成进行时(past future perfect continuous tense)
+### 5.4.1 基本结构
+`should/would  have been doing`
+
+### 5.4.2 
 &emsp;&emsp; 表示到过去将来某个时间点，某动作已经完成了相当一部分，持续到过去将来这个时间点仍然正在进行，并且对过去将来这个时间点有影响。发生时间在过去的将来，首先参照过去表示过去的将来某时间1发生的动作，其次参照过去的将来某时间2表示部分完成并持续（2晚于1）。
 > Up to that time he would have been translating those books．
 > 
