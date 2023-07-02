@@ -76,6 +76,79 @@
 
 &emsp;
 &emsp; 
-# 3. 虚拟语气（The Subjunctive Mood）
+# 3. 虚拟语气(The Subjunctive Mood)
 ## 3.1 虚拟语气的作用是？
-在表示一种纯然假想的情况或主观愿望时，动词需用一种特殊形式，称为虚拟语气。
+&emsp;&emsp; 虚拟语气是一种表示假设状态的句型，由`if`引导的状语从句和主句构成。
+
+## 3.2 虚拟语气的分类
+根据时态的不同，可分为如下四种基本句型：
+> ① 纯条件的虚拟语气
+> ② 与现在事实相反的虚拟语气
+> ③ 与过去事实相反的虚拟语气
+> ④ 与将来状况相反的虚拟语气
+> 
+例句如下：
+① 纯条件的虚拟语气 -- 用现在时
+> If he is here, I will beat him.
+> 如果他在这，我会揍他。 --- 但他现在不在这。
+> 
+
+② 与现在事实相反的虚拟语气 -- 用过去时
+> If he were here, I would beat him.(But is not here)
+> 如果他现在在这，我会揍他。 --- 但他现在不在这。
+
+③ 与过去事实相反的虚拟语气 -- 用过去完成时
+> If he had been here, I would have beaten him.
+> 如果他当时在这，我会揍他。 --- 但他当时不在这。
+> 
+
+④ 与将来状况相反的虚拟语气 -- if从句要用助动词should(翻译成”万一”)，主句则用过去时或现在时助动词
+> If he should be here, I would(或will) beat him.
+> 万一他在这，我会揍他。
+
+## 3.3 条件句
+&emsp;&emsp; 包含条件从句的句子都是条件句，有些条件句是可能实现的， 有些是不能实现的。因此按照条件是否可实现，可将条件句分为如下两种：
+> ① 真实条件句(Sentences of Real Condition)
+> ② 虚拟条件句(Sentences of Unreal Condition)
+> 
+对于以下条件从句，这些句子的条件都是可以实现的：
+> ① If I have time I'll come over to see you. 如果我有时间我就来看你。
+> ② If we leave now, we can still catch the train. 如果我们现在动身， 还可能赶上火车。
+> ③ I won't go to the party unless they invite me. 除非他们邀请我， 否则我不会参加这个晚会。
+> ④ If you are waiting for a bus you'd better join the queue. 如果你是在等车， 你最好排队。
+> ⑤ If he has written the letter, I'll post it. 如果他已把信写好， 我就去发。
+> 
+
+而另有一些条件句表示**纯然假想的非真实**情况， 称为**虚拟条件句（Sentences of Unreal Condition）** ， 在这类条件句中谓语动词就需要用**虚拟语气**：
+> ① If I had enough money, I would buy a computer. 
+> 如果我有足够的钱， 我将买一台电脑。 （但我没有足够的钱）
+> 
+> ② If you had arrived a little earlier, you would have seen her. 
+> 你要是早来一会儿就见到她了。(但你来晚了，她已经走了)
+> 
+
+## 3.4 虚拟语气的使用
+### 3.41 虚拟语气表示 与现在事实相反的虚拟
+条件从句与**现在**事实不一致，其句型为：
+> `If` ＋ 主语 ＋ 过去时，主语 ＋ `should(could, would, might)` ＋ 动词原形
+> 
+
+
+
+
+### 3.4.2 虚拟语气表示 与过去事实相反的虚拟
+条件从句与**过去**事实不一致，其句型为：
+> `If` ＋主语 ＋ `had`＋过去分词，主语＋ `should(could, would, 或might)`＋ `have` ＋ 过去分词
+> 
+
+### 3.4.3 虚拟语气表示 与将来事实相反的虚拟
+条件从句与将来事实不一致，其句型为：
+> `If` ＋主语 ＋ 过去时/`should` ＋ 动词原形/`were to` ＋ 动词原形，主语 ＋ `should(could, would, 或might)` ＋ 动词原形
+> 
+
+### 3.4.4 虚拟语气表示 
+
+
+
+
+### 3.4.5 虚拟语气表示 
