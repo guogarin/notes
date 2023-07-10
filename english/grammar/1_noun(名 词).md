@@ -376,4 +376,312 @@ TODO:
 
 &emsp;
 &emsp; 
-# 5. 名词的格（一） ： 's所有格
+# 5. 名词的格（一）：`'s`所有格
+## 5.1 's所有格的构成
+**(1) 单数名词**
+单数名词的所有格， 在词尾加“'s”。 比如：
+> my sister's boyfriend 我姐姐的男朋友
+>
+**(2) 复数名词**
+对于复数名词的所有格的构成， 要分下面两种情况：
+① 不以`-s`或`-es`结尾的特殊变化的复数名词， 在词尾加`'s`。 比如：
+> the Children's Day 儿童节
+> the children's books 儿童读物
+> women's wear 女装
+> 
+② 以`-s`结尾的复数名词， 在词尾加`'`构成所有格。 比如：
+> her friends' money 她朋友的钱
+> The stars' concert was a sell-out. 这些明星们的音乐会门票已售完。
+>
+**(3) 复合名词**
+复合名词的所有格， 在最后一个词的词尾加“'s”构成。 比如：
+> my father-in-law's company 我岳父的公司
+> everyone else's viewpoints 其他人的看法
+> 
+**(4) 并列名词**
+&emsp;&emsp; 对于由`and`连接的并列名词， 当表示“共有”的情况下， 只需在最后一个名词的词尾加`'s`；若表示“各自所有”， 则须在每个名词的词尾加`'s`。 比如：
+> John and his wife's bank savings 约翰和他妻子的共有存款
+> John's and his wife's bank savings 约翰和他妻子各自的存款
+> 
+> Clint and John's bedroom 克林特和约翰共有的房间
+> Clint's and John's bedrooms 克林特和约翰各自的房间
+>
+
+
+&emsp; 
+## 5.2 `'s`所有格的逻辑语义关系
+### 5.2.1 所属关系
+&emsp;&emsp; 所谓“所属关系”，就是指某人所拥有的人或物。
+
+### 5.2.2 主谓关系
+&emsp;&emsp; 我们先来看例子。比如2007年12月27日，巴基斯坦前总理贝·布托（former Pakistani prime minister Benazir Bhutto）遇刺身亡， 当时有媒体讨论“布托之死将会如何影响世界”：
+> How will Bhutto's death affect the world?
+> 布托之死将会如何影响世界？
+> 
+名词短语`Bhutto's death`相当于说`Bhutto died`，表示“布托死了”，即相当于一个主谓关系。
+由上面这个例子可知，所谓 **“主谓关系”**，是指所有格名词（ 如`Bhutto`）相当于主语，而被修饰的名词
+（ 如`death`）相当于一个谓语。此时，这个被修饰的名词通常都是由一个动词转化过来的，比如death对应的动词`die`。
+再比如其他例子：
+> the visitor's departure
+> ＝ the visitor departed
+> 客人的离开
+> 
+> the teacher's request（ 此处的request是名词）
+> = the teacher request...（ 此处的request是动词）
+> 老师的请求
+> 
+> Britain's decision
+> = Britain decided...
+> 英国的决定
+> 
+
+### 5.2.3 动宾关系
+&emsp;&emsp; 我们先来看例子。还是关于贝·布托被暗杀的例子：
+> Bhutto's assassination rocks Pakistan.
+> 布托的刺杀事件震动了整个巴基斯坦。
+> 
+这里的名词短语`Bhutto's assassination`相当于说`assassinate Bhutto`，表示“刺杀布托”，即相当于一个动宾关系。显然，这里的`Bhutto's assassination`不是上面所说的主谓关系， 即不是表示“布托刺杀别人”。
+&emsp;&emsp; 由上面的例子可知， 所谓 **“动宾关系”**， 是指被修饰的名词（如assassination） 相当于一个谓语，且是及物动词（ 如assassinate）。而所有格名词（如Bhutto）相当于这个及物动词的宾语。此时，这个被修饰的名词通常都是由一个动词转化过来的，比如assassination是由动词assassinate转化而来。
+再比如其他例子：
+> the children's education
+> ＝ (somebody) educated the children
+> 孩子们的教育
+> 
+> the boy's punishment
+> ＝ (somebody) punished the boy
+> 这个男孩受到的惩罚
+> 
+
+### 5.2.4 同位关系
+&emsp;&emsp; 我们先来看例子。还是关于贝·布托被暗杀的例子。贝布托被暗杀后，有媒体称：
+> For Washington, Bhutto's loss is incalculable.
+> 对于华盛顿（即指美国） 来说，失去了布托这一损失无法估量。
+> 
+这里的名词短语`Bhutto's loss`相当于说`the loss of Bhutto`，表示“失去了布托这一损失”或“损失了布托”。 这里`loss`是中心词，表示“损失”， 而`Bhutto's`是用来详述具体损失了什么东西，补充说明`loss`， 即相当于一个同位语。 显然， 这里的`Bhutto's loss`既不是上面所说的主谓关系来表示“布托失去了（什么东西） ”，也不是动宾关系来表示“某人弄丢了布托”。
+
+### 5.2.5 表示时间或距离
+&emsp;&emsp; 所有格`'s`用在表示**时间**的名词后面。比如：
+> today's newspaper 今天的报纸
+> 
+> tomorrow's weather 明天的天气
+> 
+> tonight's TV 今晚的电视节目
+> 
+> last night's storm 昨夜的暴风雨
+> 
+> a hard day's work 一整天的辛勤劳动
+> 
+> a week's holiday 一周的假期
+> 
+> a month's salary 一个月的薪水
+> 
+> three hours' delay 三小时的耽搁
+> 
+> I am very tired after a hard day's work. 苦工作了一天之后， 我感到非常疲惫。
+> 
+> My birthday is in two weeks' time. 我的生日是在两周之后。
+> 
+> Let's have ten minutes' break. 我们休息10分钟吧。
+> 
+> My college is fifteen minutes' ride from my home. 我的大学离我家开车15分钟。
+> 
+> Each morning, people swarm into the offices and factories of America, seeking a day's work for a day'spay. 
+> 每天早晨， 人们涌进美国的办公室和工厂， 来寻找日薪工作。
+> 
+
+### 5.2.6 表示重量或价值等度量
+&emsp;&emsp; 所有格`'s`用在表示度量的名词后面。比如：
+> two pounds' weight 两磅重
+> a ton's weight 一吨重
+> a ton's steel 一吨钢材
+> two dollars' worth of sugar 两块钱的白糖
+> ten dollars' worth of meat 10块钱的肉
+> 
+
+### 5.2.7 表示国家、 城市、 国际组织或地理名词等
+> China's population 中国的人口
+> China's industrial development 中国的工业发展
+> China's exports and imports in January 中国1月份的进出口额
+> America's West Coast 美国的西海岸
+> Jinmao Tower, Shanghai's tallest building 金茂大厦， 上海的第一高楼
+> the city's weather 这个城市的天气
+> the European Union's exports 欧盟的出口额
+> the world's three most famous tenors 世界最著名的三大男高音
+> the world's seven wonders 世界七大奇迹
+> the earth's surface 地球的表面
+> the sea's depth 海洋的深度
+> the moon's shadow 月球的阴影
+> the sun's ray 太阳的光线
+> 
+
+### 5.2.8 用于交通工具及其部件的所属关系
+> the car's exhaust 汽车的排气管
+> the plane's engine 飞机的发动机
+> the yacht's mast 游艇的桅杆
+> the ship's boiler 轮船上的锅炉
+>
+
+
+&emsp;
+## 5.3 名词所有格 修饰的名词 被省去
+在下列三种情况下， 名词所有格所修饰的名词通常被省去。
+### 5.3.1 避免名词重复
+&emsp;&emsp; 具体来说，若名词所有格所修饰的名词已经出现过，则在第二次出现的所有格后面的名词可以省去，以避免重复。 请看例句：
+> This bike is mine, not Michael's (＝Michael's bike). 
+> 这辆自行车是我的， 不是迈克尔的。
+> 
+> This is my room and that is my sister's (＝my sister's room). 
+> 这是我的房间， 那是我姐姐的房间。
+> 
+> I don't know her name, but I can tell you her husband's (＝her husband's name). 
+> 我不知道她的名字， 但是我可以告诉你她丈夫的名字。
+> 
+
+### 5.3.2 表示店铺或教堂
+&emsp;&emsp; 具体来说， 在一些表示店铺或教堂的名词的所有格后面可省去名词， 此时所有格表示相应的场所， 且一般要在所有格名词前加定冠词`the`。 例如：
+> at the baker's (＝baker's shop) 在面包店
+> 
+> at the butcher's (＝butcher's shop) 在肉铺
+> 
+> at the chemist's (＝chemist's store) 在药店
+> 
+> at the florist's (＝florist's shop) 在花店
+> 
+> at the dentist's (＝dentist's clinic) 在牙医诊所
+> 
+> at the doctor's (＝doctor's clinic) 在医生的诊所
+> 
+> I'm going to the dentist's tomorrow afternoon (＝dentist's clinic). 
+> 明天下午我要去看牙医。
+> 
+> I want to pay a visit to the St. Paul's (＝St. Paul's Cathedral). 
+> 我想去拜访一下圣保罗大教堂。
+> 
+
+### 5.3.3 表示某人的住宅
+&emsp;&emsp; 具体来说， 在人名后的所有格省去名词时， 表示某人的住宅。 比如：
+> go to my sister's (＝my sister's home) 
+> 去我姐姐家
+> 
+> I called at my uncle's yesterday (＝my uncle's home). 
+> 我昨天拜访了我叔叔家。
+> 
+
+
+
+
+
+&emsp;
+&emsp; 
+# 6. 名词的格（二）：`of`属格
+## 6.1 `of`属格的构成
+&emsp;&emsp; `of`其基本构成是：`noum1 ＋ of ＋ noum2`。这里`noum1`表示第一个名词，`noum2`表示第二个名词。
+
+## 6.2 `of`属格的使用场景
+一般来说，`of`属格主要用于以下两种情形：
+**(1) 表示无生命物体的名词的所有关系。** 比如：
+> the roof of the church    教堂的屋顶
+> the name of the song      歌曲的名字
+> the title of the book     书名
+> the leg of the table      桌子腿
+>
+
+**(2) 当有生命的名词后面接短语或从句修饰时， 也用`of`属格。** 比如：
+> What is the name of the boy sitting next to her?
+> 坐在她身边的那个男孩叫什么名字？
+> 
+这里的`boy`被分词短语`sitting next to her`所修饰，此时要表示“这个男孩的名字”就不能用`'s`所有格， 说成`What is the boy sitting next to her's name?`而是要借助`of`属格来表达。如果没有这个分词短语修饰`boy`， 我们则可以直接用's所有格这么说：
+> What is the boy's name?”
+> 
+再比如：
+> The mother of the boy in a red suit is president of our company.
+> 穿红色西服的那个男孩的妈妈是我们公司的总经理。
+> 
+这里同样不能用`'s`所有格说成`The boy in a red suit's mother is president of our company.` 如果没有介词短语`in a red suit`修饰`boy`， 则可以直接说`the boy's mother`。
+> I took the advice of an old man I met during a journey and decided to make something of myself.
+> 我听从了在一次旅行中遇到的一位老人的建议， 决定干出一番事业。
+> 
+这里同样不能用`'s`所有格说成`…an old man I met during a journey's advice...`如果没有定语从句`I met during a journey`修饰`man`， 则可以直接说`an old man's advice`。
+
+
+&emsp;
+## 6.3 `of`属格的逻辑语义关系
+`of`属格主要有三种语义关系： 
+> 主谓关系
+> 动宾关系
+> 同位关系
+> 
+### 6.3.1 主谓关系
+&emsp;&emsp; 对于主谓关系，应该**从右往左翻译**
+&emsp;&emsp; 基本结构是`noum1 ＋ of ＋ noum2`， 这里`noum1`是由不及物动词变化过来的名词， 表示某个行为， 这一行为是由`noum2`来发出的。 或者说， `noum2`是`noum1`行为的执行者。 比如：
+> the arrival of my mother 我妈妈到了
+> 
+这里第一个名词`arrival`是由不及物动词`arrive`变化过来的， 它表示一个行为； 而第二个名词`my mother`则是这个行为的执行者， 即相当于说`my mother arrived`。
+其他的例子如：
+> the emergence of a strong center party 一个强大的中间党派的出现
+> the rise of the U.S. Superpower 超级大国美国的兴起
+> 
+我们看到， 在以上这些例子中，第一个名词（如`emergence`和`rise`） 都是由不及物动词变化过来的， 此时只能是表示主谓关系，翻译时从右往左理解。 再比如：
+> the arrival of the train 火车到达
+> the growth of agriculture 农业增长
+> 
+### 6.3.2 动宾关系
+&emsp;&emsp; 对于动宾关系，**从左往右翻译**
+&emsp;&emsp; 基本结构是`noum1 ＋ of ＋ noum2`，这里`noum1`是由及物动词变化过来的名词，与上述“主谓关系”相反，`noum2`是`noum1`行为的承受者，而不是执行者。比如：
+> America's invasion of Iraq
+> 美国入侵伊拉克
+> 
+这里的`invasion`是由及物动词`invade`变化过来的， 这个短语相当于说`America invaded Iraq`， 即第二个名词`Iraq`是该动作的承受者。
+其他更多的例子：
+> William's conquest of England
+> 威廉王征服英国
+> 
+相当于说`William conquered England`，即动宾关系。
+> a statement of the facts
+> 陈述事实
+> 
+相当于说`someone stated the facts`，即动宾关系。
+> the discussion of the plan 
+> 讨论这个计划
+> 
+我们看到， 在以上这些例子中， 第一个名词（如`conquest`, `statement`和`discussion`） 都是由及物动词变化过来的，此时一般表示动宾关系，翻译时从左往右理解。
+&emsp;&emsp; 从以上的讨论我们看到，若动词是不及物动词，则必作主谓关系理解，如`the arrival of the train`。 但如果动词既可作及物又可作不及物动词使用， 则会产生麻烦。 比如：
+> the shooting of the rebels
+> 主谓关系： 叛乱者开枪扫射
+> 动宾关系： 开枪打死这些叛乱者
+> 
+这里的动词`shoot`既可作及物又可作不及物动词，因此，`the shooting of the rebels`既可以理解成动宾关系， 即`“Someoneshoots the rebels”`， 也可以理解为主谓关系`“The rebels were shooting”`。 具体如何理解， 就需要根据上下文来确定。再比如：
+> The reminiscences of the Prime Minister were very amusing.
+>
+我们就不知道是“这位总理在回忆”还是“别人在回忆这位总理”。 对于这种情况下， 我们一般的原则是： **凡是可以理解为动宾关系的of短语， 就不妨这样理解，除非有相反的证明。**如：
+> `the examination of the fireman`我们就作为动宾关系理解为“某人正在检查消防队员”。 
+> 同样，`the scrutiny of the tenants`作为动宾关系理解为“在调查房客”。
+> 
+尽管对于上述短语， 我们倒过来理解也是完全合理的， 如分别理解成`the firemen's examination`或`the tenants' scrutiny`。事实上， 对某些词项来说，倒转过来理解更为可取， 如`the examination of the experts`（专家们来检查） 。
+&emsp;&emsp; 综上所述， 对于不及物动词， 则必然是从右往左按主谓关系翻译。 而对于既可作及物又可作不及物的动词， 则一般按动宾关系从左往右翻译， 除非上下文语境有相反的证明。
+
+### 6.3.3 同位关系
+&emsp;&emsp; 基本结构是`noum1 ＋ of ＋ noum2`，这里`noum2`表示`noum1`的具体内容，二者互为同位说明。
+> the city of Rome 罗马城市
+> 
+相当于`Rome is a city`或者说The city that I mean is Rome. 这与the people of Rome中的of表达的逻辑关系显然是不同的。
+
+> the news of the team's victory
+> 该队胜利的消息
+> 
+相当于说`The news was the team's victory.`
+
+> the news of the team's having won
+> 该队获胜的消息
+> 
+意思是`the news that the team had won`或`The news was that the team had won.`
+
+
+
+
+
+&emsp;
+&emsp; 
+## 7. `'s`所有格 和 `of`属格 之间的对比
+&emsp;&emsp; 总体来说，`'s`所有格主要是用于有生命的名词，而`of`属格主要是用于无生命的名词。从这个意义上来说，两种所有格是互为补充的关系，在彼此不作为的领域发挥着作用。
+
