@@ -449,6 +449,157 @@
 &emsp;
 ## 2.6 不定冠词a/an的用法
 ### 2.6.1 不定冠词的泛指与非泛指用法
+&emsp;&emsp; 首先我们要明确的是， 在三类名词（即单数名词、 复数名词和不可数名词） 当中， 不定冠词仅用于限定单数可数名词。 
+&emsp;&emsp; 在用法上， 当根据说话者和听话者的共有知识不能统一确认所指事物的时候， 我们就会用`a/an`来修饰一个名词。 所以， `a/an`通常用于所指事物在前面未曾提及并假定说话者或听话者对它还不熟悉的时候。
+
+#### (1) 用在主语中， 具有泛指功能
+比如下面这些例句：
+> A tiger is a dangerous animal. 老虎是一种非常危险的动物。
+> A child needs plenty of love. 孩子需要爱。
+> 
+关于这个用法， 我们在前面讨论过， 在此不再赘述。
+
+#### (2) 用在补足语中，表示分类，具有描述功能
+&emsp;&emsp; 在英语中，单数可数名词在作表语时，通常需要一个冠词。如果用不定冠词`a/an`， 则具有描述的功能， 而没有所指功能。
+&emsp;&emsp; 比如说 `Bill is an engineer.(比尔是一名工程师。)`，而不能说：~~Bill is engineer.~~。当然， 这里若用`the`， 则表示特指。 如：`Bill is the engineer.`，这里的`the engineer`不是强调比尔的“工程师”身份， 而是强调比尔是完成某项工作的工程师。 比如后边接下文说：
+> Bill is the engineer who will design the bridge. 
+> 比尔是设计这座桥的工程师。
+> 
+再看其他的例句：
+> This is a warm day. 这是一个暖和的日子。
+> The piece of apparatus is a Bunsen burner. 这件仪器是一个本生灯。
+> This is a banana. That is an apple. 这是一个香蕉， 那是一个苹果。
+> John is a teacher. 约翰是个老师。
+> 
+另外， 如果这里的人或事物的身份是独一无二的， 则不用`a/an`， 而用`the`， 或常常省去冠词
+
+### 2.6.2 不定冠词a/an与 不可数名词
+&emsp;&emsp; 一般情况下，不定冠词仅用于限定 单数可数名词，不可数名词的前面通常不用`a/an`。但是，出于特定的意义表达的需要， 就要用`a/an`来限定不可数名词。 比如：
+> A washing powder I've found to be extremely good is "Snow". 
+> 我发现了一种极好的洗衣粉， 牌子是“雪花”牌。
+> 
+>  This seems to be an excellent oil; the engine's running very smoothly.
+> 看起来这是一种极好的油， 发动机运转得很平稳
+> 
+一般来说，不可数名词是不用`a/an`来修饰的。但是， 在下列三种情况下，`a/an`可以与不可数名词连用：
+**(1) 很多不可数名词与a/an连用， 是表示“一种”或“一类”。**
+如果说话者或作者想以某种方式来特指所说的事物， 比如通常以关系从句的方式加以限定， 或当说话
+者的意思是“一类”或“一种”的时候， 不可数名词前可以用a/an。 比如：
+3 A cheese that I like is Camembert. 我很喜欢的一种奶酪就是法国卡芒贝尔村产的软质奶酪。
+**(2) 对于饮料类的不可数名词， 与a/an连用时， 是表示“一杯”这样的饮料。**
+> I'd like a beer, please. 我要一杯啤酒。
+> 
+**(3) 有些不可数名词，当它们与a/an连用时，会有特别的意思，或者说意思会发生改变。**
+&emsp;&emsp; 比如`glass`表示“玻璃”这种物质， 但`a glass`则是表示“一个玻璃杯”。同样，`iron`表示“铁”这种物质， 但`an iron`表示“一个电熨斗”等等。
+
+### 2.6.3 不定冠词a/an与数词one
+**(1) 强调数量“一”时用one**
+&emsp;&emsp; 当我们想加强口吻或引人注意的时候，我们用`one`强调 只有一个／不超过一个（`one only/not more than one`）的意思，而`a/an`则没有这个意思，它显得比较平淡、中性。也就是说，one比a/an更强调数量。 请看下列对话：
+> Customer: When will they be ready?
+> Assistant: They take a week.
+> Customer: One week, right, thanks very much.
+> 
+这个对话发生在一家照相馆里， 一个顾客询问放大照片需要多长时间(`A customer in a film-processing shop asks how long his enlargements will take.`) ，这里店员说`a week`， 显得轻描淡写地表达“一周时间”。但顾客用`one`来强调数字“一”的概念，显然是为了加强语气，表示他认为一周时间有点长。译成汉语时，我们要表达出这种强调语气，比如译成“得一周啊”。
+译文:
+> 顾客： 什么时候能洗好？
+> 店员： 要一周的时间。
+> 顾客： 得一周啊， 好吧， 谢谢。
+> 
+再比如下面的作者在谈吃大蒜的经历：
+> It was full of garlic. David took one mouthful and shot out of the room!
+> 到处都是大蒜味。 大卫吃了一口大蒜， 气味就弥漫了整个房间！
+> 
+作者在这里用了`one`， 是想强调说，虽然大卫只是吃了“一口”（而不是吃了两口或更多口），但是整个房间里都有大蒜味了，借此来强调大蒜的浓重气味。若是用`a mouthful`，则显得语气平淡得多。
+
+#### (2) 因为one强调数量， 所以常用于准确的对照数字
+&emsp;&emsp; 当我们仅考虑到有关数字的方面，或只想强调只是一个而不是两个或三个。所以，当我们想准确地对照数字时，我们就要用`one`。在下列对话中， A告诉B如何做蛋糕：
+> A: A hundred grams of flour to one egg, yeah, mixed up in the bowl.
+> B: Right.
+>
+> A： 100克面粉加一个鸡蛋， 好， 在碗中把它们搅匀。
+> B： 好的。
+> 
+这里用`one`就是来表示对照比例的。再比如：
+> two kilos of flour and one liter of water 两公斤面粉加一升水
+> 
+#### (3) 讲故事中用one
+&emsp;&emsp; 在讲故事或讲述某种经历时， 我们常用`one`来强调人或事物，作为我们将要讲到的一个重要话题。 比如在下面这个例子中， 讲故事的人在谈论自己常去的一家餐馆：
+> There is one place we go to which is a Mexican restaurant, and they have a happy hour between 5:30 and 7:30.
+> 有一个地方是我们常去的， 那是一家墨西哥餐馆， 那在下午5:30至7:30之间饮料特价。
+>（作者注： 该句中的happy hour是指酒吧或旅店提供减价饮料的一段时间， 通常是在下午较晚的时候或
+傍晚， 如该句中说的5:30至7:30。 ）
+> 
+再比如在下面这个例子中， 讲故事的人在回忆他儿时与同学们一起捉弄其他男孩子的经历：
+> There was one lad they used to terrify; they used to tie dead birds on the inside of his desk!
+> 他们以前常吓唬一个少年， 曾多次把死鸟绑在他的书桌里面！
+> 
+在上面这两个带场景的例句中， 说话人若改用`a place`和`a lad`， 就不能同样地显示或突出`the restaurant`和`the lad`。出于同样的道理，我们在开始讲故事时，常说`One day`或`One morning`等。 所以， o`ne`可以用在`day,week, month, year, summer`和`winter`等表示时间的名词前面，以特指某事发生的时间。 
+
+#### (4) 表示类指意义的a/an不能换成one
+&emsp;&emsp; 我们可以用a/an表示一类事物，是不定冠词泛指意义的用法。此时，我们就不能用one来替换a/an， 否则意思会发生改变。 请比较：
+> ① A shotgun is no good.
+> ② One shotgun is no good.
+>
+> ① 猎枪不行（这种武器不合适） 。
+> ② 一支猎枪不行的（需要两枝或更多的猎枪） 。
+> 
+在例句①中， `a shotgun`是表示类指意义， 意思是说“猎枪这种武器”不合适， 需要别的武器。 
+在例句②中， `one shotgun是`强调数量， 意思是说“一支猎枪”不够， 需要两支或更多的猎枪。
+
+#### (5) 表示度量的a/an不能换成one
+&emsp;&emsp;我们可以用`a/an`来表示度量，以表示价格、速度或比率等概念。 这时的`a/an`相当于`per`（每， 每一），不能换成`one`。 请比较：
+> The rent is $100 a week.
+> ~~The rent is $100 one week.~~
+> 
+这里的不定冠词a是表示度量， 所以不能用`one`， 
+再比如下列这些表示度量的短语（measure phrases） ：
+> ten dollars a day 每天10美元
+> $5 a kilo 5       美元一公斤
+> sixty kilometers an hour 每小时60公里
+> four times a day  每天四次
+>
+以上这些表示度量的短语中的`a/an`都不宜换成one (~~ten dollars one day*, $5 one kilo*, sixty kilometers one hour*, four times one day~~)。
+
+#### (6) 表示数量的固定搭配中的a不能换成one
+&emsp;&emsp; 各种数量词中也含有不定冠词`a`，此时不能换成one，比如： `a few, a little, a great many`以及`a large number of`等等。 因为这些是固定短语，所以不能把其中的`a`替换成`one`
+
+### 2.6.4 不定冠词a/an与this
+&emsp;&emsp; 在口头叙述中， 当说话者想强调某个人、 某个地方或某件事， 并使他们变得更加生动时， 就可以用`this`代替`a`。 这个用法在讲笑话时尤为常见。 请看下面这个短文的场景——一位女士在讲述她排错队的事（A woman is telling a story about standing in the wrong queue for something.）
+> &emsp;&emsp; So I go in **this queue**, and I'm waiting, so I saw them taking names and writing things down, so I had **this feeling** I was in the wrong place, so I thought to myself, "Oh, I'm going from here." But as I was standing at the table **this person** said, "Now then, you're next!"
+> 
+> &emsp;&emsp; 于是我就排到这个队伍里， 我在那等着， 我看到他们记下名字并写了些什么， 这时我感觉我站错地方了， 于是我心里想： “哦， 我得离开这里。 ”但是这时我已站在桌子旁边了， 这个人说道： “那么， 你是下一个！ ”
+> 
+我们看到， 这里作者用了`this`来描述`queue`, `feeling`和`person`，显得作者是在轻松地讲述自己排错队的笑话。 如果这里作者用不定冠词a来代替这些`this`， 那么就显得很正式， 而失去了幽默的效果。
+&emsp;&emsp; 我们再来看下面这个短文的场景 —— 两个男子在闲聊曾与他们一起工作的一位女士（`Two men are gossiping about a woman they used to work with.`）
+> First man: Apart from George she hasn't really met any nice people, eligible nice people I know of, perhaps I don't know enough.
+> Second man: There was **this guy** that she was really madly in love with, that went on and ended up working on an oil rig somewhere.
+> First man: Really?
+> Second man: Oh yes, she really was, really loyal. Very struck on him.
+> 
+> 第一个人： 除了乔治， 她还没有真正遇到过一个很好的、 符合条件的人， 也许是我不完全了解。
+> 第二个人： 就是这个小伙子， 她几乎疯狂地爱着他， 并一直爱着， 事实上那个人就是某个石油开采平台的工人而已。
+> 第一个人： 真的？
+> 第二个人： 噢， 是的， 她真是太忠贞了。 她完全被他迷住了。
+> 
+&emsp;&emsp; 以上讨论的是， 在用非正式的语言进行叙述、 讲故事、 说笑话时， 我们常用`this`代替`a`来指代一个特殊的中心话题。 简言之，讲述事情或开玩笑时用`this`代替`a/an`。但请注意，在正式的口语或书面语形式中不能使用这种说法。
+
+
+&emsp;
+## 2.7 对于某些单词，加不加冠词的意义和区别（`the hospital`/`hospital`）
+&emsp;&emsp; 在英文中，有一类表示家居生活和社会事业机构的名词，如`hospital`（医院） 等， 在有冠词修饰（如`the hospital`） 和 没有冠词修饰（如hospital） 的两种不同情况下， 意思往往是不同的。 比如下面的例句：
+> His mother is in hospital and he has been in the hospital to take care of her.
+> 
+> 他妈妈生病住院了， 他就一直在医院里照顾她。
+> 
+这里有两个介词短语`in hospital`和`in the hospital`，前者是“生病住院”的意思，而后者表示“在医院里”， 但不是因为生病， 而是因为其他原因， 比如在这里是因为要在医院里照顾他妈妈。我们再来比较下列例句：
+> ① He is in prison for bribery.
+> ② He is often invited to the prison to give lectures.
+>
+> ① 他因为贿赂而入狱。
+> ② 他常被邀请去监狱给囚犯作演讲。
+> 
+&emsp;&emsp; 在例句① 中， `in prison`表示“因为犯罪而入狱”， 即他是以一个囚犯的身份在监狱里的（`He is a prisoner.`） 这才是与`prison`密切相关的活动，我们想到的并不是某一个特定的监狱。 
+&emsp;&emsp; 在例句② 中， the prison使我们想到的是某一个特定的监狱， 强调的是具体的地点处所。 他并不是以囚犯的身份去监狱的， 而是因为别的原因， 比如在这里是去作演讲。
 
 
 
