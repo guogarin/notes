@@ -598,13 +598,671 @@
 > ① 他因为贿赂而入狱。
 > ② 他常被邀请去监狱给囚犯作演讲。
 > 
-&emsp;&emsp; 在例句① 中， `in prison`表示“因为犯罪而入狱”， 即他是以一个囚犯的身份在监狱里的（`He is a prisoner.`） 这才是与`prison`密切相关的活动，我们想到的并不是某一个特定的监狱。 
-&emsp;&emsp; 在例句② 中， the prison使我们想到的是某一个特定的监狱， 强调的是具体的地点处所。 他并不是以囚犯的身份去监狱的， 而是因为别的原因， 比如在这里是去作演讲。
+&emsp;&emsp; 在例句① 中， `in prison`表示“因为犯罪而入狱”，即他是以一个囚犯的身份在监狱里的（`He is a prisoner.`）这才是与`prison`密切相关的活动，我们想到的并不是某一个特定的监狱。 
+&emsp;&emsp; 在例句② 中， `the prison`使我们想到的是某一个特定的监狱，强调的是具体的地点处所。他并不是以囚犯的身份去监狱的，而是因为别的原因，比如在这里是去作演讲。
+&emsp;&emsp; 所以， 我们看到， 用与不用冠词， 对这类名词来说意义是不同的。 当我们不用冠词时， 表示的是人们去这些地方做在这些地方应该做的事， 或者说做的事情与这些地方密切相关。 比如： 
+> in hospital（在医院）就是因为“生病”， 
+> 
+> in prison（在监狱） 就是因为“犯罪”， 
+> 
+> go to church（去教堂） 就是为了“礼拜祷告”， 
+> 
+> go to temple（去庙里） 就是为了“拜佛求签”。 
+> 
+此时这些名词只表示一种抽象的概念，说话人并非特指具体的、实际的建筑物或地点，而主要是强调在该处所的活动。
+&emsp;&emsp; 另一方面， 当我们使用冠词时， 则表示人们去这些地方不是要做与该处所密切相关的事， 而是由于其他原因。 比如： 
+> in the hospital（在医院） 不是因为“生病”， 而是因为照顾病人或者是其他原因； 
+> 
+> in the prison（在监狱） 不是因为“犯罪”， 而是有其它原因； 
+> 
+> go to the church（去教堂） 不是为了“礼拜祷告”，而是为了其它事情； 
+> 
+> go to the temple（去庙里） 不是为了“拜佛求签”， 而是为了其它事情；
+> 
+此时这些名词是表示具体的、 实际的建筑物或地点， 即强调的是处所， 而不是活动。
+&emsp;&emsp; 下面我们把常见的这样使用的名词列举出来， 供读者使用时参考， 以免翻译时望文生义， 造成错误。
+### (1) 家居生活类名词
+> ① at table
+> ② at the table
+> 
+> ① 进餐、 吃饭
+> ② 在餐桌旁， 在桌边
+> 
+在例①中，在“餐桌边”的主要活动就是“就餐”， 所以`at table`表示“吃饭， 进餐”。
+在例②中，`at the table`表示“在桌子边”， 但不是在就餐， 而是干别的。 比如我们说`The man at the table wasn't at table.` 是表示“坐在桌旁的那个男子不是在吃饭”。
+> ③ go to bed
+> ④ go to the bed
+> 
+> ③ 上床睡觉
+> ④ 到床边
+> 
+> ⑤ go to bed
+> ⑥ lie down on the bed
+> 
+> ⑤ 上床睡觉（不是要干别的）
+> ⑥ 躺在床上（不是为了睡觉， 而是为了休息等等）
+> 
+> ⑦ in bed
+> ⑧ in the bed
+> 
+> ⑦ 在睡觉
+> ⑧ 卧在床上
+>
 
+### (2)  处所、 建筑物或社会事业机构
+> go to hospital (as patients)
+> redecorate the hospital
+>
+> 生病住院
+> 重新装修这个医院
+>
+> in hospital
+> in the hospital
+> 住院
+> （因事） 在医院里
+> 
+> come out of hospital
+> come out of the hospital
+>
+> （病愈） 出院
+> （因事） 从医院出来
+>
+> go to prison
+> walk around the prison
+>
+> 犯罪入狱
+> 绕着这个监狱走
+>
+> be in/at church (to pray)
+> admire the church
+>
+> 在教堂做礼拜（ 强调活动）
+> 非常欣赏这座教堂（ 指具体的建筑物）
+> 
+> go to/be in town
+> The town is very old.
+>
+> 去／ 在城里
+> 这个小城很破旧。
+>
+
+### (3) 关于sea的表达
+> ① go to sea (as sailors)
+> ② go to the sea
+> 
+> ① 当水手， 做海员； 出海航行， 出航（以水手的身份）
+> ② 去海边， 去海滨
+> 
+&emsp;&emsp; 在例①中，`go to sea`是表示“当海员”或“出海航行”，总之都是与“海员（`sailors`）”的身份有关，这里的`sea`并不指具体的大海。
+&emsp;&emsp; 在例②中，`go to the sea`相当于说`go to the seaside`，表示要去说话者与听话者都知道的“某个具体的大海边”。
+> ① go to sea (as sailors)
+> ② look out towards the sea
+> 
+> ① 当水手， 做海员； 出海航行， 出航（以水手的身份）
+> ② 眺望大海
+> 
+
+> ① be at sea (as passengers or crew)
+> ② be at the sea
+>  
+> ① 在海上航行； 茫然， 迷惑
+> ② 在海边
+> 
+&emsp;&emsp; 在例② 中，`at sea`表示“出海航行”，可能是以“乘客”身份或以“船员”身份。作为旅客就是“乘船旅行”，或作为船员就是“航海”。这里的`sea`并不是具体指某个大海， 而是具有抽象的含义。另外， `at sea`的抽象意义还体现在它的一个引申意思，表示“茫然， 迷惑”。想象一下就知道了，在漫无边际的大海上航行是一种什么样的感觉， 如果没有现代的导航技术， 必然是不知方向，“迷惑茫然”的感觉。比如说： `I was all at sea about what he said（我对他所说的感到一片茫然。）`.
+&emsp;&emsp; 在①中，`at the sea`相当于说`at the seaside`， 表示“在海边”，是指具体的大海。
+
+> ① by sea
+> ② by the sea
+> 
+> ① 乘船
+> ② 在海边
+> 
+&emsp;&emsp; 在例①中， `by sea`相当于`by ship`， 表示“乘船”。 
+&emsp;&emsp; 在例②中， `by the sea`相当于`by the seaside`， 表示“在海边”，是指具体的大海。
+
+### (4) 其它
+&emsp;&emsp; 英语中还有其他一些与“处所”或“社会事业机构”等无关的名词所构成的短语，也在使用与不使用冠词时，意义上也有很大的差别，在此我们也一并列举出来。有冠词与没有冠词的意义差别的区分规律是： 
+> &emsp;&emsp; 一般来讲， 没有冠词修饰的名词， 这个名词往往具有一种抽象意义或者总称意义； 有冠词修饰的名词， 此时的名词都是具体特指某个事物或其他意思。
+> 
+这些短语包括：
+#### **1） `office`**
+> ① in office
+> ② in the office
+>
+> ① 在职； 上台执政
+> ② 在办公室里
+> 
+&emsp;&emsp; 在例① 中， 没有冠词修饰`office`， 此时的`office`具有抽象意义， 表示“职位， 头衔”， `in office`就表示“在职”或“上台执政”。
+&emsp;&emsp; 在例② 中， 有定冠词the修饰`office`， 此时`office`是指具体某一个办公室， `in the office`就按字面理解成“在办公室里”。
+> ③ out of office
+> ④ out of the office
+>
+> ③ 离职； 下台， 在野， 不执政
+> ④ 离开办公室
+> 
+> ⑤ Bill Clinton came into office in 1992.
+> ⑥ Bill Clinton came into the office and saw Lewinsky working there, saying, "Let's have dinner tonight."
+> 
+> ⑤ 克林顿是1992年上台当总统的。
+> ⑥ 克林顿来到办公室，看到莱温斯基正在那里工作，说道：“今晚我们共进晚餐吧。 ”
+> 
+&emsp;&emsp; 在例句⑤ 中，`came into office`不要望文生义地译成“来到办公室”，而是表示“上台执政，就职”，在这里是表示做总统。 
+&emsp;&emsp; 若指具体的办公室，应该有`the`来限定，说成`came into the office`，如例句⑥ 所示。
+
+#### **2）time**
+> ⑦ behind time
+> ⑧ behind the time(s)
+>
+> ⑦ 晚点， 迟了
+> ⑧ 过时， 落伍， 落后于时代
+>
+&emsp;&emsp; 在例⑦ 中，没有冠词修饰的`time`， 此时`time`是一个不可数名词， 意为“时间”， 与`behind`（ 落后） 连用就表示“落后于时间”， 即“晚点了， 迟到了”。 
+&emsp;&emsp; 在例⑧ 中，有冠词`the`修饰`time`， 此时特指某一段时期， 所以`the times`表示“时代”， 与`behind`（落后）连用就表示“落后于时代”， 即“过时了， 落伍了， 跟不上时代”。
+
+#### **3）red**
+> ⑨ in red
+> ⑩ in the red
+> 
+> ⑨ 穿着红色的衣裳
+> ⑩ 负债， 亏损
+> 
+妙语点睛
+&emsp;&emsp; 在例⑨ 中， `in`表示“穿”的意思， `red`是指“红色的衣服”， 所以`in red`表示“穿红色的衣服”。 其他的比如`in blue`（ 穿蓝色的衣服） ， `in black`（ 穿黑色的衣服） 等等。 
+&emsp;&emsp; 在例⑩中， `in the red`相当于`in debt`， 表示“负债， 亏损”。 比如美国民歌手伍迪·格思里（ Woody Guthrie, American folksinger） 说过这样一句话： `I'm not a communist necessarily, but I've been in the red all my life.` 他这是语带双关地说： 我未必是共产主义者， 但我一辈子都呆在“红色阵营”（ 即入不敷出） 。
+
+#### **4） day**
+> ⑪ by day
+> ⑫ by the day
+> 
+> ⑪白天
+> ⑫按日计算， 论日
+> 
+
+&emsp;&emsp; 在例⑪中，没有冠词修饰day，此时`day`就具有总称意义，通指“白天”，`by day`就表示“在白天”，也可以说`by daylight`。比如“日日夜夜”就说成`by day and by night`。 
+&emsp;&emsp; 在例⑫中，有定冠词the修饰day，此时`day`是指具体的某一天，` by the day`就表示“根据这一天”，也即表示“按日计算”。比如我们说`They work only by day and get paid by the day. `是表示“他们只上白班，工资按天算”。
+
+#### **5）question**
+> ⑬ out of question
+> ⑭ out of the question
+> 
+> ⑬ 毫无疑问，没有问题
+> ⑭ 完全不可能
+> 
+妙语点睛
+&emsp;&emsp; 在例⑬中， 没有定冠词修饰`question`， 这里的`question`变成了一个抽象名词， 表示“疑虑，怀疑”的意思，然后加上`out of`（ 没有） ，于是`out of question`就表示“没有问题，毫无疑问”的意思，相当于`no problem`。 
+&emsp;&emsp; 在例⑭中， 有定冠词the修饰 `question`， 这里的`question`就变成了一个具体名词， 特指某一件具体的事，表示“要讨论的问题，要考虑的事”，然后加上out of（ 没有），于是out of the question就表示“没有这件事， 不考虑这个问题”， 亦即“不可能”
+
+#### **6） age**
+> ⑮ men of age
+> ⑯ men of an age
+>
+> ⑮ 成年人
+> ⑯ 同龄人
+>
+&emsp;&emsp; 在例⑮中， 没有冠词修饰`age`， 此时age具有抽象意义， `of age`就表示“够岁数了， 成年了”， 相当于o`ld enough`。 
+&emsp;&emsp; 在例⑯中， 有冠词`an`修饰`age`， 此时`age`就是表示某个具体的年龄， 所以`of an age`表示“同一个年龄”的意思。
+
+#### **7）house**
+> ⑰ keep house
+> ⑱ keep the house
+>
+> ⑰ 管理家务
+> ⑱ 守在家里
+>
+&emsp;&emsp; 在例⑰中，没有冠词修饰`house`， 此时`house`具有抽象意义， 表示“家务事”， 而不是指具体的房屋， 所以`keep house`表示“料理家务”的意思。 
+&emsp;&emsp; 在例⑱中，有定冠词`the`修饰`house`， 此时house就是具体指某人居住的房子， 所以我们还可以说`keep one's house`， 意思都是表示“守在自己家里不出门”， 往往是因为生病或受伤而“闭门不出， 待在家里”。 比如我们说`As he was wounded, he had to keep the house and sometimes kept house for his wife. 是表示“由于他受伤了， 所以只好待在家里， 不过有时他也会帮妻子干点家务活”`。
+
+#### **8）child**
+> ⑲ with child
+> ⑳ with a (the) child
+>
+> ⑲ 怀孕
+> ⑳ 带着孩子／ 和这个小孩在一起
+>
+&emsp;&emsp; 在例⑲中， 没有冠词修饰`child`，此时`child`相当于一个不可数名词，因而具有了总称意义。`child`就是泛指“小孩”这类人，所以`with child`的字面意思就要理解成“有了小孩”，即表示“怀孕”的意思。比如说`The girl is with child. “这个女孩怀孕了”`。另外，“孕妇”可以叫做`expectant mother`, `expecting mother`或`would-be mother`，若直白地译成`pregnant woman`，则听起来有点不礼貌。 
+&emsp;&emsp; 在例⑳中，有冠词修饰`child`，此时`child`就是一个可数名词，表示具体的某个孩子， 所以`with a child`或`with the child`则是字面的意思“和小孩在一起”。比如说`The girl is with the child.` 是表示“这个女孩同那个小孩在一起”。
+
+
+&emsp;
+## 2.8 其他使用冠词的场合
+这些场合包括：
+### 2.8.1 形容词或副词的最高级、序数词以及only用作形容词加名词连用时，它们的前面一般要用the
+> `the only/best way` to cope with the problem 解决这个问题的唯一／ 最好的方法
+> This is `the first time` I've come to Beijing. 这是我第一次来北京。
+> 
+
+### 2.8.2 在乐器、乐团、合唱团及流行音乐团体前加the
+> the Beatles “甲壳虫”乐队
+> the Philadelphia Orchestra 费城管弦乐队
+> play/learn the guitar 弹／ 学吉他
+> learn the piano 学钢琴
+> 
+注意： 运动项目前不加the。 比如： 
+> play chess
+> play football/basketball/table tennis
+> 
+
+### 2.8.3 定冠词the与姓氏连用
+我们可以把定冠词`the`与姓氏连用， 然后要在姓氏的后面添加复数`-s`。 比如：
+> the Smiths
+> 
+这个短语要表达的意思主要有两种： 
+* 一，是表示夫妇两人（`husband and wife`） ， 
+* 二，是可以表示全家人，即包括孩子在内（`including children`） 。 
+* 三，如果是名门望族的姓氏， 则除了表示上述两个意思之外， 往往还表示整个家族。比如`the Kennedys`,虽然可以表示“肯尼迪总统夫妇”或“肯尼迪总统全家人”，但实际上往往是表示“肯尼迪家族”。再比如`the Bushes`可以表示“布什总统夫妇”或“布什总统全家人”， 也可以表示“布什家族”， 包括与老布什和小布什总统有关的所有亲人。
+
+### 2.8.4 表示强调时， 会用the
+请看下面的对话：
+> (At the airport check-in desk.)
+> Airline official: `How many bags are you checking in?`
+> Passenger: `Just the one.`
+> 
+> （在机场登记处）
+> 机场人员： 你要登记几个包？
+> 乘客： 就这一个。
+> 
+这里的`the`是为了表示强调。
+
+> Receptionist: So it's just one person then?
+> Customer: No, no, it's for the two of us.
+> Receptionist: Oh, I'm sorry. Right, two persons.
+> 
+> 接待员： 那么就只有一个人？
+> 顾客： 不， 不， 是我们两个人。
+> 接待员： 啊， 对不起。 好的， 两个人。
+> 
+这里的`the`是为了表示强调。
+
+
+&emsp;
+## 2.9 其他不用冠词的场合
+这些场合包括：
+### 2.9.1 关于职业、 身份或头衔
+表示某人的职业， 一般是用不定冠词`a/an`。 比如：
+> I am an English teacher.
+> 
+**但是如果这个职业头衔是独一无二的， 或者说这个职位在一个单位里是唯一的， 此时常不用冠词。 不过， 也可以用the（既然是独一无二的身份， 所以不可能用a/an）**。 请比较：
+> ① They appointed him Head Librarian.
+> ② He's a librarian.
+>
+> ① 他们任命他为图书馆长。
+> ② 他是个图书管理员。
+> 
+在例句① 中，`Head Librarian`是表示“图书馆长”，这个职位对于一个图书馆来说应该是唯一的，所以此处没有用冠词`a`来修饰这个职位。 
+在例句② 中，`librarian`表示“图书管理员”，这个职位一般来说不是唯一的，因为一个图书馆会有多个管理员，所以此处用不定冠词a来修饰这个职位。
+
+要注意这些表示独一无二的身份或职务的名称在句中所出现的位置， 它们通常是出现在补足语的位置（包括主语补足语、 宾语补足语以及系动词后的表语位置） 和同位语位置， 此时尤其会省去the。 若是出现在其他位置， 如宾语位置或主语位置， 则需要加`the`。 请比较：
+> ① He was elected President in 1879.
+> ② I want to see the President.
+>
+> 他于1879年当选为总统。
+> 我要见总统。
+> 
+在例句①中，P`resident`表示“总统”， 显然是一个独一无二的头衔， 在该句中是出现在主语补足语的位置， 补充主语`he`，用来说明he的身份，所以省去`the`（尽管`the`可以被保留， 但还是常被省去） 。 
+在例句②中，`the President`是出现在该句的宾语位置， 此时尽管它是独一无二的头衔， 但依然保留了the。
+
+> ① Queen Elizabeth had dinner with President Kennedy.
+> ② The Queen had dinner with the President.
+>
+> ① 伊丽莎白女王和肯尼迪总统共进晚餐。
+> ② 女王和总统共进晚餐。
+> 
+妙语点睛
+在例句①中，`Queen`和`President`分别表示“女王”和“总统”， 显然是一个独一无二的头衔， 在该句中是出现在同位语的位置，`Queen`作`Elizabeth`的同位语， `President`作`Kennedy`的同位语， 所以省去`the`（尽管the可以被保留， 但还是常被省去） 。 
+在例句②中，`the Queen`和`the President`分别是出现在该句的主语和宾语位置， 此时尽管它是独一无二的头衔， 但依然保留了the。
+从以上的讨论我们看到， 省去the的两个条件是： 
+> 一是要表示独一无二的职务头衔， 
+> 二是要出现在句子的补足语或同位语的位置。 
+> 
+我们下面举例详细说明。
+**(1) 独一无二的头衔出现在表语位置**
+> John F. Kennedy was (the) President of the United States in 1961. 约翰·肯尼迪于1961年当选为美国总统。
+> John is (the) captain of the team. 约翰是该队的队长。
+> She is chairman of the committee. 她是该委员会的主席。
+> Mr. Smith used to be president of our bank. 史密斯先生当过我们银行的行长。
+> 
+下面这句话是厌倦了做国王的一位国王说的：
+> For the first time I am king of myself. Elect whom you choose to be king.
+> 生平第一次， 我才真正感觉到我是自己的国王。 （我不再想当你们的国王了， ） 你们想选谁就选谁做国王吧。
+> 
+该句中的`king`和`president`一样， 都是独一无二的头衔， 放在表语的位置， 冠词常常省去。
+
+**(2) 独一无二的头衔出现在主语补足语的位置**
+> Henry was elected chairman of the committee.
+> 亨利当选为该委员会的主席。
+> 
+这里的`chairman`补充说明主语`Henry，` 即作主语补足语。
+> He was elected President for the second time.
+> 他是第二次当选总统。
+> 
+这里的`President`补充说明主语`he`， 即作主语补足语。
+
+**(3) 独一无二的头衔出现在宾语补足语的位置**
+> They elected Henry chairman.
+> 他们推选亨利为主席。
+> 
+这里的`chairman`补充说明宾语`Henry`，即作宾语补足语。
+> They've appointed Fred (the) treasurer, and no doubt he will soon become (the) secretary.
+> 他们已经推选弗雷德为财政司司长， 毫无疑问将来他会成为财政部长。
+> 
+
+**(4) 独一无二的头衔出现在同位语的位置**
+> As (the) chairman of the committee, I declare this meeting closed.
+> 以委员会主席的身份， 我宣布会议结束。
+> 
+这里as引导的名词短语as chairman of the committee是作主语I的同位语。
+
+在上面这个例子中， 同位语在人名之前， 作同位语的名词短语可以放在人名的后面。 比如：
+> Elizabeth II, Queen of England.
+> 英国女王伊丽莎白二世
+> 
+这里的同位语`Queen of England`前省去了`the`。该同位语置于人名的后面了。
+综上所述， 简言之， 表示独一无二的头衔身份的名词前一般不用冠词， 尤其是当它们出现在补足语或同位语的位置时。
+
+### 2.9.2 关于球类、 棋类运动
+表示球类、 棋类运动项目的名词前面不加冠词。 例如：
+> play football 踢足球
+> play chess 下棋
+> play tennis 打网球
+> 
+
+### 2.9.3 特殊名词
+在下列这些特殊名词前不加`the`：
+|           |
+| --------- |
+| `nature`  |
+| `society` |
+| `space`   |
+| `man`     |
+| `history` |
+
+**(1) `nature`**
+&emsp;&emsp; 泛指自然界（动植物及无生命的物质的世界），不加冠词。比如“在大自然中”要说成`in nature`，而不是 ~~in the nature~~。 请看例句：
+> If you destroy nature you will suffer for it.
+> 谁要是破坏大自然， 谁就要遭受恶果。
+> 
+
+**(2) `society`**
+&emsp;&emsp; 泛指我们在其中生活的这个社会，一般不加冠词。 比如“在社会中”要说成`in society`， 而不是 ~~in the society~~。 请看例句：
+> Society turns people into criminals and then locks them up.
+> 社会使人犯罪， 然后又把他们关进监狱。
+> 
+
+**(3) `space`**
+&emsp;&emsp; 泛指星球之间的空间， 不加冠词。比如“在宇宙太空中”要说成`in space`， 而不是~~in the space~~。 请看例句：
+> Man has just taken his first steps into space.
+> 对于太空的探索， 人类才刚刚迈出了第一步。
+> 
+
+**(4) `man`**
+&emsp;&emsp; 泛指整个人类时，不加冠词。请看例句：
+> Man can conquer nature.
+> 人定胜天。
+> 
+> That's one small step for a man, one giant leap for mankind.
+> 这对于一个人来说是一小步， 对于人类却是是一次巨大的飞跃。
+> 
+> From early times man has used garlic (大蒜). Through the years man has tried to cope with the smell of garlic. But no herb, mouthwash, chewing gum, or toothpaste seems to help much.
+> 人类从很早以前就开始食用大蒜了。 一直以来， 人们都在努力消除大蒜的气味， 但无论是中草药、 漱口剂、 口香糖还是牙膏， 都没有什么用处。
+> 
+
+**(5) `history`**
+&emsp;&emsp; 泛指人类的整个历史时， 不用冠词。 比如“在历史上”要说成`in history`， 而不是~~in the history~~。 请看例句：
+> History may repeat itself.
+> 历史可能重演。
+> 
+> Throughout history man has had to accept the fact that all living things must die.
+> 自古以来， 人类都得接受所有的生命都要死亡这个事实。
+> 
+
+### 2.9.4 关于星期
+&emsp;&emsp; 大家知道， 表示星期几的名词前面一般是不加冠词的， 而是直接用介词`on`加上一个星期的名称， 即“on＋星期名称”。 比如：`on Monday, on Tuesday`或`on Wednesday`等等。 但是， 不知道读者有没有认真地思考过， 这样的星期表达到底是指什么时间呢？ 它们可不可以加冠词说成on the Monday或者是on a Monday呢？或者可不可以用复数说成on Mondays呢？ 下面我们就来回答这些问题。
+&emsp;&emsp; 首先， 上述不加冠词的星期表达 `on＋星期名称` 所指的具体时间是与真实的说话语境所暗示的某一个时间点有联系的: 
+> &emsp;&emsp;如果现在的说话时间是在“周三”，那么我们说`on Monday`，就是指刚刚过去的那个“周一”， 即“前天”，表示的是一个过去的时间（`past time`） ； 
+> &emsp;&emsp;而我们说on Friday， 就是指即将到来的那个“周五”， 即“后天”， 表示的是一个将来的时间（`future time`） 。 
+请看例句：
+> She left on Monday.
+> 她是周一离开的
+> 
+这里的`on Monday`就是指本周刚刚过去的那个“周一”。 这里的说话时间一定是在周一之后，表示的是一个过去的活动， 因此动词要用过去时的`left`。再比如：
+> See you on Friday.
+> 咱们周五见。
+> 
+这里的`on Friday`就是指本周即将到来的那个“周五”。这里的说话时间一定是在周五之前， 所以这里表示的是一个将来的活动。
+&emsp;&emsp; 由此可见， 不加冠词的星期表达 `on＋星期名称` 表示的不是一个“过去的时间”就是一个“将来的时间”， 而且都是以说话的时间为参照的， 是在说话时的同一周， 即与说话时的真实语境密切相关。 除此以
+外， `on＋星期名称` 还可以表示周期性的“星期几”，表示一个规律性的日期，比如`on Monday`可以表示“每逢周一”。 在英语中， 表示“每逢周几”， 我们还可以在星期名词的后面加`-s`，比如on Mondays。请看例句：
+> I have English class on Monday.
+> 我每周一都有英语课。
+> 
+这里的on Monday可以理解成“每周一”，此时也可以用复数，说成`on Mondays`。比如下面这个句子出自《新概念英语》 第二册第二课：
+> It was Sunday. I never get up early on Sundays. I sometimes stay in bed until lunchtime. Last Sunday Igot up very late.
+> 那是个星期日。 我星期日是从不早起的， 有时候还会在床上一直躺到吃午饭的时间。 上个星期日， 我就起得很晚。
+> 
+我们看到这里的星期名称就是用复数的，说成`on Sundays`。 我们也可以用单数说成`on Sunday`来表示“每逢周日”。
+综上所述， `on＋星期名称`这样的星期表达可以包含两个意思： 
+> &emsp;&emsp; 一是表示一个规律性的日期， 意思是“每逢周几”； 
+> &emsp;&emsp; 二是表示过去或将来的某个具体日期（a specific date） ， 具体是过去还是将来是以说话时间为参照的。
+> 
+但是， 如果某个星期几不是以说话时间为参照，而是以上下文中别的时间为参照， 此时就需要用定冠词`the`来修饰星期， 说成`on the＋星期名称`。 请比较下列例句：
+> ① She phoned me on Wednesday and we are meeting on Friday.
+> ② The last time I saw her was three weeks ago. She was in England for one week. She phoned me on the Wednesday and we met on the Friday.
+> 
+> ① 她周三给我打了电话， 我们约好在周五见面。
+> ② 我上次见到她是在三周前， 她在英格兰呆了一个星期。 她在那个周三给我打了电话， 我们在那个周五见了面。
+> 
+&emsp;&emsp; 在例句①中， 我们不加冠词说`on Wednesday`和`on Friday`， 此时要以说话时间来确定`Wednesday`和`Friday`具体所指是哪一天。 既然`phoned`是表示过去， `are meeting`是表示将来计划好的事情， 所以说这话的时间应该是在“周三”和“周五”之间的“周四”（`on Thursday`） 。 也就是说， 这句话暗示了“周四”是说这话的时间， 我们以此为参照时间来确定这里的“周三”即是“昨天”， “周五”即是“明天”。 这就是我们前文说过的“on＋星期名称”所指的具体时间是与真实的说话语境所暗示的某一个时间点有联系的。 
+&emsp;&emsp; 在例句2②中， 我们加了冠词说`on the Wednesday`和`on the Friday`， 此时的参照时间不是说话的时间， 而是上下文里所确立的某一时间。 比如这里是以“三周前（`three weeks ago`） ”为参照时间， 以此来确定这里的`Wednesday`和`Friday`具体所指是哪一天。 这里的`Wednesday`和`Friday`分别是指三周前的那个周三和周五， 而不是离现在说话时间最近的周三和周五。 其实， 这里的定冠词the就是我们在2.5.2小节“上下文共指（`textual coreference`） ”里讲到的“前指”用法， the前指`three weeks ago`这个时间点。再比如下面例句：
+> A: It was a terrible week, wasn't it? Did you remember?
+> B: Yes, we had snow on the Monday and floods on the Thursday!
+> 
+> A： 当时那一周真是很倒霉， 对吧？ 你还记得吗？
+> B： 当然记得， 那个周一下着雪， 那个周四还发了洪水！
+> 
+我们加了冠词说`on the Monday`和`on the Thursday`， 此时的参照时间不是说话的时间， 而是上下文里所确立的某一时间。 显然， 说话人是在讲故事， 回忆自己曾经经历过的某个倒霉的一周。 因此， 这里就是以“过去的某一周”为参照时间， 该句中的`Monday`和`Thursday`分别是指在那一周的周一和周四， 而不是离现在说话时间最近的周一和周四。
+> ① She died on the Tuesday after the accident.
+> ② She died of the accident on Tuesday.
+>
+> ① 事故发生以后的那个星期二， 她就死了。
+> ② 她这周二死于那场事故。
+> 
+&emsp;&emsp; 在例句①中，`after the accident`修饰`Tuesday`， 意思是“事故发生后的那个周二”。 所以这里`Tuesday`的参照时间是`accident，`指的是“事故”发生之后的那个周二。 显然这个周二与现在的说话时间没有任何联系。 
+&emsp;&emsp; 在例句②中，上下文中没有其他时间作为参照， 我们就以说话时间为参照， 此时的Tuesday就是指离说话时间最近的、 刚刚过去的那个周二。
+
+&emsp;&emsp; 以上所讨论的是两种定指的星期表达， 一个是以说话的时间为参照， 另一个是以上下文中特定的时间为参照。 既然有定指的星期表达， 那么也就有不定指的星期表达， 此时用不定冠词a来修饰星期， 说成“on a＋星期名称”。 请比较例句：
+> ① She left on a Wednesday.
+> ② She left on Wednesday.
+
+> ① 她是在一个周三离开的。
+> ② 她是本周三离开的。
+>
+在例句①中，`on a Wednesday`表示过去某一个不确定的星期三， 与现在的说话时间没有任何联系。 
+在例句②中，`on Wednesday`是以现在的说话时间为参照， 表示离说话时间最近的刚刚过去的那个周三， 即与现在的说话时间有密切联系。
+再比如：
+> We met on a wet Monday in June. 我们是在6月份一个下雨的星期一见面的。
+> 
+
+### 2.9.5 关于四季
+指一般的四季而不是具体指某年的某一段时间时，通常不加冠词。比如：
+> in spring（在春天）
+> in summer（在夏天）
+> in autumn（在秋天）
+> in winter（在冬天）
+> 
+再比如：
+> Winter is coming. 冬天就要来了。
+> 
+但是，**如果指特定的某一年的某个季度时， 就要加冠词**。比如：
+> The spring of last year was cold. 去年春天很冷。
+> 
+
+### 2.9.6 关于日出、昼夜等的各段时间
+表示昼夜的各段时间的名词主要有：
+| 中           | 英                |
+| ------------ | ----------------- |
+| ① 黎明／破晓 | `dawn`/`daybreak` |
+| ② 日出       | `sunrise`         |
+| ③ 日落       | `sunset`          |
+| ④ 正午       | `noon`            |
+| ⑤ 黄昏       | `dusk/twilight`   |
+| ⑥ 夜晚       | `night`           |
+| ⑦ 午夜       | `night`           |
+
+以上这些名词尤其是当它们出现在`at， by，after`和`before`之后时， 往往不加冠词。 比如（ 以at为例） ：
+> by dawn (在黎明前)
+> before dawn  (在黎明前)
+> at dawn（ 在黎明时）
+> 
+> at daybreak（ 在破晓时）
+> at sunrise（ 在日出时）
+> at sunset（ 在日落时）
+> at noon（ 在正午时）
+> at dusk/twilight（ 在黄昏时）
+> at night（ 在夜晚）
+> at midnight（ 在午夜）
+> 
+如果是用在其他介词之后， 或者是在其他场合，这些名词前则往往要加冠词。 比如：
+> watch the dawn（ 看黎明到来）
+> 
+> The sunrise was splendid. （ 日出很壮观。 ）
+> 
+> We admired the sunset. （ 我们欣赏日落。 ）
+> 
+> see nothing in the dusk（ 在黄昏时什么也没看见）
+> 
+> wake up in the night（ 在夜里醒来）
+> 
+> all through the night（ 整整一夜）
+> 
+另外， 要注意的是，若是表示特定的某一天的某个时间段，往往用不定冠词，并且用介词on，此时这些名词的前面通常都会有形容词修饰。 比如：
+> on a frosty October night
+> 在10月份一个下着大雾的晚上
+> 
+这里的`night`前面有修饰语`frosty`和`October`，表示的是具体的某一天的晚上。此时用了不定冠词a，并且用了介词`on`。再比如：
+> on a rainy morning 在一个下雨的早晨
+> on a sunny winter afternoon 在一个阳光明媚的冬日午后
+>
+
+### 2.9.7 关于进餐
+**指一般日常惯例的用餐时**， 通常不加冠词。 比如：
+> have rice for dinner 晚餐吃米饭
+> 
+其他的比如：
+> for breakfast/lunch（ 早餐／ 午餐吃……）
+> stay for breakfast（ 留下来吃早餐）
+> before lunch（ 午餐前）
+> after dinner（ 晚餐后）
+> I was invited to dinner. 我受邀请赴晚宴。
+>  
+**但是如果指需要特别提出的某一次用餐， 则常用`the`来强调。**请比较：
+> Where are we having dinner tonight?
+> The dinner after his retirement party was quite lavish.
+> 
+>  今天的晚餐我们在哪里吃？
+>  在他那次退休聚会上的晚餐非常豪华丰盛。
+> 
+**若在三餐名词前有形容词时， 则一般加不定冠词， 来表示具体的一餐。** 例如：
+>  We often have a big lunch and a nice dinner. 我们通常午饭吃得较多， 晚饭则吃得较好。
+> 
+
+### 2.9.8 关于交通工具的名词
+接在`by`之后的交通工具名词， 其前面不加冠词。但是这些名词在其他场合要加冠词。 请比较：
+> by bicycle
+> take the bicycle
+>
+> 骑自行车
+> 
+
+
+> by bus
+> be on the bus
+> 
+> 乘公交车
+> 
+> by car
+> be in the car
+> 
+>坐小汽车
+>
+> by boat
+> take the boat
+>
+> 坐船
+> 
+> by train
+> take the train
+>
+>坐火车
+
+> by plane
+> be on the plane
+>
+> 坐飞机
+>
+**从以上对比我们看到， 若用在介词in或者on后， 以及用在动词后， 这些名词的前面一般都须用冠词限定。** 需要提醒大家注意的是， “步行”是`on foot`， 而不用其他介词。
+
+### 2.9.9 关于通讯工具的名词
+接在`by`之后的通讯工具名词，其前面不加冠词。但是这些名词在其他场合要加冠词。请比较：
+> by radio
+> a talk on the radio
+>
+> 通过收音机
+> 收音机中的一个谈话节目
+>
+> by telephone
+> John is on the telephone.
+>
+> 通过电话
+> 约翰在接听电话。
+>
+> by post
+> put a letter in the post
+> 
+> 通过邮寄（ 的方式）
+> 邮寄信件
+> 
+> by mail
+> send the letter through the mail
+> 
+> 通过邮寄（ 的方式）
+> 邮寄信件
+> by satellite
+> The satellite is replacing cable TV.
+> 
+> 通过卫星
+> 卫星正在取代有线电视。
+> 
+
+### 2.9.10 平行结构
+如果两个名词一起放在同一平行结构里， 即使是单数可数名词， 也通常不加冠词。 比如：
+> face to face      面对面； 当着面
+> back to back      背对背
+> arm in arm        手挽着手
+> hand in hand      手牵手
+> eye to eye/eyeball to eyeball 面对面地， 针锋相对地
+> toe to toe                    脚尖挨脚尖， 摩肩接踵
+> shoulder to shoulder/side by side 并肩地
+> inch by inch                  逐渐地， 一步一步地
+> day after day (＝ day by day) 日复一日
+> dentist after dentist         一个牙医接着一个牙医
+> from person to person         挨个地
+> from door to door         挨家挨户
+> from top to toe       从头到脚， 完完全全
+> from father to son    从父亲到儿子
+>
+在上面带有重复名词的短语， 如`face to face， toe to toe`和`eyeball to eyeball`等， 这样的短语往往具有副词的功能， 在句中用作状语， 修饰动词。 比如：
+> They talked face to face. 他们面对面地谈话。
+> They talked man to man.   他们坦率地交谈。
+> They stood toe to toe.    他们摩肩接踵地站着。
+> They stood eyeball to eyeball. 他们面对面地站着。
+> 
+这些名词没有冠词是因为它们基本上失去了名词的主要特性， 比如它们没有数的变化。 比如不能说： ~~They talked faces to faces.~~，它们的前面也不能有修饰语。 比如不能说：~~They talked old man to young man.~~。因此， 我们不妨把这些短语看成是英语的固定习语
 
 
 
 
 &emsp;
 &emsp; 
-# . 数量限定词与个体限定词()
+# 3. 数量限定词与个体限定词
+## 3.0 综述
+
+## 3.1 数量限定词 `a few`, `few`, `a little` 和`little`
