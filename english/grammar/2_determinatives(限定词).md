@@ -1787,3 +1787,167 @@ either有两个意思。
 > ＝ Neither of the answers is correct. 
 > 两个答案都不正确。
 > 
+
+
+&emsp;
+## 3.6 限定词总结：限定词中的“二”与“三
+### 3.6.1 `both` vs `all`
+在英文中，`both`只表示“两者都”， 而`all`表示“三个或三个以上都”。请比较：
+> ① Both of us have learned English for a year.
+> ② All of us have learned English for a year.
+> 
+> ① 我们俩学习英语都有一年了。
+> ② 我们大家学习英语都有一年了。
+> 
+在例句①中，`both of us`只涉及两个人。 
+在例句②中，`all of us`至少是有三个人。
+再比如：
+> ① Both John and Tom have learned English for a year.
+> ② All of the students have learned English for a year.
+>
+> ① 约翰和汤姆学习英语都有一年了。
+> ② 所有的学生学习英语都有一年了。
+>
+
+### 3.6.2  `neither` vs `none`
+&emsp;&emsp; 在英文中， `neither`只表示 “两者都不”， 而`none`表示“三者或三者以上都不”。 比如下面这道2002年专业英语四级考试题：
+________of the twins was arrested, because I saw both at a party last night.
+A． None
+B． Both
+C． Neither
+D． All
+正确答案
+> 这两个双胞胎都没有被抓， 因为我昨晚在聚会上看到他们俩了。
+> C。
+> 
+首先， 题干中出现twins（双胞胎） 以及后面的`both`， 都表明这里只涉及两个人， 因此可以排除A和D。其次，从下文的`because I saw both at a party last night`的语义来看， 空格处应该填入否定词， 前后文的逻辑才通顺。 故C，即`Neither`正确。
+
+### 3.6.3 `the other` vs `another`
+&emsp;&emsp; 在英文中，`the other`是表示**确定的另外一个**，常用来表示“两个中的另外一个”。因为总共就只有两个，所以若确定其中一个，则另外一个也就随之确定了。 因此， 常常构成这样的搭配： `one...the other`。
+&emsp;&emsp; 另一方面，`another`是表示**不确定的另外一个**，必然是指“三个或三个以上的另一个”。因为总共有三个或三个以上，所以即使确定了其中一个， 剩下的依然是不确定的。 比如：
+He took her money in one hand and with________hand he grasped her mitten.
+A． other
+B． the other
+C． the others
+D． another
+正确答案
+> 他一只手拿着她的钱， 另一只手抓住她的手套。
+> B
+> 
+因为一般人就只有两只手， 因此是表示“确定的另外一个”， 所以B， 即`the other`正确。 如果填`another`，则说明他至少有三只手。
+
+### 3.6.4  `each` vs `every`
+`each`表示两个或两个以上的“每一个”；而`every`表示 从三个算起的“每一个”。 需要注意的是:
+> both， neither及either是只能表示“二”的概念， 
+> 而each可以表示“二”， 也可以表示“二”以上的数目。
+> 
+比如不能说：
+> ~~both of the three men~~
+> ~~neither of the three men~~
+> ~~either of the three men~~
+>
+但可以说：
+> each of the three men 三个人中的每一个
+> 
+
+
+&emsp;
+## 3.7 限定词总结（ 二） ： 限定词与 可数／不可数名词
+| 搭配情况                                | 限定词                                                                                   |
+| --------------------------------------- | ---------------------------------------------------------------------------------------- |
+| 只能搭配 单数可数名词                   | `a, an, each, every, either, neither, another, one`等                                    |
+| 只能搭配 复数可数名词                   | `both, few, a few, fewer, a number of, many, several, these, those,` 2及以上的基数词等   |
+| 只能搭配 不可数名词                     | `little, a little, less, much, a bit of`和`a great amount/deal of` 等                    |
+| 不可数名词、复数可数名词都可搭配        | `a lot of, lots of, plenty of, more, most`和`all`等                                      |
+| 单（复）数可数名词、 不可数名词均可搭配 | `any, some, no, the`, 物主限定词（ 如your和my等） , 名词属格（ 如Tom's和my mother's） 等 |
+
+
+&emsp;
+## 3.8 限定词总结（ 三）：限定词 与 of短语
+在英文中， 有很多数量或个体限定词同时还可以用作代词， 此时它们的后面可以接of短语连用。 此时的结构一般是：
+> 数量或个体词 ＋ of ＋ **特指限定词** ＋ 复数名词或不可数名词。
+> 
+值得提醒大家注意的是， 在`of`的后面必须有一个“特指限定词”，然后才能接名词，否则就是错误的。这里的“特指限定词”主要有下列四类：
+> 一是， 指示限定词， 如this， that， these和those；
+> 二是， 物主限定词， 如my， your， his， her， its， their和our。
+> 三是， 名词所有格， 如Mike's， Mary's和the teacher's等。
+> 四是， 定冠词the。
+> 
+注意， 这四类限定词不能没有，也不能同时出现两个或以上。 所以， 笔者常常将这种情况简称为“四分之一”， 即这四类限定词“有且只能有一个”。
+具体用法如下：
+### 3.8.1  `all/most/some/any of`＋ 特指限定词 ＋ 复数可数或不可数名词
+请看例句：
+> Most of my/these/the/John's books are interesting.
+> 我的／ 这些／ 约翰的大多数图书都很有趣。
+> 
+如果没有“四分之一”， 则是典型的错误。 比如不能说：
+~~Most of books are interesting.~~
+如果没有“四分之一”， 必须把of去掉才正确， 即说成：
+> Most books are interesting.
+> 
+
+### 3.8.2 `many/a few/few/several/both/two/three of` ＋ 特指限定词 ＋ 复数可数名词
+请看例句：
+> Many of these students are good at English.
+> 许多学生英语都很好。
+> 
+
+如果没有“四分之一”， 则是典型的错误。 比如不能说：
+> ~~Many of students are good at English.~~
+> 
+如果没有“四分之一”， 必须把`of`去掉才正确， 即说成：
+> Many students are good at English.
+> 
+
+### 3.8.3 `much/a little/little of`＋特指限定词＋不可数名词
+请看例句：
+> Much of the water is wasted.
+> 大部分的水都浪费了。
+> 
+如果没有“四分之一”， 则是典型的错误。 比如不能说：
+> ~~Much of water is wasted.~~
+> 
+如果没有“四分之一”， 必须把of去掉才正确， 即说成：
+> Much water is wasted.
+> 
+**注意， 其他本身就带有of的数量词**如`a lot of， lots of， a couple of， plenty of， a number of和a great deal of`等，则必须直接与名词连用，名词的前面不需要加特指限定词修饰。 如：
+> a lot of books
+> ~~a lot of the books~~
+> 许多书
+> 
+
+> a great deal of water
+> ~~a great deal of the water~~
+> 许多水
+> 
+
+> a couple of days
+> ~~a couple of the days~~
+> 两天
+> 
+
+### 3.8.4 特别关注： all 和 both
+在上述数量限定词中， `all`（指“三个或三个以上都”） 与`both`（指“两个都”） 的用法较为特殊。 请认真研究下列句子：
+正确：
+> All students are smart.
+> All of my students are smart.
+> All my students are smart. （all的独特用法）
+> 
+不正确：
+> ~~All of students are smart.~~
+> 
+`both`具有同样的用法。 比如：
+正确：
+> Both students are smart.
+> Both of my students are smart.
+> Both my students are smart. （both的独特用法）
+> 
+不正确：
+> ~~Both of students are smart.~~
+> 
+但其他数量词不能像`all`和`both`一样用：
+> ~~most my students~~
+> ~~most the students~~
+> ~~many these students~~
+>
+
