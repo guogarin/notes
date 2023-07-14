@@ -1260,9 +1260,530 @@
 
 
 
+
 &emsp;
 &emsp; 
 # 3. 数量限定词与个体限定词
 ## 3.0 综述
+可数：a number of 、the number of 、many、too many、few、a few
+不可数：a larger amount of、huge amount of、a great deal of、much、too much、little、a little
+两个皆可修饰：some、any、a lot of、lots of、plenty of
+
+many、much、plenty of、a lot 、lots of 、a number of 、a larger number of 、a great deal of、scores of 、several呢？
+TODO:
 
 ## 3.1 数量限定词 `a few`, `few`, `a little` 和`little`
+### 3.1.1 与名词的搭配关系
+&emsp;&emsp; 从与名词的搭配来看，`a few`和`few`的后面只能接复数名词， 而`a little`和`little`的后面只能接不可数名词。例如：
+> a few days, few boys
+> 
+> a little water, little money
+> 
+
+### 3.1.2 肯定／ 否定之别
+&emsp;&emsp; 从肯定及否定的角度来看：
+> `a few`和`a little`的意思是肯定的，相当于`some`， 表示“有一些”的意思。 
+> 而`few`和`little`的意思是否定的， 表示“很少， 几乎没有”。 
+> 
+例如：
+> His theory is rather difficult; few people understand it.
+> ＝His theory is rather difficult; almost no people understand it. 
+> 他的理论很深奥， 没什么人能够理解。
+> 
+> His theory is rather difficult, but a few people understand it. 
+> 他的理论很深奥， 但有一些人能够理解。
+> 
+> I have little interest in English, so I am very poor at it. 
+> 我对英文没什么兴趣， 所以学得很不好。
+> 
+> I have a little interest in English, so I like learning it. 
+> 我对英文有些兴趣， 所以我喜欢学。
+> 
+
+### 3.1.3 与only或very的搭配关系
+&emsp;&emsp; 我们只能说： `only a little`或`only a few`， 而不能说： ~~only few~~ 或 ~~only little~~。 但为了强调否定意义， 我们可说： `very few`或`very little`。 我们来分析下面这道题：
+```
+His theory is rather difficult and________students can understand it.
+A． only few
+B． only a few
+C． only little
+D． only a little
+正确答案
+B。
+他的理论很深奥， 只有一些人能够理解。
+```
+首先， 从与名词搭配的角度来看， 复数名词`students`只能与`a few/few`连用。 其次， 从与`only`搭配的角度来看， 只有`only`才能与`a few`搭配。 因此， 正确答案是`B`， 即`only a few`。
+
+### 3.1.4 练习
+用`a few， a little， few， little`填空。
+1． A: Are you finished?
+B: Not yet. I need________more minutes.
+B: Not yet. I need________more time.
+
+2． Do you have________minutes? I'd like to ask you________questions. I need________more information.
+
+3． He is very poor and he has________clothes.
+
+4． I like music. I like to listen to________music after dinner.
+
+5． Jane is very shy. She seems to have________friends in her new school.
+
+6． I had________food this morning. Now I am very hungry.
+
+7． Mr. Zhang's grammar lecture is very clear. As a result, very________students have questions at the end of class.
+
+8． English is not hard. Only________students are not good at it.
+
+9． I had only________money with me.
+
+10． Only________dollars have been borrowed from the manager.
+答案：
+```
+1． a few a little
+2． a few a few a little
+3． few
+4． a little
+5． few
+6． little
+7． few
+8． a few
+9． a little
+10． a few
+```
+&emsp;
+## 3.2 数量限定词： some/any
+### 3.2.1 与名词的搭配关系
+#### (1) some/any和 不可数名词及可数名词复数
+&emsp;&emsp; 从与名词的搭配来看，`some`和`any`**均可以**与不可数名词及可数名词复数连用， 表示“一些”。 `some`一般用在肯定句中， 而`any`一般用在否定句中。例如：
+> Clint is busy. He always has some work to do. But John is lazy. He never does any work. 
+> 克林特很忙， 他总是有工作要做。 但是约翰很懒， 他什么也不干。
+> 
+> Last night I was very hungry and I wanted some food to eat. But now I am not hungry and I don't want any food to eat. 
+> 昨晚我很饿， 想吃点东西。 但是现在我不饿了， 什么也不想吃。
+> 
+> I need some medicine to cure my cough. 我需要吃点药治好咳嗽。
+> 
+> I want to buy some computer books.    我想买几本计算机书。
+> 
+> I don't have any friends here.        我在这里没有朋友。
+> 
+#### (2) some/any和 疑问句
+&emsp;&emsp; 在疑问句中，我们多数情况下用`any`。
+&emsp;&emsp; 但是在表示我们期**待一个正面的回答 或 要鼓励对方说“是”时**，要在疑问句中用`some`。例如：
+> Have you got any medicine to cure your cough? 你吃治疗咳嗽的药了吗？
+> 
+> Would you like to give me some advice? 你想给我提点建议吗？
+> 
+> Can I have some more wine? 我能再喝点酒吗？
+> 
+
+### 3.2.2 特殊用法一： any与单数名词搭配
+&emsp;&emsp; 当`any`的后面接单数名词时， 它的意思是 **无论哪一个， 任何一个**， 此时可用于任何类型的句子。比如用于下面的肯定句中：
+> You can catch any bus. They all go to the railway station. 你坐哪辆公共汽车都行， 它们都到火车站。
+> 
+> You can ask any person over there. They all can tell you. 你问那边的哪个人都行， 他们都会告诉你。
+>
+
+### 3.2.3 特殊用法二： some与单数名词搭配
+&emsp;&emsp; `some`可与单数可数名词连用， 这时的`some`表示不确定的**某一个**的意思。例如：
+> Of the many ways of getting to prison, Soapy thought the best was to eat a big meal at some good restaurant and then told the manager that he didn't have money to pay.
+> 在众多可能入狱的办法当中， 苏比认为最好的办法是找一家好餐馆大吃一顿， 然后告诉经理说没钱付账。
+> 
+这是欧·亨利（ O'Henry） 的小说《警察与赞美诗》 中的句子。 我们看到， 这里`some`的后面接的是一个单数名词`restaurant`， 表示“某一家餐馆”。 显然， 他不会同时在“几个餐馆”吃饭， 所以不说~~`some restaurants`~~。再看其他例句：
+> A mirage is an atmospheric optical illusion of **some object**.  海市蜃楼就是某个物体的奇特的光学幻影。
+> 
+> **Some person** at the gate is asking to see you. 门口有个人要见你。
+>
+下面这个句子出自英国电影《四个婚礼和一个葬礼》 （Four Weddings and a Funeral） ：
+> I always just hoped that I'd meet **some nice friendly girl**, like the look of her, hope the look of me didn't make her physically sick, then pop the question and, um, settle down and be happy. It worked for my parents.
+> 我一直希望能遇见某个为人很好、 长相也不错的姑娘， 希望我的长相也不会让她讨厌。 然后我就向她求婚， 嗯， 然后我们结婚， 从此过上幸福的日子。 我的父母就是这样的。
+> （作者注： pop the question是一个俚语， 表示“向某人求婚”的意思。 ）
+> 
+值得注意的是， `some`的这一特殊用法 **可表示强烈的感情色彩，它往往暗示缺乏兴趣，甚至是蔑视的态度** 。 请看例句：
+> I don't want to spend my life in **some lonely little village**. 
+> 我可不想把自己的一生消磨在一个偏僻的小山村里。
+> 
+> A: Two buttons have been off my new jacket.
+> B: **Some bargain**.
+> 
+> A： 我那件新夹克已经掉了两粒扣子了。
+> B： 什么破烂货！
+> 
+> A: Mike promised he'd help on this rush job. But he never showed up.
+> B: **Some friend** he is.
+> 
+> A： 麦克答应帮我赶这个急活， 可他就是没有出现。
+> B： 这叫什么朋友！
+> 
+&emsp;&emsp; 2007年4月16日， 美国弗吉尼亚理工大学枪击案的歹徒韩国人赵承熙（Cho Seung-Hui） 杀死32人， 然后自杀， 制造了美国历史上最惨重的校园枪击案（`killing 32 people and committing suicide in the deadliest school shooting in U. S. history`） 。 他事先自拍了一段录像， 后来他把这段自制录像寄到全国广播公司新闻部（NBC News） 。 在这段令人毛骨悚然的录像中他说：
+> This is it. This is where it all ends. End of the road. What a life it was. **Some life**.
+> 就这样。 这样结束一切。 结束人生的路。 多么美妙的人生。 可真没白活。
+> 
+这里他说`some life`， 显示了他对人生的绝望和对生命的蔑视， 这导致他枪杀了32人。
+&emsp;&emsp; 下面这个对话来自著名电影《阿甘正传》 （`Forrest Gump`） ， 是在电影一开头， 阿甘的妈妈带着小阿甘去医院检查智商后， 他妈妈和医生希尔考克（`Mr. Hillcock`） 之间的对话：
+> **Mr. Hillcock**: I'm going to show you something, Mrs. Gump. Now here is normal. Forrest is right here. The State requires a minimum IQ of 80 to attend public school, Mrs. Gump. He's going to have to go to a special school. He'll be just fine.
+> **Mrs. Gump**: What does normal mean, anyway? He might be a bit on the slow side, but my boy, Forrest, is going to get the same opportunities as everyone else. He's not going to **some special school** to learn how to retread tires. We're talking about 5 little points here. There must be something can be done.
+>
+> 希尔考克医生： 甘太太， 我打算给你看样东西。 你看， 正常的智商是在这个位置， 而阿甘的智商在这里。 国家规定， 最低智商要达到80才能上公立学校。 所以， 阿甘只能去残障学校， 他才能适应。
+> 甘太太： “正常智商“是什么意思？ 他不就是反应或许比别的孩子稍微慢一点嘛！ 不过， 我儿子阿甘一定要接受和其他所有人一样的教育， 他绝不去什么特殊残障学校学习如何修补轮胎。 他不就是智商差五个小点嘛， 一定能有办法！
+> 
+在`some special school`这个短语里，阿甘的妈妈用`some`来修饰一个单数名词`school`（一般来说some是要修饰复数名词的），这里的`some`就是一个特殊用法， 在这里，它表示阿甘妈妈对“残障学校（`special school`）”不感兴趣，甚至是蔑视的态度，从而更加表明她要让儿子接受正式教育的决心。
+
+### 3.2.4  特殊用法三： some与数词连用
+&emsp;&emsp; 在限定复数名词时， `some`的后面还可以先接一个数词， 然后再接名词， 此时`some`表示 **大约** 的意思。这一用法常常暗指这是一个给人以深刻印象的很大的数字。例如：
+> **Some 1,500 passengers** and crew died aboard the Titanic when it sank on April 14, 1912 after hitting an iceberg. It lies at a depth of **some 4,000 meters**, s**ome 640 kilometers** south of Newfoundland, Canada.
+> 在“泰坦尼克”号游轮于1912年4月14日因为撞击冰山而沉没之后， 船上大约有1,500名乘客和船员丧生。 它的沉没地点位于加拿大纽芬兰省以南约640公里处大约4,000米深的海里。
+> 
+这里共有三处`some`与数词连用， 都是为了强调这些数字是相当可观的。再看下面的例子：
+> For "good", the Chinese worked out a combination of "woman" and "child". Once this combination process had started, there was no limit to it. The Chinese still use the system today, having developed it to the point of producing **some forty thousand combined characters** out of a few hundred original pictures of concrete objects.
+> 对于“好”这个字， 中国人创造出“女”和“子”的组合来表示。 自从开创了这种组合造字法后， 中国人就一直沿用至今， 现在他们用几百个象形文字， 已创造出多达四万个组合汉字。
+> 
+这里的`some`与数词`forty thousand`连用， 以强调该数字是巨大的，翻译时可以译成“多达四万”来加以体现。
+
+### 3.2.5 练习
+用`some`或`any`填空。
+1． Last night I was very hungry and I wanted________food to eat. But now I am not hungry and I don't want________food to eat.
+
+2． I need________medicine to cure my cough.
+
+3． I want to buy________computer books.
+
+4． I don't have________friends here.
+
+5． A: I thought this shirt was a great deal but I washed it once and it's shrunk so much that I can't wear it.
+B: ________bargain. You should ask for a refund.
+
+6． A: Mike promised he'd help on this rush job. But he never showed up.
+B: ________friend he is.
+
+7． You can catch________bus. They all go to the railway station.
+
+8． ________1,500 passengers and crew died aboard the Titanic when it sank on April 14, 1912 after hitting an iceberg. It lies at a depth of________4,000 meters, ________640 kilometers south of Newfoundland, Canada
+
+答案：
+```
+1． some, any
+2． some
+3． some
+4． any
+5． some
+6． some
+7． any
+8． some, some, some
+```
+
+
+&emsp;
+## 3.3 个体限定词（一） : each/every
+### 3.3.1 与名词的搭配关系
+&emsp;&emsp; 从与名词的搭配来看， `each`和`every`的后面都**只能接** 单数可数名词， 这就是为什么要称它们为“个体”限定词的原因。 它们**不能**修饰不可数名词和复数名词。 比如我们说： `every/each boy`， 而不说：~~every/each boys~~。 此时若作主语， 句子的谓语动词显然要用单数。 例如：
+> Every boy has a gift. 每个男孩都有礼物。
+> Each boy has a gift. 每个男孩都有礼物。
+> Every man is the master of his own fortune. 每个人都是自己命运的主宰。
+> 
+这两个限定词都是只能与单数名词连用， 这是二者的共同点。 但二者的重点在于其用法上的差异。 具体阐述如下。
+
+### 3.3.2 二者用法上的差异
+#### (1) 二者在词性上的差别
+二者最重大的区别是： 
+> &emsp;&emsp; `each`不仅用作限定词，而且也可用作代词； 
+> &emsp;&emsp; 而every只能用作限定词。
+> 
+因此，`each`用作代词可以单独使用，而`every`只能与名词连用，不能单独使用。如上面的例句2可改为：
+> Each has a gift. 人人都有礼物。
+> 
+却不能说：
+> ~~Every has a gilt.~~
+> 
+注意下面句子的结构和用法：
+> Every boy/Each boy has a gift.
+> 每个男孩都有礼物。
+>
+这里的`each`和`every`都用作限定词， 后面只能接单数名词， 如这里的boy。
+
+> Each has a gift.
+> 人人都有礼物。
+> 
+`each`用作代词， 后面的谓语要用单数， 如这里的`has`。
+
+> Each of the boys has a gift.
+> 每个男孩都有礼物。
+> 
+`each`用作代词， 后面加`of`短语。 此时`of`的后面须加限定词， 然后再接复数名词。 不能说： ~~each of boys~~， 而要说： 
+> each of these/the/my boys
+> 
+但谓语依然用单数， 因为`each`是主语核心词。这个句子若要用`every`， 则只能这么说：
+> Every one of the boys has a gift.
+> 每个男孩都有礼物。
+> 
+`every`不能单独使用， 而且在与`of`短语连用时， 只能是分开写的`every one of...`， 而不能说： ~~everyone of...~~。 
+
+#### (2) 二者在意思上有两点区别
+**首先， `each`可以用来指两个或两个以上的事物。 而`every`却总是指三个或三个以上的事物， 不能指两个。** 例如：
+> Each sex has its own physical and psychological characteristics.
+> 男女各有其生理和心理上的特点。
+> 
+性别就“男”和“女”两种， 故不能说： ~~Every sex...~~。
+> There are a lot of trees on each side of the street.
+> 街道两旁都是树木。
+> 
+街道只有两旁， 故不能说： ~~...every side...~~。
+
+**其次， 尽管each和every都可作“每一个”讲， 但两者的意思并不完全一样**:
+>  every强调整体， 相当于all的意思； 
+> 而each则表示个别的概念。 当我们用each时， 我们强调的是一个一个不同的人或事物。 
+> 
+例如：
+> We want every student to succeed in the exam.
+> 我们希望每个学生都能通过考试
+>
+> Each student has his own personal dream in his mind.
+> 每个学生心中都有自己的个人梦想。
+> 
+这里用`every`是强调整体， 即表示希望“所有的学生”都能通过考试。
+这里用each是强调个体差别， 因为每个人的梦想必然是不同的。
+
+> Different fields create various No.1s. Each profession produces its own best. 
+> 三百六十行， 行行出状元。
+> 
+正是因为`each`和`every`强调的重点不一样， 所以， 我们可以将两者并列起来使用， 说成`each and every 既强调个体差别同时又强调整体`。 比如下面这个句子：
+> I want to welcome each and every balloon enthusiast in Philadelphia. Thank you for coming here this morning to commemorate the first balloon voyage in the United States.
+> 在此， 我想感谢费城的每一位气球爱好者， 感谢你们今天上午来参加这个聚会， 以纪念美国的首届气球放飞活动。
+> 
+
+#### (3) 与数词的搭配关系
+一般来说， `each`不与数词连用， 而`every`可与数词连用，然后再加复数名词。 例如：
+> every two days
+> every other day
+>
+> 每两天
+> 每隔一天
+> 
+再比如：
+> every four years 每隔三年／ 每四年
+> 
+> In the United States, presidential elections are held once every four years.
+> 在美国， 总统大选是每四年举行一次。
+> 
+另外， 我们也可以用 **“every＋序数词＋单数名词”** 这个结构，来表示同样的意思。比如：
+> every fourth year 每隔三年／ 每四年
+>
+
+### 3.3.3 练习 
+用`each`或`every`填空。
+1． You should prepare a list of topics and write a short speech on________one.
+
+2． Please write your suggestions________other line.
+
+3． We should be ready to help________other in learning English.
+
+4． Don't be afraid to admit that you are less than perfect. It is this fragile thread that binds us to________together.
+
+5． Chinese also have a hard time learning the European languages such as English, French, Spanish, Italian, or German, because________of these languages is filled with many idioms.
+
+6． Despite their differences in their educational background, they work very well along with________other.
+
+7． Then she told them to think of the nicest thing they could say about________of their classmates and write it down.
+
+8． She had listed all the good things________of Mark's classmates had said about him.
+
+9． Don't undermine your worth by comparing yourself to others. It is because we are different that________of us is special.
+
+10． The Olympic Games, first celebrated in Athens in 1896, has been held________four years so far this century, except during the two world wars.
+
+11． Tonight, I'd suggest that you try to have as many short conversations with as many foreigners as possible. But make sure you talk about something different with________one.
+答案
+```
+1． each
+2． every
+3． each
+4． each
+5． each
+6． each
+7． each
+8． each
+9． each
+10． every
+11． each
+```
+
+
+&emsp;
+## 3.4 个体限定词（二） ： another/other
+### 3.4.1 与名词的搭配关系
+&emsp;&emsp; 从与名词的搭配来看，`another`不能修饰不可数名词及复数名词，只能与单数可数名词连用， **表示不确定的“另一个”， “再一个”**。 比如：
+> another day 另一天
+>
+而不能接复数名词， 比如说：~~another days~~,也不能接不可数名词， 比如说： ~~another water~
+可以说：
+> another cup of water 另一杯水
+> 
+然而， `other`可与单数名词、复数名词以及不可数名词连用，**表示不确定的“另外的”， “其余的”人或物**。请看例子：
+> the other boy 另一个男孩
+> other boys 其他男孩
+> other water 其他水
+>
+
+### 3.4.2 与数词的搭配关系
+从与数词的搭配来看， 二者都可以与数词连用，但在语序和意思上都不相同。
+&emsp;&emsp; 首先， 二者在词序上的差别是： **数词要置于another的后面， 但要放在other的前面**。 具体来说就是采用下面的结构：
+> another＋数词＋复数名词
+> 数词＋other＋复数名词
+>
+请看下面的例子：
+> another three days 另外三天
+> 
+不说：~~three another days~~
+相反， 我们要说：
+> three other days 另外三天
+> 
+而不说：~~other three days~~
+&emsp;&emsp; 其次，从语义上来看，两种结构所表达的意思完全不同。`another ＋ 数词 ＋ 名词复数`” 这一结构的基本意思是“在原有基础上的一个延续。 比如当我们说：
+> We will stay here for another three days.
+> 我们要在这里再呆三天。
+> 
+意思是“我们要在这里再呆三天”。 言外之意，我们已经在这里待过一段时日了，现在还得再加上三天。
+而 `数词 ＋ other ＋ 复数名词`这一结构表达的意思却完全不同。 它并不像“another＋数词＋复数名词”结构那样具有一种“累加延续”的效果， 而只是单纯地表示“其他的， 另外的”。 比如我们说：
+> I am always busy from Monday to Thursday, but I can come on three other days.
+> 我周一至周四总是很忙， 但是我其他三天能来。
+> 
+**综上所述:**
+> &emsp;&emsp; `another＋数词＋名词复数` 结构强调的是 数量概念。 比如another three days表示“接下来还有三天”， 是一个量的累积。 
+> &emsp;&emsp; `数词＋other＋复数名词` 结构强调的是 类别概念。 比如`three other days`表示“其他三天”， 说明的是特定的某三天， 而不是一个数量的概念。
+> 
+另外， 与“another＋数词＋名词复数”这一结构意思相同的另一种结构是： “数词＋more＋复数名词”。
+比如我们可以说：
+> three more days = another three days 另外三天
+> 
+需要注意的是， 因为another不能与`a`连用， 因此与`a few`搭配时， 我们要说`another few`， 而不能说~~another a few~~。但如果与`more`连用， 则要说成`a few more`， 表示的意思完全一样。 比如：
+> another few weeks/a few more weeks 还有几个星期
+> another few boys/a few more boys 又有几个男孩
+> 
+顺便需要提及的是， 从以上的讨论我们可知， 虽然`another`不能直接与复数名词连用， 但其后可以先接数词或`few`然后再接复数名词。 最后， 简单总结如下：
+> another three days
+> three more days
+> 
+> three other days
+> 
+> 还有三天
+> 还有三天
+> 
+> 其他三天
+> 
+
+### 3.4.3 other本身的其他用法
+现在， 我们简单总结一下有关`other`这个限定词的其他用法。 具体如下：
+#### (1) other之前可以有其他限定词修饰
+&emsp;&emsp; 常见的置于other前面的限定词包括： `some， any， every， enough， one/two/three…， no， many`和 `his/my/their`等。 例如激励演讲大师金·克拉（Zig Ziglar） 有句名言是这么说的：
+> You can have everything in life you want if you'll just help enough other people to get what they want! 
+> 如果你能帮助别人梦想成真， 你自己也就可以心想事成！
+> 
+再比如其他例句：
+> Can you give me some other reference books? 你能否给我一些其他方面的参考书？
+> every other day ＝ every two days 每隔一天
+> no other tools 没有其他的工具了
+> Have you got any other colors? 你这里有别的颜色吗？
+> I have many other books for you to read. 我还有许多其他的书供你看。
+>
+需要提醒读者注意的是， 我们不能因为汉语里可以说“其他许多书”而译成other many books*； 不能因为汉语里可以说“其他三本书”而译成~~other three books~~； 不能因为汉语里可以说“其他一些书”而译成~~ther some books~~等等。 也就是说， 在这方面， 英汉的语序是相反的。
+
+#### (2) other/others
+&emsp;&emsp; 词尾不带`-s`的`other`只能作限定词来用， 其后面必须接名词， 而不能单独使用。 比如不能说： ~~other are...~~。 与此相反， `others`只能用作代词，后面不能再接名词，而只能单独使用，比如不能说：~~others people are...~~*。
+
+#### (3) other/the other
+&emsp;&emsp; 这里是关于`other`与`the other`在含义上的区别的问题。 “other＋名词”表示不确定的“其他的， 另外的”。 若有了定冠词the限定， “the other＋名词”则表示特定范围内的“剩下其余的”。
+我们先来看下面这段话：
+**Five Balls in the Air**
+> &emsp;&emsp; Imagine life as a game in which you are juggling some five balls in the air. You name them—work, family, health, friends and spirit, and you're keeping all these balls in the air.
+> &emsp;&emsp; You will soon understand that work is a rubber ball. If you drop it, it will bounce back. But the other four balls are made of glass. If you drop one of these, it will be irrevocably scuffed, marked, nicked, damaged or even shattered. They will never be the same. You must understand that and strive for balance in your life.
+> &emsp;&emsp; How?
+> &emsp;&emsp;  Don't undermine your worth by comparing yourself with others. It is because we are different that each of us is special. Don't set your goals by what other people deem important. Only you know what is best for you.
+>
+> 空中的五只球
+> &emsp;&emsp; 把生活想象为一个抛接球游戏， 你必须同时去抛接五个球， 这五个球分别是： 工作、 家庭、 健康、 朋友以及精神生活，然而你不可以让任何一个球落地。
+> &emsp;&emsp; 你很快就会发现， 工作是一个橡皮球， 如果它掉到地上， 会再弹回来。 而其他四个球——家庭、 健康、 朋友以及精神生活是玻璃制的， 如果你让这四个球其中任何一个落下来， 它们会磨坏、 受损， 甚至会粉碎。 而一旦落下， 它们将不再和以前一样。 你必须懂得这个道理， 在生活中设法求得平衡。
+> &emsp;&emsp; 但要怎么做呢？
+> &emsp;&emsp; 不要盲目地与其他人做比较而丧失了自己的价值， 因为每个人都不同， 因此每个人都是独特的。 不要因为别人认为某事重要， 就以此来设立自己的目标。 只有你自己知道什么最适合你。
+> 
+&emsp;&emsp; 这是几年前在某个大学的毕业典礼上， 可口可乐公司总裁布莱恩·戴森（Brian Dyson） 说的一番话。 这番话说明了我们应该处理好工作与生活其他方面的关系。 当然， 不同人有不同的选择。
+&emsp;&emsp; 在这段话中， 因为一开始就有five balls这个限定的范围， 所以在作者说完work之后， 他用了the other来限定four balls。 在下面的other people当中， 因为没有特定的范围， 所以就用other修饰people。 此外， 文中的others相当于other people。
+&emsp;&emsp; 上面这篇短文告诫我们： 不能盲目地去与别人比较， 我们应该按照自己的价值观来选择自己想要的生活。 但在现实中， 我们都会情不自禁地与身边的人比较， 而且比较的结果往往是“别人永远比自己好”， 用
+汉语的俗话说就是“这山望着那山高”。 英语里有一个类似的谚语， 是`The grass on the other side of the fence is greener. 即表示“篱笆那一边的草总是更绿”`。 比如下面的句子：
+> The grass on the other side always looks greener. While we are eyeing the grass on the other side, there are others who are eyeing the grass on our side. They would be happy to trade places with us.
+> 篱笆那边的草看起来总是更绿。 殊不知， 当我们眼睛盯着篱笆那边的草的时候， 其他人正盯着我们这边的草呢！ 如果能与我们交换， 他们高兴都来不及呢！
+> 
+因为篱笆就只有“两边”， 所以要说`the other side`， 这是相对于`our side`来说的。 此外， 我们也看到了`others`的后面没有接任何名词， 而是单独使用的。
+所以， 我们世人总是生活在矛盾中， live elsewhere（生活在别处） ！
+请再比较下面的例句：
+> ① Of all metals, only mercury is liquid and the other metals are solid.
+> ② Some metals are magnetic and other metals are not.
+>
+> ① 在所有的金属中， 只有水银（在常温下） 是液体， 而其他金属都是固体。
+> ② 有些金属有磁性， 有些金属就没有磁性。
+>
+&emsp;&emsp; 在例句① 中， 由于句首的介词短语`of all metals`用来提供了范围， 所以要用`the other`来限定`metals`。 
+&emsp;&emsp; 在例句② 中， 由于没有像上面那样的限定范围， 而只是泛泛地在谈论一个话题， 所以只用`other`来限定`metals`。 这也是为什么我们常见到`some...other`搭配， 而不是`some...the other`。
+&emsp;&emsp; 简言之， `other`表示不确定的， t`he other`表示确定的。 这一区别同样适用于`others/the others`。 比如上面的例句中的两个句子可以分别改写成：
+> Of all metals, only mercury is liquid and the others are solid.
+> Some metals are magnetic and others are not.
+> 
+
+
+&emsp;
+## 3.5 个体限定词（ 三） ： either/neither
+### 3.5.1 与名词的搭配关系
+从与名词的搭配来看， 二者都是 与 单数可数名词 连用，谓语动词用单数。 请看例句：
+> Either day is OK. （ 不说： ...are OK.） 两天中的哪一天都行。
+> Neither day is OK. （ 不说： ...are OK.） 两天中的哪一天都不行。
+> 
+这是二者作限定词的用法。 此时， 二者均不能再与其他的限定词（如冠词、 物主代词或指示形容词等） 连用。 比如我们不说：~~the either book~~、 ~~either your book~~
+
+### 3.5.2 二者用作代词
+用作代词时 二者不直接接名词， 而是单独使用或接`of`短语。 例如：
+> Come over on Saturday or Sunday. Either is OK. 你周六或周日过来， 哪天都行。
+> 
+> You can't choose Choices A and B. Neither is right. 选项A和B你都不能选， 两个都不对。
+>
+注意它们与of短语连用时的结构：
+> `either/neither of` ＋ 限定词（如冠词、物主代词或指示形容词）＋ 名词复数 ＋ 单数谓语动词”
+> 
+请看例句：
+>  **Either of the answers** is right. 两个答案都对。
+>  **Neither of my children** has done that. 我的两个孩子都没做那件事。
+> 
+在这个结构中有三点须注意：
+* (1) 名词前面必须有限定词。 比如我们不说： ~~either of answers~~, ~~neither of children~~。
+* (2) 名词必须用复数。 比如我们不说： ~~either of the answer~~, ~~neither of my child~~。
+* (3) 谓语动词通常用单数。 比如我们一般不说：~~Either of the answers are* right.~~，~~Neither of my children have* done that~~.
+
+
+### 3.5.3 词义差别
+从词义的角度分析， 这两个词的词义不同。
+####  either
+either有两个意思。 
+(1) 首先， either的基本意思是“两个当中的任何一个”，“这个或那个（`one or the other`） ”。 例如：
+> Come over on Saturday or Sunday. Either day is OK. 
+> 你周六或周日过来， 这两天中的哪一天都行。
+> 
+(2) 另外， either有时候也指“两个中的每一个（`each of two`） ”，特别是在与`end`和`side`连用时。例如：
+> There are a lot of trees on either side of the river. 河的两岸都种满了树。
+> 
+请比较：
+> There are a lot of trees on both sides of the river. （side要用复数）
+> 
+还可以说：
+> There are a lot of trees on each side of the river. （each可指两者或两者以上）
+> 
+但不可以说：
+~~There are a lot of trees on every side of the river. *（every指三者或三者以上）~~
+#### neither
+`neither`只有一个意思： “两者都不（`not one and not the other`） ”。比如：
+> Neither of the answers is right. 两个答案都不正确。
+>
+
+### 3.5.4 either...not 相当于 neither
+请看例句：
+> Either of the answers is not correct.
+> ＝ Neither of the answers is correct. 
+> 两个答案都不正确。
+> 
