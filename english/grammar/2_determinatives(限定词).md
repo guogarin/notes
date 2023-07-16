@@ -1951,3 +1951,118 @@ D． another
 > ~~many these students~~
 >
 
+
+&emsp;
+## 3.9 限定词总结（四）：限定词之间的位置关系
+&emsp;&emsp; 根据**限定词在名词前的位置关系**， 我们把限定词分为三类： 
+> ① 前位限定词（pre-determiner）
+> ② 中位限定词（central determiner）
+> ③ 后位限定词（post-determiner）
+> 
+关于它们的搭配关系， 现在我们详细描述如下：
+
+### 3.9.1 前位限定词
+#### (1) 种类
+前位限定词主要是用来说明名词的数量， 主要有三种：
+**1） 表示倍数关系的数量形容词。** 例如：
+> half my salary 我工资的一半
+> twice my salary 我工资的两倍
+> double my salary 我工资的两倍
+> three times my salary 我工资的三倍
+>
+**2） 表示几分之几的数词。** 例如：
+> one third my salary 我工资的三分之一
+> two-thirds my salary 我工资的三分之二
+> 
+**3） 个体形容词**： `all`和`both`。例如：
+> all my salary 我全部的工资
+> both my salaries 我的两份工资
+>
+#### (2) 共存性
+前位限定词一般互相排斥， 不能共存。 比如不能说：
+> ~~all half my salary~~
+> ~~half double her income~~
+>
+
+### 3.9.2 中位限定词
+### (1) 种类
+**1） 冠词： `the`， `a/an`**
+> all the book 所有的书
+> half an hour 半小时
+> twice the size 两倍的号码
+>
+**2） 物主形容词：` my， your， his， her， our`和`their`**
+16 all my money 我所有的钱
+17 all his money 他所有的钱
+**3） 指示形容词： this， that， these和those**
+> all these problems 所有这些问题
+> twice that size 那个号码的两倍
+> four times this amount 这个数量的四倍
+>
+4） 名词属格： `John's`和`his father's`等。
+> all John's money 约翰所有的钱
+>
+
+#### (2) 共存性
+中位限定词亦彼此排斥， 不能同时出现。 比如不能说：
+> ~~my the money~~
+> ~~our these problems~~
+> 
+
+### 3.9.3 后位限定词
+#### (1) 种类
+**1） 基数词或序数词： `one/first， two/second， three/third`和`four/fourth`等。** 例如：
+> the two children 那两个孩子
+> his fourth birthday 他的四岁生日
+>
+**2） 一般序数词： `next， last， past， previous， subsequent， other和another`等。**例如：
+> my next plan 我的下一个计划
+> our last meeting 我的最后一次会议
+> your previous mistakes 你从前的错误
+> her subsequent response 她接下来的反应
+>
+**3） 数量限定词： `few， many， several， little， less`和`more`等。** 例如：
+> my many friends 我的许多朋友
+> our several achievements 我们的几项成就
+> the few friends that I have 我的几个朋友
+>
+
+#### (2) 共存性
+不同于相互排斥的前位和中位限定词， 后位限定词可以同时出现在名词前。 例如：
+> my next two plans 我的下面两个计划
+> several other people 其他几个人
+>
+但也有先后顺序问题， 一般采用如下顺序：
+**1） 序数词／ 一般序数词＋基数词。** 例如：
+> the first two weeks 前两个星期
+> during the next 50 years 在接下来的50年里
+>
+**2） 序数词／ 一般序数词＋数量限定词。** 例如：
+> during the past few years 在过去的几年里
+>
+**3） 一般序数词与基数词的位置关系**
+基数词／ 数量限定词一般置于other的前面， 如： `two other people`和`many other people`。 基数词一般置于`another`的后面， 如： `another ten minutes`（又过了10分钟） 。
+
+
+&emsp;
+## 3.10 限定词与形容词的区别
+尽管限定词和形容词都可以放在名词前面，来修饰名词，但二者在性质和用法上都存在着很大的差150别。 具体如下：
+&emsp;&emsp; **一、 限定词用以限定名词所指的范围， 对名词起泛指或特指、 定量或不定量等限定修饰作用； 而形容词则是用来表示名词的性质、 特征的**。 例如：
+> many/few/his children 许多／ 几乎没有／ 他的孩子
+> naughty/lovely/clever children 淘气的／ 可爱的／ 聪明的孩子
+>
+&emsp;&emsp;  **二、限定词一般不用作表语（少数表示数量的限定词few， many和much除外） ， 而绝大多数形容词都可用作表语。除了few， little， many和much外， 限定词没有比较级和最高级形式， 而大多数形容词有比较级和最高级形式。限定词总是位于名词之前， 而形容词作定语时有的可置于被修饰词之后。** 例如：
+> this/his/Tom's/every/the book 这本／ 他的／ 汤姆的／ 每一本／ 这本书
+> 
+> a kind woman, a handsome guy, a clever boy 一个好心的女人， 一个英俊的小伙子， 一个聪明的男孩
+> 
+> the secretary general 秘书长
+> 
+> the attorney general 大律师
+> 
+> something interesting 有趣的事情
+> 
+> the notary public 公证员
+> 
+> the president elect 当选总统（但尚未就任）
+> 
