@@ -180,3 +180,104 @@
 
 
 
+
+
+&emsp;
+&emsp; 
+# 2. 简单句与主语从句
+&emsp;&emsp; 从上一节的讨论中， 已经把握了名词从句的本质， 就是用三种句子（ 陈述句、 一般疑问句和特殊疑问句） 充当四种句子成分（ 主语、 宾语、 表语和同位语） 。 所以， 当用这三种句子充当另外一个句子的主语时， 就构成了主语从句。 因此， 本节内容安排如下：
+> (1) 陈述句作主语
+> (2) 一般疑问句作主语
+> (3) 特殊疑问句作主语
+> 
+## 2.1 陈述句作主语
+### 2.1.1 将主语从句放在句末
+把 `that ＋ 陈述句` 这一结构放在主语的位置即构成主语从句。 请看例句：
+> ① **That the seas are being overfished** has been known for years.
+> 海洋正在被人们过度捕捞， 许多年以来这已是尽人皆知的。
+> 
+这里`that`引导的从句`that the seas are being overfished`即是一个主语从句，直接置于主语的位置。
+
+> ② **That the plates are moving** is not beyond dispute.
+> 地球板块是在漂移的， 这一点并非毫无争议。
+> 
+这里`that`引导的从句`that the plates are moving`即是一个主语从句， 直接置于主语的位置。
+
+> ③ **That English is important** is an undoubted fact. 英语很重要， 这是毋庸置疑的事实。
+> ④ **That he doesn't understand English** is obvious. 很显然， 他不懂英语。
+> ⑤ **That the world is round** is a fact. 地球是圆的， 这是一个事实。
+> ⑥ **That the moon itself does not give off light** is common knowledge. 月球本身不发光是一个基本常识。
+> 
+**对于陈述句作主语， 更常见的是用`it`作形式主语置于句首， 而将主语从句放在句末。** 因此上面各句可分别改为：
+> ① It has been known for years **that the seas are being overfished.**
+> ② It is not beyond dispute **that the plates are moving.**
+> ③ It is an undoubted fact **that English is important.**
+> ④ It is obvious **that he doesn't understand English.**
+> ⑤ It is a fact **that the world is round.**
+> ⑥ It is common knowledge **that the moon itself does not give off light.**
+> 
+
+### 2.1.2 常见的主语从句句型
+**(1) `It is` ＋ 过去分词 ＋ `that`从句**
+It's reported that...（据报道……）
+It's believed that...（人们相信……）
+It is generally thought that...（人们普遍认为……）
+It should be noted that...（应当注意……）
+It has been found that...（现已发现……）
+It must be pointed out that...（必须指出……）
+类似动词还有`say， expect， know， estimate`和`forecast`等。 请看例句：
+> As a child and as an adult as well, Bill Gates was untidy. It has been said that in order to counteract this, Mary drew up weekly clothing plans for him. 
+> 不论是在小时候还是长大成人以后， 比尔·盖茨都是不修边幅的。 据说为了让他改掉这个习惯， 玛丽专门为他制定了一周的着装计划。
+> 
+
+**(2) `It is` ＋ 形容词 ＋ `that`从句**
+> It is `clear` that...（显然……）
+> It is `possible` that...（很可能……）
+> It is `likely` that...（很可能……）
+> It is `natural` that...（很自然……）
+> It is `certain` that...（可以相信……）
+> It is `strange` that...（奇怪的是……）
+> It is `fortunate` that...（幸运的是……）
+> It is `necessary` that...（有必要……）
+> 
+例句：
+> It is true that English is becoming an international language. 
+> 的确， 英语正日益成为一门国际通用语言。
+> 
+
+**(3) `It is` ＋ 名词短语 ＋ that从句**
+常用的名词有： `a pity, a shame, an honor, a good idea`和`no wonder`等等。
+> It is a pity that...（可惜的是……）
+> It is a fact that...（事实是……）
+> It is good news that...（……真是太好了……）
+> It is a good thing that...（……真是件好事……）
+> It is no wonder that...（难怪……）
+> It is a shame that...（ 遗憾的是……； ……真是太不像话了）
+> It is an honor that...（ 真荣幸……）
+> It is common knowledge that...（ ……是常识）
+> It is my belief that...（ 我相信……）
+> It is a miracle that...（ ……真是奇迹）
+> 
+例句：
+> It is common knowledge that the whale is not a fish. 
+> 鲸鱼不是鱼类， 这是一个常识。
+> 
+> It is common knowledge that a flash of lightning is seen before a clap of thunder is heard. 
+> 人们先看到闪电， 后听见雷声， 这是一个常识。
+> 
+> It is a shame that you did not pass the test. 
+> 你没通过这次考试真遗憾。
+> 
+
+
+&emsp;
+## 2.2 一般疑问句作主语
+&emsp;&emsp; 一般疑问句作主语时， 要把一般疑问句变成陈述句， 并且用`whether`来引导， 然后充当句子的主语， 即构成主语从句。 请看例句：
+> Whether he comes or not makes no difference to me. 他来不来对我来说无所谓。
+> 
+
+
+&emsp;
+## 2.3 特殊疑问句作主语
+
+
