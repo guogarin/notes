@@ -140,7 +140,7 @@
 &emsp;&emsp; 当把一个特殊疑问句（见下表中的各例句1）当作名词来使用时，需要先将疑问句的倒装语序变成陈述句语序，然后分别充当另一个句子的主语、宾语、表语或同位语等四种成分（见下表中的各例句2），即构成主语从句、宾语从句、表语从句或同位语从句等四种名词从句。 请看下表：
 | 特殊疑问句                                           | 名词从句                                                                                           | 解释                                                   |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| `Why did dinosaurs becomeextinct?`                   | `Why dinosaurs became extinct is still a mystery.` 恐龙为什么会灭绝目前还是个未解之谜。            | 一般疑问句作主语，构成主语从句                         |
+| `Why did dinosaurs become extinct?`                   | `Why dinosaurs became extinct is still a mystery.` 恐龙为什么会灭绝目前还是个未解之谜。            | 一般疑问句作主语，构成主语从句                         |
 | `How many letters are therein the English alphabet?` | `I don't know how many letters there are in the Englishalphabet.` 我不知道英文字母表中有多少个字母 | 特殊疑问句作宾语，构成宾语从句                         |
 | `What are we badly in needof?`                       | `Moncy is what we are badly in need of` 我们急需的就是钱。                                         | 特殊疑问句作表语，构成表语从句                         |
 | `Where could we get theloan?`                        | ` There arose the question where we could get the loan` 现在的问题是我们去哪里弄到这笔贷款         | 特殊疑问句作同位语，补充说明`question`，构成同位语从句 |
@@ -184,7 +184,7 @@
 
 &emsp;
 &emsp; 
-# 2. 简单句与主语从句
+# 2. 主语从句
 &emsp;&emsp; 从上一节的讨论中， 已经把握了名词从句的本质， 就是用三种句子（ 陈述句、 一般疑问句和特殊疑问句） 充当四种句子成分（ 主语、 宾语、 表语和同位语） 。 所以， 当用这三种句子充当另外一个句子的主语时， 就构成了主语从句。 因此， 本节内容安排如下：
 > (1) 陈述句作主语
 > (2) 一般疑问句作主语
@@ -218,6 +218,7 @@
 > 
 
 ### 2.1.2 常见的主语从句句型
+注意，都是由`It is`引导的。
 **(1) `It is` ＋ 过去分词 ＋ `that`从句**
 It's reported that...（据报道……）
 It's believed that...（人们相信……）
@@ -279,5 +280,201 @@ It must be pointed out that...（必须指出……）
 
 &emsp;
 ## 2.3 特殊疑问句作主语
+> What we need is wholly new kind of police force.
+> 我们需要的是一个全新的警察机构。
+> 
+这里的特殊疑问词`what`是作`need`的宾语， 所以需将原来的倒装句`what do we need`调整为陈述句语序`what we need`， 然后作主句的主语， 即构成主语从句。
+
+> What he told you is true.
+> 他和你讲的都是实话。
+> 
+这里的特殊疑问词`what`是作`told`的直接宾语， 所以需将原来的倒装句`what did he tell you`调整为陈述句语序`what he told you`，然后作主句的主语， 即构成主语从句。
+
+> When the meeting is to be held has not yet been decided.
+> 会议何时举行还没决定。
+> 
+这里的特殊疑问词`when`是作从句的时间状语， 所以需将原来的倒装句`when is the meeting to be held`调整为陈述句语序`when the meeting is to be held`， 然后作主句的主语， 即构成主语从句。
+
+> Why he refused to cooperate with us is still a mystery.
+> 他为什么会拒绝与我们合作， 目前还不清楚。
+> 
+这里的特殊疑问词why是作从句的原因状语，所以需将原来的倒装句`why did he refuse to cooperate with us`调整为陈述句语序`why he refused to cooperate with us`，然后作主句的主语，即构成主语从句。
+
+> How a person masters his fate is more important than what his fate is.
+> 对于一个人来说， 重要的是如何掌握自己的命运， 而不是被动地接受命运的安排。
+> 
+这里的特殊疑问词how是作从句的方式状语， 所以需将原来的倒装句`how does a person master his fate`调整为陈述句语序`how a person masters his fate`， 然后作主句的主语， 即构成主语从句。
+
+> September 11, 2001 started out as an ordinary day, but what happened that morning will be forever etched（铭刻） in our memories.
+> 2001年9月11号那天和平日一样到来， 但是那天早晨发生的事情将永远铭刻在人们的记忆里。
+> 
+这里的特殊疑问词what是作从句的主语， 所以无需调整语序， 而直接将疑问句what happened that morning作主句的主语，即构成主语从句。
 
 
+
+
+
+
+&emsp;
+&emsp; 
+# 3. 宾语从句
+## 3.1 陈述句作宾语
+把 `that ＋ 陈述句` 这一结构放在宾语的位置即构成宾语从句。 请看例句：
+> We know (that) the world is round. 我们知道， 地球是圆的。
+> 
+> I think (that) a sound knowledge of grammar is indispensable to good writing. 
+> 我认为扎实的语法功底对良好的写作极为重要。
+>
+**需要注意的是，只有宾语从句中的`that`才可以省去（在不影响对句意的理解的情况下），而主语从句、 表语从句和同位语从句中的that一般不能省去。**
+
+
+&emsp;
+## 3.2 一般疑问句作宾语
+把 **`whether/if` ＋ 陈述句** 这一结构放在宾语的位置即构成 **宾语从句**。 请看例句：
+> I don't know **if/whether he needs my help**. 我不知道他是否需要我的帮助。
+> No one knew **whether or not interest rates would rise**. 没有人知道利率是否会提高。
+>
+这里原来的一般问句是`would interest rates rise`， 变成陈述句语序后成为`interest rates would rise`，然后为了保留疑问的意义又添加了`whether or not`，于是便有了`whether or not interest rates would rise`，在主句的谓语`knew`后面作宾语， 即构成宾语从句。需要注意的是， 因为一般不说`if or not`， 所以这里的连词不宜用`if`， 而要用`whether`。
+**注意： 只有宾语从句才可以用`if`引导， 主语从句、 表语从句和同位语从句一般都要用`whether`引导。**
+
+
+&emsp;
+## 3.3 特殊疑问句作宾语
+把特殊疑问句变成陈述句语序后 放在宾语的位置 即构成宾语从句。 请看例句：
+> I have not decided whom I should vote for.
+> 我还没有决定该投谁的票。
+> 
+这里的特殊疑问词`whom`是作`vote for`的宾语， 所以需将原来的倒装句whom should I vote for调整为陈述句语序`whom I should vote for`， 然后作主句谓语`decided`的宾语， 即构成宾语从句。
+
+> No one knows exactly how speech began.
+> 没有人确切地知道语言是如何产生的。
+> 
+这里的特殊疑问词`how`是作`began`的方式状语， 所以需将原来的倒装句`how did speech begin`调整为陈述句语序`how speech began`， 然后作主句谓语`knows`的宾语， 即构成宾语从句。
+
+> Could you tell me where the post office is?
+> 你能告诉我邮局在哪里吗？
+> 
+这里的特殊疑问词`where`是作`is`的表语， 所以需将原来地倒装句`where is the post office`调整为陈述句语序`where the post office is`， 然后作主句谓语tell的直接宾语， 即构成宾语从句。
+
+> We don't know why he did not come yesterday.
+> 我们不知道他昨天为什么没来。
+> 
+这里的特殊疑问词why是作`come`的原因状语， 所以需将原来的倒装句`why did he not come yesterday`调整为陈述句语序`why he did not come yesterday`， 然后作主句谓语`know`的宾语， 即构成宾语从句。
+
+> They gave who came to the meeting a pamphlet.
+> 他们给所有到会的人员发了一本小册子。
+> 
+这里的特殊疑问词`who`是作`came`的主语， 所以无需调整语序， 而直接将疑问句who came to the meeting作主句谓语gave的间接宾语， 即构成宾语从句。 另外， `gave`的直接宾语是`a pamphlet`。
+
+> You should vote for which candidate you assume best.
+> 你应该投票给那些你认为最优秀的候选人。
+> 
+这里的特殊疑问词`which`是作定语， 修饰名词。 `candidate`， 所以需将原来的倒装句`which candidate do you assume best`调整为陈述句语序`which candidate you assume best`， 然后作主句谓语vote for的宾语， 即构成宾语从句。
+
+> The mother will buy whichever books her son wants.
+> 她儿子要什么书， 这位妈妈就给他买什么书。
+> 
+这里的特殊疑问词`whichever`相当于`which`， 是`which`的强调形式， 作定语， 修饰名词books， 所以需将原来的倒装句`whichever books does her son want`调整为陈述句语序`whichever books her son wants`， 然后作主句谓语buy的宾语， 即构成宾语从句。
+
+从以上例句看到，宾语从句可以是直接放在动词后面作宾语，也可以是作双宾语动词的直接宾语或间接宾语，也可以放在介词后面作宾语。也就是说，宾语从句的位置可以有很多种。 
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 4. 表语从句
+## 4.1 陈述句作表语
+把“that＋陈述句”这一结构放在表语的位置即构成表语从句。 请看例句：
+> My idea is that the child should be sent to school. 我的看法是， 应该把这个孩子送去上学。
+> 
+
+
+&emsp;
+## 4.2 一般疑问句作表语
+把“whether＋陈述句”这一结构放在表语的位置即构成表语从句。 请看例句：
+> My concern is whether he comes or not. 我关心的是他到底来不来。
+> 
+
+
+&emsp;
+## 4.3 特殊疑问句作表语
+把特殊问句变成陈述句语序后放在表语的位置即构成表语从句。 请看例句：
+> (1) Change is what keeps us fresh and innovative. Change is what keeps us from getting stale. Change is whatkeeps us young. 
+> 唯有变革才能使我们保持思维敏锐， 富有创造性。 唯有变革才能防止我们思想僵化。 唯有变革才能使我们永葆青春。
+> 
+> (2) Money is what we are badly in need of. 我们急需的是钱。
+> 
+> (3) Yesterday is history. Tomorrow is a mystery. Today is a gift. That's why it's called the present! 
+> 昨天是历史。 明天是一个谜。 今天是一个礼物。 因此它才被称为present！
+> 
+> (4) The point is when you will become rich. 问题的关键是你何时才能有钱。
+> 
+> (5) This is where our basic interest lies. 这是我们的根本利益所在。
+>
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 5. 同位语从句
+&emsp;&emsp; 所谓同位语， 就是用来补充说明名词的成分。 被补充说明的名词， 叫作先行词。 当用一个完整的句子来补充说明名词时， 即构成同位语从句。 所以， 同位语从句都位于一个名词的后面， 便构成了“名词＋连词＋同位语从句”这样的结构。 
+## 5.1 陈述句作同位语
+把“that＋陈述句”这一结构放在同位语的位置即构成同位语从句。 请看例句：
+> (1) He was prepared to prove his theory that two different weights would fall to the ground at the same time.
+> 他准备证明他的这一理论： 两个重量不同的物体将同时落地。
+> 
+这里的先行词是`his theory`， 同位语从句是`that two different weights would fall to the ground at the same time`。
+
+> (2) The fact that he succeeded in the experiment pleased everybody.
+> 他试验取得了成功， 这让大家很高兴。
+> 
+这里的先行词是`the fact`， 同位语从句是`that he succeeded in the experiment`。
+
+> (3) The rumor that Tom was a thief turned out to be untrue.
+> 有人曾谣传汤姆是小偷， 结果证明是不对的。
+> 
+这里的先行词是`the rumor`， 同位语从句是`that Tom was a thief`。
+
+注意： 同位语从句可能与其修饰的名词被其他成分隔开。 请看例句：
+> (4) They spread the lie everywhere that Tom was guilty of theft.
+> 他们到处散布谣言说汤姆犯有盗窃罪。
+> 
+这里的先行词`the lie`与同位语从句`that Tom was guilty of theft`被`everywhere`隔开。
+
+> (5) A saying goes that practice makes perfect.
+> 俗话说， 熟能生巧。
+> 
+这里的先行词`a saying`与同位语从句`that practice makes perfect`被谓语`goes`隔开。
+
+
+> (6) Dreary months dragged by before the tragic news reached her that her beloved brother had been killed for anti-Nazi activities.
+> 在狱中度过数月梦魇般的日子后， 突然有一天传来噩耗： 她亲爱的哥哥在反法西斯活动中被杀害了。
+> 
+这里的先行词`the tragic news`与同位语从句`that her beloved brother had been killed for anti-Nazi activities`被谓语`reached her`隔开。
+这种被分隔开来的情形在阅读文章中是比较常见的， 遇到时一定要认真分析， 才能正确地理解句子的意思。
+
+
+&emsp;
+## 5.2 一般疑问句作同位语
+把 `whether＋陈述句` 这一结构放在同位语地位置即构成同位语从句。请看例句：
+> They are faced with the problem whether they should continue to work. 他们面临这样一个问题： 他们是否应该继续工作。
+> 
+
+
+&emsp;
+## 5.3 特殊疑问句作同位语
+把特殊疑问句变成陈述句语序后放在同位语的位置即构成同位语从句。 请看例句：
+> 1 There arose the question where we could get the loan. 现在的问题是我们去哪里弄到这笔贷款。
+> 
+> 2 The question who should go abroad on this business tour requires consideration.
+> 谁应该出差去国外， 这个问题需要仔细考虑。
+> 
+> 3 I have no idea when he will return. 我不知道他什么时候回来。
+> 
+最后需要说明的是，同位语从句主要是由`that`引导，而很少用whether以及连接代词或连接副词引导，这是因为我们多是用陈述句来补充说明名词的内容，而很少用一般疑问句或特殊疑问句来补充说明名词的内容。
