@@ -114,14 +114,63 @@ that is useful to a wide range of users in making economic decisions.
 
 &emsp;
 ## 2.4 financial statements
-重点掌握 四表一附注 及其 之间的勾稽关系
+重点掌握 四表一附注 及 他们之间的勾稽关系
 ### 2.4.1 Balance Sheet
 #### (1) definition of `Balance Shee`
 资产负债表(Balance Sheet)
 > &emsp;&emsp; The `balance sheet` (also called the `statement of financial position` or `statement of financial condition`) presents a company’s **current financial position** by disclosing the resources the company controls (assets) and its obligations to lenders and other creditors (liabilities) **at a specific point in time**.
 > 
+**current financial position**  : 
+|                        |                                                         |
+| ---------------------- | ------------------------------------------------------- |
+| **current**            | `date of balance sheet`（资产负债表日（中国是12月31日）） |
+| **financial position** | 该公司的 资产 、 负债 所有者权益                        |
 
-### 2.2 Statement of Comprehensive Income
+ 
+### (2) what does a Balance sheet consists of?
+The balance sheet consists of three elements:
+> 1） **Assets** are the resources controlled by the firm.
+> 2） **Liabilities** are amounts owed to lenders and other creditors.
+> 3） **Owners’ equity** (also `shareholders’ equity`, `shareholders’ funds`, or `net assets`) is the residual interest in the net assets of an entity that remains after deducting its liabilities from its assets.
+> 
+Transactions are measured so that the fundamental accounting equation holds: 
+> `assets` = `liabilities` + `owners’ equity`
+> 
+The proportions of liabilities and equity used to finance a company are known as the company’s capital structure.
+#### Liabilities 和 Debt
+Liabilities 的范围更广，它包含了Debt
+
+### 2.4.2 `Statement of Comprehensive Income` and `Income Statement`
+#### (1) Difference between `Statement of Comprehensive Income` and `Income Statement`
+一般来说美国公司对于体现公司收入费用的方式有两个选择：
+> ① 采用 `综合收益表（Statement of Comprehensive Income）`的形式;
+> ② 采用 `利润表（Income Statement）` + `其他综合收益表（（Other Comprehensive Income Statement）` 两个报表的形式;
+> 
+<span style= "color:red; font-size:21px; font-weight:bold"> 
+    综合收益表与利润表的区别 其实就是两个表格是 分开 还是合起来 那么简单而已。
+</span>
+
+**① 采用 `综合收益表（Statement of Comprehensive Income）`的形式**
+&emsp;&emsp; 综合收益表除了包括`利润表（Income Statement）`里的所有内容外，还包含`其他综合收益（Other Comprehensive Income）`。用个公式表达就是：
+> 综合收益（综合收益表内容） = 净利润（利润表内容） + 其他综合收益（其他综合收益表内容）
+> 
+> Comprehensive income = Net income + Other Comprehensive income
+> 
+
+**② 采用 `利润表（Income Statement）` + `其他综合收益表（（Other Comprehensive Income Statement）` 两个报表的形式**
+
+#### (2) `Income Statement`
+`The income statement` (also known as `the statement of operations` or `the profit and loss statement`) reports on the financial performance of the firm **over a period of time**(注意，是一段时间的表现). The elements of the income statement include revenues, expenses, and gains and losses.
+Revenues are inflows from delivering or producing goods, rendering services, or other activities that constitute the entity’s ongoing major or central operations.
+Expenses are outflows from delivering or producing goods or services that constitute the entity’s ongoing major or central operations.
+Other income includes gains that may or may not arise in the ordinary course of business.
+
+#### Net income
+
+
+**参考文献：**
+> [综合收益表与利润表有什么区别？](https://www.zhihu.com/question/22229391)
+> 
 
 
 ### 2.3 Cash Flow Statement
@@ -149,25 +198,3 @@ that is useful to a wide range of users in making economic decisions.
 
 
 
-## `Statement of Comprehensive Income` 和 `Income Statement`
-一般来说美国公司对于体现公司收入费用的方式有两个选择：
-> ① 采用 `综合收益表（Statement of Comprehensive Income）`的形式;
-> ② 采用 `利润表（Income Statement）` + `其他综合收益表（（Other Comprehensive Income Statement）` 两个报表的形式;
-> 
-<span style= "color:red; font-size:21px; font-weight:bold"> 
-    综合收益表与利润表的区别 其实就是两个表格是 分开 还是合起来 那么简单而已。
-</span>
-
-**① 采用 `综合收益表（Statement of Comprehensive Income）`的形式**
-&emsp;&emsp; 综合收益表除了包括`利润表（Income Statement）`里的所有内容外，还包含`其他综合收益（Other Comprehensive Income）`。用个公式表达就是：
-> 综合收益（综合收益表内容） = 净利润（利润表内容） + 其他综合收益（其他综合收益表内容）
-> 
-> Comprehensive income = Net income + Other Comprehensive income
-> 
-
-**② 采用 `利润表（Income Statement）` + `其他综合收益表（（Other Comprehensive Income Statement）` 两个报表的形式**
-
-
-**参考文献：**
-> [综合收益表与利润表有什么区别？](https://www.zhihu.com/question/22229391)
-> 
