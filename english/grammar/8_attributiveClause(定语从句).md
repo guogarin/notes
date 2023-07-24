@@ -417,31 +417,31 @@ which可以指代前面的整个句子。 请看例句：
 ## 4.1 when的用法
 ### 4.1.1  先行词指时间
 &emsp;&emsp; `when`可以引导限制性和非限制性定语从句， 其先行词须是表示时间的名词， 如`day， year`或`time`等。
-> I'll never forget the day when I met you.
+> I'll never forget **the day when I met you**.
 > 我永远不会忘记我们见面的那一天。
 > 
-这里的先行词是表示时间的名词day， 所以要用when引导定语从句。 这里when作从句的时间状语， 修饰谓语动词met。
+这里的先行词是表示时间的名词`day`， 所以要用`when`引导定语从句。 这里`when`作从句的时间状语， 修饰谓语动词`met`。
 
-> &emsp;&emsp; Most education experts today stress the importance of "life-long learning". They point out that education never ends. It is a continuous process. The day when we stop learning is the day when we die. 
-> &emsp;&emsp; 大多数的教育专家现如今都强调“终生学习”的重要性。 他们指出， 教育是一个连续的过程， 永远不应该停止， 除非是我们离开了这个世界。
+> &emsp;&emsp; Most education experts today stress the importance of "life-long learning". They point out that education never ends. It is a continuous process. **The day when we stop learning is the day when we die**. 
+> &emsp;&emsp; 大多数的教育专家现如今都强调“终生学习”的重要性。他们指出，教育是一个连续的过程，永远不应该停止，除非是我们离开了这个世界。
 > 
-表示时间的名词`day`用作先行词， 所以用了`when`来引导定语从句。 这里`when`作从句的时间状语， 修饰谓语动词`stop`和`die`。这个句子让我们知道， 我们现在身处一个“终生学习（life-long learning） ”的时代。
+表示时间的名词`day`用作先行词， 所以用了`when`来引导定语从句。 这里`when`作从句的时间状语， 修饰谓语动词`stop`和`die`。这个句子让我们知道， 我们现在身处一个“终生学习（`life-long learning`） ”的时代。
 
-> &emsp;&emsp; April Fool's Day is that special day of the year when you should play a joke on someone! Children's favorites are to put salt in the sugar bowl for Dad's morning coffee or put chalk on a desk chair at school so the teacher gets a white backside! But remember, if you play a joke after 12 noon, YOU are the April Fool!
+> &emsp;&emsp; April Fool's Day is **that special day** of the year **when you should play a joke on someone**! Children's favorites are to put salt in the sugar bowl for Dad's morning coffee or put chalk on a desk chair at school so the teacher gets a white backside! But remember, if you play a joke after 12 noon, YOU are the April Fool!
 > &emsp;&emsp;  愚人节就是一年一度的一个特殊的日子， 在这一天人们可以捉弄别人。 比如， 孩子们最喜欢的把戏就是在老爸的早餐咖啡的糖罐里放入盐， 或是在学校的桌椅上撒上粉笔灰， 以弄脏老师的后背。 不过千万要记住哟， 若你在中午12点之后再捉弄人， 那你就是“愚人”了！
 > 
-表示时间的名词day用作先行词， 所以用了`when`来引导定语从句。 这里`when`作从句的时间状语， 修饰谓语动词`play`。 这句话向读者介绍了有关愚人节的一个小常识， 不妨记住。
+表示时间的名词day用作先行词，所以用了`when`来引导定语从句。这里`when`作从句的时间状语，修饰谓语动词`play`。这句话向读者介绍了有关愚人节的一个小常识，不妨记住。
 
 &emsp;&emsp; 我们再来看when引导的非限制性定语从句：
 > My favorite season is spring, when the earth seems born again.
 > 到了春天， 万物复苏， 所以春天是我最喜欢的季节。
 > 
-这里是`when`引导的非限制性定语从句， 先行词是表示时间的名词spring。
+这里是`when`引导的非限制性定语从句， 先行词是表示时间的名词`spring`。
 
 > We will put off the outing until next week, when we won't be so busy.
 > 我们要把出游推迟到下周， 到时我们就不会这么忙了。
 > 
-这里是`when`引导的非限制性定语从句， 先行词是表示时间的短语next week。
+这里是`when`引导的非限制性定语从句， 先行词是表示时间的短语`next week`。
 
 请再看其他例句：
 > March 10, 1876 was the day when the first complete sentence was sent over a telephone.
@@ -452,19 +452,225 @@ which可以指代前面的整个句子。 请看例句：
 > 
 
 ### 4.1.2 关系副词when在从句中作时间状语
-&emsp;&emsp;在上面的例句中， 我们反复强调when是在定语从句中作时间状语。 换句话说， 若定语从句不是缺少状语， 而是缺少主语或宾语， 那么即使先行词是表示时间的名词， 也不能用when而要用which或that来引导定语从句。 因为用when来引导定语从句的前提条件是： when必须在其引导的定语从句中作时间状语。 请比较：
-> I'll never forget the time which I spent on campus.
-> I'll never forget the day when we first met in the park.
+&emsp;&emsp; 在上面的例句中， 我们反复强调`when`是在定语从句中作时间状语。 换句话说， 若定语从句不是缺少状语， 而是缺少主语或宾语， 那么即使先行词是表示时间的名词， 也不能用`when`而要用`which`或`that`来引导定语从句。 因为用`when`来引导定语从句的前提条件是： when必须在其引导的定语从句中作时间状语。 请比较：
+> ①  I'll never forget the time which I spent on campus.
+> ②  I'll never forget the day when we first met in the park.
 > 
 > 我永远不会忘记在大学校园里度过的时光。
 > 我永远不会忘记我们第一次在公园里见面时的情景。
 > 
-&emsp;&emsp;在这两句话里， 尽管先行词分别是表示时间的名词time和day， 但用的关系词不同。 在例句1） 里， 由于定语从句中的谓语spent缺宾语， 因此关系词要充当这一宾语， 故要用which。 在例句2） 中， 定语从句不缺主语或宾语， 而是缺少时间状语， 故关系词用when， 这里when作时间状语， 修饰met。
+&emsp;&emsp; 在这两句话里，尽管先行词分别是表示时间的名词`time`和`day`，但用的关系词不同。在例句① 里，由于定语从句中的谓语`spent`缺宾语，因此关系词要充当这一宾语， 故要用`which`。在例句② 中，定语从句不缺主语或宾语， 而是缺少时间状语， 故关系词用`when`，这里`when`作时间状语， 修饰`met`。
 
 > The day, which began brightly, ended with a violent storm.
 > 那天， 开始的时候还是阳光明媚， 后来就下起了暴风雨。
 > 
-&emsp;&emsp;这里的先行词是day， 表示时间。 但由于定语从句缺少主语， 所以用关系代词which来引导定语从句， 作从句的主语， 而不用关系副词when， 因为关系副词无法作主语， 只能作状语。
+&emsp;&emsp; 这里的先行词是`day`，表示时间。但由于定语从句缺少主语，所以用关系代词`which`来引导定语从句， 作从句的主语，而不用关系副词`when`，因为关系副词无法作主语，只能作状语。
 
+
+&emsp;
+## 4.2 where的用法
+### 4.2.1  where的先行词指地点
+&emsp;&emsp; `where`引导定语从句，其先行词一般是表示地点的名词， 如`place`和`house`等。请看例句：
+> A: Since you work in the theater, can't you get me a free ticket now and then?
+> B: Certainly if you bring me a few notes now and then from the bank where you work!
+>
+> A： 既然你在剧院工作， 那你就不能时常给我弄些免费的票吗？
+> B： 当然可以， 只要你能够从你工作的那家银行里时常给我弄些票子出来。
+> 
+这里的先行词`bank`表示地点， 而且`where`在从句中充当地点状语（定语从句中不缺主语或宾语），修饰`work`。
+
+请再看其他例句：
+> Do you know any place where I can buy Mr.Zhang's grammar book?
+> 你知道我在什么地方可以买到张老师的语法书吗？
+> 
+> This is the town where I spent my childhood. 我的童年就是在这座小城里度过的。
+> 
+
+### 4.2.2 关系副词where在从句中作地点状语
+&emsp;&emsp; 与`when`类似，并非凡是先行词表示地点的名词，都得由`where`来引导定语从句，这得看关系词在从句中充当的成分。若定语从句缺主语或宾语，则要用`which`或`that`引导定语从句。请比较：
+> ① This is the town where I spent my childhood.
+> ② This is the town which I told you about before.
+>
+> ① 这就是我度过童年的小城。
+> ② 这就是我以前告诉过你的小城。
+> 
+在这两句话里，尽管先行词都是表示地点的名词`town`，但用的关系词不同。在例句① 中， 定语从句不缺少主语或宾语，而是缺少地点状语， 故关系词用`where`。 这里where作地点状语， 修饰`spent`。 在例句②  里， 由于定语从句中的谓语部分`told you about`缺少宾语， 因此关系词要充当这一宾语， 故要用`which`。
+
+> ①  The library where students often study was on fire last night.
+> ②  The library, which was built in the 1930's, needs to be renovated.
+>
+> ①  学生们常常上自习的那个图书馆昨晚着火了。
+> ②  这个图书馆建于20世纪30年代， 现在需要翻修了。
+> 
+在这两句话里， 尽管先行词都是表示地点的名词`library`， 但用的关系词不同。 在例句① 中， 定语从句不缺少主语或宾语， 而是缺少地点状语， 故关系词用`where`。 这里`where`作地点状语， 修饰`study`。 在例句② 中， 由于定语从句缺少主语， 因此填入的关系词要充当这一宾语， 故要用`which`。
+
+> I've never been to Beijing, but it's the place_____.
+> A． where I'd like to visit
+> B． in which I'd like to visit
+> C． I most want to visit
+> D． that I want to visit it most
+> 
+> 我从未到过北京， 但北京却是我最想去的地方。
+> 正确答案 C。
+> 
+这是1999年的六级考试真题。 本题考查定语从句关系词的选择。 这句话中尽管先行词是表示地点的名词place， 但由于从句中的谓语`visit`缺少宾语， 所以不能选A， 而C才是正确答案。 这里相当于省去了关系词`that`或`which`， 因此原句应该是`that/which I most want to visit`。
+
+
+&emsp;
+## 4.3 why的用法
+`why`用来表示原因， 只引导限制性定语从句， 先行词是`reason`等表示原因的名词。
+> This is the reason why I didn't come here.
+> 这就是我没来的原因。
+> 
+此处的`why=for which`
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 5. 限制性与非限制性定语从句
+&emsp;&emsp; 在前面各节讨论的定语从句中，有的先行词与关系词之间有逗号分隔，有的没有逗号分隔，这其实涉及定语从句的限制性（`defining relative clause`）和非限制性（`non-defining relative clause`）之分。二者在形式上的区别是： 
+> 在限制性定语从句中， 先行词和关系词之间不用逗号隔开， 而非限制性定语从句则有逗号隔开。 这种在形式上的有逗号或没有逗号并不是随意的， 换句话说， 二者更重要的是在意义上有区别。 
+> 
+
+## 5.1 限制性定语从句——不用逗号隔开
+&emsp;&emsp; 限制性定语从句是用来对一个名词提供必要的信息（`a defining relative clause defines or gives essential information about a noun`），以说明定语从句所修饰的先行词的身份或性质，或用来限制先行词所指的范围。 若去掉限制性定语从句， 则主句部分的含义不明确， 或意义不完整， 所以不能用逗号来分隔先行词和定语从句。
+&emsp;&emsp; 比如`I don't like people`. 这句话的意思不明确，句义不完整，因此其后面必须加一个限制性定语从句，才能使句义完整。比如加上限制性定语从句后这么说：
+> I don't like people who are never on time. 我不喜欢不守时的人。
+> I don't like people who never keep their words. 我不喜欢不守信用的人。
+>
+&emsp;&emsp; 以上句子黑体部分的定语从句都是用来说明`people`的性质的， 是必不可少的信息， 因此不能加逗号将
+其变为非限制性定语从句。 再来分析下列例句：
+> There are two factors which determine an individual's intelligence.
+> 决定人的智力的因素有两个。
+> 
+这里若只是说`There are two factors`. 则句义不够完整，现在有了限制性定语从句`which determine an individual's intelligence`来限制修饰名词`factors`， 就使得句义更明确。
+
+> He is a man who is of value to the people.
+> 他是一个有利于人民的人。
+> 
+这里若只是说`He is a man`. 则句义不完整， 现在有了限制性定语从句`who is of value to the people`来限制修饰名词`man`，就使得句义完整而明确。
+
+
+&emsp;
+## 5.2 非限制性定语从句——用逗号隔开
+&emsp;&emsp; 非限制性定语从句 **用来提供附加的而非必要的信息，只是对先行词作进一步的解释、补充或说明（`a non-defining relative clause gives optional information about a noun`）**。若去掉此定语从句，整个主句的意义一样很明确，不会引起误解和歧义。一般来讲，下面这两种先行词，其后都宜用非限制性定语从句。
+### 5.2.1 专有名词
+&emsp;&emsp; 如果定语从句修饰一个专有名词，一般要用逗号分隔先行词与定语从句，也就是说要使用非限制性定语从句 这是因为专有名词本身的意思已经很完整， 不需要限制，用定语从句只是对它进行补充说明。请看例句：
+> My mother, who is 50 this year, lives with me now.
+> 我母亲今年50岁了， 现在和我生活在一起。
+> 
+这里的先行词`my mother`就是一个专有名词， 其后的定语从句`who is 50 this year`只能是作为非限制性的定语从句来提供附加信息， 不能使用限制性定语从句。 若说`My mother who is 50 this year lives with me now`. 则言外之意为“我有好几个母亲， 目前和我住在一起的是今年50岁的那位母亲”。 然而实际上， 我们只可能有一位母亲。
+
+&emsp;&emsp; 伊拉克首都巴格达的民众2008年1月11日早上醒来时惊见降雪。 当地气象部门证实， 这场雪是这座城市约100年来下的第一场雪。 下面的例句就是40岁的巴格达居民法齐·卡里姆接受记者采访时说的：
+> I asked my mother, who is 80, whether she'd ever seen snow in Iraq before, and her answer was no.
+> 我问我已经80岁的妈妈， 她以前在伊拉克是否见过雪， 她回答说没见过。
+> 
+&emsp;&emsp; 下面这个例句谈到美国现在（2008年） 的民主党总统侯选人奥巴马（`Obama`） 的竞选策略：
+> Obama is trying to broaden our collective notion of the mainstream. On the one hand, his campaign is running television commercials in Iowa featuring his late mother, who was white. On the other, he touts his biracial, multicultural background as an advantage when it comes to representing the U. S. abroad.
+> 奥巴马也设法扩大我们对主流的集体概念。 一方面， 他的竞选包括在艾奥瓦州播放以他过世的母亲为主角的电视广告——他母亲是白人。 另一方面， 他使劲兜售自己的黑白混血多元文化背景， 就代表美国来说， 他的这种混血以及多元文化背景倒是一种优势。
+> 
+&emsp;&emsp; 在以上例句中， 先行词都是`mother`这样的专有名词， 都采用了非限制性定语从句。
+请再看下面的例句：
+> Beijing, which is the capital of China, has developed into an international city. 
+> 北京， 中国的首都， 已经成为了一个国际化都市。
+> 
+> Einstein, who was a great Jewish scientist, created the theory of relativity. 
+> 爱因斯坦这位伟大的犹太科学家发明了相对论。
+> 
+> Hawaii, which consists of eight principal islands, is a favorite vacation spot. 
+> 夏威夷包含八个主要岛屿， 是一个度假胜地。
+> 
+以上例句中的先行词`Beijing`， `Einstein`和`Hawaii`都是专有名词，因此，其后的定语从句都只能是非限制性的，以对其前面的先行名词进行补充说明，向读者提供附加的信息，故均不能变为限制性定语从句。
+
+### 5.2.2 类指名词
+&emsp;&emsp; 上面谈到，专有名词作为先行词，其后接的定语从句一般都是非限制性的。现在来讨论普通名词作为先行词的情况。普通名词若是用来表示类指，即表示的是一类事物，而非具体的某一个事物，此时，其后也宜用非限制性定语从句。请比较下列例句：
+> ① An elephant, which is the earth's largest land mammal, has few natural enemies other than human beings.
+> ② One of the elephants which we saw at the zoo had only one tusk.
+> 
+> ① 大象作为陆地上体型最大的哺乳类动物， 很少有天敌， 除了人类之外。
+> ② 我们在动物园看到一头大象只有一颗象牙。
+> 
+这两句的先行词都是普通名词`elephant`，但例句① 用了非限制性定语从句`which is the earth's largest land mammal`，而例句② 却用了限制性定语从句`which we saw at the zoo`，原因就是因为两句中的`elephant`的意义是不一样的。例句① 中的`an elephant`是类指或泛指，即表示“大象”这类动物，而不是指称具体的某一头大象。例句② 中的`elephants`则不是类指概念，而是具体指代某一头大象，即“我们在动物园看到的那头大象”。
+
+
+&emsp;
+## 5.3 用或不用逗号， 句义有差别
+&emsp;&emsp; 在英文中，还有一类句子，用限制性或非限制性定语从句都可以，但强调的意义不一样，即句义不同。 请比较：
+> ① He has a daughter who works in a hospital.
+> ② He has a daughter, who works in a hospital.
+> 
+> ① 他有一个在医院工作的女儿。
+> ② 他有个女儿， 是在医院工作的。
+> 
+例句①表示他有多个女儿，其中有一个在医院工作。 例句②强调他有一个女儿，不是儿子， “在医院工作”纯粹是补充信息。
+
+> ① The food which wasn't in the fridge all went off.
+> ② The food, which wasn't in the fridge, all went off.
+> 
+> ① 没有放在冰箱里的那些食物坏了。
+> ② 食物都坏了，因为没有放在冰箱里。
+> 
+例句①表示部分食物坏了，即没有放在冰箱里的那部分食物坏了。例句②表示食物都坏了，因为没有放在冰箱里。此时定语从句补充说明了食物变质的原因，是因为没有放在冰箱里。
+
+> ① The cab drivers who knew about the traffic jam took another road.
+> ② The cab drivers, who knew about the traffic jam, took another road.
+> 
+> ① 知道那里堵车的出租车司机换了另一条道。
+> ② 出租车司机因为知道那里塞车了， 他们都换了另一条道。
+> 
+例句①的言外之意是“不知道的司机则没有换路线，只有部分司机换行驶路线了”。例句②的言外之意是“全部司机都知道，都换了行驶路线”。
+
+从以上非限制性定语从句的译文看出，非限制性定语从句的翻译非常灵活，不一定都译成定语“……的”结构。下面举例具体说明。
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# 6. 定语从句与同位语从句的区分
+## 6.1 从结构上区分： that是否作成分
+&emsp;&emsp; `that`在定语从句中要充当成分， 比如作从句的主语或宾语； 而`that`在同位语从句中不作任何成分， 仅起连词的作用。 换句话说， 定语从句的结构是 `名词＋that＋不完整的句子`， 而同位语从句的结构是 `名词＋that＋完整的陈述句`。
+> ① The rumor that he spread everywhere turned out to be untrue.
+> ② The rumor that Tom was a thief turned out to be untrue.
+>
+> ① 他到处散布的那个谣言， 结果证明是假的。
+> ② 有人谣传说Tom是窃贼， 结果证明是假的。
+> 
+以上两句的先行词都是`the rumor`，连词都是`that`。但例句① 中的`that`在从句中作成分，充当`spread`的宾语，故例句① 为定语从句。例句② 中的that在从句中不作任何成分，因为从句`Tom was a thief`是一个完整的句子，不缺少任何成分。故其为同位语从句，作`the rumor`的同位语，补充说明`the rumor`的具体内容。
+
+> ① The fact that we talked about is very important.
+> ② The fact that he succeeded in the experiment pleased everybody.
+>
+> ① 我们讨论的这些情况很重要。
+> ② 他的实验成功了， 这让大家都很高兴。
+>
+例句① 中的`that`作`talked about`的宾语， 故例句①为定语从句。 例句② 中的`that`不充当成分， 因为`he succeeded in the experiment`是一个完整的陈述句，故其为同位语从句。
+
+
+&emsp; 
+## 6.2 从意义上区分： that引导的从句的意义不同
+&emsp;&emsp; 两类从句在意义上也不同： 定语从句相当于形容词， 对先行词起修饰、 描述和限制的作用； 同位语从句相当于一个名词， 对其前面名词内容的具体表述， 二者是同位关系。
+> ① The news that you heard is not true.
+> ② The news that Lincoln was murdered at a theater is true.
+> 
+> ① 你听到的那个消息并不是真实的。
+> ② 有消息说林肯是在一个剧院被刺杀的， 这是真的。
+> 
+&emsp;&emsp; 例句① 中的定语从句`that you heard`并不是表示`news`的内容，只是在限制`news`所指的范围，即“你听到的那个消息”。
+&emsp;&emsp; 例句② 中的同位语从句`that Lincoln was murdered at a theater`是表示`news`的具体内容，在意义上与`news`构成同位关系。
+
+> The fact that you pointed out made me interested.
+> The fact that there are no lives on the moon is known to us all.
+>
+> 你指出的这一点， 我很感兴趣。
+> 众所周知， 月球上并没有生命存在。
+>
+例句①中的定语从句`that you pointed out`并不是表示`fact`的内容，只是在限制`fact`的所指范围，即“你指出的这个事实”。例句②中的同位语从句`that there are no lives on the moon`是表示`fact`的具体内容，在意义上与`fact`构成同位关系。
 
 
