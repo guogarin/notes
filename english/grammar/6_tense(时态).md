@@ -398,7 +398,7 @@
 > ⑤ **So far** he has done very well at school. 到现在为止他在学校表现很好。 
 > ⑥ **Up to now**, the work has been easy. 到现在为止，这工作还算容易。
 > 
-
+TODO: 状语从句中的 主句一般将来时 + 从句现在完成时
 
 ### 3.1.2 现在完成时 和 一般过去时 的比较
 #### (1) 主要差别
