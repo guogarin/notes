@@ -118,7 +118,7 @@ that is useful to a wide range of users in making economic decisions.
 ### 2.4.1 Balance Sheet
 #### (1) definition of `Balance Shee`
 资产负债表(Balance Sheet)
-> &emsp;&emsp; The `balance sheet` (also called the `statement of financial position` or `statement of financial condition`) presents a company’s **current financial position** by disclosing the resources the company controls (assets) and its obligations to lenders and other creditors (liabilities) **at a specific point in time**.
+> &emsp;&emsp; The `balance sheet` (also called the `statement of financial position` or `statement of financial condition`) presents a company’s **current financial position(注意是时间点)** by disclosing the resources the company controls (assets) and its obligations to lenders and other creditors (liabilities) **at a specific point in time**.
 > 
 **current financial position**  : 
 |                        |                                                         |
@@ -160,26 +160,47 @@ Liabilities 的范围更广，它包含了Debt
 **② 采用 `利润表（Income Statement）` + `其他综合收益表（（Other Comprehensive Income Statement）` 两个报表的形式**
 
 #### (2) `Income Statement`
-`The income statement` (also known as `the statement of operations` or `the profit and loss statement`) reports on the financial performance of the firm **over a period of time**(注意，是一段时间的表现). The elements of the income statement include revenues, expenses, and gains and losses.
+`The income statement` (also known as `the statement of operations` or `the profit and loss statement(P&L)`) reports on the financial performance of the firm **over a period of time**(注意，是一段时间的表现). The elements of the income statement include revenues, expenses, and gains and losses.
 Revenues are inflows from delivering or producing goods, rendering services, or other activities that constitute the entity’s ongoing major or central operations.
-Expenses are outflows from delivering or producing goods or services that constitute the entity’s ongoing major or central operations.
+Expenses are outflows from delivering or producing goods or services  that constitute the entity’s ongoing major or central operations.
 Other income includes gains that may or may not arise in the ordinary course of business.
 
 #### Net income
-
+**Net income** is known as the bottom line(因为它一般出现在收益表的最后一行)
 
 **参考文献：**
 > [综合收益表与利润表有什么区别？](https://www.zhihu.com/question/22229391)
 > 
 
+### 利润表 和 现金流量表 在记账上的差异
+利润表 : 权责发生制，当对应的权利和义务发生的话，那在利润表中就会有体现，
+现金流量表：收付实现制，即钱进来了记账，钱溜出去了记账，其他情况统统不记账
+举个例子：
+> 当公司A把自己的产品卖给客户后，如果这里交易可以符合收货确认的原则，那在利润表中就要体现这笔收入（即使客户在一年后才能付款），而此时现金流量表不会体现这笔收入（只有一年后客户付款后才会体现）
+> 
+
 
 ### 2.3 Cash Flow Statement
-
+`Cash flow statement` reports the sources(钱从哪来) and uses(钱去哪了) of cash **over a period of time（一段时间）**
+Elements on cash flow statement
+> • Cash flows from **operating** activities (CFO)
+> • Cash flows from **investing** activities (CFI)
+> • Cash flows from **financing** activities (CFF)
+> 
 
 ### 2.4 Statement of Changes in Equity
+这个考的不多
+**The statement of changes in equity** reports the amounts and sources of changes in equity investors’ investment in the firm over a period of time.
+The basic components of owners' equity are 
+> paid-in capital, 
+> retained earing
+> accumulated other comprehensive income
+> 
 
+### 2.5 四表之间的勾稽关系
+TODO：
 
-### 2.5 Footnotes(financial statement notes)
+### 2.6 Footnotes(financial statement notes)
 
 
 
