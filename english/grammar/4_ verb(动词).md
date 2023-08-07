@@ -2546,7 +2546,168 @@ shall用于第二、 三人称的陈述句中， 表示说话人强烈的意愿�
 
 
 &emsp;
-## 5.18 
+## 5.18 总结： 英文情态与中文情态的简单对比
+&emsp;&emsp; 从前面各节讨论的内容看到， 每个情态动词都有很多的意思， 而不同的意思有不同的用法。 所以， 情态动词的用法和词义变化多端， 纷繁复杂， 情态动词因此也是让中国学生“摸不着头脑”的一种英语谓语的变化形式。 这也可以理解， 因为情态动词即是说话人微妙心态变化的反映， native speakers就是通过运用各种功能强大的情态动词以极其微妙的方式来“言传心声”的。 本节将简单地比较中文情态与英文情态的用法和意义。
+### 5.18.1 英文情态意义与中文情态意义的对应性
+&emsp;&emsp; 英语中的情态动词的某些意义能在中文中找到比较好的对应表达， 比如can对应于“能够”， should对应于“应该”。 对于这样一些中文思维里也有的情态意义， 中国学生一般使用地比较好。 比如：
+> 1 I can speak good English. 我能够讲很好的英文。
+> 2 You should study English. 你应该学习英文。
+> 
+但是对于下面这些句子中的情态意义就不甚了解或不知道了：
+> 3 Women can do anything when jealous.
+> 女人要是妒忌了， 什么事都可能做得出来。
+> 
+这里的can表示“潜在的可能”或者说“理论上的可能”。 显然， 这里的can不是中文的情态动词“能够”所能表达的意思。
+
+> 4 It's strange that you should say this.
+> 你竟然这么说， 真是奇怪。
+> 
+这里的should表示惊讶之意——“竟然”。 显然， 这里的should在中文里没有对应的情态动词。
+
+> 5 We should be grateful if you could do it.
+> 如果您能这么做， 我们将非常感激。
+> 
+这里的should和could用于委婉地提出请求， 很正式的用语。 这里的should没有含义， 只是一个礼貌的表达形式。
+
+> 6 He might come.
+> 他或许会来吧。
+> 
+这里的might表示把握不大的推测。
+
+> 7 
+> 1） I would be happy to help you.
+> 2） I am happy to help you.
+> 
+> 1） 如果需要的话， 我会非常乐意帮你的。
+> 2） 我想要帮你（有困难一定要找我啊） 。
+> 
+这里说I would be happy to help you.要比I am happy to help you.委婉得多。
+&emsp;&emsp; 在例句1） 中， would表达一种委婉假设的含义， 意思是说“如果你真的需要我帮忙， 我会很乐意帮助你的”。 这么用would来说这句话， 只是告诉对方你主观上愿意帮助他。 至于对方是否需要你来帮助， 那是他的选择。 
+&emsp;&emsp; 在例句2） 中， 说am就显得比较直截了当， 不给对方选择的余地， 好像在强迫别人找你帮忙一样， 有点把自己的主观意愿强加于对方的感觉（impose yourself on people who don't want your help） 。 比如， 也许对方真的是需要有人帮忙， 但他出于自尊心的原因不一定非得找你帮忙。 所以， 用例句2） 也许会让人感觉你把自己当作救世主一样， 但例句1） 就绝不会让人有这种误解。
+
+&emsp;&emsp; 笔者曾经告诉自己的一个外国朋友笔者正在写英语语法书， 他在电子邮件里回复说： `I would be happy to have a read.`他这么说的言外之意是： 如果笔者愿意把自己的书稿通过电子邮件发给他看看的话， 他会非常乐意拜读一下的。 他这里用`would be happy`这么说就显得非常礼貌， 没有强迫笔者非得把书稿发过去给他看的意思。 如果他说`I am happy to have a read.`则显得他很想让笔者把书稿发给他看， 有点强人所难的意味。
+&emsp;&emsp; 上面笔者解释了这么多， 相信读者以后读到类似的含有would的句子， 应该有更深刻、 更准确的理解了。 显然， 这里的would在中文中也没有很好的对应词， 不是一个简单的“将愿意”就能表达would如此微妙的内涵的。
+
+> 8 Let me see if I could help work this out.
+> 我来看看是否能够帮忙解决。
+> 
+&emsp;&emsp; 这里的could表示非常礼貌和谦虚。 即使你认为对方的某个问题是小菜一碟， 你能轻而易举地解决， 你也不妨用could来显示你的谦虚谨慎。 比如， 你是公司新来的一名员工， 大家对于某个电脑技术难题都无法解决， 而你很清楚该怎么处理。 面对那么多的公司老前辈和领导， 你只是一个初出茅庐的新手， 如果你很骄傲地说I can work this out. It's a piece of cake.（这个我能解决， 对我来说简直是小菜一碟。 ） 这样说就显得你过于自负， 当然会让你的领导及其他老员工脸面上很难堪。 但如果你用could说Let me see if I could work this out.则显得你为人谦虚， 这样给周围同事的感觉自然大不一样。 另外， 万一这个问题你也解决不了， 你用could这样委婉地表达也是给自己留了余地， 因为could表明了你不肯定是否能完成。 由此可见， can与could在语气上的巨大差异。 这里的could在中文里也没有很好的对应词， 不是一个简单的“能够”就能表达could的含义的。
+
+请看下面这个例句：
+> 9 I wouldn't pay them a penny.
+> 要是我， 一分钱也不会给他们。
+> 
+这句话是英国伦敦市长肯·利文斯通（Ken Liverstone） 说的， 他如此直言不讳地批评2012年伦敦奥运会会徽的设计者。 这里的would用于虚拟假设， 所以在译文中增添了“要是我”这样的条件表达。 这里的would没有对应的汉语情态动词。
+
+&emsp;&emsp; 对于上面这些情态动词的微妙含义， 没有很好的英语思维基础的中国学生是很难理解和把握的， 他们往往不能理解这些情态动词所潜含的各种微妙的含义。
+&emsp;&emsp; 总的来说， 英语的情态动词所表达的含义要比中文多很多。 因此， 很多英语的情态意义在中文找不到对应的情态表达， 而只能通过其他字词来传达其含义， 比如表示惊讶的情态意义的should， 在汉语中就取“竟然”来翻译。 这就是为什么中国学生往往在口头或书面表达中“忘记”使用或不会使用英语的情态动词来微妙地言传心声的原因。
+
+### 5.18.2 英文情态动词的委婉表达在汉语中的缺失
+&emsp;&emsp; 英文表达往往要求采用比较礼貌的表达形式，尤其是在“指示（`instructions`）”、“邀请（`invitations`）”、“请求（`requests`）”和“建议（`suggestions`） ”等语境中，此时正是情态动词发挥魅力的时候。 但中国学生往往在这些该用情态动词的场合中不使用情态动词， 这样使英语的表达显得较为生硬、 突然（`abrupt`）， 甚至不礼貌。 比如汉语里常这样说话：
+> 1 请看一下这篇文章。
+> 2 我们希望你明天能过来和我们一起吃午饭。
+> 3 请你过来坐在这。
+> 4 我建议你去和他说一下。
+> 
+对于上面的这些中文句子， 读者在口语中是不是常常这么说？ 而且这些表达在汉语里听起来已经够礼貌和客气了。 但是如果直接生硬地译成英语， 则显得并不十分礼貌。 大家来看下面的简单直接的对译：
+> 5 Please read this article.
+> 6 We hope that you will come and have lunch with us tomorrow.
+> 7 You come and sit here, please.
+> 8 I suggest that you have a word with him.
+> 
+这样简单的“死译”， 其重要原因就在于不会灵活地应用英文的情态动词。 这些句子其实可以表达得更礼貌。 比如同样的意思， 若用英文表达， 下列表达会显得更自然而礼貌：
+> 9 You may like to read this article.
+> 10 We were wondering whether you could come and have lunch with us tomorrow.
+> 11 Would you come and sit here, please?
+> 12 You might want to have a word with him.
+> 
+当然， 上面这些句子还有其他更多礼貌的表达形式， 这时都得采用情态动词。 比如， 对于最后一句
+的“提建议”， 还可以这样说：
+> 13 I would suggest that you have a word with him.
+> 14 May I suggest that you have a word with him?
+> 
+如果是在正式的交际场合， 比如商务谈判中， 往往要借助情态动词来更委婉地， 或者说比较“外交辞令”地表达意思， 而不会不采用任何情态动词就这么直接而生硬地交流。 请比较：
+> 15 
+> 1） That's impossible.
+> 2） Unfortunately that wouldn't be possible.
+>
+> 1） 这是不可能的。
+> 2） 很遗憾， 这恐怕不太可能。
+> 
+妙语点睛这两句是在拒绝对方。
+&emsp;&emsp; 在例句1） 中， 谓语动词用的是is， 显得说话的语气非常直白和生硬， 容不得对方商量。 这自然就会让对方难以接受。 
+&emsp;&emsp; 在例句2） 中， 首先是借助would来“软化”生硬的口气。 其次， 把impossible换成not possible， 给人感觉有商量的余地。 再次， 因为是在拒绝对方， 所以用副词unfortunately来表达遗憾， 给对方以安慰。
+&emsp;&emsp; 由此可见， 为了使话语显得礼貌， 采用了上述三个方面的处理。
+
+> 16 
+> 1） It is a good idea to agree on a price before we go any further.
+> 2） Wouldn't it be a better idea to agree on a price before we go any further?
+> 
+> 1） 我们还是先商定好价格然后再继续往下谈吧， 这样比较好。
+> 2） 在继续往下讨论之前， 如果我们能先商定一下价格， 是不是更好些？
+> 
+这两句是在提建议。
+&emsp;&emsp; 在例句1） 中， 谓语动词用的是is， it is a good idea表示“……这样做好”， 用这种方式来向对方提出建议， 显得有些自负而傲慢， 有把自己的观点强加于对方的味道。 
+&emsp;&emsp; 在例句2） 中， 首先， 借助would来“软化”生硬的口气。 其次， 把肯定句变为否定句， 给对方很大的选择余地。 再次， 用否定的wouldn't来提问， 更具商量的口吻。 第四， 把good变成better也显得更礼貌。
+&emsp;&emsp; 由此可见， 为了使话语显得礼貌， 我们采用了上述四个方面的技术处理。
+
+> 17 
+> 1） We can't go higher than 7 per cent.
+> 2） We would find it (quite) difficult to go any higher than 7 per cent.
+> 
+> 1） 我们无法再高于7％了。
+> 2） 如果这样的话， 我们发现很难再高于7％了。
+> 
+这两句是在讨价还价。
+&emsp;&emsp; 在例句1） 中， 直接说“不能（can't） ”， 没有给对方回旋的余地。 
+&emsp;&emsp; 在例句2） 中， 首先， 借助would来“软化”生硬的口气。
+&emsp;&emsp; 其次， difficult相当于委婉地说impossible， 从而比较礼貌地拒绝对方的要求。
+
+> 18 
+> 1） We need a commitment from you now.
+> 2） We would like some kind of commitment from you now.
+> 
+> 1） 我们现在就需要你的承诺。
+> 2） 现在我们想知道你能不能给我们一些承诺。
+> 
+这两句是在向对方提要求。
+&emsp;&emsp; 在例句1）中， 用need显得比较直截了当地提出自己的要求。 
+&emsp;&emsp; 在例句2）中， 用would来委婉地说出自己的需要。 其次， 增添了some kind来缓和语气。
+
+> 19 
+> 1） You'll have to pay more if you want that.
+> 2） You may have to pay slightly more if you (really) want that.
+> 
+> 1） 如果你想那样的话， 那你就必须得多付钱。
+> 2） 如果你真的是想那样的话， 那么你或许得需要稍微多付点钱。
+> 
+&emsp;&emsp; 在例句1） 中， 用will显得语气比较强硬。 
+&emsp;&emsp; 在例句2） 中， 用委婉的may， 表示“或许”来缓和语气。 其次， 增添了slightly来轻描淡写， 以及really来加强语气， 这两个词都起到了“软化”语气的作用。
+
+> 20 
+> 1） It will be difficult to get my boss to agree to this.
+> 2） It might not be very easy to get my boss to agree to this.
+> 
+> 1） 这样就一定很难得到我们老板的同意了。
+> 2） 这样或许不太容易得到我们老板的同意。
+> 
+&emsp;&emsp; 在例句1） 中， 用will显得语气比较强硬。 
+&emsp;&emsp; 在例句2） 中， 用委婉的might， 表示“或许”来缓和语气。 其次， 把difficult改成not very easy， 给对方的感觉更好。
+
+> 21 
+> 1） We should spend more time looking for a compromise here.
+> 2） Shouldn't we spend a little more time looking for a compromise here?
+> 
+> 1） 在这一点上， 我们双方应该多花时间来寻找一个折中的办法。
+> 2） 在这一点上， 我们双方是不是应该多花点时间来寻找一个折中的办法呢？
+> 
+这两句是在提建议。
+&emsp;&emsp; 在例句1） 中， 用should显得语气比较强硬。 
+&emsp;&emsp; 在例句2） 中， 用shouldn't委婉地否定反问， 显得是在和对方商量， 给人以礼貌的感觉。
+
+&emsp;&emsp; 从以上各对例句的比较中， 我们看到， 在进行委婉的表达时， 各类情态动词在其中起了根本的作用，其次才是结合疑问句式以及增添某些词语来共同表达委婉的语气。 对于情态动词礼貌的表达作用， 读者需要多加观察和用心体会。
+
+&emsp;&emsp; 尽管在本章中对于情态动词的意义和用法已作了较为详尽和系统的分析与比较， 但不可能包括所有的用法。 正如在“引言”里指出的， 情态动词即是说话人微妙心态变化的反映， 老外就是通过运用各种功能强大的情态动词以极其微妙的方式来“言传心声”的。 所以， 希望读者在英语学习过程中， 继续观察、 分析和体会情态动词这种微妙的使用规律， 以逐渐习得英语思维。
 
 
 
