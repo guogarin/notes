@@ -10,3 +10,10 @@
 ## 被动语态
 
 
+## 省略句
+> 1 **To err** is human; **to forgive**, divine.
+> 犯错人皆难免， 宽恕则属超凡。
+>
+> `err` vi. 犯错误;做错事;出差错
+> 
+妙语点睛 这里的两个不定式`to err`和`to forgive`作主语， 构成对比关系。 第二个分句是个省略句， 省去了`is`， 完整的句子应该是`to forgive is divine`。
