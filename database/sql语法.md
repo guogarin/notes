@@ -216,12 +216,12 @@ SELECT RIGHT('runoob', 2) -- ob
 ```
 (3) **substring**
 &emsp; `SUBSTRING(s, start, length)`从字符串 `s` 的 `start` 位置截取长度为 `length` 的子字符串，等同于 `SUBSTR(s, start, length)`。
-&emsp; 另外，目标字符串`s`是从`1`开始计数的，例如：
+&emsp; 另外，**目标字符串`s`是从`1`开始计数的**，例如：
 ```sql
 -- 从字符串 RUNOOB 中的第 2 个位置截取 3个 字符：
 SELECT SUBSTRING("RUNOOB", 2, 3) AS ExtractString; -- UNO
 ```
-(4) `SUBSTRING_INDEX()`
+**(4) `SUBSTRING_INDEX()`**
 &emsp; `SUBSTRING_INDEX(s, delimiter, number)`	返回从字符串 `s` 的第 `number` 个出现的分隔符 `delimiter` 之后的子串。
 > 如果 `number` 是正数，返回第 `number` 个字符左边的字符串。
 > 如果 `number` 是负数，返回第(`number` 的绝对值(从右边数))个字符右边的字符串。
@@ -231,8 +231,14 @@ SELECT SUBSTRING_INDEX('a*b','*',1) -- a
 SELECT SUBSTRING_INDEX('a*b','*',-1)    -- b
 SELECT SUBSTRING_INDEX(SUBSTRING_INDEX('a*b*c*d*e','*',3),'*',-1)    -- c
 ```
-
 注意，`string`是从`1`开始算的
+**(5) 拼接字符串**
+`CONCAT(string1,string2, ... );`
+> concatenate
+> &emsp; v. 连接;使连续（衔接）起来;连锁;串级
+> &emsp; adj. 连在一起的;连锁的
+> 
+[SQL81 顾客登录名](https://www.nowcoder.com/practice/7cbf5e3082954c21a80fc750ce97350f?tpId=298&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
 ### 1.7.3 SQL28 计算用户8月每天的练题数量
 #### (1) 题目
 [SQL28 计算用户8月每天的练题数量](https://www.nowcoder.com/practice/847373e2fe8d47b4a2c294bdb5bda8b6?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
@@ -485,7 +491,7 @@ order by
 &emsp;
 &emsp;
 &emsp;
-# `HAVING` 子句
+# 3. `HAVING` 子句
 ## `HAVING` 子句 的作用
 在 SQL 中增加 `HAVING` 子句原因是: 
 > &emsp;&emsp; `WHERE` 关键字无法与聚合函数一起使用。
@@ -509,7 +515,7 @@ order by
 &emsp;
 &emsp;
 &emsp;
-# `LIMIT`子句
+# 4. `LIMIT`子句
 ## `LIMIT`子句的作用
 
 ## `LIMIT`子句的语法
@@ -567,7 +573,7 @@ select device_id
 &emsp;
 &emsp;
 &emsp;
-# 过滤空值
+# 5. 过滤空值
 ### 题目
 描述
 > &emsp;&emsp; 题目：现在运营想要对用户的年龄分布开展分析，在分析时想要剔除没有获取到年龄的用户，请你取出所有年龄值不为空的用户的设备ID，性别，年龄，学校的信息。
@@ -601,9 +607,8 @@ select device_id, gender,age,university
 &emsp;
 &emsp;
 &emsp;
-# SQL 连接(JOIN)
-## 有哪几种连接？这几种连接有哪些用法？
-&emsp;&emsp; 
+# 6. SQL 连接（联结）(JOIN)
+## 6.1 有哪几种连接？这几种连接有哪些用法？
 > ① `inner join`（内连接）：只返回两个表中连接字段相等的行。
 > ② `left join` （左连接）：返回包括左表中的所有记录和右表中连接字段相等的记录。
 > ③ `right join`（右连接）：返回包括右表中的所有记录和左表中连接字段相等的记录。
@@ -613,7 +618,7 @@ select device_id, gender,age,university
 <div align="center"> <img src="./pic/sql_grammar/joins.png"> </div>
 <center> <font color=black> <b> 4种连接的7种用法 </b> </font> </center>
 
-## `left outer join`和`left join`有何区别？
+## 6.2 `left outer join`和`left join`有何区别？
 `left join`是`left outer join`的缩写，`join`一共有三种`OUTER JOIN`:
 > ① `LEFT OUTER JOIN`
 > ② `RIGHT OUTER JOIN`
@@ -621,14 +626,14 @@ select device_id, gender,age,university
 > &emsp;&emsp; 其中关键字`OUTER`是可选择的，取决于具体语言，在实现上它们都是遵循标准的。
 > 
 
-## 在对多表进行连接时，后台发生了什么？
+## 6.3 在对多表进行连接时，后台发生了什么？
 &emsp;&emsp; 在连接两张(或多张)来时，数据库会生成一张中间的临时表，然后再将这张临时表返回给用户。
 &emsp;&emsp; 连接的结果可以在逻辑上看作是由`SELECT`语句指定的列组成的新表。
 
-## 如何理解连接中的 左 和 右？
+## 6.4 如何理解连接中的 左 和 右？
 &emsp;&emsp; 左连接与右连接的 **左右** 指的是以两张表中的哪一张为基准，它们都是外连接。
 
-## 有哪些外连接？如何理解外连接？
+## 6.5 有哪些外连接？如何理解外连接？
 `join`一共有三种`OUTER JOIN`:
 > ① `LEFT OUTER JOIN`
 > ② `RIGHT OUTER JOIN`
@@ -637,24 +642,130 @@ select device_id, gender,age,university
 > 
 &emsp;&emsp; 外连接就好像是为非基准表添加了一行全为空值的万能行，用来与基准表中找不到匹配的行进行匹配。假设两个没有空值的表进行左连接，左表是基准表，左表的所有行都出现在结果中，右表则可能因为无法与基准表匹配而出现是空值的字段。
 
-## 在`left join`(`right join`)时，`on`和`where`各自起什么作用？
+## 6.6 在`left join`(`right join`)时，`on`和`where`各自起什么作用？
 在使用 `join` 时，`on` 和 `where` 条件的区别如下：
 > &emsp;&emsp; `on` 条件是在生成临时表时使用的条件，它不管 `on` 中的条件是否为真，都会返回左边表(若是`right join`则返回的是右边)中的记录。
 > &emsp;&emsp; `where` 条件是在临时表生成好后，再对临时表进行过滤的条件。这时已经没有 left join 的含义（必须返回左边表的记录）了，条件不为真的就全部过滤掉。
 > 
 
-## `join`默认是左连接还是右连接？
+## 6.7 `join`默认是左连接还是右连接？
 &emsp;&emsp; 默认是`INNER JOIN`
 
+## 6.8 实例讲解
+实例来自[MySQL 连接的使用](https://www.runoob.com/mysql/mysql-join.html)
+### （1） 测试实例数据:
+```sql
+mysql> SELECT * FROM tcount_tbl;
++---------------+--------------+
+| runoob_author | runoob_count |
++---------------+--------------+
+| 菜鸟教程       | 10           |
+| RUNOOB.COM    | 20           |
+| Google        | 22           |
++---------------+--------------+
+3 rows in set (0.01 sec)
 
 
+mysql> SELECT * from runoob_tbl;
++-----------+---------------+---------------+-----------------+
+| runoob_id | runoob_title  | runoob_author | submission_date |
++-----------+---------------+---------------+-----------------+
+| 1         | 学习 PHP       | 菜鸟教程       | 2017-04-12      |
+| 2         | 学习 MySQL     | 菜鸟教程       | 2017-04-12      |
+| 3         | 学习 Java      | RUNOOB.COM    | 2015-05-01      |
+| 4         | 学习 Python    | RUNOOB.COM    | 2016-03-06      |
+| 5         | 学习 C         | FK            | 2017-04-05      |
++-----------+---------------+---------------+-----------------+
+5 rows in set (0.01 sec)
+```
+### (2) `INNER JOIN`
+接下来我们就使用MySQL的`INNER JOIN`(也可以省略 INNER 使用 JOIN，效果一样)来连接以上两张表来读取`runoob_tbl`表中所有`runoob_author`字段在`tcount_tbl`表对应的`runoob_count`字段值：
+```sql
+SELECT
+    a.runoob_id,
+    a.runoob_author,
+    b.runoob_count
+FROM
+    runoob_tbl a
+    INNER JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;
+```
+结果：
+```shell
++-------------+-----------------+----------------+
+| a.runoob_id | a.runoob_author | b.runoob_count |
++-------------+-----------------+----------------+
+| 1           | 菜鸟教程         | 10             |
+| 2           | 菜鸟教程         | 10             |
+| 3           | RUNOOB.COM      | 20             |
+| 4           | RUNOOB.COM      | 20             |
++-------------+-----------------+----------------+
+4 rows in set (0.00 sec)
+```
+<div align="center"> <img src="./pic/sql_grammar/innner_join.gif"> </div>
 
+### (3) LEFT JOIN
+以下实例，以 runoob_tbl 为左表，tcount_tbl 为右表，理解 MySQL LEFT JOIN 的应用：
+```sql
+SELECT
+    a.runoob_id,
+    a.runoob_author,
+    b.runoob_count
+FROM
+    runoob_tbl a
+    LEFT JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;
+```
+结果：
+```shell
++-------------+-----------------+----------------+
+| a.runoob_id | a.runoob_author | b.runoob_count |
++-------------+-----------------+----------------+
+| 1           | 菜鸟教程         | 10             |
+| 2           | 菜鸟教程         | 10             |
+| 3           | RUNOOB.COM      | 20             |
+| 4           | RUNOOB.COM      | 20             |
+| 5           | FK              | NULL           |
++-------------+-----------------+----------------+
+5 rows in set (0.01 sec)
+```
+<div align="center"> <img src="./pic/sql_grammar/left_join.gif"> </div>
+
+### (4) `RIGHT JOIN`
+以下实例，以 `runoob_tbl` 为左表，`tcount_tbl` 为右表，理解MySQL `RIGHT JOIN`的应用：
+```sql
+SELECT
+    a.runoob_id,
+    a.runoob_author,
+    b.runoob_count
+FROM
+    runoob_tbl a
+    RIGHT JOIN tcount_tbl b ON a.runoob_author = b.runoob_author;
+```
+结果：
+```shell
++-------------+-----------------+----------------+
+| a.runoob_id | a.runoob_author | b.runoob_count |
++-------------+-----------------+----------------+
+| 1           | 菜鸟教程         | 10             |
+| 2           | 菜鸟教程         | 10             |
+| 3           | RUNOOB.COM      | 20             |
+| 4           | RUNOOB.COM      | 20             |
+| NULL        | NULL            | 22             |
++-------------+-----------------+----------------+
+5 rows in set (0.01 sec)
+```
+<div align="center"> <img src="./pic/sql_grammar/right_join.gif"> </div>
+
+## 6.9 联系
+[牛课网中关于“联结”的习题](https://www.nowcoder.com/exam/oj?page=1&tab=SQL%E7%AF%87&topicId=298)
+
+尤其是这题： 
+[SQL104 返回产品名称和每一项产品的总订单数](https://www.nowcoder.com/practice/1c64fd9048364a58a8ffa541720359a4?tpId=298&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D298)
 
 
 &emsp;
 &emsp;
 &emsp;
-# 联合查询：`UNION` 操作符
+# 7. 组合查询：`UNION` 操作符
 ## `union`的作用
 &emsp;&emsp; `union` 操作符合并两个或多个 `SELECT` 语句的结果。
 &emsp;&emsp; 请需要注意的是，`UNION` 内部的每个 `SELECT` 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每个 `SELECT` 语句中的列的顺序必须相同。
@@ -757,8 +868,8 @@ ORDER BY country;
 
 
 
-# 多表查询
-## 1. SQL21 浙江大学用户题目回答情况
+# 8. 多表查询
+## 8.1 SQL21 浙江大学用户题目回答情况
 ### 题目详情
 [SQL21 浙江大学用户题目回答情况](https://www.nowcoder.com/practice/55f3d94c3f4d47b69833b335867c06c1?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
 
@@ -792,7 +903,7 @@ where
 ```
 
 &emsp;
-## 2. SQL22 统计每个学校的答过题的用户的平均答题数
+## 8.2 SQL22 统计每个学校的答过题的用户的平均答题数
 ### 题目详情
 [SQL22 统计每个学校的答过题的用户的平均答题数](https://www.nowcoder.com/practice/88aa923a9a674253b861a8fa56bac8e5?tpId=199&tqId=1975674&ru=/exam/oj&qru=/ta/sql-quick-study/question-ranking&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
 ### 解法
@@ -817,7 +928,7 @@ group by university;
 ```
 
 &emsp;
-## 3 SQL23 统计每个学校各难度的用户平均刷题数
+## 8.3 SQL23 统计每个学校各难度的用户平均刷题数
 ### 题目详情
 [SQL23 统计每个学校各难度的用户平均刷题数](https://www.nowcoder.com/practice/5400df085a034f88b2e17941ab338ee8?tpId=199&tqId=1975674&ru=%2Fexam%2Foj&qru=%2Fta%2Fsql-quick-study%2Fquestion-ranking&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
 
@@ -845,7 +956,7 @@ group by
 ```
 
 &emsp;
-## 4. SQL24 统计每个用户的平均刷题数
+## 8.4 SQL24 统计每个用户的平均刷题数
 ### 题目详情
 [SQL24 统计每个用户的平均刷题数](https://www.nowcoder.com/practice/f4714f7529404679b7f8909c96299ac4?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
 
@@ -875,7 +986,7 @@ having
 ```
 
 &emsp;
-## 5. SQL25 查找山东大学或者性别为男生的信息
+## 8.5 SQL25 查找山东大学或者性别为男生的信息
 ### 题目详情
 [SQL25 查找山东大学或者性别为男生的信息](https://www.nowcoder.com/practice/979b1a5a16d44afaba5191b22152f64a?tpId=199&tags=&title=&difficulty=0&judgeStatus=0&rp=0&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3DSQL%25E7%25AF%2587%26topicId%3D199)
 
@@ -935,5 +1046,422 @@ where
 ```sql
 
 ```
+
+&emsp;
+&emsp;
+# 9 子查询(Subquery)
+## 9.1 何为子查询？
+&emsp;&emsp; **子查询（Subquery）** 是指嵌套在其他 SQL 语句（ SELECT、INSERT、UPDATE、DELETE 等）中的查询语句。
+&emsp;&emsp; 子查询也称为内查询（inner query），必须位于括号之中；包含子查询的查询也称为外查询（outer query）。子查询支持多层嵌套，也就是子查询中包含其他子查询。
+
+## 9.2 子查询到语法
+```sql
+select emp_name, salary
+from employee
+where salary > (
+          select avg(salary)
+          from employee
+      );
+```
+其中，括号内部的子查询用于获得员工的平均月薪（9832.00）；外查询用于返回月薪大于平均月薪的员工信息。该查询的结果如下：
+```
+emp_name  |salary  |
+----------|--------|
+刘备      |30000.00|
+关羽      |26000.00|
+张飞      |24000.00|
+诸葛亮    |24000.00|
+孙尚香    |12000.00|
+赵云      |15000.00|
+法正      |10000.00|
+```
+
+## 9.3 子查询分类
+### 9.3.0 总结
+MySQL 中的子查询可以分为以下三种类型：
+**（1） 标量子查询（Scalar Subquery）**：返回单个值（一行一列）的子查询。上面的示例就是一个标量子查询。
+**（2） 行子查询（Row Subquery）**：返回单行结果（一行多列）的子查询，标量子查询是行子查询的一个特例。
+**（3） 表子查询（Table Subquery）**：返回一个虚拟表（多行多列）的子查询，行子查询是表子查询的一个特例。
+
+### 9.3.1 标量子查询（Scalar Subquery）
+&emsp;&emsp; 标量子查询的结果就像一个常量一样，可以用于 SELECT、WHERE、GROUP BY、HAVING 以及 ORDER BY 等子句中。对于子查询示例：
+```sql
+select emp_name, salary
+from employee
+where salary > (
+          select avg(salary)
+          from employee
+      );
+```
+实际相当于先执行以下语句得到平均月薪：
+```
+select avg(salary)
+from employee;
+```
+**结果：**
+avg(salary)|
+-----------|
+9832.000000|
+
+然后将该值替换到外查询中：
+```
+select emp_name, salary
+from employee
+where salary > ( 9832 );
+```
+
+### 9.3.2 行子查询（Row Subquery）
+&emsp;&emsp; 行子查询可以当作一个一行多列的临时表使用。以下语句 查找所有与“黄忠”在同一个部门并且职位相同的员工：
+```sql
+select emp_name, dept_id, job_id
+from employee
+where (dept_id, job_id) = (select dept_id, job_id
+                           from employee
+                           where emp_name = '黄忠')
+and emp_name != '黄忠';
+```
+emp_name|dept_id|job_id|
+--------|-------|------|
+魏延    |      2|     4|
+&emsp;&emsp; 子查询返回了“黄忠”所在的部门编号和职位编号，这两个数值构成了一行数据；外部查询的 WHERE 条件使用该数据行进行过滤，AND 操作符用于排除“黄忠”自己。
+&emsp;&emsp; 行子查询可以使用以下比较运算符：`=、>、<、>=、<=、<>、!=、<=>`。如果行子查询产生多行记录将会返回错误，因为这些运算符只能和单个记录进行比较。
+
+### 9.3.3 表子查询（Table Subquery）
+&emsp;&emsp; 当子查询返回的结果**包含多行数据时**，称为表子查询。表子查询通常用于 FROM 子句或者查询条件中。
+#### (1) 派生表
+&emsp;&emsp; 当子查询出现在 `FROM` 子句中时，相当于创建了一个语句级别的临时表或者视图，也被称为派生表（derived table）。例如：
+```sql
+select 
+    d.dept_name as "部门名称",
+    coalesce(de.emp_number,0) as "员工数量"
+from 
+    department d
+left join(
+    select 
+        dept_id,
+        count(*) as emp_number
+    from 
+        employee
+    group by 
+        dept_id
+     ) de -- deleft join 后面是一个派生表（必须指定别名，这里是 de）
+on 
+    (d.dept_id = de.dept_id);
+```
+**查询结果：**
+部门名称  |员工数量|
+----------|-------|
+行政管理部|      3|
+人力资源部|      3|
+财务部    |      2|
+研发部    |      9|
+销售部    |      8|
+保卫部    |      0|
+&emsp;&emsp; 其中，`left join` 后面是一个派生表（必须指定别名，这里是 de），它包含了各个部门的编号和员工数量；然后将 `department` 与 `de` 进行左外连接查询，返回了部门信息和对应的员工数量。
+
+#### (2) IN 操作符
+&emsp;&emsp; 当 `WHERE` 条件中的子查询返回多行数据时，不能再使用普通的比较运算符，因为它们不支持单个值和多个值的比较；如果想要判断某个字段是否在子查询返回的数据列表中，可以使用 `IN` 操作符。例如：
+```sql
+select 
+    emp_name
+from 
+    employee
+where 
+    job_id in (select job_id from job);
+```
+&emsp;&emsp; 子查询返回了所有的职位编号，`in` 操作符用于返回 `job_id` 等于其中任何一个编号的员工，因此结果会返回所有的员工。该语句等价于以下语句：
+```sql
+select 
+    emp_name
+from 
+    employee
+where 
+    job_id = 1
+    or job_id = 2
+...
+    or job_id = 10;
+```
+&emsp;&emsp; `NOT IN` 操作符执行和 `IN` 相反的操作，也就是当表达式不等于任何子查询返回结果时为 True。
+
+#### (3) ALL、ANY/SOME 操作符
+&emsp;&emsp; 除了 IN 运算符之外，ALL、ANY/SOME 运算符与比较运算符的结合也可以用于判断子查询的返回结果：
+```
+operand comparison_operator ALL (subquery)
+operand comparison_operator ANY (subquery)
+operand comparison_operator SOME (subquery)
+```
+其中，`comparison_operator` 是比较运算符，包括 `=、>、<、>=、<=、<>、!=`。
+&emsp;&emsp; `ALL` 和比较运算符一起使用表示将表达式和子查询的结果进行比较，如果比较的结果都为 `True` 时最终结果就为 `True`。例如：
+```sql
+select
+    emp_name,
+    salary
+from
+    employee
+where
+    salary > all (
+        select
+            e.salary
+        from
+            employee e
+            join department d on (d.dept_id = e.dept_id)
+        where
+            d.dept_name = '研发部'
+    );
+```
+**查询结果：**
+emp_name|salary  |
+--------|--------|
+刘备    |30000.00|
+关羽    |26000.00|
+张飞    |24000.00|
+诸葛亮  |25000.00|
+&emsp;&emsp; 其中，子查询返回了研发部所有员工的月薪；`> all`表示大于子查询结果中的所有值，也就是大于子查询结果中的最大值（15000）。
+&emsp;&emsp; **对于 `ALL` 操作符，有两个需要注意的情况，就是子查询结果为空或者存在 `NULL` 值**。例如：
+```sql
+select emp_name, salary
+from employee
+where salary > all (select 999999 from dual where 1=0);
+```
+以上查询会返回所有的员工，因为子查询返回结果为空集，外查询相当于没有 where 条件。
+以下查询不会返回任何结果：
+```sql
+select
+    emp_name,
+    salary
+from
+    employee
+where
+    salary > all (
+        select
+            max(999999)
+        from
+            dual
+        where
+            1 = 0
+    );
+```
+因为子查询返回一行数据 `NULL`，任何数值和 `NULL` 比较的结果都是未知（unknown ），所以外查询返回空集。
+
+&emsp;&emsp; `ANY/SOME` 和比较运算符一起使用表示将表达式和子查询的结果进行比较，如果任何比较的结果为 `True`，最终结果就为 `True`。例如：
+```sql
+select
+    emp_name
+from
+    employee
+where
+    job_id = any (
+        select
+            job_id
+        from
+            job
+    );
+
+```
+该语句等价于上面的 `IN` 操作符示例，也就是说 `= ANY` 和 `IN` 操作符等价。
+
+&emsp;&emsp; 另外，需要注意的是 `NOT IN` 等价于 `<> ALL`，而不是 `<> ANY`。因为`a not in (1,2,3)`和`a <> all (1,2,3)`等价于：
+```
+a <> 1 and a <> 2 and a <>3
+```
+`a <> any (1,2,3)`等价于：
+```
+a <> 1 or a <> 2 or a <>3
+```
+
+## 9.4 关联子查询
+&emsp;&emsp; 在上面的示例中，子查询和外查询之间没有联系，可以单独运行。这种子查询也称为**非关联子查询（Non-correlated Subquery）**。另一类子查询会引用外查询中的字段，从而与外部查询产生关联，也称为**关联子查询（Correlated Subquery）**。
+&emsp;&emsp; 以下示例通过使用关联子查询获得各个部门的员工数量：
+```sql
+select
+    d.dept_name as "部门名称",
+    (
+        select
+            count(*)
+        from
+            employee
+        where
+            dept_id = d.dept_id -- 此处使用了外查询的部门编号（d.dept_id），因此是关联子查询
+    ) as "员工数量"
+from
+    department d;
+```
+**查询结果：**
+部门名称  |员工数量|
+----------|-------|
+行政管理部|      3|
+人力资源部|      3|
+财务部    |      2|
+研发部    |      9|
+销售部    |      8|
+保卫部    |      0|
+其中，子查询的 `where` 条件中使用了外查询的部门编号（d.dept_id），从而与外查询产生关联。该语句执行时，外查询先检索出所有的部门数据，针对每条记录再将 d.dept_id 传递给子查询；子查询返回每个部门的员工数量。
+
+## 9.5 EXISTS 操作符
+&emsp;&emsp; `EXISTS` 操作符用于判断子查询结果的存在性。如果子查询存在任何结果，`EXISTS` 返回 `True`；否则，返回 `False`。
+&emsp;&emsp; 例如，以下语句返回了存在女性员工的部门：
+```sql
+select
+    d.dept_name
+from
+    department d
+where
+    exists (
+        select
+            1
+        from
+            employee e
+        where
+            e.sex = '女'
+            and e.dept_id = d.dept_id
+    );
+```
+dept_name|
+---------|
+财务部   |
+研发部   |
+其中，`exists` 之后是一个关联子查询，先执行外查询找到 d.dept_id；然后依次将 d.dept_id 传递给子查询，判断该部门是否存在女性员工，如果存在则返回部门信息。
+
+&emsp;&emsp; `EXISTS` 只判断结果的存在性，因此子查询的 SELECT 列表中的内容无所谓，通常使用一个常量值。EXISTS 只要找到任何数据，立即终止子查询的执行，因此可以提高查询的性能。
+&emsp;&emsp; NOT EXISTS 执行相反的操作。如果想要查找不存在女性员工的部门，可以将上例中的 EXISTS 替换成 NOT EXISTS。
+
+&emsp;&emsp; [NOT] EXISTS 和 [NOT] IN 都可以用于判断子查询返回的结果，但是它们之间存在一个重要的区别：[NOT] EXISTS 只检查存在性，[NOT] IN 需要比较实际的值是否相等。因此，当子查询的结果包含 NULL 值时，EXISTS 仍然返回结果，NOT EXISTS 不返回结果；但是此时 IN 和 NOT IN 都不会返回结果，因为 (X = NULL) 和 NOT (X = NULL) 的结果都是未知。
+
+&emsp;&emsp; 以下示例演示了这两者之间的区别：
+```sql
+select
+    d.dept_name
+from
+    department d
+where
+    not exists (
+        select
+            null
+        from
+            employee e
+        where
+            e.dept_id = d.dept_id
+    );
+```
+dept_name|
+---------|
+保卫部    |
+```sql
+select
+    d.dept_name
+from
+    department d
+where
+    d.dept_id not in (
+        select
+            null
+        from
+            employee e
+    );
+```
+dept_name|
+---------|
+
+第一个查询使用了 NOT EXISTS，子查询中除了“保卫部”之外的部门都有返回结果（NULL 也是结果），所以外查询只返回“保卫部”。第二个查询使用了 NOT IN，子查询中返回的都是 NULL 值；d.dept_id = NULL 的结果是未知，加上 NOT 之后仍然未知，所以查询没有返回任何结果。
+
+&emsp;&emsp; EXISTS 和 IN 操作符返回左表（外查询）中与右表（子查询）至少匹配一次的数据行，实际上是一种半连接（Semi-join）；NOT EXISTS 或者 NOT IN 操作符返回左表（外查询）中与右表（子查询）不匹配的数据行，实际上是一种反连接（Anti-join）。
+
+## 9.6 横向派生表
+TODO:
+
+
+
+
+&emsp;
+&emsp;
+# 10 SQL中关键字的执行顺序(SQL关键字优先级)
+## 10.1 先给结论
+sql执行就是：
+先有表（from、on、join），才能过滤（where），再才能分组（group、having），再才能选择去重（select distinct），再才能排序（order by），最后才能分页（limit）
+`from` > `join on`> `where` > `group by` > `聚合函数` > `having` > `select` > `order by` >l `imit`
+
+## 10.2 执行顺序
+**(1)、最先执行from table**；
+需要先确定从哪个表中取数据，所以最先执行from table。
+
+**2、join连接**
+用于把来自两个或多个表的行结合起来，简单补充一下连接的类型
+
+自然连接（natural join）
+内连接（inner join）：内连接查询能将左表和右表中能关联起来的数据连接后返回，返回的结果就是两个表中所有相匹配的数据。
+外连接（outer join）：外连接分为左外连接（LEFT JOIN：即使右表中没有匹配，也从左表返回所有的行）、右外连接（RIGHT JOIN：即使左表中没有匹配，也从右表返回所有的行）、还有一个FULL JOIN(全连接)，不过MYSQL不支持全连接
+交叉连接（cross join）即笛卡尔连接
+**3、where语句；**
+where语句是对条件加以限定
+
+**4、分组语句【group by…… having】**；
+group by是分组语句
+
+having是和group by配合使用的，用来作条件限定
+
+**5、聚合函数；**
+常用的聚合函数有max，min， count，sum，聚合函数的执行在group by之后，having之前
+
+举例：count函数查询分组后，每一组分别有多少条数据
+
+select count(*) from user group by gender
+值得注意的是：聚合函数的执行在group by之后，having之前
+
+**6、select语句**
+对分组聚合完的表挑选出需要查询的数据
+
+**7、Distinct**
+distinct对数据进行去重
+
+如果sql语句存在聚合函数，例如count、max等，会先执行聚合函数再去重
+
+**8、order by排序语句。**
+order by排序语句
+
+select * from user order by id  升序排序
+select * from user order by id desc 降序排序
+**9、limit**
+limit用于指定返回的数据条数
+
+select * from user limit 2
+从user表中查询前两条数据
+该sql等同于
+select * from user limit 0,2
+表示从第0条开始取两条数据
+limit常配合order by使用
+
+select * from user order by id limit 3
+根据id排序，选出id排序前三的数据
+**总结**
+`from` > `join on`> `where` > `group by` > `聚合函数` > `having` > `select` > `order by` >l `imit`
+
+## 例子
+```sql
+select 
+    distinct user.name 
+from user 
+join vip on user.id=vip.id 
+where user.id>10 
+group by user.mobile 
+having count(*) > 2 
+order by user.id
+limit 3;
+```
+执行顺序
+> from user
+> join vip on user.id=vip.id ，join是表示要关联的表，on是连接的条件
+> where user.id>10
+> group by user.mobile 根据user.mobile分组
+> 然后先执行count(*)在执行having，查询分组之后数量大于2的分组数据
+> select 对分组聚合完的表挑选出需要查询的数据
+> distinct查询出来的数据去重
+> order by user.id 对去重后的数据排序
+> limit 3对排序后的数据选出前面3条
+> 
+[笔试被问烂了：SQL的执行顺序](https://www.nowcoder.com/discuss/395909230954393600?sourceSSR=search)
+[sql执行顺序是什么](https://www.php.cn/faq/421993.html)
+
+
+
 
 
