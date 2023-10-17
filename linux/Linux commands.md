@@ -237,3 +237,21 @@ tcp6       0      0 ::1:25                  :::*                    LISTEN
 注：
 > &emsp;&emsp; 对于无状态协议，比如UDP协议，这一字段将显示为空。而对面向连接的协议而言，netstat支持的State包括`ESTABLISHED、 SYN_SENT、 SYN_RCVD、 FIN_WAIT1、 FIN_WAIT2、TIME_WAIT、CLOSE、CLOSE_WAIT、 LAST_ACK、 LISTEN、 CLOSING、 UNKNOWN`。
 > 
+
+
+
+# 6. expect 命令
+## 6.1 expect命令的使用场景
+&emsp;&emsp; `expect`可以用来实现自动和交互式任务进行通信，而无需人的干预。比如可以实现自动登录
+
+## 应用
+### （1） scp自动传输脚本
+```shell
+expect -c "
+spawn scp root@1.2.3.4:/root/1.log /root
+expect {
+\"*assword\" {set timeout 300; send \"密码\r\";}
+\"yes/no\" {send \"yes\r\"; exp_continue;}
+}
+expect eof"
+```
