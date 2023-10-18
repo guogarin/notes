@@ -9,6 +9,9 @@
 # 1. 
 
 # 2. 图的遍历
+## 2.0 图解DFS和BFS
+<div align="center"> <img src="./pic/dfs_bfs.jpeg"> </div>
+
 ## 2.1 深度优先(Depth First Search, DFS)
 
 ## 2.2 广度优先(Breadth First Search, BFS)
