@@ -65,7 +65,7 @@ private:
     void operator=(const Mutex&);
 };
 ```
-下面的代码是`mutex.cpp `:
+下面的代码是`mutex.cpp`:
 ```cpp
 //mutex.cpp 
 #include "mutex.h"
