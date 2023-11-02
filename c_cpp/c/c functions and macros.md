@@ -1,3 +1,11 @@
+[toc]
+
+
+
+
+
+&emsp;
+&emsp; 
 # 1. `assert()`
 ## 1.1 `assert()`原理
 &emsp;&emsp; 需要注意的是，断言`assert()`并不是一个函数，而是一个宏。程序在假设条件下，能够正常良好的运作，其实就相当于一个 if 语句：
@@ -32,7 +40,7 @@ int main()
 ```
 编译后运行：
 ```
-est.o: test.cpp:8: int main(): Assertion `a' failed.
+t est.o: test.cpp:8: int main(): Assertion `a' failed.
 Aborted (core dumped)
 ```
 可以看到上面的代码直接退出了。我们在`#include <assert.h>`前加入一行`#define NDEBUG`：
