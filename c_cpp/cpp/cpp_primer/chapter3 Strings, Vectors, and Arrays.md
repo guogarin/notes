@@ -316,7 +316,10 @@ vector<string> svec(10);  // 10个元素，每个都是空串
 &emsp;
 ## 31.C++ vector内存增长
 &emsp;&emsp; 当我们插入一个元素时它的预分配空间不够时，它会重新申请一段新空间，将原空间上的元素 复制到新的空间上去，然后再把新加入的元素放到新空间的尾部，以满足vector元素要求连续存储的目的。
-### vector的内存增长会引发什么后果？
+
+
+&emsp;
+## vector的内存增长会引发什么后果？
 &emsp;&emsp; vector的内存增长后(进行了插入操作)，原空间会被系统撤销或征做他用，于是指向原 空间的迭代器就成了类似于“悬垂指针”一样的东西，指向了一片非法区域。
 
 
@@ -329,7 +332,7 @@ vector<string> svec(10);  // 10个元素，每个都是空串
 
 &emsp;
 ## 33. 范围for语句和 vector的push_back()操作
-&emsp;&emsp; 如果需要在循环体内部向`vector`增加元素的话，则不能使用范围for语句，原因见5.4.3
+&emsp;&emsp; 如果需要在循环体内部向`vector`增加元素的话，则不能使用范围for语句
 
 
 
@@ -348,8 +351,8 @@ cout << endl;
 
 
 &emsp;
-## 35.能否用下表范围给vector添加元素？
-&emsp;&emsp; 显然不可以，下表访问只能用来访问已存在的元素。
+## 35.能否用下标给vector添加元素？
+&emsp;&emsp; 显然不可以，下标访问只能用来访问已存在的元素。
 
 
 
@@ -441,7 +444,7 @@ it->empty()   //
 
 
 &emsp;
-## 47. 迭代器向减得到的是什么类型？
+## 47. 迭代器相减得到的是什么类型？
 &emsp;&emsp; 得到的是一个 `difference_type`类型，它实际上是一个 **带符号**的整型（因为有可能是负值）。
 
 
@@ -476,7 +479,7 @@ string strs[get_size()];    	// 只有在 get_size() 是常量表达式时才正
 &emsp;
 ## 51. 如何用malloc()分配n个int类型
 ```cpp
-int * ptr = (int *) malloc(10 *  sizeof(int));
+int * ptr = (int *) malloc(n *  sizeof(int));
 ```
 
 
@@ -484,9 +487,9 @@ int * ptr = (int *) malloc(10 *  sizeof(int));
 &emsp;
 ## 52. 为什么数组不允许拷贝和赋值？
 ```cpp
-int a[] = {0, 1, 2};  //  
-int a2[] = a; 		// 错误: 不能对数组进行拷贝初始化  
-a2 = a; 			// 错误: 数组不能赋值  
+int a[] = {0, 1, 2};  
+int a2[] = a;       // 错误: 不能对数组进行拷贝初始化  
+a2 = a;             // 错误: 数组不能赋值  
 ```
 原因：
 > 数组名是一个地址常量，其值和第一个元素的地址值相同，不可修改。所以他们不能直接赋值。
@@ -528,8 +531,9 @@ int (&arrRef)[10] = arr; // arrRef refers to an array of ten ints
 ## 55.如何引用数组？
 在引用一个数组时，我们需要带上数组的长度才行：
 ```cpp
-1.int n3[3] = {2, 4, 6};
-2.int (&rn3)[3] = n3;     //数组的引用
+int n3[3] = {2, 4, 6};
+
+int (&rn3)[3] = n3;     //数组的引用
 ```
 `rn3` 就是数组的引用，它引用了`n3`
 
@@ -556,9 +560,11 @@ ia2 = 42; 				// 错误: ia2 是指针
 ## 58. 数组有begin() 和 end() 吗？
 有的，但是调用方式和容器不一样，因为数组毕竟不是容器，数组的begin() 和 end()的调用方式和函数一样：
 ```cpp
-1.int ia[] = {0,1,2,3,4,5,6,7,8,9}; // ia is an array of ten ints  
-2.int *beg = begin(ia); // 指向 ia 的首元素
-3.int *last = end(ia); // 指向ia的尾后，即ia最后一个元素的下一个位置。  
+int ia[] = {0,1,2,3,4,5,6,7,8,9}; // ia is an array of ten ints  
+
+int *beg = begin(ia); // 指向 ia 的首元素
+
+int *last = end(ia); // 指向ia的尾后，即ia最后一个元素的下一个位置。  
 ```
 `begin()` ：指向数组的首元素。
 `end()`	：和尾后迭代器一样，指向数组的最后一个元素 的下一个位置。
@@ -603,7 +609,7 @@ char b[] = "abcde";               // 编译器会主动在后面加一个”\0�
 ```
 
 
-
+&emsp;
 ## 62.char message1[] = "Hello"; 和 char *message2 = "Hello";有何区别？
 这两个初始化看上去很像， 但它们具有不同的含义：
 ```cpp
@@ -631,8 +637,8 @@ vector<int> ivec{0, 1, 2, 3, 4, 5};
 ```
 (2) string	：c风格字符串。
 ```cpp
-1.string str1("Hello World"); //   
-2.char str2[] = "Hello World"; //  
+string str1("Hello World"); //   
+char str2[] = "Hello World"; //  
 ```
 
 
