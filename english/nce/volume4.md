@@ -362,3 +362,355 @@ to give sb/sth authority, status or a particular type of treatment
 > Officials in Brussels say that chickens slaughtered in the United States are not fit to grace European tables. 
 > 
 原文的写法是为了凸显`chickens slaughtered in the United States`。
+
+
+
+
+
+&emsp;
+&emsp;
+# Lesson 9 Royal Espionage
+
+## 1. espionage `/ˈespiənɑːʒ/`
+n. 间谍活动；谍报活动；刺探活动
+> Some of the commercial activities were a cover for espionage.
+> 有些商业活动是为间谍活动提供掩护。
+> 
+> She may call it research; I call it industrial espionage.
+> 她可以称之为研究，可我称它为产业情报刺探。
+> 
+
+## 2. Alfred the Great
+在这里，`the Great`表示“大帝”，比如亚历山大大帝：`Alexander the Great`
+
+## 3. minstrel `/ˈmɪnstrəl/`
+n. 吟游诗人；(中世纪的)游方艺人
+
+## 4. harp 
+n. 竖琴
+
+vi. 喋喋不休；唠叨；弹竖琴；不停地说
+> She concentrated on the good parts of her trip instead of harping on about the bad.
+> 她着重说了自己旅途中遇到的开心事，并没有唠叨那些不愉快的事。
+> 
+
+## 5. ballad `/ˈbæləd/`
+叙事诗；民歌；民谣
+> a medieval ballad about a knight and a lady
+> 一首关于骑士和贵族小姐的中世纪谣曲
+> 
+（节奏缓慢的）情歌
+> Her latest single is a ballad.
+> 她的最新单曲唱片是一首情歌。
+>
+
+## 6. programme
+美国英语用 `program`
+`program`作名词还有 `（剧院或音乐会的）节目单`的意思
+
+## 7. conjure `/ˈkʌndʒər/`
+### 7.1 单词
+**v 变魔术；变戏法；使…变戏法般地出现（或消失）**
+> [单独使用的动词] Her grandfather taught her to conjure.
+> 她的祖父教她变魔术。
+> 
+> [动词+名词短语+ 副词/介词短语] He could conjure coins from behind people's ears.
+> 他可以从人们的耳朵后面变出硬币来。
+>
+### 7.2 惯用搭配
+#### ① `conjure sth up`
+**(1) 使…呈现于脑际；使想起**
+> 同义词：evoke
+> That smell always conjures up memories of holidays in France.
+> 那种气味总是令人勾起在法国度假那段日子的回忆。
+> 
+**(2) 用咒语使…出现**
+
+#### ② `conjure sth from/out of sth`
+**令人惊讶地创造出；使意外地出现**
+> He conjured a delicious meal out of a few leftovers.
+> 他居然用几样剩下的东西做出了可口的一餐。
+> 
+> Thirteen years ago she found herself having to conjure a career from thin air...
+> 13年前，她认识到自己得白手起家创造出一番事业来。
+> 
+
+#### ③ `name to conjure with` 
+重要人物(或组织)的名字;有影响力的名
+> By 1920, Fox and Universal were already names to conjure with.
+> 到1920年，福克斯和环球已经声名显赫。
+> 
+
+### 7.3 conjuring
+n. 变魔术，变戏法
+adj. 施魔术的，变戏法的
+
+## 8. penetrate `ˈpenətreɪt/`
+**① ~ (into/through/to) sth**
+穿过；进入`to go into or through sth`
+> [动词+名词短语] The knife had penetrated his chest.
+> 刀子刺入了他的胸膛。
+> 
+> The sun's radiation penetrates the skin.
+> 太阳的辐射能透进皮肤。
+> 
+> (figurative)The war penetrates every area of the nation's life.
+> 战争波及全国国民生活的各个领域。
+> 
+> [单独使用的动词] These fine particles penetrate deep into the lungs.
+> 这些微小的尘埃可深深地吸入肺部。
+> 
+**② 渗透，打入（组织、团体等）**
+`to succeed in entering or joining an organization, a group, etc. especially when this is difficult to do`
+> [动词+名词短语] They had penetrated airport security.
+> 他们已打入机场保安组织。
+> 
+> The party has been penetrated by extremists.
+> 极端分子已经打入了这个党。
+> 
+> This year the company has been trying to penetrate new markets (= to start selling their products there) .
+> 今年这家公司一直试图打入新市场。
+> 
+> [单独使用的动词] The troops had penetrated deep into enemy lines.
+> 部队已经深入敌军防线。
+> 
+**③ [动词+名词短语] 看透；透过…看见**
+`to see or show a way into or through sth`
+> Our eyes could not penetrate the darkness.
+> 我们的眼睛在黑暗中什么也看不见。
+> 
+> The flashlights barely penetrated the gloom.
+> 手电筒勉强照见那幽暗处。
+> 
+**④ [动词+名词短语] 洞察；发现；揭示**
+`to understand or discover sth that is difficult to understand or is hidden`
+> Science can penetrate many of nature's mysteries.
+> 科学能揭示自然界的许多奥秘。
+> 
+**⑤ 被领悟；被理解**
+`to be understood or realized by sb`
+> [单独使用的动词] I was at the door before his words penetrated.
+> 我走到门口才听懂了他说的话。
+> 
+> [动词+名词短语] None of my advice seems to have penetrated his thick skull (= he has not listened to any of it) .
+> 他那木脑袋似乎一点也听不进我的忠告。
+> 
+
+**⑥ 进入；跻身**
+`If someone penetrates an organization, a group, or a profession, they succeed in entering it although it is difficult to do so.`
+> ...the continuing failure of women to penetrate the higher levels of engineering...
+> 女性一直未能跻身工程领域的更高层
+> 
+
+**⑦ [动词+名词短语] of a man 男人（以阴茎）插入**
+`to put the penis into the vagina or anus of a sexual partner`
+
+
+## 9. thither `ˈðɪðər/`
+### ① ADV 到那里;向那边
+`Thither means to the place that has already been mentioned.`
+> They have dragged themselves thither for shelter.
+> 他们费力地挪动到那边躲避。
+> 
+### ② hither and thither
+(especially literary)各处；四处
+`in many different directions`
+>Refugees run hither and thither in search of safety.
+>难民们四处逃奔，寻求安全之所。
+> 
+
+## 10. proceed
+### 10.1 单词意思
+**① VERB 接下来做；接着做**
+`If you proceed to do something, you do it, often after doing something else first.`
+> He proceeded to tell me of my birth...
+> 他接着给我讲我出生的事。
+> 
+**② VERB 继续进行；继续做**
+`If you proceed with a course of action, you continue with it.`
+> The group proceeded with a march they knew would lead to bloodshed...
+> 这个团体继续示威游行，他们知道这将导致流血事件的发生。
+> 
+**③ VERB （活动、过程或事件）继续，持续，连续不断**
+`If an activity, process, or event proceeds, it goes on and does not stop.`
+> The ideas were not new. Their development had proceeded steadily since the war...
+> 这些并不是什么新思想，自从战争开始就一直稳定地发展演变。
+> 
+**④ VERB （朝某个方向）前进，行进**
+`If you proceed in a particular direction, you go in that direction.`
+> She climbed the steps and proceeded along the upstairs hallway...
+> 她爬上楼梯，顺着楼上的走廊走去。
+> 
+**⑤ N-PLURAL （某个事件或活动的）收入，收益**
+`The proceeds of an event or activity are the money that has been obtained from it.`
+> The proceeds of the arms sales were then funneled to Contra fighters in Central America...
+> 出售武器所得的收入随后用来支持了中美洲的反政府武装组织。
+> 
+### 10.2 惯用搭配
+`① proceed against sb`
+(law 律)起诉（某人） to start a court case against sb
+> We shall proceed against transgressors.
+> 我们将控诉违犯者。 
+> 
+`② proceed from sth`
+(formal)由…引起；起因于；是…的结果 to be caused by or be the result of sth
+
+
+## 11 trivial 
+adj. 不重要的；琐碎的；微不足道的 `not important or serious; not worth considering`
+> a trivial detail
+> 细枝末节
+> 
+> I know it sounds trivial , but I'm worried about it.
+> 我知道这事听起来微不足道，但我还是放心不下。
+> 
+> I'll try to fix it ─ but it's not trivial (= it may be difficult to fix) .
+> 我要设法修好，不过也不是轻易就能修好的。
+> 
+
+## 12. horde `/hɔːrd/`
+n. 部落；一大群人
+> There are always hordes of tourists here in the summer.
+> 夏天这里总有成群结队的游客。
+> 
+> Football fans turned up in hordes .
+> 来了大批大批的足球迷。
+> 
+
+## 13. commissariat `/ˌkɑːmɪˈseriət/`
+n. (部队的)军需处，给养部门
+
+## 14. harry `/ˈhæri/`
+**① vt（不断）烦扰；折磨**
+`to annoy or upset sb by continuously asking them questions or for sth`
+> 同义词：harass
+> She has been harried by the press all week.
+> 整个星期她都受到新闻界的不断烦扰。
+> 
+**② vt 反复进攻；不断袭击** `to make repeated attacks on an enemy`
+> So, faced with the Danish advance, Alfred did not risk (open) battle but harried the enemy.
+> 因此，面对丹麦人的进攻，阿尔弗雷德没有冒着风险正面御敌，而是反复袭击敌人。
+> 
+**③ n.哈里；恶魔；胡闹的青年人；伦敦佬**
+> A bottle of wine had loosened Harry's tongue.
+> 一瓶酒下肚，哈里的话匣子便打开了。
+>
+
+## 15. patrol `/pəˈtroʊl/`
+### 15.1 单词释义
+**① v 巡逻；巡查**
+`to go around an area or a building at regular times to check that it is safe and that there is no trouble`
+> [动词+名词短语] Troops patrolled the border day and night.
+> 军队日夜在边境地区巡逻。
+> [单独使用的动词] Guards can be seen patrolling everywhere.
+> 到处都能见到保安人员在巡逻。
+> 
+**② v [动词+名词短语] （尤指威胁性地）逛荡，闲逛**
+`to drive or walk around a particular area, especially in a threatening way`
+> Gangs of youths patrol the streets at night.
+> 夜里成帮结伙的年轻人在街上闲逛。
+> 
+**③ n. [可数名词, 不可数名词] 巡逻；巡查**
+`the act of going to different parts of a building, an area, etc. to make sure that there is no trouble or crime`
+> Security guards make regular patrols at night.
+> 夜间保安人员定时巡逻。
+> a police car on patrol 
+> 巡逻的警车
+> 
+**④ n. [可数名词] 巡逻队；巡逻车队**
+`a group of soldiers, vehicles, etc. that patrol an area`
+> a naval/police patrol
+> 海军 / 警察巡逻队
+> a patrol car/boat
+> 巡逻车 / 船
+> 
+**⑤ n. 童子军小队**
+### 15.2 形近词
+petrol `/ˈpetrəl/` n. 汽油
+
+## 16. assail `/əˈseɪl/`
+**① vt. 攻击；袭击**
+`to attack sb violently, either physically or with words`
+> He was assailed with fierce blows to the head.
+> 他的头遭到猛烈殴打。
+> Dividing his command, Morgan assailed both strongholds at the same time...
+> 摩根派遣部队同时袭击了两个据点。
+> 
+**② vt. 猛烈抨击；强烈指责**
+`If someone assails you, they criticize you strongly.`
+> The opposition's newspapers assail the government each day...
+> 反对党的报纸每天都对政府进行猛烈抨击。
+> 
+**③ vt. [usually passive] 困扰；使苦恼**
+`to disturb or upset sb severely`
+> to be assailed by worries/doubts/fears 
+> 为焦虑 / 疑虑 / 担心所困扰
+>
+**④ vt （声音或气味）侵入，刺激**
+`If you say that a loud sound or a strong smell assails someone's ears or nostrils, you are emphasizing that it is very intense and seems shocking or unpleasant.`
+> (figurative)A vile smell assailed my nostrils.
+> 一股恶臭十分刺鼻。
+> 
+> The scent of burning metal assailed his nostrils.
+> 燃烧的金属的味道刺激着他的嗅觉。
+>
+
+## 17. skirmish `/ˈskɜːrmɪʃ/`
+**① 小规模战斗；小冲突；（尤指）遭遇战**
+a short fight between small groups of soldiers, etc., especially one that is not planned
+> Border skirmishes between India and Pakistan were common.
+> 印度和巴基斯坦边境上常常发生小规模战斗。
+> 
+**② 尤指政治上对立双方的）小争执，小争论**
+> This difference in approach has led to several political skirmishes.
+> 这种方式上的差异已经导致了几场政治冲突。
+>
+**③ [单独使用的动词] 发生小规模战斗（或冲突、争执）**
+> [不可数名词] There are reports of skirmishing along the border.
+> 有报道称在边界一带发生了小规模冲突。
+> 
+
+## 18. episode `/ˈepɪsoʊd/`
+**① N-COUNT 插曲;事件;时期**
+`You can refer to an event or a short period of time as an episode if you want to suggest that it is important or unusual, or has some particular quality.`
+> This episode is bound to be a deep embarrassment for Washington...
+> 这一事件肯定会让华盛顿非常难堪。
+> 
+**② N-COUNT （广播剧或电视剧的）一集;（杂志连载故事的）一节**
+`An episode of something such as a series on radio or television or a story in a magazine is one of the separate parts in which it is broadcast or published.`
+> The final episode will be shown next Sunday.
+> 下周日将播出最后一集。
+> 
+**③ N-COUNT 患病期;（病症的）发作期**
+`An episode of an illness is short period in which a person who suffers from it is affected by it particularly badly.`
+> ...people who'd suffered a third episode of depression in two years...
+> 两年内忧郁症3次发作的人
+> 
+
+## 19. epic 
+**① N-COUNT 史诗;叙事诗;史诗般的作品**
+`An epic is a long book, poem, or film, whose story extends over a long period of time or tells of great events.`
+> ...the Middle High German epic, 'Nibelungenlied', written about 1200...
+> 写于1200年左右的中古高地德语史诗《尼贝龙根之歌》
+> 
+> ...epic narrative poems...
+> 叙事史诗
+> 
+> Like 'Gone With The Wind' it's an unashamed epic romance.
+> 和《飘》一样，它也是一个无所顾忌的史诗般的爱情故事。
+> 
+**② ADJ 壮丽的;宏大的**
+`Something that is epic is very large and impressive.`
+> ...Columbus's epic voyage of discovery.
+> 哥伦布伟大的发现之旅
+> 
+**③ ADJ 具有史诗性质的；史诗般的**
+`having the features of an epic`
+> an epic poem
+> 史诗般的诗
+> 
+**④ ADJ 漫长而艰难的；艰苦卓绝的**
+`taking place over a long period of time and involving a lot of difficulties`
+> an epic journey/struggle 
+> 漫长而艰难的旅程；艰苦卓绝的斗争
+> 
