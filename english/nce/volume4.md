@@ -714,3 +714,91 @@ a short fight between small groups of soldiers, etc., especially one that is not
 > an epic journey/struggle 
 > 漫长而艰难的旅程；艰苦卓绝的斗争
 > 
+
+
+
+
+
+&emsp;
+&emsp;
+# Lesson 10 Silicon Valley 硅谷
+&emsp;&emsp; 本文选自 `US News and World Report, Oct 2nd 1989`, 这家杂志社就是每年推出 `US News` 大学排名的机构.
+## 一 new words and phrases
+### 1. integrated circuit
+n.集成电路
+
+### 2.  Institute of Technology
+n. 理工学院；技术学院；科技学院；工业学院
+
+### 3.  let their imaginations soar
+充分发挥他们的想像力
+
+### 4. penalize `/ˈpiːnəlaɪz/`
+**(1).~ sb (for sth) 处罚；惩罚；处以刑罚**
+`to punish sb for breaking a rule or law by making them suffer a disadvantage`
+> You will be penalized for poor spelling.
+> 你拼写不好将会受到处罚。
+> 
+**(2). ~ sb (for sth) （体育运动中）判罚**
+`to punish sb for breaking a rule in a sport or game by giving an advantage to their opponent`
+> He was penalized for time-wasting.
+> 他因拖延时间而受罚。
+> 
+> Foul play will be severely penalized.
+> 比赛犯规将受到严厉处罚。
+> 
+**(3).置于不利地位；不公正地对待**
+`to put sb at a disadvantage by treating them unfairly`
+> The new law appears to penalize the poorest members of society.
+> 新法规似乎不利于社会中的最贫困者。
+> 
+
+### 5. perfect
+perfect还能做动词：
+**vt. [动词+名词短语] 使完善；使完美；使完备**
+`to make sth perfect or as good as you can`
+> As a musician, she has spent years perfecting her technique.
+> 身为音乐家，她多年来不断在技艺上精益求精。
+> 
+
+### 6. spawn
+(1) v.[单独使用的动词, 动词+名词短语] of fish, frogs , etc. 鱼、蛙等产卵
+`to lay eggs`
+> ...fish species like salmon and trout which go upstream, spawn and then die...
+> 诸如鲑鱼和鳟鱼这样洄游产卵后死去的鱼类
+> 
+**(2) v. [动词+名词短语] (often disapproving)引发；引起；导致；造成**
+`to cause sth to develop or be produced`
+> The band's album spawned a string of hit singles.
+> 这支乐队的专辑繁衍出一连串走红的单曲唱片。
+>
+> He argues that the breakdown in the legal system has spawned a black market.
+> 他认为司法体系的不健全导致了黑市的出现。
+> 
+**(3) n. [不可数名词] （鱼、蛙等的）卵**
+`a soft substance containing the eggs of fish, frogs etc.`
+> ...her passion for collecting frog spawn.
+> 她对采集蛙卵的热爱
+>
+
+### 7. start-up
+**(1) adj.(新企业或工程)开办阶段的，启动时期的**
+> start-up costs
+> 启动经费
+> 
+**(2) n. 刚成立的公司，新企业(尤指互联网公司)**
+> For now the only bright spots in the labor market are small businesses and high-tech start-ups.
+> 目前劳动力市场上唯一的亮点是小企业和新兴高科技公司。
+>
+
+### 8. anarchy `/ˈænərki/`
+**n. 无政府状态；混乱；无法无天**
+> The overthrow of the military regime was followed by a period of anarchy.
+> 军事统治政权被推翻以后，接着是一段时期的无政府状态。
+> 
+> Civil war and famine sent the nation plunging into anarchy.
+> 内战和饥荒使该国陷入了无政府状态。
+> 
+> There was complete anarchy in the classroom when their usual teacher was away.
+> 任课老师不在时，班上一片混乱。
+> 
