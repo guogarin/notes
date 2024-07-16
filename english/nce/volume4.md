@@ -802,3 +802,74 @@ perfect还能做动词：
 > There was complete anarchy in the classroom when their usual teacher was away.
 > 任课老师不在时，班上一片混乱。
 > 
+
+### 9. in droves
+成群结队；成群结队地；陆陆续续
+> People were leaving the countryside in droves to look for work in the cities.
+> 一批一批的人离开农村到城里找工作。
+> 
+> Scientists are leaving the country in droves
+> 科学家们正成批地离开这个国家。
+> 
+
+## 10. draw on
+**(1) PHRASAL VERB 凭借;利用;动用**
+`If you draw on or draw upon something such as your skill or experience, you make use of it in order to do something.`
+> As the heads of next-generation start-ups, these Asian innovators can draw on customs and languages to forge tighter links with crucial Pacific Rim markets.
+> 作为下一代创业公司的带头人，这些亚洲创新者可以依靠其习惯和语言，与重要的环太平洋市场建立更加紧密的联系。
+> 
+> He drew on his experience as a yachtsman to make a documentary programme.
+> 他凭借曾经做过快艇驾驶员的经验制作了一档纪实节目。
+> 
+**(2) PHRASAL VERB (时光)渐渐过去**
+`As a period of time draws on, it passes and the end of it gets closer.`
+> As the afternoon drew on we were joined by more of the regulars.
+> 随着午后时光的渐渐消逝,又有些老主顾加入到我们当中来了。
+>
+
+## 11. Pacific Rim
+n. 太平洋周边地区，环太平洋圈(尤指被视为经济体的东亚诸国)
+> Pacific Rim countries 
+> 环太平洋国家
+>
+> Pacific Rim markets
+> 环太平洋市场
+> 
+`Atlantic Rim`是 环大西洋
+
+## 12. a lock (on sth)
+(北美英语)（对某物的）完全控制`total control of sth`
+> One company had a virtual lock on all orange juice sales in the state.
+> 有一家公司实际上垄断了整个州所有的橙汁销售。
+> 
+
+
+
+
+
+&emsp;
+&emsp;
+# Lesson 11 How to Grow Old 怎样变老
+&emsp;&emsp; 本文选自 1950 年诺贝尔文学奖获得者罗素(Bertrand Russell, 1872 -1970)的`How to Grow Old` 一文，收录于 `Portraits From Memory And Other Essays, 1956`. 全文有七个自然段，本文为最后一段.全文如罗素所说，讲的是 `How not to grow old`，并非教材所说如何安度晚年. 建议搜索全文，看看罗素这位坚定的无神论者是如何看待衰老和死亡的。
+## 1. oppress
+(1) VERB 压迫；压制
+`To oppress people means to treat them cruelly, or to prevent them from having the same opportunities, freedom, and benefits as others.`
+> These people often are oppressed by the governments of the countries they find themselves in...
+> 这些人经常受到所在国政府的压迫。
+> 
+(2) VERB 使心情沉重；使压抑；使苦恼
+`If something oppresses you, it makes you feel depressed, anxious, and uncomfortable.`
+> The place oppressed Aubrey even before his eyes adjusted to the dark...
+> 奥布里的眼睛还没有适应黑暗之前，这地方便已经让他觉得很压抑了。
+> 
+
+## 2. justification
+n. 正当理由 `a good reason why sth exists or is done`
+> I can see no possible justification for any further tax increases.
+> 我看不出还能提出什么理由来进一步加税了。
+> 
+> He was getting angry─and with some justification .
+> 他生气了——而且不是没有道理的。
+> 
+
+## 3. 
