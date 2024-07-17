@@ -852,19 +852,19 @@ n. 太平洋周边地区，环太平洋圈(尤指被视为经济体的东亚诸�
 # Lesson 11 How to Grow Old 怎样变老
 &emsp;&emsp; 本文选自 1950 年诺贝尔文学奖获得者罗素(Bertrand Russell, 1872 -1970)的`How to Grow Old` 一文，收录于 `Portraits From Memory And Other Essays, 1956`. 全文有七个自然段，本文为最后一段.全文如罗素所说，讲的是 `How not to grow old`，并非教材所说如何安度晚年. 建议搜索全文，看看罗素这位坚定的无神论者是如何看待衰老和死亡的。
 ## 1. oppress
-(1) VERB 压迫；压制
+**(1) VERB 压迫；压制**
 `To oppress people means to treat them cruelly, or to prevent them from having the same opportunities, freedom, and benefits as others.`
 > These people often are oppressed by the governments of the countries they find themselves in...
 > 这些人经常受到所在国政府的压迫。
 > 
-(2) VERB 使心情沉重；使压抑；使苦恼
+**(2) VERB 使心情沉重；使压抑；使苦恼**
 `If something oppresses you, it makes you feel depressed, anxious, and uncomfortable.`
 > The place oppressed Aubrey even before his eyes adjusted to the dark...
 > 奥布里的眼睛还没有适应黑暗之前，这地方便已经让他觉得很压抑了。
 > 
 
 ## 2. justification
-n. 正当理由 `a good reason why sth exists or is done`
+**n. 正当理由** `a good reason why sth exists or is done`
 > I can see no possible justification for any further tax increases.
 > 我看不出还能提出什么理由来进一步加税了。
 > 
@@ -872,4 +872,103 @@ n. 正当理由 `a good reason why sth exists or is done`
 > 他生气了——而且不是没有道理的。
 > 
 
-## 3. 
+## 3. cheat sb (out) of sth
+（尤指用不诚实或不正当的手段）阻止某人得到某物
+`to prevent sb from having sth, especially in a way that is not honest or fair`
+> They cheated him out of his share of the profits.
+> 他们施展伎俩，不让他获得他的那份利润。
+> 
+
+## 4. and has achieved whatever work it was [in him] to do
+
+## 5. abject
+**(1) 悲惨绝望的；凄惨的**
+`terrible and without hope`
+> abject poverty/misery/failure 
+> 赤贫；凄惨；惨败
+> 
+
+**(2) 下贱的；卑躬屈节的；自卑的**
+`without any pride or respect for yourself`
+> an abject apology
+> 低声下气的道歉
+> 
+
+## 6. ignoble
+**adj. (formal)卑劣的；不诚实的；不光彩的**
+> 同义词：base(base作为形容词也有`adj. 卑鄙的；不道德的`的意思)
+> 
+> ignoble thoughts
+> 可耻的想法
+> 
+> an ignoble person
+> 卑鄙的人
+> 
+
+## 7. seem
+**V-LINK (在描述自己的感觉、想法、经历时用于缓和语气)好像，似乎**
+> I seem to have lost all my self-confidence...
+> 我好像已经自信全无。
+>
+> It seems to me that 
+> 在我看来
+> 
+
+## 8. impersonal
+**(1) ADJ-GRADED 没有人情味的;冷淡的**
+> Before then many children were cared for in large impersonal orphanages...
+> 在那之前,许多孩子被安置在一个缺乏人情味的大孤儿院里。
+> 
+**(2) ADJ-GRADED 客观的;不受个人感情(或偏见)影响的**
+> We must be as impersonal as a surgeon with his knife...
+> 我们必须像外科医生拿手术刀时一样冷静客观,不受任何感情影响。
+> 
+**(3) ADJ-GRADED 非个人的;不带个人色彩的**
+> The rest of the room was neat and impersonal...
+> 房间的其余部分整洁干净,不带任何的个人色彩。
+> 
+
+## 9. bit by bit
+**adv. 一点点地；逐渐地**
+> The work was never finished and bit by bit the building fell apart.
+> 工程一直没有完工，于是楼一点点地坍塌了。
+> 
+> His father began to lose his memory bit by bit, becoming increasingly forgetful.
+> 他的父亲开始一点点地失去记忆，变得越来越健忘。
+> 
+> Bit by bit memories of the night came back to me.
+> 我渐渐回忆起了那晚的点点滴滴。
+> 
+
+## 10. recede
+**(1) vi. 逐渐远离；渐渐远去**
+> The sound of the truck receded into the distance.
+> 卡车的声音渐渐在远处消失了。
+> 
+> She watched his receding figure.
+> 她看着他的身影渐渐远去。
+> 
+**(2) vi. especially of a problem, feeling or quality 尤指问题、感情或品质逐渐减弱；慢慢变小**
+> The prospect of bankruptcy has now receded (= it is less likely) .
+> 破产的可能性现已减少了。
+> 
+> The pain was receding slightly.
+> 疼痛正在一点一点地减弱。
+> 
+**(3) of hair 头发（头顶前部）头发停止生长，变秃**
+> a middle-aged man with receding hair/a receding hairline 
+> 发际后移的中年男子
+> 
+**(4) a ~ chin**
+向后缩的下巴
+
+## 11. vitality /vaɪˈtæləti/
+n. 活力；生命力；热情
+> 同义词：vigour
+> 
+> She is bursting with vitality and new ideas.
+> 她朝气蓬勃，满脑子新主意。
+> 
+> Without continued learning, graduates will lose their intellectual vitality...
+> 如果不继续学习，毕业生就会失去思想上的活力。
+> 
