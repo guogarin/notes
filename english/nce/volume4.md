@@ -972,3 +972,74 @@ n. 活力；生命力；热情
 > Without continued learning, graduates will lose their intellectual vitality...
 > 如果不继续学习，毕业生就会失去思想上的活力。
 > 
+
+
+
+&emsp;
+&emsp;
+# Lesson 12 Banks and Their Customers 银行和客户
+&emsp;&emsp; 选自 `Gordon J. Borrie` (大律师 `Barrister-at-law`) 和 `Aubrey L. Diamond` (事务律师`Solicitor`)合著的 `The Consumer, Society and the Law` 一书, 本节选讨论了银行与客户的法律责任问题。
+## 1.  current account
+n. 活期(存款)账户;往来账户
+
+## 2. in favour of
+**① 赞成；支持**
+> Those present were in favour of change.
+> 在座的人都赞成变革。
+> 
+**② 有利于**
+> The general opinion is in favour of us.
+> 舆论普遍对我们有利.
+> 
+**③ 以…为受款（受益）人**
+> He abdicated in favour of his son.
+> 他把王位让给了儿子。
+>
+> They established a credit for 100, 000 dollars in favour of me.
+> 他们给我10万美元贷款来帮助我.
+> 
+**④ 出于对……的偏爱**
+> I must admit to a prejudice in favour of British universities.
+> 我得承认我对英国大学有所偏爱。
+> 
+> The findings of the report had been slanted in favour of the manufacturers.
+> 报告中的调查结果偏袒制造商。
+> 
+
+## 3. debtor  creditor
+`debtor`   n.债务人；借方
+`creditor` n.债权人；债主；贷方
+
+## 4. in credit
+（账户里）有余额
+> I made sure the account stayed in credit
+> 我确保账户里有余额。
+> 
+> The idea that I could be charged when I'm in credit makes me very angry
+> 想到账户里有余额时还要收费，我就非常气愤。
+> 
+
+## 5. overdraw
+【不规则形式】overdrew , overdrawn
+(especially 英国英语)透支
+> [动词+名词短语] Customers who overdraw their accounts will be charged a fee.
+> 透支的存户须付手续费。
+> 
+
+## 6. one another
+**pronoun. 彼此；互相**
+> We all try and help one another.
+> 我们都尽力互相帮助。
+> 
+> I think we've learned a lot about one another in this session.
+> 我认为这段时间我们相互有了很多了解。
+> 
+
+## 7. give rise to
+造成，引起，导致
+> Low levels of choline in the body can give rise to high blood-pressure
+> 体内胆碱水平过低会引起高血压。
+> 
+> So many things concurred to give rise to the problem.
+> 许多事情同时发生而导致了这一问题。
+> 
