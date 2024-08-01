@@ -1043,3 +1043,310 @@ n. 活期(存款)账户;往来账户
 > So many things concurred to give rise to the problem.
 > 许多事情同时发生而导致了这一问题。
 > 
+
+## 8. loaded
+**① adj `load`的过去分词 和 过去式**
+
+**② adj [not before noun] (informal)非常富有**
+> Let her pay─she's loaded.
+> 让她付钱吧——她富得很。
+> 
+
+**③ adj （不公平地）对…有利，对…不利**
+> a system that is loaded in favour of the young (= gives them an advantage) 
+> 对年轻人有利的体制
+> 
+> The press is loaded in favour of this present government...
+> 新闻界偏袒本届政府。
+>
+> loaded in favour of 对 ... 有利
+> 
+> loaded against 对 ... 不利
+> 
+
+**④ adj （言语；陈述 ）意味深长的；含蓄的**
+> It was a loaded question and I preferred not to comment.
+> 这是个带有圈套的问题，还是不作评论为好。
+> 
+
+**⑤ adj 装有（子弹、胶卷等）的**
+> a loaded shotgun
+> 装有子弹的猎枪
+> 
+
+**⑥ adj (informal, especially 北美英语)烂醉的；大醉的**
+
+
+**⑦ adj （特点）浓烈的，深厚的，丰富的**
+> The President's visit is loaded with symbolic significance...
+> 总统之行充满象征性意义。
+> 
+
+**⑧ adj （程序）装载的**
+> Now let's execute the test again, this time with test data loaded.
+> 现在，让我们再次执行测试，这次使用装载的数据。
+> 
+
+**⑨ adj 装载的；满载而沉重的**
+> a fully loaded truck
+> 满载货物的卡车
+> 
+
+
+## 9. debit 和 credit
+在会计和金融领域中，debit和credit有以下区别:
+> debit 表示资金流向外，指支出或减少金额。
+> credit 表示资金流向内，指存款或增加金额。
+> 
+> debit通常用于描述资产、支出和负债。
+> credit通常用于描述收入、负债和所有者权益。
+> 
+> 在会计中，debit表示扣减，credit表示增加。
+> 当进行账户记账时，debit通常出现在账户左侧，而credit出现在右侧。
+>
+
+
+## 10. firm rule
+严格的规定
+
+
+## 11. forgery
+`forge`作动词有`伪造；假冒`的意思
+**1.N-UNCOUNT 伪造罪**
+> He was found guilty of forgery.
+> 他被判伪造罪名成立。
+> 
+**2.N-COUNT 伪造品;仿造物;赝品**
+> The letter was a forgery.
+> 这封信是伪造的。
+> 
+
+## 12 practice 和 practise
+### 区别
+&emsp;&emsp; 在美式英语中，practice 被用作名词和动词，不用 practise，而在英式英语中，practise 被用作动词，而 practice 被用作名词，所以不管是美式英语还是英式英语，把 practice 当作名词用都是正确的，但是在英式英语中，只能用 practise 当动词。
+&emsp;&emsp; 换句话说，practice/practise在英式英语中前者为名词，后者为动词，而美式英语中不论动词名词都是practice（即在美式英语中，practice = practice(英式) + practise(英式)）
+### practice
+**① n.[不可数名词] 实践；实际行动**
+> the theory and practice of teaching
+> 教学的理论与实践
+> 
+> She's determined to put her new ideas into practice .
+> 她决心要把自己的新想法付诸实践。
+> 
+
+**② n.[不可数名词, 可数名词] 通常的做法；惯例；常规**
+> common/current/standard practice 
+> 一般 / 现行 / 常规做法
+> 
+> guidelines for good practice 
+> 优良做法的准则
+> 
+> a review of pay and working practices 
+> 对薪金和工作制度的检讨
+> 
+> religious practices
+> 宗教习俗
+> 
+
+**③ n.[可数名词] 惯常做的事；习惯；习俗**
+> the German practice of giving workers a say in how their company is run
+> 德国人在公司经营上给予工人发言权的做法
+> 
+> It is his practice to read several books a week.
+> 他习惯于每周读几本书。
+> 
+
+**④ n. [不可数名词, 可数名词] 训练；练习（时间）**
+> conversation practice
+> 会话练习
+> 
+> It takes a lot of practice to play the violin well.
+> 拉好小提琴需要多加练习。
+> 
+> There's a basketball practice every Friday evening.
+> 每星期五晚上有篮球训练。
+> 
+> She does an hour's piano practice every day.
+> 她每天练一小时钢琴。
+> 
+
+**⑤ n. [不可数名词, 可数名词] （医生、律师的）工作，业务活动，工作地点**
+> the practice of medicine
+> 行医
+> 
+> Students should have prior experience of veterinary practice.
+> 学生应有兽医工作的经验。
+> 
+> My solicitor is no longer in practice.
+> 我的律师已不再执业了。
+> 
+> a successful medical/dental/law practice 
+> 成功的诊所 / 牙医诊所 / 律师事务所
+> 
+
+**⑥ in practice 事实上；实际上**
+> ...the difference between foreign policy as presented to the public and foreign policy in actual practice...
+> 公布于众的外交政策和实际外交政策的区别
+> 
+
+**⑦ put ...(a belief or method )into practice 实施；实行；实践**
+> Now that he is back, the prime minister has another chance to put his new ideas into practice...
+> 既然首相又掌权了，他就重新有机会实施他的新想法。
+> 
+
+**⑧ out of practice 疏于练习；荒疏；荒废**
+> 'How's your German?' — 'Not bad, but I'm out of practice.'
+> “你的德语如何？”——“还行，只是长时间没练习了。”
+> 
+
+**⑨ 练习（同英式英语中的 practise）**
+> The team is practicing for their big game on Friday.
+> 球队正在训练，备战星期五的重大比赛。
+> 
+
+## 13. facilitate `/fəˈsɪlɪteɪt/`
+**[动词+名词短语] (formal)促进；促使；使便利**
+> The new trade agreement should facilitate more rapid economic growth.
+> 新贸易协定应当会加快经济发展。
+> 
+> Structured teaching facilitates learning.
+> 有条理的教导有利于学习。
+> 
+
+
+
+
+
+&emsp;
+&emsp;
+# Lesson 13 The Search for Oil 探寻石油
+&emsp;&emsp; 选自科普作家 `T. F. Gaskell` 所著 `The Search for the Earth’s Minerals from Discovery`
+
+## 1. `as many as` 和 `‌as much as` 
+### `as many as`
+`as many as` 可以看成是 `as many… as`的一种变体。 `as many … as` 是用来进行同等数量的比较。 例如:
+> I have as many friends as you have.
+> 我的朋友和你的一样多。
+> 
+当`as many as`作为一个整体用时,则意思是“多达……”它总是与一个带有数词的复数名词连用。例如:
+> I have as many as five hundred books.
+> 我的书多达500本。
+> 
+`as many` 是来源于 `as many … as`。 `as many` 总是用在那种在上文中已出现过有明确数词的句子里。例如:
+> He made three mistakes in as many sentences。(注意: as many(sentences)之前已出现 > three(mistakes)这个数词,这就说明sentences和mistakes是同等数量。
+> 他在三个句子中就出了三个错。
+> 
+### `‌as much as`
+`as much … as`, `as much`和 `as many…as`与`as many`用法基本相同，只是前者都用于不可数名词。例如:
+> This bottle contains as much ink as that one.
+> 这瓶子装的墨水和那瓶子装的一样多。
+> 
+> Don't thank me; I would do as much for anyone[意即:I would do as much for anyone as I did for you.]
+> 不用谢我，我对任何人都会那样做。
+> 
+和`as many as`一样，`as much as`也可以表示 `...之多`，例如:
+> The book cost me as much as twenty yuan
+> 那本书花了我二十元之多。
+> 
+此外，`as much as`还可用作状语，表示 “等于”、“几乎是”,意义与`as good as`相近。例如:
+> By running away he as much as admitted that he had taken the money.
+> 他的逃跑等于承认他拿了钱。
+> 
+`as much as`的另一种用法是作词组引导一个让步状语从句，表示 “虽然”“尽管”，这时它与muchas没有区别。例如：
+> I must stay home and study tonight,(as) much as I hate to do it.
+> 尽管我不喜欢，今晚我仍必须留在家里读书。
+> 
+
+## 2. mineral deposit
+n. 矿床
+
+## 3. bore
+**(1) verb [动词+名词短语] （尤指因啰唆）使厌烦**
+> I'm not boring you, am I?
+> 我没有让你厌烦吧，是不是？
+> 
+> Has he been boring you with his stories about his trip?
+> 他是不是用他旅游的见闻在烦你？
+> 
+**(2) verb `~ (into/through sth)` 钻，凿，挖（长而深的洞）**
+> [单独使用的动词] The drill is strong enough to bore through solid rock.
+> 这把钻足以钻透坚固的岩石。
+> 
+> [动词+名词短语] to bore a hole in sth
+> 在某物体上挖个洞
+> 
+**(3) verb [单独使用的动词] `~ into sb/sth` 眼睛盯着看**
+> His blue eyes seemed to bore into her.
+> 他的一双蓝眼睛似乎要穿透她。
+> 
+**(4) [可数名词] （常因话多）令人厌烦的人**
+> There is every reason why I shouldn't enjoy his company — he's a bore and a fool.
+> 我有充分的理由不愿和他在一起 —— 他又乏味又愚笨。
+> 
+**(5) [单数名词] 烦人的状况（或事情）**
+> It's such a bore having to stay late this evening.
+> 今天晚上非得熬夜，真是烦人。
+> 
+**(6) [可数名词]（管道、枪炮等的）孔，内径，口径；膛径**
+> a tube with a wide/narrow bore 
+> 内径宽 / 窄的管子
+> 
+> a twelve-bore shotgun
+> 一支十二口径猎枪
+> 
+**(7) [可数名词] （海水涌入江河的）涌潮，激潮**
+
+**(8) [可数名词] （尤指找水或石油的）探孔，钻孔**
+
+**(9) `a crashing bore` (old-fashioned, 英国英语)讨厌透顶的人**
+
+### boring
+adj. 没趣的；令人厌倦(或厌烦)的
+n. 钻孔；钻屑
+
+# 4. derrick `/ˈderɪk/`
+n. (油井的)井架，钻塔；转臂起重机；(尤指船上的)吊杆式起重机
+
+# 5. block and tackle
+n. 滑轮组；滑车组
+> I finally hoisted him up with a block and tackle.
+> 我最终用滑轮组把他拉了上去。
+>
+
+# 6.  cutting bit
+n. 钻头
+bit 作名词还有 [可数名词] 钻头；刀头；钎头
+
+# 7. every so often
+偶尔；不时;有时；（有规律地）有时
+> Every so often he would turn and look at her.
+> 他会时不时回头看她一眼。
+> 
+> She's going to come back every so often
+> 她会偶尔回来的。
+>
+> Every so often the kitchen would be invaded by ants.
+> 厨房常常会遭到大批蚂蚁的进犯。
+> 
+
+# 8. coring bit
+n. 取芯钻头；取心钻头
+
+# 9. strata 
+stratum的复数形式
+**(1) n (geology 地)层；岩层；地层**
+
+**(2) n (formal)阶层**
+> people from all social strata
+> 来自不同社会阶层的人
+>
+
+# 10. romantic
+adj. 浪漫的， 不切实际的
+
+# 11. gusher /ˈɡʌʃər/
+(1) n. (北美英语)喷油井；自喷井
+
+
+(2) n. 过分表露感情的人；热情过头的人
+
