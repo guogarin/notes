@@ -1464,3 +1464,68 @@ limit 3;
 
 
 
+&emsp;
+&emsp;
+# 11. 嵌套子查询
+## 
+## `some` `any` `all`
+### 使用场景
+&emsp;&emsp; `some` `any` `all`多用于对子查询中返回的多行结果进行处理。
+
+### 作用
+&emsp;&emsp; `all`：是所有，表示全部都满足才返回`true`；
+&emsp;&emsp; `some`和`any`等价，表示任意一个 ，有任何一个满足就返回`true`
+&emsp;&emsp; 换句话说，使用`some`或`any`运算符将值与列表进行比较时，Oracle将初始条件扩展到列表的所有元素，并使用`OR`运算符将它们组合；
+&emsp;&emsp; `all`则表示满足其其中所有的查询结果的含义，使用`and`串起来的比较从句。
+&emsp;&emsp; 早期的SQL仅仅允许使用`any`，后来的版本为了和英语的`any`相区分，引入了`some`，同时还保留了`any`关键词。
+
+### 实例
+对于`some`和`any`：
+```sql
+SELECT
+    *
+FROM
+    table_name
+WHERE
+    c > ANY (
+        v1,
+        v2,
+        v3
+    );
+```
+Oracle将上述查询转换为以下内容：
+```sql
+SELECT
+    *
+FROM
+    table_name
+WHERE
+    c > v1
+    OR c > v2
+    OR c > v3;
+```
+也就是说，只要`c`大于 `(v1,v2,v3)`中的任何一个则返回`true`。对于`all`：
+```sql
+SELECT
+    *
+FROM
+    table_name
+WHERE
+    c > ALL (
+        v1,
+        v2,
+        v3
+    );
+```
+Oracle将上述查询转换为以下内容：
+```sql
+SELECT
+    *
+FROM
+    table_name
+WHERE
+    c > v1
+    AND c > v2 -- 注意是AND
+    AND c > v3;
+```
+也就是说，`c`要大于 `(v1,v2,v3)`中的所有值才返回`true`。
