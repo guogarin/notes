@@ -1223,8 +1223,8 @@ n. 活期(存款)账户;往来账户
 &emsp;&emsp; 选自科普作家 `T. F. Gaskell` 所著 `The Search for the Earth’s Minerals from Discovery`
 
 ## 1. `as many as` 和 `‌as much as` 
-### `as many as`
-`as many as` 可以看成是 `as many… as`的一种变体。 `as many … as` 是用来进行同等数量的比较。 例如:
+### (1) `as many as`
+`as many as` 可以看成是 `as many… as`的一种变体。 `as many … as` 是用来进行**同等数量**的比较。 例如:
 > I have as many friends as you have.
 > 我的朋友和你的一样多。
 > 
@@ -1236,8 +1236,8 @@ n. 活期(存款)账户;往来账户
 > He made three mistakes in as many sentences。(注意: as many(sentences)之前已出现 > three(mistakes)这个数词,这就说明sentences和mistakes是同等数量。
 > 他在三个句子中就出了三个错。
 > 
-### `‌as much as`
-`as much … as`, `as much`和 `as many…as`与`as many`用法基本相同，只是前者都用于不可数名词。例如:
+### (2) `‌as much as`
+`as much … as`, `as much`和 `as many…as`与`as many`用法基本相同，只是前者都用于**不可数名词**。例如:
 > This bottle contains as much ink as that one.
 > 这瓶子装的墨水和那瓶子装的一样多。
 > 
@@ -1315,9 +1315,9 @@ n. 滑轮组；滑车组
 
 # 6.  cutting bit
 n. 钻头
-bit 作名词还有 [可数名词] 钻头；刀头；钎头
+bit 作名词还有 `n. [可数名词] 钻头；刀头；钎头`
 
-# 7. every so often
+# 7. every so ofte  n
 偶尔；不时;有时；（有规律地）有时
 > Every so often he would turn and look at her.
 > 他会时不时回头看她一眼。
@@ -1347,6 +1347,84 @@ adj. 浪漫的， 不切实际的
 # 11. gusher /ˈɡʌʃər/
 (1) n. (北美英语)喷油井；自喷井
 
-
 (2) n. 过分表露感情的人；热情过头的人
+
+
+
+
+
+&emsp;
+&emsp;
+# Lesson 14 The Butterfly Effect 蝴蝶效应 
+&emsp;&emsp; 选自美国作家、科技史家 James Gleick (1954- )所著 Chaos: Making a New Science,1987. 本书提出了混沌理论，本文选自第二章蝴蝶效应，Long-range forecasting is doomed 长期预报注定失败一节.
+## 1. blizzard
+**(1) n. 暴风雪；雪暴**
+> blizzard conditions
+> 暴风雪天气
+> 
+> a raging/howling blizzard 
+> 猛烈的 / 怒吼着的暴风雪
+> 
+**(2) n. 大批侵扰性的事物；大量的负担**
+> a blizzard of documents
+> 一大堆棘手的文件
+> 
+
+## 2. cascade `/kæˈskeɪd/`
+### verb
+[动词+ 副词/介词短语]
+1 v. 倾泻；流注
+> Water cascaded down the mountainside.
+> 水从山腰倾泻而下。
+> 
+2 v. (formal)大量落下；大量垂悬
+> Blonde hair cascaded over her shoulders.
+> 她的金发像瀑布似的披落在肩头。
+> 
+### noum
+**(1) 小瀑布（尤指一连串瀑布中的一支）**
+
+**(2) 倾泻；流注**
+> a cascade of rainwater
+> 如注的雨水
+> 
+**(3) (formal)大簇的下垂物**
+> Her hair tumbled in a cascade down her back.
+> 她的长发瀑布般地倾泻在后背上。
+> 
+**(4) (formal)倾泻（或涌出）的东西**
+> He crashed to the ground in a cascade of oil cans.
+> 他随着一连串的油桶跌落坠地。
+> 
+
+## 3. dust devil
+n. 小尘暴；<气象> 尘卷风
+
+## 4. squall `/skwɔːl/`
+**(1) N-COUNT 飑(常指暴风雨或暴风雪中突起的狂风);突起的大风(常引起短暂暴雨或暴雪)**
+> The boat was hit by a squall north of the island.
+> 船在岛的北边遇到了狂飑。
+> 
+**(2) VERB 嚎叫;大声啼哭**
+> There was an infant squalling in the back of the church.
+> 有个婴儿在教堂后部大声啼哭。
+> 
+
+## 5. eddy `/ˈedi/`
+**(1) n. （空气、灰尘或水的）旋涡，涡流**
+
+**(2) 空气、尘埃、水等起旋涡；旋转**
+> The waves swirled and eddied around the rocks.
+> 波浪翻滚着在岩石周围打旋。
+> 
+
+## 6. space
+**vt. 以一定间隔排列**
+> The houses are spaced out in this area of town.
+> 在城市的这一地区，房屋坐落稀疏。
+> 
+
+## 7. fluctuation `/ˌflʌktʃuˈeɪʃn/`
+n. 波动；起伏；涨落
+
 
