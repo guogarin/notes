@@ -1428,3 +1428,185 @@ n. 小尘暴；<气象> 尘卷风
 n. 波动；起伏；涨落
 
 
+
+
+
+&emsp;
+&emsp;
+# Lesson 15 Secrecy in Industry 工业中（科研）的保密 
+&emsp;&emsp; 本文选自英国科学家 `J. D. Bernal (1901-1971)` 所著 `The Social Function of Science, 1939.` 第 5 章 `The efficiency of scientific research 中 Research in Industry` 一节的 `Secrecy`部分
+## 1. enter
+### verb
+**1. 通常不用于被动语态(formal)进来；进去；进入**
+> [单独使用的动词] Knock before you enter.
+> 进来前先敲门。
+> 
+> [动词+名词短语] Someone entered the room behind me.
+> 有人跟着我进了屋。
+> 
+> Where did the bullet enter the body?
+> 子弹从哪个部位穿入身体的？
+> 
+> (figurative)A note of defiance entered her voice.
+> 她的声音里带有公然反抗的口气。
+> 
+> (figurative)It never entered my head (= I never thought) that she would tell him about me.
+> 我从未想到过她会把我的事告诉他。
+> 
+**2. [动词+名词短语] [no passive] 成为…的一员；加入；开始从事**
+> to enter a school/college/university 
+> 考入学校 / 学院 / 大学
+> 
+> to enter politics 
+> 开始从政
+> 
+> to enter Parliament (= become an MP) 
+> 成为英国国会议员
+> 
+> to enter the Church (= become a priest) 
+> 成为神职人员
+> 
+> 开始活动 begin activity
+> 
+**3. [动词+名词短语] 开始参加；开始进入；着手进行**
+> to enter a relationship/conflict/war 
+> 建立关系；发生冲突；参战
+> 
+> Several new firms have now entered the market.
+> 有几家新公司已打入市场。
+> 
+> The investigation has entered a new phase.
+> 调查已进入新阶段。
+> 
+> The strike is entering its fourth week.
+> 罢工正进入第四周。
+> 
+**4. ~ (for sth) | ~ sb (in/for sth) 报名参加，为…报名参加（考试、比赛等）**
+> [动词+名词短语] 1 000 children entered the competition.
+> 1 000名孩子报名参加了比赛。
+> 
+> Irish trainers have entered several horses in the race.
+> 爱尔兰驯马师让好几匹马参加比赛。
+> 
+> How many students have been entered for the exam?
+> 有多少学生报名参加考试？
+> 
+> [单独使用的动词] Only four British players have entered for the championship.
+> 只有四名英国运动员报名参加锦标赛。
+> 
+**5. [动词+名词短语] ~ sth (in/into/on sth) 登记，登录，输入（姓名、号码、细节等）**
+> Enter your name and occupation in the boxes (= on a form) .
+> 将姓名和职业填入（表格的）方框里。
+> 
+> to enter data into a computer
+> 将数据输入计算机
+> 
+> to enter figures on a spreadsheet
+> 将数字输入电子数据表
+> 
+**6. [动词+名词短语] (formal)（正式）提出**
+> to enter a plea of not guilty (= at the beginning of a court case) 
+> （在诉讼案件开始时）提出无罪的抗辩
+> 
+> to enter an offer
+> 报价
+> 
+**7. come/enter into force法律、规则等开始生效；开始实施**
+> When do the new regulations come into force?
+> 新规章什么时候开始执行？
+> 
+
+## 2. such and such
+(用于不想明确指出时)某，某个
+> They're informed that we've got this money to spend and we will do such and such with it.
+> 他们被告知我们已经拿到了这笔钱并将用它来做什么。
+> 
+> I said, 'Well what time'll I get to Leeds?' and he said such and such a time but I missed my connection
+> 我说：“那么我什么时候才能到利兹？”他说了一个时间，但是我没赶上联运车。
+> 
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 16 The Modern City 现代都市
+&emsp;&emsp; 选自法国生物学家、优生学家 `Alexis Carrel (1873-1944)`所著 `Man, the Unknown, 1935`，作者于 1912 年因在血管缝合以及血管和器官移植研究上的工作(`for his work on vascular suture and the transplantation of blood vessels and organs`)荣获诺贝尔生理学或医学奖. 本文选自原著第一章`The need of a better knowledge of man` 第 3 节.
+## 1. physiological 和 mental
+&emsp;&emsp; 尽管英文 psychological 和 mental 在词典释义上有差别，但你问的这两个词组则指的是同一件事。
+&emsp;&emsp; `mental health` 是生活中通常用来指“心理健康”和医学意义上的“精神方面健康”。比如 `He is mentally strong/healthy.` 意思是他有健康的生活意识，意志坚强等。而 `He is mentally ill` 则可能指他有精神疾病。
+&emsp;&emsp; `psychological health` 是心理医学名词，也包括上面的内容，但生活中却不常用。人们听到这个词时会有“咬文嚼字”的感觉。但它传递的信息和 `mental health` 并没有什么不同。正式文件里这个词组出现的机率恐怕会高一些。
+
+## 2. in order that 和 in order to
+&emsp;&emsp; `in order to` 后面直接跟动词原形，构成目的状语，不形成从句，表示“为了做某事”。
+&emsp;&emsp; `in order that` 后面跟从句，表明主句行为的目的，强调目的的明确性。
+
+## 3.  shape and dimensions
+外形和规格
+
+## 4. banal `/bəˈnɑːl/`
+adj. 平庸的；平淡无奇的
+> The allegations ranged from the banal to the bizarre.
+> 从平淡无奇到离奇百怪的各种说法都有。
+> 
+> The text is banal
+> 课文索然无味。
+> 
+> The lyrics are banal and the rhymes clumsy.
+> 歌词平淡老套，押韵生硬蹩脚。
+> 
+
+## 5. edifice `/ˈedɪfɪs/`
+**(1) n. (formal)大厦；宏伟建筑**
+> an imposing edifice
+> 一座宏伟的建筑
+> 
+> (figurative)Their new manifesto hardly threatens to bring the whole edifice of > capitalism crashing down.
+> 他们新的宣言声称要摧毁整个资本主义大厦，这是不可能的。
+> 
+> 
+
+**(2) n （信仰或传统制度的）体系，结构**
+> ...an edifice of British constitutional tradition.
+> 英国传统的宪政制度
+> 
+**(3) (figurative)an edifice of lies 谎话连篇**
+
+## 6. fume
+**(1). verb ~ (at/over/about sb/sth) （对…）大为生气，十分恼火**
+> [单独使用的动词] She sat in the car, silently fuming at the traffic jam.
+> 她坐在汽车里，心中对交通堵塞感到十分恼火。
+> 
+> He was fuming with indignation.
+> 他愤愤不平。
+> 
+**(2)verb. [单独使用的动词] 冒烟；冒气**
+> The candle is fuming.
+> 蜡烛正在冒烟。
+> 
+**(3) n. 烟气；烟雾；臭气；熏烟**
+> ...car exhaust fumes...
+> 汽车尾气
+> 
+
+## 7. throng
+**(1) n. (literary)聚集的人群；一大群人**
+> We pushed our way through the throng.
+> 我们挤过人群。
+> 
+**(2) VERB (人群)涌向，蜂拥**
+> The crowds thronged into the mall.
+> 人群涌进大厅。
+> 
+**(3) VERB 挤满;群集**
+> They throng the beaches between late June and early August.
+> 6 月底到 8 月初，他们群聚在海滩上。
+> 
+**(4) be thronged with sb/sth 挤满（人、汽车等）**
+> The cafes were thronging with students.
+> 小餐馆里都挤满了学生。
+> 
+> The streets were thronged with people.
+> 条条大街都挤满了人。
+> 
