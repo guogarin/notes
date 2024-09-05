@@ -1529,4 +1529,141 @@ WHERE
 ```
 也就是说，`c`要大于 `(v1,v2,v3)`中的所有值才返回`true`。
 
-## with子句
+## 通用表达式 和 with子句
+### 通用表达式
+&emsp;&emsp; 通用表达式（CTE, Common Table Expressions），是一个可以在单个语句范围内被创建的临时结果集，可在该语句中被多次引用。
+&emsp;&emsp; CTE通常以 `WITH` 关键字开头，后跟一个或多个子句，以逗号分隔。每个子句都提供一个结果集。
+具体请看以下示例：
+```sql
+WITH
+  cte1 AS (SELECT a, b FROM table1), 
+  cte2 AS (SELECT c, d FROM table2)
+SELECT b, d FROM cte1 JOIN cte2
+WHERE cte1.a = cte2.c;
+```
+在这个语句中，两个结果集分别被命名为`cte1`,`cte2`，并在后续的`SELECT`查询中使用了它们。
+&emsp;&emsp; 结果集不仅能在`SELECT`查询中被引用，也可以被其他`CTE`语句引用，从而可以使`CTE`能够基于其他`CTE`进行定义。
+&emsp;&emsp; `CTE`也可以引用自身来定义递归 `CTE`。递归 `CTE` 的常见应用包括分层或树结构数据的系列生成和遍历。
+
+### CTE的优势
+
+### CTE的引用
+A CTE can refer to itself or to other CTEs:
+* A self-referencing CTE is recursive.
+*  A CTE can refer to CTEs defined earlier in the same WITH clause, but not those defined later.
+> &emsp;&emsp; This constraint rules out mutually-recursive CTEs, where cte1 references cte2 and cte2 references cte1. One of those references must be to a CTE defined later, which is not permitted.
+> 
+* A CTE in a given query block can refer to CTEs defined in query blocks at a more outer level, but not CTEs defined in query blocks at a more inner level.
+
+
+
+### `WITH`子句的作用
+&emsp;&emsp; `WITH`子句允许用户给一个子查询命名。
+&emsp;&emsp;  `WITH AS` 也叫做子查询部分（subquery factoring），可以定义一个SQL片断，该SQL片断会被整个SQL语句用到。可以使SQL语句的可读性更高，也可以在UNION ALL的不同部分，作为提供数据的部分。
+比如：
+```sql
+with A as (select * from class)
+select *from A  
+```
+这个语句的意思就是，先执行`select * from class`得到一个结果，并将这个结果记录为A（A 表只是一个别名） ，最后再执行`select *from A` 语句。
+对于大批量的SQL数据，`WITH`子句能起到优化的作用。
+
+### `WITH`子句的语法
+单个子查询命名：
+```sql
+WITH <alias_name> AS (sql_subquery_statement)
+SELECT column_list FROM <alias_name>[,table_name]
+[WHERE <join_condition>]
+```
+多个子查询命名：
+```sql
+WITH <alias_name_A> AS (sql_subquery_statement),
+<alias_name_B> AS(sql_subquery_statement_from_alias_name_A
+or sql_subquery_statement )
+SELECT <column_list>
+FROM <alias_name_A>, <alias_name_B> [,table_names]
+[WHERE <join_condition>]
+```
+&emsp;&emsp; `WITH`子句还可以定义CTE结果集临时表的列名，指定列名时遵从以下原则： - 如果CTE别名后面是带括号的名称列表，即明确指定了列名，如：
+```sql
+WITH cte (col1, col2) AS -- col1, col2就是指定的列名
+(
+  SELECT 1, 2
+  UNION ALL
+  SELECT 3, 4
+)
+SELECT col1, col2 FROM cte;
+```
+需要注意的是，子查询的结果集返回列数必须和括号中的列个数相同。
+&emsp;&emsp; 若不指定CTE结果集的列名，则cte临时表的列默认来自于子查询的结果集。
+```sql
+WITH cte AS
+(
+  SELECT 1 AS col1, 2 AS col2
+  UNION ALL
+  SELECT 3, 4
+)
+SELECT col1, col2 FROM cte;
+```
+
+### with子句的使用场景
+At the beginning of SELECT, UPDATE, and DELETE statements.
+```sql
+WITH ... SELECT ...
+WITH ... UPDATE ...
+WITH ... DELETE ...
+```
+At the beginning of subqueries (including derived table subqueries):
+```sql
+SELECT ... WHERE id IN (WITH ... SELECT ...) ...
+SELECT * FROM (WITH ... SELECT ...) AS dt ...
+```
+Immediately preceding SELECT for statements that include a SELECT statement:
+```sql
+INSERT ... WITH ... SELECT ...
+REPLACE ... WITH ... SELECT ...
+CREATE TABLE ... WITH ... SELECT ...
+CREATE VIEW ... WITH ... SELECT ...
+DECLARE CURSOR ... WITH ... SELECT ...
+EXPLAIN ... WITH ... SELECT ...
+```
+
+### with子句的返回结果保存在哪里？
+
+### 递归通用表达式(Recursive Common Table Expressions)
+[Recursive Common Table Expressions](https://dev.mysql.com/doc/refman/8.0/en/with.html#common-table-expressions-recursive)
+
+### 参考文献
+[SQL WITH clause example](https://stackoverflow.com/questions/12552288/sql-with-clause-example)
+[SQL语句 with as 用法](https://blog.csdn.net/baidu_30527569/article/details/48680745)
+
+
+
+# 派生表、临时表、物化视图
+## 派生表
+### 什么是派生表？
+&emsp;&emsp; 派生表(Derived Table)是从SELECT语句返回的虚拟表。派生表类似于临时表，但在SELECT语句中使用派生表比临时表简单得多，因为它不需要创建临时表的步骤。 术语派生表和子查询通常可互换使用。当在SELECT语句的FROM子句中使用独立子查询时，我们将其称为派生表。 来看下面的例子
+```sql
+SELECT 
+    column_list
+FROM
+    (SELECT 
+        column_list
+    FROM
+        table_1) derived_table_name
+WHERE derived_table_name.c1 > 0; 
+```
+其中
+```sql
+SELECT 
+        column_list
+    FROM
+        table_1
+```
+就是一个派生表，`derived_table_name`是其别名，方便后面引用。
+
+### 派生表一定要被命名吗？
+&emsp;&emsp; 并不是所有的数据库都要求派生表必须被命名，但一些特定的数据库（比如MySQL和PostgreSQL）要求必须对临时表（子查询）命名，即使后续不会使用该派生表。
+## 临时表
+
+## 物化视图(Materialized View)
