@@ -1610,3 +1610,248 @@ adj. 平庸的；平淡无奇的
 > The streets were thronged with people.
 > 条条大街都挤满了人。
 > 
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 17 A Man-made Disease 人为的疾病
+&emsp;&emsp; 选自英国记者 `Peter Ritchie Calder (1906-1982)` 所著 `Science Makes Sense. 1955`.
+## 1. settle
+### 1.1 Verbs
+**(1) 结束（争论、争端等）；解决（分歧、纠纷等）**
+to put an end to an argument or a disagreement
+> [动词+名词短语] to settle a dispute/an argument/a matter 
+> 解决争端 / 争论 / 事情
+> 
+> It's time you settled your differences with your father.
+> 现在你该解决同你父亲之间的分歧了。
+> 
+> [单独使用的动词] There is pressure on the unions to settle.
+> 工会组织面临消除纷争的压力。
+> 
+> The company has agreed to settle out of court (= come to an agreement without going to court) .
+> 那家公司同意庭外解决。
+> 
+
+**(2)（最终）决定，确定，安排好**
+to decide or arrange sth finally
+
+> [动词+名词短语] [often passive] It's all settled ─we're leaving on the nine o'clock plane.
+> 一切都定下来了——我们乘九点的航班走。
+> 
+> Bob will be there? That settles it . I'm not coming.
+> 鲍勃会去吗？那好，我就不去了。
+> 
+> He had to settle his affairs (= arrange all his personal business) in Paris before he could return home.
+> 他得把他在巴黎的事情料理好才能回家。
+> 
+> [also 动词+名词短语+that从句]
+> 选择永久住地 choose permanent home
+> 
+
+**(3) [动词+ 副词/介词短语] 定居**
+to make a place your permanent home
+> She settled in Vienna after her father's death.
+> 父亲死后，她就在维也纳定居了。
+> 
+
+**(4) of a group of people 一批人殖民；作为移民在殖民地定居**
+to make your permanent home in a country or an area as colonists
+> [动词+名词短语] [usually passive] This region was settled by the Dutch in the nineteenth century.
+> 荷兰人于十九世纪来到这一地区定居。
+> 
+
+**(5) ~ (back) 使处于舒适的位置**
+to make yourself or sb else comfortable in a new position
+> [单独使用的动词] Ellie settled back in her seat.
+> 埃利舒适地靠着椅背坐下。
+> 
+> [动词+名词短语] He settled himself comfortably in his usual chair.
+> 他在自己惯常坐的椅子上舒舒服服地坐下来。
+> 
+> I settled her on the sofa and put a blanket over her.
+> 我把她放在沙发上安顿好，给她盖了一条毯子。
+> 
+
+**(6). [动词+名词短语+ 副词/介词短语] 把…放好；安放**
+to put sth carefully in a position so that it does not move
+> She settled the blanket around her knees.
+> 她用毯子裹住膝盖。
+> 
+
+**(7)（使）平静下来，安静下来，定下心来**
+to become or make sb/sth become calm or relaxed
+> [单独使用的动词] The baby wouldn't settle.
+> 婴儿安静不下来。
+> 
+> [动词+名词短语] I took a pill to help settle my nerves.
+> 我吃了一片药，好放松一下神经。
+> 
+> This should settle your stomach.
+> 这样你的胃应该就不难受了。
+> 
+
+**(8) [单独使用的动词] ~ (on/over sth) 降落；停留**
+to fall from above and come to rest on sth; to stay for some time on sth
+> Dust had settled on everything.
+> 到处落满灰尘。
+> 
+> Two birds settled on the fence.
+> 两只鸟落在篱笆上。
+> 
+> I don't think the snow will settle (= remain on the ground without melting) .
+> 我看这雪积不住。
+> 
+> His gaze settled on her face.
+> 他的目光落在她脸上。
+> 
+
+**(9)（使）沉降，下陷，变得密实**
+to sink slowly down; to make sth do this
+> [单独使用的动词] The contents of the package may have settled in transit.
+> 包裹里的东西可能在运输途中摇密实了。
+> 
+
+**(10) ~ sth | ~ (up) (with sb) 付清（欠款）；结算；结账**
+to pay the money that you owe
+> [动词+名词短语] Please settle your bill before leaving the hotel.
+> 请您先结账再离开旅馆。
+> 
+> The insurance company is refusing to settle her claim.
+> 保险公司拒付她提出的索赔款项。
+> 
+> [单独使用的动词] Let me settle with you for the meal.
+> 我来把饭费付给你。
+> 
+> I'll pay now─we can settle up later.
+> 现在我来付账——咱们以后再算。
+> 
+### 1.2 noun
+n. 高背长椅（老式木家具，有扶手，座下多带柜）
+
+### 1.3 习语  Idioms
+`settle a score/an account (with sb)` 
+`settle an old score`
+（和某人）算账，清算旧账；报复（某人）
+to hurt or punish sb who has harmed or cheated you in the past
+> ‘Who would do such a thing?’ ‘Maybe someone with an old score to settle.’
+> “谁做得出这样的事呢？”“也许是结有宿怨的人吧。”
+> 
+
+`let the dust settle`
+`wait for the dust to settle`
+待形势明朗；待情况清楚
+to wait for a situation to become clear or certain
+
+### 1.4 短语动词 Phrasal Verbs
+**(1) `settle down`**
+① 舒适地坐下（或躺下）
+> I settled down with a book.
+> 我手拿一本书，舒舒服服地坐下。
+> 
+②（在某地）定居下来，过安定的生活
+> to start to have a quieter way of life, living in one place
+> When are you going to get married and settle down?
+> 你打算什么时候成家，安定下来？
+> 
+③ settle down sb / settle sb↔down
+（使某人）安静下来，平静下来 
+`to become or make sb become calm, less excited, etc.`
+> It always takes the class a while to settle down at the start of the lesson.
+> 那个班一上课总得过一会儿才能安静下来。
+> 
+**(2) `settle (down) to sth`**
+开始认真对待；定下心来做
+to begin to give your attention to sth
+> They finally settled down to a discussion of the main issues.
+> 他们终于开始讨论一些主要问题了。
+> 
+> He found it hard to settle to his work.
+> 他觉得定不下心来工作。
+> 
+**(3) `settle for sth`**
+勉强接受；将就 `to accept sth that is not exactly what you want but is the best that is available`
+> In the end they had to settle for a draw.
+> 最后，他们只好接受平局的结果。
+> 
+> I couldn't afford the house I really wanted, so I had to settle for second best .
+> 我真心想要的房子我买不起，所以只得退而求其次了。
+> 
+**(4) `settle in` / `settle into sth`**
+安顿下来；习惯于（新居）；适应（新工作）
+to move into a new home, job, etc. and start to feel comfortable there
+> How are the kids settling into their new school?
+> 孩子们在新学校习惯了吗？
+> 
+**(5) `settle on sth`**
+选定；决定
+to choose or make a decision about sth after thinking about it
+> Have you settled on a name for the baby yet?
+> 你给孩子起好名字没有？
+> 
+**(6) `settle sth on sb`**
+(law 律)转让（钱财）；（尤指在遗嘱中）赠与
+to formally arrange to give money or property to sb, especially in a will
+
+
+## 2. enterprising
+adj. 有事业心的；有进取心的；有创业精神的
+`enterprise`作为名词还有 **事业心；进取心；创业精神** 的意思。
+
+
+## 3. settler
+n. 移民；殖民者
+
+
+## 4. Antipodes `/æn'tɪpədi:z/`
+n. （常作幽默）澳大利亚和新西兰，澳新
+a way of referring to Australia and New Zealand, often used in a humorous way
+
+
+## 5. promiscuous `/prəˈmɪskjuəs/`
+(1) 淫乱的；滥交的
+having many sexual partners
+> promiscuous behaviour
+> 淫乱行为
+> 
+> a promiscuous lifestyle
+> 不检点的生活
+> 
+> to be sexually promiscuous
+> 性生活淫乱
+> 
+
+(2) (formal)大杂烩的；杂乱的
+taken from a wide range of sources, especially without careful thought
+> promiscuous reading
+> 读书庞杂
+> 
+> a stylistically promiscuous piece of music
+> 一支风格杂乱的乐曲
+> 
+
+
+## 6. overrun
+**(1) v. [动词+名词短语] [often passive] especially of sth bad or not wanted 尤指坏事或不欲之事泛滥；横行；肆虐**
+to fill or spread over an area quickly, especially in large numbers
+> The house was completely overrun with mice.
+> 这房子简直成了老鼠的天下。
+> 
+> Enemy soldiers had overrun the island.
+> 敌军士兵侵占了该岛。
+> 
+**(2) v. 多用（时间、钱财等）；超时**
+to take more time or money than was intended
+> [单独使用的动词] Her lectures never overrun.
+> 她讲课从不拖堂。
+> 
+> [动词+名词短语] You've overrun your time by 10 minutes.
+> 你超时10分钟了。
+> 
+**(3) n. 超过限度**
+> a cost overrun
+> 超出的成本
+> 
