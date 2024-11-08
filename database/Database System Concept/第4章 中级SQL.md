@@ -5,9 +5,9 @@
 
 
 # 1. 连接表达式
-## 0. 数据
+## 1.0 数据
 在本小结关于连接的SQL的运行结果都是基于如下数据：
-### 0.1 建表语句以及数据
+### 1.0.1 建表语句以及数据
 ```sql
 -- 用户信息表
 CREATE TABLE `user_profile` (
@@ -47,7 +47,7 @@ INSERT INTO `question_practice_detail` (`id`, `question_id`, `result`) VALUES (3
 INSERT INTO `question_practice_detail` (`id`, `question_id`, `result`) VALUES (9, 112, 'right');
 ```
 
-### 0.2 表里的数据
+### 1.0.2 表里的数据
 `user_profile`:
 ---
 | id | name | age | 
@@ -61,6 +61,7 @@ INSERT INTO `question_practice_detail` (`id`, `question_id`, `result`) VALUES (9
 | 21 | 吴九 | 28 | 
 
 `question_practice_detail`:
+---
 | id | question_id | result | 
 | ---: | ---: | --- | 
 | 38 | 111 | wrong | 
@@ -72,6 +73,8 @@ INSERT INTO `question_practice_detail` (`id`, `question_id`, `result`) VALUES (9
 | 9 | 112 | right | 
 
 
+
+&emsp;
 ## 1.1 笛卡尔积(Cartesian product)
 ### 1.1.1 什么是笛卡尔积？
 &emsp;&emsp; 笛卡尔积原本是代数的概念，他的意思是对于两个不同的集合A，B。对于A中的每一个元素，都有对于在B中的所有元素做连接运算 。可以见得对于两个元组分别为m，n的表。笛卡尔积后得到的元组个数为m x n个元组。
@@ -155,6 +158,7 @@ SELECT * FROM user_profile  inner JOIN question_practice_detail;
 
 
 
+&emsp;
 ## 1.2 等值连接(Equijoin) 和 非等值连接(NON EQUI JOIN)
 ### 1.2.1 等值连接(Equijoin)
 &emsp;&emsp; 等值连接在连接条件中使用 **等于号`=`** 运算符比较被连接列的列值，其查询结果中列出被连接表中的所有列，包括其中的重复列。
@@ -167,9 +171,11 @@ FROM player AS p INNER JOIN height_grades AS h
 on p.height BETWEEN h.height_lowest AND h.height_highest
 ```
 
+
+&emsp;
 ## 1.3 自然连接(natural join)
 ### 1.3.1 什么是自然连接？它和笛卡尔积有何区别？
-&emsp;&emsp; 自然连接运算作用于两个表，并产生一个表作为结果。与两个表的笛卡尔积不同的是，自然连接只考虑在两个表的模式中都出现的那些属性上取值相同的元组对，而笛卡尔积将第一个表的每个元组与第二个表的每个元组进行串接。
+&emsp;&emsp; 自然连接运算作用于两个表，并产生一个表作为结果。与两个表的笛卡尔积不同的是，自然连接只考虑 在两个表的模式中都出现的那些属性上 取值相同 的元组对，而笛卡尔积将第一个表的每个元组与第二个表的每个元组进行串接。
 &emsp;&emsp; 自然连接 要求两个关系表中进行比较的必须是相同的属性列，无须添加连接条件，并且会在结果中消除重复的属性列。
 
 ### 1.3.2 自然连接和等值连接有何关系？
@@ -204,12 +210,17 @@ SELECT player_id, team_id, player_name, height, team_name
     FROM player JOIN team USING(team_id)
 ```
 
+### 1.3.6 自然连接的使用场景
+&emsp;&emsp; 自然连接在日常中使用的很少，完全可以用内连接来替代，而且内连接还比自然连接直观。
 
+
+&emsp;
 ## 1.4 内连接
 ### 1.4.1 内连接 和 自然连接 有何异同？
+
 &emsp;&emsp; 内连接基本与自然连接相同，它们的不同之处在于：
 &emsp;&emsp; 第一，自然连接是对连接的表的同名属性列进行比较；而内连接则不要求两属性列同名，可以用`using`或`on`来指定连接条件。
-&emsp;&emsp; 另外，对于两张表中列名相同的属性，自然连接只会返一次，而内连接会返回两次。例证如下：
+&emsp;&emsp; 第二，对于两张表中列名相同的属性，自然连接只会返一次，而内连接会返回两次。例证如下：
 ```sql
 select * from Sales natural join product;
 
@@ -233,8 +244,8 @@ select * from Sales  join Product on Sales.product_id=Product.product_id;
 [Difference between natural join and inner join](https://stackoverflow.com/questions/8696383/difference-between-natural-join-and-inner-join)
 
 ### 1.4.2 若内连接和外连接不带连接条件，输出的结果将是？
-对于内连接还是外连接，如果不带连接条件，得到的结果都是笛卡尔积。
-但对于外连接，如果不带连接条件，则会报错，因为外连接必须使用 `using`或`on`指定连接条件。不带条件、使用`where`都会报错。
+&emsp;&emsp; 内连接 如果不带连接条件，得到的结果是笛卡尔积。
+&emsp;&emsp; 但对于外连接，如果不带连接条件，则会报错，因为外连接必须使用 `using`或`on`指定连接条件，若果不带条件、或者使用`where` 都会报错。
 ```sql
 -- 外连接 不带on条件
 SELECT * FROM user_profile  left JOIN question_practice_detail;
@@ -304,6 +315,9 @@ SELECT * FROM user_profile  inner JOIN question_practice_detail;
 **显然，内连接不带连接条件的话，得到的都是笛卡尔积。**
 
 ### 1.4.3 如何使用内连接？
+<div align="center"> <img src="./pic/inner_join.gif"> </div>
+
+&emsp;&emsp; 和自然连接不一样的是，内连接一般会用`on`或`using`指定连接条件（如果内连接不带连接条件，则得到的是两个表的笛卡尔积）：
 ```sql
 SELECT * FROM user_profile  INNER JOIN question_practice_detail ON question_practice_detail.id=user_profile.id;
 ```
@@ -318,15 +332,53 @@ SELECT * FROM user_profile  INNER JOIN question_practice_detail ON question_prac
 | 32 | 孙七 | 25 | 32 | 113 | wrong | 
 
 
+&emsp;
 ## 1.5 外连接(outer join)
-### 1.5.1 什么是外连接？
+### 1.5.1 为什么需要外连接
+&emsp;&emsp; 当我们想知道参赛者的答题情况时，可以通过对`user_profile`和`question_practice_detail`进行内连接：
+```sql
+SELECT * FROM user_profile  INNER JOIN question_practice_detail ON question_practice_detail.id=user_profile.id;
+```
+执行结果：
+| id | name | age | id | question_id | result | 
+| ---: | --- | ---: | ---: | ---: | --- | 
+| 38 | 张三 | 21 | 38 | 111 | wrong | 
+| 14 | 李四 | 19 | 14 | 112 | wrong | 
+| 43 | 王五 | 20 | 43 | 111 | right | 
+| 15 | 赵六 | 23 | 15 | 115 | right | 
+| 31 | 周八 | 28 | 31 | 114 | right | 
+| 32 | 孙七 | 25 | 32 | 113 | wrong | 
 
+但我们发现，用户`吴九`并没有出现在查询结果中，那是因为他压根就没答题，因此在内连接时，在`question_practice_detail`表中找不到对应的数据，所以不会出现在内连接的结果中。
+&emsp;&emsp; 如果我们想让所有用户都出现在查询结果中（无论该用户是否答题），该怎么做呢？这是外连接就发挥作用了：
+```sql
+SELECT *
+FROM user_profile
+LEFT JOIN question_practice_detail ON question_practice_detail.id=user_profile.id;
+```
+执行结果：
+| id | name | age | id | question_id | result | 
+| ---: | --- | ---: | ---: | ---: | --- | 
+| 38 | 张三 | 21 | 38 | 111 | wrong | 
+| 14 | 李四 | 19 | 14 | 112 | wrong | 
+| 43 | 王五 | 20 | 43 | 111 | right | 
+| 15 | 赵六 | 23 | 15 | 115 | right | 
+| 31 | 周八 | 28 | 31 | 114 | right | 
+| 32 | 孙七 | 25 | 32 | 113 | wrong | 
+| 21 | 吴九 | 28 | null | null | null | 
 
+可以看到的是，用户`吴九`出现在了左连接的查询结果中。
 
+### 1.5.2 有哪些外连接？
+&emsp;&emsp; 外连不但返回符合连接和查询条件的数据行，还返回不符合条件的一些行。
+&emsp;&emsp; 外连接就好像是为非基准表添加了一行全为空值的万能行，用来与基准表中找不到匹配的行进行匹配。假设两个没有空值的表进行左连接，左表是基准表，左表的所有行都出现在结果中，右表则可能因为无法与基准表匹配而出现是空值的字段。
+> ① left join （左连接）：返回包括左表中的所有记录和右表中连接字段相等的记录。
+> ② right join（右连接）：返回包括右表中的所有记录和左表中连接字段相等的记录。
+> ③ full join （全外连接）：返回左右表中所有的记录和左右表中连接字段相等的记录。(需要注意的是，关键字outer是可选择的，取决于具体语言，在实现上它们都是遵循标准的，因此FULL JOIN和FULL OUTER JOIN是一样的。)
+> 
 
-
-### 1.5.2 外连接是不是必须带连接条件？
-是的，外连接必须使用 `using`或`on`指定连接条件。不带条件、使用`where`都会报错：
+### 1.5.3 外连接是不是必须带连接条件？
+是的，外连接必须使用 `using`或`on`指定连接条件。不带条件 或 使用`where`都会报错：
 ```sql
 SELECT * FROM user_profile  left JOIN question_practice_detail;
 ```
@@ -334,7 +386,7 @@ SELECT * FROM user_profile  left JOIN question_practice_detail;
 ```
 /* SQL错误（1064）：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 */
 ```
-使用`where`条件也是一样的：
+使用`where`条件也是一样报错：
 ```sql
 SELECT *
 FROM user_profile
@@ -346,7 +398,9 @@ WHERE question_practice_detail.id=user_profile.id;
 /* SQL错误（1064）：You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 */
 ```
 
-### 1.5.3 左连接
+### 1.5.4 左连接
+<div align="center"> <img src="./pic/left_join.gif"> </div>
+
 ```sql
 SELECT *
 FROM user_profile
@@ -364,7 +418,9 @@ LEFT JOIN question_practice_detail ON question_practice_detail.id=user_profile.i
 | 21 | 吴九 | 28 | null | null | null | 
 
 
-### 1.5.4 右连接
+### 1.5.5 右连接
+<div align="center"> <img src="./pic/right_join.gif"> </div>
+
 ```sql
 SELECT *
 FROM user_profile
@@ -381,8 +437,8 @@ RIGHT JOIN question_practice_detail ON question_practice_detail.id=user_profile.
 | 31 | 周八 | 28 | 31 | 114 | right | 
 | null | null | null | 9 | 112 | right | 
 
-### 1.5.5 全连接
-MySQL没有全连接，我们可以使用`UNION`来实现：
+### 1.5.6 全连接
+MySQL没有全连接，我们可以使用`UNION`来实现全连接：
 ```sql
 SELECT *
 FROM user_profile
@@ -406,9 +462,45 @@ RIGHT JOIN question_practice_detail ON question_practice_detail.id=user_profile.
 | 21 | 吴九 | 28 | null | null | null | 
 | null | null | null | 9 | 112 | right | 
 
+###  1.5.7 `left outer join`和`left join`有何区别？
+&emsp;&emsp; left join`是`left outer join`的缩写，关键字`OUTER`是可选择的，取决于具体语言，在实现上它们都是遵循标准的。
 
-## 1.6 连接条件
+### 1.5.8 如何理解外连接中的 左 和 右？
+&emsp;&emsp; 左连接与右连接的 **左右** 指的是以两张表中的哪一张为基准表，它们都是外连接。
+
+
+&emsp;
+## 1.6 关于连接的一些问题
+### 当`join`没有任何前缀时，使用的表连接方式是什么？（表的默认连接是什么？）
+&emsp;&emsp; `join`是内连接，也就是说`INNER JOIN`中的`INNER`是可以省略的。
+
+### 
+<div align="center"> <img src="./pic/joins.png"> </div>
+<center> <font color=black> <b> 4种连接的7种用法 </b> </font> </center>
+
+### 在对多表进行连接时，后台发生了什么？
+&emsp;&emsp; 在连接两张(或多张)来时，数据库会生成一张中间的临时表，然后再将这张临时表返回给用户。
+&emsp;&emsp; 连接的结果可以在逻辑上看作是由`SELECT`语句指定的列组成的新表。
+
+### 在`left join`(`right join`)时，`on`和`where`各自起什么作用？
+在使用 `join` 时，`on` 和 `where` 条件的区别如下：
+> &emsp;&emsp; `on` 条件是在生成临时表时使用的条件，它不管 `on` 中的条件是否为真，都会返回左边表(若是`right join`则返回的是右边)中的记录。
+> &emsp;&emsp; `where` 条件是在临时表生成好后，再对临时表进行过滤的条件。这时已经没有 left join 的含义（必须返回左边表的记录）了，条件不为真的就全部过滤掉。
+> 
+
 ### `join on`里的`on`条件明明可以用 `where`子句来代替，那为什么还要引入`on`条件呢？
+&emsp;&emsp; **ON条件** 是过滤两个链接表笛卡尔积形成中间表的约束条件。
+&emsp;&emsp; **WHERE条件** 在有ON条件的SELECT语句中是过滤中间表的约束条件。在没有ON的单表查询中，是限制物理表或者中间查询结果返回记录的约束。在两表或多表连接中是限制连接形成最终中间表的返回结果的约束。
+&emsp;&emsp;  从这里可以看出，将WHERE条件移入ON后面是不恰当的。推荐的做法是：
+> ON只进行连接操作，WHERE只过滤中间表的记录。
+> 
+&emsp;&emsp; 另外，在ON子句中指定连接条件，并在WHERE子句中出现其余的条件，这样的SQL可读性更强。
+
+
+
+
+
+
 
 
 
