@@ -1834,7 +1834,18 @@ taken from a wide range of sources, especially without careful thought
 > 
 
 
-## 6. overrun
+## 6. so that it multiplied with that promiscuous abandon characteristic of rabbits
+`abandon` 作名词有`放纵`的意思，比如：
+> He signed cheques with careless abandon.
+> 他无所顾忌地乱开支票。
+> 
+因此`promiscuous abandon`翻为：`淫乱的放纵`
+&emsp;&emsp; `characteristic of` 修饰`promiscuous abandon`作定语，意思是“有……特征的”，这里`characteristic`是形容词，`characteristic of`是一个形容词短语，这部分可以译成“因此便以兔子所特有的杂乱交配繁衍后代”。比如：
+> the connotation and era characteristic of human-oriented
+> “以人为本”的内涵和时代特征
+> 
+
+## 7. overrun
 **(1) v. [动词+名词短语] [often passive] especially of sth bad or not wanted 尤指坏事或不欲之事泛滥；横行；肆虐**
 to fill or spread over an area quickly, especially in large numbers
 > The house was completely overrun with mice.
@@ -1855,3 +1866,193 @@ to take more time or money than was intended
 > a cost overrun
 > 超出的成本
 > 
+
+
+
+## 8. burrow /ˈbɜːroʊ/
+### verb
+**(1) 挖掘（洞或洞穴通道）；挖洞**
+to make a hole or a tunnel in the ground by digging
+同义词：`dig`
+> [动词 usually + 副词/介词短语] Earthworms burrow deep into the soil.
+> 蚯蚓钻土很深。
+> 
+> [动词+名词短语+ 副词/介词短语] The rodent burrowed its way into the sand.
+> 这只鼠掘洞钻进沙里。
+> 
+**(2)[+ 副词/介词短语] 偎依；使…钻到（…下面）**
+to press yourself close to sb or under sth
+> [单独使用的动词] He burrowed down beneath the blankets.
+> 他钻到毯子下面。
+> 
+> [动词+名词短语] She burrowed her face into his chest.
+> 她把脸埋进他的怀里。
+> 
+**(3) [动词+ 副词/介词短语] （在…里）搜寻**
+to search for sth under or among things
+> She burrowed in the drawer for a pair of socks.
+> 她在抽屉里翻找一双袜子。
+> 
+> He was afraid that they would burrow into his past.
+> 他担心他们会追查他的过去。
+> 
+### noun
+**(1) （动物的）洞穴，洞穴通道**
+
+
+## 9. herbage /ˈɜːrbɪdʒ/
+n. (尤指)牧草；(统称)草本植物
+
+## 10. maintain
+### verb
+**(1) [动词+名词短语] 维持；保持**
+to make sth continue at the same level, standard, etc.
+同义词：`preserve`
+> to maintain law and order/standards/a balance 
+> 维持治安；保持水平 / 平衡
+> 
+> The two countries have always maintained close relations.
+> 这两个国家一直保持着密切关系。
+> 
+> (formal)She maintained a dignified silence.
+> 她一言不发，以保持尊严。
+> 
+> to maintain prices (= prevent them falling or rising) 
+> 维持价格的稳定
+> 
+
+**(2) [动词+名词短语] 维修；保养**
+to keep a building, a machine, etc. in good condition by checking or repairing it regularly
+> The house is large and difficult to maintain.
+> 房子很大，难以养护。
+> 
+
+**(3) 坚持（意见）；固执己见**
+to keep stating that sth is true, even though other people do not agree or do not believe it
+同义词：`insist`
+> [动词 (+ that从句)] The men maintained (that) they were out of the country when the crime was committed.
+> 这几个男人坚持说案发时他们在国外。
+> 
+> [动词+名词短语] She has always maintained her innocence .
+> 她一直坚持说她是无辜的。
+> 
+
+**(4). [动词+名词短语] 供养；扶养**
+to support sb/sth over a long period of time by giving money, paying for food, etc.
+同义词：`keep`
+> Her income was barely enough to maintain one child, let alone three.
+> 她的收入养活一个孩子几乎都不够，更不用说三个了。
+> 
+
+
+
+## 11. susceptible /səˈseptəbl/
+发音要注意
+### adj.
+**(1) [not usually before noun] ~ (to sb/sth) 易受影响（或伤害等）；敏感；过敏**
+very likely to be influenced, harmed or affected by sb/sth
+> He's highly susceptible to flattery.
+> 他爱听恭维话。
+> 
+> Some of these plants are more susceptible to frost damage than others.
+> 这些植物中有一些较其他的易受霜冻危害。
+> 
+> Salt intake may lead to raised blood pressure in susceptible adults.
+> 盐的摄入可能导致易病的成年人血压升高。
+> 
+**(2) 好动感情的；感情丰富的；善感的**
+easily influenced by feelings and emotions
+同义词：impressionable
+> She was both charming and susceptible.
+> 她迷人而多情。
+> 
+**(3) ~ (of sth) (formal) 容许…的；可能…的；可以…的**
+allowing sth; capable of sth
+> Is this situation not susceptible of improvement by legislation?
+> 这种状况有无可能通过立法加以改善？
+> 
+
+
+
+## 12. myxomatosis /ˌmɪksəməˈtoʊsɪs/
+n. 粘液瘤病；兔黏液瘤病；多发黏液瘤病
+
+
+
+## 13. exterminate /ɪkˈstɜːrmɪneɪt/
+vt. 灭绝；消灭；毁灭；根除
+> A huge effort was made to exterminate the rats...
+> 灭鼠花了大力气。
+> 
+
+
+
+## 14. bequeath /bɪˈkwiːð/
+### verb
+**(1) `~ sth (to sb)` |` ~ (sb) sth`(formal) （在遗嘱中）把…遗赠给**
+to say in a will that you want sb to have your property, money, etc. after you die
+同义词：`leave`
+> [动词+名词短语, 动词+名词短语+名词短语] He bequeathed his entire estate to his daughter.
+> 他把全部财产遗赠给他的女儿。
+> 
+> He bequeathed his daughter his entire estate.
+> 他把全部财产遗赠给他的女儿。
+> 
+
+**(2) [动词+名词短语, 动词+名词短语+名词短语] 将（工作成果、知识等）流传（给后世等）**
+> He bequeaths his successor an economy that is doing quite well...
+> 他给继任者留下了发展势头非常不错的经济。
+>
+
+
+
+## 15. pestilence /ˈpestɪləns/
+n. [不可数名词, 单数名词] 瘟疫
+> A pestilence was raging in that area.
+> 瘟疫正在那一地区流行。
+> 
+
+
+
+## 16. physician
+doctor、physician、surgeon、dentist和Psychologist都含有“医生”之意：
+|              |                                                                                |
+| ------------ | ------------------------------------------------------------------------------ |
+| doctor       | 普通用词，泛指各科医生，即一切有行医资格的人。                                 |
+| physician    | 指医院的内科医生。                                                             |
+| surgeon      | 指专修外科或专修人体某个部分的外科专科医生，这种医生一般需对患者进行手术治疗。 |
+| dentist      | 指专门从事治牙的医生。                                                         |
+| Psychologist | 心理医生                                                                       | 
+
+
+
+## 17. domesticate /dəˈmestɪkeɪt/
+### verb
+[动词+名词短语]
+**(1) 驯养，驯化（动物）**
+to make a wild animal used to living with or working for humans
+> We domesticated the dog to help us with hunting.
+> 我们驯狗来帮我们打猎。
+> 
+**(2) 驯化，培育（植物或农作物）**
+to grow plants or crops for human use
+同义词：cultivate
+
+**(3) (often humorous)使精于家务；使喜爱家居**
+to make sb good at cooking, caring for a house, etc.; to make sb enjoy home life
+> Some men are very hard to domesticate.
+> 有些男人很难做好家务活。
+> 
+### 【派生词】
+`domesticated` adj. 驯养的，乐于做家务事的;爱操持家务的
+> domesticated animals
+> 驯养的动物
+> 
+> They've become a lot more domesticated since they got married.
+> 他们婚后恋家多了。
+> 
+`domestication` noun 驯化；驯养
+> [不可数名词] the domestication of cattle
+> 牛的驯养
+> 
+
