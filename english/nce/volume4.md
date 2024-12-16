@@ -2022,7 +2022,7 @@ doctor、physician、surgeon、dentist和Psychologist都含有“医生”之意
 | physician    | 指医院的内科医生。                                                             |
 | surgeon      | 指专修外科或专修人体某个部分的外科专科医生，这种医生一般需对患者进行手术治疗。 |
 | dentist      | 指专门从事治牙的医生。                                                         |
-| Psychologist | 心理医生                                                                       | 
+| Psychologist | 心理医生                                                                       |
 
 
 
@@ -2056,3 +2056,347 @@ to make sb good at cooking, caring for a house, etc.; to make sb enjoy home life
 > 牛的驯养
 > 
 
+
+
+
+
+&emsp;
+&emsp;
+# Lesson 18 Porpoises 海豚
+&emsp;&emsp; 选自美国作家 `Ralph Nading Hill`(1917-1988)所著 `Window in the sea`, 1956.
+## 1. porpoise /ˈpɔːrpəs/
+n. 鼠海豚；钝吻海豚
+
+
+
+## 2. however 的其它用法
+### adv
+**①（与形容词或副词连用）无论到什么程度，不管多么**
+> He wanted to take no risks, however small.
+> 他多小的风险也不想冒。
+> 
+> She has the window open, however cold it is outside.
+> 不管外面多冷她都开着窗户。
+> 
+> However carefully I explained, she still didn't understand.
+> 无论我解释得多么仔细，她还是没弄懂。
+>
+**② 不管怎样；无论如何**
+> However you look at it, it's going to cost a lot.
+> 不管你怎么看，它都要花很多钱。
+> 
+**③ …左右;…上下**
+> The 20,000 or however many who come to watch would love to be out on the pitch...
+> 约两万名来看比赛的观众都希望能身处球场之上。
+> 
+**④ QUEST 究竟怎样，到底如何（用于强调地询问令人吃惊的事情）**
+> However did you find this place in such weather?
+> 你到底是怎样在这样的天气里找到这个地方的？
+> 
+一些人认为此用法不正确，用how ever较为妥当：
+> How ever did you get here so quickly?
+> 
+
+
+
+## 3. credit
+### A.noun
+**① uncountable Finance (system) 信贷; (ability to borrow and pay back) 信用; (professional repute) 声誉 **
+> ▸ her credit is good
+> 她的信用很好
+>
+> ▸ to live on credit
+> 靠借贷为生
+>
+> ▸ unlimited credit
+> 无限制的信用额度
+>
+> ▸ to be refused credit
+> 被拒绝贷款
+>
+> ▸ cheap credit
+> 低息贷款
+>
+> ▸ to give a customer credit
+> 允许顾客赊账
+>
+> ▸ to buy/sell sth on credit
+> 赊购/赊销某商品
+> 
+**② uncountable (recognition) 赞扬 ; (honour) 荣誉 **
+> ▸ to get the credit for sth/doing sth
+> 因某事物/做某事得到称赞
+> 
+> ▸ to give sb (the) credit for sth/doing sth
+> (reluctantly) 因某事物/做某事认可某人
+> 
+> (in praise) 因某事物/做某事称赞某人
+> ▸ she's not given credit for her ability
+> 人们并不认可她的能力
+> 
+> ▸ to take credit for sth/doing sth
+> 因某事物/做某事而居功
+> 
+> ▸ to take the credit away from sb
+> 抢某人的功劳
+> 
+> ▸ credit where credit is due
+> 该表扬的就要表扬
+> 
+> ▸ to do or bring credit to sb/sth
+> 为某人/某机构争光
+> 
+> ▸ to be to sb's credit
+> «achievements» 属于某人
+> «behaviour» 使某人值得赞扬 
+> ▸ she has two operas to her credit
+> 她出演了两部歌剧
+> ▸ to her credit, she refused
+> 她拒绝了，这值得赞扬
+> 
+**③ countable (source of) (person) 添荣誉的人 tiān róngyù de rén; (thing) 添荣誉的事物 tiān róngyù de shìwù**
+> ▸ to be a credit to sb/sth
+> «person» 是某人/某机构的光荣
+> 
+**④ uncountable and countable Finance (positive balance) 贷方余额; (order to pay) 付款凭证; >(payment in) 存入金额; (balance sheet entry) 贷记**
+> ▸ to be in credit
+> «account, person» 有结余
+> 
+> ▸ to have £200 to one's credit
+> 账上有200英镑的存款
+> 
+> ▸ on the credit side of an account
+> 在账户的贷记栏里
+>
+**⑤ countable University (unit of study) 学分**
+
+### B.credits plural noun
+（电影或电视节目演职人员的）片头字幕，片尾字幕
+> She was given a programme credit for her work on the costumes for the play.
+> 她为这出戏准备服装，被列入剧目制作人员名单。
+> 
+> The credits (= the list of all the people involved) seemed to last almost as long as the film!
+> 演职人员字幕持续的时间几乎与这部电影一样长！
+> 
+### C.transitive verb
+① (attribute) 归(功劳)于 
+> ▸ to credit sb with sth/doing sth;
+> 把某事物/做某事归功于某人
+> 
+> ▸ she is credited with the discovery/with discovering sth
+> 人们认为这一发现/发现某物是她的功劳
+> 
+> ▸ to credit sth to sb;
+> 把某事物算到某人头上
+> 
+> ▸ the screenplay is credited to an American writer
+> 这个电影剧本是一位美国作家写的
+> 
+**② Finance 把…记入贷方 ‹money›**
+
+**③ British (believe) 相信**
+> ▸ would you credit it!
+> 真是不可思议！
+> 
+
+
+
+## 4. bow wave
+A `bow wave` is the wave that forms at the bow of a ship when it moves through the water
+
+
+
+## 5. beaver
+### noun
+**① [可数名词] 河狸，海狸（水栖啮齿动物，加拿大的象征）**
+
+**② [不可数名词] 海狸毛皮（用以制作衣帽）**
+> ...a coat with a huge beaver collar.
+> 大河狸领外套
+> 
+**③ [可数名词] (taboo, slang, especially 北美英语)女子阴部**
+
+
+### verb
+`beaver away`  卖力干；勤奋工作 
+`beaver away (at sth)` (informal)忙于（某事）；勤奋工作
+> He's been beavering away at the accounts all morning.
+> 他一上午都在忙于做账。
+>
+
+### 词组
+`eager beaver` n. 干活特别卖力的人；对工作极有热忱的人
+> He is an eager beaver.
+> 他是个勤快的人。
+> 
+
+
+
+### 5. waterlog
+v. 使（船等）漏水或进水；使泡水
+n. 涝灾；泡水；浸水
+
+`waterlogged` adj.水涝的；水淹的；水浸的；浸满水下沉的；进水满舱的
+> The match is off because of a waterlogged pitch.
+> 由于场地积水太多比赛被取消了。
+>
+
+
+
+## 6. natural enemy
+n. 天敌
+
+
+
+## 7. ensue /ɪnˈsuː/
+vi. 接踵而至；接着发生；因而产生
+> An argument ensued.
+> 紧接着的是一场争论。
+>
+> If the Europeans did not reduce subsidies, a trade war would ensue...
+> 如果欧洲人不减少补贴，便会发生贸易战。
+> 
+
+
+
+## 8. intrigue
+### A.transitive verb 
+**(fascinate) 引起…的好奇心** 
+> ▸ I'm intrigued to know whether …
+> 我很想知道是否…
+> 
+> ▸ she was intrigued by his story
+> 她被他的故事迷住了
+> 
+### B.intransitive verb 
+**密谋**
+> ▸ to intrigue (with sb) against sb;
+> （与某人）密谋策划加害某人
+> 
+### C.noun 
+**① uncountable (plotting) 密谋策划**
+
+**② countable (plot) 阴谋**
+> ▸ a political intrigue
+> 政治阴谋
+> 
+> ▸ to be involved in an intrigue
+> 参与一个阴谋
+> 
+
+
+
+## 9. submit
+### A.intransitive verb 
+**① (accept defeat) «general, opponent» 认输; «army, town, tribe» 投降**
+> ▸ to submit to sb/sth;
+> 向…认输 ‹opponent›
+> 向…投降 ‹army, invader›
+> 屈从于 ‹rule, will, demand›
+> 
+> ▸ she refused to submit to threats
+> 她拒不向恐吓低头
+> 
+**② (defer to) 遵从**
+> ▸ to submit to;
+> 遵从 zūncóng ‹arbitration, decision›
+> 
+**③ (agree to) 听任**
+> ▸ to submit to;
+> 接受 ‹examination, treatment›
+> 甘受  ‹humiliation, injustice›
+> 遵从  ‹discipline›
+> 
+
+### B.transitive verb 
+**① (present) 提交 ‹bill, report, budget, appeal, resignation›**
+> ▸ the findings have been submitted to the government
+> 调查结果已经呈送给政府
+> 
+**② formal (propose, suggest) 主张**
+> ▸ I would submit that …
+> 我认为…
+> 
+**③ (subject to) 使经受**
+> ▸ to submit sb/sth to sth;
+> 让某人/某物经受某事
+> 
+> ▸ to submit oneself to;
+> 接受 ‹examination, treatment›
+> 甘受 gān shòu ‹humiliation›
+> 遵从 zūncóng ‹jurisdiction, decision›
+> 
+
+
+
+## 10. indignity
+n. 侮辱；轻蔑；侮辱性的行为
+
+
+
+## 11. calf /kæf/
+### noun plural calves
+**① countable (of cow) 牛犊** 
+> ▸ to be in calf
+> 怀了小牛
+> ▸ to kill the fatted calf
+> figurative 大宴宾客
+> 
+**② countable (of other animal) 幼兽** 
+>The calf had a lucky escape.
+>小崽很侥幸地逃过一劫。
+> 
+**③ countable (of leg) 腿肚子** 
+> I've torn a calf muscle.
+> 我拉伤了小腿肌肉。
+> 
+
+### 习语
+in/with calf 怀有（幼兽）
+
+
+
+## 12. snout /snaʊt/
+**(1) 猪等动物的）口鼻部，吻**
+> Two alligators rest their snouts on the water's surface.
+> 两只鳄鱼的大嘴栖息在水面上。
+> 
+**(2)(informal, humorous)（人的）鼻子**
+
+**(3)口吻状物(如车头、枪管等)**
+> the snout of a pistol
+> 手枪枪管
+>
+> The snout of the Mercedes poked through the gates...
+> 奔驰轿车的前部把大门洞穿了。
+> 
+
+
+
+## 13. aquaplane /ˈɑːkwəpleɪn/
+### n
+滑水板
+### vi
+① 滑水；
+② 在潮湿路面上打滑失控
+
+
+
+## 14. for dear life
+拼命地；尽最大努力地
+> She was holding on to the rope for dear life.
+> 她死命抓着那根绳子。
+>
+
+
+
+## 15. oceanarium /ˌoʊʃəˈneriəm/
+n. 海洋馆；大型海洋水族馆
+`arium`是一个后缀，表示 `地点，场所, ...馆，...室，...院，...所`
+|              |                        |
+| ------------ | ---------------------- |
+| ‌Aquarium‌    | 水族馆，养鱼池，玻璃缸 |
+| ‌Honorarium‌  | 酬劳金，谢礼           |
+| ‌Oceanarium‌  | 大型水族馆             |
+| ‌Planetarium‌ | 行星仪，天文馆         |
+| ‌Sanitarium‌  | 疗养院，疗养所，静养地 |
