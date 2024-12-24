@@ -740,6 +740,7 @@ DATETIME：在 `MySQL 5.6.4` 之前，占 `8` 个字节 ，之后版本，占 `5
 | --------- | ------------------------------------------------------------ |
 | datetime  | '1000-01-01 00:00:00.000000' to '9999-12-31 23:59:59.999999' |
 | timestamp | '1970-01-01 00:00:01.000000' to '2038-01-19 03:14:07.999999' |
+z§
 &emsp;&emsp; timestamp翻译为汉语即"时间戳"，它是当前时间到 Unix元年(1970年1月1日0时0分0 秒)的秒数。对于某些时间的计算，如果是以 datetime 的形式会比较困难，假如我是 1994-1-20 06:06:06 出生，现在的时间是 2016-10-1 20:04:50 ，那么要计算我活了多少秒钟用 datetime 还需要函数进行转换，但是 timestamp 直接相减就行。
 
 **③ 时区(存入时间是否会自动转换？)**
@@ -756,9 +757,126 @@ DATETIME：在 `MySQL 5.6.4` 之前，占 `8` 个字节 ，之后版本，占 `5
 `DATETIME`：不会自动存储当前时间，会直接存入 `NULL` 值。
 
 ### (3) SQL中时间日期相关的函数
-&emsp;&emsp; 
+#### ① EXTRACT()
+&emsp;&emsp; EXTRACT() 函数用于返回日期/时间的单独部分，比如年、月、日、小时、分钟等等。语法如下：
+```sql
+EXTRACT(field FROM datetime)
+```
+其中`field`可以是`MICROSECOND, SECOND, MINUTE, HOUR, DAY, WEEK, MONTH`等等，例如有`"Orders"`表：
+
+| OrderId | ProductName      | OrderDate               |
+| ------- | ---------------- | ----------------------- |
+| 1       | Jarlsberg Cheese | 2008-11-11 13:23:44.657 |
+
+下面是 SELECT 语句：
+```sql
+SELECT  
+    EXTRACT(YEAR FROM OrderDate) AS OrderYear,
+    EXTRACT(MONTH FROM OrderDate) AS OrderMonth,
+    EXTRACT(DAY FROM OrderDate) AS OrderDay
+FROM 
+    Orders
+WHERE 
+    OrderId=1
+```
+结果如下所示：
+| OrderYear | OrderMonth | OrderDay |
+| --------- | ---------- | -------- |
+| 2008      | 11         | 11       |
+
+#### ② 获取当前时间日期的函数
+```sql
+SELECT CURRENT_DATE(), CURRENT_TIME(), CURRENT_TIMESTAMP(), LOCALTIME(), LOCALTIMESTAMP();
+```
+运行结果：
+| CURRENT_DATE() | CURRENT_TIME() | CURRENT_TIMESTAMP() | LOCALTIME()         | LOCALTIMESTAMP()    |
+| -------------- | -------------- | ------------------- | ------------------- | ------------------- |
+| 2024-12-18     | 14:39:59       | 2024-12-18 14:39:59 | 2024-12-18 14:39:59 | 2024-12-18 14:39:59 |
+
 
 ## 5.2 类型转换 和 格式化函数
+&emsp;&emsp; 虽然系统会自动执行某些数据类型的转换，但其它的转换需要显示请求。
+
+## 5.3 缺省值(DEFAULT 约束)
+&emsp;&emsp; 缺省值 就是 DEFAULT 约束，DEFAULT 约束会在该字段没有提供值的时候给它插入一个默认值。
+```sql
+CREATE TABLE Persons
+(
+    P_Id int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255) DEFAULT 'Sandnes'
+)
+```
+
+## 5.4 大对象类型
+&emsp;&emsp; MySQL提供了`blob`(binary large object)类型来存储**二进制大对象**，`text`类型存储长文本字符串。
+
+## 5.5 用户自定义类型
+
+## 5.6 生成唯一码
+### 5.6.1 什么是唯一码？为什么需要它？
+&emsp;&emsp; 唯一码 是用来唯一标识一个信息的一个编码。
+&emsp;&emsp; 假如有一个员工表`Employee`，每个员工都需要一个员工号来标识该用户，此时就可以用到唯一码。
+
+### 5.6.2 如何获得唯一码？
+&emsp;&emsp; 不同的数据库的的实现可能都不一样，MySQL用的是`auto_increment`，SQL Server用的是`identify`。
+
+## 5.7 create table 的扩展
+### 5.7.1 只复制表结果
+&emsp;&emsp; 应用常常要求创建与现有的某个表的模式相同的表。SQL提供了一个`create table like`的扩展来支持这项任务:
+以下语句使用的是MySQL8进行验证：
+```sql
+create table temp_versions like versions;
+```
+但需要注意的是，上面的建表语句 **不会复制数据！**。
+### 5.7.2 同时复制数据和表结构
+若想复制数据，则应该使用`CREATE TABLE 新表名 AS ...`：
+```sql
+CREATE TABLE temp_versions2  as
+	(SELECT * FROM versions);
+```
+或者只复制部分数据：
+```sql
+CREATE TABLE temp_versions3  as
+	(SELECT * FROM versions WHERE start_time > '2021-10-20 08:00:00');
+```
+**此功能在不同的数据库中语法可能不一样，有的可能需要在后面加上`WITH DATA`**
+
+# 5 catalog 和 schema
+## 5.1 什么是 catalog 和 schema
+&emsp;&emsp; 在关系型数据库中，分三级：`database.schema.table`。即一个数据库下面可以包含多个`schema`，一个`schema`下可以包含多个数据库对象，比如表、存储过程、触发器等。但并非所有数据库都实现了`schema`这一层，比如: 
+> `mysql`直接把`schema`和`database`等效了，也就是说在`mysql`中，`create database` 和 `create schema` 是等效的；
+> 另外，`PostgreSQL`、`Oracle`、`SQL server`等的`schema`也含义不太相同。
+> 
+&emsp;&emsp; 所以说，关系型数据库中没有`catalog`的概念。但在一些其它地方（特别是大数据领域的一些组件）有`catalog`的概念，也是用来做层级划分的，一般是这样的层级关系：`catalog.database.table`。
+
+
+
+
+
+&emsp;
+&emsp;
+# 7. 授权
+## 7.0 权限的分类
+对**数据**的授权包括
+> ① 读取数据的权限
+> ② 插入数据的权限
+> ③ 更新数据的权限
+> ④ 删除数据的权限
+> 
+以上几种权限(privilege)可以部分授予，也可以完全不授予。
+另外，用户还可以被授予数据库模式层面的权限：
+> ① 创建表
+> ② 修改表
+> ③ 删除表
+> 
+最高权限属于**管理员用户**，也就是 管理员权限
+
+## 7.1 权限的授予与回收
+
+## 7.2 角色
 
 
 

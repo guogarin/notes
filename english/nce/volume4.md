@@ -2400,3 +2400,463 @@ n. 海洋馆；大型海洋水族馆
 | ‌Oceanarium‌  | 大型水族馆             |
 | ‌Planetarium‌ | 行星仪，天文馆         |
 | ‌Sanitarium‌  | 疗养院，疗养所，静养地 |
+
+
+
+## 16. swoop /swuːp/
+### A.intransitive verb
+**① (fly downwards) «plane, bird» 俯冲**
+> ▸ to swoop down
+> 俯冲下来
+> 
+> The aircraft swooped down over the buildings.
+> 飞机俯冲到那些建筑物上方。
+> 
+**② (attack) «army, raider, police» 突然袭击**
+> ▸ to swoop on sb/sth
+> 突袭某人/某处
+> 
+> The terror ended when armed police swooped on the car...
+> 武警突袭了这辆车从而制止了这起恐怖活动。
+> 
+### B.noun
+**① (downward flight) 俯冲**
+
+**② (attack) 突然袭击**
+> Police held 10 suspected illegal immigrants after a swoop on a German lorry.
+> 警察对一辆德国卡车进行突击搜查后扣留了 10 名可疑的非法移民
+>
+### 习语
+`at/in one fell swoop` 一下子；一举
+> **In one fell swoop** the bank wiped away the tentative benefits of this policy.
+> 银行一下子就抹杀了这项政策暂时带来的好处。
+> 
+
+
+
+## 17. butt
+### 释义1
+#### A.transitive verb
+(hit, push) «person» 用头撞; «animal» 用角顶 
+> ▸ to butt one's way through sth
+> 从某处挤出来
+> 
+> ▸ to butt sb in the stomach/belly;
+> 用角猛撞某人的肚子
+> 
+> ▸ to butt one's head/horns into/against sth;
+> 用头/用角顶某物
+> 
+#### B.noun
+(blow) 顶撞 
+#### 词组
+(1) `butt in` intransitive verb
+**① (on conversation) 插嘴** 
+> ▸ he kept butting in on our conversation
+> 我们谈话时他老插嘴
+> 
+> ▸ there's no need for you to butt in
+> 你没必要插嘴
+> 
+> ▸ sorry to butt in but …
+> 对不起，打断一下…
+> 
+**② (meddle) 干涉** 
+> ▸ there's no need for you to butt in!
+> 不用你插手！
+> 
+> ▸ to butt in on sth/sb;
+> 干涉某事/某人
+> 
+(2) butt out (informal, especially 北美英语)走开；别管闲事
+> Butt out, Neil! This is none of your business.
+> 不许插手，尼尔！这不关你的事。
+> 
+
+### 释义2
+#### noun
+**(target of criticism, ridicule, 嘲笑或批评的) 对象**
+> ▸ to be the butt of sth;
+> 成为某事的对象
+> 
+> ▸ to be a butt for ridicule
+> 受到嘲弄
+>
+> She was the butt of some very unkind jokes.
+> 她受到了刻薄的嘲弄。
+> 
+
+### 释义3
+#### A.noun
+**① (end of rifle) 枪托, （武器或工具）较粗的一端，柄**
+> Troops used tear gas and rifle butts to break up the protests...
+> 军队使用催泪瓦斯和枪托驱散示威者。
+> 
+**② (end of cigarette) (also butt end) 烟头**
+> He dropped his cigarette butt into the street below...
+> 他把烟头扔到下面的街道上。
+> 
+**③ US informal (buttocks) 屁股**
+> Get off your butt and do some work!
+> 起来干点活儿吧！
+> 
+> Get your butt over here! (= Come here!) 
+> 过来！
+>
+> Frieda grinned, pinching him on the butt.
+> 弗里达咧嘴笑了，捏了捏他的屁股。
+> 
+#### B.transitive verb
+Building 使对头连接
+
+### 释义4
+#### noun
+**（装液体用的 大桶**
+> ▸ water/beer butt
+> 水桶/啤酒桶
+> 
+
+
+
+## 18. equilibrium /ˌiːkwɪˈlɪbriəm/
+`equilibrium`=`equ`（平等的）+`i`+`libr`（天平）+`ium`（名词后缀）→天平的平衡→均衡
+### noun
+[不可数名词, 单数名词]
+**(1) 平衡；均衡；均势**
+> The point at which the solid and the liquid are in equilibrium is called the freezing point.
+> 固体和液体的平衡点叫做冰点。
+> 
+> Any disturbance to the body's state of equilibrium can produce stress.
+> 对身体平衡状态的任何干扰都可能产生压力。
+> 
+> We have achieved an equilibrium in the economy.
+> 我们已在经济上达到平衡。
+> 
+**(2) （心情、情绪）平静，安宁；心理平衡**
+> He sat down to try and recover his equilibrium.
+> 他坐了下来，努力恢复平静。
+> 
+
+
+
+## 19. crack
+### A.noun
+**① countable (fissure) 裂缝; (in skin) 裂口; (narrow opening) 缝隙**
+> ▸ a crack in sth;
+> 某物上的裂缝
+> 
+> ▸ cracks over sth
+> 某物上的多处裂纹
+> 
+> ▸ a hairline crack
+> 细缝
+> 
+> ▸ to look/peep through a crack
+> 透过缝隙看/窥视
+> 
+> ▸ to open the door/leave the door open a crack
+> 把门开/给门留一条缝
+> 
+**② countable figurative (in relationship) 裂痕 ; (in policy) 漏洞**
+> ▸ to fall through or slip between the cracks
+> 被遗漏
+> 
+> ▸ to paper or paste over the cracks (in sth)
+> 掩盖（某事物上的）问题
+> 
+> ▸ the crack of dawn or day
+> 大清早
+> 
+> ▸ to leave at the crack of dawn
+> 一大早离开
+> 
+> ▸ the crack of doom
+> 世界末日
+> 
+**③ countable (noise) (of whip, gun) 噼啪声; (of twig, bone) 咔嚓声**
+> ▸ a crack of thunder
+> 一声霹雳
+> 
+> ▸ a crack of the bat
+> (in baseball, cricket) 击球声
+> 
+> ▸ a fair crack of the whip
+> figurative informal 均等的机会
+> 
+**④ countable (blow) 猛击**
+> ▸ to get a crack on the head/jaw;
+> 头部/下巴受到猛击
+> 
+**⑤ countable informal (jibe) 俏皮话**
+> ▸ a crack about sb/sth;
+> 对某人/某事物的挖苦
+> 
+> ▸ to make or have a crack (about or at sb/sth)
+> 嘲笑（某人/某事物）
+> 
+**⑥ countable informal (attempt) 尝试**
+> ▸ to have a crack at sth/doing sth
+> 尝试某事物/做某事
+> 
+**⑦ uncountable informal (drug) 强效纯可卡因**
+> a crack addict
+> 吸强效可卡因成瘾的人
+> 
+### B.transitive verb
+**① (make fracture(s) in) 使…裂开‹glass, ice, wall, bone, rib, wrist›**
+
+**② (break open) 砸开‹nut, safe›; 敲开‹egg›**
+> ▸ to crack sth open
+> 砸开某物
+> 
+> ▸ to crack one's head open
+> 撞破头
+> 
+**③ (hit) 猛击 ‹head, person›**
+> ▸ to crack sb over the head
+> 猛击某人头部
+> ▸ to crack one's elbow against or on a shelf
+> 胳膊肘撞到架子上
+> 
+**④ (make sound with) 使…噼啪作响‹twig›**
+> ▸ to crack the whip
+> literal 甩响鞭
+> figurative 鞭策
+> ▸ to crack one's knuckles
+> 使指关节噼啪作响
+> 
+**⑤ (overcome) 瓦解‹defence, opposition, system›**
+
+**⑥ informal (solve) 破解‹problem›**
+> ▸ to crack a case/code
+> 破案/破译密码
+>
+> crack the system  
+> 破解系统
+> 
+**⑦ informal (open) 开**
+> ▸ to crack (open) a bottle of champagne
+> 开香槟酒
+> 
+**⑧ informal (tell) to crack a joke 开玩笑**
+
+**⑨ Chemistry 使…裂化‹oil›**
+> ▸ to crack crude oil
+> 裂化原油
+> 
+### C.intransitive verb
+**① (develop crack(s)) «skin, wall, paint» 裂开**
+> ▸ to crack into a smile
+> «face» 绽放出笑容
+> 
+**② (make sound) «whip, knuckles, twig» 噼啪响 pīpā xiǎng; «firearm» 发出爆裂声**
+> ▸ to get cracking (with or on sth)
+> informal (hurry up) 动手（干某事）
+> 
+**③ figurative (break down) «resistance, person» 垮掉** 
+> ▸ to crack under pressure
+> 在压力之下垮掉
+> ▸ to crack under interrogation
+> 在审问之下招认
+> ▸ something inside him cracked
+> 他的内心崩溃了
+> ▸ his composure/confidence began to crack
+> 他开始不安/失去信心
+> 
+**④ (change) (at puberty) «voice» 变粗; (with emotion) «voice» 变沙哑**
+
+### D.adjective
+**attributive 技艺高超的‹sportsperson›; 精锐的‹troops, regiment›**
+> ▸ he's a crack shot
+> 他是个神枪手
+> 
+> crack troops
+> 精锐部队
+> 
+> ▸ a team of crack players
+> 由顶尖选手组成的队伍
+> 
+
+### 词组
+#### (1)`crack down`
+**intransitive verb**
+«government, police» 镇压; «parents, school» 严格管理
+> ▸ to crack down on sb/sth;
+> (with force) 严厉打击某人/某事物
+> (with rules) 竭力管制某人/某事物
+> 
+
+#### (2)`crack on`
+**intransitive verb**
+British informal 拼命干
+> ▸ to crack on with sth;
+> 拼命做某事
+> 
+
+#### (3)`crack up`
+##### A. intransitive verb informal
+**① (have breakdown) 垮掉**
+> You'll crack up if you carry on working like this.
+> 你再这样干下去，身体会垮掉的。
+> 
+**② (laugh) 大笑起来** 
+> He walked in and everyone just cracked up.
+> 他一进来，人人都捧腹大笑起来。
+> 
+##### B. transitive verb
+> ▸ to crack sb/sth up to be sb/sth
+> informal 把…吹捧成… 
+> ▸ to be cracked up to be sth
+> 被吹捧成某事物
+>
+crack sb up (informal)使大笑起来
+> Gill's so funny, she just cracks me up.
+> 吉尔滑稽极了，逗得我哈哈大笑。
+> 
+
+#### (4) get cracking
+(informal)立即大干起来
+> 同义词：get going
+> There's a lot to be done, so let's get cracking.
+> 要做的工作很多，咱们马上就干吧。
+> 
+
+#### (5) not all, everything, etc. sb's cracked up to be
+(informal)不像人们说的那么好
+> He's not nearly such a good writer as he's cracked up to be.
+> 他远不是人们所说的那种优秀作家。
+> 
+
+#### (6) crack the whip
+极度役使
+
+#### (7) use a sledgehammer to crack a nut
+抡着大锤砸核桃；杀鸡用牛刀
+
+#### (8) at the crack of dawn
+(informal)黎明；破晓；清晨
+
+#### (9) a fair crack of the whip
+(英国英语, informal)（做某事的）合理机会
+> I felt we weren't given a fair crack of the whip.
+> 我觉得我们没有得到合理的机会。
+> 
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 19 The Stuff of Dreams 梦的本质
+&emsp;&emsp; 选自 `Dr. Christopher Evans` 所撰 `The Stuff of Dreams. The Listener, 8 Dec 1966`.
+## 1. Stuff
+
+## 2. the sleeping period
+&emsp;&emsp; `period`在这里做名词，表示“一段时间”，所以 `the sleeping period`翻译成“睡眠时间”。
+
+## 3. seem to be
+似乎是；看来；好像
+> We seem to be missing some students this morning.
+> 今天早上我们好像有几位同学没到。
+> 
+> 
+> We seem to be light on fuel.
+> 我们好像燃料不多了。
+> 
+> Women seem to be able to multitask better than men.
+> 女性似乎比男性更擅长同时做数件事情。
+> 
+> Politicians seem to be out of touch with the real world.
+> 政治家们似乎不接触现实世界。
+>
+
+## 4. in terms of
+在……方面，从……方面（说来）；根据，按照；从……角度看；用……的话，用……的字眼（或措辞）；用……的思想方法
+> The cost in terms of human life was high.
+> 付出了很大的生命代价。
+> 
+> The data is limited in terms of both quality and quantity.
+> 这份资料在质量和数量上都很有限。
+> 
+> In terms of extra staff ─ how many will we need?
+> 就额外的员工来说，我们需要多少人？
+> 
+> What does this mean in terms of cost?
+> 这在成本上意味着什么？
+> 
+> He's talking in terms of starting a completely new career.
+> 他正在谈论开创全新的事业。
+> 
+> In terms of cost ─ how much were you thinking of charging?
+> 说到费用，你们想要多少？
+> 
+
+## 5. The body's tissues are self repairing and self-restoring to a degree, and function best when more or less continuously active
+&emsp;&emsp; 这里`function best`省略的是主语，`the body's tissues`（=`they`）, 省略`be`动词的是后面的`when`从句：`when【they are】more or less continuously active`.这句话完整的应该是：
+> The body's tissues are self repairing and self-restoring to a degree, and (the body's tissues) function best when (they are) more or less continuously active
+> 
+
+## 6. a basic amount of
+一定（basic 必须的）量的
+
+## 7. plausible
+### adj
+**(1) of an excuse or explanation 借口或解释有道理的；可信的**
+反义词：`implausible`
+> Her story sounded perfectly plausible.
+> 她的说辞听起来言之有理。
+> 
+> The only plausible explanation is that he forgot.
+> 唯一合理的解释就是他忘掉了。
+> 
+
+**(2) (disapproving)of a person 人巧言令色的；花言巧语的**
+> She was a plausible liar.
+> 她是个巧言令色的说谎高手。
+> 
+
+## 8. were it not for
+`were it not for` 相当于 `If it were not for` 用于与现在相反的情况
+> Arrows would continue to fly forward forever in a straight line were it not for gravity, which brings them down to earth.
+> 要不是重力使箭落向地面，它们将永远以直线往前飞行。
+> 
+> Were it not for this misfortune, he might never have been forced into the business of grinding out novels to support his family.
+> 要不是因为这一不幸变故，他可能永远都不会迫于无奈地开始流水线式创作小说养家糊口。
+> 
+
+## 9. electroencephalograph  /ɪˈlektroenˈsefələɡræf/
+n.脑电图仪；脑电描记器，脑电图机
+
+## 10. electrode  /ɪˈlektroʊd/
+n. 电极
+
+## 11. scalp  /skælp/
+### noun
+**(1) 头皮**
+
+**(2) (informal)（表示某人已被打败或已受到惩罚的）标志**
+> They have claimed some impressive scalps in their bid for the championship.
+> 他们已在夺取冠军的征途上获得显著进展。
+> 
+
+## 12. psychiatrist /saɪˈkaɪətrɪst/
+n. 精神科医生；精神病学家
+
+## 13. deal with
+**(1) PHRASAL VERB 处理;应付;与…打交道**
+> ...the way that building societies deal with complaints...
+> 建屋互助会处理投诉的方式
+> 
+**(2) PHRASAL VERB 克制(不快情感);冷静面对(感情上困难的局面)**
+> She saw a psychiatrist who used hypnotism to help her deal with her fear...
+> 她去看了一位用催眠术帮她克服恐惧感的精神科医生。
+> 
+**(3) PHRASAL VERB 论述;讨论;涉及**
+> ...the parts of his book which deal with contemporary Paris.
+> 他的书中涉及当代巴黎的那些部分
+> 
+**(4) PHRASAL VERB 与…做买卖;和…有生意往来**
+> When I worked in Florida I dealt with British people all the time...
+> 在佛罗里达工作时，我总与英国人有生意往来。
+> 
