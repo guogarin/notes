@@ -2796,6 +2796,21 @@ crack sb up (informal)使大笑起来
 &emsp;&emsp; 这里`function best`省略的是主语，`the body's tissues`（=`they`）, 省略`be`动词的是后面的`when`从句：`when【they are】more or less continuously active`.这句话完整的应该是：
 > The body's tissues are self repairing and self-restoring to a degree, and (the body's tissues) function best when (they are) more or less continuously active
 > 
+另外，function在这里作动词：
+### function
+#### verb
+**[often + 副词/介词短语] 起作用；正常工作；运转**
+> 同义词：operate
+> 
+> Despite the power cuts, the hospital continued to function normally.
+> 尽管供电中断，医院继续照常运作。
+> 
+> We now have a functioning shower.
+> 现在我们有一个功能正常的淋浴器。
+> 
+> Many children can't function effectively in large classes.
+> 许多孩子在大班上课时学习效果不好。
+> 
 
 ## 6. a basic amount of
 一定（basic 必须的）量的
@@ -2859,4 +2874,104 @@ n. 精神科医生；精神病学家
 **(4) PHRASAL VERB 与…做买卖;和…有生意往来**
 > When I worked in Florida I dealt with British people all the time...
 > 在佛罗里达工作时，我总与英国人有生意往来。
+>
+
+## 14.cycle
+### noun
+**(1) 自行车；摩托车**
+> We went for a cycle ride on Sunday.
+> 我们星期天骑自行车去兜风了。
 > 
+> a cycle route/track 
+> 自行车路线 / 车道
+> 
+**(2) 循环**
+the fact of a series of events being repeated many times, always in the same order
+> the cycle of the seasons
+> 四季的循环
+> 
+**(3) 整套，整个系列（如机器的运转）**
+a complete set or series, for example of movements in a machine
+> eight cycles per second
+> 每秒转动八次
+> 
+> the rinse cycle (= in a washing machine) 
+> （洗衣机的）漂洗运转过程
+> 
+### verb
+**[动词 usually + 副词/介词短语] (especially 英国英语)骑自行车；骑自行车旅行**
+> I usually cycle home through the park.
+> 我通常骑自行车穿过公园回家。
+> 
+
+### life cycle
+**(1) (biology 生)生命周期，生活周期（生物发展过程的系列变形）**
+> the life cycle of the butterfly
+> 蝴蝶的生活周期
+> 
+**(2) 生命周期，寿命（产品等从开发到使用完毕的一段时间）**
+> ...the stages of the familial and economic life cycle...
+> 家庭及经济生活周期的各个阶段
+> 
+
+### 形近词
+`circle`
+> n. 圆；圈；圆圈；圆形；圈子，阶层，界；圆周；环；圆形物；环状物；弧形楼座
+> v. (尤指在空中)盘旋，环行，转圈；圈出；圈起；围绕…画圈
+>
+
+## 15. punctuate
+### verb
+**(1) [动词+名词短语] [often passive] ~ sth (with sth) 不时打断 `to interrupt sth at intervals`**
+> Her speech was punctuated by bursts of applause.
+> 她的讲演不时被阵阵掌声打断。
+> 
+**(2) [单独使用的动词, 动词+名词短语] 给…加标点符号**
+
+## 16. jerky `/ˈdʒɜːrki/`
+### adj
+**(1) 颠簸的**
+【派生词】jerkily adv.
+> The car moved off jerkily.
+> 汽车颠簸着开走了。
+> 
+**(2) 突然的；急促的**
+> Mr Griffin made a jerky gesture.
+> 格里芬先生急匆匆地做了个手势。
+> 
+### noun
+**[不可数名词] (北美英语)干肉条；熏肉条**
+`meat that has been cut into long strips and smoked or dried`
+> beef jerky
+> 牛肉干条
+> 
+
+## 17. exhibit `/ɪɡˈzɪbɪt/`
+### verb
+**(1) ~ (sth) (at/in…) 展览；展出**
+`to show sth in a public place for people to enjoy or to give them information`
+> [动词+名词短语] They will be exhibiting their new designs at the trade fairs.
+> 他们将在商品交易会上展出他们新的设计。
+> 
+> [单独使用的动词] He exhibits regularly in local art galleries.
+> 他经常在当地的画廊举办画展。
+> 
+**(2) [动词+名词短语] (formal)表现，显示，显出（感情、品质或能力）**
+`to show clearly that you have or feel a particular feeling, quality or ability`
+同义词：`display`
+> The patient exhibited signs of fatigue and memory loss.
+> 病人表现出疲劳和记忆力丧失的迹象。
+> 
+### noun
+**(1) （一件）展览品，陈列品**
+`an object or a work of art put in a public place, for example a museum, so that people can see it`
+**(2) （在法庭上出示的）物证，证据**
+`a thing that is used in court to prove that sb is guilty or not guilty`
+> The first exhibit was a knife which the prosecution claimed was the murder weapon.
+> 当庭出示的第一件物证就是控方称为杀人凶器的一把刀。
+> 
+**(3) (北美英语) = exhibition(1)**
+> The new exhibit will tour a dozen US cities next year.
+> 这批新展品明年将在美国十二个城市巡回展出。
+>
+
