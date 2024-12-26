@@ -2975,3 +2975,363 @@ a complete set or series, for example of movements in a machine
 > 这批新展品明年将在美国十二个城市巡回展出。
 >
 
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 20 Snake Poison 蛇毒
+&emsp;&emsp; 选自英国科普作家 `John Battersby Crompton Lamburn` (1893-1972)所著 `The Snake`, 1963.
+## 1. come about
+**PHRASAL VERB 产生;发生**
+`When you say how or when something came about, you say how or when it happened.`
+> ny possible solution to the Irish question can only come about through dialogue...
+> 何解决爱尔兰问题的可行方案只能通过对话产生。
+>
+> How did this unhappy state of affairs come about?
+> 这种不幸的情况是怎么发生的呢？
+> 
+
+## 2. saliva səˈlaɪvə/
+n. [不可数名词] 唾液
+
+## 3. mild
+### adj
+【不规则形式】`milder mildest`
+**(1) 温和的；和善的；不严厉的**
+`not severe or strong`
+> a mild form of the disease
+> 病势不重
+> 
+> a mild punishment/criticism 
+> 轻微的责罚；和善的批评
+> 
+> It's safe to take a mild sedative.
+> 服用药性不强的镇定剂没有危险。
+> 
+> Use a soap that is mild on the skin.
+> 使用对皮肤刺激性不强的肥皂。
+> 
+**(2) `of weather` 天气温和的；和煦的**
+`not very cold, and therefore pleasant`
+> the mildest winter since records began
+> 自有记载以来最温暖舒适的冬天
+> 
+> a mild climate
+> 温和的气候
+> 
+comparehard adj. (10)
+**(3) `of feelings` 情感温和的；不强烈的；轻微的**
+`not great or extreme`
+> mild irritation/amusement/disapproval 
+> 几分恼怒 / 喜悦 / 不赞成
+> 
+> She looked at him in mild surprise.
+> 她略带吃惊地看着他。
+> 
+**(4) `of people or their behaviour` 人或其行为和善的；随和的**
+`gentle and kind; not usually getting angry or violent`
+同义词：`equable`
+> a mild woman, who never shouted
+> 从不大声叫喊的随和的女人
+> 
+**(5) `of a flavour` 味道不浓的；淡味的**
+`not strong, spicy or bitter`
+> a mild curry
+> 淡味咖喱
+> 
+> mild cheese
+> 淡味奶酪
+> 
+### noun
+**[不可数名词] (英国英语)淡味黑啤酒 `a type of dark beer with a mild flavour`**
+> Two pints of mild, please.
+> 请来两品脱淡啤酒。
+> 
+
+## 4. digestive
+**(1) adj. [only before noun] 消化的；和消化有关的**
+`connected with the digestion of food`
+> the digestive system/tract 
+> 消化系统 / 道
+> 
+> digestive problems
+> 消化问题
+> 
+
+**(2) n. 消化剂；(全麦)消化饼干**
+
+## 5. defy /dɪˈfaɪ/
+### verb
+**【不规则形式】`defies defying defied defied`**
+[动词+名词短语]
+**(1) 违抗；反抗；蔑视**
+`to refuse to obey or show respect for sb in authority, a law, a rule, etc.`
+> I wouldn't have dared to defy my teachers.
+> 我可不敢不听老师的话。
+> 
+> Hundreds of people today defied the ban on political gatherings.
+> 今天有数百人违抗禁止政治集会的规定。
+> 
+**(2) ~ belief, explanation, description, etc. 不可能，无法（相信、解释、描绘等）**
+`to be impossible or almost impossible to believe, explain, describe, etc.`
+> a political move that defies explanation
+> 无法解释的政治举动
+> 
+> The beauty of the scene defies description.
+> 景色之美简直难以描绘。
+> 
+**(3) 经受住；顶住；抗住**
+`to successfully resist sb/sth to a very unusual degree`
+> The baby boy defied all the odds and survived (= stayed alive when it seemed certain that he would die) .
+> 这名男婴九死一生活了下来。
+> 
+### 习语  Idioms
+**`I defy you/anyone to do sth` 激，挑动（某人尽力做你认为不可能的事）**
+`used to say that sb should try to do sth, as a way of emphasizing that you think it is impossible to do it`
+> I defy anyone not to cry at the end of the film.
+> 我倒要看看有谁在电影结尾时不哭。
+> 
+
+## 6.  force upon
+把……强加于……
+
+## 7. luxury
+### noun
+**(1) [不可数名词] 奢侈的享受；奢华**
+`the enjoyment of special and expensive things, particularly food and drink, clothes and surroundings`
+> Now we'll be able to live in luxury for the rest of our lives.
+> 如今我们可在有生之年过豪华生活了。
+> 
+> to lead a life of luxury 
+> 过奢侈的生活
+> 
+> a luxury hotel
+> 豪华酒店
+> 
+> luxury goods
+> 奢侈品
+> 
+**(2) [可数名词] 奢侈品**
+`a thing that is expensive and enjoyable but not essential`
+同义词：`extravagance`
+> small luxuries like chocolate and flowers
+> 像巧克力和鲜花之类的小奢侈品
+> 
+> I love having a long, hot bath─it's one of life's little luxuries .
+> 我喜欢在热水浴缸里多泡一会儿——这是生活里一种小小的享受。
+> 
+> It was a luxury if you had a washing machine in those days.
+> 那时候有洗衣机就算是奢侈了。
+> 
+**(3) [不可数名词, 单数名词] 不常有的乐趣（或享受、优势）**
+`a pleasure or an advantage that you do not often have`
+同义词：`indulgence`
+> We had the luxury of being able to choose from four good candidates for the job.
+> 我们的挑选余地大，有四位出色的职位候选人可供选择。
+> 
+
+## 8. tussle
+**(1) noun ~ (for/over sth)扭打，争斗，争执（尤指为了争得物品）**
+`a short struggle, fight or argument especially in order to get sth`
+> He was injured during a tussle for the ball.
+> 他在争球时受了伤。
+> 
+**(2) [单独使用的动词] 扭打，争斗（尤指为了争夺物品）**
+`to fight or compete with sb/sth, especially in order to get sth`
+> The children were tussling with one another for the ball.
+> 孩子们在你抢我夺地争球。
+> 
+
+## 9. carnivore /ˈkɑːrnɪvɔːr/
+n. 食肉动物
+
+n. 喜欢吃肉的人；
+> This is a vegetarian dish that carnivores love.
+> 这是一道肉食主义者爱吃的素菜。
+>
+
+## 10. vertebrate /ˈvɜːrtɪbrət/
+n. 脊椎动物(包括所有哺乳动物、鸟类、鱼类、爬行动物和两栖动物)
+adj. 有脊椎的，脊椎动物的
+
+## 11. lizard /ˈlɪzərd/
+n. 蜥蜴
+
+## 12. concoct /kənˈkɑːkt/
+### verb
+**(1) 调制，调合，配制（尤指食物或饮料）**
+to make sth, especially food or drink, by mixing different things
+> The soup was concocted from up to a dozen different kinds of fish.
+> 这种汤是用多达十几种不同的鱼熬制而成的。
+>
+> Eugene was concocting Rossini Cocktails from champagne and pureed raspberries.
+> 尤金当时正在用香槟和覆盆子酱调配罗西尼鸡尾酒。
+> 
+**(2) 虚构，杜撰，编造（故事、借口等）**
+`to invent a story, an excuse, etc.`
+同义词：`cook up` , `make up`
+> She concocted some elaborate story to explain her absence.
+> 她精心编造了解释她不在场的一些谎言。
+> 
+
+## 13. potency /ˈpoʊtnsi/
+poison of such extreme potency 高效的毒液
+### noun
+**(1) 影响力；支配力；效力**
+`the power that sb/sth has to affect your body or mind`
+> the potency of desire
+> 欲望的支配力
+> 
+> If you keep a medicine too long, it may lose its potency.
+> 药物存放太久，可能会失去效力。
+> 
+**(2) （男子）性能力，性机能**
+
+## 14 fixed
+`a fixed process` 固定程序
+### adj
+**(1) 固定的；不变的；不能变的**
+`staying the same; not changing or able to be changed`
+> fixed prices
+> 固定价格
+> 
+> a fixed rate of interest
+> 固定利率
+> 
+> people living on fixed incomes 
+> 靠固定收入生活的人们
+> 
+> The money has been invested for a fixed period .
+> 这笔款项已作定期投资。
+> 
+**(2) (often disapproving)of ideas and wishes 思想和期望不易改变的；执著的**
+`held very firmly; not easily changed`
+> My parents had fixed ideas about what I should become.
+> 父母对我应该成为什么样的人有定见。
+> 
+**(3) [only before noun] of expressions on sb's face 面部表情呆板的；不变的**
+`not changing and not sincere`
+> He greeted all his guests with a fixed smile on his face.
+> 他对所有的客人都以他的一贯笑容相迎。
+> 
+### 习语
+**`how are you, etc. fixed (for sth)?`(informal)你有多少…； 你…的安排如何**
+`used to ask how much of sth a person has, or to ask about arrangements`
+> How are you fixed for cash?
+> 你有多少现金？
+> 
+> How are we fixed for Saturday (= have we arranged to do anything) ?
+> 星期六我们是怎么安排的？
+> 
+
+## 15. respect
+### n
+**(1) 尊重， 重视**
+
+**(2) [可数名词] （事物的）方面，细节**
+`a particular aspect or detail of sth`
+> In this respect we are very fortunate.
+> 在这方面，我们是很幸运的。
+> 
+> There was one respect, however, in which they differed.
+> 然而，他们在一点上有分歧。
+> 
+### verb
+**(1) not usually used in the progressive tenses 通常不用于进行时~ sb/sth (for sth) 尊敬；尊重；仰慕**
+> I respect Jack's opinion on most subjects.
+> 在大多数事情上，我尊重杰克的意见。
+> 
+> She had always been honest with me, and I respect her for that.
+> 她一直对我很诚实。我非常敬重她这一点。
+> 
+
+**(2) 慎重对待；谨慎从事；尊重**
+> to respect other people's property
+> 不侵犯别人的财产
+> 
+> She promised to respect our wishes.
+> 她保证尊重我们的愿望。
+> 
+> He doesn't respect other people's right to privacy.
+> 他不尊重别人的隐私权。
+> 
+**(3) 遵守；不损害；不违背**
+> The new leader has promised to respect the constitution.
+> 新的领导人承诺遵守宪法。
+> 
+
+## 16. arsenic /ˈɑːrsnɪk/
+n. 砷;砒霜
+
+## 17. strychnine /ˈstrɪkniːn/
+n. 士的宁；马钱子碱
+
+## 18. venom /ˈvenəm/
+### n
+**1. （毒蛇、蜘蛛等分泌的）毒液**
+`the poisonous liquid that some snakes, spiders, etc. produce when they bite or sting you`
+> ...snake handlers who grow immune to snake venom.
+> 对蛇毒产生免疫力的玩蛇人
+> 
+**2. (formal)恶毒；怨恨；恶意；歹心**
+`strong bitter feeling; hatred and a desire to hurt sb`
+> a look of pure venom
+> 恶狠狠的样子
+> 
+> He reserved particular venom for critics of his foreign policy...
+> 他对那些批评他外交政策的人格外心怀怨恨。
+> 
+
+### 习语  Idioms
+`spit venom/blood` 怒气冲天；咬牙切齿
+
+
+## 19. neurotoxic [,njʊro'tɑksɪk]
+adj. 毒害神经的;神经毒的;
+> neurotoxic substance 神经毒物
+> 
+> neurotoxic symptom 神经中毒症状
+> 
+> Chronic neurotoxic 缓效性神经毒
+> 
+
+## 20. viper /ˈvaɪpər/
+**(1) 蝰[kuí]蛇（一种小毒蛇）**
+
+**(2) (formal)毒如蛇蝎的人；险恶的人**
+> Be careful of that viper; he is dangerous.
+> 小心那个阴险的人，他很危险。
+> 
+
+## 21. adder
+n. 蝰蛇，宽蛇(英国仅有的一种毒蛇，背部有菱形斑)
+
+## 22. rattlesnake /ˈrætlsneɪk/
+n. 响尾蛇(产于美洲)
+
+## 23. haemolytic [,hiːmə'lɪtɪk]
+adj. 溶血的，与溶血有关的
+haemolytic index溶血指数
+haemolytic activity溶血活性
+
+## 24. primitive
+adj. 原始的；落后的；远古的；原始本能的；人类或动物发展早期的；发展水平低的
+n. 文艺复兴前的艺术家(或作品)；原始派画家(或作品)
+
+## 25. so to speak
+可以说;可谓
+
+## 26. Be that as it may
+即便如此；尽管那样
+> I know that he has tried hard; be that as it may, his work is just not good enough.
+> 我知道他已经尽力了，尽管如此，他的工作仍不太理想。
+> 
+> 'Is he still just as fat?' — 'I wouldn't know,' continued her mother, ignoring the interruption, 'and be that as it may, he has made a fortune.'
+> “他还是那么胖吗？”——“我不知道，”她妈妈接着说，没有理睬这一打岔，“就算那样，他已经发财了。”
+> 
+
+## 27. viperine [ˈvaɪpərɪn]
+adj. 毒蛇的
+

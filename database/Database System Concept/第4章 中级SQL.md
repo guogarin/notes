@@ -851,8 +851,8 @@ CREATE TABLE temp_versions3  as
 > 另外，`PostgreSQL`、`Oracle`、`SQL server`等的`schema`也含义不太相同。
 > 
 &emsp;&emsp; 所以说，关系型数据库中没有`catalog`的概念。但在一些其它地方（特别是大数据领域的一些组件）有`catalog`的概念，也是用来做层级划分的，一般是这样的层级关系：`catalog.database.table`。
-
-
+&emsp;&emsp; 实际上，`schema`就是数据库对象的集合，这个集合包含了各种对象如：表、视图、存储过程、索引等。
+&emsp;&emsp; 如果把`database`看作是一个仓库，仓库很多房间（`schema`），一个`schema`代表一个房间，`table`可以看作是每个房间中的储物柜，`user`是每个`schema`的主人，有操作数据库中每个房间的权利，就是说每个数据库映射`user`有每个`schema`（房间）的钥匙。
 
 
 
@@ -875,10 +875,58 @@ CREATE TABLE temp_versions3  as
 最高权限属于**管理员用户**，也就是 管理员权限
 
 ## 7.1 权限的授予与回收
+### 授予权限
+```sql
+grant <权限列表>
+on <表名/视图名>
+to <用户>;
+```
+常用权限：
+> `all privileges`
+> `create`、`drop`
+> `select`、`insert`、`delete`、`update`
+> 
 
-## 7.2 角色
+### 回收权限
+```sql
+revoke <权限列表>
+on <表名/视图名>
+from <用户>;
+```
 
+[一文看尽MySQL用户权限管理](https://cloud.tencent.com/developer/article/1656008)
 
+## 7.2 角色(role)
+### 7.2.1 什么是角色？它的主要作用是？
+&emsp;&emsp; 角色(role)是 一组权限(privilege) 的集合。
+&emsp;&emsp; 角色 可以方便管理员对用户的权限进行统一管理，通过角色，可以将一组具有相同权限的用户组织在一起。
+&emsp;&emsp; 例如在一个校园管理系统中，可以通过角色来进行权限管理，可以通过创建 “教师”、“学生”等角色，对用户进行统一赋权，简化权限管理。
+
+### 7.2.2 如何使用角色？
+**(1) 创建角色**
+```sql
+-- 创建角色 系主任、教师 和 学生
+CREATE ROLE 'dean', 'teacher', 'student';
+```
+**(2) 给角色赋权**
+```sql
+-- 将 scores表的查询权限赋给 学生（角色）
+grant select
+on scores
+to student;
+```
+**(3) 将角色授予用户**
+```sql
+-- 将学生角色的权限赋给 用户zhangsan
+grant student
+to zhangsan;
+```
+一个角色可以赋给另一个角色：
+```sql
+-- 将教师角色的权限赋给 系主任（因为系主任也是老师，而且比一般的老师权限高）
+grant teacher
+to dean;
+```
 
 
 ```sql
