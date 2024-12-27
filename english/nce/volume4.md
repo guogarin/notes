@@ -3335,3 +3335,602 @@ n. 文艺复兴前的艺术家(或作品)；原始派画家(或作品)
 ## 27. viperine [ˈvaɪpərɪn]
 adj. 毒蛇的
 
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 21 William S. Hart and the Early "Western" Film
+&emsp;&emsp; 选自美国编剧 `Carl Foreman `(1914-1984)所撰 `Virtue and a Fast Gun`.
+## 1. nothing but
+**(用于名词、不带 to 的不定式或 -ing 形式前)只有，仅仅**
+> He started with nothing but raw talent and determination.
+> 他起家时只有天生的才能和决心。
+> 
+> They had nothing but scorn for his political views.
+> 他们对他的政治观点只有鄙夷。
+> 
+> We've had nothing but trouble with this car.
+> 我们这辆车净出毛病。
+> 
+
+## 2. supreme
+### adj.
+[usually before noun]
+**(1)（级别或地位）最高的，至高无上的**
+`highest in rank or position`
+> the Supreme Commander of the armed forces
+> 武装力量的最高统帅
+> 
+> the supreme champion
+> 绝对冠军
+> 
+> It is an event in which she reigns supreme .
+> 这个比赛项目她所向无敌。
+> 
+**(2) （程度）很大的，最大的**
+`very great or the greatest in degree`
+> to make the supreme sacrifice (= die for what you believe in) 
+> 作出最大牺牲（为信仰牺牲生命）
+> 
+> a supreme effort
+> 最大的努力
+> 
+> She smiled with supreme confidence.
+> 她充满自信地微微一笑。
+>
+> to make the supreme sacrifice
+> 做出最大的牺牲
+> 
+> an act of supreme folly
+> 愚蠢至极的行为
+>
+
+## 3. basic formula
+基本公式；基本模式
+
+## 4. protagonist /prəˈtæɡənɪst/
+### noun
+(formal)
+**(1) （戏剧、电影、书的）主要人物，主人公，主角**
+`the main character in a play, film/movie or book`
+> ...the protagonist of J. D. Salinger's novel 'The Catcher in the Rye'...
+> 塞林格的小说《麦田里的守望者》的主人公
+> 
+**(2) （比赛、斗争中的）主要人物，主要参与者**
+`one of the main people in a real event, especially a competition, battle or struggle`
+**(3) （政策、运动的）倡导者，拥护者**
+`an active supporter of a policy or movement, especially one that is trying to change sth`
+同义词：`champion`
+> a leading protagonist of the conservation movement
+> 资源保护运动的急先锋
+>
+
+## 5. frame
+### noun
+**(1) [可数名词] （图画、门、玻璃等的）框架**
+> a picture frame
+> 画框
+> 
+> aluminium window frames
+> 铝窗框
+> 
+> spectacles frame
+> 眼镜框
+> 
+
+**(2) [可数名词] （家具、建筑物、车辆等的）构架，支架，骨架**
+> the frame of an aircraft/a car/a bicycle
+> 飞行器 / 汽车 / 自行车构架
+> 
+> climbing frame
+> (儿童游乐设施)攀爬架
+> 
+
+**(3) [可数名词, 通常用复数形式] 眼镜框**
+`a structure of plastic or metal that holds the lenses in a pair of glasses`
+> gold-rimmed frames
+> 金边眼镜框
+> 
+
+**(4) [可数名词, 通常用单数形式] 体形；身材；骨架**
+`the form or structure of a person or animal's body`
+> to have a small/slender/large frame 
+> 体形小 / 苗条 / 大
+> 
+> huge/athletic frame
+> 巨大的身躯/健壮的体型
+> 
+
+**(5) [单数名词] （构成某事物背景的）总的思想，体系，体制，模式**
+`the general ideas or structure that form the background to sth`
+> In this course we hope to look at literature in the frame of its social and historical context.
+> 在本课程中，我们希望从社会和历史背景的整体结构来看文学。
+>
+> time frame 时间范围;时间段;时间框架
+>
+
+**(6) [可数名词] 帧；画格；画面**
+`one of the single photographs that a film or video is made of`
+> to freeze a frame;
+> 定格一帧画面
+> 
+
+**(7)(电影中的) [可数名词] （连环漫画中的）一幅画**
+`a single picture in a comic strip`
+> Standard 8mm projects at 16 frames per second.
+> 标准的 8 毫米的胶片每秒放映16 组镜头。
+>
+
+**(8) (计算机技术中的)[可数名词] 帧；页帧（框）；图文框**
+`one of the separate areas on an Internet page that you can scroll through (= read by using the mouse to move the text up or down)`
+
+**(9) [可数名词]**
+= cold frame
+斯诺克；保龄球 in snooker/bowling
+
+10.
+[可数名词] 一轮；一回；一局
+
+### Verbs
+**(1) [usually passive] 给…做框；给…镶边**
+`to put or make a frame or border around sth`
+> The photograph had been framed.
+> 照片已镶了框。
+> 
+> Her blonde hair framed her face.
+> 她的金发衬着面庞。
+> 
+> He stood there, head back, framed against the blue sky.
+> 他站在那里，头向后仰，衬托在蓝天下。
+> 
+
+**(2) [usually passive] ~ sb (for sth) 作伪证陷害**
+`to produce false evidence against an innocent person so that people think he or she is guilty`
+同义词：`fit up`
+> He says he was framed.
+> 他说他是被诬陷的。
+>
+> I need to find out who tried to frame me...
+> 我得找出是谁企图诬陷我。
+>
+
+**(3) (formal)制订；拟订**
+`to create and develop sth such as a plan, a system or a set of rules`
+> After the war, a convention was set up to frame a constitution.
+> 战后，为制定宪法组织了一次会议。
+> 
+
+**(4) （以某种方式）表达**
+`to express sth in a particular way`
+> You'll have to be careful how you frame the question.
+> 如何提出这个问题，你得慎重。
+>
+> The story is framed in a format that is part thriller, part love story...
+> 情节的展开模式既像惊险小说，又像爱情故事。
+> 
+
+### 习语
+(1) `be in/out of the frame` 参加；不参加
+> We won our match, so we're still in the frame for the championship.
+> 我们赢了比赛，所以仍可参加锦标赛。
+> 
+(2) `frame of mind` [单数名词] 心态；心绪
+> We'll discuss this when you're in a better frame of mind.
+> 你心情好些时我们再讨论这件事。
+> 
+> Lewis was not in the right frame of mind to continue.
+> 刘易斯当时的心情不适合继续下去。
+> 
+
+## 6. contemporary
+### adj
+**(1) ~ (with sb/sth) 属同时期的；同一时代的**
+`belonging to the same time`
+> We have no contemporary account of the battle (= written near the time that it happened) .
+> 我们没有当时人们对这一战役的记载。
+> 
+> He was contemporary with the dramatist Congreve.
+> 他与剧作家康格里夫属于同一时代。
+> 
+**(2) 当代的；现代的**
+`belonging to the present time`
+> life in contemporary Britain
+> 当代英国的生活
+> 
+> contemporary fiction/music/dance 
+> 当代小说 / 音乐 / 舞蹈
+> 
+### noun
+**同代人；同辈人；同龄人**
+`a person who lives or lived at the same time as sb else, especially sb who is about the same age`
+> She and I were contemporaries at college.
+> 她和我在大学是同学。
+> 
+> He was a contemporary of Freud and may have known him.
+> 他是弗洛伊德的同代人，可能认识弗洛伊德。
+>
+> our contemporaries
+> 我们的同龄人
+> 
+
+### 形近词
+#### contempt
+n. 蔑视；(对规则、危险等的)藐视，不顾；轻蔑；鄙视
+
+#### temporary
+adj. 临时的；暂时的；短暂的
+n. 临时工；临时雇员
+
+
+## 7. mythology
+n. (统称)神话；神话学；错误的观点；某文化(或社会等)的神话；虚幻的想法
+
+## 8. romanticize /roʊˈmæntɪsaɪz/
+**v. 使浪漫化；使传奇化；使更加富有吸引力**
+`to make sth seem more attractive or interesting than it really is`
+> [动词+名词短语] romanticizing the past
+> 把以往浪漫化
+> 
+> a romanticized picture of parenthood
+> 一幅理想化的为人父母的情景
+> 
+
+## 9. join hands
+携手;联手;
+
+## 10. encroach /ɪnˈkroʊtʃ/
+### verb
+**(1) ~ (on/upon sth) (disapproving)侵占（某人的时间）；侵犯（某人的权利）；扰乱（某人的生活等）**
+`to begin to affect or use up too much of sb's time, rights, personal life, etc.`
+> I won't encroach on your time any longer.
+> 我不会再占用你的时间了。
+> 
+> He never allows work to encroach upon his family life.
+> 他从不让工作扰乱他的家庭生活。
+> 
+**(2) ~ (on/upon sth)侵蚀，蚕食（土地）**
+`to slowly begin to cover more and more of an area`
+> The growing town soon encroached on the surrounding countryside.
+> 这个不断扩大的城市不久便将周围的农村变成了市区。
+> 
+> the encroaching tide (= that is coming in) 
+> 不断涌向陆地的潮水
+> 
+
+## 11. element
+`elements`（注意是复数形式）在本文中表示 **[复数名词] （尤指恶劣的）天气**
+> Men (accustomed to struggling for survival against the **elements** and Indians) were bewildered [by politicians, bankers and businessmen], and unhorsed [by fences, laws and alien taboos]
+>
+### noun
+**(1) [可数名词] ~ (in/of sth) 要素；基本部分；典型部分**
+`a necessary or typical part of sth`
+> Cost was a key element in our decision.
+> 价钱是我们决策时考虑的主要因素。
+> 
+> The story has all the elements of a soap opera.
+> 这个故事是非常典型的肥皂剧题材。
+> 
+> Customer relations is an important element of the job.
+> 与客户的关系是这个工作的重要部分。
+> 
+**(2) [可数名词, 通常用单数形式]` ~ of surprise, risk, truth, etc.` 少量；有点；有些**
+`a small amount of a quality or feeling`
+> We need to preserve the element of surprise.
+> 我们得保留一些使人感到意外的东西。
+> 
+> There appears to be an element of truth in his story.
+> 他的说法似乎有点道理。
+> 
+
+**(3) [可数名词, 通常用复数形式] （大团体或社会中的）一组，一群，一伙**
+`a group of people who form a part of a larger group or society`
+> moderate/radical elements within the party
+> 党内的温和派 / 激进派
+> 
+> unruly elements in the school
+> 学校里难管教的人
+> 
+
+**(4) [可数名词] 元素（如金、氧、碳）**
+`a simple chemical substance that consists of atoms of only one type and cannot be split by chemical means into a simpler substance. Gold, oxygen and carbon are all elements .`
+
+**(5) [可数名词] 要素（旧时认为土、空气、火和水是构成一切物质的四大要素）**
+`one of the four substances: earth, air, fire and water, which people used to believe everything else was made of`
+> the four elements
+> 四大要素 [即土、空气、水、火]
+> 
+天气 weather
+
+**(6) `the elements`（尤指恶劣的）天气**
+`the weather, especially bad weather`
+> Are we going to brave **the elements** and go for a walk?
+> 我们要冒着风雨去散步吗？
+> 
+> to be exposed to **the elements**
+> 经受风吹雨打
+> 
+基本原理 basic principles
+
+**(7) `elements` [复数名词] （学科的）基本原理，基础，纲要**
+`the basic principles of a subject that you have to learn first`
+同义词：`basics`
+> He taught me the elements of map-reading.
+> 他教我看地图的基本方法。
+>
+> the Elements of English Grammar
+> 英语语法入门
+> 
+
+**(8) [可数名词, 通常用单数形式] （尤指动物的）自然环境，适宜的环境**
+`a natural or suitable environment, especially for an animal`
+> Water is a fish's natural element.
+> 水是鱼的天然生活环境。
+> 
+
+**(9) [可数名词] 电热元件；电热丝**
+`the part of a piece of electrical equipment that gives out heat`
+> The kettle needs a new element.
+> 这个电壶需要一根新电热丝。
+> 
+
+### 习语  Idioms
+**(1) `in one's element` 如鱼得水；得心应手**
+> She's really in her element at parties.
+> 她在社交聚会上真是如鱼得水。
+> 
+**(2) `out of your element` 处于不适宜的环境；不得其所**
+
+
+
+## 12. along the way
+沿途；一路上；一路走来
+> We've had a few bad breaks along the way.
+> 我们一路上遭遇了几次厄运。
+> 
+> The steamer calls at several ports along the way.
+> 一路上，汽船在好几个港口停靠。
+> 
+> Unfortunately they ran into a snowstorm along the way.
+> 他们不幸在途中遇上了暴风雪。
+> 
+
+## 13 find
+### verb
+**(1) （意外或偶然地）发现，碰到**
+`to discover sb/sth unexpectedly or by chance`
+> [动词+名词短语] Look what I've found!
+> 看我发现了什么！
+> 
+> We've found a great new restaurant near the office.
+> 我们在办公处附近发现了一家挺好的新餐馆。
+> 
+> [动词+名词短语+形容词] A whale was found washed up on the shore.
+> 一头鲸被发现冲到了岸上。
+> 
+
+**(2) ~ sth (for sb) | ~ (sb) sth 找到；找回**
+> Can you find me my bag?
+> 你能帮我找我的包吗？
+> 
+> [动词+名词短语] I wanted to talk to him but he was nowhere to be found .
+> 我想和他谈谈，但哪儿也找不到他。
+> 
+> [动词+名词短语+形容词] The child was found safe and well.
+> 小孩找到了，安然无恙。
+> 
+
+**(3) （经寻找、研究或思考）发现，查明，找出，求得**
+`to discover sth/sb by searching, studying or thinking carefully`
+> [动词+名词短语] scientists trying to find a cure for cancer
+> 努力寻找癌症疗法的科学家
+> 
+> I managed to find a solution to the problem.
+> 我设法找出了解决问题的办法。
+> 
+
+**(4) 发现（某事属实）**
+`to discover that sth is true after you have tried it, tested it or experienced it`
+> [动词 (+ that从句)] I find (that) it pays to be honest.
+> 我发现为人诚实有裨益。
+> 
+> The report found that 30% of the firms studied had failed within a year.
+> 据报告称，受调查的公司有30%一年内倒闭了。
+> 
+
+**(5) 认为；感到**
+`to have a particular feeling or opinion about sth`
+> [动词+名词短语+形容词] You may find your illness hard to accept.
+> 你可能觉得难以接受自己患病。
+> 
+> You may find it hard to accept your illness.
+> 你可能觉得难以相信自己患病。
+> 
+> I find it amazing that they're still together.
+> 他们还在一起，这使我大吃一惊。
+> 
+> [动词+名词短语+名词短语] She finds it a strain to meet new people.
+> 她和生人见面总感到局促不安。
+> 
+
+**(6) [动词+名词短语] 现有（可用）**
+`to have sth available so that you can use it`
+> I keep meaning to write, but never seem to find (the) time.
+> 我一直打算写信，但总找不到时间。
+> 
+> How are we going to find £5 000 for a car?
+> 我们哪里有5 000英镑买车呢？
+> 
+
+**(7) 发现，发觉（处于某状态、在做某事）**
+`to discover sb/sth/yourself doing sth or in a particular situation, especially when this is unexpected`
+> [动词+名词短语] She woke up and found herself in a hospital bed.
+> 她醒来发觉自己躺在医院的床上。
+> 
+> [动词+名词短语+形容词] We came home and found him asleep on the sofa.
+> 我们回到家发现他在沙发上睡着了。
+> 
+> [动词+名词短语+-ing短语] I suddenly found myself running down the street.
+> 我不知不觉突然在街上跑了起来。
+> 
+> [动词 (+ that从句)] I was disappointed to find that they had left already.
+> 我发现他们已经离开了，觉得很失望。
+> 
+
+**(8) [动词+名词短语] of things 事物自然到达；达到**
+`to arrive at sth naturally; to reach sth`
+> Water will always find its own level.
+> 水总会自行流平。
+> 
+> Most of the money finds its way to the people who need it.
+> 多数的钱都会辗转传到需要的人的手中。
+> 
+> The criticism found its mark (= had the effect intended) .
+> 批评击中了要害。
+> 
+
+**(9) [动词+名词短语] （在某处）存在，生长**
+`used to say that sth exists, grows, etc. somewhere`
+> These flowers are found only in Africa.
+> 这些花仅见于非洲。
+> 
+> You'll find this style of architecture all over the town.
+> 全城到处可见这种风格的建筑。
+> 
+
+**(10) (formal)裁决；判决**
+`to make a particular decision in a court case`
+> [动词+名词短语] How do you find the accused?
+> 你如何裁定被告？
+> 
+> [动词+名词短语+形容词] The jury found him guilty.
+> 陪审团裁决他有罪。
+> 
+> [单独使用的动词] The court found in her favour .
+> 法庭判决对她有利。
+> 
+
+### noun
+**发现物，被发现的人（尤指有趣、有价值或有用者）**
+`a thing or person that has been found, especially one that is interesting, valuable or useful`
+> an important archaeological find.
+> 考古的重大发现
+> 
+> Our new babysitter is a real find.
+> 我们新来的临时保姆是难得的好保姆。
+> 
+
+### 习语
+### all found
+(old-fashioned, 英国英语)（工资外）加免费食宿
+`with free food and accommodation in addition to your wages`
+
+#### find fault (with sb/sth)
+找茬儿；挑错；抱怨；挑剔
+`to look for and discover mistakes in sb/sth; to complain about sb/sth`
+> he finds fault with everything I do.
+> 
+### find one's feet
+已能独立而有信心地工作；已适应新环境
+`to become able to act independently and with confidence`
+> I only recently joined the firm so I'm still finding my feet.
+> 我最近才加入这家公司，所以还在适应过程中。
+> 
+#### find it in your heart/yourself to do sth
+(literary)能做某事；愿意干某事
+`to be able or willing to do sth`
+> Can you find it in your heart to forgive her?
+> 你能够做到宽恕她吗？
+> 
+> He couldn't find it in himself to trust anyone again.
+> 他再也不愿意相信任何人了。
+> 
+#### find one's voice/tongue
+能说出自己的看法；能表达自己的意见
+`to be able to speak or express your opinion`
+
+#### find one's way (to…)
+找到正确的路（去某处）
+`to discover the right route (to a place)`
+> I hope you can find your way home.
+> 希望你能找到回家的路。
+> 
+####  find your/its way (to/into…)
+偶然来到；无意中处于
+`to come to a place or a situation by chance or without intending to`
+> He eventually found his way into acting.
+> 他弄到最后竟干起了演艺这一行。
+> 
+#### take sb as you find them
+接受某人的现状；承认某人的情况（别无指望）
+`to accept sb as they are without expecting them to behave in a special way or have special qualities`
+
+#### get/find/take your bearings
+判明方位；弄清自己所处的地位；熟悉环境
+`to make yourself familiar with your surroundings in order to find out where you are or to feel comfortable in a place`
+> With the aid of a compass the traveler can find his bearings.
+> 藉助罗盘，旅行者可以找到自己所处的方位。
+> 汉英大词典
+> 
+> Career development helps new graduates find their bearings and invest in their future.
+> 职业发展帮助应届生寻找自己的方向，并对未来进行投资。
+>
+
+#### nowhere to be found/seen
+不可能找到（或看见）
+> I wanted to talk to him but he was nowhere to be found.
+> 我想和他谈谈，但哪儿也找不到他。
+> 
+> Eric, as elusive as ever, was nowhere to be found.
+> 埃里克总是这样神出鬼没，哪儿也找不着。
+> 
+
+
+### 短语动词 Phrasal Verbs
+#### find for/against sb
+[no passive] (law 律)作出对…有利（或不利）的裁决；判…胜诉（或败诉）
+`to make a decision in favour of/against sb in a court case`
+> The jury found for the defendant.
+> 陪审团作出了对被告有利的裁决。
+> 
+
+####  find out (about sth/sb) find out sth (about sth/sb)
+查明，弄清（情况）
+`to get some information about sth/sb by asking, reading, etc.`
+> She'd been seeing the boy for a while, but didn't want her parents to find out.
+> 她和这个男孩约会已有一段时间了，但不想让父母知道。
+> 
+> I haven't found anything out about him yet.
+> 我还没有发现有关他的什么情况。
+> 
+> [+ wh-]Can you find out what time the meeting starts?
+> 你能查清楚会议什么时候开始吗？
+> 
+> [+ that]We found out later that we had been at the same school.
+> 后来我们才弄清楚我们是校友。
+> 
+#### find sb out
+查出（坏人）；识破
+`to discover that sb has done sth wrong`
+> He had been cheating the taxman but it was years before he was found out.
+> 他过去一直在欺骗税务部门，只是多年以后才被查出来。
+> 
+
+## 14. chicanery /ʃɪˈkeɪnəri/
+n. 诡计；欺骗；欺诈；诈骗
+
+## 15. impend
+**v. (事件,危险等)逼近；即将临头；吊(在上头)**
+> A sense of impending doom came upon all of us.
+> 我们所有人都有一种大难临头的感觉。
+> 
+> He'd spoken to Simon that morning of his impending marriage.
+> 那个早上他已经对西蒙讲过他即将结婚的事了。
+> 
+> On the morning of the expedition I awoke with a feeling of impending disaster
+> 出发远征的那个早上，我醒来就有一种灾难即将来临的感觉。
+> 
+
+## 16. immolation /ˈɪməˌleɪʃən/
+n. 献祭
