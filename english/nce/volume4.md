@@ -3934,3 +3934,196 @@ n. 诡计；欺骗；欺诈；诈骗
 
 ## 16. immolation /ˈɪməˌleɪʃən/
 n. 献祭
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 22 Knowledge and Progress 知识和进步
+&emsp;&emsp; 选自英国数学家、物理学家 `George Nugent Merle Tyrrell` (1879-1952)所著 `The personality of man: New facts and their significance.` `June 1947`.
+## 1. loom
+### verb
+**(1) [usually + 副词/介词短语] 赫然耸现；（尤指）令人惊恐地隐现**
+`to appear as a large shape that is not clear, especially in a frightening or threatening way`
+> A dark shape loomed up ahead of us.
+> 一个黑糊糊的影子隐隐出现在我们的前面。
+> 
+**(2) 显得突出；逼近; 即将爆发**
+`to appear important or threatening and likely to happen soon`
+> There was a crisis looming.
+> 危机迫在眉睫。
+> 
+
+### noun
+**织布机**
+
+### 习语  Idioms
+#### `loom large` 
+尤指问题或忧虑）挥之不去令人忧虑，令人惊恐（并似乎难以避免）`to be worrying or frightening and seem hard to avoid`
+> The prospect of war loomed large.
+> 战争的阴影在逼近，令人忧虑。
+> 
+> ...the terrible problem of armed crime now looming large in our society...
+> 已日渐成为我们当今社会一块心病的严重的持械犯罪问题
+> 
+
+## 2. progress of a particular kind
+一种特殊类型的进步
+
+## 3. compound interest
+n. 复利
+
+## 4. trickle
+### verb
+**(1) [usually + 副词/介词短语] （使）滴，淌，小股流淌**
+`to flow, or to make sth flow, slowly in a thin stream`
+> [单独使用的动词] Tears were trickling down her cheeks.
+> 眼泪顺着她的面颊流了下来。
+> 
+> [动词+名词短语] Trickle some oil over the salad.
+> 往色拉上滴些油。
+> 
+**(2) [+ 副词/介词短语] （使）慢慢走，缓慢移动**
+`to go, or to make sth go, somewhere slowly or gradually`
+> [单独使用的动词] People began trickling into the hall.
+> 人们开始缓步进入大厅。
+> 
+> News is starting to trickle out.
+> 消息渐渐传了出来。
+> 
+
+### noun
+**(1) 细流；涓流**
+`a small amount of `liquid, flowing slowly
+
+**(2) [通常用单数形式] ~ (of sth) 稀稀疏疏缓慢来往的东西**
+`a small amount or number of sth, coming or going slowly`
+> a steady trickle of visitors
+> 三三两两络绎不绝的游客
+> 
+
+### 形近词
+`tickle` /ˈtɪkl/  
+> v. 挠痒痒；胳肢；(使)发痒；使高兴；逗乐；使满足；使感兴趣；呵痒
+> n. 痒；胳肢；呵痒；痒感
+> 
+
+## 5. practical life
+实际生活
+
+## 6. As is so often pointed out
+常言道；正像人们常常指出的
+> As is so often pointed out, what's the significance is to make computers facilitate teachers job.
+> 正如经常指出的，更重要的意义在于使计算机促进教师的工作。
+>
+
+## 7. Could any spectacle, for instance, be more grimly whimsical than that of gunners using science to shatter men's bodies while, close at hand, surgeons use it to restore them?
+这句话可以改写为：
+> The spectacle that gunners use science to shatter men’s bodies while, close at hand, surgeons use it to restore them could be the most grim and the most whimsical.
+>
+
+## 8. grim
+### adj.
+**(1) 严肃的；坚定的；阴冷的**
+`looking or sounding very serious`
+> a grim face/look/smile 
+> 严肃的面孔 / 表情；冷笑
+> 
+> She looked grim.
+> 她表情严肃。
+> 
+> with a look of grim determination on his face
+> 他脸上带有的坚定不移的神态
+> 
+> grim-faced policemen
+> 表情严肃的警察
+> 
+
+**(2) 令人不快的；令人沮丧的**
+`unpleasant and depressing`
+> grim news
+> 令人沮丧的消息
+> 
+> We face the grim prospect of still higher unemployment.
+> 我们面临着失业率进一步上升的暗淡前景。
+> 
+> The outlook is pretty grim.
+> 前景令人甚感忧虑。
+> 
+> Things are looking grim for workers in the building industry.
+> 对建筑业的工人来说形势看来很不乐观。
+> 
+
+**(3) of a place or building 地方或建筑物无吸引力的；阴森的；凄凉的**
+`not attractive; depressing`
+> The house looked grim and dreary in the rain.
+> 这房子在雨中显得阴郁凄凉。
+> 
+> the grim walls of the prison
+> 令人抑郁的监狱四壁
+> 
+
+**(4) [not before noun] (英国英语, informal)生病的；不舒服的**
+`ill/sick`
+> I feel grim this morning.
+> 我今天早上感到不舒服。
+> 
+
+**(5) [not usually before noun] (英国英语, informal)质量低劣；糟糕**
+`of very low quality`
+> Their performance was fairly grim, I'm afraid!
+> 很遗憾，他们的演出真不怎么样！
+> 
+
+### 习语  Idioms
+#### `hang/hold on for/like grim death`
+`also hang/hold on for dear life` 
+(informal)（害怕得）死死抓住不放，紧紧抓住不松手
+
+
+## 9. whimsical
+adj. 异想天开的；想入非非的；心血来潮的；滑稽可笑的
+`unusual and not serious in a way that is either amusing or annoying`
+> to have a whimsical sense of humour
+> 有离奇的幽默感
+> 
+> Much of his writing has a whimsical quality.
+> 他的大部分作品都很出奇。
+> 
+
+## 10. close at hand
+在附近;在近旁
+> Somewhere close at hand a train rattled by.
+> 一辆火车从我的身边轰隆隆地开过。
+>
+
+## 11. twofold
+### adj.
+(formal)
+**(1) 由两部分组成的；有两部分的**
+`consisting of two parts`
+> The problem was twofold.
+> 这个问题分两个部分。
+> 
+**(2) 两倍的**
+`twice as much or as many`
+> a twofold increase in demand
+> 需求增加了一倍
+> 
+
+### adv
+两倍地
+> Her original investment has increased twofold.
+> 她原先的投资已经增加到两倍。
+> 
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 23 Bird Flight 鸟类的飞行方式
+&emsp;&emsp; 本文选自英国男爵、作家 `William Beach Thomas` (1868-1957) 所著 `A Countryman’s Creed`, 1946.
