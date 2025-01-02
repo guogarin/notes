@@ -4127,3 +4127,597 @@ adj. 异想天开的；想入非非的；心血来潮的；滑稽可笑的
 &emsp; 
 # Lesson 23 Bird Flight 鸟类的飞行方式
 &emsp;&emsp; 本文选自英国男爵、作家 `William Beach Thomas` (1868-1957) 所著 `A Countryman’s Creed`, 1946.
+## 1. practice
+### noun
+**(1) [不可数名词] 实践；实际行动**
+`action rather than ideas`
+> the theory and practice of teaching
+> 教学的理论与实践
+> 
+> She's determined to put her new ideas into practice .
+> 她决心要把自己的新想法付诸实践。
+> 
+
+**(2) [不可数名词, 可数名词] 通常的做法；惯例；常规**
+`a way of doing sth that is the usual or expected way in a particular organization or situation`
+> common/current/standard practice 
+> 一般 / 现行 / 常规做法
+> 
+> guidelines for good practice 
+> 优良做法的准则
+> 
+> a review of pay and working practices 
+> 对薪金和工作制度的检讨
+> 
+> religious practices
+> 宗教习俗
+> 
+> best practice (公司或机构的)最佳实践，最佳做法
+> 
+> code of practice 行业规则；职业准则
+> 
+> restrictive practices 限制竞争协议，限制竞争的行为(限制工人或雇主的自由，以防止竞争，保护就业)
+> 
+> sharp practice (尤指商业或职业领域中的)欺诈性伎俩，狡诈行为，卑鄙手段
+> 
+
+**(3) [可数名词] 惯常做的事；习惯；习俗**
+`a thing that is done regularly; a habit or a custom`
+> the German practice of giving workers a say in how their company is run
+> 德国人在公司经营上给予工人发言权的做法
+> 
+> It is his practice to read several books a week.
+> 他习惯于每周读几本书。
+> 
+
+**(4) [不可数名词, 可数名词] 训练；练习（时间）**
+`doing an activity or training regularly so that you can improve your skill; the time you spend doing this`
+> conversation practice
+> 会话练习
+> 
+> It takes a lot of practice to play the violin well.
+> 拉好小提琴需要多加练习。
+> 
+> There's a basketball practice every Friday evening.
+> 每星期五晚上有篮球训练。
+> 
+> She does an hour's piano practice every day.
+> 她每天练一小时钢琴。
+> 
+see also teaching practice
+医生；律师 of doctor/lawyer
+
+**(5) [不可数名词, 可数名词] （医生、律师的）工作，业务活动，工作地点**
+`the work or the business of some professional people such as doctors, dentists and lawyers; the place where they work`
+> the practice of medicine
+> 行医
+> 
+> Students should have prior experience of veterinary practice.
+> 学生应有兽医工作的经验。
+> 
+> My solicitor is no longer in practice.
+> 我的律师已不再执业了。
+> 
+> a successful medical/dental/law practice 
+> 成功的诊所 / 牙医诊所 / 律师事务所
+> 
+see also general practice , group practice , private practice
+
+### verb
+= `practise`
+`~ (for sth) | ~ (sth) (on sb/sth)`
+
+**(1) 练习；实习；训练**
+`to do an activity or train regularly so that you can improve your skill`
+> [单独使用的动词] You need to practise every day.
+> 你需要每天练习。
+> 
+> She's practising for her piano exam.
+> 她在练习准备钢琴考试。
+> 
+> [动词+名词短语] I've been practising my serve for weeks.
+> 我练发球有好几周了。
+> 
+> He usually wants to practise his English on me.
+> 他通常想跟我练习英语。
+> 
+> [动词+-ing短语] Practise reversing the car into the garage.
+> 练习倒车入车库。
+> 
+
+**(2) [动词+名词短语] 经常做；养成…的习惯**
+`to do sth regularly as part of your normal behaviour`
+> to practise self-restraint/safe sex
+> 培养自制力；实行安全性行为
+> 
+> Do you still practise your religion?
+> 你还奉行你的宗教信仰吗？
+> 
+
+**(3) `~ (as sth)` 从事（医务工作、法律专业等）；执业**
+`to work as a doctor, lawyer, etc.`
+> [单独使用的动词] There are over 50 000 solicitors practising in England and Wales.
+> 英格兰和威尔士共有5万多名律师执业。
+> 
+> She practised as a barrister for many years.
+> 她从事出庭律师工作多年。
+> 
+> [动词+名词短语] He was banned from practising medicine.
+> 他被禁止行医。
+> 
+**(4) (observe) 奉行 ‹faith, rules, beliefs›**
+> she practises Buddhism
+> 她信奉佛教
+> 
+**(5)  (use) 实施**
+> ▸ they practise birth control
+> 他们实行计划生育
+> ▸ it is a method of breathing practised by yogis
+> 这是瑜伽修炼者采用的呼吸方法
+> ▸ to practise what one preaches
+> 身体力行
+>
+
+### 习语  Idioms
+**① `practise what you preach` 身体力行；躬行所言；言行一致**
+> Why don't you practise what you preach?
+> 你为什么不躬行已言呢？
+> 
+**② `in practice` 实际上；事实上**
+in reality
+> Prisoners have legal rights, but in practice these rights are not always respected.
+> 囚犯虽有合法的权利，但实际上这些权利常未受到尊重。
+> 
+**③ `be/get/out of practice` 生疏；荒疏；疏于练习**
+> Don't ask me to speak French! I'm out of practice.
+> 可别让我讲法语！我已经生疏了。
+> 
+**④ `practice makes perfect` (saying)熟能生巧**
+
+
+&emsp;
+## 2. albatross `/ˈælbətrɑːs/`
+(1) noun 信天翁
+An albatross is a very large white seabird.
+
+(2) noun 沉重的负担；无法摆脱的苦恼；障碍
+> Privatization could become a political albatross for the ruling party.
+> 私有化可能会成为该执政党一个难以摆脱的政治障碍。
+>
+> an albatross around sb's neck
+> 某人无法摆脱的苦恼
+> 
+
+
+&emsp;
+## 3. boat、ship、canoe、steamer、vessel与craft
+① `boat` : 泛指任何大小的船只，尤指靠划桨或风帆行进的无篷小船。
+
+② `ship` : 含义广，一般指大轮船，如航海船只，内河航运船只。
+
+③ `canoe` : 指长而轻，用桨的小舟、独木船。
+
+④ `steamer` : 指靠蒸汽发动机为动力的船只。
+
+⑤ `vessel` : 多指运货或运人的大船。
+
+⑥ `craft` : 船只的集合名词，但可指单独的船只。
+
+
+&emsp;
+## 4.  currents of air
+气流
+
+
+&emsp;
+## 5. walls of the ship
+船壁
+
+
+&emsp;
+## 6. as well as
+**(1) =`in addition to `除…之外（也）**
+> The mind needs exercise as well as the body.
+> 大脑同身体一样需要锻炼。
+> 
+**(2) 既 … 又…**
+> You will always have the bad as well as the good in the world.
+> 人生在世总是有苦有甜。
+>
+> The child is lively as well as healthy.
+> 这孩子既健康又活泼。
+>
+**(3) 以及**
+> You sense he's sending himself up as well as everything else.
+> 你意识到他在嘲弄自己以及周围的一切。
+> 
+
+### as well 和 and 的差异
+[as well as 绝对不等于 and](https://zhuanlan.zhihu.com/p/136302624)
+
+
+&emsp;
+## 7. The currents of air that the walls of the ship direct upwards, as well as in the line of its course
+`as well as`为准并列连词，连接`upwards`和`in the line of its course`两个并列成分，说明了`direct`的两个方向：向上以及航线方向。
+
+
+&emsp;
+## 8. glider /ˈɡlaɪdər/
+n. 滑翔机
+**glide /ɡlaɪd/**
+> vi. 滑行；滑翔；滑动；掠过
+> n. 滑动；滑翔；滑行；滑音；音渡；过渡音
+> 
+
+
+&emsp;
+## 9. harness
+### noun
+
+**(1) 马具；挽具**
+
+
+**(2) （用于人，起固定或保护作用的）背带，保护带**
+`a set of strips of leather, etc. for fastening sth to a person's body or to keep them from moving off or falling`
+> a safety harness
+> 安全带
+> 
+
+### verb
+[动词+名词短语]
+**(1) `~ sth (to sth)` 给（马等）上挽具；用挽具把…套到…上**
+`to put a harness on a horse or other animal; to attach a horse or other animal to sth with a harness`
+> to harness a horse
+> 给马上挽具
+> 
+> We harnessed two ponies to the cart.
+> 我们把两匹矮种马套到了车上。
+> 
+> (figurative)In some areas, the poor feel harnessed to their jobs.
+> 有些地区的穷人感觉终身被套牢在他们的工作上。
+> 
+**(2) 控制，利用（以产生能量等）**
+`to control and use the force or strength of sth to produce power or to achieve sth`
+> attempts to harness the sun's rays as a source of energy
+> 利用日光作为能源的尝试
+>
+> harness nuclear energy 
+> 利用原子能
+>
+> harness a river 治河
+> 
+> We must harness the skill and creativity of our workforce.
+> 我们必须尽量发挥全体职工的技能和创造力。
+> 
+
+**(3) 控制（情感)**
+> ...the movement's ability to harness the anger of all Ukrainians...
+> 该运动之疏解所有乌克兰人怒气的能力
+> 
+
+### 习语  Idioms
+① `in harness` (英国英语)（尤指休息或假期结束后）做正常工作
+`doing your normal work, especially after a rest or a holiday`
+> You can rest for three or four months and then the longing for work will return and you will be right back in harness.
+> 你可以休息三四个月，然后又会开始渴望工作，并能很快回到正常的工作状态。
+> 
+② `in harness (with sb)` (英国英语)（同某人）联手；密切合作
+`working closely with sb in order to achieve sth`
+> At Opera North he will be in harness with Paul Daniel, the conductor appointed music director last year.
+> 在北方歌剧公司，他将和去年指挥指定的音乐总监保罗·丹尼尔通力合作。
+> 
+
+
+&emsp;
+## 10. The albatross is the king of the gliders, the class of fliers which harness the air to their purpose, but must yield to its opposition.
+`its opposition`即为`the opposition of air`
+
+
+&emsp;
+## 11. In the contrary school, the duck is supreme.
+school在这里做名词 表示 `群（动物）`
+
+
+&emsp;
+## 12. come nearer
+接近
+
+
+&emsp;
+## 13. endow
+**(1) VERB 赋予;使天生拥有**
+`You say that someone is endowed with a particular desirable ability, characteristic, or possession when they have it by chance or by birth.`
+> You are endowed with wealth, good health and a lively intellect.
+> 你生来就拥有财富、健康和活跃的思维。
+> 
+**(2) VERB 赋予，给予（品质等）**
+`If you endow something with a particular feature or quality, you provide it with that feature or quality.`
+> Herbs have been used for centuries to endow a whole range of foods with subtle flavours.
+> 数个世纪以来，香草一直被用于给各种食物增添淡淡的香味。
+> 
+**(3) VERB 资助，捐助(机构、奖学金、项目等)**
+`If someone endows an institution, scholarship, or project, they provide a large amount of money which will produce the income needed to pay for it.`
+> The ambassador has endowed a $1 million public-service fellowships program.
+> 大使资助了一项100万美元的公共服务奖学金计划。
+>
+
+### 习语
+**① `be endowed with sth`** 
+天生赋有，生来具有（某种特性、品质等）
+`to naturally have a particular feature, quality, etc.`
+> She was endowed with intelligence and wit.
+> 她天资聪颖。
+> 
+
+**② `endow sb/sth with sth`**
+**(1) 认为…具有某种品质 `to believe or imagine that sb/sth has a particular quality`**
+> She had endowed Marcus with the qualities she wanted him to possess.
+> 她认为马库斯具有她所期望的品质。
+> 
+**(2) (formal)给予；赋予 `to give sth to sb/sth`**
+> to endow sb with a responsibility
+> 赋予某人以责任
+> 
+
+
+&emsp;
+## 14. a good part of the weight of the bird
+`good` 在这里是形容词，表示 **[only before noun] （数量或程度）相当大的，相当多的**`great in number, amount or degree`
+> a good many people
+> 相当多的人
+> 
+> The kitchen is a good size.
+> 这厨房相当大。
+> 
+> We spent a good while (= quite a long time) looking for the house.
+> 我们花了好长时间找这房子。
+> 
+> He devoted a good deal of (= a lot of) attention to the problem.
+> 他在这个问题上花了相当多的精力。
+> 
+> There's a good chance (= it is likely) that I won't be here next year.
+> 我明年很可能不在这儿。
+> 
+
+
+&emsp;
+## 15. ply `/plaɪ/`
+### verb
+**(1) (literary)of ships, buses, etc. 船、公共汽车等定时往来；定期行驶**
+`to travel regularly along a particular route or between two particular places`
+> [动词+ 副词/介词短语] Ferries ply across a narrow strait to the island.
+> 渡船定时穿越狭窄的海峡驶向海岛。
+> 
+> [动词+名词短语] canals plied by gondolas and steam boats
+> 有小划船和蒸汽船往来的运河
+> 
+
+**(2) [动词+名词短语] (formal)（娴熟地）使用**
+`to use a tool, especially in a skilful way`
+> The tailor delicately plied his needle.
+> 裁缝精巧地飞针走线。
+>
+> to ply one's needle
+> 飞针走线
+> 
+**(3) 持续提供 不断供给**
+`If you ply someone with food or drink, you keep giving them more of it.`
+> Elsie, who had been told that Maria wasn't well, plied her with food...
+> 埃尔茜得知玛丽亚身体不适，就不停地给她弄吃的。
+> 
+> ▸ to ply sb with food/drink
+> 不断为某人提供食物/饮料
+> 
+**(4) (repeatedly question)  不断问；追问**
+> ▸ they plied us with questions about China
+> 他们一个劲地问我们有关中国的问题
+> 
+**(5)  从事，经营（尤指街头销售或服务）**
+`If you ply a trade, you do a particular kind of work regularly as your job, especially a kind of work that involves trying to sell goods or services to people outdoors.`
+> ...the market traders noisily plying their wares...
+> 大声吆喝货物的集市商贩
+> 
+
+### noun
+**[不可数名词] `especially in compounds `尤用于构成复合词（毛线、绳子、木板等的计量单位）股，层，厚**
+`a measurement of wool, rope, wood, etc. that tells you how thick it is`
+> four-ply knitting yarn
+> 四股毛线
+> 
+> two/three ply paper
+> 两/三层纸
+> 
+> ▸ two ply wool
+> 两股毛线
+>
+
+### 习语
+(1) `ply your trade` 从事工作；做事
+to do your work or business
+
+(2) `ply for hire/trade/business`
+(英国英语)招徕顾客；等生意
+to look for customers, passengers, etc. in order to do business
+> taxis plying for hire outside the theatre
+> 在剧院外招揽乘客的出租车
+> 
+### 在原文中的意思
+and these will ply the short wings with such irresistible power
+在这里应该是 `ply sb with sth` 表示 持续的给予 短小的翅膀（short wings） 巨大的力量（such irresistible power）
+
+
+&emsp;
+## 16.  they can bore for long distances through an  before exhaustion follows
+`bore`在这里是动词, 表示 "钻孔"，（鸟）`bore through`(钻透) 的是 `opposing gale`（对面吹来的风）
+`opposing gale` 逆风
+
+
+&emsp;
+## 17. humbler follower
+更差一点的
+
+
+&emsp;
+## 18. partridge /ˈpɑːrtrɪdʒ/
+n. 山鹑；山鹑肉
+
+
+&emsp;
+## 19. propulsion /prəˈpʌlʃn/
+**noun [不可数名词] (technical 术语)推动力；推进**
+`the force that drives sth forward`
+> wind/steam/jet propulsion 
+> 风力 / 蒸汽 / 喷气推进
+> 
+`propulsion system` 推进系统；驱动系统；动力系统
+
+
+&emsp;
+## 20. like
+在原位
+> Their humbler followers, such as partridges, have a **like** power of strong propulsion, but soon tire.
+> 
+`like`在这里是 形容词： **adj.类似的；相似的**
+> a chance to meet people of like mind (= with similar interests and opinions) 
+> 与志趣相投的人结识的机会
+> 
+> She responded in like manner.
+> 她以类似的方式作出了反应。
+> 
+
+
+&emsp;
+## 21. utter
+### adj.
+**(1) [only before noun] 完全的；十足的；彻底的**
+`used to emphasize how complete sth is`
+> That's complete and utter nonsense!
+> 那纯属一派胡言乱语！
+> 
+> To my utter amazement she agreed.
+> 令我大感意外的是，她同意了。
+> 
+> He felt an utter fool.
+> 他觉得自己蠢到家了。
+>
+> ▸ utter rubbish!
+> 一派胡言！
+> 
+> ▸ an utter stranger
+> 完全陌生的人
+> 
+
+### verb
+**(1) [动词+名词短语] (formal)出声；说；讲**
+`to make a sound with your voice; to say sth`
+> to utter a cry
+> 发出喊叫声
+> 
+> She did not utter a word during lunch (= said nothing) .
+> 进午餐时，她一言未发。
+> 
+
+
+&emsp;
+## 22. in highest measure
+in 最大程度地
+
+
+&emsp;
+## 23. medium
+### adj.
+**(1) [usually before noun] (abbr. M)中等的；中号的**
+`in the middle between two sizes, amounts, lengths, temperatures, etc.`
+同义词：`average`
+> a medium-size car/business/town 
+> 中型汽车 / 企业；中等城镇
+> 
+> a man of medium height/build 
+> 中等身材的人
+> 
+> There are three sizes─small, medium and large.
+> 有三种尺寸——小号、中号和大号。
+> 
+> Cook over a medium heat for 15 minutes.
+> 用中火煮15分钟。
+> 
+> a medium dry white wine
+> 中度干白葡萄酒
+> 
+> Choose medium to large tomatoes.
+> 选取中到大个的西红柿。
+> 
+【不规则形式】复数名词 media , ormediums
+**(1) （传播信息的）媒介，手段，方法**
+`a way of communicating information, etc. to people`
+> the medium of radio/television 
+> 广播 / 电视媒介
+> 
+> electronic/audio-visual media 
+> 电子 / 视听媒体
+> 
+> Television is the modern medium of communication .
+> 电视是现代传媒。
+> 
+> A T-shirt can be an excellent medium for getting your message across.
+> T恤衫可以成为一种极好的表达信息的媒介。
+> 
+【帮助说明】`The plural in this meaning is usually media` .此义的复数形式通常为media。
+see also mass media , media
+
+**(2) 手段；工具；方法**
+`something that is used for a particular purpose`
+> English is the medium of instruction (= the language used to teach other subjects) .
+> 用英语进行教学。
+> 
+> Video is a good medium for learning a foreign language.
+> 录像是一种学习外语的好方法。
+> 
+
+**(3) （文艺创作中使用的）材料，形式**
+`the material or the form that an artist, a writer or a musician uses`
+> the medium of paint/poetry/drama 
+> 绘画 / 诗歌 / 戏剧的媒介
+> 
+> Watercolour is his favourite medium.
+> 水彩画是他最喜欢的表现方式。
+> 
+
+**(4) (biology 生)介质；培养基；环境**
+`a substance that sth exists or grows in or that it travels through`
+>The bacteria were growing in a sugar medium.
+>细菌在糖基中生长。
+> 
+
+**(5) 【不规则形式】复数名词 mediums 通灵的人；灵媒；巫师**
+`a person who claims to be able to communicate with the spirits of dead people`
+
+### 习语
+a/the happy medium 折中办法
+
+### noun
+
+&emsp;
+## 24. omen /ˈoʊmən/
+`~ (for sth)` 预兆；前兆；征兆
+`a sign of what is going to happen in the future`
+> a good/bad omen 
+> 吉祥的 / 不祥的预兆
+> 
+> an omen of death/disaster 
+> 死亡 / 灾难的征兆
+> 
+> The omens for their future success are not good.
+> 他们未来成功的预兆不祥。
+> 
+
+
+&emsp;
+## 25. magpie /ˈmæɡpaɪ/
+**(1) N-COUNT 喜鹊;鹊**
+
+**2.N-COUNT 爱收集（无价值物品）的人;爱收藏（破烂）的人**
+`If you describe someone as a magpie, you mean that they like collecting and keeping things, often things that have little value.`
+> A born magpie, Mandy collects any object that catches her eye.
+> 曼迪天生喜欢收集小玩意，只要是她看上的都会收藏起来。
+> 
