@@ -2962,6 +2962,7 @@ a complete set or series, for example of movements in a machine
 > The patient exhibited signs of fatigue and memory loss.
 > 病人表现出疲劳和记忆力丧失的迹象。
 > 
+
 ### noun
 **(1) （一件）展览品，陈列品**
 `an object or a work of art put in a public place, for example a museum, so that people can see it`
@@ -4721,3 +4722,1188 @@ a/the happy medium 折中办法
 > A born magpie, Mandy collects any object that catches her eye.
 > 曼迪天生喜欢收集小玩意，只要是她看上的都会收藏起来。
 > 
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 24 Beauty 谈美
+&emsp;&emsp; 选自英国哲学家 `Cyril Edwin Mitchinson Joad` (1891-1953) `Pieces of Mind, London: Faber & Faber`, 1942
+## 1. rouse
+### verb
+**(1) [动词+名词短语] ~ sb (from sleep/bed) (formal)唤醒；使醒来**
+`to wake sb up, especially when they are sleeping deeply`
+> The telephone roused me from my sleep at 6 a.m.
+> 早晨6点钟，电话铃声就把我从睡梦中吵醒了。
+> 
+> Nicky roused her with a gentle nudge.
+> 尼基用胳膊肘轻轻地将她推醒。
+> 
+**(2) ~ sb/yourself (to sth) 使活跃起来；使产生兴趣**
+`to make sb want to start doing sth when they were not active or interested in doing it`
+> [动词+名词短语] A lot of people were roused to action by the appeal.
+> 许多人响应号召行动起来。
+> 
+> [动词+名词短语+带to的不定式] Richard couldn't rouse himself to say anything in reply.
+> 理查德没有兴趣回答。
+> 
+**(3) [动词+名词短语] (formal)激起（某种情感）**
+`to make sb feel a particular emotion`
+> to rouse sb's anger
+> 把某人惹火
+> 
+> What roused your suspicions (= what made you suspicious) ?
+> 你是怎么起疑心的？
+> 
+**(4) [动词+名词短语] [usually passive] 激怒；使激动**
+`to make sb angry, excited or full of emotion`
+> Chris is not easily roused.
+> 克里斯不容易激动。
+> 
+
+### rouse 和arouse
+
+
+&emsp;
+## 2. esthetic `/esˈθetɪk/`
+### adj.
+**(1) 审美的；有审美观点的；美学的**
+`concerned with beauty and art and the understanding of beautiful things`
+> an aesthetic appreciation of the landscape
+> 用审美的眼光欣赏风景
+> 
+> The benefits of conservation are both financial and aesthetic.
+> 保护自然环境在经济上和美化环境上都有好处。
+> 
+**(2) 美的；艺术的**
+`made in an artistic way and beautiful to look at`
+> Their furniture was more aesthetic than functional.
+> 他们的家具美观多于实用。
+> 
+### noun
+**(1) [可数名词] 美感；审美观**
+`the aesthetic qualities and ideas of sth`
+> The students debated the aesthetic of the poems.
+> 学生就这些诗的美感展开了辩论。
+> 
+(2) `aesthetics` [不可数名词] 美学
+
+
+## 3. It is difficult for any of us in moments of intense aesthetic experience to resist the suggestion that we are catching a glimpse of a light that shines down to us from a different realm of existence, different and, because the experience is intensely moving, in some way higher
+
+`in moments of intense aesthetic experience` 在强烈感受到美的时刻
+
+`a different realm of existence`
+
+`intensely moving`
+
+
+&emsp;
+## 4. gleam
+### A.noun
+**① (of candle, lamp) 微光; (of sun, moon, stars) 光**
+> ...the gleam of the headlights.
+> 汽车头灯的微光
+> 
+**② (of gold, glass) 闪光; (of sea, water) 反光**
+> ...the gleam of the dark river...
+> 黑黝黝的河流上闪烁的波光
+> 
+
+**③ (faint sign) 一丝**
+> ▸ a faint gleam of hope
+> 一线希望
+> ▸ there was a malicious gleam in her eye
+> 她的眼中有一丝恶意
+> 
+
+### B.intransitive verb
+**① (shine) «candle, lamp» 发微光; «sun, moon, stars» 闪耀; figurative «eyes» 闪烁**
+> ▸ his face gleamed with delight/mischief
+> 他脸上显露出欢乐/顽皮的神情
+> 
+**② (reflect light) «knife, glass, metal» 反光**
+> His black hair gleamed in the sun.
+> 他的黑发在阳光下闪着光泽。
+>
+
+
+&emsp;
+## 5. serenity /sə'renəti/
+n. 宁静；平静；安详；从容
+
+
+&emsp;
+## 6. a world beyond
+beyond在这里作副词
+
+
+&emsp;
+## 7. vulgar /ˈvʌlɡər/
+vulgar flare
+### adj.
+**(1) 庸俗的；粗俗的；粗野的；不雅的**
+`not having or showing good taste; not polite, elegant or well behaved`
+同义词：`coarse` , `in bad taste`
+> a vulgar man
+> 粗俗的男人
+> 
+> vulgar decorations
+> 俗里俗气的装饰
+> 
+> She found their laughter and noisy games coarse and rather vulgar.
+> 她觉得他们的笑声和吵吵闹闹的游戏趣味低下，俗不可耐。
+> 
+**(2) 粗野的；粗鲁的；下流的**
+`rude and likely to offend`
+同义词：`crude`
+> vulgar jokes
+> 低俗的笑话
+> 
+ 
+
+&emsp;
+## 8. flare /flɛr/
+### A.noun
+**① (of match, lighter, firework) 火光**
+**② (on highway, runway) 照明灯**
+**③ Military (to illuminate) 照明弹; (warning signal) 闪光警告信号**
+**④ Aviation, Nautical (distress signal) 闪光报警信号**
+> The ship sent up distress flares to attract the attention of the coastguard.
+> 这艘船点起了遇险信号以引起海岸警卫队的注意。
+> 
+**⑤ Astronomy 耀斑**
+**⑥ Clothing 呈喇叭形展开**
+> ▸ a skirt with a slight flare
+> 微喇裙
+> 
+
+### B.flares plural noun
+**(trousers) 喇叭裤**
+> ▸ a pair of flares
+> 一条喇叭裤
+> 
+
+### C.intransitive verb
+**① (burn briefly) «match, torch» 闪光; «sunspot» 闪耀**
+> The match flared and went out.
+> 火柴闪亮了一下就熄了。
+> 
+> The fire flared into life.
+> 火旺了起来。
+> 
+> (figurative)Colour flared in her cheeks.
+> 她两颊泛起了红晕。
+> 
+**② figurative (erupt) «tempers, violence» 爆发**
+同义词：`erupt`
+> Violence flared when the police moved in.
+> 警察逼近时爆发了暴力行为。
+> 
+> Tempers flared towards the end of the meeting.
+> 会议快结束时群情激愤。
+> 
+**③ (widen) «sleeves, skirt, trouser legs» 呈喇叭形展开**
+> The sleeves are tight to the elbow, then flare out.
+> 袖子在肘部收紧，接着逐渐展开。
+> 
+**④ (dilate) «nostrils 鼻孔» 张大**
+`if a person or an animal flares their nostrils (= the openings at the end of the nose) , or if their nostrils flare , they become wider, especially as a sign of anger  `
+> [单独使用的动词] The horse backed away, its nostrils flaring with fear.
+> 马向后惊退，吓得鼻翼扇动。
+> 
+**⑤ 发怒地说；粗暴地说**
+> [动词+直接引语] ‘You should have told me!’ she flared at him.
+> “你应该告诉我的！”她气冲冲地对他说。
+> 
+
+### D.transitive verb
+**使…呈喇叭形展开  ‹skirt, trouser legs›**
+> ▸ a flared skirt
+> 喇叭裙
+> 
+
+### phrasal verb
+#### flare up
+intransitive verb
+**① (burn brightly) «candle, gas jet» 旺烧起来**
+> ▸ the fire flared up as I put on more sticks
+> 我加了些柴枝，火旺了起来
+> 
+**② figurative (erupt) «trouble, epidemic, violence» 爆发**
+> ▸ the unrest flared up into a real revolt
+> 动荡的局面激化为真正的叛乱
+**③ figurative (become angry) 突然发怒**
+> ▸ he suddenly flared up
+> 他突然发起火来
+**④ (recur) «disease, pain» 复发**
+> ▸ my back trouble has flared up again
+> 我的背又疼起来了
+> 
+
+
+&emsp;
+## 9. radiance of the stars
+`radiance`
+> n. (散发出来的)光辉；容光焕发；红光满面
+>
+
+
+&emsp;
+## 10. bray /breɪ/
+### A.intransitive verb
+**① «donkey» 嘶叫**
+> The donkey brayed and tried to bolt.
+> 这头驴嘶叫着试图脱缰而逃。
+> 
+② derogatory (speak) 刺耳地大声说; (laugh) 刺耳地大笑
+> [单独使用的动词] He brayed with laughter.
+> 他刺耳地大笑。
+> 
+> a braying voice
+> 刺耳的声音
+> 
+
+### B.noun
+**① (of donkey) 驴叫声**
+**② derogatory (of person) 刺耳的声音**
+> She cut him off with a wild bray of laughter.
+> 她用刺耳的狂笑打断了他的讲话。
+> 
+
+
+&emsp;
+## 11. intimate
+### A.adjective
+**① (close) 亲密的**
+> ▸ to have an intimate relationship with sb
+> 与某人关系密切
+> ▸ to be on intimate terms with sb
+> 与某人来往密切
+> 
+**② euphemistic (sexual) 有性关系的**
+> ▸ to be intimate with sb (formal or Law)
+> 与某人有性关系
+> 
+**③ (personal) 私密的**
+> ▸ intimate feelings
+> 内心的感情
+> 
+> ▸ intimate details
+> 隐私细节
+> 
+> ▸ sb's intimate life
+> 某人的私人生活
+> 
+> ▸ an intimate conversation
+> 私下交谈
+>
+> > He wrote about the intimate details of his family life...
+> 他写到了关于他家庭生活的一些不为人知的细节。
+> 
+**④ (cosy) 宜于密切关系的**
+> ▸ an intimate restaurant
+> 幽静的餐馆
+>
+> ...an intimate candlelit dinner for two.
+> 温馨的二人烛光晚餐
+> 
+**⑤ (detailed, deep) 详尽的**
+> ▸ to have an intimate knowledge of/acquaintance with sth;
+> 对某事物了如指掌
+> 
+> He surprised me with his intimate knowledge of Kierkegaard and Schopenhauer.
+> 他对克尔恺郭尔与叔本华的深刻了解让我很吃惊。
+> 
+
+**⑥ ADJ (联系)密切的，紧密的**
+`An intimate connection between ideas or organizations, for example, is a very strong link between them.`
+> ...an intimate connection between madness and wisdom...
+> 疯狂与智慧的密切关联
+> 
+`Derived Words 派生词`
+**`intimately`**
+> Property and equities are intimately connected in Hong Kong.
+> 在香港，房地产与证券密切关联。
+> 
+
+### B.noun
+密友
+
+### C.transitive verb
+**① (hint) 暗示**
+> ▸ to intimate that …
+> 透露…
+> 
+**② formal (announce) 宣布**
+> ▸ He went on to intimate that he was indeed contemplating a shake-up of the company...
+> 他继续暗示他确实在考虑对公司进行一次大改组。
+> 
+
+### intimation
+(formal)透露; 暗示;提示
+An intimation is an indirect suggestion or sign that something is likely to happen or be true.
+> ...intimations of mortality...
+> 濒临死亡的征兆
+> 
+> There was no intimation from his doctor that his condition was serious.
+> 他的医生没有透露他的病情很严重。
+> 
+
+
+&emsp;
+## 12. indigestion /ˌɪndɪˈdʒestʃən/
+n. 消化不良(症)
+
+
+&emsp;
+## 13. whimsy /ˈwɪmzi/
+### noun
+**① uncountable (humour, fantasy) 稀奇古怪**
+**② countable (fanciful thing) 稀奇古怪的东西**
+
+
+&emsp;
+## 14. unutterable
+
+
+&emsp;
+## 15. invest
+### A.transitive verb
+**① (commit) 投资 ‹funds, capital›**
+> ▸ to invest £50,000 in shares
+> 投资5万英镑购买股票
+> 
+**② (expend) 投入 ‹time, energy›**
+> ▸ we've invested a lot of effort in this project
+> 我们在这个项目上耗费了很多精力
+> 
+**③ (install) ~ sb (as sth) 使…就职…, ‹prince, president›**
+> ▸ to invest sb as sth
+> 使某人就任某职位
+> ▸ to invest sb with sth;
+> 授给某人某物
+>
+> 
+> 
+**④ (provide, bestow) 赋予**
+> ▸ to be invested with significance
+> 被赋予意义
+>
+> The new position invested her with a good deal of responsibility.
+> 新职位赋予她重大的责任。
+> 
+
+### B.intransitive verb
+**① (commit funds) 投资**
+> ▸ to invest in shares
+> 投资股票
+> 
+**② (spend money on purchase) 花钱**
+> ▸ to invest in sth;
+> 花钱买某物
+>
+
+### 短语动词  Phrasal Verbs
+#### `invest in sth`
+(informal, often humorous)购买昂贵有用的东西
+> Don't you think it's about time you invested in a new coat?
+> 你不觉得该花点钱买件新外套了吗？
+> 
+
+#### `invest sb/sth with sth`
+(formal)使似乎具备某性质
+`to make sb/sth seem to have a particular quality`
+> Being a model invests her with a certain glamour.
+> 当模特儿似乎给她增添了一定的魅力。
+> 
+
+
+&emsp;
+## 16. grasp
+### A.noun
+**① (hold, grip) 紧抓**
+> ▸ the pen fell from her grasp
+> 钢笔从她手中掉落
+> ▸ to take a firm/strong grasp on or of sth
+> 紧紧地/有力地握住某物
+> 
+> ▸ to tighten/loosen one's grasp
+> 握紧手/松开手
+> 
+> ▸ he held her in an iron grasp
+> 他死死地抓住她
+>
+> 
+**② figurative (power, reach) (of person, organization) 掌握; (of emotion) 控制** 
+> ▸ in the grasp of sb/sth;
+> 在某人/某物的控制之中
+> ▸ to escape/slip from or out of sb's grasp
+> 逃脱/摆脱某人的控制
+> ▸ the prize has eluded her grasp
+> 她没能获奖
+> ▸ beyond the grasp of sb/sth
+> 在某人/某物的掌控之外
+> ▸ to have sb/sth within one's grasp
+> 掌握某人/某事物
+> 
+**③ (understanding, imagination) 理解**
+> ▸ to have a good/sound grasp of sth
+> 对某事物有充分/彻底的理解
+> ▸ to have a poor grasp of sth
+> 对某事物了解甚少
+> ▸ within sb's grasp
+> 在某人的理解范围内
+> ▸ beyond sb's grasp
+> 超出某人的理解范围
+> 
+
+### B.transitive verb
+**① (seize) 抓住**
+> ▸ he grasped me by the arm
+> 他揪住了我的胳膊
+> ▸ to grasp the chance or opportunity
+> figurative 抓住机会
+> 
+**② (understand) 理解;领会；领悟；明白**
+> ▸ she could never grasp what to do/how to do it
+> 她永远不明白该做什么/怎么做
+> ▸ to grasp the seriousness/enormity/meaning of sth
+> 理解某事的严重性/艰巨性/意思
+> 
+**③ [动词+名词短语] ~ a chance/an opportunity 急忙抓住，毫不犹豫地抓住（机会）**
+`to take an opportunity without hesitating and use it`
+> I grasped the opportunity to work abroad.
+> 我毫不犹豫地抓住了去国外工作的机会。
+> 
+
+### C.intransitive verb
+> ▸ to grasp at sth;
+> 试图抓住某物 
+> 
+> ▸ to grasp at straws
+> figurative 抓救命稻草 
+> 
+> ▸ to grasp at the chance or opportunity
+> figurative 尽力把握机会 ì
+> 
+
+### 同义词辨析
+#### `hold`|`hold on`|`cling`|`clutch`|`grip`|`grasp`|`clasp`|`hang on`
+`These words all mean to have sb/sth in your hands, arms, etc.` 以上各词均含抓住、抱住、托住、握住之义。
+
+##### hold
+`to have sb/sth in your hand, arms, etc.` 指抓住、抱住、托住、握住：
+> She was holding a large box.
+> 她提着一只大箱子。
+> 
+> I held the baby gently in my arms.
+> 我把婴儿轻轻地抱在怀里。
+> 
+##### hold on (to sb/sth)
+`to continue to hold sb/sth; to put your hand on sb/sth and not take your hand away` 指抓紧、不放开：
+> Hold on and don't let go until I say so.
+> 握紧，我让你松手时再松开。
+> 
+##### cling
+`to hold on to sb/sth tightly, especially with your whole body` 尤指用身体紧抱、紧握、抓紧：
+> Survivors clung to pieces of floating debris.
+> 生还者紧紧抱住一块块漂浮在水面上的残骸。
+> 
+##### clutch
+`to hold sb/sth tightly, especially in your hand; to take hold of sth suddenly` 尤指用手抓紧、紧握、抱紧、突然抓住：
+> She stood there, the flowers still clutched in her hand.
+> 她站在那里，手里仍然紧握着花束。
+> 
+> He felt himself slipping and clutched at a branch.
+> 他感到自己滑了一下，便一把抓住一根树枝。
+> 
+
+##### grip
+`to hold on to sth very tightly with your hand` 指用手紧握、紧抓：
+> Grip the rope as tightly as you can.
+> 尽可能紧紧抓住绳子。
+> 
+##### grasp
+`to take hold of sth firmly` 指抓紧、抓牢：
+> He grasped my hand and shook it warmly.
+> 他热情地抓着我的手握了起来。
+> 
+**注释 Notes**
+`The object of grasp is often sb's hand or wrist .`
+grasp的宾语通常为hand或wrist。
+
+##### clasp
+`( formal ) to hold sb/sth tightly in your hand or in your arms` 指紧握、攥紧、抱紧：
+> They clasped hands (= held each other's hands) .
+> 他们相互紧握着对方的手。
+> 
+> She clasped the children in her arms.
+> 她把孩子紧紧地搂在怀里。
+> 
+**注释 Notes**
+`The object of clasp is often your hands , sb else's hand or another person.`
+clasp的宾语通常为hand或另一个人。
+
+##### hang on (to sth)
+`to hold on to sth very tightly, especially in order to support yourself or stop yourself from falling` 尤指为支撑自己或防止跌倒紧紧抓住某物：
+> Hang on tight. We're off!
+> 抓紧，我们出发了！
+> 
+
+#### `understand`|`see`|`get`|`follow`|`grasp`|`comprehend`
+`All these words mean to know or realize sth, for example why sth happens, how sth works or what sth means.` 以上各词均含懂得、理解、认识到之义。
+##### understand
+`to know or realize the meaning of words, a language, what sb says, etc.; to know or realize how or why sth happens, how it works or why it is important `指懂、理解、领会（词意、语言、话语等），了解、认识到、明白（事情如何或为何发生、如何起作用或为何重要等）：
+> I don't understand the instructions.
+> 我不懂这些指令的意思。
+> 
+> Doctors still don't understand much about the disease.
+> 医生对这种疾病还不太了解。
+> 
+
+##### see
+`to understand what is happening, what sb is saying, how sth works or how important sth is` 指理解、明白、领会（正在发生的事、某人的话、某事如何起作用或重要性如何）：
+> ‘It opens like this.’ ‘Oh, I see .’
+> “这样就打开了。”“哦，我明白了。”
+> 
+> Oh yes, I see what you mean .
+> 噢，我明白你的意思了。
+> 
+
+##### get
+`( informal ) to understand a joke, what sb is trying to tell you, or a situation that they are trying to describe` 指理解、明白（笑话、某人试图告知的事或描述的情况）：
+> She didn't get the joke.
+> 她听不懂那个笑话。
+> 
+> I don't get you.
+> 我搞不懂你的意思。
+> 
+##### follow
+`to understand an explanation, a story or the meaning of sth` 指理解、明白（说明、故事、意思）：
+> Sorry─I don't quite follow.
+> 对不起，我不太听懂你的话。
+> 
+> The plot is almost impossible to follow.
+> 故事情节几乎叫人不明所以。
+> 
+##### grasp
+`to come to understand a fact, an idea or how to do sth` 指理解、领会、领悟、明白（事实、想法或如何做某事）：
+> They failed to grasp the importance of his words.
+> 他们没有理解他的话的重要性。
+> 
+**用`understand`还是`grasp`？**
+
+`You can use understand or grasp for the action of realizing the meaning or importance of sth for the first time.`第一次意识到某事的意义或重要性可用`understand`或`grasp`：
+> It's a difficult concept for children to **understand/grasp**.
+> 对孩子来说，这是一个很难理解的概念。
+> 
+`Only understand can be used to talk about languages, words or writing.`只有`understand`可用于理解语言、词汇或文章等：
+> I don't grasp French/the instructions.
+> I don't understand/~~grasp~~ French.
+> 
+
+#### comprehend
+`(often used in negative statements) ( formal ) to understand a fact, idea or reason` （常用于否定句中）用于理解、领悟、明白（事实、想法或原因）：
+> The concept of infinity is almost impossible for the human mind to comprehend.
+> 无穷的概念几乎是人类的大脑无法理解的。
+> 
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson Non-auditory Effects of Noise 噪音的非听觉效应
+&emsp;&emsp; 选自英国实验心理学家 `Donald E. Broadben`t (1926-1993), `Non-auditory effects of Noise`.
+## 1. auditory
+**adj. (technical 术语)听的；听觉的**
+> auditory stimuli
+> 听觉刺激
+>
+> ...the limits of the human auditory range.
+> 人耳听觉范围的限度
+> 
+
+
+&emsp;
+## 2. service
+### A.transitive verb
+[动词+名词短语]
+交通工具；机器 vehicle/machine
+
+** ① [usually passive] (do maintenance on) 检修；维护；维修；保养 ‹machine, car›**
+> We need to have the car serviced.
+> 我们得把车送去检修一下了。
+> 
+提供 provide sth
+
+**② 提供服务**
+`to provide people with sth they need, such as shops/stores, or a transport system`
+同义词：`serve`
+> Botley is well serviced by a regular bus route into Oxford.
+> 从博特利到牛津有一路公共汽车，按时发车，十分便利。
+> 
+> This department services the international sales force (= provides services for it) .
+> 这个部门向国际销售人员提供服务。
+> 
+
+**③ (technical 术语)支付（债务）利息**
+`to pay interest on money that has been borrowed`
+> The company can no longer service its debts .
+> 那家公司已无力支付债务利息。
+> 
+
+### B.noun
+**① uncountable (by employee, supplier) 效劳; (in army) 服役**
+> ▸ years of service
+> 工作年限
+> 
+> ▸ a life of (public) service
+> （为公众）服务的一生
+> 
+> ▸ ten years' service in the army
+> 在部队服役10年
+> 
+> ▸ at sb's service
+> 听候某人吩咐
+> 
+> ▸ he gave his life in the service of his country
+> 他为国捐躯
+> 
+> ▸ can I be of service?
+> 我能帮忙吗？
+> 
+> ▸ on Her Majesty's service
+> 为女王陛下效劳
+> 
+**before noun Military 军队的 ‹personnel, life›; (for employees or servants) 供员工或下人使> 用的‹entrance, stairs›**
+> ▸ service pay
+> 军饷
+> 
+**② uncountable (attention, assistance) 接待** 
+> ▸ we add on 10% for service
+> 我们加收10％的服务费
+> 
+> ▸ service to the customer/client
+> 为顾客/客户提供的服务
+> 
+**③ uncountable (use) 使用**
+> ▸ this coat should be good for a lifetime's service
+> 这件外套能穿一辈子
+> ▸ the van has given me excellent service, I've had excellent service from the van
+> 那辆运货车帮了我大忙
+> ▸ to be in service
+> 在使用中
+> ▸ to come into or enter service
+> 开始被采用
+> ▸ to go out of service
+> 被停用
+> 
+**④ countable (favour) 帮助** bāngzhù
+> ▸ to do sb a service
+> 帮某人个忙
+> 
+**⑤ countable Business 服务性企业（或行业、业务）**
+> ▸ a dry-cleaning/money-changing service
+> 干洗/货币兑换服务
+> ▸ it's all part of the service
+> 这是分内事
+> ▸ we badly need the services of a good accountant
+> 我们急需一名优秀的会计
+> ▸ for services rendered
+> 服务
+>
+> a service industry
+> 服务性行业
+> 
+**⑥ countable (government department) 行政部门**
+> ▸ the customs/diplomatic/health service
+> 海关/外交/卫生部门
+> ▸ the emergency services
+> 应急部门
+> 
+**⑦ countable Military 军种**
+> ▸ high-ranking officers from (each of) the three services
+> 来自陆海空三军的高级军官
+> 
+> ▸ the services
+> 军队
+> 
+> ▸ he joined the service at the age of 18
+> 他18岁参军
+> 
+**⑧ countable Transport 交通服务**
+> ▸ a bus/train/ferry service
+> 公共汽车/火车/轮渡运输服务
+> 
+> ▸ it's a 10 minute service on this route
+> 这条线路每隔10分钟发一班车
+> 
+**⑨ uncountable and countable Motor Vehicles (maintenance) 检修** 
+> I had taken the car in for a service.
+> 我把车送去检修了。
+> 
+> a service engineer
+> 维修技师
+> 
+**⑩ countable Religion 宗教仪式**
+> ▸ morning/evening service
+> 晨祷/晚祷
+> 
+> ▸ a wedding/funeral service
+> 婚礼/葬礼
+> 
+**⑪ countable (dinner set) 成套餐具**
+> ▸ a silver tea service
+> 一套银质茶具
+> 
+**⑫ countable (in tennis) 发球**
+> ▸ return of service
+> 接发球
+>
+> It's your service (= your turn to start playing) .
+> 该你发球了。
+> 
+> Her service has improved.
+> 她的发球有了提高
+> 
+**⑬ countable Law (of summons, warrant, writ) 正式送达**
+> the service of a demand for payment
+> 缴款通知的送达
+> 
+**⑭ services plural British (on motorway) [高速公路旁的] 服务区**
+
+**⑮ [不可数名词] 使用；使用状况**
+`the use that you can get from a vehicle or machine; the state of being used`
+> That computer gave us very good service.
+> 我们那台计算机很好用。
+> 
+> The ship will be taken out of service within two years.
+> 那艘船将在两年之内退役。
+> 
+
+
+&emsp;
+## 3. practical experience
+实践经验；实际经验
+> Practical experience is integral to the course.
+> 这门课程也包括实践经验。
+> 
+> The course teaches you the theory but there's no substitute for practical experience.
+> 这门课教的是理论，但没有任何东西能代替实践经验。
+> 
+
+
+&emsp;
+## 4. prepared
+### adjective
+**① (ready-made) 准备好的 ‹response, speech, lesson›; 制作好的 ‹soup, sauce, meal›**
+> ▸ a carefully prepared reply
+> 精心准备的回答
+> 
+**② (with necessary resources) 有准备的**
+> ▸ to be prepared for sth
+> 对…有所准备 ‹disaster›
+> ▸ to be well-/ill-prepared
+> 准备得充分/不充分
+> ▸ to come prepared
+> 有备而来
+> ▸ be prepared!
+> 作好准备！
+> ▸ to be prepared for the worst
+> 作好最坏的打算
+> 
+**③ (willing) 乐意的**
+> ▸ to be prepared to do sth;
+> 愿意做某事
+> 
+
+
+&emsp;
+## 5. abate
+### A.intransitive verb
+**«flood, temperature» 减退; «epidemic, pain, anger» 减轻; «feeling, terror, noise» 减少**
+> ▸ the wind had abated from force 10 to force 8
+> 风力已从10级降到8级
+> 
+> ▸ her fever abated a little
+> 她的烧退了一点
+>
+> Steps are to be taken to abate pollution.
+> 应该采取措施减少污染。
+> 
+### B.transitive verb
+**① (general) 减少 ‹tax, noise, pollution›**
+
+**② Law (end) 消除**
+> ▸ to abate a nuisance
+> 消除妨害
+> 
+
+
+&emsp;
+## 6. discredited
+adj. 不足信的；不名誉的
+`discredit`的过去分词和过去式
+
+
+&emsp;
+## 7. allegation
+### noun
+`~ (of sth) (against sb)` | `~ (that…`) | ~ `(about sb/sth)`（无证据的）说法，指控
+`a public statement that is made without giving proof, accusing sb of doing sth that is wrong or illegal`
+同义词：`accusation`
+> Several newspapers made allegations of corruption in the city's police department.
+> 有几家报纸声称该市警察部门腐败。
+> 
+> allegations of dishonesty against him
+> 关于他不诚实的多种说法
+> 
+> an allegation that he had been dishonest
+> 一种关于他不诚实的说法
+> 
+> to investigate/deny/withdraw an allegation 
+> 调查 / 否认 / 撤回指控
+> 
+
+### `claim`|`allegation`|`assertion`|`contention`
+`These are all words for a statement that sth is true, although it has not been proved.` 以上各词均表示未经证实的说法。
+#### claim
+`a statement that sth is true, although it has not been proved` 指声明、宣称、断言
+
+#### allegation
+`( rather formal ) a public statement that is made without giving proof, accusing sb of doing sth that is wrong or illegal` 指无证据的说法、指控
+
+#### assertion
+`( rather formal ) a statement of sth that you strongly believe to be true, although it has not been proved` 指明确肯定、断言
+**用`claim`还是`assertion？`**
+`When the point in doubt is a matter of opinion, not fact, use assertion .`
+如果对所谈问题存疑是因为看法不同，而非因与事实不符，用assertion：
+> She made sweeping ~~claims~~ about the role of women in society.
+> 
+`When you are talking about a matter of fact you can use either word; an assertion may be slightly stronger than a claim and it is a more formal word.`如果所谈问题是事实，用任何一词均可。
+`assertion`比`claim`语气稍强，且更正式。
+
+#### contention
+`(formal) a belief or opinion that you express, especially in an argument` 尤指争论中的看法、观点
+
+
+&emsp;
+## 8. illustrate /ˈɪləstreɪt/
+### transitive verb
+**① (provide with pictures) 给…加插图**
+> She went on to art school and is now illustrating a book...
+> 她后来读了艺术学校,现在正在为一本书画插图。
+> 
+**② (explain, make clear) 说明**
+同义词：`demonstrate`
+> ▸ to illustrate a point/how …
+> 说明一个观点/如何…
+> 
+**③ (exemplify) 举例说明**
+> ▸ to illustrate the fact that …;
+> 举例说明…的事实
+> 
+### illustration
+n. 插图；(说明事实的)示例；图解；图示；(书、杂志等中的)图表；例释
+
+
+&emsp;
+## 9. reduce | BrE rɪˈdjuːs, AmE rəˈdus |
+### A.transitive verb
+**① (make less) 减少 ‹quantity, pressure, cost›; 降低 ‹level, rate›; 减轻 ‹swelling, weight›; 削弱 ‹strength, effect›; 缩短 ‹length›**
+> ▸ to reduce speed
+> 减速
+> 
+> ▸ ‘reduce speed now’
+> Motor Vehicles “减速行驶”
+> 
+**② Business 降低 jiàngdī ‹price›; 降低…的价格 ‹item, goods›**
+> ▸ to reduce the price by 10%
+> 打九折
+> ▸ the carpet was reduced in a sale
+> 大减价时这条地毯降了价
+> ▸ the jackets have been reduced by 50%
+> 夹克衫五折销售
+> ▸ to reduce sth (from sth) to sth;
+> 将某事物（从某水平）减少到某水平
+> 
+**③ (make smaller) 缩小 ‹map, drawing›**
+
+**④ (shorten in length) 减少…的篇幅 ‹essay, report›**
+> ▸ to reduce an article by 200 words
+> 把文章删减200字
+> 
+**⑤ (shorten in duration) 缩短**
+> ▸ the law reduced the term of conscription from three years to two
+> 该法令将服兵役年限从3年缩短至2年
+> ▸ the ban on her competing was reduced by two years
+> 她的禁赛期限缩短了2年
+> ▸ the judge reduced his sentence by six months
+> 法官将他的刑期减少了6个月
+**⑥ (bring forcibly) 迫使**
+> ▸ to reduce sb to sth;
+> 迫使某人进入某状态
+> ▸ to reduce sb to tears
+> 使某人流泪
+> ▸ to be reduced to silence/prostitution
+> 被迫缄口/卖淫
+> ▸ to reduce sb to doing sth;
+> 迫使某人做某事
+> ▸ to be reduced to begging/apologizing
+> 被迫乞讨/道歉
+> 
+**⑦ (change physical state) 改变…的状态**
+> ▸ to reduce sth to sth;
+> 把某物变成某物
+> ▸ to reduce sth to shreds/ashes
+> 把某物撕碎/使某物化为灰烬
+> ▸ to reduce sth to dust/(a) powder
+> 使某物成为尘土/粉末
+> 
+**⑧ Military to reduce sb to sth; 把某人降至某级别** 
+> ▸ to be reduced to the ranks
+> 被降为普通士兵
+> 
+**⑨ (simplify) 简化 ‹argument, issue›**
+> ▸ to reduce sth to sth;
+> 将某事物简化为某事物
+> ▸ we can reduce the problem to two main issues
+> 我们可以把这个问题概括为两个要点
+> 
+**⑩ Cooking 使…变浓 shǐ… biànnóng ‹liquid, sauce›**
+> ▸ to reduce the stock to about a third/by half
+> 使汤浓缩至原来的三分之一/一半
+> 
+**⑪ Mathematics 约简 ‹equation, expression›**
+> ▸ to reduce sth (from sth) to sth;
+> 将某物（从某物）约简为某物
+> 
+
+### B.intransitive verb
+**① (become less) «quantity, pressure, cost» 减少; «level, rate» 降低; «swelling, weight» 减轻; «length» 缩短; «strength, effect» 削弱**
+> ▸ inflation has reduced since …
+> 通货膨胀自…后已减缓
+> ▸ shareholders’funds have reduced by £3 million
+> 股东资金减少了300万英镑
+> ▸ by 1995 this figure had reduced (from 5%) to under 4%
+> 截至1995年这个数字已（从5%）降至4%以下
+**② Cooking «liquid, sauce» 变浓**
+> ▸ let the stock reduce to half its volume
+> 让汤浓缩至原来的一半
+**③ (mainly US) informal (lose weight) 减肥**
+> ▸ she's reducing again
+> 她又在减肥了
+> 
+
+### 短语动词  Phrasal Verbs
+#### `reduce sb/sth (from sth) to sth/to doing sth`
+[usually passive] 使陷入（更坏的）境地；使沦落；使陷入窘境
+`to force sb/sth into a particular state or condition, usually a worse one`
+> a beautiful building reduced to rubble
+> 已化为残垣断壁的漂亮建筑
+> 
+> She was reduced to tears by their criticisms.
+> 他们的批评使她流下了眼泪。
+> 
+> They were reduced to begging in the streets.
+> 他们沦落到沿街乞讨。
+>
+> Her challenge reduced them to silence.
+> 她的质问让他们哑口无言。
+> 
+#### reduce sth to sth
+将…概括成（或简化为）
+`to change sth to a more general or more simple form`
+> We can reduce the problem to two main issues.
+> 我们可以将这个问题概括成两个要点。
+> 
+
+&emsp;
+## 10. wreck | BrE rɛk, AmE rɛk |
+### A.noun
+**① Nautical (event) 车祸；交通事故**
+> He was killed in a car wreck.
+> 他在一场车祸中丧生。
+> 
+**② (car,plane, ship) 撞毁的汽车，飞机，船**
+> Two passengers are still trapped in the wreck.
+> 有两名乘客仍被困在失事的车辆里。
+> 
+**③ (person) 受到严重损伤的人，精疲力竭的人;身体状况极差的人**
+> ▸ a human wreck
+> 废人
+> 
+> Physically, I was a total wreck.
+> 从身体上说，我完全是一个废人。
+> 
+> The interview reduced him to a nervous wreck .
+> 这次面试使得他的精神高度紧张。
+> 
+**④ (北美英语) = `crash`**
+> a car/train wreck 
+> 汽车 / 火车失事
+> 
+**⑤ (informal)状况非常糟糕的车辆（建筑物，关系等）**
+`a vehicle, building, etc. that is in very bad condition`
+> The house was a wreck when we bought it.
+> 我们买下这座房子时，它破烂不堪。
+> 
+> (figurative)They still hoped to salvage something from the wreck of their marriage.
+> 他们仍然希望从他们破碎的婚姻中挽回点什么。
+> 
+
+### B.transitive verb
+**① (destroy, damage) 毁坏**
+> ▸ to be wrecked by fire/by an explosion/in a crash
+> 被烧毁/炸毁/撞毁
+> 
+> ▸ to be wrecked
+> «ship» 失事 shīshì
+> «person» 遇难 yùnàn
+> 
+**② figurative (spoil) 彻底毁灭**
+> ▸ you've wrecked my whole life/future!
+> 你毁了我的一生/前程！
+> 
+
+
+&emsp;
+## 11. On turning eagerly to the text
+on 的意思是 `on the occasion of`,`directly afte`r(当时，随后)。
+`turn to` 转换到；向(某人)求助；求助于
+
+
+&emsp;
+## 12. snag
+### A.noun
+**① （尤指潜在的、意外的、不严重的）问题，困难，障碍，麻烦**
+> ▸ there's just one snag
+> 只有一个问题
+> 
+> ▸ that's the snag
+> 那正是症结
+> 
+> ▸ the snag is that …
+> 麻烦的是…
+> 
+> ▸ to hit or run into a snag
+> 遇到麻烦
+>
+> There is just one small snag ─ where is the money coming from?
+> 只有一个小问题——钱从哪儿来？
+> 
+> Let me know if you run into any snags.
+> 要是遇到什么麻烦就告诉我。
+> 
+**② (tear) 钩破处**
+> ▸ there's a snag in my tights
+> 我的连裤袜有一处抽丝
+> 
+> ▸ a snag in the curtain
+> 窗帘上的挂破处
+> 
+**③ (sharp projection) 突出物**
+
+### B.transitive verb 
+**① 钩破 ‹tights, sleeve›; 擦破 ‹hand, fingernail›**
+> ▸ mind you don't snag your trousers on that barbed wire
+> 当心不要被那些带刺铁丝网挂破裤子
+>
+> She snagged a heel on a root and tumbled to the ground...
+> 她脚后跟被一个树根绊了一下，踉踉跄跄地摔倒在地上。
+> 
+
+**② (北美英语, informal)抓住；抢先获得**
+`to succeed in getting sth quickly, often before other people`
+> I snagged a ride from Joe.
+> 我截住乔的车搭了一段路。
+> 
+
+### C.intransitive verb
+`to snag on sth` 钩在某物上 
+> ▸ the fishing net has snagged on the propeller
+> 渔网缠住了螺旋桨
+>
+>  The nets snagged on some rocks.
+> 渔网缠在礁石上了。
+> 
+
+
+&emsp;
+## 13. anecdote
+**(2) N-VAR 轶事；趣闻**
+`An anecdote is a short, amusing account of something that has happened.`
+> Pete was telling them an anecdote about their mother...
+> 皮特正在给他们讲一件他们母亲的趣闻。
+> 
+**(2) N-VAR （无根据的）传闻**
+`Anecdotes are individual accounts of something that are not reliable evidence.`
+> The image of the fox as a pest is grossly exaggerated in anecdote and folklore.
+> 狐狸的害人精形象在传闻和民间故事中遭到严重的夸大。
+> 
+
+
+&emsp;
+## 14. cause and effect
+因果关系；因果，因果关系
+
+
+&emsp;
+## 15. persecute
+### verb
+[动词+名词短语] [often passive]
+**(1) ~ sb (for sth) （因种族、宗教或政治信仰）迫害，残害，压迫**
+`to treat sb in a cruel and unfair way, especially because of their race, religion or political beliefs`
+> Throughout history, people have been persecuted for their religious beliefs.
+> 人们因宗教信仰而受迫害的情况贯穿了整个历史。
+> 
+> persecuted minorities
+> 被迫害的少数群体
+> 
+**(2)  骚扰；打扰；为…找麻烦**
+`to deliberately annoy sb all the time and make their life unpleasant`
+同义词：`harass`
+> Why are the media persecuting him like this?
+> 新闻媒体为什么总这样揪住他不放？
+> 
+
+
+&emsp;
+## 16. aircraft carrier
+n. 航空母舰
+
+
+&emsp;
+## 17. aerodrome ˈerədroʊm/
+n. 小型飞机场
+
+
+&emsp;
+## 18. squadron
+**[可与单数或复数动词连用的可数名词] （空军或海军的）中队**
+`a group of military aircraft or ships forming a section of a military force`
+> a bomber/fighter squadron 
+> 轰炸机 / 战斗机中队
+> 
+
+
+&emsp;
+## 19. psychiatric /ˌsaɪkiˈætrɪk/
+**(1) ADJ 精神病学的**
+> We finally insisted that he seek psychiatric help.
+> 我们最后坚持要求他寻求精神科医师的帮助。
+> 
+**(2) ADJ 精神疾病的**
+> About 4% of the prison population have chronic psychiatric illnesses.
+> 大约4%的犯人有慢性精神疾病。
+> 
+
+
+&emsp;
+## 20. orphanage /ˈɔːrfənɪdʒ/
+n. 孤儿院
