@@ -5317,7 +5317,7 @@ clasp的宾语通常为hand或另一个人。
 
 &emsp;
 &emsp; 
-# Lesson Non-auditory Effects of Noise 噪音的非听觉效应
+# Lesson 25 Non-auditory Effects of Noise 噪音的非听觉效应
 &emsp;&emsp; 选自英国实验心理学家 `Donald E. Broadben`t (1926-1993), `Non-auditory effects of Noise`.
 ## 1. auditory
 **adj. (technical 术语)听的；听觉的**
@@ -5907,3 +5907,440 @@ n. 小型飞机场
 &emsp;
 ## 20. orphanage /ˈɔːrfənɪdʒ/
 n. 孤儿院
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 26 The Past Life of the Earth 地球上的昔日生命
+&emsp;&emsp; 选自英国著名地理学家 `Errol Ivor White` (1901-1985)所撰同名文章, `Discovery`, 1961.
+## 1.  burial
+**noun [不可数名词, 可数名词] 埋葬；葬礼**
+`the act or ceremony of burying a dead body`
+> a burial place/mound/site 
+> 安葬地；坟头；坟地
+> 
+> Her body was sent home for burial.
+> 她的尸骨已运回家乡安葬。
+> 
+> His family insisted he should be given a proper burial.
+> 他的家人坚持要为他举行适当的葬礼。
+> 
+
+
+&emsp;
+## 2. silt
+### noun
+**[不可数名词] （沉积在河口或港口的）泥沙，淤泥，粉沙**
+`sand, mud, etc. that is carried by flowing water and is left at the mouth of a river or in a harbour`
+> The lake was almost solid with silt and vegetation.
+> 湖里几乎快被淤泥和植物填满了。
+> 
+【派生词】`silty` adj.
+> silty soils
+> 粉砂土
+> 
+
+### verb
+**`silt sth up` / `silt up` （使）淤塞**
+`to block sth with silt ; to become blocked with silt`
+> Sand has silted up the river delta.
+> 泥沙把这条河的三角洲淤塞了。
+> 
+> The harbour has now silted up.
+> 港口现已淤塞。
+> 
+
+&emsp;
+## 3. avourable circumstances
+有利的环境；顺境
+
+
+
+&emsp;
+## 4. set in
+
+**PHRASAL VERB (不好的事情)产生，开始，到来，恶化**
+`If something unpleasant sets in, it begins and seems likely to continue or develop.`
+> Then disappointment sets in as they see the magic is no longer there...
+> 当他们发现魔力已失的时候，失望的情绪开始蔓延。
+>
+> As people get older, they get set in their ways.
+> 随着年龄的增长，人就积习成性。
+> 
+
+
+&emsp;
+## 5. even more
+更
+> By 1613 even more desperate measures were in contemplation.
+> 到1613年，甚至考虑要采取更为孤注一掷的措施。
+> 
+> They rebuilt the house on an even more lavish scale than before.
+> 他们重造了房子，规模甚至比以前更大。
+> 
+> She's even more intelligent than her sister.
+> 她甚至比她姐姐还聪明。
+> 
+> He became even more resolute in his opposition to the plan.
+> 他更加坚决地反对这个计划。
+> 
+
+
+&emsp;
+## 6. scavenge /ˈskævɪndʒ/
+### A.transitive verb
+**① (search through) 在（废弃物中）…中搜寻 ‹dustbin, scrapyard›**
+> ▸ to scavenge sth for sth;
+> 在某物中搜寻某物
+> 
+**② (search for) 拾荒 ‹junk, food›**
+> ▸ they scavenged metal from the scrapyard
+> 他们在废品场捡废金属
+> 
+**③ (eat) «animal» 人、兽或鸟（从废弃物中）觅食 ‹carrion›**
+> Many are orphans, their parents killed as they scavenged for food...
+> 很多人是孤儿，他们的父母在垃圾中找吃的时丢了性命。
+> 
+**④ of animals or birds 兽或鸟吃（动物尸体）
+> [动词+名词短语] Crows scavenge carrion left on the roads.
+> 乌鸦吃弃在路上的腐肉。
+> 
+> [单独使用的动词] Some fish scavenge on dead fish in the wild.
+> 在大自然中，有的鱼以死鱼为食。
+> 
+
+### B.intransitive verb
+**«person, animal» 搜寻**
+> ▸ to scavenge in or through the dustbins for sth
+> 在垃圾箱里搜寻某物
+> 
+
+### scavenger /ˈskævɪndʒər/
+n. 拾荒者；食腐动物；捡破烂的人；食腐肉的兽(或鸟)
+
+
+&emsp;
+## 7. by chance
+偶然，碰巧；意外地
+> Several years after they'd split up they met again by chance in Paris.
+> 他们分手几年以后在巴黎又偶然相遇。
+> 
+> I saw the letter purely by chance.
+> 我看见这封信纯属偶然。
+> 
+
+
+&emsp;
+## 8. vole /voʊl/
+n. 田鼠
+
+
+&emsp;
+## 9. decompose
+### verb
+**(1) 腐烂**
+`to be destroyed gradually by natural chemical processes`
+同义词：`decay` , `rot`
+> [单独使用的动词] a decomposing corpse
+> 正在腐烂的尸体
+> 
+> As the waste materials decompose, they produce methane gas.
+> 废物腐烂时会产生沼气。
+> 
+> [动词+名词短语] a decomposed body
+> 已经腐烂的尸体
+> 
+**(2) [动词+名词短语, 单独使用的动词] ~ (sth) (into sth) (technical 术语)（使）分解**
+`to divide sth into smaller parts; to divide into smaller parts`
+> Water can be decomposed(resolved) into hydrogen and oxygen.
+> 水可分解为氢和氧。
+> 
+> The fertiliser releases nutrients gradually as bacteria decompose it.
+> 随着细菌的分解，肥料逐渐释放出各种营养成分。
+> 
+
+### 【派生词】decomposition 
+n. 分解；腐烂
+> [不可数名词] the decomposition of organic waste
+> 有机垃圾的分解
+> 
+
+
+&emsp;
+## 10. due
+### A.adjective
+**① predicative (payable) 到期的**
+**to be/fall due; «rent, instalment, payment» 到期**
+> Payment is due on 1 October.
+> 付款期限为10月1日。
+> 
+**② predicative (owed, entitled) 应有的；应得的;应得到的**
+**`to be due (for) sth;`应得到 ‹money, promotion›**
+> She's due for promotion soon.
+> 她很快该晋升了。
+> 
+**`to be due to sb/sth;` «money, thanks» 应给予 ‹person, company›**
+> ▸ to be due sb;
+> 归属某人
+> 
+> ▸ I'm still due 10 days' leave
+> 我还应有10天的假期
+> 
+> ▸ the debts due to the company
+> 公司的应收债款
+> 
+**③ usually attributive (appropriate) 适当的‹reflection, praise, attention›**
+> ▸ to pay **due consideration** or regard to sth
+> 适当考虑某事物
+> 
+> ▸ with all due respect
+> 恕我冒昧
+> 
+> ▸ with all due regard or respect to sb/sth
+> 充分考虑某人/某事物
+> 
+> ▸ in due course
+> 在适当的时候
+> 
+> ▸ he was charged with driving without due care and attention
+> 他被控鲁莽驾驶
+> 
+**④ predicative (scheduled, expected) 预期应到的; 预计**
+> ▸ to be due;
+> 
+**«event» 预期发生**
+**«train, traveller» 预期到达**
+> ▸ to be due to do sth;
+> 预定做某事
+> ▸ to be due out;
+> 
+**Transport 预定出发/抵达**
+> The next train is due in five minutes.
+> 下一班火车预计在五分钟后抵达。
+> 
+**«book, album» 预定出版/发行**
+> The band's first album is due for release later this month.
+> 这个乐队的第一张唱片预定在本月下旬发行。
+> 
+**«person, transport» 预定返回**
+> ▸ when's the baby due?
+> 宝宝什么时候出生？
+> 
+**预计到期**
+> ▸ my essay's due next Wednesday
+> 我的文章下周三必须交
+> 
+> ▸ the project is due for completion in 2010
+> 该项目预计2010年完工
+> 
+
+### B.`due to` preposition phrase
+**predicative (caused by, because of) 由于；因为**
+> ▸ due to the fact that …;
+> 由于…的事实
+> 
+> ▸ to be due to sb;
+> 多亏某人
+> 
+> ▸ due to bad weather/a fall in demand/unforeseen circumstances
+> 由于恶劣天气/需求减少/不可预见的情况
+> 
+
+### C.adverb
+**正对着 `~ north/south/east/west`**
+> ▸ due north/south/east/west
+> 正北/正南/正东/正西
+> 
+
+**D.noun figurative**
+**(what is owed to sb) 应得的东西**
+> ▸ to give sb his/her due
+> 给某人说句公道话
+> 
+> ▸ he always tries to give folk their due
+> 他总是尽量待人公平
+> 
+
+### E.dues plural noun
+**应缴款（如俱乐部会费）**
+**to pay one's dues**
+> literal 交纳会费 
+> Only 18 of the UN's 180 members had paid their dues by the January deadline.
+> 在一月最后期限前联合国 180 个成员国只有 18 个缴纳了会费。
+> 
+> (fulfil obligation) 尽责任 
+> I paid my dues for this family.
+> 我为这个家付出了我应付的。
+> 
+> (experience difficulties) 经历苦难
+> ▸ this drummer has paid his dues with the best
+> 这个鼓手经历的苦难不比任何人少
+> 
+
+
+&emsp;
+## 11. crevasse /krəˈvæs/
+**noun （尤指冰川等的）裂缝，裂隙，冰隙**
+`a deep open crack, especially in ice, for example in a glacier`
+
+
+&emsp;
+## 12. Siberian /saɪˈbɪriən/
+adj. 西伯利亚的；西伯利亚人的
+n. 西伯利亚人
+
+
+
+&emsp;
+## 13. mammoth /ˈmæməθ/
+n. 猛犸象；猛犸(象)；毛象
+adj. [usually before noun] 极其巨大的；庞大的
+> a mammoth task
+> 巨大的任务
+> 
+> a financial crisis of mammoth proportions
+> 极其严重的金融危机
+> 
+
+
+&emsp;
+## 14. fir fɜːr/
+n. 冷杉；枞
+
+
+&emsp;
+## 15. paleontology /ˌpeɪliənˈtɑlədʒi/
+n. 古生物学
+
+
+&emsp;
+## 16. tar /tɑːr/
+### A.noun
+**① uncountable (from wood or coal) 焦油；焦油沥青；柏油**
+> ▸ a tar road
+> 柏油路
+> ▸ to spoil the ship for a ha'porth of tar
+> 因小失大
+> 
+**② uncountable (from cigarettes) 烟碱**
+> ▸ low-/middle-/high-tar cigarettes
+> 焦油含量低/中/高的卷烟
+> 
+**③ countable dated informal (sailor) 水手**
+
+### B.transitive verb
+**用焦油沥青覆盖 ‹road, roof›**
+
+### 习语
+(1) `to be tarred with the same brush (as sb)` 被看成（与某人）是一路货色
+> I am a football supporter and I have to often explain that I'm not one of the hooligan sort because we'll all get tarred with the same brush when there's trouble.
+> 我是足球迷，经常要解释我不是那种足球流氓，因为一旦出事，我们就会被当成是一路货色。
+> 
+(2)  to tar and feather sb 惩罚某人
+
+
+&emsp;
+## 17. sabre /ˈseɪbər/
+n. (击剑运动用的)佩剑；(弯刃)军刀，马刀
+
+
+
+&emsp;
+## 18. sabre-toothed cat
+剑齿虎
+
+
+&emsp;
+## 19. prompt /prɑːmpt/
+### A.adjective
+**① 立即；迅速的；及时的**
+> ▸ we would appreciate a prompt reply
+> 如能及时回复，我们将不胜感激
+> 
+> ▸ we require prompt payment of this account
+> 我们要求立即付清这笔账
+> 
+**② [not before noun] of a person 人敏捷的；迅速的；准时的**
+`acting without delay; arriving at the right time`
+同义词：`punctual`
+> Please be prompt when attending these meetings.
+> 参加上述会议，请准时出席。
+> 
+
+### B.adverb
+**British 准时地**
+> The meeting will begin at ten o'clock prompt.
+> 会议将于十点钟准时开始。
+> 
+
+### C.transitive verb
+**① (cause) 促使；推动；引起 ‹protest, reaction, remark›**
+> ▸ to prompt sb to do sth;
+> 促使某人做某事
+> 
+> ▸ the strike was prompted by the sacking of a worker
+> 罢工是由一名工人被解雇引起的
+> 
+> Japan's recession has prompted consumers to cut back on buying cars...
+> 日本经济的不景气使得消费者在购买车辆上减少了开支。
+> 
+**② (remind) 给…提词‹actor›**
+
+**③ (encourage to talk) 鼓励…说下去‹speaker›**
+> [动词+名词短语] She was too nervous to speak and had to be prompted.
+> 她紧张得说不出话来，只好听人提示。
+> 
+> (computing 计)The program will prompt you to enter data where required.
+> 这个程序在必要时将提醒你输入数据。
+> 
+> [动词+直接引语] ‘And then what happened?’ he prompted.
+> “后来怎样了？”他鼓励对方继续说下去。
+> 
+
+### D.noun
+**① （给演员的）提词，提示**
+> ▸ to give sb a prompt
+> 给某人提词
+>
+> Her blushes were saved by a prompt from one of her hosts.
+> 幸亏一位主持人提示，她才不至于尴尬脸红。
+> 
+**② Computing(计算机) 提示符**
+
+
+&emsp;
+## 20. bog /bɑːɡ/
+### noun
+**(1) [可数名词, 不可数名词] 沼泽（地区）**
+`(an area of) wet soft ground, formed of decaying plants`
+> a peat bog
+> 泥炭沼
+> 
+**(2) [可数名词] (英国英语, slang)厕所；浴室**
+`a toilet/bathroom`
+> Have you got any bog roll (= toilet paper) ?
+> 你带卫生纸了吗？
+> 
+
+### 短语动词  Phrasal Verbs
+#### `(1) bog sth/sb down (in sth)`
+**① 使某人 / 某物陷进烂泥（或泥沼）**
+`to make sth sink into mud or wet ground`
+> The tank became bogged down in mud.
+> 坦克陷入了烂泥中。
+> 
+**② 妨碍；阻碍**
+`to prevent sb from making progress in an activity`
+> We mustn't get bogged down in details.
+> 我们一定不能因细节问题误事。
+> 
+
+### (2) `bog off`
+(英国英语, taboo, slang)（只用于命令）走开
+`only used in orders, to tell sb to go away`
+> Bog off, I'm trying to sleep!
+> 走开，我要睡觉啦！
+> 
