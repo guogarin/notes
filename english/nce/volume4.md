@@ -6344,3 +6344,641 @@ n. (击剑运动用的)佩剑；(弯刃)军刀，马刀
 > Bog off, I'm trying to sleep!
 > 走开，我要睡觉啦！
 > 
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 27 The "Vasa" “瓦萨”号
+&emsp;&emsp; 选自 `Roy Saunders`, `The Raising of the Vasa: The Rebirth of a Swedish Galleon`, 1962.
+## 1. galleon /ˈɡæliən/
+n. 帆船；(15–17世纪使用的)西班牙大帆船
+
+
+&emsp;
+## 2. Stockholm ˈstɒkˌhoʊlm/
+n. 斯德哥尔摩
+`Stockholm syndrome` 斯德哥尔摩综合症
+
+
+&emsp;
+## 3. imperial /ɪmˈpɪriəl/
+### adj.
+[only before noun]
+**(1) 帝国的；皇帝的**
+> the imperial family/palace/army
+> 皇室家族；皇宫；皇家陆军
+> 
+> imperial power/expansion
+> 皇权；帝国的扩张
+> 
+
+**(2) （度量衡）英制的**
+> The imperial gallon is not the same size as the US one.
+> 英制的加仑与美制的容量不同。
+> 
+
+### 词根词缀
+`imper`-命令,统治
+`imperative`  adj. 重要紧急的
+> adj. 迫切的；祈使的；表示命令的；急需处理的；重要紧急的；表示权威的
+> n. 祈使语气；祈使语气动词；必要的事；重要紧急的事
+> 
+
+
+&emsp;
+## 4. armament /ˈɑːrməmənt/
+**(1) N-VAR （飞机或军用车辆配备的）武器，军械，火力装备**
+`Armament is used to refer to weapons and bombs carried by an aircraft or other military vehicle.`
+> ...a bomber with twin engines and heavy defensive armament.
+> 配有双引擎和重型防御装备的轰炸机
+> 
+> the armaments industry
+> 军火工业
+> 
+
+**(2) N-UNCOUNT 武装；战备**
+`A country's increase in the number and effectiveness of its weapons is its armament .`
+> ...the pursuit of national security through national armament...
+> 通过全国性战备保障国家安全
+> 
+
+
+&emsp;
+## 5. mount /maʊnt/
+### verb
+**(1) 组织 organize [动词+名词短语] 准备；安排；组织开展**
+`to organize and begin sth`
+同义词：`arrange`
+to mount a protest/campaign/an exhibition 
+发起抗议 / 运动；举办展览
+
+**(2) [单独使用的动词] 逐步增加**
+`to increase gradually`
+> Pressure is mounting on the government to change the law.
+> 迫使政府修改法律的压力不断增加。
+> 
+> The death toll continues to mount.
+> 死亡人数持续增加。
+> 
+
+**(3) [动词+名词短语] (formal)登上；爬上；攀登**
+`to go up sth, or up on to sth that is raised`
+同义词：`ascend`
+> She slowly mounted the steps.
+> 她慢慢地爬上台阶。
+> 
+> He mounted the platform and addressed the crowd.
+> 他登上讲台对人群发表演说。
+> 
+ bicycle/horse
+
+**(4) 骑上；乘上；跨上（自行车；马等）**
+> `to get on a bicycle, horse, etc. in order to ride it`
+> [动词+名词短语] He mounted his horse and rode away.
+> 他骑上马走了。
+> 
+ picture/jewel, etc.
+
+**(5) [动词+名词短语] ~ sth (on/onto/in sth)镶嵌；安置(图画、宝石等)**
+`to fix sth into position on sth, so that you can use it, look at it or study it`
+> The specimens were mounted on slides.
+> 标本安放在载片上。
+> 
+> The diamond is mounted in gold.
+> 这颗钻石镶在金饰物上。
+> 
+
+**(6) [动词+名词短语] 雄性动物）爬上（雌性动物的背）进行交配**
+`to get onto the back of a female animal in order to have sex`
+
+### noun
+**(1) `Mount` 在现代英语里仅用于地名山；山峰**
+`(abbr. Mt)used in modern English only in place names `
+> Mount Kilimanjaro
+> 乞力马扎罗山
+> 
+> St Michael's Mount
+> 圣迈克尔山
+> 
+马 horse
+
+**(2) (formal orliterary)坐骑**
+`a horse that you ride on`
+用以展示 / 支持某物 for displaying/supporting sth
+> ...the number of owners who care for older mounts.
+> 愿意照料老马的马主的数量
+> 
+
+**(3) 衬纸板；载片；裱褙**
+`something such as a piece of card or glass that you put sth on or attach sth to, to display it`
+
+**(4) `also mounting` 托架；支撑架**
+`something that an object stands on or is attached to for support`
+> an engine/gun mount 
+> 发动机 / 炮架
+> 
+
+### 短语动词  Phrasal Verbs
+`mount up` （尺寸和数量上）增加，上升
+`to increase gradually in size and quantity`
+> Meanwhile, my debts were mounting up.
+> 同时，我的债务在不断增加。
+> 
+
+
+&emsp;
+## 6. ferment /fərˈment/
+### verb
+**（使）发酵**
+`to experience a chemical change because of the action of yeast or bacteria, often changing sugar to alcohol; to make sth change in this way`
+> [单独使用的动词] Fruit juices ferment if they are kept for too long.
+> 果汁存放过久就会发酵。
+> 
+> (figurative)A blend of emotions fermented inside her.
+> 她百感交集，激动不已。
+> 
+> [动词+名词短语] Red wine is fermented at a higher temperature than white.
+> 红葡萄酒发酵的温度比白葡萄酒高。
+> 
+
+### noun
+**[不可数名词, 单数名词] (formal)（政治或社会上的）动乱，骚动，纷扰**
+`a state of political or social excitement and confusion`
+> The country is in ferment.
+> 这个国家动荡不安。
+> 
+> The whole country has been in a state of political ferment for some months.
+> 几个月来，整个国家一直处于政治动荡状态。
+> 
+
+
+&emsp;
+## 7. stern
+### adj.
+**(1) 严厉的；苛刻的；要求别人服从的**
+`serious and often disapproving; expecting sb to obey you`
+同义词：`strict`
+> a stern face/expression/look 
+> 严厉的面容 / 表情 / 目光
+> 
+> a stern warning 
+> 严厉的警告
+> 
+> Her voice was stern.
+> 她声调严厉。
+> 
+> The police are planning sterner measures to combat crime.
+> 警方正制订更严厉的措施打击犯罪活动。
+> 
+
+**(2) 严峻的；难对付的**
+`serious and difficult`
+> We face stern opposition.
+> 我们遇到激烈的反对。
+> 
+
+### noun 
+**船尾**
+`the back end of a ship or boat`
+> from stem to stern
+> 从船头到船尾
+> 
+
+### 习语
+`be made of sterner stuff`性格十分坚强；有很大的毅力
+
+
+&emsp;
+## 8. cherub /ˈtʃerəb/
+**N-COUNT 小天使(艺术作品中常表现为带翼、裸身的孩子)**
+
+
+&emsp;
+## 9. zoomorphic / ˌzoʊəˈmɔrfɪk /
+**adjective (having animal forms) 动物形的 ; (having gods of animal form) 动物形神祗的**
+
+
+&emsp;
+## 10. ablaze
+### adj.
+[not before noun]
+**(1) 猛烈燃烧**
+`burning quickly and strongly`
+> The whole building was soon ablaze.
+> 整栋大楼很快就熊熊燃烧起来。
+> 
+> Cars and buses were set ablaze during the riot.
+> 暴乱中许多轿车和公共汽车被纵火焚烧。
+> 
+
+**(2) ~ (with sth) 闪耀；发光；明亮；色彩鲜艳**
+`full of bright colours or light`
+> The trees were ablaze with the colours of autumn.
+> 树木披上了绚丽的秋装。
+> 
+> There were lights still ablaze as they drove up to the house.
+> 他们驾车到了屋前时，（屋内）灯火仍然通明。
+> 
+
+**(3) ~ (with sth) 充满激情的；情绪激动的**
+`full of strong emotion or excitement`
+> He turned to her, his eyes ablaze with anger.
+> 他怒目圆睁，转过身来对着她。
+> 
+
+
+&emsp;
+## 11. stir /stɜːr/
+### verb
+**(1) [动词+名词短语] ~ sth (into sth) | ~ sth (in)搅动；搅和；搅拌**
+`to move a liquid or substance around, using a spoon or sth similar, in order to mix it thoroughly`
+> She stirred her tea.
+> 她搅了搅茶。
+> 
+> The vegetables are stirred into the rice while it is hot.
+> 趁米饭热时把蔬菜拌进去。
+> 
+> Stir in the milk until the sauce thickens.
+> 把牛奶搅进去，直到酱汁变稠为止。
+> 
+
+**(2) （使）微动**
+`to move, or to make sth move, slightly`
+> [单独使用的动词] She heard the baby stir in the next room.
+> 她听见婴儿在隔壁动弹。
+> 
+> [动词+名词短语] A slight breeze was stirring the branches.
+> 微风吹动着树枝。
+> 
+> A noise stirred me from sleep.
+> 响声把我从睡梦中惊醒。
+> 
+
+**(3) （使）行动，活动**
+`to move, or to make sb move, in order to do sth`
+> [单独使用的动词] You haven't stirred from that chair all evening!
+> 你坐在那把椅子上一晚上没动了！
+> 
+> [动词+名词短语] Come on, stir yourself. You're late!
+> 快，快走吧。你要迟到了！
+> 
+> Their complaints have finally stirred him into action.
+> 他们的抱怨最终促使他采取了行动。
+> 
+
+**(4) [动词+名词短语] ~ sb (to sth) 打动；激发**
+`to make sb excited or make them feel sth strongly`
+> a book that really stirs the imagination
+> 很能激发人的想象力的书
+> 
+> She was stirred by his sad story.
+> 他那悲惨的故事打动了她。
+> 
+
+**(5) [单独使用的动词] of a feeling or a mood 感情或情绪开始感到；逐渐产生；萌动；被唤起**
+`to begin to be felt`
+> A feeling of guilt began to stir in her.
+> 她心里渐渐生出了内疚感。
+> 
+
+**(6) (英国英语, informal, disapproving)拨弄是非**
+`to try to cause trouble`
+> [动词+名词短语] You're just stirring it !
+> 你这不是搬弄是非吗！
+> 
+
+### noun 
+**(1) [单数名词] （一些人感到的）激动，愤怒，震动**
+`excitement, anger or shock that is felt by a number of people`
+同义词：`commotion`
+> Her resignation caused quite a stir .
+> 她的辞职引起很大震动。
+> 
+
+**(2) [可数名词, 通常用单数形式] 搅动；搅和；搅拌**
+`the action of stirring sth`
+> Could you give the rice a stir?
+> 你把米饭搅一搅好吗？
+>
+
+### `mix`|`stir`|`mingle`|`blend`
+`These words all refer to substances, qualities, ideas or feelings combining or being combined.`以上各词均指物质、品质、想法或情感的混合、掺合、融合。
+#### `mix`
+`to combine two or more substances, qualities, ideas or feelings, usually in a way that means they cannot easily be separated; to be combined in this way` 指（使）两种或以上物质、品质、想法或情感等混合、掺合、融合：
+> Mix all the ingredients together in a bowl.
+> 把所有的配料放在碗里，搅和一下。
+> 
+> Oil and water do not mix.
+> 油和水不相融。
+> 
+
+#### `stir`
+`to move a liquid or substance around, using a spoon or sth similar, in order to mix it thoroughly` 指搅动、搅和、搅拌（液体或物质）：
+> She stirred her tea.
+> 她搅了搅茶。
+> 
+
+#### `mingle`
+`to combine or be combined` 指（使）混合、掺合、融合
+注释 Notes
+> `Mingle can be used to talk about sounds, colours, feelings, ideas, qualities or substances. It is used in written English to talk about how a scene or event appears to sb or how they experience it.`
+> `mingle`可用以指声音、颜色、情感、想法、品质或物质等交织在一起，用于书面英语表示对某一场景或事件的感受或经历：
+> 
+
+> The sounds of laughter and singing mingled in the evening air.
+> 笑声和歌声交织在夜空中。
+> 
+> He felt a kind of happiness mingled with regret.
+> 他感到既高兴又遗憾。
+> 
+
+#### `blend`
+`to mix two or more substances or flavours together; to be mixed together` 指（使）两种或以上物质或味道混合、掺合：
+> Blend the flour with the milk to make a smooth paste.
+> 把面粉和牛奶调成均匀的面糊。
+> 
+#### 用mix还是blend？
+`If you blend things when you are cooking you usually combine them more completely than if you just mix them. Mix can be used to talk about colours, feelings or qualities as well as food and substances. In this meaning blend is mostly used in the context of cooking. It is also used to talk about art, music, fashion, etc. with the meaning of ‘combine in an attractive way’.`
+烹饪时用blend表示把各种材料完全掺和到一起，用mix只表示将这些东西混合在一起。
+
+mix可指将食物、物质混合在一起，也可指颜色、情感、品质融合在一起。
+
+在这一含义中，blend主要用于烹饪语境。
+
+blend亦可用以表示艺术、音乐、时尚等融合和协调。
+
+
+&emsp;
+## 12. thundered a salute
+鸣炮致礼
+
+
+&emsp;
+## 13. churn /tʃɜːrn/
+### verb
+
+**(1) ~ (sth) (up) 剧烈搅动；（使）猛烈翻腾**
+`if water, mud, etc. churns , or if sth churns it (up) , it moves or is moved around violently`
+> [单独使用的动词] The water churned beneath the huge ship.
+> 水在巨轮下面剧烈翻滚。
+> 
+> [动词+名词短语] Vast crowds had churned the field into a sea of mud.
+> 大批大批的人把场地踩得一片泥泞。
+> 
+
+**(2) 反胃，恶心（担心、忧虑、厌恶或恐惧的强烈感觉）**
+`if your stomach churns or if sth churns your stomach, you feel a strong, unpleasant feeling of worry, disgust or fear`
+> [单独使用的动词] My stomach churned as the names were read out.
+> 名单一宣布，我就觉得胃里翻腾得难受。
+> 
+
+**(3) ~ (sb) (up) （使）感到不安，心烦意乱**
+`to feel or to make sb feel upset or emotionally confused`
+> [单独使用的动词] Conflicting emotions churned inside him.
+> 相互矛盾的情绪使他感到心烦意乱。
+> 
+
+**(4) [动词+名词短语] 用搅乳器搅（乳以制作黄油）**
+`to turn and stir milk in a special container in order to make butter`
+
+### noun
+**(1) （制作黄油的）搅乳器**
+
+**(2) (英国英语)（旧时）盛奶大罐，奶桶**
+
+### 短语动词  Phrasal Verbs
+`churn sth out` (informal, often disapproving)（粗制滥造地）大量生产，大量炮制
+`to produce sth quickly and in large amounts`
+
+
+&emsp;
+## 14. pennant  /ˈpenənt/
+**(1) n.(船上用作信号等的)三角旗；**
+> The second car was flying the Ghanaian pennant.
+> 第二辆车插着加纳的三角旗。
+> 
+**(2) n. （棒球联赛冠军队获得的）锦旗，冠军地位**
+> The Red Sox lost the pennant to Detroit by a single game.
+> 红袜队以一场之差将冠军输给了底特律队。
+> 
+
+
+&emsp;
+## 15. muzzle /ˈmʌzl/
+n. 枪口；炮口；(狗、马等动物的)口鼻；(防止动物咬人的)口套
+vt. 压制，钳制(言论)；使缄默；(给狗)戴口套
+> They accused the government of muzzling the press.
+> 他们指责政府压制新闻自由。
+>
+> He complained of being muzzled by the chairman...
+> 他抱怨主席不让他发言。
+>
+> ...dogs like pit bulls which have to wear a muzzle.
+> 像比特犬这种得戴嘴套的狗
+> 
+
+
+&emsp;
+## 16.squall /skwɔːl/
+**(1) N-COUNT 飑;突起的大风(常引起短暂暴雨或暴雪)**
+> The boat was hit by a squall north of the island.
+> 船在岛的北边遇到了狂飑。
+> 
+
+**(2) VERB 嚎叫;大声啼哭**
+> There was an infant squalling in the back of the church.
+> 有个婴儿在教堂后部大声啼哭。
+> 
+
+
+&emsp;
+## 17. list
+n. 列表；清单；名单；目录；一览表；(船的)倾斜
+v. (按某次序)把…列表，列清单，拟订清单；列举；（向一侧）倾斜；(被)列入销售清单，列入价目表；把…列入一览表
+`list`还有 **倾斜** 的意思：
+**VERB （尤指船）倾侧**
+`In sailing, if something, especially a ship, lists, it leans over to one side.`
+> The ship listed again, and she was thrown back across the bunk.
+> 船再次倾侧了，她又被甩回床铺的另一头。
+> 
+> List is also a noun.
+> The ship's list was so strong now that almost at once she stumbled.
+> 船现在倾侧得太厉害，她几乎立刻就摔倒了。
+> 
+
+&emsp;
+## 18. ordnance /ˈɔːrdnəns/
+noun
+[不可数名词]
+**(1) （可移动）大炮**
+
+**(2) 军备物资；军需品；军用器材**
+> an ordnance depot
+> 军械库
+> 
+
+
+&emsp;
+## 19. starboard /ˈstɑːrbərd/
+n. 右舷；(船舶或飞机的)右侧
+v. 向右转舵
+adj. (在)右舷的
+
+
+&emsp;
+## 20. port side
+左舷
+
+
+&emsp;
+## 21. heave /hiːv/
+### verb
+**(1) [+ 副词/介词短语] （用力）举起，拖，拉，抛**
+`to lift, pull or throw sb/sth very heavy with one great effort`
+> [动词+名词短语] I managed to heave the trunk down the stairs.
+> 我用力把箱子弄下楼梯。
+> 
+> They heaved the body overboard.
+> 他们使劲把尸体从船上抛入水中。
+> 
+> [单独使用的动词] We all heaved on the rope.
+> 我们大家一起用力拉绳子。
+> 
+**(2)[单独使用的动词] ~ (with sth) （强烈而有节奏地）起伏**
+`to rise up and down with strong, regular movements`
+> The boat heaved beneath them.
+> 小船在他们脚下颠簸着。
+> 
+> Her shoulders heaved with laughter.
+> 她笑得双肩抖动。
+> 
+**(3)[动词+名词短语] ~ a sigh, etc. （常指吃力地）缓慢发出（声音）**
+`to make a sound slowly and often with effort`
+> We all heaved a sigh of relief .
+> 我们都如释重负地舒了一口气。
+> 
+**(4) [单独使用的动词] 恶心**
+`to experience the tight feeling in your stomach that you get before you vomit`
+> The thought of it makes me heave.
+> 一想到那事我就恶心。
+> 
+
+### noun
+**(1) [可数名词] 举；拖；拉；抛**
+`an act of lifting, pulling or throwing`
+> With a mighty heave he lifted the sack onto the truck.
+> 他用劲一举，把大麻袋扔到卡车上。
+> 
+
+**(2) [不可数名词] (especially literary)起伏**
+`a rising and falling movement`
+> the steady heave of the sea
+> 大海汹涌不断的波涛
+> 
+
+
+&emsp;
+## 22. ballast
+noun
+[不可数名词]
+**(1) （船中保持平衡的）压舱物；（热气球的）镇重物**
+
+**(2) （用作公路或铁路路基的）道砟**
+
+
+&emsp;
+## 23. ammunition /ˌæmjuˈnɪʃn/
+### noun
+[不可数名词]
+**(1) 弹药**
+> He had only seven rounds of ammunition for the revolver.
+> 他这把左轮手枪只有7梭子子弹。
+> 
+
+**(2) （辩论中可攻击对方的）信息，事实，炮弹**
+`information that can be used against another person in an argument`
+> The letter gave her all the ammunition she needed.
+> 这封信给了她所需的一切有力证据。
+> 
+
+
+&emsp;
+## 24. inrush
+**noun [通常用单数形式] （突然的）流入，涌入，冲入**
+`a sudden flow towards the inside`
+> an inrush of air/water
+> 空气 / 水的涌入
+> 
+
+
+&emsp;
+## 25. Baltic /ˈbɔːltɪk/
+adj. 波罗的海的；波罗的海各国的；波罗的语族的
+n. 波罗的海；波罗的海各国；（印欧语系中的）波罗的语族
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 28 Patients and Doctors
+&emsp;&emsp; 选自英国泌尿学家 `Kenneth Macfarlane Walker` (1882–1966)所著 `Patients and doctors.`
+## 1. forefather /ˈfɔːrfɑːðər/
+n. 祖先，祖宗(尤指男性)
+
+
+&emsp;
+## 2. fervent /ˈfɜːrvənt/
+**adj.[usually before noun] 热情的；热诚的；热烈的**
+`having or showing very strong and sincere feelings about sth`
+同义词：`ardent`
+> a fervent admirer/believer/supporter 
+> 热诚的仰慕者；虔诚的信徒；热情的支持者
+> 
+> a fervent belief/hope/desire 
+> 虔诚的信仰；热望；强烈的愿望
+> 
+
+
+&emsp;
+## 3. curative /ˈkjʊrətɪv/
+**adj. (formal)能治病的；有疗效的**
+`able to cure illness`
+同义词：`healing`
+> the curative properties of herbs
+> 药草治病的功效
+>
+> Ancient civilizations believed in the curative powers of fresh air and sunlight.
+> 远古文明相信新鲜的空气和阳光有治病的功效。
+> 
+
+
+&emsp;
+## 4. astronomical figure
+天文数字
+
+
+&emsp;
+## 
+
+&emsp;
+## 
+
+&emsp;
+## 
+
+&emsp;
+## 
+
+&emsp;
+## 
+
+&emsp;
+## 
+
+&emsp;
+## 
