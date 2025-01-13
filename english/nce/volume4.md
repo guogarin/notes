@@ -6963,22 +6963,106 @@ n. 祖先，祖宗(尤指男性)
 
 
 &emsp;
-## 
+## 5. out-patient
+也就是 `outpatient`(n. 门诊病人)，对应的是 `inpatient`(n. 住院病人)
+
 
 &emsp;
-## 
+## 6. ointment /ˈɔɪntmənt/
+**(1) N-MASS 油膏；软膏；药膏**
+> A range of ointments and creams is available for the treatment of eczema...
+> 有一系列治疗湿疹的油膏和乳膏可以买到。
+> 
+**(2) `a/the fly in the ointment`  美中不足之处；败兴的人（或事物）；煞风景的人（或事物）**
+> Rachel seems to be the one fly in the ointment of Caroline's smooth life.
+> 蕾切尔似乎是卡罗琳一帆风顺的生活中唯一的麻烦。
+> 
 
 &emsp;
-## 
+## 7. dispose /dɪˈspoʊz/
+### verb
+**(1) [动词+名词短语+ 副词/介词短语] 排列；布置；安排**
+`to arrange things or people in a particular way or position`
+> God disposes all things according to his will.
+> 上帝以他的旨意处置万物。
+>
+> The general disposed his troops very well.
+> 这位将军把他的军队布置得甚好。
+> 
+**(2) `~ sb to/toward(s) sth` 使倾向于；使有意于；使易于**
+`to make sb behave in a particular way`
+> [动词+名词短语] a drug that disposes the patient towards sleep
+> 使病人想睡觉的药
+> 
+### 短语动词
+`dispose of sb/sth`  
+**(1) 去掉；清除；销毁**
+`to get rid of sb/sth that you do not want or cannot keep`
+> the difficulties of disposing of nuclear waste
+> 处理核废料的困难
+> 
+> to dispose of stolen property
+> 销赃
+> 
+**(2) 应付；解决；处理**
+`to deal with a problem, question or threat successfully`
+> That seems to have disposed of most of their arguments.
+> 这样就似乎把他们的大部分论点都驳倒了。
+> 
+**(3) 击败；杀死**
+`to defeat or kill sb`
+> It took her a mere 20 minutes to dispose of her opponent.
+> 她仅用了20分钟就击败了对手。
+> 
+
 
 &emsp;
-## 
+## 8. recount
+### verb
+**(1) `~ sth (to sb)`(formal)讲述，叙述（亲身经历）**
+`to tell sb about sth, especially sth that you have experienced`
+> [动词+名词短语] She was asked to recount the details of the conversation to the court.
+> 她被要求向法庭陈述谈话细节。
+> 
+> [动词+wh-从句] They recounted what had happened during those years.
+> 他们叙述了那些年里发生的事。
+> 
+**(2) [动词+名词短语] 重数；重新清点（选票**
+> The defeated candidate demanded a recount.
+> 落选的候选人要求重新计票。
+> 
+
 
 &emsp;
-## 
+## 9. indisposition /ˌɪndɪspəˈzɪʃn/
+n. 小病；微恙
+
 
 &emsp;
-## 
+## 10. hasten /ˈheɪsn/
+### verb
+**(1) [动词+带to的不定式] 急忙进行；赶紧说（或做）**
+`to say or do sth without delay`
+> She saw his frown and hastened to explain.
+> 看到他皱起眉头，她赶紧解释。
+> 
+> He has been described as a ‘charmless bore’─not by me, I hasten to add .
+> 他被说成是“无聊的啰唆鬼”——不是我说的，我赶忙加了一句。
+> 
+**(2) [动词+名词短语] (formal)促进；使加快**
+`to make sth happen sooner or more quickly`
+> The treatment she received may, in fact, have hastened her death.
+> 实际上，她所接受的治疗可能加快了她的死亡。
+> 
+> News of the scandal certainly hastened his departure from office.
+> 这一丑闻肯定加速了他的离任。
+> 
+**(3) [动词+ 副词/介词短语] (literary)赶往（某地）**
+`to go or move somewhere quickly`
+> One of them, the first to alight, hastened with quicksilver steps towards me.
+> 他们中第一个下来的人急急忙忙地快步向我走来。
+> 
+
 
 &emsp;
-## 
+## 11. 
