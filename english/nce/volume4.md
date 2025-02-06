@@ -7064,5 +7064,691 @@ n. 小病；微恙
 > 
 
 
+
+
+
 &emsp;
-## 11. 
+&emsp; 
+# Lesson 29 The Hovercraft 气垫船
+&emsp;&emsp; 选自 `Egon Larsen` 所著 `The Pegasus Books` 丛书，第 5 册 `Inventors` 分册，1965该书介绍了很多发明家的有趣发明，属于青少年读物.
+## 1. hover
+### verb
+[动词 usually + 副词/介词短语]
+**(1) of birds, helicopters , etc. 鸟、直升机等翱翔；盘旋**
+`to stay in the air in one place`
+> A hawk hovered over the hill.
+> 一只鹰在小山的上空翱翔。
+> 
+
+**(2) of a person 人踌躇，彷徨（尤指在某人身边）**
+`to wait somewhere, especially near sb, in a shy or uncertain manner`
+He hovered nervously in the doorway.
+他在门口紧张地来回踱步。
+
+**(3) [+ 副词/介词短语] 靠近（某事物）；处于不稳定状态**
+`to stay close to sth, or to stay in an uncertain state`
+> Temperatures hovered around freezing.
+> 气温在冰点上下徘徊。
+> 
+> He hovered on the edge of consciousness.
+> 他似醒非醒。
+> 
+> A smile hovered on her lips.
+> 她的嘴上挂着一丝笑容。
+> 
+
+**(4) （价格、价值、分数等）上下波动左右摇摆**
+`If something such as a price, value, or score hovers around a particular level, it stays at more or less that level and does not change much.`
+> In September 1989 the exchange rate hovered around 140 yen to the dollar...
+> 1989年9月，日元对美元的汇率一直在140比1的水平上下浮动。
+> 
+
+
+&emsp;
+## 2. craft
+### noun
+**(1) [可数名词, 不可数名词] 手艺；工艺**
+`an activity involving a special skill at making things with your hands`
+> traditional crafts like basket-weaving
+> 像编篮子之类的传统工艺
+> 
+> a craft fair/workshop 
+> 手工艺品交易会 / 制作车间
+> 
+> Craft, Design and Technology (= a subject in some British schools) 
+> 工艺、设计与技术（英国某些学校中的科目）
+> 
+
+**(2) [单数名词] 技巧；技能；技艺**
+`all the skills needed for a particular activity`
+> chefs who learned their craft in top hotels
+> 在高级饭店学过烹调技艺的厨师
+> 
+> the writer's craft
+> 写作技巧
+> 
+
+**(3) [不可数名词] (formal, disapproving)诡计；手腕；骗术**
+`skill in making people believe what you want them to believe`
+> He knew how to win by craft and diplomacy what he could not gain by force.
+> 他擅长于通过计谋和外交手腕赢得他用武力无法得到的东西。
+> 
+
+**(4) [可数名词] 小船；船**
+`a boat or ship`【不规则形式】复数名词 craft
+> Hundreds of small craft bobbed around the liner as it steamed into the harbour.
+> 班轮驶进港口时，周围的许多小船颠簸起来。
+> 
+> 
+> a landing/pleasure craft 
+> 登陆 / 游艇
+> 
+
+**(5) [可数名词] 飞行器；飞机；航天器；宇宙飞船；航天飞机**
+`an aircraft or spacecraft`【不规则形式】复数名词 craft
+
+### Verb
+**[动词+名词短语] [usually passive] （尤指用手工）精心制作**
+`to make sth using special skills, especially with your hands`
+同义词：`fashion`
+> All the furniture is crafted from natural materials.
+> 所有的家具均采用天然材料精心制作而成。
+> 
+> a carefully crafted speech
+> 精心准备的讲话
+>
+> The windows would probably have been crafted in the latter part of the Middle Ages...
+> 这些窗户很可能是中世纪后期精心制作的。
+> 
+
+### craft beer
+精酿啤酒
+
+
+&emsp;
+## 3. pad
+
+
+
+&emsp;
+## 4. cushion
+
+
+
+&emsp;
+## 5. ringe
+
+
+
+&emsp;
+## 6. a good deal of
+adj. 很多的；好些
+
+
+&emsp;
+## 7.  sensation
+### noun
+**(1) [可数名词] 感觉；知觉**
+`a feeling that you get when sth affects your body`
+> a tingling/burning, etc. sensation 
+> 刺痛、烧灼等的感觉
+> 
+> I had a sensation of falling, as if in a dream.
+> 我有一种坠落的感觉，像在梦中似的。
+> 
+
+**(2) [不可数名词] 感觉能力；知觉能力**
+`the ability to feel through your sense of touch`
+同义词：`feeling`
+> She seemed to have lost all sensation in her arms.
+> 她的两条胳膊好像完全失去知觉了。
+> 
+
+**(3) [可数名词, 通常用单数形式] 直觉；莫名其妙的感觉；经历；回忆**
+`a general feeling or impression that is difficult to explain; an experience or a memory`
+> He had the eerie sensation of being watched.
+> 他不安地感到有人在监视他。
+> 
+> When I arrived, I had the sensation that she had been expecting me.
+> 我到那儿后，感觉到她一直在等着我。
+> 
+
+**(4) [可数名词, 通常用单数形式, 不可数名词] 轰动；哗然；引起轰动的人（或事物）**
+`very great surprise, excitement, or interest among a lot of people; the person or the thing that causes this surprise`
+> News of his arrest caused a sensation .
+> 他被捕的消息引起了轰动。
+> 
+> The band became a sensation overnight.
+> 一夜之间，这支乐队名声大振。
+> 
+
+
+&emsp;
+## 8. dune
+n. (风吹积成的)沙丘
+
+
+&emsp;
+## 9.plantation
+### noun
+**1. 种植园，种植场（尤指热带国家种植咖啡、甘蔗、橡胶等的大庄园）**
+`a large area of land, especially in a hot country, where crops such as coffee, sugar, rubber, etc. are grown`
+> a banana plantation
+> 香蕉种植园
+> 
+**2. 木材林地；人造林**
+`a large area of land that is planted with trees to produce wood`
+> conifer/forestry plantations
+> 针叶树林地；种植林
+> 
+
+&emsp;
+## 10. span
+
+
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 30 Exploring the Sea-floor 海底勘探
+&emsp;&emsp; 选自科普作家 T. F. Gaskell 所著 `Exploring the Sea-floor from Science Survey`.
+## 1. a passing thought
+
+
+
+&emsp;
+## 2. sounding
+### noun
+**(1) [复数名词] 意见调查；征询意见**
+soundings
+`careful questions that are asked in order to find out people's opinions about sth`
+> They will take soundings among party members.
+> 他们将在党员中间征询意见。
+> 
+> What do your soundings show?
+> 你的调查结果如何？
+> 
+
+**(2) [可数名词] 水深测量**
+`a measurement that is made to find out how deep water is`
+> They took soundings along the canal.
+> 他们沿运河测量了水深。
+> 
+
+
+&emsp;
+## 3. fathom /ˈfæðəm/
+**(1) N-COUNT 英寻(度量单位，等于 1.8 米或 6 英尺，用于指水深)**
+`A fathom is a measurement of 1.8 metres or 6 feet, used when referring to the depth of water.`
+> We sailed into the bay and dropped anchor in five fathoms of water.
+> 我们驶进海湾，将锚抛进 5 英寻深的水里。
+> 
+
+**(2) VERB 透彻理解;深入了解;弄清…的真相**
+`If you cannot fathom something, you are unable to understand it, although you think carefully about it.`
+> I really couldn't fathom what Steiner was talking about...
+> 我真搞不懂斯坦纳在说些什么。
+> 
+`Fathom out` means the same as `fathom`.
+> We're trying to fathom out what's going on...
+> 我们在尽力搞清楚发生了什么事情。
+> 
+> I'm having difficulty using my video editing equipment and can't fathom out the various > connections.
+> 我不会使用视频编辑设备，而且搞不清各种各样的连接。
+> 
+
+
+&emsp;
+## 4. disposal /dɪˈspoʊzl/
+### noun
+**(1) [不可数名词] 去掉；清除；处理**
+`the act of getting rid of sth`
+> a bomb disposal squad
+> 炸弹清除小组
+> 
+> sewage disposal systems
+> 污水处理系统
+> 
+> the disposal of nuclear waste
+> 核废料的处理
+> 
+**(2) [可数名词] (business 商)（企业、财产等的）变卖，让与，出售**
+`the sale of part of a business, property, etc.`
+
+**(3) = `waste-disposal unit`**
+[可数名词] (北美英语)
+
+### 习语  Idioms
+**`at one's disposal` 任某人处理；供某人任意使用；由某人自行支配**
+`available for use as you prefer/sb prefers`
+> He will have a car at his disposal for the whole month.
+> 他将有一辆汽车归他使用一个月。
+> 
+> Well, I'm at your disposal (= I am ready to help you in any way I can) .
+> 好吧，我听候你的吩咐。
+> 
+
+### 词根词缀
+#### PREFIX 前缀
+`dispos(e)` 处理
+`disposition`
+> n. 性情；性格；布置；（财产、金钱的）处置，让与；倾向；安排；意向；排列
+> dispos(e) 处理 + -ition 行为,过程,状态
+> 
+
+
+&emsp;
+## 5. Porcupine ˈpɔːrkjupaɪn/
+n. 豪猪；箭猪
+
+
+&emsp;
+## 6. dredge /dredʒ/
+### verb
+**(1) ~ (sth) (for sth) 疏浚；清淤；挖掘**
+`to remove mud, stones, etc. from the bottom of a river, canal , etc. using a boat or special machine, to make it deeper or to search for sth`
+> [动词+名词短语] They're dredging the harbour so that larger ships can use it.
+> 他们正在疏浚港湾以便大船驶入。
+> 
+> They dredge the bay for gravel.
+> 他们在挖掘海湾沙砾。
+> 
+[also 单独使用的动词]
+**(2) ~ sth (up) (from sth) 打捞；采捞；捞取**
+`to bring sth up from the bottom of a river, etc. using a boat or special machine`
+> [动词+名词短语] waste dredged (up) from the seabed
+> 从海底打捞出的废物
+> 
+**(3) [动词+名词短语] ~ (in/with) （用面粉、糖等）撒，涂**
+`to cover food lightly with sugar, flour, etc.`
+> Dredge the top of the cake with icing sugar.
+> 把糖霜撒在蛋糕表面。
+> 
+
+### 短语动词  Phrasal Verbs
+`dredge sth up`
+**(1) (usually disapproving)重提，翻出（已遗忘的令人不快的往事）**
+`to mention sth that has been forgotten, especially sth unpleasant or embarrassing`
+> The papers keep trying to dredge up details of his past love life.
+> 这些报纸老是翻出他以往爱情生活的琐事。
+> 
+**(2) 追忆；回忆**
+`to manage to remember sth, especially sth that happened a long time ago`
+> Now she was dredging up memories from the depths of her mind.
+> 这时，她回忆起内心深处的往事。
+> 
+
+
+&emsp;
+## 7. qualified
+### adj.
+**(1) ~ (for sth) 具备…的学历（或资历）**
+`having passed the exams or completed the training that are necessary in order to do a particular job; having the experience to do a particular job`
+> a qualified accountant/teacher, etc. 
+> 取得执业资格的会计师、教师等
+> 
+> to be highly/suitably/fully qualified 
+> 高度 / 正好 / 完全合格
+> 
+> She's extremely well qualified for the job.
+> 她完全符合担任这项工作的条件。
+> 
+
+**(2) [not before noun] ~ (to do sth) 具备…的知识（或技能）；符合资格**
+`having the practical knowledge or skills to do sth`
+> I don't know much about it, so I don't feel qualified to comment.
+> 关于此事我所知不多，所以觉得没资格评论。
+> 
+
+**(3) [usually before noun] of approval, support, etc. 赞同、支持等有限度的；有保留的；有条件的**
+`limited in some way`
+> The plan was given only qualified support.
+> 这项计划只得到有限度的支持。
+> 
+> The project was only a qualified success .
+> 这个项目只取得了一般的效益。
+> 
+
+
+&emsp;
+## 8. relief map
+n. (用不同颜色表示地势高低的)地形图，地势图，地貌图
+
+
+&emsp;
+## 9. relief
+### noun
+#### 已经熟悉的释义
+焦虑 / 痛苦的消除 removal of anxiety/pain
+
+**(1) [不可数名词, 单数名词] （不快过后的）宽慰，轻松；解脱**
+`the feeling of happiness that you have when sth unpleasant stops or does not happen`
+> a sense of relief
+> 解脱感
+> 
+> We all breathed a sigh of relief when he left.
+> 他走了以后，我们大家都如释重负地松了口气。
+> 
+> She sighed with relief.
+> 她松了口气。
+> 
+> Much to my relief the car was not damaged.
+> 令我非常庆幸的是车并没有损坏。
+> 
+> What a relief !
+> 可轻松了！
+> 
+**(2) [不可数名词] ~ (from/of sth) （焦虑、痛苦等的）减轻，消除，缓和**
+`the act of removing or reducing pain, anxiety, etc.`
+> modern methods of pain relief 
+> 消除疼痛的新办法
+> 
+> the relief of suffering
+> 痛苦的消除
+> 
+
+### 不太熟悉的释义
+**(3) [不可数名词] （给灾区或交战地区人民提供的）救济，救援物品**
+`food, money, medicine, etc. that is given to help people in places where there has been a war or natural disaster`
+同义词：`aid`
+> famine relief 
+> 饥荒救济物资
+> 
+> a relief agency/organization/worker 
+> 救助机构 / 组织 / 工作者
+> 
+**(4) [不可数名词] (especially 北美英语)救济金**
+`financial help given by the government to people who need it`
+
+**(5) = `tax relief` 税务减免**
+> relief on mortgage interest payments
+> 支付按揭利息的税收减免
+> 
+**(6) [不可数名词, 单数名词] ~ (from sth) （暂时替代单调乏味事物的）调剂，轻松场面**
+> a few moments of light relief in an otherwise dull performance
+> 沉闷的表演中几处轻松的情节
+> 
+> There was little comic relief in his speech.
+> 他的演讲少有轻松幽默的地方。
+> 
+> The calm of the countryside came as a welcome relief from the hustle and bustle of city life.
+> 离开喧嚣忙碌的城市生活，来到宁静的乡村，是一种令人愉快的调剂。
+> 
+
+**(7)  [可与单数或复数动词连用的可数名词] often used as an adjective 常用作形容词替班者；接替人；换班者**
+> The next crew relief comes on duty at 9 o'clock.
+> 下一批换班的员工9点钟接班。
+> 
+> relief drivers
+> 换班的司机
+> 
+
+**(8)  [单数名词] ~ of… （被困城镇等的）解困，解围**
+`the act of freeing a town, etc. from an enemy army that has surrounded it`
+
+
+**(9)  [不可数名词, 可数名词] 浮雕；浮雕法；浮雕作品**
+> The column was decorated in high relief (= with designs that stick out a lot) with scenes from Greek mythology.
+> 柱子上饰有描述希腊神话中的场面的高浮雕。
+> 
+> The bronze doors are covered with sculpted reliefs.
+> 青铜门上覆有浮雕。
+> 
+
+**(10)  [不可数名词] （光和色彩等产生的）醒目效果；醒目；光彩夺目**
+`the effect of colours, light, etc. that makes an object more noticeable than others around it`
+> The snow-capped mountain stood out in sharp relief against the blue sky.
+> 白雪覆盖的高山在蓝天的映衬下格外醒目。
+> 
+
+**(11) [不可数名词] 突出的品质；令人注目的特征**
+`the quality of a particular situation, problem, etc. that makes it more noticeable than before`
+> Their differences have been thrown into sharp relief by the present crisis.
+> 目前的危机使得他们的分歧更加引人注目。
+> 
+
+
+&emsp;
+## 10. topography
+n. 地形；地貌；地势；地形学
+
+
+&emsp;
+## 11. crust /krʌst/
+### noun
+**(1) [可数名词, 不可数名词] 面包皮**
+`the hard outer surface of bread`
+> sandwiches with the crusts cut off
+> 切掉面包皮的三明治
+> 
+
+**(2) [可数名词, 通常用单数形式] 糕饼（尤指馅饼）酥皮**
+`a layer of pastry , especially on top of a pie`
+> Bake until the crust is golden.
+> 把糕饼烤至外皮呈金黄色。
+> 
+**(3) [可数名词, 不可数名词] （尤指软物或液体上面、周围的）硬层，硬表面**
+`a hard layer or surface, especially above or around sth soft or liquid`
+> a thin crust of ice
+> 一层薄冰
+> 
+> the earth's crust
+> 地壳
+> 
+
+### 习语  Idioms
+`earn a/your crust` (英国英语, informal)挣钱糊口；谋生
+> In his early days, he would do almost anything to earn a crust from the sport.
+> 早年为了能在体育界混口饭吃，他几乎什么都做。
+> 
+
+
+&emsp;
+## 12. superimpose /ˌsuːpərɪmˈpoʊz/
+### verb
+**[动词+名词短语] `~ sth (on/onto sth)`**
+**(1) 使（图像甲）叠映在（图像乙）上**
+`to put one image on top of another so that the two can be seen combined`
+> A diagram of the new road layout was superimposed on a map of the city.
+> 新公路的规划示意图被叠映在该城市的地图上。
+> 
+**(2) 使重叠；使叠加；使附加于**
+`to add some of the qualities of one system or pattern to another one in order to produce sth that combines the qualities of both`
+> She has tried to superimpose her own attitudes onto this ancient story.
+> 她想把自己的看法加入这个古老的故事里。
+> 
+
+
+&emsp;
+## 13. rug 和 rugged
+### rug
+n. 小地毯；垫子；(盖腿的)厚毯子
+
+### rugged
+#### adj.
+**(1) of the landscape 地形崎岖的；凹凸不平的；多岩石的**
+`not level or smooth and having rocks rather than plants or trees`
+> rugged cliffs
+> 岩石突兀的悬崖绝壁
+> 
+> They admired the rugged beauty of the coastline.
+> 他们对海岸线上岩石密布的美景赞叹不已。
+> 
+**(2) [usually before noun] (approving)of a man's face 男人的脸强健而富有魅力的；粗犷的**
+`having strong, attractive features`
+> A look of pure disbelief crossed Shankly's rugged face.
+> 尚克利粗犷的脸上掠过一丝完全不信任的表情。
+> 
+**(3) [usually before noun] of a person 人坚强的；坚毅的**
+`determined to succeed in a difficult situation, even if this means using force or upsetting other people`
+> a rugged individualist
+> 坚定的个人主义者
+> 
+**(4) of equipment, clothing, etc. 设备、衣服等结实的；耐用的**
+`strong and designed to be used in difficult conditions`
+> A less rugged vehicle would never have made the trip.
+> 要不是这车结实，根本走不完这段路程。
+> 
+> rugged outdoor clothing
+> 结实耐穿的户外服装
+> 
+
+
+&emsp;
+## 14. tableland
+n. 高原；台地 同 `plateau
+
+
+
+&emsp;
+## 15. shore line
+海岸线
+
+
+&emsp;
+## 16. slope
+### noun
+**(1) [可数名词] 斜坡；坡地**
+`a surface or piece of land that slopes (= is higher at one end than the other)`
+同义词：`incline`
+> a grassy slope
+> 长满草的斜坡
+> 
+> The town is built on a slope .
+> 这座城建在斜坡上。
+> 
+**(2) [可数名词, 通常用复数形式] 山坡**
+`an area of land that is part of a mountain or hill`
+> the eastern slopes of the Andes
+> 安第斯山脉东坡
+> 
+> ski slopes
+> 滑雪斜坡
+> 
+> He spends all winter on the slopes (= skiing ) .
+> 整个冬天他都在山坡上滑雪。
+> 
+**(3) [单数名词, 不可数名词] 斜度；坡度**
+`the amount by which sth slopes`
+> a gentle/steep slope 
+> 缓坡；陡坡
+> 
+> a slope of 45 degrees
+> 45度的坡度
+> 
+> the angle of slope
+> 倾角
+> 
+
+### verb
+[单独使用的动词]
+**(1) [usually + 副词/介词短语] of a horizontal surface 水平面倾斜；有坡度**
+`to be at an angle so that it is higher at one end than the other`
+> The garden slopes away towards the river.
+> 花园向河边倾斜下去。
+> 
+> sloping shoulders
+> 斜肩
+> 
+**(2) [usually + 副词/介词短语] of sth vertical 垂直物倾斜**
+`to be at an angle rather than being straight or vertical`
+> His handwriting slopes backwards.
+> 他写的字向右斜。
+> 
+> It was a very old house with sloping walls.
+> 这房子已经很旧，墙都歪了。
+> 
+**(3) [+ 副词/介词短语] (英国英语, informal)悄悄地走；潜行；溜**
+`to go somewhere quietly, especially in order to avoid sth/sb`
+同义词：`slink`
+> They got bored waiting for him and sloped off .
+> 他们等他等得不耐烦，就悄悄走了。
+> 
+### 习语  Idioms
+`the/a slippery slope` 使人滑向深渊的斜坡；危险的境地
+
+
+&emsp;
+## 17. continental shelf
+n. 大陆架
+
+
+&emsp;
+## 18. dividing line
+### noun
+[通常用单数形式]
+**(1) （两种事物或思想的）分界线，界限**
+`something that marks the separation between two things or ideas`
+> There is no clear dividing line between what is good and what is bad.
+> 是非之间没有明确的界限。
+> 
+**(2) （分隔两个地区的）地界，分界线**
+`a place that separates two areas`
+> The river was chosen as a dividing line between the two districts.
+> 两个地区以这条河流为界。
+> 
+
+
+&emsp;
+## 19. sediment /ˈsedɪmənt/
+(1) 沉淀物
+`the solid material that settles at the bottom of a liquid`
+> Many organisms that die in the sea are soon buried by sediment.
+> 海洋里死亡的许多生物会很快被沉淀物掩埋。
+> 
+(2) (geology 地)沉积物
+
+
+&emsp;
+## 20. terrace /ˈterəs/
+**(1) [可数名词] (英国英语)often in the names of streets 常用于街名（相同的一排）排房，排屋**
+`a continuous row of similar houses that are joined together in one block`
+> 12 Albert Terrace
+> 艾伯特排房12号
+> 
+**(2) [可数名词] （尤指房屋或餐馆外的）露天平台，阳台**
+`a flat, hard area, especially outside a house or restaurant, where you can sit, eat and enjoy the sun`
+> a sun terrace
+> 阳台
+> 
+> a roof terrace
+> 屋顶平台
+> 
+> All rooms have a balcony or terrace.
+> 所有的房间都有阳台或露台。
+> 
+see also patio
+**(3) `terraces` [复数名词] (英国语)（足球场的）阶梯看台**
+`the wide steps at a football ( soccer ) ground where people can stand to watch the game`
+> Footballers launched an unprecedented crusade against racism on the terraces
+> 足球运动员们对阶梯看台上的种族歧视发起了一场空前的运动。
+> 
+**(4) [可数名词] 梯田；阶地**
+> ...massive terraces of maie and millet carved into the mountainside like giant steps.`
+> 山坡上开垦出的像巨型台阶一样的大块大块梯田，上面种着玉米和小米
+> 
+
+
+&emsp;
+## 21. tailing off
+`gradually diminish in amount, strength, or intensity:`
+n. 曳沙带
+
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 31 The Sculptor Speaks 雕塑家的语言
+&emsp;&emsp; 选自英国雕塑家 `Henry Spencer Moore` (1898-1986)所著 `The Sculptor Speaks from The Listener`, 18 August 1937，该篇文章为整篇长文中“three dimensions”一节
+## 1. 
+
+
+&emsp;
+## 2. 
