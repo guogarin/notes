@@ -7747,8 +7747,143 @@ n. 曳沙带
 &emsp; 
 # Lesson 31 The Sculptor Speaks 雕塑家的语言
 &emsp;&emsp; 选自英国雕塑家 `Henry Spencer Moore` (1898-1986)所著 `The Sculptor Speaks from The Listener`, 18 August 1937，该篇文章为整篇长文中“three dimensions”一节
-## 1. 
+## 1. Appreciation of sculpture
+欣赏雕塑
 
 
 &emsp;
-## 2. 
+## 2. form in three dimensions
+三维形状
+
+
+&emsp;
+## 3. many more
+&emsp;&emsp; “many more”和“much more”都用于表示“更多的”，但它们在用法上有所不同。一般来说，“many more”后面接可数名词的复数形式，表示“更多的……”，而“much more”后面接不可数名词或形容词、副词的比较级，表示“更多的……”或“……得多”。
+
+
+&emsp;
+## 4. practical necessity实际需要
+
+
+&emsp;
+## 5. perception
+### noun
+**(1) [不可数名词] (formal ortechnical 术语)知觉；感知**
+`the way you notice things, especially with the senses`
+> our perception of reality
+> 我们对现实的认识
+> 
+> visual perception
+> 视觉
+> 
+see also extrasensory perception
+**(2) [不可数名词] (formal)洞察力；悟性**
+`the ability to understand the true nature of sth`
+同义词：`insight`
+> She showed great perception in her assessment of the family situation.
+> 她对家庭状况的分析显示出敏锐的洞察力。
+> 
+**(3) [不可数名词, 可数名词] ~ (that…) (formal)看法；见解**
+`an idea, a belief or an image you have as a result of how you see or understand sth`
+> a campaign to change public perception of the police
+> 改变警察公众形象的运动
+> 
+> There is a general public perception that standards in schools are falling.
+> 公众普遍认为，学校的水平都在下降。
+> 
+
+
+&emsp;
+## 6. spatial
+also `spacial`
+**(formal ortechnical 术语)空间的**
+`relating to space and the position, size, shape, etc. of things in it`
+> changes taking place in the spatial distribution of the population
+> 人口的地域分布所发生的变化
+> 
+> the development of a child's spatial awareness (= the ability to judge the positions and sizes of objects) 
+> 孩子空间意识的形成
+> 
+
+
+&emsp;
+## 7. the hollow of one's hand
+某人的手心
+
+
+&emsp;
+## 8. centre of gravity
+n.(物体的)重心
+
+
+&emsp;
+## 9. reminiscence /ˌremɪˈnɪsns/
+n. 回忆；追忆；回忆录；使人想起类似事物的东西；引起联想的相似事物；怀旧的谈话
+
+
+&emsp;
+## 10. plum
+### noun
+**(1) [可数名词] 李子；梅子**
+a plum tree
+李树
+
+**(2) [不可数名词, 可数名词] 紫红色**
+
+### adj.
+**`of a job, etc.` 工作等称心的；值得拥有的**
+`considered very good and worth having`
+> She's landed a plum job at the BBC.
+> 她在英国广播公司谋得称心如意的工作。
+> 
+
+&emsp;
+## 11. tadpole /ˈtædpoʊl/
+n. 蝌蚪
+
+
+&emsp;
+## 12. lark
+### noun
+**(1) 百灵鸟；云雀**
+`a small brown bird with a pleasant song`
+see also skylark
+**(2) [通常用单数形式] (informal)嬉戏；玩乐；玩笑**
+`a thing that you do for fun or as a joke`
+> The boys didn't mean any harm─they just did it for a lark.
+> 那些男孩并无恶意——他们只是闹着玩罢了。
+> 
+**(3) (英国英语, informal)used after another noun 用于另一名词后（认为）浪费时间的活动；不受重视的活动**
+`an activity that you think is a waste of time or that you do not take seriously`
+> Perhaps this riding lark would be more fun than she'd thought.
+> 也许这次骑马的无聊活动比她所想象的要好玩一些。
+> 
+
+### 习语  Idioms
+**`be/get up with the lark` (old-fashioned, 英国英语)清晨早起；鸡鸣即起**
+`to get out of bed very early in the morning`
+
+**`blow/sod that for a lark` (英国英语, slang)（认为太费力而不想干时说）**
+`used by sb who does not want to do sth because it involves too much effort`
+> Sod that for a lark! I'm not doing any more tonight.
+> 拉他妈的倒吧！我今晚再也不做了。
+> 
+
+
+&emsp;
+## 13. ladybird
+n. 瓢虫
+
+
+&emsp;
+## 14. bulrush ˈbʊlrʌʃ/
+n. 芦苇；藨草；灯芯草；宽叶香蒲
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 32 Galileo Reborn 伽利略的复生
+&emsp;&emsp; 选自英国天文史学家 `Michael Hoskin` 所著 `Galileo Reborn, The Listener 27 Feb. 1964`，其荣获 2004 年美国天文学会颁发的 `The LeRoy E. Doggett Prize (HAD)`
