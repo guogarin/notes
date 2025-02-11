@@ -7887,3 +7887,255 @@ n. 芦苇；藨草；灯芯草；宽叶香蒲
 &emsp; 
 # Lesson 32 Galileo Reborn 伽利略的复生
 &emsp;&emsp; 选自英国天文史学家 `Michael Hoskin` 所著 `Galileo Reborn, The Listener 27 Feb. 1964`，其荣获 2004 年美国天文学会颁发的 `The LeRoy E. Doggett Prize (HAD)`
+## 1. violent controversy
+`controversy` /ˈkɑːntrəvɜːrsi/
+> n. 争议；(公开的)争论，辩论，论战
+> 
+`violent controversy` 激烈的争论
+
+
+&emsp;
+## 2. the scientific dust has long since settled
+这句话的意思是：
+> 科学上的纷争早已平息
+> 
+### 2.1 let the dust settle
+**PHRASE 尘埃落定;形势明朗;事态平息**
+If you say that something will happen when the `dust settles`, you mean that a situation will be clearer after it has calmed down. If you `let the dust settle` before doing something, you let a situation calm down before you try to do anything else.
+> Once the dust had settled Beck defended his decision...
+> 事态一旦平息,贝克就为他的决定辩白。
+> 
+### 2.2 long since
+早就
+> 1.They had long since moved away.
+> 他们早就搬走了。
+> 
+> 2.He had long since written off the money.
+> 他很早就将那笔钱勾销了。
+> 
+> 3.The wheel had long since rusted from years of disuse.
+> 多年不用的车轮早已锈迹斑斑。
+> 
+
+
+&emsp;
+## 3. inquisition /ˌɪnkwɪˈzɪʃn/
+**(1)`the Inquisition` [单数名词] （尤指15到17世纪天主教的）宗教裁判所，异端裁判所**
+
+**(2) [可数名词] (formal orhumorous)一连串的提问；（尤指）盘问，责难**
+
+### phrase
+#### `Spanish Inquisition`
+**(1) 西班牙异端裁判所（15世纪设立于西班牙的罗马天主教会组织，因残酷迫害异教而知名）**
+
+**(2) (often humorous)（表示不满）逼问，追问**
+> What is this? The Spanish Inquisition?
+> 这是怎么回事？严刑逼供吗？
+> 
+
+
+&emsp;
+## 4. proper perspective
+正确（恰当）的观点
+
+
+&emsp;
+## 5. The old view of Galileo was delightfully uncomplicated.
+过去对伽利略的看法好在并不复杂。
+
+
+&emsp;
+## 6. book learning
+n. 书本知识，学堂知识(有别于实践经验)
+> Those with book learning must develop in the direction of practice.
+> 有书本知识的人应该向实践方面发展
+> 
+
+
+&emsp;
+## 7. put questions to 
+提问
+> The lawyer put several questions to the witness.
+> 律师问了证人几个问题。
+> 
+
+
+&emsp;
+## 8. draw a conclusion
+得出结论
+
+
+&emsp;
+## 9. Leaning Tower of Pisa
+比萨斜塔
+
+
+&emsp;
+## 10. various weights
+不同重量
+
+
+&emsp;
+## 11. plane
+`inclined plane` n. 斜面
+### noun
+**(1) 飞机**
+英国英语 also `aeroplane`
+北美英语 also `airplane`
+
+**(2) (geometry 几何)平面**
+> the horizontal/vertical plane 
+> 水平 / 垂直平面
+> 
+**(3) （思想、存在或发展的）水平，程度，阶段，境界**
+`a level of thought, existence or development`
+> to reach a higher plane of achievement
+> 取得更高的成就
+> 
+**(4) 木工刨；刨子**
+
+### adj
+**[only before noun] (technical 术语)平的；平坦的**
+`completely flat; level`
+> a plane surface
+> 平面
+> 
+
+### verb
+**(1) 用刨子刨平**
+> [动词+名词短语] Plane the surface down first.
+> 首先要把表面刨平。
+> 
+> [动词+名词短语+形容词] Then plane the wood smooth.
+> 然后把木头刨光。
+> 
+**(2) [单独使用的动词] of a bird 鸟滑翔**
+
+**(3) [单独使用的动词] of a boat, etc. 小船等擦着水面疾驶**
+> All four of the boats planed across the Solent with the greatest of ease.
+> 4艘船都极其自如地掠过索伦特海峡。
+> 
+
+
+&emsp;
+## 12. generalize the results
+总结结果
+> Galileo generalized the results of his many experiments into the famous law of free fall
+> 
+
+
+&emsp;
+## 13. free fall
+n. 自由落体；(人或物的)自由下落
+
+
+&emsp;
+## 14. consciousness
+### noun
+[不可数名词]
+**(1) 清醒状态；知觉**
+`the state of being able to use your senses and mental powers to understand what is happening`
+> I can't remember any more─I must have lost consciousness .
+> 我想不起来了——我当时一定是失去了知觉。
+> 
+> She did not regain consciousness and died the next day.
+> 她再也没有苏醒过来，第二天便去世了。
+> 
+
+**(2) 觉察；感觉；意识**
+`the state of being aware of sth`
+同义词：awareness
+> his consciousness of the challenge facing him
+> 他对所面临的挑战的清醒意识
+> 
+> **class-consciousness** (= consciousness of different classes in society) 
+> 阶级意识
+> 
+
+**(3) 观念；看法**
+`the ideas and opinions of a person or group`
+> her newly-developed political consciousness
+> 她最近形成的政治观念
+> 
+> The Greens were the catalysts of a necessary change in the European consciousness.
+> 绿党促使欧洲人的观念发生了必要的改变。
+> 
+
+
+&emsp;
+## 15. undercurrent
+**(1) N-COUNT (尤指负面的情感的)潜流，暗流**
+> ...a deep undercurrent of racism in British society.
+> 英国社会中强劲的种族主义暗流
+> 
+> I detect an undercurrent of resentment towards the new proposals.
+> 我察觉到对新提案有一股潜在的不满情绪。
+> 
+
+**(2) N-COUNT (水流的)潜流；暗流**
+> Colin tried to swim after him but the strong undercurrent swept them apart.
+> 科林想跟在他后面游，但强大的暗流把他们分开了。
+> 
+
+&emsp;
+## 16. scientific revolution
+科学革命
+
+
+&emsp;
+## 17. live on
+**(1) 单纯的live + 介词on**
+> They would rather work than live on welfare.
+> 他们宁愿工作而不愿靠社会保障金过活。
+> 
+**(2) PHRASAL VERB 继续活着，继续存在**
+`If someone lives on, they continue to be alive for a long time after a particular point in time or after a particular event.`
+> I know my life has been cut short by this terrible virus but Daniel will live on after me.
+> 我知道这种可怕的病毒会让我的生命提前结束，但丹尼尔会在我死后继续活下去。
+>
+原文中：
+> Today, although the old Galileo lives on in many popular writings, among historians of science a new and more sophisticated picture has emerged.
+> 如今，虽然旧看法下的伽利略继续存在于许多通俗读物中，但在科学史学家群体中，一个新的而且更为丰富的伽利略形象诞生了。
+>
+
+
+&emsp;
+## 18. picture
+TODO:
+
+
+&emsp;
+## 19. consequence
+### noun
+**(1) N-COUNT 结果**
+
+**(2) N-COUNT后果**
+> Her lawyer said she understood the consequences of her actions and was prepared to go to jail...
+> 她的律师说她明白自己行为的后果，已有了入狱的心理准备。
+> 
+**(3) N-COUNT 影响**
+they had important theoretical consequences 具有重要的理论意义
+**(4) N [不可数名词] (formal)重要性**
+`importance`
+> Don't worry. It's of no consequence .
+> 别担心，这无关紧要。
+> 
+
+### 短语
+**(1) `sb/sth of consequence` `sb/sth of no/little consequence`**
+`sb/sth of consequence` 重要的;有价值的
+`sb/sth of no/little consequence`  没啥价值
+> As an overseer, he suddenly found himself a person of consequence...
+> 作为工头，他突然觉得自己是个重要人物。
+> 
+> Don't worry. It's of no consequence .
+> 别担心，这无关紧要。
+> 
+**（2） `in consequence (of sth)` (formal) 由于；作为…的结果**
+> The child was born deformed in consequence of an injury to its mother.
+> 由于母亲受过伤，这小孩生下来是畸形。
+> 
+**(3)`take/face the consequences` 承担后果;自食其果**
+> These pilots must now face the consequences of their actions and be brought to trial...
+> 这些飞行员现在必须为自己的行为承担后果，接受审判。
+> 
