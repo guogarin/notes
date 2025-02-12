@@ -8035,10 +8035,10 @@ n. 自由落体；(人或物的)自由下落
 [不可数名词]
 **(1) 清醒状态；知觉**
 `the state of being able to use your senses and mental powers to understand what is happening`
-> I can't remember any more─I must have lost consciousness .
+> I can't remember any more─I must have **lost consciousness** .
 > 我想不起来了——我当时一定是失去了知觉。
 > 
-> She did not regain consciousness and died the next day.
+> She did not **regain consciousness** and died the next day.
 > 她再也没有苏醒过来，第二天便去世了。
 > 
 
@@ -8054,7 +8054,7 @@ n. 自由落体；(人或物的)自由下落
 
 **(3) 观念；看法**
 `the ideas and opinions of a person or group`
-> her newly-developed political consciousness
+> her newly-developed **political consciousness**
 > 她最近形成的政治观念
 > 
 > The Greens were the catalysts of a necessary change in the European consciousness.
@@ -8114,7 +8114,7 @@ TODO:
 > 她的律师说她明白自己行为的后果，已有了入狱的心理准备。
 > 
 **(3) N-COUNT 影响**
-they had important theoretical consequences 具有重要的理论意义
+they had important **theoretical consequences** 具有重要的理论意义
 **(4) N [不可数名词] (formal)重要性**
 `importance`
 > Don't worry. It's of no consequence .
@@ -8122,7 +8122,7 @@ they had important theoretical consequences 具有重要的理论意义
 > 
 
 ### 短语
-**(1) `sb/sth of consequence` `sb/sth of no/little consequence`**
+**(1) `sb/sth of (no/little) consequence`**
 `sb/sth of consequence` 重要的;有价值的
 `sb/sth of no/little consequence`  没啥价值
 > As an overseer, he suddenly found himself a person of consequence...
@@ -8139,3 +8139,93 @@ they had important theoretical consequences 具有重要的理论意义
 > These pilots must now face the consequences of their actions and be brought to trial...
 > 这些飞行员现在必须为自己的行为承担后果，接受审判。
 > 
+
+
+&emsp;
+## 20. a striking demonstration of
+有力的展示
+
+
+&emsp;
+## 21. call for
+**(1) PHRASAL VERB 接(人)**
+> I shall be calling for you at seven o'clock.
+> 7点钟我来接你。
+> 
+**(2) PHRASAL VERB 要求;呼吁**
+`If you call for something, you demand that it should happen.`
+> They angrily called for Robinson's resignation...
+> 他们愤怒地要求鲁宾逊辞职。
+> 
+**(3) PHRASAL VERB 需要;要求**
+`If something calls for a particular action or quality, it needs it or makes it necessary.`
+> It's a situation that calls for a blend of delicacy and force.
+> 应付这种局面需要刚柔并济。
+>
+
+
+&emsp;
+## 22. a telescope at the limit of its powers
+`power`在这里做名词，表示： **n. [不可数名词] 放大倍数；放大率**
+> the power of a microscope/telescope
+> 显微镜 / 望远镜的放大率
+> 
+`a telescope at the limit of its powers`应该翻译为 **一架倍
+数有限的望远镜**
+
+
+&emsp;
+## 23. intimate familiarity
+很熟悉
+
+
+&emsp;
+## 24. 原文难句
+> `But can we blame those who looked and failed to see what Galileo saw, if we remember that to use a telescope at the limit of its powers calls for long experience and intimate familiarity with one's instrument?`
+> 但是，我们可别忘了，使用一架倍数有限的望远镜，需要长期的经验和对仪器的熟悉，那么我们能去责备那些做了观察却没能如伽利略所见的人吗？
+>
+
+
+&emsp;
+## 25. culpable /ˈkʌlpəbl/
+adj. 难辞其咎的；应受责备的
+
+
+
+&emsp;
+## 26. nebulae /ˈnɛbjʊliː/
+n. 星云；外观似星云的星系
+
+
+&emsp;
+## 27. the moons of Jupiter
+木星的卫星们
+
+
+&emsp;
+## 28. spyglass
+n. 小型望远镜
+
+
+&emsp;
+## 29. curved glass
+曲面玻璃；曲面镜
+
+
+&emsp;
+## 30. contrivance  /kənˈtraɪvəns/
+**(1) [可数名词, 不可数名词] (usually disapproving)非自然之物；人工产；矫揉造作**
+`something that sb has done or written that does not seem natural; the fact of seeming artificial`
+> The film is spoilt by unrealistic contrivances of plot.
+> 这部电影被不实际的牵强情节给毁了。
+> 
+> The story is told with a complete absence of contrivance.
+> 这故事讲得毫不矫揉造作。
+> 
+**(2) [可数名词] 精巧（或复杂）的装置；专用工具**
+`a clever or complicated device or tool made for a particular purpose`
+**(3) [可数名词, 不可数名词] 计谋；圈套；计谋的（或圈套的）采用**
+`a clever plan or trick; the act of using a clever plan or trick`
+> an ingenious contrivance to get her to sign the document without reading it
+> 使她未经过目就签署文件的妙计
+>
