@@ -8229,3 +8229,413 @@ n. 小型望远镜
 > an ingenious contrivance to get her to sign the document without reading it
 > 使她未经过目就签署文件的妙计
 >
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 33 Education 教育
+&emsp;&emsp; 选自 `Julius E. Lips` 所著 `The Origin of Things – A Cultural History of Man` 一书 `Education without books` 一章. 1949. 中文版为汪宁生译《事物的起源》.
+## 1. adverse circumstance
+逆境
+
+
+&emsp;
+## 2. Convinced 
+adj. 坚信不移的；有坚定信仰（或信念）的
+> a convinced Christian
+> 虔诚的基督徒
+> 
+
+## 3. modern state
+现代国家；近代国家
+
+
+&emsp;
+## 4. institution of learning
+n.教育机构
+
+
+&emsp;
+## 5. lay stress on
+注重；强调
+
+
+&emsp;
+## 6. applied psychology
+应用心理学
+
+
+&emsp;
+## 7. get along with
+相处；与…和睦相处；进展
+> It's impossible to get along with him
+> 根本无法跟他和睦相处。
+> 
+> The old man was extremely difficult to get along with.
+> 这个老人极难相与。
+> 
+
+
+&emsp;
+## 8. fellow citizen
+同胞；公民同胞
+
+
+&emsp;
+## 9. educational system
+教育体制
+
+
+&emsp;
+## 10. fashion
+n. 时尚；时装业；(行为、活动等的)时兴；(衣服、发式等的)流行款式
+vt. (尤指用手工)制作；塑造
+> She fashioned the clay into a pot.
+> 她用黏土制成一个罐。
+> 
+### 习语
+#### `after a fashion`
+还过得去；还算可以
+> I can play the piano, after a fashion.
+> 我会弹钢琴，不过马马虎虎。
+> 
+
+#### `after the fashion of sb/sth`
+(formal)模仿…的式样；像…的风格
+> The new library is very much after the fashion of Nash.
+> 这座新图书馆很像纳什的风格。
+> 
+
+#### `in (a)… fashion`
+(formal)以…方式
+> How could they behave in such a fashion?
+> 他们的态度怎么会这样呢？
+> 
+> She was proved right, in dramatic fashion, when the whole department resigned.
+> 整个部门的人都辞了职，戏剧性地证明她是对的。
+
+#### `like it's going out of fashion`
+(informal)做得很多；大量使用；大肆花费
+> She's been spending money like it's going out of fashion.
+> 她花钱一直大手大脚。
+> 
+
+
+&emsp;
+## 11. ideal condition
+理想条件; 理想情况; 
+
+
+&emsp;
+## 12. compulsory /kəmˈpʌlsəri/
+adj. （因法律或规则而）必须做的，强制的，强迫的
+`that must be done because of a law or a rule`
+同义词：`mandatory`
+> It is compulsory for all motorcyclists to wear helmets.
+> 所有骑摩托车的人都必须戴头盔，这是强制性的。
+> 
+> English is a compulsory subject at this level.
+> 英语在这一级别是必修科目。
+> 
+> compulsory education/schooling 
+> 义务教育
+> 
+> compulsory redundancies
+> 强制裁员
+> 
+
+
+&emsp;
+## 13. school attendance
+入学率；上学；入学；就学；上课考勤
+
+
+
+&emsp;
+## 14. happy few
+少数幸运儿
+
+
+&emsp;
+## 15. wilderness
+n. 荒野；荒芜的地方；杂草丛生处；未开发的地区；荒无人烟的地区
+`in the wilderness` 
+PHRASE 在野;不掌权；不活跃；坐冷板凳
+> ...a party released from 12 years in the wilderness...
+> 摆脱了12年在野状态的政党
+> 
+
+
+&emsp;
+## 16. monetary /ˈmɑːnɪteri/
+**adj. [only before noun] 货币的，钱的（尤指一国的金融）**
+`connected with money, especially all the money in a country`
+> monetary policy/growth 
+> 货币政策 / 增长
+> 
+> an item of little monetary value
+> 不怎么值钱的东西
+> 
+> closer European political, monetary and economic union
+> 更为密切的欧洲政治、货币以及经济联盟
+> 
+
+
+&emsp;
+## 17. entitle
+### verb
+**(1) [often passive] `~ sb to sth` 使享有权利；使符合资格**
+> `to give sb the right to have or to do sth`
+> [动词+名词短语] You will be entitled to your pension when you reach 65.
+> 你到65岁就有资格享受养老金。
+> 
+> Everyone's entitled to their own opinion.
+> 人人都有权发表自己的意见。
+> 
+> [动词+名词短语+带to的不定式] This ticket does not entitle you to travel first class.
+> 你拿这张票不能坐头等舱。
+> 
+
+**(2) [动词+名词短语+名词短语] [usually passive] 给…命名（或题名）**
+`to give a title to a book, play, etc.`
+> He read a poem entitled ‘Salt’.
+> 他朗诵一首题为《盐》的诗。
+> 
+
+
+&emsp;
+## 18. ever-present
+adj. 始终存在的；总是存在的
+
+
+&emsp;
+## 19. savannah /səˈvænə/
+n. (尤指非洲的)稀树草原
+
+
+&emsp;
+## 20. delinquency /dɪˈlɪŋkwənsi/
+n. 犯罪；(常指青年人的)违法行为
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 34 Adolescence 青春期
+&emsp;&emsp; 选自心理学家 `Doris M. Odlum` 所著 `Journey Through Adolescence Penguin Books 1961`，其还著有 `Mental health`, `the nurse and the patient` 一书.
+## 1. slur /slɜːr/
+### noun
+**(1) `~ (on sb/sth)` 诽谤；诋毁；污辱**
+`an unfair remark about sb/sth that may damage other people's opinion of them`
+同义词：`insult`
+> She had dared to cast a slur on his character.
+> 她竟敢对他的人品加以诋毁。
+> 
+> (especially 北美英语)The crowd started throwing bottles and shouting racial slurs .
+> 人群开始扔瓶子，并高声地进行种族污辱。
+> 
+**(2) (music 音)连奏线；连唱线**
+
+### verb
+**(1) 含混不清地说话（通常因醉酒或疲劳）; 大着舌头说**
+`to pronounce words in a way that is not clear so that they run into each other, usually because you are drunk or tired`
+> [动词+名词短语] She had drunk too much and her speech was slurred.
+> 她喝得太多了，话都说不利索了。
+> 
+
+**(2) [动词+名词短语] (music 音)连奏；连唱**
+
+**(3) [动词+名词短语] 诽谤；诋毁；污辱**
+
+
+&emsp;
+## 2. a loss of dignity and descent into childish behaviour
+descent into 堕落至...
+
+
+&emsp;
+## 3. makes sb resolve
+让某人下定决心
+
+
+&emsp;
+## 4. Before very long
+用不了多久
+
+
+&emsp;
+## 5. Disillusionment
+N-UNCOUNT 醒悟;不再抱幻想;理想破灭
+> ...his growing **disillusionment with** his work.
+> 他对他的工作越来越不抱幻想
+> 
+
+
+&emsp;
+## 6. stand up to
+**(1) PHRASAL VERB 经得住**
+`If something stands up to bad conditions, it is not damaged or harmed by them.`
+> Is this building going to stand up to the strongest gales?
+> 这座楼能经得住最强劲的大风吗？
+> 
+**(2) PHRASAL VERB 对抗，抗争，抗拒(尤指比自己强的人)**
+`If you stand up to someone, especially someone more powerful than you are, you defend yourself against their attacks or demands.`
+> He hit me, so I hit him back — the first time in my life I'd stood up to him...
+> 他打了我，所以我就还手了——有生以来我第一次反抗他。
+> 
+
+
+
+&emsp;
+## 7. character
+
+
+&emsp;
+## 8. infallibility
+n. 绝对正确；绝无错误；无过失
+
+
+&emsp;
+## 9. character
+### noun
+**(1)[可数名词, 通常用单数形式] （人、集体的）品质，性格；（地方的）特点，特性**
+`all the qualities and features that make a person, groups of people, and places different from others`
+> to have a strong/weak character 
+> 个性强 / 不强
+> 
+> character traits/defects 
+> 性格特点 / 弱点
+> 
+> The book gives a fascinating insight into Mrs Blair's character.
+> 这部书对布莱尔夫人的性格作了生动的剖析。
+> 
+> Generosity is part of the American character.
+> 慷慨是美国人性格的一部分。
+> 
+> The character of the neighbourhood hasn't changed at all.
+> 这片住宅区的风貌依旧。
+> 
+**(2) [可数名词, 通常用单数形式, 不可数名词] （事物、事件或地方的）特点，特征，特色**
+`the way that sth is, or a particular quality or feature that a thing, an event or a place has`
+同义词：`nature`
+> the delicate character of the light in the evening
+> 夜间灯火所具有的那种柔和的特点
+> 
+> buildings that are very simple in character 
+> 造型很简洁的建筑物
+> 
+**(3) [不可数名词] (approving)勇气；毅力**
+`strong personal qualities such as the ability to deal with difficult or dangerous situations`
+> Everyone admires her strength of character and determination.
+> 每一个人都钦佩她坚强的性格和决心。
+> 
+> He showed great character returning to the sport after his accident.
+> 他在出了事故后仍能重返体坛表现出他顽强的毅力。
+> 
+> Adventure camps are considered to be character-building (= meant to improve sb's strong qualities) .
+> 冒险野营生活被认为能磨练意志。
+
+**(4) [不可数名词] (usually approving)（地方或人的）与众不同之处，特色**
+`the interesting or unusual quality that a place or a person has`
+> The modern hotels here have no real character.
+> 此处的现代化旅馆其实毫无特色。
+> 
+> a face with a lot of character
+> 与众不同的面孔
+> 
+
+**(5) [可数名词] (informal)used with an adjective 与形容词连用（令人讨厌的或古怪的）人**
+`a person, particularly an unpleasant or strange one`
+> There were some really strange characters hanging around the bar.
+> 有些不三不四的人在酒吧周围游荡。
+> 
+
+**(6) [可数名词] (informal)（有趣的或不同寻常的）人**
+`an interesting or unusual person`
+> She's a character!
+> 她真是个有趣的人！
+> 
+**(7) [可数名词, 不可数名词] (formal)名誉；声望；名气**
+`the opinion that people have of you, particularly of whether you can be trusted or relied on`
+> She was a victim of character assassination (= an unfair attack on the good opinion people had of her) .
+> 她是诽谤行为的受害者。
+> 
+> a slur/attack on his character 
+> 对他名誉的诋毁 / 攻击
+> 
+> My teacher agreed to be a character witness for me in court.
+> 我的老师同意出庭做我的品德信誉见证人。
+> 
+> **a character reference** (= a letter that a person who knows you well writes to an employer to tell them about your good qualities) 
+> 品德证明书
+> 
+
+**(8) [可数名词] （书籍、戏剧或电影中的）人物，角色**
+`a person or an animal in a book, play or film/movie`
+> a major/minor character in the book
+> 书中的主要 / 次要人物
+> 
+> cartoon characters
+> 动画片中的角色
+> 
+
+**(9) [可数名词] （书写、印刷或计算机上的）文字，字母，符号**
+`a letter, sign, mark or symbol used in writing, printing or on computers`
+> Chinese characters
+> 汉字
+> 
+> a line 30 characters long
+> 长达30字符的一行
+> 
+
+### 习语  Idioms
+`in/out character`
+符合（不符合）某人的性格
+`typical/not typical of a person's character`
+> Her behaviour last night was completely out of character.
+> 她昨晚的举止与她的性格截然不符。
+> 
+`in character (with sth)`
+（与…）风格相同
+`in the same style as sth`
+> The new wing of the museum was not really in character with the rest of the building.
+> 博物馆新建的侧翼楼与大楼其他部分的风格有些不一样。
+> 
+
+
+&emsp;
+## 10. authoritarian
+**adj. 专制的；独裁的；威权主义的**
+> an authoritarian regime/government/state 
+> 威权主义的政体 / 政府 / 国家
+> 
+**n.权力主义者，专制者，独裁者；独裁主义者**
+> Father was a strict authoritarian.
+> 父亲是个严厉的专制主义者。
+> 
+
+
+&emsp;
+## 11. cow
+### verb
+**[动词+名词短语] [usually passive] 恐吓；吓唬；威胁；胁迫**
+`to frighten sb in order to make them obey you`
+同义词：`intimidate`
+> She was easily cowed by people in authority.
+> 她很容易被有权势的人吓住。
+> 
+### n
+母牛；奶牛；肉牛；雌象，雌鲸(及某些大型雌性动物)；菜牛；婆娘；讨厌的人（或事物、情况）；娘儿们
+
+
+&emsp;
+## 12. face up to reality
+面对现实
+> All young people must face up to reality and not kid themselves that the world owes them a living.
+> 所有的年轻人都必须接受现实，不要自欺欺人，觉得生来就该享清福。
+>
