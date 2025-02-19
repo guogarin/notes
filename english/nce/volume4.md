@@ -8639,3 +8639,216 @@ n. 绝对正确；绝无错误；无过失
 > All young people must face up to reality and not kid themselves that the world owes them a living.
 > 所有的年轻人都必须接受现实，不要自欺欺人，觉得生来就该享清福。
 >
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 35 Space Odyssey 太空探索
+## 1. Odyssey /ˈɑːdəsi/
+n. 漫长而充满风险的历程；艰苦的跋涉
+> 【词源】From the Odyssey , a Greek poem that is said to have been written by Homer, about the adventures of Odysseus . After a battle in Troy Odysseus had to spend ten years travelling before he could return home. 
+> 源自希腊史诗《奥德赛》，相传为荷马所作，描述了奥德修斯在特洛伊战争后，辗转十年返回家园的种种经历。
+>
+
+
+&emsp;
+## 2. hub
+`industrial hub` 工业中心
+**(1) N-COUNT （活动的）中心，核心**
+`You can describe a place as a hub of an activity when it is a very important centre for that activity.`
+> The island's social hub is the Cafe Sport...
+> 该岛的社交中心是“体育咖啡馆”。
+> 
+> the commercial hub of the city
+> 城市的商业中心
+> 
+> to be at the hub of things (= where things happen and > important decisions are made) 
+> 在核心部门
+> 
+> a hub airport (= a large important one where people often > change from one plane to another) 
+> 大型中转机场
+> 
+
+**(2) N-COUNT （轮）毂**
+`The hub of a wheel is the part at the centre.`
+> He was already buffing the car's hubs.
+> 他已经在擦汽车轮毂了。
+> 
+
+**(3) N-COUNT 航空枢纽;中心机场**
+`A hub or a hub airport is a large airport from which you can travel to many other airports.`
+> ...a campaign to secure Heathrow's place as Europe's main international hub.
+> 旨在稳固希思罗机场作为欧洲主要航空枢纽地位的宣传活动
+> 
+
+**(4) N-COUNT（网络）集线器**
+
+
+&emsp;
+## 3. Solar System
+Solar System 太阳系
+Milky Way system 银河系
+
+
+&emsp;
+## 4. alone
+### prep.
+**(1) 沿着；顺着**
+`from one end to or towards the other end of sth`
+> They walked slowly along the road.
+> 他们沿公路慢慢走。
+> 
+> I looked along the shelves for the book I needed.
+> 我在书架上一格一格地找我需要的那本书。
+> 
+
+**(2) 靠着…边**
+`in a line that follows the side of sth long`
+> Houses had been built along both sides of the river.
+> 沿河两岸已盖起了房屋。
+> 
+
+**(3) 沿着…的某处（或旁边）**
+`at a particular point on or beside sth long`
+> You'll find his office just along the corridor.
+> 沿着走廊你就可以找到他的办公室。
+> 
+
+### adv
+**(1) 向前**
+`forward`
+> I was just walking along singing to myself.
+> 我独自唱着歌向前走着。
+> 
+> He pointed out various landmarks as we drove along.
+> 我们驱车前行时，他指给我们看各种各样的地标。
+> 
+
+**(2) （与某人）一道，一起**
+`with sb`
+> We're going for a swim. Why don't you come along?
+> 我们要去游泳。你干吗不一起去？
+> 
+> I'll be along (= I'll join you) in a few minutes.
+> 过一会儿我就来。
+> 
+
+**(3) 越来越（好）**
+`towards a better state or position`
+> The book's coming along nicely.
+> 这本书愈来愈好看了。
+> 
+
+
+&emsp;
+## 5. terrestrial /təˈrestriəl/
+**(1) ADJ (动植物)陆地的，陆生的，陆栖的**
+> Terrestrial and aquatic fauna may sometimes be found resting together under a loose stone.
+> 有时在松动的石头下可以同时看见栖息的陆生动物和水生动物。
+> 
+
+**(2) ADJ 地球的;地球上的**
+> ...terrestrial life forms.
+> 地球上的各种生命形态
+> 
+
+**(3) ADJ (电视频道)地面的(有别于卫星转播的)**
+
+
+&emsp;
+## 6. once suggested
+曾经提到
+
+
+&emsp;
+## 7. all along
+一直
+> I realized it was in my pocket all along.
+> 我发觉它一直就在我口袋里。
+> 
+> This confirms what I suspected all along.
+> 这证实了我一直以来的怀疑。
+> 
+
+
+&emsp;
+## 8. colonize /ˈkɑːlənaɪz/
+### verb
+[动词+名词短语]
+**(1) 在（某国家或地区）建立殖民地；移民于（殖民地）**
+> The area was colonized by the Vikings.
+> 这一地区曾沦为维京人的殖民地。
+> 
+
+**(2) (biology 生)of animals or plants 动植物在（某一地区）聚居，大批生长**
+`to live or grow in large numbers in a particular area`
+> The slopes are colonized by flowering plants.
+> 坡地上长满了开花植物。
+> 
+> Bats had colonized the ruins.
+> 蝙蝠聚居在这片废墟上。
+> 
+
+### 【派生词】colonization, -isation noun
+> [不可数名词] the colonization of the ‘New World’
+> “新大陆”的殖民
+> 
+> plant colonization
+> 植物的移植
+> 
+
+
+&emsp;
+## 9. decisive
+### adj.
+**(1) 决定性的；关键的**
+`very important for the final result of a particular situation`
+> a decisive factor/victory/battle 
+> 决定性的因素 / 胜利 / 战役
+> 
+> She has played a decisive role in the peace negotiations.
+> 她在和谈中起了关键作用。
+> 
+> a decisive step (= an important action that will change a situation) towards a cleaner environment
+> 朝着更清洁的环境迈出的关键一步
+> 
+
+**(2) 坚决的；果断的；决断的**
+`able to decide sth quickly and with confidence`
+> decisive management
+> 果断的管理层
+> 
+> The government must take decisive action on gun control.
+> 政府必须在枪支管制方面采取果断措施。
+> 
+
+
+&emsp;
+## 10. would-be
+### adj
+[only before noun] （形容想要成为…的人）未来的
+> a would-be actor
+> 想要成为演员的人
+> 
+> advice for would-be parents
+> 对即将成为父母的人的忠告
+> 
+
+
+&emsp;
+## 11. chasm /ˈkæzəm/
+**(1) N-COUNT 石罅;地缝;冰缝**
+
+**(2) N-COUNT (事物或团体间的)显著差距，巨大分歧**
+> ...the chasm that divides the worlds of university and industry.
+> 将大学和企业两个世界分隔开的鸿沟
+>
+
+
+&emsp;
+## 12. the Grand Canyon.
+(美国的)大峡谷
+
