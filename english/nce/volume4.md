@@ -8852,3 +8852,1499 @@ Milky Way system 银河系
 ## 12. the Grand Canyon.
 (美国的)大峡谷
 
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson 36 The Cost of Government 政府的成本
+&emsp;&emsp; 选自 `Raymond Frost` 所著 `The Backward Society`, 1961.
+## 1. 
+
+
+&emsp;
+## 2. hold together
+PHRASAL VERB-ERG 使团结;使和睦相处
+`If you hold a group of people together, you help them to live or work together without arguing, although they may have different aims, attitudes, or interests.`
+> Her 13-year-old daughter is holding the family together...
+> 她13岁的女儿在维系着这个家的完整。
+> 
+
+
+&emsp;
+## 3. essential
+**(1) ADJ-GRADED 绝对必要的;必不可少的;基本的**
+`Something that is essential is extremely important or absolutely necessary to a particular subject, situation, or activity.`
+> It was absolutely essential to separate crops from the areas that animals used as pasture...
+> 将庄稼和放牧区分开绝对必要。
+>
+> Money is not essential to happiness.
+> 金钱对于幸福并非必不可少。
+> 
+
+**(2) N-COUNT 必需品;不可或缺之物**
+`The essentials are the things that are absolutely necessary for the situation you are in or for the task you are doing.`
+> The flat contained the basic essentials for bachelor life.
+> 那套公寓配有单身生活的基本必需品。
+>
+> I only had time to pack the bare essentials (= the most necessary things) .
+> 我只来得及装上最基本的用品。
+> 
+> The studio had all the essentials like heating and running water.
+> 工作室里备有基本设施，如暖气装置和自来水。
+> 
+
+**(3) ADJ-GRADED 基本的;本质的；根本的**
+`The essential aspects of something are its most basic or important aspects.`
+> Most authorities agree that play is an essential part of a child's development...
+> 大多数权威人士都同意，玩耍在孩子成长过程中起着非常重要的作用。
+> 
+
+**(4) N-PLURAL （某学科的）基础，基本知识**
+`The essentials are the most important principles, ideas, or facts of a particular subject.`
+> ...the essentials of everyday life, such as eating and exercise...
+> 饮食、锻炼等日常生活的要素
+>
+> the essentials of English grammar
+> 英语语法基础
+> 
+
+&emsp;
+## 4. correspondingly
+ADV 关联地;相应地;相似地
+`You use correspondingly when describing a situation which is closely connected with one you have just mentioned or is similar to it.`
+> As his political stature has shrunk, he has grown correspondingly more dependent on the army.
+> 随着政治声望的降低，他变得更加依赖军队了。
+> 
+
+&emsp;
+## 5. backward
+### adj.
+**(1) [only before noun] 向后的；朝后的**
+`directed or moving towards the back`
+> She strode past him without a backward glance .
+> 她大步从他身边走过，都没有回头瞧他一眼。
+> 
+
+**(2) 倒退的；反向的**
+`moving in a direction that means that no progress is being made`
+同义词：`retrograde`
+> She felt that going back to live in her home town would be a backward step.
+> 她觉得回到家乡生活就是没出息。
+> 
+
+**(3) 落后的；进步缓慢的**
+`having made less progress than normal; developing slowly`
+> a backward part of the country, with no paved roads and no electricity
+> 该国的一个落后地区，没有铺设马路也没有电力
+
+> a backward child
+> 迟钝儿童
+>
+> a backward country
+> 落后国家
+> 
+> (英国英语, informal)She's not backward in coming forward (= she's not shy) .
+> 她勇敢地站出来。
+> 
+
+&emsp;
+## 6. this may be illustrated by
+这个情况可以通过 .... 来解释
+
+
+&emsp;
+## 7. incur
+### verb
+(-rr-)
+[动词+名词短语] (formal)
+**(1) 招致；遭受；引起**
+`if you incur sth unpleasant, you are in a situation in which you have to deal with it`
+> She had incurred the wrath of her father by marrying without his consent
+> 她未经父亲同意就结婚，使父亲震怒。
+> 
+
+**(2) 引致，带来（成本、花费等）**
+`if you incur costs, you have to pay them`
+> You risk incurring bank charges if you exceed your overdraft limit.
+> 如果超出了透支限额，就有被银行加收费用的风险。
+> 
+
+
+&emsp;
+## 8. overheads
+注意是复数
+**N-PLURAL （企业的）间接费用，营运费用，经常性开支**
+`The overheads of a business are its regular and essential expenses, such as salaries, rent, electricity, and telephone bills.`
+> We are having to cut our costs to reduce overheads and remain competitive.
+> 我们现在必须减少开支以降低营运费用，保持竞争力。
+> 
+
+&emsp;
+## 9. analogous /əˈnæləɡəs/
+### adj.
+**(formal)~ (`to/with sth`) 相似的；类似的**
+`similar in some way to another thing or situation and therefore able to be compared with it`
+> Sleep has often been thought of as being in some way **analogous to** death.
+> 人们常常认为睡眠在某种意义上来说类似死亡。
+> 
+
+
+&emsp;
+## 10. to the extent
+在某种程度上；到...的程度；到……的程度；程度为限
+> He could only be sorry to the extent that this affected his grandchildren
+> 这件事甚至都影响到了他的孙辈，他只有伤心的份儿。
+> 
+> He said he didn't like the president, but not to the extent of wanting to kill him
+> 他说他不喜欢总统，但是还没有到想要刺杀他的地步。
+> 
+> I became pregnant but this man was very violent towards me to the extent that I lost our baby
+> 我怀孕了，但是这个男人对我非常粗暴，致使我流产了。
+> 
+> Expenses are deductible only to the extent that in aggregate they exceed 7 percent of gross income.
+> 只有在消费总额超过总收入的7%时才可免税。
+> 
+
+
+&emsp;
+## 11. take responsibility
+承担责任
+> We need to take responsibility for looking after our own health
+> 我们必须对自己的健康负责。
+> 
+> Someone had to give orders and take responsibility for mistakes.
+> 必须得有人下令，并为错误负责。
+> 
+
+
+&emsp;
+## 12. initiative
+### noun
+**(1) [可数名词] 倡议；新方案**
+`a new plan for dealing with a particular problem or for achieving a particular purpose`
+> a United Nations peace initiative
+> 联合国的和平倡议
+> 
+> a government initiative to combat unemployment
+> 政府应付失业问题的新方案
+> 
+
+**(2) [不可数名词] 主动性；积极性；自发性**
+`the ability to decide and act on your own without waiting for sb to tell you what to do`
+> You won't get much help. You'll have to use your > initiative .
+> 你不会得到多少帮助的。你得自己想办法。
+> 
+> She did it on her own initiative (= without anyone telling her to do it) .
+> 她是主动这么做的。
+> 
+
+(3) `the initiative`
+[单数名词] 掌握有利条件的能力（或机会）；主动权
+`the power or opportunity to act and gain an advantage before other people do`
+> to seize/lose the initiative 
+> 掌握 / 丧失先机
+> 
+> It was up to the US to take the initiative in repairing relations.
+> 在修复关系方面应由美国采取主动。
+> 
+
+**(4) [可数名词] (北美英语, law 律)（美国某些州的）公民立法提案程序**
+
+
+&emsp;
+## 13. fall within
+落入；应列入…范围内
+> In future, staff recruitment will fall within the remit of the division manager.
+> 以后招募新员工将属于部门经理的职责。
+> 
+> These goods all fall within this category.
+> 这些货物都属于这一类。
+> 
+
+
+
+&emsp;
+## 14. within one's sphere
+在某人的权责范围内
+> This is within his sphere of accountability.
+> 这在他的责任范围之内。
+> 
+
+
+&emsp;
+## 15. keep sb in line
+控制好某人
+
+
+&emsp;
+## 16. act in a loyal and responsible manner towards his job
+表现的尽忠守职
+
+
+&emsp;
+## 17. foreman /ˈfɔːrmən/
+n. 工头；领班；陪审团团长
+
+
+&emsp;
+## 18. meet
+v. 满足；开会；会晤；(与…)会面；迎接；支付；遇见；接触（某物）；相遇；经历；遭遇；集合；相逢；相识
+n. 体育比赛；运动会
+### 不常见的释义
+**(1) v 支付；偿付**
+`to pay sth`
+> The cost will be met by the company.
+> 费用将由公司支付。
+>
+> The government said it will help meet some of the cost of the damage...
+> 政府说将帮助支付损害造成的部分费用。
+> 
+
+**(2) VERB 被引见给;认识;结识**
+`If you meet someone, you are introduced to them and begin talking to them and getting to know them.`
+> Hey, Terry, come and meet my Dad.
+> 嗨，特里，过来认识一下我爸爸。
+> 
+
+**(3) verb (在机场等) 迎接**
+`to go to a place and wait there for a particular person to arrive`
+> Will you meet me at the airport?
+> 你到机场接我好吗？
+> 
+> The hotel bus meets all incoming flights.
+> 酒店有车在机场迎接各航班的旅客。
+> 
+> I met him off the plane.
+> 他下飞机后我就接到了他。
+> 
+
+**(4) VERB [比赛][no passive] 遭遇；交锋**
+`to play, fight, etc. together as opponents in a competition`
+> [单独使用的动词, 动词+名词短语] Smith and Jones met in last year's final.
+> 史密斯和琼斯在去年的决赛中相遇。
+> 
+> Smith met Jones in last year's final.
+> 在去年的决赛中，史密斯与琼斯交锋。
+> 
+
+**(5) VERB [动词+名词短语] 经历（常指不愉快的事）**
+`to experience sth, often sth unpleasant`
+同义词：`come across` , `encounter`
+> Others have met similar problems.
+> 其他人遇到过同样的问题。
+> 
+> How she met her death will probably never be known.
+> 她的死因也许将永远无人知晓。
+> 
+
+**(6) VERB 接触（某物）；连接**
+`to touch sth; to join`
+> [单独使用的动词] The curtains don't meet in the middle.
+> 这窗帘中间合不拢。
+> 
+> [动词+名词短语] That's where the river meets the sea.
+> 这条河就在这里流入大海。
+> 
+> His hand met hers.
+> 他的手碰到她的手。
+> 
+
+**(7) VERB [动词+名词短语] 满足；使满意**
+`to do or satisfy what is needed or what sb asks for`
+同义词：`fulfil`
+> How can we best meet the needs of all the different groups?
+> 我们怎样才能最好地满足各种人的需要呢？
+> 
+> Until these conditions are met we cannot proceed with the > sale.
+> 除非这些条件得到满足，否则我们不能进行这项交易。
+> 
+> I can't possibly meet that deadline.
+> 我不可能如期完成。
+> 
+
+**(8) noun (especially 北美英语)体育比赛；运动会**
+`a sports competition`
+> a track meet
+> 径赛运动会
+> 
+
+
+&emsp;
+## 19. civil servant
+n. (政府的)公务员，文职人员
+
+
+&emsp;
+## 20. in the interests of
+为了（或符合)…的利益;有助于
+> In the interests of hygiene, please wash your hands.
+> 为了卫生，请洗手。
+> 
+
+
+&emsp;
+## 21. unduly
+**adv.(formal)过分；过度；不适当地**
+`more than you think is reasonable or necessary`
+同义词：`excessively`
+> He did not sound unduly worried at the prospect.
+> 他的口气听上去对前景并不十分担忧。
+> 
+> The levels of pollution in this area are unduly high.
+> 本地区的污染程度过高。
+> 
+> The thought did not disturb her unduly.
+> 这个想法并没有让她过分烦恼。
+> 
+
+
+
+
+
+&emsp;
+&emsp; 
+# Lesson Lesson 37 The Process of Ageing 衰老的过程
+&emsp;&emsp; 选自英国科学家 `Alex Comfort` (1920-2000)所著 `The Process of Ageing`, 1964, 以 `The Joy of Sex` 一书闻名.
+## 1. vigorous
+### adj.
+**(1) 活跃的;积极的;热烈的**
+`very active, determined or full of energy`
+同义词：energetic
+> a vigorous campaign against tax fraud
+> 坚决打击骗税的运动
+> 
+> a vigorous opponent of the government
+> 坚决反对政府的人
+> 
+> Sir Robert was a strong and vigorous politician.
+> 罗伯特爵士是位坚定而又活跃的政治家。
+> 
+
+
+**(2) 精力旺盛的;充满活力的**
+`strong and healthy`
+> a vigorous young man
+> 身强力壮的年轻人
+> 
+> This plant is a vigorous grower.
+> 这种植物生长起来茂盛茁壮。
+> 
+
+**(3) （体育活动）剧烈的，强度大的，强劲的**
+`Vigorous physical activities involve using a lot of energy, usually to do short and repeated actions.`
+> Very vigorous exercise can increase the risk of heart attacks...
+> 运动太过剧烈会增大心脏病发作的风险。
+> 
+> Take vigorous exercise for several hours a week.
+> 每周做几个小时剧烈运动。
+> 
+
+
+&emsp;
+## 2. likelihood
+**(1) N-UNCOUNT 可能；可能性**
+`The likelihood of something happening is how likely it is to happen.`
+> The likelihood of infection is minimal...
+> 感染的可能性极小。
+> 
+
+**(2) N-SING 可能的事**
+`If something is a likelihood, it is likely to happen.`
+> But the likelihood is that people would be willing to pay if they were certain that their money was going to a good cause...
+> 但如果人们确切知道自己的钱会用于做善事，他们就可能更愿意掏腰包。
+> 
+
+**(3) `in all likelihood` 十之八九；极有可能**
+`If you say that something will happen in all likelihood, you mean that it will probably happen.`
+> In all likelihood, the committee will have to interview every woman who's worked with Thomas.
+> 十有八九，委员会将不得不与每一位曾和托马斯共过事的女性面谈。
+> 
+
+
+&emsp;
+## 3. adj.
+**adj（小得）无法察觉的，感觉不到的**
+`very small and therefore unable to be seen or felt`
+反义词：`perceptible`
+> imperceptible changes in temperature
+> 难以觉察的气温变化
+> 
+> Brian's hesitation was almost imperceptible.
+> 布赖恩的犹豫几乎难以察觉。
+> 
+
+
+&emsp;
+## 4. vigour
+n. 活力；精力；热情；力量
+
+
+&emsp;
+## 5. die of
+死于；因……死，死于（疾病、过度悲伤等）
+> die of old age
+> 因老而死
+> 
+> 400 people a year die of this disease on average.
+> 平均每年有400人死于这种疾病。
+> 
+> Millions could die of hunger as an indirect result of the war
+> 作为战争的间接后果，数百万人可能会死于饥饿。
+> 
+
+
+&emsp;
+## 6. differ little from
+相差很小
+
+
+&emsp;
+## 7. heavy odds
+可能性很大
+
+
+&emsp;
+## 8. self evident
+不言自明
+
+
+&emsp;
+## 9. kettle
+**noun （烧水用的）壶，水壶**
+> an electric kettle
+> 电水壶
+> 
+> (英国英语)I'll put the kettle on (= start boiling some water) and make some tea.
+> 我要烧壶水沏茶。
+> 
+
+&emsp;
+## 10. wearing out
+磨损；穿破
+
+
+&emsp;
+## 11. a wound watch
+上紧发条的手表
+
+
+&emsp;
+## 12. in accordance with
+按照；符合；依照；和…一致
+> Most people believe they conduct their private and public lives in accordance with Christian morality.
+> 大多数人认为他们是依照基督教的道德体系来处理自己的私生活和公共事务的。
+> 
+> Entries which are not in accordance with the rules will be disqualified.
+> 不符合规定的参赛作品将被取消资格。
+> 
+
+
+&emsp;
+## 13. the second law of thermodynamics
+thermodynamics /ˌθɜːrmoʊdaɪˈnæmɪks/
+> n.热力学
+> 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
+&emsp;
+&emsp; 
+# Lesson 
+## 1. 
+
+
+
+&emsp;
+## 2. 
+
+
+&emsp;
+## 3. 
+
+
+&emsp;
+## 4. 
+
+
+&emsp;
+## 5. 
+
+
+&emsp;
+## 6. 
+
+
+&emsp;
+## 7. 
+
+
+&emsp;
+## 8. 
+
+
+&emsp;
+## 9. 
+
+&emsp;
+## 10. 
+
+
+&emsp;
+## 11. 
+
+&emsp;
+## 12. 
+
+
+
+&emsp;
+## 13. 
+
+
+
+&emsp;
+## 14. 
+
+
+&emsp;
+## 15. 
+
+
+&emsp;
+## 16. 
+
+
+&emsp;
+## 17. 
+
+
+&emsp;
+## 18. 
+
+
+&emsp;
+## 19. 
+
+
+&emsp;
+## 20. 
