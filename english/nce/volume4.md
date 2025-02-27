@@ -8911,6 +8911,7 @@ PHRASAL VERB-ERG 使团结;使和睦相处
 > 英语语法基础
 > 
 
+
 &emsp;
 ## 4. correspondingly
 ADV 关联地;相应地;相似地
@@ -9351,358 +9352,1815 @@ thermodynamics /ˌθɜːrmoʊdaɪˈnæmɪks/
 
 
 &emsp;
-## 14. 
+## 14. analogous /əˈnæləɡəs/
+adj. **`(formal)~ (to/with sth)` 相似的；类似的**
+`similar in some way to another thing or situation and therefore able to be compared with it`
+> Sleep has often been thought of as being in some way analogous to death.
+> 人们常常认为睡眠在某种意义上来说类似死亡。
+> 
 
 
 &emsp;
-## 15. 
+## 15. run down
+### adj
+**(1) of a building or place 建筑物或地方破败的；失修的**
+`in very bad condition; that has not been taken care of`
+同义词：`neglected`
+> run-down inner-city areas
+> 破败不堪的市中心区
+> 
+
+**(2) of a business, etc. 商业机构等衰败的；不景气的**
+`not as busy or as active as it used to be`
+> run-down transport services
+> 交通运输业的不景气
+> 
+
+**(3) [not before noun] of a person 人疲惫；略感不适**
+`tired or slightly ill/sick, especially from working hard`
+> to be run-down
+> 疲惫不堪
+> 
 
 
 &emsp;
-## 16. 
+## 16. rewind /ˌriːˈwaɪnd/
+过去式/过去分词：`rewound`
+**(1) V-ERG 将(录像带、录音带)倒回;倒带;倒片**
+`When the tape in a video or tape recorder rewinds or when you rewind it, the tape goes backwards so that you can play it again.`
+> Waddington rewound the tape and played the message again...
+> 沃丁顿把录音带倒回去，把留言又放了一遍。
+> 
+
+**(2) N-UNCOUNT 倒带(键)**
+`If you put a video or cassette tape on rewind, you make the tape go backwards.`
+> Press the rewind button...
+> 按下倒带键。
+> 
 
 
 &emsp;
-## 17. 
+## 17. friction /ˈfrɪkʃn/
+### noun
+**(1) [不可数名词] 摩擦**
+`the action of one object or surface moving against another`
+> Friction between moving parts had caused the engine to overheat.
+> 活动部件的摩擦使发动机过热。
+> 
+
+**(2) [不可数名词] (physics 物)摩擦力**
+`the resistance (= the force that stops sth moving) of one surface to another surface or substance moving over or through it`
+> The force of friction slows the spacecraft down as it re-enters the earth's atmosphere.
+> 航天飞机重返地球大气层时因有摩擦力而减慢速度。
+> 
+
+**(3) [不可数名词, 可数名词] ~ (between A and B)争执；分歧；不和**
+`disagreement or a lack of friendship among people who have different opinions about sth`
+同义词：`tension`
+> conflicts and frictions that have still to be resolved
+> 仍有待解决的冲突和摩擦
+> 
+
+### fraction /ˈfrækʃn/
+n.小部分；分数；小数；少量；一点儿
+**(1) 小部分；少量；一点儿**
+`a small part or amount of sth`
+> Only a small fraction of a bank's total deposits will be withdrawn at any one time.
+> 任何时候，一家银行的总存款只有少量会被提取。
+> 
+> She hesitated for the merest fraction of a second.
+> 她略微犹豫了一下。
+> 
+
+**(2) 分数；小数**
+`a division of a number, for example ⅝`
+> The students had a grasp of decimals, percentages and fractions.
+> 学生们掌握了小数、百分数和分数。
+> 
 
 
 &emsp;
-## 18. 
+## 18. fatal illness
+致命疾病；绝症
 
 
-&emsp;
-## 19. 
 
 
-&emsp;
-## 20. 
+
+
 &emsp;
 &emsp; 
-# Lesson 
-## 1. 
+# Lesson 38 Water and the Traveller 水和旅行者
+&emsp;&emsp; 选自 `Richard Dawood` 博士所编的安全旅行指南 `Travellers’ Health: How to stay healthy abroad` 中 `Water-related diseases` 一章的 `Water and the traveller` 一节，该部分由 `Hemda Garelick` 撰写. 本书初版于 1987 年，一直在改版. 世界卫生组织有所引用.
+## 1. contaminate
+### [动词+名词短语]
+**(1) ~ sth (with sth) 污染；弄脏**
+`to make a substance or place dirty or no longer pure by adding a substance that is dangerous or carries disease`
+同义词：`adulterate`
+> The drinking water has become contaminated with lead.
+> 饮用水被铅污染了。
+> 
+> contaminated blood/food/soil 
+> 受到污染的血液 / 食物 / 土壤
+> 
 
-
-
-&emsp;
-## 2. 
-
-
-&emsp;
-## 3. 
-
-
-&emsp;
-## 4. 
-
-
-&emsp;
-## 5. 
-
-
-&emsp;
-## 6. 
-
-
-&emsp;
-## 7. 
+**(2) (formal)玷污，毒害，腐蚀（人的思想或品德）**
+`to influence people's ideas or attitudes in a bad way`
+> They were accused of contaminating the minds of our young people.
+> 他们被指控毒害我们青少年的心灵。
+> 
+### contamination /kənˌtæmɪˈneɪʃn/
+n. 污染；污秽；(文章,故事等的)混合；(语言的)交感
 
 
 &emsp;
-## 8. 
+## 2. sanitation /ˌsænɪˈteɪʃn/
+noun [不可数名词] 卫生设备；卫生设施体系
+`the equipment and systems that keep places clean, especially by removing human waste`
+> disease resulting from poor sanitation
+> 卫生条件差导致的疾病
+> 
+### 其他相关词
+sanitary /ˈsænəteri/
+> adj. 卫生的；清洁的；环境卫生的；公共卫生的
+> n. 公共厕所
+> 
 
 
 &emsp;
-## 9. 
+## 3. sewage
+**noun [不可数名词] （下水道的）污水，污物**
+> a ban on the dumping of raw sewage (= that has not been treated with chemicals) at sea
+> 禁止把未经处理的污水排入海中
+>
+> sewage disposal
+> 污水处理
+> 
 
 &emsp;
-## 10. 
-
-
-&emsp;
-## 11. 
-
-&emsp;
-## 12. 
-
-
-
-&emsp;
-## 13. 
-
-
-
-&emsp;
-## 14. 
-
-
-&emsp;
-## 15. 
+## 4. intermittent /ˌɪntərˈmɪtənt/
+### adj.
+**断断续续的；间歇的**
+`stopping and starting often over a period of time, but not regularly`
+同义词：`sporadic`
+> intermittent bursts of applause
+> 一阵阵的掌声
+> 
+> intermittent showers
+> 阵雨
+> 
 
 
 &emsp;
-## 16. 
+## 5. tap water
+n. 自来水
 
 
 &emsp;
-## 17. 
+## 6. untreated
+### adj.
+**(1) 没有接受治疗的**
+`not receiving medical treatment`
+> If untreated, the illness can become severe.
+> 若不加以治疗，病情就可能会变得很严重。
+> 
+
+**(2) of substances 物质未处理的**
+`not made safe by chemical or other treatment`
+> untreated sewage
+> 未处理的污水
+> 
+
+**(3) of wood 木材未经防护处理的**
+`not treated with substances to preserve it`
+> All the bedding is made of simple, untreated cotton...
+> 所有床上用品全部用未经处理的天然棉花制成。
+> 
 
 
 &emsp;
-## 18. 
+## 7. canned drinks
+罐装饮料
+`bottled drinks` 瓶装饮料
 
 
 &emsp;
-## 19. 
+## 8. bottling plant
+noun 装瓶厂
+`a plant where beverages are put into bottles with caps`
 
 
 &emsp;
-## 20. 
+## 9. Carbonated drink
+碳酸饮料
+
+
+&emsp;
+## 10. acidic /əˈsɪdɪk/
+adj. 酸的；很酸的；酸性的
+
+
+
+
+
+
 &emsp;
 &emsp; 
-# Lesson 
-## 1. 
+# Lesson 39 What Every Writer Wants 作家之所需
+## 1. pass for
+被误认为是
+> He speaks the language so well he could easily pass for a German.
+> 他德语讲得好极了，很容易被当成德国人。
+> 
+
+
+&emsp;
+## 2. radical change
+巨变
 
 
 
 &emsp;
-## 2. 
+## 3. to one's knowledge
+据某人所知；就某人所知
 
 
 &emsp;
-## 3. 
+## 4. Scottish /ˈskɑːtɪʃ/
+adj. 苏格兰（人）的；苏格兰英语的
+n. 苏格兰人；苏格兰英语
 
 
 &emsp;
-## 4. 
+## 5. interweave /ˌɪntərˈwiːv/
+### verb
+【不规则形式】`interwove` , `interwoven`
+**[usually passive] 交织；交错编织**
+`to twist together two or more pieces of thread, wool, etc.`
+> [动词+名词短语] The blue fabric was interwoven with red and gold thread.
+> 蓝布中交织着红色和金色的线。
+> 
+> (figurative)The problems are inextricably interwoven (= very closely connected) .
+> 问题盘根错节。
+> 
+> For these people, land is inextricably interwoven with life itself...
+> 对这些人来说,土地与生活本身有着不可分割的密切关系。
+> 
 
 
 &emsp;
-## 5. 
+## 6. afresh
+adv. 重新；重新开始；从头；另行
+> It was a chance to start afresh .
+> 这是个重新开始的机会。
+> 
 
 
 &emsp;
-## 6. 
+## 7. discern /dɪˈsɜːrn/
+### verb
+同义词辨析
+not used in the progressive tenses 不用于进行时(formal)
+**(1) 觉察出；识别；了解**
+`to know, recognize or understand sth, especially sth that is not obvious`
+同义词：`detect`
+> [动词+名词短语] It is possible to discern a number of different techniques in her work.
+> 从她的作品中可以识别出许多不同的创作手法。
+> 
+> He discerned a certain coldness in their welcome.
+> 他觉察到他们的欢迎有点冷淡。
+> 
+> [动词+wh-从句] It is often difficult to discern how widespread public support is.
+> 了解公众支持的广泛程度常常是困难的。
+> 
+
+[also 动词+that从句]
+**(2) [动词+名词短语] （依稀）看出，分辨出，听出**
+`to see or hear sth, but not very clearly`
+同义词：`make out`
+> We could just discern the house in the distance.
+> 我们只能勉强分辨出远处的房子。
+> 
 
 
 &emsp;
-## 7. 
+## 8. material
+### noun
+**(1) [不可数名词, 可数名词] 布料**
+`cloth used for making clothes, curtains, etc.`
+> a piece of material
+> 一块布料
+> 
+> ‘What material is this dress made of?’ ‘Cotton.’
+> “这件连衣裙是用什么料子做的？”“棉布。”
+> 
+
+**(2) [可数名词, 不可数名词] 材料；原料**
+`a substance that things can be made from`
+> building materials (= bricks, sand, glass, etc.) 
+> 建筑材料
+>
+> raw material
+> 原材料，原料
+> 
+
+**(3) [可数名词, 通常用复数形式, 不可数名词] （某一活动所需的）材料**
+`things that are needed in order to do a particular activity`
+> teaching materials
+> 教材
+> 
+> The company produces its own training material.
+> 公司自行编写培训教材。
+> 
+
+**(4) [不可数名词] 素材；用以创作的材料（或构想）**
+`information or ideas used in books, etc.`
+> She's collecting material for her latest novel.
+> 她在为其最新的小说收集素材。
+> 
+
+**(5) [不可数名词] 节目；曲目；剧目**
+`items used in a performance`
+> The band played all new material at the gig.
+> 在爵士音乐会上，乐队演奏的都是新曲目。
+> 
+**(6) 人才;(做…的)料**
+`If you say that someone is a particular kind of material, you mean that they have the qualities or abilities to do a particular job or task.`
+> She was not university material...
+> 她不是上大学的料。
+> 
+> manager/executive material
+> 经理/管理人才
+> 
+
+### adj.
+**(1)  [only before noun] 物质的，实际的（非精神需求的）**
+`connected with money, possessions, etc. rather than with the needs of the mind or spirit`
+反义词：spiritual
+> material comforts
+> 物质享受
+> 
+> changes in your material circumstances
+> 物质环境的改变
+> 
+
+**(2)  [only before noun] 物质的；客观存在的**
+`connected with the physical world rather than with the mind or spirit`
+反义词：immaterial
+> the material world
+> 物质世界
+> 
+
+**(3) ~ (to sth) (formal orlaw 律)重要的；必要的**
+`important and needing to be considered`
+> material evidence
+> 重要的证据
+> 
+> She omitted information that was material to the case.
+> 她遗漏了重要的论据。
+> 
 
 
 &emsp;
-## 8. 
+## 9. brushstroke /ˈbrəʃstroʊk/
+**N-COUNT （书法的）一笔**
+`Brushstrokes are the marks made on a surface by a painter's brush.`
+> He paints with harsh, slashing brushstrokes.
+> 他的画笔锋粗犷、凌厉。
+> 
+
+&emsp;
+## 10. yeast /jiːst/
+noun uncountable and countable
+**① Biology 酵母菌**
+> ▸ a yeast infection
+> 念珠菌阴道炎
+> 
+**② Cooking 酵母**
+> ▸ baker's/brewer's yeast
+> 面包/啤酒酵母
+> 
+
+&emsp;
+## 11. nterminable /ɪnˈtɜːrmɪnəbl/
+**adj.冗长的；没完没了的**
+`lasting a very long time and therefore boring or annoying`
+> an interminable speech/wait/discussion
+> 无休止的讲话 / 等待 / 讨论
+> 
+> The drive seemed interminable.
+> 这次开车好像没有尽头。
+> 
+
+### 【派生词】interminably adv.
+> The meeting dragged on interminably.
+> 会议没完没了地拖延着。
+> 
 
 
 &emsp;
-## 9. 
+## 12. winkle /ˈwɪŋkl/
+n. 食用螺；滨螺，蛾螺，玉黍螺(可食用)
+v. 剔出；闪耀；费劲找出
+### 短语动词  Phrasal Verbs
+**(1) `winkle sth/sb out (of sth)`（从…处）挖出，掏出；迫使…离开（某地方或位置）**
+`to get sth/sb out of a place or position, especially when this is not easy to do`
 
-&emsp;
-## 10. 
-
-
-&emsp;
-## 11. 
-
-&emsp;
-## 12. 
-
-
-
-&emsp;
-## 13. 
-
+**(2) `winkle sth out of sb` 从…套出（实情等）**
+`to get information from sb, especially with difficulty`
+同义词：extract
+> She always manages to winkle secrets out of people.
+> 她总是能从别人那里探听出秘密。
+> 
 
 
 &emsp;
-## 14. 
+## 13. undoing
+**noun [单数名词] 失败的原因**
+`the reason why sb fails at sth or is unsuccessful in life`
+同义词：`downfall`
+> That one mistake was his undoing.
+> 他一失足即成千古恨。
+> 
 
 
 &emsp;
-## 15. 
+## 14. pertinent /ˈpɜːrtnənt/
+### adj.
+**~ (to sth) (formal)有关的；恰当的；相宜的**
+`appropriate to a particular situation`
+同义词：`relevant`
+> a pertinent question/fact 
+> 有关的问题 / 事实
+> 
+> Please keep your comments pertinent to the topic under discussion.
+> 请勿发表与讨论主题无关的言论。
+> 
 
 
 &emsp;
-## 16. 
+## 15. a year or two back
+一两年前
 
 
 &emsp;
-## 17. 
+## 16. take comfort
+感到安慰；令人欣慰
+> The government will take comfort from the latest opinion poll.
+> 政府会从最新的民意调查中得到安慰。
+> 
 
 
 &emsp;
-## 18. 
+## 17. ruthless discipline
+严格的纪律
 
 
 &emsp;
-## 19. 
+## 18. flirt /flɜːrt/
+**(1) V-RECIP (和…)调情;(和…)打情骂俏**
+`If you flirt with someone, you behave as if you are sexually attracted to them, in a playful or not very serious way.`
+> Dad's flirting with all the ladies, or they're all flirting with him, as usual...
+> 和平常一样，爸爸在和所有的女士调情，或者说所有的女士都在和他调情。
+> 
+
+**(2) N-COUNT 调情老手**
+`Someone who is a flirt likes to flirt a lot.`
+
+**(3) VERB 不认真地考虑;有…的念头(或想法)**
+`If you flirt with the idea of something, you consider it but do not do anything about it.`
+> Di Pietro, 45, has been flirting with the idea of a political career.
+> 迪彼得罗，45 岁，一直有从政的念头。
+> 
+
+### flirtation
+> ...a professor who has a flirtation with a student...
+> 和一名学生打情骂俏的教授
+> 
+> She was aware of his attempts at flirtation.
+> 她知道他想要挑逗她。
+> 
+
+&emsp;
+## 19. inmost /ˈɪnmoʊst/
+adj. 最深处的；内心深处的；同 `innermost`；最靠近中心的
+> He knew in his inmost heart that he was behaving badly.
+> 在他内心最深处他知道自己行为恶劣。
+> 
 
 
 &emsp;
-## 20. 
+## 20. might as well
+&emsp;&emsp; `might as well`在汉语中可以对应两个合适的翻译：`不妨`和`还不如`。其英文释义为：`doing something because there is no better alternative or seems resonable`，它本身是中性的，且看下面的两个例句来分辨它的不同含义
+例句1:
+> If the party is going to be this boring, we might as well leave.
+> 这个排队注定会很无聊，我们还不如赶紧溜。
+> 
+在这个句子中，`might as well`用于暗示有更佳的选择，所以可以翻译为`还不如`。
+例句2:
+> The movie doesn’t start for another hour, so we might as well grab some coffee while we wait.
+> 电影还要一个小时才开场，我们不妨去喝杯咖啡。
+> 
+在这个语境中，`might as well`用于建议一个合理的选择，即喝咖啡。此时它是中性的，翻译成`不妨`更恰当。
+
+
 &emsp;
 &emsp; 
-# Lesson 
-## 1. 
+# Lesson 40 Waves 海浪
+&emsp;&emsp; 选自 `World Magazine`，文中一部分改自 `Drew Kampion` 所撰写 T`he Book of Waves: Form and Beauty on the Ocean, Arpel 1989`.
+## 1. struggle
+### verb
+**(1)  ~ (for sth) 奋斗；努力；争取**
+`to try very hard to do sth when it is difficult or when there are a lot of problems`
+> [单独使用的动词] a country struggling for independence
+> 为独立而奋斗的国家
+> 
+> Shona struggled for breath .
+> 肖娜艰难地喘着气。
+> 
+> life as a struggling artist (= one who is very poor) 
+> 一个生活难以温饱的艺术家
+> 
+> [动词+带to的不定式] They struggled just to pay their bills.
+> 他们辛苦所得仅敷日用。
+> 
 
+**(2)  [动词+ 副词/介词短语] 艰难地行进；吃力地进行**
+`to move somewhere or do sth with difficulty`
+> I struggled up the hill with the heavy bags.
+> 我背着几个沉重的包吃力地爬上山去。
+> 
+> Paul struggled out of his wheelchair.
+> 保罗挣扎着下了轮椅。
+> 
+
+**(3) [单独使用的动词] ~ (against/with sb/sth) 斗争；抗争**
+`to fight against sb/sth in order to prevent a bad situation or result`
+> He struggled against cancer for two years.
+> 他同癌症抗争了两年。
+> 
+> Lisa struggled with her conscience before talking to the police.
+> 莉萨经过一番良心上的斗争，终于对警方说了。
+> 
+
+**(4) [单独使用的动词] ~ (with sb) 搏斗；扭打；挣扎脱身**
+`to fight sb or try to get away from them`
+> Ben and Jack struggled together on the grass.
+> 本和杰克在草地上扭打起来。
+> 
+> I struggled and screamed for help.
+> 我挣扎着，高声呼救。
+> 
+> James was hit in the mouth as he struggled with the raiders.
+> 詹姆斯在同几个劫匪搏斗时嘴上挨了打。
+> 
+> How did she manage to struggle free ?
+> 她是如何设法逃脱的？
+> 
+
+**(5) [单独使用的动词] ~ (with sb) (for sth) 争夺；辩论**
+`to compete or argue with sb, especially in order to get sth`
+> rival leaders struggling for power
+> 互相对立的领导人争夺权力
+> 
+
+### noun
+**(1) [可数名词] ~ (with sb) (for/against sth) | ~ (with sb) (to do sth) | ~ (between A and B) 斗争；奋斗；努力**
+`a hard fight in which people try to obtain or achieve sth, especially sth that sb else does not want them to have`
+> a power/leadership struggle 
+> 权力的争夺；领导权的斗争
+> 
+> a struggle for independence
+> 争取独立的斗争
+> 
+> the struggle between good and evil
+> 善恶之争
+> 
+> He is engaged in a bitter struggle with his rival to get control of the company.
+> 为取得对公司的控制权，他正同对手进行一场激烈的斗争。
+> 
+> She will not give up her children without a struggle.
+> 她不会轻易放弃自己的孩子。
+> 
+
+**(2)  [可数名词] 搏斗；扭打；（尤指）抢夺，挣扎脱身**
+`a physical fight between two people or groups of people, especially when one of them is trying to escape, or to get sth from the other`
+> There were no signs of a struggle at the murder scene.
+> 在凶杀现场没有搏斗痕迹。
+> 
+
+**(3) [单数名词] ~ (to do sth) 费力的事;难事**
+`something that is difficult for you to do or achieve`
+同义词：`effort`
+> It was a real struggle to be ready on time.
+> 要按时做好准备确非易事。
+>
+> Losing weight was a terrible struggle.
+> 减肥是一件非常艰难的事。
+> 
+
+### 短语动词  Phrasal Verbs
+`struggle along/on` 在困难中坚持；勉力维持
 
 
 &emsp;
-## 2. 
+## 2. ongoing
+**adj. [usually before noun] 持续存在的；仍在进行的；不断发展的**
+`continuing to exist or develop`
+> an ongoing debate/discussion/process
+> 持续的辩论 / 讨论 / 过程
+> 
+> The police investigation is ongoing.
+> 警方的调查在持续进行中。
+>
+> There is an ongoing debate on the issue...
+> 对此问题的争论一直没有间断过。
+> 
 
 
 &emsp;
-## 3. 
+## 3. ray /reɪ/
+### noun
+**(1) 光线；（热或其他能量的）射线**
+`a narrow line of light, heat or other energy`
+> the sun's rays
+> 太阳的光线
+>
+> cosmic rays
+> 宇宙射线
+> 
+> ultraviolet rays
+> 紫外线
+> 
+> The windows were shining in the reflected rays of the setting sun.
+> 窗户上闪耀着落日的余晖。
+> 
+
+see also cosmic rays , gamma rays at gamma radiation , X-ray
+**(2) `~ of sth` （好事或所希望事物的）一点，少量**
+`a small amount of sth good or of sth that you are hoping for`
+同义词：`glimmer`
+> There was just one small ray of hope .
+> 只有一线希望。
+> 
+
+**(3) 魟，鳐（扁体长尾，可食用）**
+`a sea fish with a large broad flat body and a long tail, that is used for food`
+
+**(4) (music 音)大调音阶的第2音**
+also `re`
+the second note of a major scale
+
+### 习语  Idioms
+(1) `a ray of sunshine` (informal)给人带来快乐的人（或事物）
+`a person or thing that makes life brighter or more cheerful`
+
+(2) `catch/get/grab some rays` (informal)晒太阳；沐日光浴
+
+### X-ray
+n. X射线；X光；X光照片；用X射线进行的临床检查
+vt. 用X射线拍摄检查
+adj. X (射)线的
+v. 用 X 射线拍摄检查
 
 
 &emsp;
-## 4. 
+## 4. excite
+### verb
+[动词+名词短语]
+**(1) 使激动；使兴奋**
+`to make sb feel very pleased, interested or enthusiastic, especially about sth that is going to happen`
+> The prospect of a year in India greatly excited her.
+> 有望在印度待上一年使她激动万分。
+> 
+
+**(2) 刺激；使紧张不安**
+`to make sb nervous or upset and unable to relax`
+> Don't excite yourself (= keep calm) .
+> 别激动。
+> 
+> Try not to excite your baby too much before bedtime.
+> 睡觉前尽量别使宝宝太兴奋。
+> 
+
+**(3) ~ sth (in sb) 激发；引发；引起**
+`to make sb feel a particular emotion or react in a particular way`
+> The European Parliament is not an institution which excites interest in voters.
+> 欧洲议会是个激不起选民兴趣的机构。
+> 
+> to excite attention/criticism/curiosity 
+> 引起注意 / 批评 / 好奇心
+> 
+> The news has certainly excited comment (= made people talk about it) .
+> 这消息已经使人们议论纷纷了。
+> 
+
+**(4) 激发（性欲）**
+`to make sb feel sexual desire`
+
+**(5) (formal)使（身体或身体系统某部分）活动；刺激…的活动**
 
 
 &emsp;
-## 5. 
+## 5. phenomena
+现象（`phenomenon`的复数）
 
 
 &emsp;
-## 6. 
+## 6. crest /krest/
+### noun
+**(1) [通常用单数形式] ~ (of sth) 山顶；顶峰；波峰；浪尖**
+`the top part of a hill or wave`
+> surfers riding the crest of the wave
+> 正在浪峰上冲浪的运动员
+> 
+
+**(2) （尤指象征历史悠久家族、机构等的）饰章，纹章**
+`a design used as the symbol of a particular family, organization, etc., especially one that has a long history`
+> the university crest
+> 大学的徽章
+> 
+
+**(3) 鸟冠；羽冠**
+`a group of feathers that stand up on top of a bird's head`
+
+### verb
+**(1) [动词+名词短语] (formal)到达山顶（或浪峰）**
+`to reach the top of a hill, mountain or wave`
+> He slowed the pace as they crested the ridge.
+> 当他们到达山脊时，他放慢了步伐。
+> 
+
+**(2) [单独使用的动词] (北美英语)of a flood, wave, etc. 洪水、波浪等到达洪峰；达到顶点**
+`to reach its highest level before it falls again`
+> (figurative)The level of debt crested at a massive $290 billion in 1992.
+> 1992年的巨额债务高达2 900亿元。
+> 
+
+### 习语  Idioms
+**(1) `the crest of a/the wave` 顶峰时期；极其成功；春风得意**
+`a situation in which sb is very successful, happy, etc.`
+> He is riding the crest of a wave of popularity.
+> 他正处于声望顶峰时期。
+> 
+
+**(2) `ride the crest of sth`  （因某种情况）处于鼎盛时期**
+`to enjoy great success or support because of a particular situation or event`
+> The band is riding the crest of its last tour.
+> 乐队正处于最近这次巡回演出后的顶峰状态。
+> 
 
 
 &emsp;
-## 7. 
+## 7. trough /trɔːf/
+**(1) N-COUNT (喂家畜的)饲料槽，饮水槽**
+`A trough is a long narrow container from which farm animals drink or eat.`
+> The old stone cattle trough still sits by the main entrance.
+> 陈旧的石制牛食槽仍然放在大门口。
+> 
+
+**(2) N-COUNT (两个大浪之间的)波谷**
+`A trough is a low area between two big waves on the sea.`
+> The boat rolled heavily in the troughs between the waves.
+> 船在波涛起伏的海浪中剧烈摇摆。
+> 
+
+**(3) N-COUNT (商业活动等的)淡季，低谷**
+`A trough is a low point in a process that has regular high and low points, for example a period in business when people do not produce as much as usual.`
+> Looking back afterwards you will see that this was not a terminal trough in your career...
+> 今后回想起来你就会明白，这并非你事业中一蹶不振的低谷。
+> 
+
+**(4) N-COUNT 低压槽**
+`A trough of low pressure is a long narrow area of low air pressure between two areas of higher pressure.`
+> The trough of low pressure extended over about 1000 kilometres.
+> 低压槽延伸约 1,000 公里。
+> 
 
 
 &emsp;
-## 8. 
+## 8. actuality /ˌæktʃuˈæləti/
+**(1) PHRASE `in actuality` 真实地；实际上**
+`You can use in actuality to emphasize that what you are saying is true, when it contradicts or contrasts with what you have previously said.`
+> In actuality, Teddie did not have a disorder but merely a difficult temperament...
+> 实际上，小特迪并非哪不正常，而仅仅是属于困难型气质。
+> 
+
+**(2) N-UNCOUNT 真实;实际**
+`Actuality is the state of really existing rather than being imagined.`
+> It exists in dreams rather than actuality.
+> 它存在于梦境而非现实中。
+> 
+
+**(3) N-COUNT [可数名词, 通常用复数形式]  真实情况;实际情况;事实**
+`An actuality is a fact or condition that really exists.`
+同义词：`facts` , `realities`
+> To stop the fighting there requires the threat and probably the actuality of military force...
+> 要平息那里的战火就要威胁采用甚至真正动用军事力量。
+>
+> the grim actualities of prison life
+> 严酷的监狱生活现实
+> 
 
 
 &emsp;
-## 9. 
+## 9. particle
+### noun
+**① (tiny piece) 颗粒** 
+> ▸ not a particle of truth/evidence
+> figurative 没有丝毫真实性/证据
+>
+> particles of dust
+> 灰尘
+> 
+> dust particles
+> 尘埃
+> 
+> There was not a particle of evidence (= no evidence at all) to support the case.
+> 没有丝毫支持这个论点的证据。
+> 
+**② Physics(物理) 粒子** 
+
+**③ (grammar 语法)小品词（与动词构成短语动词的副词或介词）**
+> In ‘She tore up the letter’, the word ‘up’ is a particle.
+> 在She tore up the letter句中，up是小品词。
+> 
 
 &emsp;
-## 10. 
+## 10. circular
+**(1) ADJ 圆的;圆形的**
+`Something that is circular is shaped like a circle.`
+> ...a circular hole twelve feet wide and two feet deep...
+> 12英尺宽、2英尺深的圆坑
+>
+> a circular building
+> 圆形建筑物
+> 
+
+**(2) ADJ (旅程或路线)环行的，巡回的**
+`A circular journey or route is one in which you go to a place and return by a different route.`
+> Both sides of the river can be explored on this circular walk.
+> 沿着这条环行线路走一圈，河的两边都可以看到。
+>
+> a circular tour of the city
+> 环城游览
+> 
+
+**(3) ADJ-GRADED 论点或理论循环论证的（以一种观点证明另一观点，接着再用后一种观点反过来去证明前一观点**
+`A circular argument or theory is not valid because it uses a statement to prove something which is then used to prove the statement.`
+**(4)ADJ `of a letter` 信函大量送发的；传阅的**
+
+**(5) N-COUNT (同时发送给很多人的)广告印刷品，通告**
+`A circular is an official letter or advertisement that is sent to a large number of people at the same time.`
+> The proposal has been widely publicised in BBC-TV press information circulars sent to 1,800 newspapers.
+> 在英国广播公司电视台发送给1,800家报社的新闻通报中，这项提议得到了广泛的宣传。
+> 
 
 
 &emsp;
-## 11. 
-
-&emsp;
-## 12. 
-
-
-
-&emsp;
-## 13. 
-
-
-
-&emsp;
-## 14. 
-
-
-&emsp;
-## 15. 
+## 11. for a time
+有一段时间；暂时，一度
+> I think you ought to give football a rest for a time.
+> 我认为你应该暂时停止踢足球。
+> 
+> I lived in Egypt for a time.
+> 我在埃及住了一阵子。
+> 
+> For a time it seemed doubtful that he would move at all
+> 有一段时间他似乎根本不会搬家。
+> 
+> For a time he contemplated a career as an army medical doctor
+> 有段时间，他考虑去当军医。
+> 
 
 
 &emsp;
-## 16. 
+## 12. assume
+### verb
+**(1) 假定；假设；认为**
+`to think or accept that sth is true but without having proof of it`
+> [动词 (+ that从句)] It is reasonable to assume (that) the economy will continue to improve.
+> 认为经济将继续好转是有道理的。
+> 
+> Let us assume for a moment that the plan succeeds.
+> 咱们暂时假设计划成功。
+> 
+> She would, he assumed, be home at the usual time.
+> 他认为，她会在通常时间回到家的。
+> 
+> [动词+名词短语+that从句] It is generally assumed that stress is caused by too much work.
+> 普遍认为，紧张是工作过重所致。
+> 
+> [动词+名词短语] Don't always assume the worst (= that sth bad has happened) .
+> 别总往最坏处想。
+> 
+> In this example we have assumed a unit price of $10.
+> 在这个例子中我们已假定单价为10元。
+> 
+> [动词+名词短语+带to的不定式] I had assumed him to be a Belgian.
+> 我本以为他是比利时人。
+> 
+
+**(2) [动词+名词短语] (formal)承担（责任）；就（职）；取得（权力）**
+`to take or begin to have power or responsibility`
+同义词：`take`
+> The court assumed responsibility for the girl's welfare.
+> 法庭承担了保障这个女孩福利的责任。
+> 
+> Rebel forces have assumed control of the capital.
+> 反叛武装力量已控制了首都。
+> 
+
+**(3) [动词+名词短语] (formal)呈现（外观、样子）；显露（特征）**
+`to begin to have a particular quality or appearance`
+同义词：`take on`
+> This matter has assumed considerable importance.
+> 这件事看来相当重要。
+> 
+> In the story the god assumes the form of an eagle.
+> 在这个故事中神以鹰的形象出现。
+> 
+
+**(4) [动词+名词短语] (formal)装出；假装**
+`to pretend to have a particular feeling or quality`
+同义词：`put on`
+> He assumed an air of concern.
+> 他装出关心的样子。
+> 
 
 
 &emsp;
-## 17. 
+## 13. individuality
+**noun [不可数名词] 个性；个人（或个体）特征**
+`the qualities that make sb/sth different from other people or things`
+> She expresses her individuality through her clothes.
+> 她从穿着上表现出她的个性。
+> 
+> People should be free to express their individuality...
+> 人们应该能自由表达他们的个性。
+> 
 
 
 &emsp;
-## 18. 
+## 14. undulate /ˈʌndʒəleɪt/
+**verb [单独使用的动词] (formal)起伏；波动；荡漾**
+`to go or move gently up and down like waves`
+> The countryside undulates pleasantly.
+> 原野起伏，景色宜人。
+> 
+> As we travel south, the countryside begins to undulate as the rolling hills sweep down to the riverbanks...
+> 我们一路南行，乡间开始变得起伏不平，绵延的山峦一直延伸到河岸。
+> 
+### undulating
+adj. 波状的；波浪起伏的
+> ...gently undulating hills.
+> 微微起伏的山丘
+> 
 
 
 &emsp;
-## 19. 
+## 15. tremor /ˈtremər/
+### noun
+**(1) 轻微地震；小震；微震**
+`a small earthquake in which the ground shakes slightly`
+> an earth tremor
+> 地动
+> 
+
+**(2) （由于寒冷或恐惧等引起的）颤抖，战栗，哆嗦**
+`a slight shaking movement in a part of your body caused, for example, by cold or fear`
+同义词：`quiver`
+> There was a slight tremor in his voice.
+> 他的声音略微有点儿颤抖。
+> 
 
 
 &emsp;
-## 20. 
+## 16. gravitational /ˌɡrævɪˈteɪʃənl/
+adj. 引力的；重力引起的
+`connected with or caused by the force of gravity`
+> a gravitational field
+> 引力场
+> 
+> the gravitational pull of the moon
+> 月球的引力
+> 
+> gravitational pull
+> 引力；地心引力
+> 
+
+
+
+
+
+
 &emsp;
 &emsp; 
-# Lesson 
-## 1. 
+# Lesson 41 Training Elephants 驯服大象
+&emsp;&emsp; 选自 `Richard Carrington` 所著 `Elephants: A short account of their natural history, evolution, and influence on mankind` 一书，`Basic Books, 1959`.
+## 1. account
+### noun
+银行 at bank
+**(1) (abbr. a/c)账户**
+`an arrangement that sb has with a bank, etc. to keep money there, take some out, etc.`
+> I don't have a bank account.
+> 我没有银行账户。
+> 
+> to open/close an account 
+> 开立 / 结清账户
+> 
+> What's your account number please?
+> 请问你的账户号码？
+> 
+> I paid the cheque into my savings account.
+> 我把支票存入我的储蓄账户。
+> 
+> a joint account (= one in the name of more than one person) 
+> 联合账户
+>
+> budget account 预算账户(作定期付账之用)
+>
+> checking account 活期存款账户
+>
+> current account 活期(存款)账户;往来账户
+>
+> deposit account 定期存款账户
+> 
+
+商业记录 business records
+**(2) [通常用复数形式] 账目**
+`a written record of money that is owed to a business and of money that has been paid by it`
+> to do the accounts
+> 记账
+> 
+> the accounts department
+> 会计部门
+>
+> expense account 费用账户；报销账目
+> 
+> profit and loss account 损益账
+> 
+
+
+商店 with shop/store
+**(3) 赊销账；赊欠账；赊购**
+英国英语 also `credit account`
+北美英语 also `charge account`
+`an arrangement with a shop/store or business to pay bills for goods or services at a later time, for example in regular amounts every month`
+> Put it on my account please.
+> 请记在我的赊购账上。
+> 
+> We have accounts with most of our suppliers.
+> 我们与大多数供应商都是实行赊购制。
+> 
+
+老主顾 regular customer
+**(4) (business 商)老主顾**
+`a regular customer`
+> The agency has lost several of its most important accounts.
+> 这家代理机构失去了几家最重要的老客户。
+> 
+
+计算机技术 computing
+**(5) （互联网、电子邮件等的）账户，账号**
+`an arrangement that sb has with a company that allows them to use the Internet, send and receive messages by email, etc.`
+> an Internet/email account 
+> 互联网 / 电子邮件账户
+> 
+
+描述 description
+**(6) 描述；叙述；报告**
+`a written or spoken description of sth that has happened`
+> She gave the police a full account of the incident.
+> 她向警方详尽地叙述了所发生的事情。
+> 
+
+note at report
+**(7) （思想、理论、过程的）解释，说明，叙述**
+`an explanation or a description of an idea, a theory or a process`
+> the Biblical account of the creation of the world
+> 《圣经》对创世的解释
+> 
+
+### verb
+**[usually passive] (formal)认为是；把…视作**
+`to have the opinion that sb/sth is a particular thing`
+> [动词+名词短语+形容词] In English law a person is accounted innocent until they are proved guilty.
+> 按英格兰法律，一个人未经证实有罪之前被视为无罪。
+> 
+> [动词+名词短语+名词短语] The event was accounted a success.
+> 人们认为这次活动是成功的。
+> 
+
+### 习语  Idioms
+#### (1)`there's no accounting for taste`
+(saying)人的爱憎好恶是无法解释的；人各有所好
+`used to say how difficult it is to understand why sb likes sb/sth that you do not like at all`
+> She thinks he's wonderful─oh well, there's no accounting for taste.
+> 她认为他了不起——嗯，算了，人各有所好嘛。
+> 
+
+#### (2) by/from all accounts
+根据各种说法
+> He is, by all accounts, a superb teacher.
+> 他是位有口皆碑的好老师。
+> 
+
+#### (3) give a good account of 
+（尽管未必大获全胜但）出色地表现（自己）
+`If you say that someone gave a good account of themselves in a particular situation, you mean that they performed well, although they may not have been completely successful.`
+> The team fought hard and gave a good account of themselves.
+> 这支队伍奋力拼搏，表现出色。
+> 
+
+#### (4) of no/little account
+毫不重要;无足轻重
+`If you say that something is of no account or of little account, you mean that it is very unimportant and is not worth considering.`
+> These obscure groups were of little account in national politics.
+> 这些名不见经传的团体在国内政界无足轻重。
+> 
+
+#### (5) on account
+`以赊账方式;以分期付款方式`
+`If you buy or pay for something on account, you pay nothing or only part of the cost at first, and pay the rest later.`
+> He bought two bottles of vodka on account.
+> 他挂账买了两瓶伏特加酒。
+> 
+
+#### (6) on account of
+PREP-PHRASE 因为;由于
+`You use on account of to introduce the reason or explanation for something.`
+> The President declined to deliver the speech himself, on account of a sore throat...
+> 总统因嗓子不适而婉拒了亲自讲话。
+> 
+
+#### (7) on one's account
+① PHRASE 从（某人的）角度；（尤指）设想处于（某人的）情况
+`Your feelings on someone's account are the feelings you have about what they have experienced or might experience, especially when you imagine yourself to be in their situation.`
+> Mollie told me what she'd done and I was really scared on her account.
+> 莫莉告诉我她的所作所为，我真是替她感到后怕。
+> 
+
+② PHRASE 因为（某人的）缘故
+`If you tell someone not to do something on your account, you mean that they should do it only if they want to, and not because they think it will please you.`
+> Don't leave on my account.
+> 别因为我就走了。
+> 
+
+#### (8) on no account
+PHRASE 绝不;切勿
+`If you say that something should on no account be done, you are emphasizing that it should not be done under any circumstances.`
+> On no account should the mixture boil.
+> 切勿让这种混合物沸腾。
+> 
+
+#### (9) on that/this account
+PHRASE 为了那个/这个缘故
+`You can use on that account or on this account when you want to say that something happens for the reason you have just mentioned.`
+> Wine is radioactive but few people stop drinking it on that account.
+> 酒是有放射性的，可是很少有人因此而戒酒。
+> 
+
+#### (10) by his/her own account
+PHRASE 根据(某人)自己的说法
+`If you say that something concerning a particular person is true by his or her own account, you mean that you believe it because that person has said it is true.`
+> He was by his own account an ambitious workaholic.
+> 据他自己所言，他是个雄心勃勃的工作狂。
+> 
+
+#### (11) on one's own account
+① PHRASE 作为个人地；为自身利益地
+`If you take part in a business activity on your own account, you do it for yourself, and not as a representative or employee of a company.`
+> She had plans to set up in business on her own account.
+> 她计划自己创业。
+> 
+
+② PHRASE 自主自愿地;责任自负地
+`If you do something on your own account, you do it because you want to and without being asked, and you take responsibility for your own action.`
+> I told him if he withdrew it was on his own account.
+> 我告诉他，如果他退出，责任自负。
+> 
+
+#### (12) settle accounts with
+PHR-RECIP （与敌人或对手）决战，算账，了结恩怨
+`To settle accounts with an enemy or opponent means to bring your fight or quarrel to an end by defeating them.`
+> ...until the great day came when the Germans could finally settle accounts with the British...
+> 直到德国人最终能和英国人清算旧账的重大日子的来临
+> 
+
+#### (13) take sth into account / take account ofsth
+PHRASE 考虑到；把…计算在内
+`If you take something into account, or take account of something, you consider it when you are thinking about a situation or deciding what to do.`
+> The defendant asked for 21 similar offences to be taken into account...
+> 被告要求考虑到类似的21起违法行为的情况。
+> 
+
+#### (14) call/hold/bring to account for sth
+PHRASE （对所做的错事）被要求解释并遭斥责，被问责
+`If someone is called, held, or brought to account for something they have done wrong, they are made to explain why they did it, and are often criticized or punished for it.`
+> Ministers should be called to account for their actions.
+> 部长们应该对他们的行为作出解释。
+> 
+
+
+### 短语动词  Phrasal Verbs
+#### account for sth
+**(1) 是…的说明（或原因）**
+`to be the explanation or cause of sth`
+同义词：explain
+> The poor weather may have accounted for the small crowd.
+> 天气不好可能是人来得少的原因。
+> 
+> Oh well, that accounts for it (= I understand now why it happened) .
+> 哎呀，原来是这么一回事。
+> 
+**(2) 解释；说明**
+`to give an explanation of sth`
+同义词：explain
+> How do you account for the show's success?
+> 你认为这次演出为何成功？
+> 
+
+**(3) （数量上、比例上）占**
+`to be a particular amount or part of sth`
+> The Japanese market accounts for 35% of the company's revenue.
+> 日本市场占该公司收入的35%。
+> 
+
+#### account for sb/sth
+**(1) （尤指在事故之后）了解，查明**
+`to know where sb/sth is or what has happened to them, especially after an accident`
+> All passengers have now been accounted for.
+> 现在所有乘客的情况均已查明。
+> 
+**(2) (informal)打败；破坏；摧毁；消灭**
+`to defeat or destroy sb/sth`
+> Our anti-aircraft guns accounted for five enemy bombers.
+> 我们的高射炮击落了五架敌人的轰炸机。
+> 
+
+#### account for sth (to sb)
+**报账；出示经手款项的单据**
+`to give a record of how the money in your care has been spent`
+> We have to account for every penny we spend on business trips.
+> 我们出公差所用的每一分钱都得报清楚。
+> 
+
+
+&emsp;
+## 2. at a later stage
+在后期阶段；后来
+
+
+&emsp;
+## 3. may well
+很可能；（完全）能，（满）可以
+`may well`用来加强推测的语气，表示“很可能”。例如：`You may well be right`. 你很可能是对的。在翻译时，要注意加上“很”，以体现语气强度。
+
+
+&emsp;
+## 4. mahout /məˈhaʊt/
+n. 象夫；驯象人；骑象人
+
+
+&emsp;
+## 5. personal affection
+个人情感
+
+
+&emsp;
+## 6. pine /paɪn/
+**(1) N-VAR 松树**
+`A pine tree or a pine is a tall tree which has very thin, sharp leaves and a fresh smell. Pine trees have leaves all year round.`
+> ...high mountains covered in pine trees.
+> 长满松树的高山
+> 
+**(2) N-VAR 松木**
+...a big pine table.
+一张大松木桌子
+
+**(3) VERB （因死亡或离别而）怀念，苦苦思念，为…难过**
+`If you pine for someone who has died or gone away, you want them to be with you very much and feel sad because they are not there.`
+> She'd be sitting at home pining for her lost husband...
+> 她会坐在家里，思念死去的丈夫。
+> 
+
+**(4) VERB 渴望，苦苦盼望（尤指不大可能拥有的东西）**
+`If you pine for something, you want it very much, especially when it is unlikely that you will be able to have it.`
+> I pine for the countryside.
+> 我渴望乡间的生活。
+> 
+
+
+&emsp;
+## 7. extreme case
+极端的例子
+> The extreme case was Poland, where 29 parties won seats
+> 极端的例子是波兰，共有29个政党拥有议席。
+> 
+
+
+&emsp;
+## 8. a grain of salt
+`A grain of salt` 用来表示人们在接收一些信息的时候，要保持怀疑和谨慎的态度。`Take sth with a grain of salt`意思是 “对某事有保留，半信半疑，持怀疑态度”。
+> You should take his advice with a grain of salt; he's not always reliable.
+> 你应该对他的建议持保留态度；他有时候不靠谱。
+> 
+
+
+&emsp;
+## 9. general principle
+n. 一般原理；总原则，总（通）则
+
+
+&emsp;
+## 10. keep
+keep做名词有 `n.生活费用；生活必需品`
+
+
+&emsp;
+## 11. straight away
+**ADV 立刻;马上;毫不迟疑地**
+`If you do something straight away, you do it immediately and without delay.`
+> I should go and see a doctor straight away...
+> 我得马上去看医生。
+> 
+
+
+&emsp;
+## 12. subservient /səbˈsɜːrviənt/
+### adj
+**(1) ~ (to sb/sth) (disapproving)恭顺的；驯服的；谄媚的；卑躬屈膝的**
+`too willing to obey other people`
+> The press was accused of being subservient to the government.
+> 有人指责新闻界一味迎合政府的旨意。
+> 
+
+**(2) ~ (to sth) (formal)次要；从属于**
+`less important than sth else`
+> The needs of individuals were subservient to those of the group as a whole.
+> 个人的需要服从于整个集体的需要。
+> 
+
+
+&emsp;
+## 13. firm hand
+铁腕手段
+> Those children need a firm hand to make them behave.
+> 那些孩子得严加管教。
+> 
+
+
+&emsp;
+## 14. plunge
+### verb
+**(1) [+ 副词/介词短语] 使突然前冲（或下落）**
+`to move or make sb/sth move suddenly forwards and/or downwards`
+> [单独使用的动词] She lost her balance and plunged 100 feet to her death.
+> 她没有站稳，从100英尺的高处跌下摔死了。
+> 
+> [动词+名词短语] The earthquake plunged entire towns over the edge of the cliffs.
+> 地震将整座整座的城镇掀到悬崖之下。
+> 
+
+**(2) [单独使用的动词] of prices, temperatures, etc. 价格、温度等暴跌；骤降；突降**
+`to decrease suddenly and quickly`
+同义词：`plummet`
+> Stock markets plunged at the news of the coup.
+> 政变的消息一传来，股票市场便暴跌。
+> 
+
+**(3) [动词+ 副词/介词短语] of a road, surface, etc. 道路、表面等陡峭地向下倾斜**
+`to slope down steeply`
+> The track plunged down into the valley.
+> 小路陡然而下，直插山谷。
+> 
+
+**(4) [单独使用的动词] （剧烈）颠簸，震荡**
+`to move up and down suddenly and violently`
+> The horse plunged and reared.
+> 马猛然跃起，用后腿直立。
+> 
+> (figurative)His heart plunged (= because of a strong emotion) .
+> 他的心怦怦乱跳。
+> 
+
+### noun
+**(1) 突然跌落；突然分离**
+`a sudden movement downwards or away from sth`
+同义词：`drop`
+> The calm water ends there and the river begins a headlong plunge.
+> 平静的河水突然中断，开始奔腾直泻而下。
+> 
+
+**(2) `~ (in sth)` （价格、数量的）暴跌，猛降，骤减**
+`a sudden decrease in an amount or the value of sth`
+同义词：drop
+> a dramatic plunge in profits
+> 利润锐减
+> 
+
+**(3) `~ into sth` 卷入；参与**
+`the act of becoming involved in a situation or activity`
+> The company is planning a deeper plunge into the commercial market.
+> 这家公司正计划进一步投入商业市场。
+> 
+
+**(4) 跳水；快速游泳**
+`an act of jumping or diving into water; a quick swim`
+> He took the plunge into the deep end.
+> 他跳入深水区。
+> 
+> She went for a plunge.
+> 她去游泳了。
+> 
+
+### 短语动词  Phrasal Verbs
+#### (1) plunge into sth
+**① （尤指用力地）投入，跳进**
+`to jump into sth, especially with force`
+> The pool was declared open and eager swimmers plunged in.
+> 游泳池刚刚宣布开门，游泳的人就急切地跳入池中。
+> 
+**② 热情投入；贸然行动**
+`to start doing sth in an enthusiastic way, especially without thinking carefully about what you are doing`
+> She was about to plunge into her story when the phone rang.
+> 她刚要开始大谈她的经历，电话响了。
+> 
+> He's always plunging in at the deep end (= becoming involved in difficult situations without being well enough prepared) .
+> 他总是贸然行动，屡屡卷入困境。
+> 
+
+#### (2) plunge sth into sth
+猛力插入；扎进
+`to push sth quickly and with force into sth else`
+> She plunged the knife deep into his chest.
+> 她把刀子深深地刺进他的胸膛。
+> 
+
+#### (3) plunge into sth
+**① = `plunge in`**
+
+**② 经历，陷入（不快的事）**
+`to experience sth unpleasant`
+> The country plunged deeper into recession.
+> 那个国家进一步陷入经济萧条之中。
+> 
+
+#### (4) plunge sb/sth into sth
+使经历，使陷入（不快的事情）
+`to make sb/sth experience sth unpleasant`
+> The news plunged them into deep depression.
+> 这条消息立即使他们深感沮丧。
+> 
+> There was a flash of lightning and the house was plunged into darkness .
+> 雷电闪过，房子陷入一片黑暗之中。
+> 
+
+
+&emsp;
+## 15. through
+原文：
+> and for several days will probably refuse all food **through** anger and fear
+>
+through 在这里做介词表示：`以；凭借；因为；由于`
+> You can only achieve success through hard work.
+> 你得孜孜不倦方能成功。
+> 
+> It was through him (= as a result of his help) that I got the job.
+> 我全靠他的帮助才找到这份工作。
+> 
+> The accident happened through no fault of mine.
+> 发生事故并不是我的过错。
+> 
+
+
+&emsp;
+## 16. tether /ˈteðər/
+**(1) PHRASE `at the end of one's` tether 无计可施;山穷水尽;走投无路**
+`If you say that you are at the end of your tether, you mean that you are so worried, tired, and unhappy because of your problems that you feel you cannot cope.`
+> She was jealous, humiliated, and emotionally at the end of her tether...
+> 她既忌妒又感到屈辱，感情上已经到了崩溃的边缘。
+> 
+
+**(2) N-COUNT (拴动物的)拴绳，拴链**
+A tether is a rope or chain which is used to tie an animal to a post or fence so that it can only move around within a small area.
+
+**(3) VERB 将…拴(到)**
+`If you tether an animal or object to something, you attach it there with a rope or chain so that it cannot move very far.`
+> The officer dismounted, tethering his horse to a tree.
+> 军官下了马，把它拴到一棵树上。
+> 
+
+
+&emsp;
+## 17. in most cases
+在大多数情况下；一般地；
+> Investors can simply pay cash, but this isn't a workable solution in most cases.
+> 投资者可以直接付现金，但这个办法在大多数情况下都不可行。
+> 
+> Hospital admission is not necessary in most cases.
+> 大多数情况下，病人无须住院。
+> 
+> In most cases, pain is transient.
+> 大多数情况下，疼痛是短暂的。
+> 
+
+
+&emsp;
+## 18. the training establishment
+establishment 在这里表示 “场所”
+### establishment
+**(1) N-SING 成立;建立;创立**
+`The establishment of an organization or system is the act of creating it or beginning it.`
+> His ideas influenced the establishment of National Portrait Galleries in London and Edinburgh.
+> 他的观念影响了伦敦和爱丁堡两所国家肖像艺术馆的建立。
+> 
+
+**(2) N-COUNT 机构;团体;企业**
+`An establishment is a shop, business, or organization occupying a particular building or place.`
+> ...a scientific research establishment.
+> 科研机构
+>
+> an educational establishment
+> 教育机构
+> 
+> a research establishment
+> 研究机构
+> 
+
+**(3) N-SING 权威；当权者；权势集团**
+`You refer to the people who have power and influence in the running of a country, society, or organization as the establishment.`
+> Shopkeepers would once have been pillars of the Tory establishment...
+> 商店店主一度本该成为保守党统治集团的重要支柱。
+> 
+
+**(4) N-SING 旅馆**
+
+**(5) 权威人士**
+> the literary/art/medical/legal establishment
+> 文学/艺术/医学/法律界权威
+> 
 
 
 
 &emsp;
-## 2. 
+## 19. ticklish /ˈtɪklɪʃ/
+**(1) ADJ-GRADED (问题、情况、任务)艰难的，难处理的;棘手的**
+`A ticklish problem, situation, or task is difficult and needs to be dealt with carefully.`
+> So car makers are faced with the ticklish problem of how to project products at new buyers.
+> 因此，汽车制造商面临着怎样向新顾客树立产品形象的大难题。
+> 
+
+**(2) ADJ-GRADED 怕痒的;怕胳肢的**
+`Someone who is ticklish is sensitive to being tickled, and laughs as soon as you tickle them.`
+> This massage method is not recommended for anyone who is very ticklish.
+> 这种按摩法不推荐给怕痒的人使用。
+> 
 
 
 &emsp;
-## 3. 
+## 20. customary
+**(1) ADJ 习俗的;习惯的**
+`Customary is used to describe things that people usually do in a particular society or in particular circumstances.`
+> It is customary to offer a drink or a snack to guests...
+> 向客人提供一杯饮料或一份点心是一种习俗。
+> 
+> Marriages in medieval Europe were customarily arranged by the families.
+> 在中世纪的欧洲，婚姻通常是由双方的家庭安排的。
+> 
+
+**(2) ADJ 特有的;独特的;典型的**
+`Customary is used to describe something that a particular person usually does or has.`
+> The king carried himself with his customary elegance...
+> 国王保持着一贯的温文尔雅。
+>
+> She arranged everything with her customary efficiency.
+> 她以她特有的高效率把一切都已安排妥当。
+> 
 
 
 &emsp;
-## 4. 
+## 21. ccompaniment
+**(1) [可数名词, 不可数名词] （音乐）伴奏**
+`music that is played to support singing or another instrument`
+> traditional songs with piano accompaniment
+> 用钢琴伴奏的传统歌曲
+> 
+**(2) [可数名词] 佐餐物；伴随物**
+`something that you eat, drink or use together with sth else`
+> The wine makes a good accompaniment to fish dishes.
+> 这种葡萄酒很适合作鱼菜的佐餐酒。
+> 
+**(3) [可数名词] (formal)伴随发生的事情**
+`something that happens at the same time as another thing`
+> High blood pressure is a common accompaniment to this disease.
+> 这种病通常伴随有高血压。
+> 
+
+### 习语  Idioms
+#### `to the accompaniment of sth`
+**(1) 在…的伴奏下**
+`while a musical instrument is being played`
+> They performed to the accompaniment of guitars.
+> 他们在吉他的伴奏下表演。
+> 
+**(2) 在…发生时；伴随有；同时有**
+`while sth else is happening`
+> She made her speech to the accompaniment of loud laughter.
+> 她的演讲不断引起哄堂大笑。
+> 
 
 
 &emsp;
-## 5. 
+## 22. soothe /suːð/
+### verb
+[动词+名词短语]
+**(1) 安慰；抚慰；劝慰**
+`to make sb who is anxious, upset, etc. feel calmer`
+同义词：calm
+> The music soothed her for a while.
+> 音乐让她稍微安静了一会儿。
+> 
+**(2) 减轻，缓解，缓和（身体某部位的紧张或疼痛）**
+`to make a tense or painful part of your body feel more comfortable`
+同义词：`relieve`
+> This should soothe the pain.
+> 这个应该能缓解疼痛。
+> 
+> Take a warm bath to soothe tense, tired muscles.
+> 洗个热水澡，让紧张疲劳的肌肉放松一下。
+> 
+
+### soothe sth away
+解除；消除；消释
+
+### soothing
+adj. 减轻(痛苦)的；催眠的；安慰性的；起镇定作用的
+> Cold tea is very soothing for burns.
+> 凉的茶水非常有助于减轻烧伤灼痛。
+> 
+
+&emsp;
+## 23. chant /tʃænt/
+### noun
+**(1) [可数名词] 反复呼喊的话语；重复唱的歌词**
+`words or phrases that a group of people shout or sing again and again`
+> The crowd broke into chants of ‘Out! Out!’
+> 人群突然爆发出“下台！下台！”的反复呼喊声。
+> 
+> football chants
+> 此起彼伏的足球助威声
+> 
+
+**(2) [可数名词, 不可数名词] 圣歌；反复吟咏的祷文；单调的吟唱**
+`a religious song or prayer or a way of singing, using only a few notes that are repeated many times`
+> a Buddhist chant
+> 佛经诵念
+> 
+
+### verb
+**(1) 反复唱；反复呼喊**
+`to sing or shout the same words or phrases many times`
+> [动词+名词短语] The crowd chanted their hero's name.
+> 人群不断地呼唤着自己英雄的名字。
+> 
+> [单独使用的动词] A group of protesters, chanting and carrying placards, waited outside.
+> 一群抗议者等候在外面，举着标语牌不停地喊着口号。
+> 
+> [动词+直接引语] ‘Resign! Resign!’ they chanted.
+> “辞职！辞职！”他们反复不停地喊叫着。
+> 
+
+**(2) [单独使用的动词, 动词+名词短语] 唱圣歌；反复地吟咏祷文；单调重复地唱**
+`to sing or say a religious song or prayer using only a few notes that are repeated many times`
 
 
 &emsp;
-## 6. 
+## 24. endear
+`endear sb/yourself to sb` 使受欢迎（或喜爱、爱慕）
+`to make sb/yourself popular`
+> Their policies on taxation didn't endear them to voters.
+> 他们的税收政策并没使他们受到选民的欢迎。
+> 
+> She was a talented teacher who endeared herself to all who worked with her.
+> 她是一位深受同事喜爱的有才华的教师。
+>
+> Their taste for gambling has endeared them to Las Vegas casino owners...
+> 他们因好赌而深受拉斯维加斯赌场老板的欢迎。
+> 
+
+### endearing
+令人爱慕的；惹人喜爱的；讨人喜欢的
+`causing people to feel affection`
+同义词：`lovable`
+> an endearing habit
+> 讨人喜欢的习惯
+> 
 
 
 &emsp;
-## 7. 
+## 25. epithet /ˈepɪθet/
+### noun
+**(1) （尤用于褒贬人或事物特征或性质的）表述形容词，修饰语**
+`an adjective or phrase that is used to describe sb/sth's character or most important quality, especially in order to give praise or criticism`
+> The film is long and dramatic but does not quite earn the epithet ‘epic’.
+> 这部影片篇幅长，戏剧性强，不过还不能誉为“史诗”。
+> 
+**(2) (especially 北美英语)别称；绰号；诨名**
+`an offensive word or phrase that is used about a person or group of people`
+> Racial epithets were scrawled on the walls.
+> 墙上涂写着一些带有种族歧视的称谓。
+> 
 
 
 &emsp;
-## 8. 
+## 26. blandishments /ˈblændɪʃmənts/
+n. (因有所求而)说的好话(或做的好事)，讨人欢心
+> At first Lewis resisted their blandishments.
+> 起初，刘易斯并没有听信他们的甜言蜜语。
+> 
 
 
 &emsp;
-## 9. 
-
-&emsp;
-## 10. 
-
-
-&emsp;
-## 11. 
-
-&emsp;
-## 12. 
-
-
-
-&emsp;
-## 13. 
+## 27. lash
+### verb
+**(1) 猛击；狠打**
+`to hit sb/sth with great force`
+同义词：`pound`
+> [动词+ 副词/介词短语] The rain lashed at the windows.
+> 雨点猛烈地打在窗户上。
+> 
+> [动词+名词短语] Huge waves lashed the shore.
+> 巨浪拍打着海岸。
+> 
 
 
+**(2) [动词+名词短语] 鞭打；抽打**
+`to hit a person or an animal with a whip , rope, stick, etc.`
+同义词：`beat`
 
-&emsp;
-## 14. 
+**(3) [动词+名词短语] 怒斥**
+`to criticize sb/sth in a very angry way`
+同义词：`attack`
+
+**(4) [动词+名词短语+ 副词/介词短语] 捆绑；捆扎**
+`to fasten sth tightly to sth else with ropes`
+> Several logs had been lashed together to make a raft.
+> 几根原木捆扎在一起做成了木筏。
+> 
+> During the storm everything on deck had to be lashed down.
+> 暴风雨中甲板上所有的东西都必须系牢。
+> 
+
+**(5) （使）迅猛摆动，甩动**
+`to move or to move sth quickly and violently from side to side`
+> [单独使用的动词] The crocodile's tail was lashing furiously from side to side.
+> 鳄鱼的尾巴在急速地左右甩动。
+> 
+
+### noun
+(1) = `eyelash`
+> her long dark lashes
+> 她那长长的黑睫毛
+> 
+**(2) 作为惩罚的）鞭打，抽打**
+`a hit with a whip , given as a form of punishment`
+> They each received 20 lashes for stealing.
+> 他们因盗窃每人挨了20鞭。
+> 
+> (figurative)to feel the lash of sb's tongue (= to be spoken to in an angry and critical way) 
+> 领教某人利口如刀的厉害
+> 
+
+**(3) 鞭端皮条；鞭梢**
+
+### 短语动词  Phrasal Verbs
+#### (1) `lash out (at sb/sth)`
+**① （突然）狠打，痛打**
+`to suddenly try to hit sb`
+> She suddenly lashed out at the boy.
+> 她突然狠狠地打那个男孩。
+> 
+**② 怒斥；严厉斥责**
+`to criticize sb in an angry way`
+> In a bitter article he lashed out at his critics.
+> 他写了一篇尖刻的文章，猛烈抨击批评他的人。
+> 
+
+#### `lash out on sth`
+(英国英语, informal)在…上大量花费
+`to spend a lot of money on sth`
 
 
-&emsp;
-## 15. 
 
 
-&emsp;
-## 16. 
 
 
-&emsp;
-## 17. 
-
-
-&emsp;
-## 18. 
-
-
-&emsp;
-## 19. 
-
-
-&emsp;
-## 20. 
 &emsp;
 &emsp; 
-# Lesson 
+# Lesson 42 Recording an Earthquake 记录地震
+&emsp;&emsp; 选自英国地理学家、植物学家和动物学家 `H. H. Swinnerton` 所著 `The Earth Beneath Us`, `Penguin`, 1958.
 ## 1. 
 
 
