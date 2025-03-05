@@ -11161,168 +11161,687 @@ n. (因有所求而)说的好话(或做的好事)，讨人欢心
 &emsp; 
 # Lesson 42 Recording an Earthquake 记录地震
 &emsp;&emsp; 选自英国地理学家、植物学家和动物学家 `H. H. Swinnerton` 所著 `The Earth Beneath Us`, `Penguin`, 1958.
-## 1. 
+## 1. like a thief in the night
+秘密地，出乎意料地；悄悄地
+
+
+&emsp;
+## 2. It was necessary, therefore, to invent instruments that neither slumbered nor slept.
+语序调整一下：
+> Therefore, It was necessary, to invent instruments that neither slumbered nor slept.
+> 
+
+
+&emsp;
+## 3. slumber /ˈslʌmbər/
+**(1) noun [不可数名词, 可数名词, 通常用复数形式] (literary)睡眠**
+`sleep; a time when sb is asleep`
+> She fell into a deep and peaceful slumber.
+> 她睡着了，睡得又沉又香。
+> 
+
+**(2) verb [单独使用的动词] (literary)睡；睡眠**
+> The older three girls are still slumbering peacefully.
+> 稍大的 3 个女孩还在安静地睡着
+> 
+
+
+&emsp;
+## 4. rod
+### noun
+**(1) often used in compounds 常用于构成复合词杆；竿；棒**
+`a long straight piece of wood, metal or glass`
+> ▸ a wood/metal rod
+> 木杆/铁棒
+> 
+> ▸ a nuclear fuel rod
+> 核燃料棒
+> 
+
+see also lightning rod (1)
+**(2) = fishing rod**
+> fishing with rod and line
+> 用鱼竿钓鱼
+> 
+
+**(3) also `the rod` (old-fashioned)（责打人用的）棍棒**
+`a stick that is used for hitting people as a punishment`
+> There used to be a saying: ‘Spare the rod and spoil the child.’
+> 俗语说：“孩子不打不成器。”
+> 
+
+**(4) (北美英语, slang)手枪**
+`a small gun`
+
+### 习语  Idioms
+#### (1) make a rod for your own back
+自找麻烦；自讨苦吃
+`to do sth that will cause problems for you in the future`
+
+### a rod/stick to beat sb with
+用以责备或惩罚某人的事实依据（或把柄等）
+`a fact, an argument, etc. that is used in order to blame or punish sb`
+
+
+&emsp;
+## 5. on end
+**(1) 直立着; 竖着**
+> His bristly red hair was standing on end.
+> 他粗硬的红头发根根直立。
+> 
+> This was the kind of smile that made your hair stand on end.
+> 这是那种让人不寒而栗的微笑。
+> 
+
+**(2) 连续地;持续地；**
+> I spend days on end in this studio.
+> 我一连几天呆在这个工作室里。
+> 
+> He is a wonderful companion and we can talk for hours on end.
+> 他是个非常好的同伴，我们可以连续聊上好几个小时。
+> 
+
+
+&emsp;
+## 6. rigid
+### adj.
+**(1) (often disapproving)of rules, methods, etc. 规则、方法等死板的；僵硬的**
+`very strict and difficult to change`
+同义词：`inflexible`
+> The curriculum was too narrow and too rigid.
+> 课程设置过于狭窄和死板。
+> 
+> His rigid adherence to the rules made him unpopular.
+> 他对规则的刻板坚持使得他不受欢迎。
+> 
+
+**(2) of a person (人)固执的；僵化的；一成不变的**
+`not willing to change their ideas or behaviour`
+同义词：`inflexible`
+> rigid attitudes
+> 固执的态度
+> 
+
+**(3) of an object or substance 物体或物质坚硬的；不弯曲的；僵直的**
+`stiff and difficult to move or bend`
+> a rigid support for the tent
+> 帐篷的坚硬的支柱
+> 
+> She sat upright, her body rigid with fear .
+> 她直挺挺地坐着，吓得浑身发僵。
+> 
+> (figurative)I was bored rigid (= extremely bored) .
+> 我觉得无聊极了。
+> 
+
+**(4) (常因震惊或害怕)身体僵直的，不能动弹的，呆住的**
+`If someone goes rigid, their body becomes very straight and stiff, usually as a result of shock or fear.`
+> I went rigid with shock...
+> 我惊得僵在那里。
+> 
+> She stood rigidly and stared into the room.
+> 她直直地站在那里，凝视着屋内。
+> 
+
+
+&emsp;
+## 7. delicate
+### adj.
+**(1) 易损的；易碎的；脆弱的**
+`easily damaged or broken`
+同义词：`fragile`
+> delicate china teacups
+> 易碎的瓷茶杯
+> 
+> The eye is one of the most delicate organs of the body.
+> 眼睛是人体最娇贵的器官之一。
+> 
+> the delicate ecological balance of the rainforest
+> 热带雨林极易被破坏的生态平衡
+> 
+> Babies have very delicate skin.
+> 婴儿的皮肤非常娇嫩。
+> 
+> a cool wash cycle for delicate fabrics
+> 精细织物冷洗程序
+> 
+
+**(2) of a person 人虚弱的；纤弱的**
+`not strong and easily becoming ill/sick`
+> a delicate child/constitution 
+> 纤弱的孩子 / 体质
+> 
+
+**(3) 纤细的；微小的；精美的；小巧玲珑的**
+`small and having a beautiful shape or appearance`
+> his delicate hands
+> 他纤细的手
+> 
+
+**(4) 精致的；精细的；精密的**
+`made or formed in a very careful and detailed way`
+> the delicate mechanisms of a clock
+> 钟的精密机件
+> 
+
+**(5) 熟练的；需要技巧的；需要小心处理的；微妙的**
+`showing or needing skilful, careful or sensitive treatment`
+> I admired your delicate handling of the situation.
+> 我赞赏你应付这种局面的娴熟技巧。
+> 
+> a delicate problem
+> 微妙的问题
+> 
+> The delicate surgical operation took five hours.
+> 这精细的外科手术花了五个小时。
+> 
+
+**(6) of colours, flavours and smells 颜色、味道、气味柔和的；清淡可口的；清香的**
+`light and pleasant; not strong`
+同义词：`subtle`
+> a delicate fragrance/flavour 
+> 清新的芳香；鲜美的味道
+> 
+> a river scene painted in delicate watercolours
+> 用柔和的水彩画的河景
+> 
+
+
+&emsp;
+## 8. But instruments far more delicate than that were needed if any really serious advance was to be made.
+这句话应该这样断句：
+> But instruments far more delicate than that 
+> were needed 
+> if any really serious advance was to be made.
+> 
+
+
+&emsp;
+## 9. The ideal to be aimed at
+理想的目标 
+
+
+&emsp;
+## 10.  with practice
+在这里，`with`表示`通过...的方法`
+> Skill comes with practice.
+> 熟能生巧。
+> 
+> We must link theory with practice.
+> 我们必须理论联系实际。
+> 
+> Skill comes only with practice, patience and persistence
+> 只有不断练习，有耐心有毅力，才能学会一门技艺。
+> 
+
+
+&emsp;
+## 11. legible /ˈledʒəbl/ 
+**adj. of written or printed words 手写或印刷文字清晰可读的；清楚的**
+`clear enough to read`
+> legible handwriting
+> 清楚易读的笔迹
+> 
+> The signature was still legible.
+> 签名仍清晰可辨。
+> 
+
+
+&emsp;
+## 12. lay
 
 
 
 &emsp;
-## 2. 
+## 13. a  piece of string
+一根绳子(string)一般用`piece`来描述
+> a piece/length of string 
+> 一根 / 一段细绳
+> 
 
 
 &emsp;
-## 3. 
+## 14. to and fro
+往返地；来回地
+`backwards and forwards`
+> She rocked the baby to and fro.
+> 她来回摇动着婴儿。
+>
+> he ship was rolling heavily to and fro.
+> 轮船剧烈地颠簸着。
+> 
+> She stood up and began to pace to and fro
+> 她站起身，开始来回踱步。
+> 
 
 
 &emsp;
-## 4. 
+## 15. 4 upon
+**(1) PREP 在…上**
+`If one thing is upon another, it is on it.`
+> He set the tray upon the table...
+> 他把盘子放在桌子上。
+> 
+
+**(2) PREP 一…即…；一…就…**
+`You use upon when mentioning an event that is followed immediately by another event.`
+> The door on the left, upon entering the church, leads to the Crypt of St Issac...
+> 一进教堂左边的那扇门通往圣以撒墓。
+> 
+
+**(3) PREP （用于名词叠用，表示数量多）**
+`You use upon between two occurrences of the same noun in order to say that there are large numbers of the thing mentioned.`
+> Row upon row of women surged forwards...
+> 一排排的女人涌上前去。
+> 
+
+**(4) PREP 将要发生；马上来临**
+`If an event is upon you, it is just about to happen.`
+> The long-threatened storm was upon us...
+> 酝酿多时的暴风雨就要向我们袭来。
+> 
+
+### 习语  Idioms
+#### (1) (almost) upon you
+近在咫尺；即将来临
+`if sth in the future is almost upon you , it is going to arrive or happen very soon`
+> The summer season was almost upon them again.
+> 转眼间他们又要过夏天了。
+> 
+
+#### (2) once upon a time
+（用于故事的开头）从前，很久以前
+`used, especially at the beginning of stories, to mean ‘a long time in the past’`
+> Once upon a time there was a beautiful princess.
+> 从前，有一位美丽的公主。
+> 
 
 
 &emsp;
-## 5. 
+## 16. It was upon this principle that the first instruments were made
+注意，`upon`还能表示`基于（某原理）`
 
 
 &emsp;
-## 6. 
+## 17. drum
+### noun
+**(1) 鼓(一种乐器)**
+> a bass drum
+> 大鼓
+> 
+> Tony Cox on drums
+> 鼓手托尼∙考克斯
+> 
+> to play the drums
+> 击鼓
+> 
+> a regular drum beat
+> 节奏均匀的击鼓声
+> 
+
+**(2) （装油或化学剂的）大桶**
+`a large container for oil or chemicals, shaped like a cylinder`
+> a 50 gallon drum
+> 容积为50加仑的桶
+> 
+> an oil drum
+> 油桶
+> 
+
+**(3) 鼓状物；（尤指机器上的）鼓轮，滚筒**
+`a thing shaped like a drum , especially part of a machine`
+> The mixture flows to a revolving drum where the water is filtered out.
+> 混合剂流过旋转着的滚筒时水分便从中滤出。
+> 
+
+### verb
+(-mm-)
+**(1) [单独使用的动词] 打鼓；击鼓**
+`to play a drum`
+
+**(2) `~ (sth) on sth` 连续敲击…使发出咚咚声；不停地击打**
+`to make a sound by hitting a surface again and again`
+> [动词+名词短语] Impatiently, he drummed his fingers on the table.
+> 他不耐烦地用手指嗒嗒地敲击桌子。
+> 
+
+### 短语动词  Phrasal Verbs
+### (1) `drum sth into sb`
+向某人反复灌输；对某人反复讲述
+`to make sb remember sth by repeating it a lot of times`
+> We had it drummed into us that we should never talk to strangers.
+> 我们曾被反复叮嘱千万不要与陌生人讲话。
+> 
+
+### (2) `drum sb out (of sth)`
+[usually passive] 开除；轰走；驱逐
+`to force sb to leave an organization as a punishment for doing sth wrong`
+
+### (3) `drum sth up`
+竭力争取（支持）；兜揽（生意）
+`to try hard to get support or business`
+> He had flown to the north of the country to drum up support for the campaign.
+> 他已乘飞机到国家的北方去努力争取对这一运动的支持。
+> 
 
 
 &emsp;
-## 7. 
+## 18. wriggle /ˈrɪɡl/
+### verb
+(1) `~ (about/around)` 扭动身体；扭来扭去
+`to twist and turn your body or part of it with quick short movements`
+同义词：`wiggle`
+> [单独使用的动词] The baby was wriggling around on my lap.
+> 婴儿在我大腿上扭来扭去。
+> 
+> [动词+名词短语] She wriggled her toes.
+> 她扭动着脚趾。
+> 
+
+**(2) [usually + 副词/介词短语] 蠕动；甩动而行；蜿蜒行进**
+`to move somewhere by twisting and turning your body or part of it`
+同义词：`squirm`
+> [单独使用的动词] The fish wriggled out of my fingers.
+> 那条鱼从我指缝中一甩身溜走了。
+> 
+> [动词+形容词] She managed to wriggle free.
+> 她设法扭动着挣脱了。
+> 
+> [动词+名词短语] They wriggled their way through the tunnel.
+> 他们在地道中蜿蜒行进。
+> 
 
 
 &emsp;
-## 8. 
+## 19. The apparatus thus described
+这里所说的仪器
 
 
 &emsp;
-## 9. 
-
-&emsp;
-## 10. 
+## 20. bluebottle
+n. 青蝇；绿头蝇
 
 
 &emsp;
-## 11. 
+## 21. longitudinal
+### adj.
+(technical 术语)
+**(1) 纵的；纵向的**
+`going downwards rather than across`
+> The plant's stem is marked with thin green longitudinal stripes.
+> 这种植物的茎上长有绿色细长条纹。
+> 
 
-&emsp;
-## 12. 
+**(2) 纵观的**
+`concerning the development of sth over a period of time`
+> a longitudinal study of aging
+> 对衰老问题的纵向研究
+> 
 
-
-
-&emsp;
-## 13. 
-
-
-
-&emsp;
-## 14. 
-
-
-&emsp;
-## 15. 
-
-
-&emsp;
-## 16. 
+**(3) 经度的**
+`connected with longitude`
+> the town's longitudinal position
+> 这座城市的经度位置
+> 
 
 
 &emsp;
-## 17. 
+## 22. transverse /ˈtrænzvɜːrs/
+n. 横向；横轴；横断面；横向物；[解]横肌
+adj. 横(向)的；横切的；横断的
+> A transverse bar joins the two posts.
+> 一根横杆连接着两根立柱
+> 
 
 
-&emsp;
-## 18. 
 
 
-&emsp;
-## 19. 
 
 
-&emsp;
-## 20. 
 &emsp;
 &emsp; 
-# Lesson 
-## 1. 
-
-
-
-&emsp;
-## 2. 
+# Lesson 43 Are There Strangers in Space? 宇宙中有外星人吗？
+&emsp;&emsp; 选自德国科学记者 `Anthony R. Michaelis` (1916-2007)于 1965 年所撰写的同名文章.
+## 1. the origin of life
+生命的起源
 
 
 &emsp;
-## 3. 
+## 2. almost certain
+几乎可以肯定；几乎肯定；几乎确定；十拿九稳
+> The President and his supporters are almost certain to read this vote as a mandate for continued economic reform
+> 总统及其支持者几乎肯定地认为这次投票是对继续进行经济改革的授权。
+> 
+> In a large city you're almost certain to find a physician with whom you are compatible and feel comfortable.
+> 在大城市，几乎肯定能找到一个和你意气相投、让你觉得舒心的心灵抚慰者。
+> 
 
 
 &emsp;
-## 4. 
+## 3. poor in oxyge
+氧气不足
 
 
 &emsp;
-## 5. 
+## 4. virtual
+virtual certainty 事实上肯定会发生
+### adj
+[only before noun]
+**(1) 很接近的；几乎…的；事实上的；实际上的；实质上的**
+`almost or very nearly the thing described, so that any slight difference is not important`
+> The country was sliding into a state of virtual civil war.
+> 这个国家实际上正逐渐进入内战状态。
+> 
+> The company has a virtual monopoly in this area of trade.
+> 这家公司实质上已经垄断了这种贸易。
+> 
+> He married a virtual stranger.
+> 他娶了一位几乎素不相识的女子。
+> 
+
+**(2) （通过计算机软件，如在互联网上）模拟的，虚拟的**
+`made to appear to exist by the use of computer software, for example on the Internet`
+> virtual button 虚拟按键
+> 
+> virtual reality 虚拟现实
+> 
+> New technology has enabled development of an online ‘virtual library’.
+> 新技术已经使在线“虚拟图书馆”的发展成为可能。
+> 
 
 
 &emsp;
-## 6. 
+## 5. outer space
+外太空
 
 
 &emsp;
-## 7. 
+## 6. prevail /prɪˈveɪl/
+### verb
+[单独使用的动词]
+**(1) `~ (in/among sth)` 普遍存在；盛行；流行**
+`to exist or be very common at a particular time or in a particular place`
+> We were horrified at the conditions **prevailing in** local prisons.
+> 地方监狱的普遍状况让我们震惊。
+> 
+> Those beliefs still **prevail among** certain social groups.
+> 这些信念在某些社会群体中仍很盛行。
+> 
+
+**(2) `~ (against/over sth)` (formal)of ideas, opinions, etc. (思想、观点等)被接受；战胜；压倒**
+`to be accepted, especially after a struggle or an argument`
+同义词：`triumph (over sb/sth)`
+> Justice will prevail over tyranny.
+> 正义必将战胜暴虐。
+> 
+> Fortunately, common sense prevailed.
+> 幸而理智占了上风。
+> 
+
+**(3) `[单独使用的动词] ~ (against/over sb)` (formal)（尤指长时间斗争后）（在战斗、竞赛、争论中）战胜，挫败**
+`to defeat an opponent, especially after a long struggle`
+> He appears to have the votes he needs to prevail...
+> 他似乎已经获得了取胜所需的选票。
+> 
+
+### 短语动词  Phrasal Verbs
+#### `prevail on/upon sb to do sth`
+(formal)劝说
+`to persuade sb to do sth`
+> I'm sure he could be prevailed upon to give a talk.
+> 我相信能说服他来做一次报告。
+>
+> We must, each of us, prevail upon our congressman to act...
+> 我们每一个人都必须说服我们各自的国会议员采取行动。
+> 
+
+### prevailing /prɪˈveɪlɪŋ/
+### adj
+**(1) 普遍的；盛行的；流行的**
+`existing or most common at a particular time`
+同义词：`current` , `predominant`
+> the prevailing economic conditions
+> 普遍的经济状况
+> 
+> the attitude towards science prevailing at the time
+> 当时对科学的流行看法
+> 
+> The prevailing view seems to be that they will find her guilty.
+> 一般人的看法似乎认为她会被判有罪。
+>
+> This reflects attitudes and values prevailing in society
+> 这反映了社会上盛行的态度和价值观。
+> 
+
+**(2) （指风）一地区常刮的，盛行的**
+> The direction of the prevailing winds should be taken into account.
+> 应该将盛行风的方向考虑在内。
+> 
+
+&emsp;
+## 7. radio astronomer
+射电天文学家
 
 
 &emsp;
-## 8. 
+## 8. might well
+很可能
+> Premature moves in this respect might well provoke a reaction against the reform
+> 在这方面不成熟的举动很可能引发对改革的抵触情绪。
+> 
+> I might well regret it later
+> 我很可能以后会对此后悔的。
+> 
+> From the sound of things, he might well be the same man
+> 听起来，他似乎还是原来的那个他。
+> 
+> An old friend might well be able to get through to her and help her
+> 也许一个老朋友能让她明白并且帮助她。
+> 
 
 
 &emsp;
-## 9. 
-
-&emsp;
-## 10. 
-
-
-&emsp;
-## 11. 
-
-&emsp;
-## 12. 
-
+## 9. lbetter left unsaid
+还是不说为好
+> Some things are better left unsaid.
+> 有些事情还是不说出来好。
+> 
+> Some things, Donald, are better left unsaid
+> 唐纳德，有些事还是不说为好。
+> 
 
 
 &emsp;
-## 13. 
-
-
-
-&emsp;
-## 14. 
-
-
-&emsp;
-## 15. 
-
-
-&emsp;
-## 16. 
+## 10. come up against
+**PHRASAL VERB 碰到;面对**
+`If you come up against a problem or difficulty, you are faced with it and have to deal with it.`
+> We came up against a great deal of resistance in dealing with the case.
+> 办这个案子的过程中，我们遇到了很多阻力。
+>
+> It's here that we come up against the difference of approach
+> 我们就是在这一点上面临方法上的分歧。
+> 
 
 
 &emsp;
-## 17. 
+## 11. astronomical distances
+天文距离
 
 
 &emsp;
-## 18. 
+## 12. light year
+**(1) N-COUNT 光年（指光在1年中所经过的距离）**
+`A light year is the distance that light travels in a year.`
+> ...a star system millions of light years away.
+> 几百万光年外的一个星系
+> 
+
+**(2) N-COUNT 极大的差距；极远的距离；极长的时期**
+`You can say that two things are light years apart to emphasize a very great `difference or a very long distance or period of time between them.
+> She says the French education system is light years ahead of the English one...
+> 她说法国的教育体制遥遥领先于英国。
+> 
 
 
 &emsp;
-## 19. 
+## 13. rational way
+合理的方法； 理性的方式
 
 
 &emsp;
-## 20. 
+## 14. mega
+**(1) ADV （置于形容词和副词前，表示强调）**
+`Young people sometimes use mega in front of adjectives or adverbs in order to emphasize them.`
+> He has become mega rich...
+> 他成了巨富。
+> 
+
+**(2) ADJ (用于名词前)特别好的，异常巨大的，非常重要的**
+`Young people sometimes use mega in front of nouns in order to emphasize that the thing they are talking about is very good, very large, or very impressive.`
+> ...her newly acquired mega salary.
+> 她刚刚到手的巨额薪水
+> 
+### megahertz
+(abbr. MHz)兆赫；百万赫兹
+
+
+&emsp;
+## 15. interstellar /ˌɪntərˈstelər/
+adj. 星际的
+> ...interstellar space.
+> 星际空间
+> 
+
+
+&emsp;
+## 16. rendezvous /ˈrɑːndɪvuː/
+**(1) N-COUNT (常指秘密的)约会，会面，会合**
+`A rendezvous is a meeting, often a secret one, that you have arranged with someone for a particular time and place.`
+> I had almost decided to keep my rendezvous with Tony.
+> 我差不多已经决定如约和托尼见面了。
+> 
+
+**(2) N-COUNT 约会地点;见面地点**
+`A rendezvous is the place where you have arranged to meet someone, often secretly.`
+> Their rendezvous would be the Penta Hotel at Heathrow Airport.
+> 他们将在希思罗机场的五角饭店碰面。
+> 
+
+**(3) V-RECIP 与…约会;和…会面**
+`If you rendezvous with someone or if the two of you rendezvous, you meet them at a time and place that you have arranged.`
+> The plan was to rendezvous with him on Sunday afternoon...
+> 计划在周日下午和他会面。
+> 
+
+
+
+
+
+
 &emsp;
 &emsp; 
-# Lesson 
+# Lesson 44 Patterns of Culture 文化模式
+&emsp;&emsp; 选自美国人类学家 `Ruth Benedict` (1887-1948)所著 `Patterns of Culture, Houghton Mifflin, 1934` 一书第一章 `The Science of Custom`，所以本文的标题以章节名更贴切，本书选取第 3-6 段，本文标题删除了“的”，因原著所有的中文出版书籍均以《文化模式》出版发行，在语法上来说应有“的”字. 其还写有名著《菊与刀》，该书的副标题是`Patterns of Japanese Culture`，可以视作是本课书籍的应用.
 ## 1. 
 
 
