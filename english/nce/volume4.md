@@ -11842,194 +11842,912 @@ adj. 星际的
 &emsp; 
 # Lesson 44 Patterns of Culture 文化模式
 &emsp;&emsp; 选自美国人类学家 `Ruth Benedict` (1887-1948)所著 `Patterns of Culture, Houghton Mifflin, 1934` 一书第一章 `The Science of Custom`，所以本文的标题以章节名更贴切，本书选取第 3-6 段，本文标题删除了“的”，因原著所有的中文出版书籍均以《文化模式》出版发行，在语法上来说应有“的”字. 其还写有名著《菊与刀》，该书的副标题是`Patterns of Japanese Culture`，可以视作是本课书籍的应用.
-## 1. 
+## 1. Anthropology /ˌænθrəˈpɑːlədʒi/
+人类学
+
+
+&emsp;
+## 2. fasten
+`It fastens its attention upon those physical characteristics and industrial techniques.`
+### verb
+**(1) ~ (sth) (up) （使两部分）系牢，扎牢，结牢，扣紧**
+`to close or join together the two parts of sth; to become closed or joined together`
+同义词：`do up`
+> [动词+名词短语] Fasten your seatbelts, please.
+> 请系好安全带。
+> 
+> He fastened up his coat and hurried out.
+> 他扣好大衣就匆匆出去了。
+> 
+> [单独使用的动词] The dress fastens at the back.
+> 这件连衣裙是在后背系扣的。
+> 
+反义词：`unfasten`
+
+**(2) （使）关紧，盖好**
+`to close sth firmly so that it will not open; to be closed in this way`
+> [动词+名词短语] Fasten the gates securely so that they do not blow open.
+> 把大门闩好以免被风吹开。
+> 
+> [单独使用的动词] The window wouldn't fasten.
+> 这扇窗子关不严。
+> 
+反义词：`unfasten`
+
+**(3) [动词+名词短语+ 副词/介词短语] 使牢固；使固定**
+`to fix or place sth in a particular position, so that it will not move`
+> He fastened back the shutters.
+> 他把活动护窗拉开系紧。
+> 
+
+**(4) [动词+名词短语] `~ A to B | ~ A and B (together)` （使两物）系牢，扎牢，结牢，扣牢**
+`to attach or tie one thing to another thing`
+> He fastened the papers together with a paper clip.
+> 他用回形针别好了文件。
+> 
+
+**(5) 握住；抓牢；咬住**
+`if you fasten your arms around sb, your teeth into sth, etc., or if your arms, teeth, etc. fasten around, into, etc. sb/sth, you hold the person/thing firmly with your arms, etc.`
+> [动词+名词短语] The dog fastened its teeth in his leg.
+> 狗死死咬着他的腿。
+> 
+> [单独使用的动词] His hand fastened on her arm.
+> 他用手牢牢抓住她的胳膊。
+> 
+
+**(6) 盯住**
+`if you fasten your eyes on sb/sth or your eyes fasten on sb/sth, you look at them for a long time`
+> [动词+名词短语] He fastened his gaze on her face.
+> 他盯着她的脸。
+> 
+
+**(7) V-ERG (使)(注意力)集中于…**
+`If someone or something fastens your attention on a particular thing or if your attention fastens on it, you start to concentrate on it rather than on anything else.`
+> More and more her memory and all her thoughts fastened on one event...
+> 她越来越多地把记忆和心思都集中在一件事上。
+> 
+
+**(8) VERB 集中注意力于;专注于**
+`If someone or something fastens on a particular thing, they start to concentrate on it.`
+> My mind attempted to calm itself by fastening on this trivial detail...
+> 我尝试将注意力集中在这个小细节上以让自己平静下来。
+> 
+
+
+&emsp;
+## 3. physical characteristics
+物理特性；物理特征；身体特征；体质特征；物理参数
+
+
+&emsp;
+## 4. of any
+任何；在所有的…当中
+> Can I be of any use?
+> 有什么要我帮忙的吗？
+> 
+> We would appreciate you letting us know of any problems.
+> 如有任何问题，请告诉我们。
+> 
+> I don't own anything of any value.
+> 我没有任何值钱的东西。
+> 
+
+
+&emsp;
+## 5. the other way around/round
+意为”相反，反过来，反之亦然“等，虽然它看起来很别扭，但是实用性很强，而且它是一个固定搭配，例如：
+> I actually prefer having the books organized the other way around, from largest to smallest.
+> 事实上我更喜欢把书从大到小按另一种方式组织起来。
+> 
+> I think it should go on the other way round.
+> 我认为事情应该朝着相反的方向发展。
+> 
+
+
+&emsp;
+## 6. aberrant /æˈberənt/
+**adj (formal)违反常规的；反常的；异常的**
+`not usual or not socially acceptable`
+> aberrant behaviour
+> 反常行为
+> 
+
+
+&emsp;
+## 7. 原文理解
+> Traditional custom, taken the world over, is a mass of detailed behaviour more astonishing than what any one person can ever evolve in individual actions, no matter how aberrant. 
+> 
+
+
+&emsp;
+## 8. pristine /ˈprɪstiːn/
+### adj.
+**(1) 崭新的；清新的**
+`fresh and clean, as if new`
+同义词：`immaculate`
+> The car is in pristine condition .
+> 这辆汽车是全新的。
+> 
+
+**(2) 未开发的；处于原始状态的**
+`not developed or changed in any way; left in its original condition`
+同义词：`unspoiled`
+> pristine, pollution-free beaches
+> 没有污染的原始海滩
+> 
+
+
+&emsp;
+## 9. philosophical probing
+哲学探索
+
+
+&emsp;
+## 10. go behind
+调查
+
+
+&emsp;
+## 11. in all seriousness
+严肃
+> In all seriousness, there is nothing else I can do.
+> 可以非常诚恳地说，我没有其他能做的。
+> 
+
+
+&emsp;
+## 12. baby talk 
+n. 牙牙学语(声)；(成人对婴儿所用的)模仿儿语
+
+
+&emsp;
+## 13. vernacular /vərˈnækjələr/
+n. 白话；方言；土语；(建筑的)民间风格
+adj. 白话的；方言的；本国的；本国语的
+
+
+&emsp;
+## 14. social order
+n. 社会秩序;社会制度
+> The old social order was gone forever
+> 旧的社会秩序一去不复返了。
+> 
+> Some feminists sought reforms within the existing social order.
+> 一些女权主义者寻求在现存的社会制度内进行改革。
+> 
+
+
+&emsp;
+## 15. life history
+n. (生物的)生活史；生平
+
+
+&emsp;
+## 16. first and foremost
+首先;首要的是
+
+
+&emsp;
+## 17. thousandth
+ord. 第一千
+n. 千分之一
+
+
+&emsp;
+## 18. born into
+出生于；生到
+> She was born into a very musical family.
+> 她生于音乐之家。
+> 
+> I have always felt like a changeling born into the wrong family.
+> 我一直感觉自己小时候被调包过，不是这一家的人
+> 
+
+
+&emsp;
+## 19. incumbent /ɪnˈkʌmbənt/
+**(1) N-COUNT 现任官员;在职官员**
+`An incumbent is someone who holds an official post at a particular time.`
+> In general, incumbents have a 94 per cent chance of being reelected.
+> 通常现任官员有 94% 的几率会再次当选。
+> 
+> the present incumbent of the White House
+> 现任美国总统
+> 
+Incumbent is also an adjective.
+...the only candidate who defeated an incumbent senator.
+唯一击败现任议员的候选人
+
+
+**(2) ADJ  `~ upon/on sb` 成为责任的;义不容辞的;必须履行的**
+`If it is incumbent upon you to do something, it is your duty or responsibility to do it.`
+> It is incumbent upon all of us to make an extra effort.
+> 我们所有人都必须加倍努力。
+>
+> It was incumbent on them to attend.
+> 他们必须出席。
+> 
+
+**(3) adj [only before noun] 在职的；现任的**
+> the incumbent president
+> 现任总统
+> 
+
+
+&emsp;
+## 20. preliminary  /prɪˈlɪmɪneri/
+### adj.
+**`~ (to sth)` 预备性的；初步的；开始的**
+`happening before a more important action or event`
+同义词：`initial`
+> After a few preliminary remarks he announced the winners.
+> 说了几句开场白之后，他即宣布优胜者名单。
+> 
+> preliminary results/findings/enquiries
+> 初步结果 / 发现 / 调查
+> 
+> the preliminary rounds of the contest
+> 预赛
+> 
+> pilot studies preliminary to a full-scale study
+> 全面进行研究前的试验性研究
+> 
+
+### noun
+【不规则形式】复数名词 -ies
+**(1) `~ (to sth)` 初步行动（或活动）；预备性措施**
+`a preliminary is an action or event that is done in preparation for sth`
+> Research will be needed as a preliminary to taking a decision.
+> 作出决定之前需要进行研究。
+> 
+> I'll skip the usual preliminaries and come straight to the point.
+> 闲话少说，我就直接进入正题。
+> 
+> England was lucky to get through the preliminaries (= the preliminary stages in a sports competition) .
+> 英格兰队幸运地通过了预选赛。
+> 
+
+**(2) N-COUNT 预赛；初赛；初试**
+`A preliminary is the first part of a competition to see who will go on to the main competition.`
+> The winner of each preliminary goes through to the final.
+> 每场初赛的获胜者进入决赛。
+> 
+
+
+&emsp;
+## 21. proposition /ˌprɑːpəˈzɪʃn/
+### noun
+**(1) 提议，建议（尤指业务上的）**
+`an idea or a plan of action that is suggested, especially in business`
+> I'd like to put a business proposition to you.
+> 我想向您提个业务上的建议。
+> 
+> He was trying to make it look like an attractive proposition .
+> 他正设法使他的计划显得吸引人。
+> 
+
+**(2) 欲做的事；待处理的问题；任务**
+`a thing that you intend to do; a problem or task to be dealt with`
+同义词：`matter`
+> Getting a work permit in the UK is not always a simple proposition.
+> 在英国获得工作许可证往往不是一件简单的事情。
+> 
+
+**(3) also `Proposition` （美国）法律修正议案**
+`(in the US) a suggested change to the law that people can vote on`
+> How did you vote on Proposition 8?
+> 对于第8项修正案你是怎么投的票？
+> 
+
+**(4) (formal)见解；主张；观点**
+`a statement that expresses an opinion`
+> Her assessment is based on the proposition that power corrupts.
+> 她的分析是建立在权力使人堕落的观点上的。
+> 
+
+**(5) (mathematics 数)命题**
+`a statement of a theorem , and an explanation of how it can be proved`
+
+**(6) 求欢**
+> ...unwanted sexual propositions.
+> 令人讨厌的求欢
+> 
+
+### verb
+**[动词+名词短语] 求欢**
+`to say in a direct way to sb that you would like to have sex with them`
+> She was propositioned by a strange man in the bar.
+> 酒吧里有个陌生男人向她求欢。
+> 
+
+
+&emsp;
+## 22. preferential /ˌprefəˈrenʃl/
+**adj.[only before noun] 优先的；优惠的；优待的**
+`giving an advantage to a particular person or group`
+> Don't expect to get preferential treatment .
+> 不要指望受到优待。
+> 
+
+
+&emsp;
+## 23. actus /ˈkæktəs/
+n. 仙人掌；仙人掌科植物
+复数：`cactuses` 或 `cacti`/ˈkæktaɪ/
+
+
+&emsp;
+## 24.termite /ˈtɜːrmaɪt/
+n. 白蚁
+> a termite colony
+> 白蚁群
+> 
+
+
+&emsp;
+## 25. social insects
+群居昆虫
+
+
+&emsp;
+## 26. social science
+社会科学；社会科学学科
+
+
+&emsp;
+## 27. by definition
+根据定义；根据/按照定义
+> Neighbours by definition live close by.
+> 按照释义，“邻居”就要居住在邻近的地方。
+> 
+> Psychology is by definition the scientific study of the mind.
+> 心理学，顾名思义，是研究人们心理的科学。
+> 
+
+
+&emsp;
+## 28. barbarian /bɑːrˈberiən/
+**(1) N-COUNT （旧时的）野蛮人，未开化的人**
+`In former times, barbarians were people from other countries who were thought to be uncivilized and violent.`
+>  The Roman Empire was overrun by Nordic barbarians.
+>  罗马帝国被日耳曼的野蛮人推翻了。
+>  
+
+**(2) N-COUNT 粗野的人；凶残的人**
+`If you describe someone as a barbarian, you disapprove of them because they behave in a way that is cruel or uncivilized.`
+> Our maths teacher was a bully and a complete barbarian...
+> 我们的数学老师是个坏蛋，一个彻头彻尾的野蛮人。
+> 
+
+**(3) N-COUNT 粗人；没教养的人；缺乏文艺修养的人**
+`If you refer to people as barbarians, you mean that they do not know how to behave properly and do not like or understand art and culture.`
+> The people, he thought, looked upon all Americans as barbarians.
+> 在他看来，这些人觉得美国人素质都很低。
+> 
+
+
+&emsp;
+## 29. pagan /ˈpeɪɡən/
+n. 异教徒(信奉非主流宗教者)；教外人(旧时的基督徒用以指非基督徒)
+adj. 异教徒的；非基督教的；无宗教信仰的
+
+
+&emsp;
+## 30. hold sway
+占统治地位;具有重大影响力
+> South of the Usk, a completely different approach seems to hold sway
+> 阿斯克以南盛行的似乎是一种完全不同的方式。
+>
+> This is only in effect upon an individual level and does not hold sway over planetary or social complexes.
+> 这个作用的范围只是以个人为基准，并不会影响星球或社会复合体。
+> 
+
+
+&emsp;
+## 31. premise /ˈpremɪs/
+**(1) N-PLURAL （企业或机构使用的）房屋及土地；经营场所；办公场所**
+`The premises of a business or an institution are all the buildings and land that it occupies in one place.`
+> There is a kitchen on the premises...
+> 该处有一个厨房。
+> 
+
+**(2) N-COUNT 前提, 假设**
+`A premise is something that you suppose is true and that you use as a basis for developing an idea.`
+> The premise is that schools will work harder to improve if they must compete...
+> 前提是，如果各学校必须参与竞争的话，就会更加努力。
+>
+> ▸ on the premise that …
+> 根据…的假设
+>
+> the basic premise of her argument
+> 她的论证的基本前提
+> 
+> a false premise
+> 错误的前提
+> 
+> His reasoning is based on the premise that all people are equally capable of good and evil.
+> 他的推理是以人可以为善亦可以为恶为前提的。
+> 
 
 
 
 &emsp;
-## 2. 
+## 32. institution
+### noun
+**(1) [可数名词] （大学、银行等规模大的）机构**
+`a large important organization that has a particular purpose, for example, a university or bank`
+> an educational/financial, etc. institution 
+> 教育、金融等机构
+> 
+> the Smithsonian Institution
+> 史密森学会
+> 
+
+**(2) [可数名词] (usually disapproving)慈善机构；社会福利机构**
+`a building where people with special needs are taken care of, for example because they are old or mentally ill`
+> a mental institution
+> 精神病院
+> 
+> We want this to be like a home, not an institution.
+> 我们希望这里像个家，而不像收容所。
+> 
+
+**(3) [可数名词] （由来已久的）风俗习惯，制度**
+`a custom or system that has existed for a long time among a particular group of people`
+> the institution of marriage
+> 婚姻制度
+> 
+
+**(4) [不可数名词] 建立；设立；制定**
+`the act of starting or introducing sth such as a system or a law`
+> the institution of new safety procedures
+> 新安全规程的制定
+> 
+
+**(5) [可数名词] (informal, humorous)（某地或工作中的）出名的人**
+`a person who is well known because they have been in a particular place or job for a long time`
+> You must know him─he's an institution around here!
+> 你一定认识他——他是这一带的知名人士！
+> 
 
 
 &emsp;
-## 3. 
+## 33. substitute
+原文：
+> It is only in the study of man himself that the major social sciences have substituted the study of one local variation, that of Western civilization.
+> 
+在上文中，由于`for`、`with`或`by`均不出现，可能难以断定所说的人或事物是在使用的，还是被取代的，通常需要联系上下文才能使意思明了。
+
+### noun
+**(1) `~ (for sb/sth)` 代替者；代替物；代用品**
+`a person or thing that you use or have instead of the one you normally use or have`
+> a meat substitute
+> 肉食替代品
+> 
+> Paul's father only saw him as a substitute for his dead brother.
+> 保罗的父亲只是把他当作他死去的哥哥来看待。
+> 
+> a substitute family
+> 收养家庭
+> 
+> The course teaches you the theory but there's no substitute for practical experience.
+> 这门课教的是理论，但没有任何东西能代替实践经验。
+> 
+> The local bus service was a poor substitute for their car.
+> 他们坐当地的公交车，这比坐自己的汽车可差远了。
+> 
+**(2) also informal `sub` 替补（运动员）**
+`a player who replaces another player in a sports game`
+> He was brought on as (a) substitute after half-time.
+> 他作为替补队员在下半场上场。
+> 
+
+### verb
+**`~ A (for B) | ~ B (with/by A) | ~ for sb/sth`（以…）代替；取代**
+`to take the place of sb/sth else; to use sb/sth instead of sb/sth else`
+> [单独使用的动词] Nothing can substitute for the advice your doctor is able to give you.
+> 大夫所能给你的忠告是无可替代的。
+> 
+> [动词+名词短语] Margarine can be substituted for butter in this recipe.
+> 做这道菜可以用人造黄油代替黄油。
+> 
+> Butter can be substituted with margarine in this recipe.
+> 做这道菜可以用人造黄油代替黄油。
+> 
+> Beckham was substituted in the second half after a knee injury (= somebody else played instead of Beckham in the second half) .
+> 下半场贝克汉姆膝盖受伤被换下。
+> 
+【帮助说明】
+> `When for , with or by are not used, as in the last example, it can be difficult to tell whether the person or thing mentioned is being used, or has been replaced by somebody or something else. The context will usually make this clear.`
+> 像最后一个例句这种情况，由于for、with或by均不出现，可能难以断定所说的人或事物是在使用的，还是被取代的，通常上下文能使意思明了。
+> 
 
 
-&emsp;
-## 4. 
 
 
-&emsp;
-## 5. 
-
-
-&emsp;
-## 6. 
-
-
-&emsp;
-## 7. 
-
-
-&emsp;
-## 8. 
-
-
-&emsp;
-## 9. 
-
-&emsp;
-## 10. 
-
-
-&emsp;
-## 11. 
-
-&emsp;
-## 12. 
-
-
-
-&emsp;
-## 13. 
-
-
-
-&emsp;
-## 14. 
-
-
-&emsp;
-## 15. 
-
-
-&emsp;
-## 16. 
-
-
-&emsp;
-## 17. 
-
-
-&emsp;
-## 18. 
-
-
-&emsp;
-## 19. 
-
-
-&emsp;
-## 20. 
 &emsp;
 &emsp; 
-# Lesson 
-## 1. 
+# Lesson 45 Of Men and Galaxies 论人类和星系
+&emsp;&emsp; 选自英国天文学家、科幻作家 `Fred Hoyle` 爵士 (1915-2001)所著 `Of Men and Galaxies`,一般 `of` 和 `on` 可译作论. 该著作为三篇演讲稿，分别是 `Motives and Aims of the Scientist`, `An Astronomer’s View of Life`, 和 `Extrapolations into the Future`.
+## 1. subdue /səbˈduː/
+### verb
+[动词+名词短语] (rather formal)
+**(1) 制伏；征服；控制**
+`to bring sb/sth under control, especially by using force`
+同义词：`defeat`
+> Troops were called in to subdue the rebels.
+> 军队被调来镇压反叛者。
+> 
 
-
-
-&emsp;
-## 2. 
-
-
-&emsp;
-## 3. 
-
-
-&emsp;
-## 4. 
-
-
-&emsp;
-## 5. 
-
-
-&emsp;
-## 6. 
-
-
-&emsp;
-## 7. 
+**(2) 抑制，压制，克制（感情）**
+`to calm or control your feelings`
+同义词：`suppress`
+> Julia had to subdue an urge to stroke his hair.
+> 朱莉娅不得不克制住自己，不去抚摩他的头发。
+>
+> He forced himself to subdue and overcome his fears.
+> 他强迫自己克制并战胜恐惧心理。
+> 
 
 
 &emsp;
-## 8. 
+## 2. dispute the ownership of
+争夺...的所有权
 
 
 &emsp;
-## 9. 
-
-&emsp;
-## 10. 
+## 3. chemical spray
+化学喷雾；化学喷雾器
 
 
 &emsp;
-## 11. 
+## 4. persist /pərˈsɪst/
+### verb
+**(1) `~ (in sth/in doing sth)` | `~ (with sth)` 顽强地坚持；执著地做**
+`to continue to do sth despite difficulties or opposition, in a way that can seem unreasonable`
+[单独使用的动词] Why do you persist in blaming yourself for what happened?
+> 你何必为已发生的事没完没了地自责？
+> 
+> She persisted in her search for the truth.
+> 她执著地追求真理。
+> 
+> He persisted with his questioning.
+> 他问个不停。
+> 
+> [动词+直接引语] ‘So, did you agree or not?’ he persisted.
+> “那么你同意了没有？”他叮问道。
+> 
 
-&emsp;
-## 12. 
-
-
-
-&emsp;
-## 13. 
-
-
-
-&emsp;
-## 14. 
-
-
-&emsp;
-## 15. 
-
-
-&emsp;
-## 16. 
-
-
-&emsp;
-## 17. 
+**(2) [单独使用的动词] 维持；保持；持续存在**
+`to continue to exist`
+> If the symptoms persist, consult your doctor.
+> 如果症状持续不消除，就得去看医生。
+> 
 
 
 &emsp;
-## 18. 
+## 5. envision
+**vt. 展望；想象**
+`to imagine what a situation will be like in the future, especially a situation you intend to work towards`
+> They envision an equal society, free of poverty and disease.
+> 他们向往一个没有贫穷和疾病的平等社会。
+> 
 
 
 &emsp;
-## 19. 
+## 6. a fixed amount of
+固定数量的...
+
+&emsp;
+## 7. condition
+原文：
+> Our environment is chiefly conditioned by the things (we believe.)
+> 我们的环境主要受我们所相信的东西所影响。
+> 
+在这里，`condition`做动词表示 `对…具有重要影响；影响（某事发生的方式）`
+### verb
+**(1) [usually passive] `~ sb/sth (to sth/to do sth)` 训练；使习惯于；使适应**
+`to train sb/sth to behave in a particular way or to become used to a particular situation`
+> [动词+名词短语] the difference between inborn and conditioned reflexes (= reactions that are learned/not natural) 
+> 先天反应与条件反射的差异
+> 
+> Patients can become conditioned to particular forms of treatment.
+> 病人会习惯某些治疗方式。
+> 
+> [动词+名词短语+带to的不定式] The rats had been conditioned to ring a bell when they wanted food.
+> 这些老鼠已经过训练，想吃食物时就会按铃。
+> 
+
+**(2) [动词+名词短语] 对…具有重要影响；影响（某事发生的方式）**
+`to have an important effect on sb/sth; to influence the way that sth happens`
+> Gender roles are often conditioned by cultural factors.
+> 文化因素常常对性别的角色有着重要的影响。
+> 
+
+**(3) [动词+名词短语] 保持（头发或皮肤等的）健康；养护**
+`to keep sth such as your hair or skin healthy`
+> a shampoo that cleans and conditions hair
+> 可清洁并养护头发的洗发剂
+> 
+> a polish for conditioning leather
+> 皮革护理油
+> 
+
+### noun
+verb
+同义词辨析
+事物的状态 state of sth
+
+**(1) [不可数名词, 单数名词] 状态；状况**
+`the state that sth is in`
+> to be in bad/good/excellent condition 
+> 处于糟糕的 / 良好的 / 极佳的状态
+> 
+> a used car in perfect condition
+> 车况完好的旧车
+> 
+
+**(2) [不可数名词, 单数名词] 健康状况**
+`the state of sb's health or how fit they are`
+> He is overweight and out of condition (= not physically fit) .
+> 他体重超重，健康状况不佳。
+> 
+> You are in no condition (= too ill, etc.) to go anywhere.
+> 你的身体状况太差，不宜去任何地方。
+> 
+> The motorcyclist was in a critical condition in hospital last night.
+> 那位摩托车手昨晚在医院生命垂危。
+> 
+
+**(3) [可数名词] （因不可能治愈而长期患有的）疾病**
+`an illness or a medical problem that you have for a long time because it is not possible to cure it`
+> a medical condition
+> 疾病
+> 
+> He suffers from a serious heart condition .
+> 他患有严重的心脏病。
+> 
+
+**(4) `conditions` [复数名词] （居住、工作或做事情的）环境，境况，条件**
+`the circumstances or situation in which people live, work or do things`
+living/housing/working conditions 
+生活 / 住房 / 工作条件
+
+changing economic conditions
+不断变化的经济状况
+
+neglected children living under the most appalling conditions 
+生活在最恶劣环境下的无人关注的儿童
+
+a strike to improve pay and conditions 
+要求提高工资和改善工作条件的罢工
+
+**(5) `conditions` [复数名词] （影响某事发生的）物质环境，状态，条件**
+`the physical situation that affects how sth happens`
+> The plants grow best in cool, damp conditions.
+> 这种植物最适合在阴凉、潮湿的环境下生长。
+> 
+> freezing/icy/humid, etc. conditions 
+> 冰冻、结冰、潮湿等的气候条件
+> 
+> Conditions are ideal (= the weather is very good) for sailing today.
+> 今天是乘帆船航海的理想天气。
+> 
+> treacherous driving conditions 
+> 危险的行车环境
+> 
+
+**(6) [可数名词] (尤指写入合同或法律的)条件，条款**
+`a rule or decision that you must agree to, sometimes forming part of a contract or an official agreement`
+> the terms and conditions of employment
+> 雇用的条款
+> 
+> The offer is subject to certain conditions .
+> 此项优惠受制于某些条件。
+> 
+> They agreed to lend us the car on condition that (= only if) we returned it before the weekend.
+> 他们同意借车给我们，条件是周末以前归还。
+> 
+> They will give us the money on one condition ─that we pay it back within six months.
+> 他们给我们提供资金有一个条件，即我们在六个月以内偿还。
+> 
+> (especially 北美英语)They agreed under the condition that the matter be dealt with promptly.
+> 他们同意了，前提是要迅速处理这件事。
+> 
+> Congress can impose strict conditions on the bank.
+> 国会可能会迫使这家银行接受苛刻的条件。
+> 
+> They have agreed to the ceasefire provided their conditions are met .
+> 他们已经同意停火，只要他们提出的条件得到满足。
+> 
+
+**(7) [可数名词] （先决）条件；前提**
+`a situation that must exist in order for sth else to happen`
+> a necessary condition for economic growth
+> 经济增长的必要条件
+> 
+> A good training programme is one of the conditions for successful industry.
+> 良好的培训计划是企业成功的先决条件。
+> 
+
+**(8) [单数名词] (formal)（某群体的）生存状态，处境**
+`the state of a particular group of people because of their situation in life, their problems, etc.`
+> He spoke angrily about the condition of the urban poor.
+> 他愤怒地谈论城市贫民的处境。
+> 
+> Work is basic to the human condition (= the fact of being alive) .
+> 劳动是人类生存的基本条件。
+> 
+
+### 习语  Idioms
+#### `on no condition`/ `under no condition`
+(formal)无论如何都不；决不
+not in any situation; never
+> You must on no condition tell them what happened.
+> 你决不能告诉他们所发生的事。
+> 
+
+#### `in mint condition`
+崭新；完美；完好无缺
 
 
 &emsp;
-## 20. 
+## 8. It is well known that
+众所周知的是...
+
+
+&emsp;
+## 9. The Holy Office
+宗教法庭
+
+
+&emsp;
+## 10. know sth full well
+深知...
+> He knew full well he'd be ashamed of himself later.
+> 他很清楚地知道自己过后会无地自容。
+> 
+> Both of these dancers knew full well why they attracted the attentions of two hot-blooded young men.
+> 这两名舞蹈演员都深知自己何以吸引了两位热血青年的注意力。
+> 
+
+
+&emsp;
+## 11. heretic
+n. 异教徒；离经叛道者；犯异端罪者
+
+
+&emsp;
+## 12. days gone by
+从前
+> She told of the days gone by.
+> 她讲述了流逝的岁月。
+> 
+> Drink with me to days gone by?
+> 和我一起，为往日干杯？
+>
+> In days gone by, a gentleman would always open doors for ladies.
+> 在过去，绅士总是要为女士开门。
+> 
+
+
+&emsp;
+## 13. change the course of history
+改变历史的进程
+
+
+
+
+
 &emsp;
 &emsp; 
-# Lesson 
-## 1. 
+# Lesson 46 Hobbies 业余爱好
+&emsp;&emsp; 选自诺贝尔文学奖得主，前英国首相 `Winston S. Churchill` (1874-1965)所著 `Painting as a pastime`, 1948, 本文仅摘取了第 3-7 自然段.
+## 1. spasm /ˈspæzəm/
+### noun
+**(1) [可数名词, 不可数名词] 痉挛；抽搐**
+`a sudden and often painful contracting of a muscle, which you cannot control`
+> a muscle spasm
+> 肌肉痉挛
+> 
+> The injection sent his leg into spasm .
+> 一针打下去，他的腿就痉挛了。
+> 
 
+**(2) [可数名词] `~ (of sth)` （感情或反应）一阵阵发作**
+`a sudden strong feeling or reaction that lasts for a short time`
+> a spasm of anxiety/anger/coughing/pain, etc. 
+> 突然一阵焦虑、愤怒、咳嗽、疼痛等
+>
+> A spasm of pain brought his thoughts back to the present...
+> 一阵剧痛把他的思绪拉回到了现在。
+> 
 
 
 &emsp;
-## 2. 
+## 2. catch hold of
+抓住， 握住
+> She catch hold of his hands and looked at them.
+> 她抓起他的手来看了看.
+> 
+> Quick, catch hold of the rope.
+> 快点, 抓住绳索.
+> 
 
 
 &emsp;
-## 3. 
+## 3. It is useless to
+...是无济于事的
+> It is useless to speculate why he did it.
+> 对他为什么这么做妄加猜测毫无用处。
+> 
+> It is useless to clutch at straws.
+> 抓救命稻草是无济于事的。
+> 
 
 
 &emsp;
-## 4. 
+## 4. futile /ˈfjuːtl/
+**adj. 徒然的；徒劳的；无效的**
+`having no purpose because there is no chance of success`
+同义词：p`ointless`
+> a futile attempt/exercise/gesture 
+> 徒然的尝试 / 练习 / 手势
+> 
+> Their efforts to revive him were futile.
+> 他们努力使他苏醒，但失败了。
+> 
+> It would be futile to protest.
+> 抗议也无用。
+> 
+> My appeal proved futile.
+> 我的呼吁白费了。
+> 
 
 
 &emsp;
-## 5. 
+## 5. The stronger the will, the more futile the task.
 
 
 &emsp;
-## 6. 
+## 6. insinuate /ɪnˈsɪnjueɪt/
+### verb
+**(1) 暗示，旁敲侧击地指出（不快的事）**
+`to suggest indirectly that sth unpleasant is true`
+同义词：imply
+> [动词+that从句] The article insinuated that he was having an affair with his friend's wife.
+> 文章含沙射影地点出他和朋友的妻子有染。
+> 
+> [动词+名词短语] What are you trying to insinuate?
+> 你拐弯抹角想说什么？
+> 
+> an insinuating smile
+> 暗示的微笑
+> 
+
+**(2) [动词+名词短语] `~ yourself into sth` (formal, disapproving)钻营；活动**
+`to succeed in gaining sb's respect, affection, etc. so that you can use the situation to your own advantage`
+> In the first act, the villain insinuates himself into the household of the man he intends to kill.
+> 在第一幕中，恶棍混进了他企图谋杀的男子的家庭。
+> 
+
+**(3) [动词+名词短语+ 副词/介词短语] (formal)（使）缓慢进入；慢慢伸入**
+`to slowly move yourself or a part of your body into a particular position or place`
+> She insinuated her right hand under his arm.
+> 她悄悄把右手插到他胳膊底下。
+> 
 
 
 &emsp;
-## 7. 
+## 7. convulsive /kənˈvʌlsɪv/
+**adj. of movements or actions 动作或行动突然而无法控制的；痉挛的；抽搐的**
+`sudden and impossible to control`
+> a convulsive movement/attack/fit 
+> 痉挛的动作 / 发作
+> 
+> Her breath came in convulsive gasps.
+> 她的呼吸变得突然喘不过气来。
+> 
 
 
 &emsp;
@@ -12082,39 +12800,266 @@ adj. 星际的
 
 &emsp;
 ## 20. 
+
+
+
+
+
+
 &emsp;
 &emsp; 
-# Lesson 
-## 1. 
+# Lesson 47 The Great Escape 大逃离
+&emsp;&emsp; 选自英国诺曼底登陆老兵、旅行作家及葡萄酒评论家 `Nigel Buxton` (1924-2015)于1965 年 6 月 11 日于 `The Weekend Telegraph` 所撰写同名文章
+## 1. economy
+**(1) N-COUNT （国家或地区的）经济，经济体制**
+`An economy is the system according to which the money, industry, and trade of a country or region are organized.`
+> Zimbabwe boasts Africa's most industrialised economy.
+> 津巴布韦是非洲工业化程度最高的经济体。
+> 
+
+**(2) N-COUNT 经济情况;经济状况**
+`A country's economy is the wealth that it gets from business and industry.`
+> The Japanese economy grew at an annual rate of more than 10 per cent.
+> 日本经济以年增长率超过10%的速度增长。
+> 
+
+**(3) N-UNCOUNT 节约;节俭**
+`Economy is the use of the minimum amount of money, time, or other resources needed to achieve something, so that nothing is wasted.`
+> ...improvements in the fuel economy of cars...
+> 汽车节油方面的改进
+>
+> She writes with a great economy of words (= using only the necessary words) .
+> 她写作文字非常简练。
+> 
+
+**(4) N-COUNT 精打细算**
+`If you make economies, you try to save money by not spending money on unnecessary things.`
+> They will make economies by hiring fewer part-time workers.
+> 他们将通过减少雇用兼职工人来节省开支。
+> 
+
+**(5) `economy class` (飞机的)经济舱**
+
+**(6) ADJ （比标准包装大的）经济装的**
+`Economy is used to describe large packs of goods which are cheaper than normal sized packs.`
+> ...an economy pack containing 150 assorted screws.
+> 内含150枚各种螺丝的经济装
+> 
+
+**(7)  `a false economy `假节约;看似省钱的做法**
+`If you describe an attempt to save money as a false economy, you mean that you have not saved any money as you will have to spend a lot more later.`
+> A cheap bed can be a false economy...
+> 便宜的床看似省钱，其实可能不然。
+> 
+
+
+&emsp;
+## 2. outlay
+### 原文： initial outlay 
+创始（开办）费用
+> The business quickly repaid the initial outlay on advertising.
+> 这家公司很快偿付了初期的广告费。
+> 
+> The sum of the receipts is greater than the initial outlay.
+> 收益之和大于开始的投资。
+> 
+### noun
+**noun [可数名词, 不可数名词] `~ (on sth)` （启动新项目的）开支，费用**
+`Outlay is the amount of money that you have to spend in order to buy something or start a project.`
+> The business quickly repaid the initial outlay on advertising.
+> 这家公司很快偿付了初期的广告费。
+> 
+> a massive financial/capital outlay 
+> 大量的财政 / 资本开支
+> 
+> Apart from the capital outlay of buying the machine, dishwashers can actually save you money...
+> 除了购置所用开支，洗碗机实际上能为你省钱。
+> 
+
+
+&emsp;
+## 3. hire
+### verb
+**(1) [动词+名词短语] (especially 英国英语)租用；租借**
+`to pay money to borrow sth for a short time`
+> to hire a car/room/video
+> 租汽车 / 房间 / 录像带
+> 
+
+**(2) (especially 北美英语)聘用；录用；雇用**
+`to give sb a job`
+> [动词+名词短语] She was hired three years ago.
+> 她是三年前录用的。
+> 
+> [单独使用的动词] He does the hiring and firing in our company.
+> 他在我们公司负责员工的聘用和辞退。
+> 
+
+**(3) [动词+名词短语] 临时雇用**
+`to employ sb for a short time to do a particular job`
+> to hire a lawyer
+> 聘请律师
+> 
+> They hired a firm of consultants to design the new system.
+> 他们请了一家咨询公司来设计新的系统。
+> 
+
+### noun
+**(1) [不可数名词] (especially 英国英语)租借；租用；租赁**
+`the act of paying to use sth for a short time`
+> bicycles for hire , £2 an hour
+> 自行车出租，每小时2英镑
+> 
+> a hire car 
+> 供租用的汽车
+> 
+> a car hire firm
+> 汽车出租公司
+> 
+> The price includes the hire of the hall.
+> 费用包括礼堂租金。
+> 
+> The costumes are on hire from the local theatre.
+> 戏装可向本地剧院租用。
+> 
+
+**(2) [可数名词] (especially 北美英语)新雇员；新员工**
+`a person who has recently been given a job by a company`
+
+### 短语动词  Phrasal Verbs
+#### (1) hire sth out
+出租某物
+`to let sb use sth for a short time, in return for payment`
+
+#### (2) hire yourself out (to sb)
+为（某人）工作；受聘于；受雇于
+`to arrange to work for sb`
+> He hired himself out to whoever needed his services.
+> 他以前从事临时服务业。
+> 
+
+#### (3) ply for hire/trade/business
+(英国英语)招徕顾客；等生意
+`to look for customers, passengers, etc. in order to do business`
+> taxis plying for hire outside the theatre
+> 在剧院外招揽乘客的出租车
+> 
+
+### rent | hire | let 的英美用法
+#### Verbs 动词
+(1) `You can hire something for a short period of time ( BrE only), but rent something for a longer period. `
+短期租用可用hire（仅用于英国英语），较长时间的租用则用rent：
+> We can hire bikes for a day to explore the town.
+> 我们可租用自行车一天来游览这城镇。
+> 
+> We don't own our TV, we rent it.
+> 我们没有自己的电视机，这是租的。
+> 
+
+(2) `In NAmE , rent is always used. It is sometimes now used in BrE instead of hire , too.` 
+北美英语总是用rent，现在英国英语有时也用rent代替hire。
+`The owners of a thing can hire it out for a short period ( BrE ).` 
+物主短期租出某物可用hire out（英国英语）：
+> Do you hire out bikes?
+> 你们出租自行车吗？
+> 
+`Or they can rent ( out ) / let ( out ) a building, etc.` 
+出租房屋等可用rent (out) / let (out)：
+> We rent out rooms in our house to students.
+> 我们把住宅里的房间出租给学生。
+> 
+`Outside a building you could see` 
+在建筑物外可看到：
+> To let
+> ( BrE ) 招租
+> 
+> For rent
+> (especially NAmE ) 招租
+> 
+`To hire can also mean to employ somebody, especially in NAmE .` 
+hire亦含雇用之意，尤其在北美英语中：
+> We hired a new secretary.
+> 我们雇了一名新秘书。
+> 
+
+#### Nouns 名词
+`The amount of money that you pay to rent something is rent or rental (more formal). When you hire something you pay a hire charge ( BrE ). On a sign outside a shop you might see` 
+较长时间租用的租金为rent或rental（较正式）。短期租借费用为hire charge（英国英语）。在商店外的标牌上可看到：
+> Bikes for hire
+> 
+
+
+&emsp;
+## 4. myriad /ˈmɪriəd/
+**(1) QUANT 无数;大量;各种各样**
+`A myriad or myriads of people or things is a very large number or great variety of them.`
+> They face a myriad of problems bringing up children...
+> 他们在抚养孩子的过程中遇到了各种各样的问题。
+> 
+
+**(2) ADJ 无数的;大量的；各种各样的**
+`Myriad means having a large number or great variety.`
+> ...British pop and culture in all its myriad forms.
+> 以多种不同形式出现的英国流行音乐和文化
+> 
+
+&emsp;
+## 5. cynic /ˈsɪnɪk/
+### noun
+**(1) 认为人皆自私的人；愤世嫉俗者**
+`a person who believes that people only do things to help themselves, rather than for good or sincere reasons`
+
+**(2) 悲观者；怀疑者**
+`a person who does not believe that sth good will happen or that sth is important`
+> Cynics will say that there is not the slightest chance of success.
+> 悲观的人会说根本不可能取得成功。
+> 
 
 
 
 &emsp;
-## 2. 
+## 6. shun /ʃʌn/
+**verb (-nn-) [动词+名词短语] 避开；回避；避免**
+`to avoid sb/sth`
+> She was shunned by her family when she remarried.
+> 她再婚后家里人都躲着她。
+> 
+> an actor who shuns publicity
+> 一个避免引起公众注意的演员
+> 
 
 
 &emsp;
-## 3. 
+## 7. material comfort
+物质享受
 
 
 &emsp;
-## 4. 
+## 8. boo
 
+**(1) verb（对…）发嘘声，喝倒彩**
+**to show that you do not like a person, performance, idea, etc. by shouting boo**
+> [单独使用的动词] The audience booed as she started her speech.
+> 她一开始讲话，听众便发出一阵嘘声。
+> 
+> [动词+名词短语] He was booed off the stage .
+> 他在一片倒彩声中退下舞台。
+> 
 
-&emsp;
-## 5. 
+**(2) noun （对演员、讲话者等表示不满）嘘**
+> `a sound that people make to show that they do not like an actor, speaker, etc.`
+> ‘Boo!’ they shouted, ‘Get off!’
+> “去！”他们大声喊道，“滚下去！”
+> 
+> The speech was greeted with loud boos from the audience.
+> 演讲引来观众一片嘘声。
+> 
 
-
-&emsp;
-## 6. 
-
-
-&emsp;
-## 7. 
-
-
-&emsp;
-## 8. 
+**(3) `not say boo to a goose/anyone` 非常胆怯；十分温和**
+`to be very shy or gentle`
+> He's so nervous he wouldn't say boo to a goose.
+> 他紧张得连大气都不敢喘。
+> 
 
 
 &emsp;
@@ -12163,87 +13108,436 @@ adj. 星际的
 
 &emsp;
 ## 20. 
+
+
+&emsp;
+## 21.
+
+
+
+&emsp;
+## 22. 
+
+
+&emsp;
+## 23. 
+
+
+&emsp;
+## 24. 
+
+
+&emsp;
+## 25.
+
+
+&emsp;
+## 26. 
+
+
+&emsp;
+## 27. 
+
+
+&emsp;
+## 28. 
+
+
+&emsp;
+## 29. 
+
+
+
+
+
 &emsp;
 &emsp; 
-# Lesson 
-## 1. 
-
-
-
-&emsp;
-## 2. 
+# Lesson 48 Planning a Share Portfolio 规划股票投资组合
+&emsp;&emsp; 选自投资刊物 `Investor's Chronicle` 于 1990 年 3 月 23 日的评论文章.
+## 1. There is no shortage of
+从来不缺...
 
 
 &emsp;
-## 3. 
+## 2. tipster /ˈtɪpstər/
+n. 线人；(犯罪行为等的)举报者，告密者；提供赛马情报的人(常指贩卖情报者)
 
 
 &emsp;
-## 4. 
+## 3. private investor
+私人投资者；散户
 
 
 &emsp;
-## 5. 
+## 4. fritter /ˈfrɪtər/
+**(1) N-COUNT 油炸馅饼**
+`Fritters are round pieces of fruit, vegetables, or meat that are dipped in batter and fried.`
+> ...apple fritters.
+> 苹果油炸馅饼
+> 
+
+**(2) PHRASAL VERB 浪费;挥霍**
+`If someone fritters away time or money, they waste it on unimportant or unnecessary things.`
+> The firm soon started frittering away the cash it was generating...
+> 这家公司不久就开始挥霍赚来的钱。
+> 
 
 
 &emsp;
-## 6. 
+## 5. But if you are a serious private investor, leave the Las Vegas mentality to those with money to fritter.
+`the Las Vegas mentality`应该翻译为 拉斯维加斯的赌徒心理
 
 
 &emsp;
-## 7. 
+## 6. portfolio /pɔːrtˈfoʊlioʊ/
+### noun
+【不规则形式】复数名词 -os
+**(1) 文件夹；公事包**
+`a thin flat case used for carrying documents, drawings, etc.`
+
+**(2) （参赛或应聘用的）作品，整套照片**
+`a collection of photographs, drawings, etc. that you use as an example of your work, especially when applying for a job`
+> After dinner that evening, Edith showed them a portfolio of her own political cartoons.
+> 那天吃过晚饭，伊迪丝向他们展示了她的一组政治漫画作品。
+> 
+
+**(3) (finance 财)（个人或机构的）投资组合，有价证券组合**
+`a set of shares owned by a particular person or organization`
+> an investment/share portfolio 
+> 投资 / 股份组合
+> 
+
+**(4) (formal, especially 英国英语)（部长或大臣的）职责，职务**
+`the particular area of responsibility of a government minister`
+> the defence portfolio
+> 国防部长职责
+> 
+> She resigned her portfolio.
+> 她辞去了部长职务。
+> 
+> He was asked to join as a minister without portfolio (= one without responsibility for a particular government department). 
+> 他获邀出任不管部大臣。
+> 
+
+**(5) （公司或机构提供的）系列产品，系列服务**
+`the range of products or services offered by a particular company or organization`
+> a portfolio of wines
+> 系列葡萄酒
+> 
 
 
 &emsp;
-## 8. 
+## 7. with a definite structure and a clear aim
+这里`definite`是`明确的`的意思
 
 
 &emsp;
-## 9. 
+## 8. newcomer
+**(1) `~ (to sth)` N-COUNT 新来的人;新参加的人;新手**
+`A newcomer is a person who has recently arrived in a place, joined an organization, or started a new activity.`
+> He must be a newcomer to town and he obviously didn't understand our local customs...
+> 他一定是刚到镇上来的，明显不了解我们这儿的风俗。
+> 
 
-&emsp;
-## 10. 
-
-
-&emsp;
-## 11. 
-
-&emsp;
-## 12. 
-
-
-
-&emsp;
-## 13. 
-
+**(2) N-COUNT 新近出现的事物;新得到的东西**
+`A newcomer is something which has not existed before or been available before.`
+> The company's latest newcomer is a 4 x 4 estate with a 2.2 litre petrol engine.
+> 公司最近新到了一辆有2.2升汽油发动机的4 x 4客货两用车。
+> 
 
 
 &emsp;
-## 14. 
+## 9. go about
+**(1) PHRASAL VERB 着手干；做；处理**
+`The way you go about a task or problem is the way you approach it and deal with it.`
+> I want him back, but I just don't know how to go about it.
+> 我想让他回来，但就是不知道该怎么做才好。
+> 
+
+**(2) PHRASAL VERB 从事，进行（日常的活动）**
+`When you are going about your normal activities, you are doing them.`
+> We were simply going about our business when we were pounced upon by these police officers.
+> 我们像往常一样正干得好好的，却遭到这些警察的突然袭击。
+> 
+
+**(3) PHRASAL VERB （经常）穿…；（经常）表现得…**
+`If you go about in a particular way, you behave or dress in that way, often as part of your normal life.`
+> He used to go about in a black cape...
+> 他以前常穿一件黑披风。
+> 
 
 
 &emsp;
-## 15. 
+## 10. reputable /ˈrepjətəbl/
+adj. 有信誉的；值得信赖的；声誉好的
+> a reputable dealer/company/supplier
+> 可信赖的交易商 / 公司 / 供应商
+> 
 
 
 &emsp;
-## 16. 
+## 11. broker /ˈbroʊkər/
+**(1) N-COUNT (股票、外汇或商品）经纪人，代理商**
+`A broker is a person whose job is to buy and sell shares, foreign money, or goods for other people.`
+
+**(2) VERB （国家或政府作为中间人）协调，安排**
+`If a country or government brokers an agreement, a ceasefire, or a round of talks, they try to negotiate or arrange it.`
+> The United Nations brokered a peace in Mogadishu at the end of March.
+> 3月末，联合国出面在摩加迪沙进行了和平调解。
+>
+> a peace plan brokered by the UN
+> 由联合国出面协商的和平计划
+> 
 
 
 &emsp;
-## 17. 
+## 12. the relevant information
+相关信息
+> He refused to comment before he had seen all the relevant information.
+> 在看到全部相关资料之前，他拒绝评论。
+> 
 
 
 &emsp;
-## 18. 
+## 13. Moral
+adj. 道德的；道德上的；道义上的；有道德的；品行端正的；能辨别是非的
+n.品行，道德(尤指性关系方面)
+
+### 不常见的意思
+[可数名词]  (由故事、事件引出的)寓意；教益
+`a practical lesson that a story, an event or an experience teaches you`
+> And the moral is that crime doesn't pay.
+> 寓意就是犯罪得不偿失。
+> 
+> I think the moral of the story is let the buyer beware...
+> 我想这个故事的寓意是提醒购物者当心。
+> 
 
 
 &emsp;
-## 19. 
+## 14. sort out
+**(1) PHRASAL VERB 把…分类;整理**
+`If you sort out a group of things, you separate them into different classes, groups, or places, for example so that you can do different things with them.`
+> Sort out all your bills, receipts, invoices and expenses as quickly as possible and keep detailed accounts...
+> 尽快整理好你所有的账单、收据、发票和开支，并记好账目明细。
+> 
+
+**(2) PHRASAL VERB 解决(问题);理清(细节)**
+`If you sort out a problem or the details of something, you do what is necessary to solve the problem or organize the details.`
+> India and Nepal have sorted out their trade and security dispute...
+> 印度和尼泊尔已经解决了贸易与安全方面的争端。
+> 
+
+**(3) PHRASAL VERB 教训;规劝;惩处**
+`If you sort someone out, you make them realize that they have behaved wrongly, for example by talking to them or by punishing them.`
+> It was the older women and young mothers who sorted all the troublemakers out...
+> 是那些年纪较长的女士和年轻的母亲们教训了所有那些捣蛋鬼。
+> 
+
+**(4) PHRASAL VERB 恢复正常;理清头绪;镇定下来**
+`If you sort yourself out, you organize yourself or calm yourself so that you can act effectively and reasonably.`
+> We're in a state of complete chaos here and I need a little time to sort myself out.
+> 我们这里正乱作一团，我需要一点时间来理清头绪。
+> 
 
 
 &emsp;
-## 20. 
+## 15. major loss
+重大损失
+
+
+&emsp;
+## 16. main priority
+主要任务
+
+
+&emsp;
+## 17. gilt /ɡɪlt/
+**(1) ADJ 镀金的；烫金的**
+`A gilt object is covered with a thin layer of gold or gold paint.`
+> ...marble columns and gilt spires.
+> 大理石柱和镀金塔尖
+> 
+
+**(2) N-COUNT 金边证券；绩优证券**
+
+**(3) N-COUNT [可数名词] (especially 北美英语)小母猪**
+
+&emsp;
+## 18. cash deposit
+保证金；（银行）现金存款
+
+
+&emsp;
+## 19. income share
+n. 收入份额；收益股票
+
+
+&emsp;
+## 20. capital investment
+资本投资
+
+
+&emsp;
+## 21. a solid financial position
+稳定的财务状况
+
+
+&emsp;
+## 22. sanguine /ˈsæŋɡwɪn/
+**adj. `~ (about sth)` (formal)充满信心的；乐观的**
+`cheerful and confident about the future`
+同义词：`optimistic`
+> They are less sanguine about the company's long-term prospects.
+> 他们对公司的远景不那么乐观。
+> 
+> He tends to take a sanguine view of the problems involved.
+> 他对涉及的问题持乐观态度。
+> 
+【派生词】sanguinely adv.
+
+
+&emsp;
+## 23. be blessed with
+有幸拥有
+> We're blessed with five lovely grandchildren.
+> 我们很有福气，有五个可爱的孙子孙女。
+> 
+> Both are blessed with uncommon ability to fix things.
+> 两人在修理东西上都有一手绝活。
+> 
+> Carol Drinkwater is blessed with a fine bone structure that stands up better to the ravages of time.
+> 卡罗尔·德林克沃特生就一副好身板，经过岁月历练还那么硬朗。
+> 
+
+
+&emsp;
+## 24. disposition
+### noun
+**(1) [可数名词, 通常用单数形式] 性格；性情**
+`the natural qualities of a person's character`
+同义词：`temperament`
+> to have a cheerful disposition
+> 性情开朗
+> 
+> people of a nervous disposition
+> 神经质的人
+>
+> He was a nice lad — bright and with a sunny disposition
+> 他是个不错的小伙子——聪明伶俐而且性格开朗。
+> 
+
+**(2) [可数名词, 通常用单数形式] `~ to/towards sth` | `~ to do sth` (formal)倾向；意向**
+`a tendency to behave in a particular way`
+> to have/show a disposition towards violence
+> 有 / 表现出暴力倾向
+> 
+
+**(3) [可数名词, 通常用单数形式] (formal)排列；布置；安排**
+`the way sth is placed or arranged`
+同义词：`arrangement`
+> ...to understand the buildings from the disposition of walls and entrances.
+> 从墙体门窗布局来识别建筑物
+> 
+
+**(4) [可数名词, 不可数名词] (law 律)（财产、金钱的）处置，让与**
+`a formal act of giving property or money to sb`
+> Judge Stacks was appointed to oversee the disposition of funds.
+> 斯塔克斯法官被指定监督资金的分配。
+> 
+
+
+&emsp;
+## 25. heady  /ˈhedi/
+### adj.
+**(1) [usually before noun] 强烈作用于感官的；使兴奋的；使有信心的**
+`having a strong effect on your senses; making you feel excited and confident`
+同义词：`intoxicating`
+> the heady days of youth
+> 令人陶醉的年轻时代
+> 
+> the heady scent of hot spices
+> 辣味调料的刺鼻气味
+> 
+> a heady mixture of desire and fear
+> 既期待又害怕的复杂心情
+>
+> ...in the heady days just after their marriage...
+> 在他们新婚燕尔的那些令人陶醉的日子里
+> 
+
+
+**(2) [not before noun] of a person 人冲动；冒失**
+`excited in a way that makes you do things without worrying about the possible results`
+> She felt heady with success.
+> 成功使她得意忘形。
+> 
+
+
+&emsp;
+## 26. alongside
+**(1) PREP 在…旁边；沿着…的边；与…并排靠拢**
+`If one thing is alongside another thing, the first thing is next to the second.`
+> He crossed the street and walked alongside Central Park...
+> 他穿过街道，沿着中央公园走。
+> 
+
+**(2) PREP 与…一起**
+`If you work alongside other people, you all work together in the same place.`
+> He had worked alongside Frank and Mark and they had become friends...
+> 他与弗兰克和马克一起工作过，并且成了朋友。
+> 
+
+**(3) PREP 与…同时（存在、发生）**
+`If one thing exists or develops alongside another, the two things exist or develop together at the same time.`
+> Her self-confidence will develop alongside her technique...
+> 随着她的技术不断提高，她会愈发自信。
+> 
+
+**(4) ADV 在…旁边；沿着…的边；与…并排靠拢**
+> He waited several minutes for a car to pull up alongside.
+> 他等了几分钟，直到一辆汽车靠边停下。
+> 
+
+
+&emsp;
+## 27. pedestrian /pəˈdestriən/
+**(1) N-COUNT （尤指城镇的）步行者，行人**
+`A pedestrian is a person who is walking, especially in a town or city, rather than travelling in a vehicle.`
+> In Los Angeles a pedestrian is a rare spectacle...
+> 在洛杉矶很少见到步行者。
+> 
+
+**(2) ADJ-GRADED 平庸的；乏味的；平淡无奇的**
+`If you describe something as pedestrian, you mean that it is ordinary and not at all interesting.`
+> His style is so pedestrian that the book becomes a real bore...
+> 他的文风十分平庸，那本书乏味至极。
+> 
+
+**(3) [only before noun] 行人使用的；行人的**
+> pedestrian areas
+> 步行区
+> 
+> Pedestrian accidents are down by 5%.
+> 行人受伤事故下降了5%。
+> 
+
+
+&emsp;
+## 28. golden rule
+n. 指导原则；成功之重要原则
+> The golden rule in tennis is to keep your eye on the ball.
+> 打好网球的重要原则是眼要紧盯着球。
+> 
+
+
+&emsp;
+## 29. spread your risk
+分散风险
+
+
+
+
 &emsp;
 &emsp; 
 # Lesson 
