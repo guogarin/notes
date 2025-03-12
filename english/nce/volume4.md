@@ -12751,55 +12751,578 @@ n. 异教徒；离经叛道者；犯异端罪者
 
 
 &emsp;
-## 8. 
+## 8. undue /ˌʌnˈduː/
+**adj. [only before noun] (formal)不适当的；过分的；过度的**
+`more than you think is reasonable or necessary`
+同义词：`excessive`
+> They are taking undue advantage of the situation.
+> 他们过分利用了这种情势。
+> 
+> The work should be carried out without undue delay.
+> 进行这项工作不得有不当的延误。
+> 
+> We did not want to put any undue pressure on them.
+> 我们并不想给他们施加过多的压力。
+> 
 
 
 &emsp;
-## 9. 
+## 9. verb
+(formal)
+**(1) [单独使用的动词] `~ (from sth)` 康复；恢复；恢复健康**
+`to get back your health, strength or energy after being ill/sick, tired, injured, etc.`
+同义词：`recover`
+> He's still recuperating from his operation.
+> 他动了手术，还在恢复。
+> 
 
-&emsp;
-## 10. 
+**(2)  [动词+名词短语] 收回；挽回（损失）**
+`to get back money that you have spent or lost`
+同义词：`recoup` , `recover`
+> He hoped to recuperate at least some of his losses.
+> 他希望至少挽回一部分损失。
+> 
 
-
-&emsp;
-## 11. 
-
-&emsp;
-## 12. 
-
-
-
-&emsp;
-## 13. 
-
-
-
-&emsp;
-## 14. 
-
-
-&emsp;
-## 15. 
+### recuperation /rɪˌkupəˈreɪʃən/ 
+**n.恢复；**
+> [不可数名词] It was a period of rest and recuperation.
+> 那是一段休养的时间。
+> 
 
 
 &emsp;
-## 16. 
+## 10. improvise /ˈɪmprəvaɪz/
+### verb
+**(1) 临时拼凑；临时做**
+`to make or do sth using whatever is available, usually because you do not have what you really need`
+> [单独使用的动词] There isn't much equipment. We're going to have to improvise.
+> 设备不多，我们只能将就着用。
+> 
+> [动词+名词短语] We improvised some shelves out of planks of wood and bricks.
+> 我们用木板和砖头临时搭了些架子。
+> 
+
+**(2) `~ (on sth)`即兴创作（音乐、台词、演讲词等）**
+`to invent music, the words in a play, a statement, etc. while you are playing or speaking, instead of planning it in advance`
+> [单独使用的动词] ‘It'll be ready some time next week, I expect,’ she said, improvising.
+> “我估计下个星期内会准备好的。”她随口说道。
+> 
+> He improvised on the melody.
+> 他即兴演奏了那首曲子。
+> 
+> [动词+名词短语] an improvised speech
+> 即席讲话
+>
+> I asked her what the piece was and she said, 'Oh, I'm just improvising'...
+> 我问她那一段是什么音乐,她说：“噢,我只是即兴弹的。”
+> 
 
 
 &emsp;
-## 17. 
+## 11. command of the will
+意志
+> But this is not a business that can be undertaken in a day or swiftly improvised by a mere command of the will.
+> 但这并非一天就可完成的事情，也不是单凭意志能够速成的。
+> 
 
 
 &emsp;
-## 18. 
+## 12. sedulous /ˈsedʒələs/
+adj. 勤勉的；孜孜不倦的；勤奋的
 
 
 &emsp;
-## 19. 
+## 13. vivify
+vivid
+> adj. 生动的，逼真的；鲜艳的
+> 词根词缀：viv + id（形容词后缀） → 好像有生命的
+> 
+vivify /'vɪvfaɪ/
+> v. 使活跃，使生动
+> 词根词缀：viv + ify（动词后缀） → 使有生命
+> 
+vivifying
+> adj. 生机勃勃的
+> 
 
 
 &emsp;
-## 20. 
+## 14. aggravate /ˈæɡrəveɪt/
+**(1) VERB 加重；使恶化；加剧**
+`If someone or something aggravates a situation, they make it worse.`
+> Stress and lack of sleep can aggravate the situation...
+> 压力和睡眠不足会使情况恶化。
+>
+> Pollution can aggravate asthma.
+> 污染会使气喘加重。
+> 
+> Military intervention will only aggravate the conflict even further.
+> 军事介入只会使冲突加剧。
+> 
+
+**(2) VERB 激怒；使恼火**
+`If someone or something aggravates you, they make you annoyed.`
+> What aggravates you most about this country?
+> 该国的哪一点让你最恼火？
+> 
+
+
+&emsp;
+## 15. strain /streɪn/
+### noun
+担忧；焦虑 `worry`/`anxiety`
+**(1) [不可数名词, 可数名词] 压力；重负；重压之下出现的问题（或担忧等）**
+`preure on sb/sth because they have too much to do or manage, or sth very difficult to deal with; the problems, worry or anxiety that this produces`
+> Their marriage is under great strain at the moment.
+> 眼下他们的婚姻关系非常紧张。
+> 
+> These repayments are putting a strain on our finances.
+> 偿还这些债务对我们的财务状况形成了压力。
+> 
+> Relax, and let us take the strain (= do things for you) .
+> 你歇一下，我们来顶一会儿。
+> 
+> The transport service cannot cope with the strain of so many additional passengers.
+> 运输部门无法应对临时增加这么多乘客所带来的紧张局面。
+> 
+> You will learn to cope with the stresses and strains of public life.
+> 你要学会怎样应付公众人物生活的紧张和辛劳。
+> 
+> I found it a strain having to concentrate for so long.
+> 我觉得这么长时间全神贯注挺累的。
+> 
+
+物理压力 `physical pressure`
+**(2) [不可数名词, 可数名词] 压力；拉力；张力；应力**
+`the pressure that is put on sth when a physical force stretches, pushes, or pulls it`
+> The rope broke under the strain .
+> 绳子给拉断了。
+> 
+> You should try not to place too much strain on muscles and joints.
+> 你要尽量不让肌肉和关节太吃力。
+> 
+> The ground here cannot take the strain of a large building.
+> 这块地承受不住大型建筑的压力。
+> 
+> The cable has a 140kg breaking strain (= it will break when it is stretched or pulled by a force greater than this) .
+> 这种缆索的断裂应变力为140公斤。
+> 
+
+损伤 `injury`
+**(3) [可数名词, 不可数名词] 劳损；拉伤；扭伤**
+`an injury to a part of your body, such as a muscle, that is caused by using it too much or by twisting it`
+> a calf/groin/leg strain 
+> 腿肚子 / 腹股沟 / 腿部拉伤
+> 
+> muscle strain
+> 肌肉劳损
+> 
+
+动植物 / 疾病种类 `type of plant/animal/disease`
+**(4) [可数名词] （动、植物的）系，品系，品种；（疾病的）类型**
+`a particular type of plant or animal, or of a disease caused by bacteria, etc.`
+> a new strain of mosquitoes resistant to the poison
+> 对这种毒药有抗药性的新品种蚊子
+> 
+> This is only one of the many strains of the disease.
+> 这种病有许多类型，这只是其中之一。
+> 
+
+性格 `in sb's character`
+**(5) [可数名词, 通常用单数形式] 个性特点；性格倾向；禀性**
+`a particular tendency in the character of a person or group, or a quality in their manner`
+同义词：`streak`
+> He had a definite strain of snobbery in him.
+> 他这个人明显有一股势利小人的气味。
+> 
+
+音乐 `of music`
+**(6) [可数名词, 通常用复数形式] (formal)乐曲；曲调；旋律**
+`the sound of music being played or sung`
+> She could hear the strains of Mozart through the window.
+> 她能听见窗户里飘出的莫扎特的旋律。
+> 
+
+### verb
+损伤 `injure`
+**(1) [动词+名词短语] 损伤；拉伤；扭伤**
+`to injure yourself or part of your body by making it work too hard`
+> to strain a muscle
+> 拉伤肌肉
+> 
+
+尽力 `make effort`
+**(2) `~ (sth) (for sth)` | `~ (sth) (to do sth)` 尽力；竭力；使劲**
+`to make an effort to do sth, using all your mental or physical strength`
+> [动词+名词短语+带to的不定式] I strained my ears (= listened very hard) to catch what they were saying.
+> 我竖起耳朵去听他们在说些什么。
+> 
+> [动词+名词短语] Necks were strained for a glimpse of the stranger.
+> 大家伸长了脖子想看一看这个陌生人。
+> 
+> [动词+带to的不定式] People were straining to see what was going on.
+> 人们翘首企足看发生了什么事。
+> 
+> [单独使用的动词] He burst to the surface, straining for air.
+> 他冲出水面，使劲吸气。
+> 
+> Bend gently to the left without straining.
+> 轻轻向左弯，不要用力。
+> 
+
+使达到极限 `stretch to limit`
+**(3) [动词+名词短语] 过度使用；使不堪承受**
+`to try to make sth do more than it is able to do`
+> The sudden influx of visitors is straining hotels in the town to the limit.
+> 游客突然涌入，城里的旅馆全都爆满。
+> 
+> His constant complaints were straining our patience.
+> 他没完没了的抱怨让我们忍无可忍。
+> 
+> The dispute has strained relations between the two countries (= made them difficult) .
+> 这场争端使两国关系紧张起来。
+> 
+
+用力推 / 拉 `push/pull hard`
+**(4) [动词+ 副词/介词短语] 用力推（或拉）；拉紧**
+`to push hard against sth; to pull hard on sth`
+> She strained against the ropes that held her.
+> 她使劲挣了挣拴着她的绳子。
+> 
+> The dogs were straining at the leash , eager to get to the park.
+> 几条狗用力拽着皮带，急于要去公园。
+> 
+
+过滤 `separate solid from liquid`
+**(5)[动词+名词短语] `~ sth (off)` 滤；过滤**
+`to pour food, etc. through sth with very small holes in it, for example a sieve , in order to separate the solid part from the liquid part`
+> Use a colander to strain the vegetables.
+> 把蔬菜放在漏筐里控控水。
+> 
+> Strain off any excess liquid.
+> 滤掉多余的液体。
+> 
+
+### 习语  Idioms
+#### strain at the leash
+(informal)急于；迫不及待
+`to want to do sth very much`
+> Like all youngsters, he's straining at the leash to leave home.
+> 跟所有年轻人一样，他也急于从家里出去。
+> 
+
+#### strain every nerve/sinew (to do sth)
+(formal)竭尽全力（做某事）
+`to try as hard as you can to do sth`
+
+#### creak under the strain
+因负担过重而效率低下；由于压力过大而运转不灵
+`if a system or service creaks under the strain , it cannot deal effectively with all the things it is expected to do or provide`
+
+
+&emsp;
+## 16. broadly speaking
+概括地说；（作插入语）广义地说；一般说来
+
+
+&emsp;
+## 17. toil /tɔɪl/
+**(1) VERB 苦干;辛勤劳动**
+`When people toil, they work very hard doing unpleasant or tiring tasks.`
+> People who toiled in dim, dank factories were too exhausted to enjoy their family life...
+> 在昏暗潮湿的工厂辛苦劳作的人们累得无力再去享受家庭生活。
+> 
+**`Toil away`** means the same as `toil`.
+> She has toiled away at the violin for years...
+> 她多年来苦练小提琴。
+> 
+> Nora toils away serving burgers at the local cafe.
+> 诺拉在当地小餐馆干着一份为客人端送汉堡包的辛苦活儿。
+> 
+
+**(2) VERB (通常指因疲倦而)费劲地行走，艰难地行动**
+`If you toil somewhere, you move there slowly and with difficulty, usually because you are very tired.`
+> Arnold had his head down, gasping as he toiled up the hill.
+> 阿诺德垂着头，一边费劲地往山上爬一边气喘吁吁。
+>
+> They toiled up the hill in the blazing sun.
+> 他们冒着炎炎烈日艰难地一步一步爬上山冈。
+> 
+
+**(3) N-UNCOUNT 苦工;苦活**
+> a life of hardship and toil
+> 艰难劳苦的一生
+> 
+
+
+&emsp;
+## 18. manual labourer
+体力劳动者
+
+
+&emsp;
+## 19. trifle
+**(1) `a trifle` (尤用于缓和程度)有一点，稍微**
+`You can use a trifle to mean slightly or to a small extent, especially in order make something you say seem less extreme.`
+> As a photographer, he'd found both locations just a trifle disappointing...
+> 作为摄影师，他感到两处景点都有点儿不尽如人意。
+>
+> She seemed a trifle anxious.
+> 她似乎有点儿焦急。
+> 
+
+**(2) N-COUNT 小事;琐事;无价值的东西**
+`A trifle is something that is considered to have little importance, value, or significance.`
+> He had no money to spare on trifles...
+> 他没有闲钱买些小玩意儿。
+>
+> $1 000 is a mere trifle to her.
+> 1 000元对她来说不过是区区小数。
+> 
+
+**(3) N-VAR 屈莱弗甜食，乳脂蛋糕（由松糕、果冻、水果和蛋奶沙司层叠制成的冷甜点，通常覆有奶油）**
+
+**(4) `trifle with sb/sth` 尤用于否定句怠慢；小看**
+`(formal)used especially in negative sentences` 
+`to treat sb/sth without genuine respect`
+> He is not a person to be trifled with.
+> 他这个人怠慢不得。
+> 
+
+### trifling
+adj. 微不足道的；琐碎的；不重要的；无足轻重的
+
+
+&emsp;
+## 20. gratify
+### verb
+**(1) (formal)使高兴；使满意**
+`to please or satisfy sb`
+> [动词+名词短语+带to的不定式] It gratified him to think that it was all his work.
+> 他想到这都是他的工作成果，感到十分欣慰。
+> 
+> [动词+名词短语] I was gratified by their invitation.
+> 收到他们的邀请，我感到很高兴。
+> 
+
+**(2) [动词+名词短语] (formal)满足（愿望、需要等）**
+`to satisfy a wish, need, etc.`
+> He only gave his consent in order to gratify her wishes.
+> 他只是为满足她的愿望才同意的。
+> 
+
+### Derived Words 派生词
+#### gratified
+adj. 称心的，令人满意的
+
+#### gratifying
+adj. 令人高兴的；使人满意的
+
+#### gratification
+n. 满足；满意；快感；令人喜悦的事物
+
+
+&emsp;
+## 21. caprice /kəˈpriːs/
+N-VAR 任性;反复无常;善变
+`A caprice is an unexpected action or decision which has no strong reason or purpose.`
+> I lived in terror of her sudden caprices and moods.
+> 她的任性妄为和喜怒无常让我整天提心吊胆。
+> 
+
+
+&emsp;
+## 22. satiate /ˈseɪʃieɪt/
+**VERB 使满足;使充分享受;使过饱;使腻烦**
+`If something such as food or pleasure satiates you, you have all that you need or all that you want of it, often so much that you become tired of it.`
+> The dinner was enough to satiate the gourmets...
+> 晚餐足以让这些美食家们大饱口福。
+> 
+
+### satiation [ˌseɪʃiˈeɪʃn]
+n. 饱满；饱食；满足；厌腻
+mental satiation 心理满足
+
+
+&emsp;
+## 23. 
+### adj.
+**(1) 紧张忙乱的；手忙脚乱的**
+`done quickly and with a lot of activity, but in a way that is not very well organized`
+同义词：`hectic`
+> a frantic dash/search/struggle 
+> 不顾一切的猛冲；疯狂的搜查 / 斗争
+> 
+> They made frantic attempts to revive him.
+> 他们拼命地努力让他苏醒过来。
+> 
+> Things are frantic in the office right now.
+> 现在办公室里是忙作一团。
+> 
+
+**(2) （由于恐惧或担心）无法控制感情的，发狂似的**
+`unable to control your emotions because you are extremely frightened or worried about sth`
+同义词：`beside yourself`
+> frantic with worry
+> 忧虑得要命
+> 
+> Let's go back. Your parents must be getting frantic by now.
+> 咱们回家吧。你的父母现在肯定快要急死了。
+> 
+> The children are driving me frantic (= making me very annoyed) .
+> 孩子们快要使我发疯了。
+> 
+
+### 【派生词】 frantically 
+adv. 疯狂地；疯狂似地
+> They worked frantically to finish on time.
+> 他们拼命工作以按时完成。
+>
+> A man in the water was shouting and waving his arms around frantically.
+> 水里有个人大喊大叫，拼命摆动着双臂。
+>
+
+
+&emsp;
+## 24. clatter /ˈklætər/
+### verb
+**(1) VERB (移动时)发出声响**
+`If you say that people or things clatter somewhere, you mean that they move there noisily.`
+> He turned and clattered down the stairs.
+> 他转过身，噔噔噔地下了楼梯。
+> 
+
+**(2) VERB (硬物)发出碰撞声**
+`If something hard clatters, it makes repeated short noises as it hits against another hard thing.`
+> His hobnail boots clattered on the stone floor...
+> 他那双钉了铁掌的靴子在石地板上嗒嗒响。
+> 
+
+**(3) noun. (硬物)发出碰撞声**
+> From somewhere distant he heard the clatter of a typewriter.
+> 他听见从远处什么地方传来打字机的嗒嗒声。
+> 
+
+
+&emsp;
+## 25. sustenance /ˈsʌstənəns/
+### noun
+[不可数名词] (formal)
+**(1) 食物；营养；养料**
+`the food and drink that people, animals and plants need to live and stay healthy`
+> There's not much sustenance in a bowl of soup.
+> 一碗汤没多少营养。
+> 
+> (figurative)Arguing would only give further sustenance to his allegations.
+> 越是争论，他越会觉得自己那些说法有道理。
+> 
+
+**(2) `~ (of sth)` 维持；保持**
+`the process of making sth continue to exist`
+> Elections are essential for the sustenance of parliamentary democracy.
+> 选举制度是维持议会民主所必不可少的。
+> 
+
+
+&emsp;
+## 26. harmony
+**(1) N-UNCOUNT （人际关系的）融洽，和睦**
+`If people are living in harmony with each other, they are living together peacefully rather than fighting or arguing.`
+> We must try to live in peace and harmony with ourselves and those around us...
+> 我们必须努力和我们自己及周围的人和睦相处。
+>
+> the need to be in harmony with our environment
+> 同我们的环境协调的必要
+> 
+> to live together in perfect harmony
+> 十分和睦地一同生活
+> 
+> social/racial harmony 
+> 社会 / 种族融洽
+> 
+
+**(2) N-VAR 和声;和谐悦耳的音调**
+`Harmony is the pleasant combination of different notes of music played at the same time.`
+> ...complex vocal harmonies.
+> 复杂的声乐和声
+>
+> to sing in harmony
+> 用和声唱
+> 
+> to study four-part harmony
+> 学习四部和声
+> 
+
+**(3) N-UNCOUNT （各组成部分的）协调，和谐，调和**
+`The harmony of something is the way in which its parts are combined into a pleasant arrangement.`
+> ...the ordered harmony of the universe...
+> 宇宙的有序和谐
+>
+> the harmony of colour in nature
+> 自然界色彩的协调
+> 
+
+
+&emsp;
+## 27. grudge /ɡrʌdʒ/
+**(1) noun `~ (against sb)` 积怨；怨恨；嫌隙**
+`a feeling of anger or dislike towards sb because of sth bad they have done to you in the past`
+> I bear him no grudge .
+> 我对他不怀任何积怨。
+> 
+> He has a grudge against the world.
+> 他对社会心存不满。
+> 
+> I don't hold any grudges now.
+> 我现在没有任何怨恨。
+> 
+> He's a man with a grudge.
+> 他是一个心怀怨恨的人。
+> 
+> England beat New Zealand in a grudge match (= a match where there is strong dislike between the teams) .
+> 英格兰队在一场势不两立的比赛中打败了新西兰队。
+> 
+
+**(2) verb 勉强做；不情愿地给；吝惜**
+`to do or give sth unwillingly`
+同义词：`begrudge`
+> [动词+-ing短语] I grudge having to pay so much tax.
+> 得付这么多的税我很不情愿。
+> 
+> [动词+名词短语] He grudges the time he spends travelling to work.
+> 他不情愿上班花这么多时间在路上。
+> 
+
+**(3) verb [动词+名词短语+名词短语] 认为…不应得到**
+`to think that sb does not deserve to have sth`
+同义词：`begrudge`
+> You surely don't grudge her her success?
+> 她获得成功，你没有不以为然吧？
+> 
+
+
+&emsp;
+## 28. banish /ˈbænɪʃ/
+**(1) VERB 放逐；驱逐；流放；把（某人）驱逐出境**
+`If someone or something is banished from a place or area of activity, they are sent away from it and prevented from entering it.`
+> John was banished from England...
+> 约翰被逐出了英格兰。
+>
+> The children were banished from the dining room.
+> 孩子们被赶出餐室。
+> 
+
+**(2) VERB 消除；排除；摆脱**
+`If you banish something unpleasant, you get rid of it.`
+> ...a public investment programme intended to banish the recession.
+> 旨在摆脱经济衰退的公共投资项目
+> 
+
+**(3) VERB 不再去想；打消…的念头**
+`If you banish the thought of something, you stop thinking about it.`
+> He has now banished all thoughts of retirement...
+> 他现在已经完全打消了退休的念头。
+> 
 
 
 
@@ -13063,88 +13586,413 @@ hire亦含雇用之意，尤其在北美英语中：
 
 
 &emsp;
-## 9. 
+## 9. grant
+### verb
+**(1) [often passive] `~ sth (to sb/sth)` | `~ (sb) sth` （尤指正式地或法律上）同意，准予，允许**
+`to agree to give sb what they ask for, especially formal or legal permission to do sth`
+> [动词+名词短语, 动词+名词短语+名词短语] The bank finally granted a £500 loan to me.
+> 银行终于同意给我贷款500英镑。
+> 
+> The bank finally granted me a £500 loan.
+> 银行终于同意给我贷款500英镑。
+> 
+> [动词+名词短语] My request was granted.
+> 我的请求得到批准。
+> 
+> [动词+名词短语+名词短语] I was granted permission to visit the palace.
+> 我获准参观宫殿。
+> 
+> She was granted a divorce.
+> 她获准离婚。
+> 
+**(2)（勉强）承认，同意**
+`to admit that sth is true, although you may not like or agree with it`
+> [动词+名词短语] She's a smart woman, I grant you, but she's no genius.
+> 我同意你的观点，她是一个很聪明的女人，但绝不是天才。
+> 
+> [动词+名词短语 (+ that从句)] I grant you (that) it looks good, but it's not exactly practical.
+> 我承认你说的，它好看，可并不实用。
+> 
+
+### noun
+**`~ (to do sth)` （政府、机构的）拨款**
+`a sum of money that is given by the government or by another organization to be used for a particular purpose`
+> student grants (= to pay for their education) 
+> 学生助学金
+> 
+> He has been awarded a research grant.
+> 他得到一笔研究经费。
+> 
+
+### 习语  Idioms
+#### (1) take it for granted (that…)
+认为…是理所当然
+`to believe sth is true without first making sure that it is`
+> I just took it for granted that he'd always be around.
+> 我还想当然地以为他总能随叫随到呢。
+> 
+
+#### (1) take sb/sth for granted
+（因习以为常）对…不予重视；（因视为当然而）不把…当回事
+`to be so used to sb/sth that you do not recognize their true value any more and do not show that you are grateful`
+> Her husband was always there and she just took him for granted.
+> 她丈夫随时都在身边，她只是认为他理应如此。
+> 
+> We take having an endless supply of clean water for granted.
+> 我们想当然地认为洁净水的供应无穷无尽而不予以珍惜。
+> 
+
+
+### granted
+**(1) adv.（表示肯定属实，然后再作另一番表述）不错，的确**
+`used to show that you accept that sth is true, often before you make another statement about it`
+> ‘You could have done more to help.’ ‘Granted.’
+> “你本可以多给点帮助的。”“我承认。”
+> 
+> Granted, it's not the most pleasant of jobs but it has to be done.
+> 的确，这不是最令人愉快的工作，但也得做呀。
+>
+> Granted, he doesn't look too bad for his age, but I don't fancy him.
+> 以他的年龄来说他看起来确实还算不错，不过我并不喜欢他。
+> 
+
+**(2) CONJ-SUBORD （表示某事属实，然后再对其作出评论）不错，的确**
+`You use granted or granted that at the beginning of a clause to say that something is true, before you make a comment on it.`
+> **Granted that** the firm has not broken the law, is the law what it should be?
+> 的确，这家公司没有违法，但这样的法律是否合理呢？
+> 
+> **Granted that** it is a simple test to perform, it should be easy to get results quickly.
+> 因为这化验做起来简单，所以应该不难很快得出结果。
+> 
+
 
 &emsp;
-## 10. 
+## 10. of a kind
+名不副实，徒有其名（指不如本应有的那么好）
+> Town planning of a kind got underway after the war.
+> 战后进行了名不副实的城市规划。
+> 
+> My father was one of a kind ─ I'll never be like him.
+> 我的父亲很独特——我决不会像他的。
+> 
+> She's a very unusual woman, one of a kind.
+> 她是个非常与众不同的女人，是独一无二的。
+> 
+> There is good news of a kind for the Prime Minister
+> 对总理来说也算是有个好消息。
+> 
 
 
 &emsp;
-## 11. 
-
-&emsp;
-## 12. 
-
-
-
-&emsp;
-## 13. 
-
-
-
-&emsp;
-## 14. 
-
-
-&emsp;
-## 15. 
+## 11. entail /ɪnˈteɪl/
+**verb 牵涉；需要；使必要；势必造成；使…成为必需exquisite**
+`to involve sth that cannot be avoided`
+同义词：`involve`
+> [动词+名词短语] The job entails a lot of hard work.
+> 这工作需要十分艰苦的努力。
+> 
+> The girls learn exactly what is entailed in caring for a newborn baby.
+> 姑娘们学的正是怎样照看新生儿。
+> 
+> [动词+-ing短语] It will entail driving a long distance every day.
+> 这意味着每天都要长途开车。
+>
+> Such a decision would entail a huge political risk...
+> 这样的决定势必带来巨大的政治风险。
+> 
 
 
 &emsp;
-## 16. 
+## 12. exquisite /ɪkˈskwɪzɪt/
+### adj.
+**(1) 精美的；精致的**
+`extremely beautiful or carefully madeZ`
+> exquisite craftsmanship
+> 精美的工艺
+> 
+
+**(2) (formal)of a feeling 感觉剧烈的；强烈的**
+`strongly feltZ`
+同义词：acute
+> exquisite pain/pleasure 
+> 剧烈的疼痛；极大的快乐
+> 
+
+**(3) (formal)微妙的；雅致的；敏锐的；敏感的**
+`delicate and sensitiveZ`
+> The room was decorated in exquisite taste.
+> 这个房间的装饰情趣高雅。
+> 
+> an exquisite sense of timing
+> 时间安排上恰到好处的感觉
+> 
 
 
 &emsp;
-## 17. 
+## 13. sth is to hand
+...在手边; ...在附近
+> From one's own front door to home or foreign hills or sands and back again, everything is to hand.
+> 从自家的前门到国内国外的山区或沙滩旅游并再返回来，一切都垂手可得。
+> 
 
 
 &emsp;
-## 18. 
+## 14. inclement /ɪnˈklemənt/
+adj.(formal)of the weather 天气恶劣的（指寒冷的、潮湿的等）
 
 
 &emsp;
-## 19. 
+## 15. package tour
+n.包办旅游，包价旅游（费用固定、一切由旅行社代办的假日旅游）
 
 
 &emsp;
-## 20. 
+## 16. insularity /ˌɪnsəˈlærəti/
+n. 孤立;岛国性质
 
 
 &emsp;
-## 21.
+## 17. hand in hand
+**(1) （常指为表示爱意而）手拉手的，携着手的**
+> Couples walked hand in hand along the front.
+> 对对情侣手牵手沿河边散步。
+> 
+
+**(2) 相关联地； 共同出现的**
+> prejudice often goes hand in hand with ignorance
+> 偏见常常伴随着无知
+> 
+> For us, research and teaching go hand in hand
+> 对我们而言，研究和教学是齐头并进的。
+> 
+> Higher returns and higher risk usually go hand in hand.
+> 更高的收益通常伴随着更高的风险。
+> 
+
+
+&emsp;
+## 18. self containment
+自我封闭
+
+
+&emsp;
+## 19. cosmopolitan ˌkɑːzməˈpɑːlɪtən/
+**(1) adj 世界性的；全球各国的；有各国人的；受各国文化影响的**
+`containing people of different types or from different countries, and influenced by their culture`
+> a cosmopolitan city/resort 
+> 国际性的都市 / 度假胜地
+> 
+> The club has a cosmopolitan atmosphere.
+> 这个俱乐部具有世界文化的气氛。
+> 
+
+**(2) ad 接触过许多国家的人（或事物）的；见过世面的；见识广的**
+`having or showing a wide experience of people and things from many different countries`
+> people with a truly cosmopolitan outlook
+> 真正具有世界眼光的人
+> 
+> cosmopolitan young people
+> 见多识广的年轻人
+> 
+
+**(3) 周游世界的人**
+`a person who has experience of many different parts of the world`
+> She's a real cosmopolitan.
+> 她是个真正的四海为家的人。
+> 
+
+
+&emsp;
+## 20. preponderance
+**N-SING （数量上的）优势，大多数，主体**
+`If there is a preponderance of one type of person or thing in a group, there is more of that type than of any other.`
+> ...a preponderance of bright, middle-class children in one group.
+> 一个小组中聪明伶俐的中产阶级家庭的孩子占大多数
+> 
+
+
+&emsp;
+## 21. characteristic
+**(1) N-COUNT `~ (of sth/sb)` 特色;特点;特征**
+`The characteristics of a person or thing are the qualities or features that belong to them and make them recognizable.`
+> Genes determine the characteristics of every living thing.
+> 基因决定每个生物的特征。
+>
+> Personal characteristics, such as age and sex are taken into account.
+> 个人的特征，如年龄和性别等，都要考虑进去。
+> 
+> genetic characteristics
+> 遗传特征
+> 
+
+**(2) ADJ-GRADED `~ (of sth/sb)` (品质、特点)明显的，显著的，典型的**
+`A quality or feature that is characteristic of someone or something is one which is often seen in them and seems typical of them.`
+> ...the absence of strife between the generations that was so characteristic of such societies...
+> 这些社会中典型的代际冲突的缺失
+> 
+> She spoke with characteristic enthusiasm.
+> 她说话带着特有的热情。
+> 
+
+
+&emsp;
+## 22. patronage /ˈpætrənɪdʒ/
+### noun
+[不可数名词]
+**(1) 资助；赞助**
+`the support, especially financial, that is given to a person or an organization by a patron`
+> Patronage of the arts comes from businesses and private individuals.
+> 对艺术的资助来自企业和个人。
+> 
+
+**(2) （掌权者给予提挈以换取支持的）互惠互利**
+`the system by which an important person gives help or a job to sb in return for their support`
+
+**(3) (especially 北美英语)惠顾；光顾**
+
+
+&emsp;
+## 23. the open-air drying of clothes
+露天晾衣服
+
+
+&emsp;
+## 24. odour
+**noun 北美英语 `odor` [可数名词, 不可数名词] (formal)（尤指难闻的）气味；臭味**
+`a smell, especially one that is unpleasant`
+> a foul/musty/pungent, etc. odour 
+> 难闻的气味、难闻的霉味、刺鼻的气味等
+> 
+> the stale odour of cigarette smoke
+> 香烟的臭味
+> 
+> (figurative)the odour of suspicion
+> 启人疑窦
+> 
+
+
+&emsp;
+## 25. sauerkraut /ˈsaʊərkraʊt/
+n. 酸菜；(酸)泡菜
+
+
+&emsp;
+## 26. vie /vaɪ/
+**verb `~ (with sb) (for sth)` (formal)激烈竞争；争夺**
+`to compete strongly with sb in order to obtain or achieve sth`
+同义词：compete
+> [单独使用的动词] She was surrounded by men all vying for her attention.
+> 她周围尽是竞相博得她青睐的男子。
+> 
+> a row of restaurants vying with each other for business
+> 彼此争抢生意的一排饭馆
+> 
+> [动词+带to的不定式] Screaming fans vied to get closer to their idol.
+> 尖声喊叫的崇拜者争先恐后地涌向他们的偶像。
+> 
+
+
+&emsp;
+## 27. municipality /mjuːˌnɪsɪˈpæləti/
+n. 市；(市下的)自治区；市(或区)政当局；自治市
+
+
+&emsp;
+## 28. custom
+**(1) N-VAR 风俗;习俗**
+`A custom is an activity, a way of behaving, or an event which is usual or traditional in a particular society or in particular circumstances.`
+> The custom of lighting the Olympic flame goes back centuries...
+> 点燃奥林匹克圣火的习俗可以追溯到几个世纪前。
+> 
+
+**(2) N-SING 个人习惯;习性;惯常行为**
+`If it is your custom to do something, you usually do it in particular circumstances.`
+> It was his custom to approach every problem cautiously...
+> 他习惯谨慎地处理每一个问题。
+> 
+
+**(3) N-UNCOUNT 光顾;惠顾**
+`If a shop has your custom, you regularly buy things there.`
+> You have the right to withhold your custom if you so wish...
+> 如果你这么不想来，你可以不再光顾。
+> 
+
+**(4) ADJ 定做的;量身设计的**
+`If you use custom to describe something such as a vehicle or a piece of clothing, you mean that it has been designed for one particular customer.`
+> Her one-of-a-kind custom garments are priced from one hundred dollars to more than a thousand dollars.
+> 在她这里定做一件款型独一无二的衣服，价格从100美元到1,000美元以上不等。
+> 
+
+**(5) `customs`**
+n.(港口或机场的)海关；关税；进口税
+
+
+&emsp;
+## 29. wary /ˈweri/
+**adj `~ (of sb/sth)` | `~ (of doing sth)` （对待人或事物时）小心的，谨慎的，留神的，小心翼翼的**
+`careful when dealing with sb/sth because you think that there may be a danger or problem`
+同义词：`cautious`
+> Be wary of strangers who offer you a ride.
+> 提防那些主动让你搭车的陌生人。
+> 
+> She was wary of getting involved with him.
+> 她唯恐和他有牵连。
+> 
+> He gave her a wary look.
+> 他留意地看了她一眼。
+> 
+> The police will need to keep a wary eye on this area of town (= watch it carefully, in case there is trouble) .
+> 警方必须密切注意这一带城区。
+> 
+**(2) `a wary eye` 小心观察;警惕察看**
+> Bankers are keeping a wary eye on the outcome.
+> 银行家们对结果保持高度警惕。
+> 
+
+
+&emsp;
+## 30. itinerant /aɪˈtɪnərənt/
+**(1) ADJ [usually before noun] (formal)巡回的；流动的；（尤指为找工作）四处奔波的**
+`An itinerant worker travels around a region, working for short periods in different places.`
+> ...the author's experiences as an itinerant musician.
+> 作者身为一名四处漂泊的音乐家的经历
+> 
+> tinerant workers/musicians 
+> 流动工人；巡回乐师
+> 
+> to lead an itinerant life
+> 过漂泊不定的生活
+> 
+
+**(2) N-COUNT 四处奔波的人;流浪者**
+
+
+&emsp;
+## 31. four walls
 
 
 
 &emsp;
-## 22. 
+## 32. heath /hiːθ/
+N-COUNT （野草或石南丛生的）荒野，荒原
 
 
 &emsp;
-## 23. 
+## 33. alienate
+### verb
+[动词+名词短语]
+**(1)  使疏远；使不友好；离间**
+`to make sb less friendly or sympathetic towards you`
+> His comments have alienated a lot of young voters.
+> 他的言论使许多年轻选民离他而去。
+> 
 
+**(2) `~ sb (from sth/sb)` 使（与某群体）格格不入；使疏远**
+`to make sb feel that they do not belong in a particular group`
+> Very talented children may feel alienated from the others in their class.
+> 天才出众的孩子可能觉得与班上的同学格格不入。
+> 
 
-&emsp;
-## 24. 
-
-
-&emsp;
-## 25.
-
-
-&emsp;
-## 26. 
-
-
-&emsp;
-## 27. 
-
-
-&emsp;
-## 28. 
-
-
-&emsp;
-## 29. 
 
 
 
