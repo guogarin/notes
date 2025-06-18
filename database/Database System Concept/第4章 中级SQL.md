@@ -220,8 +220,8 @@ SELECT player_id, team_id, player_name, height, team_name
 ### 1.4.1 内连接 和 自然连接 有何异同？
 
 &emsp;&emsp; 内连接基本与自然连接相同，它们的不同之处在于：
-&emsp;&emsp; 第一，自然连接是对连接的表的同名属性列进行比较；而内连接则不要求两属性列同名，可以用`using`或`on`来指定连接条件。
-&emsp;&emsp; 第二，对于两张表中列名相同的属性，自然连接只会返一次，而内连接会返回两次。例证如下：
+&emsp;&emsp; 第一，**自然连接**是对连接的表的同名属性列进行比较；而**内连接**则不要求两属性列同名，可以用`using`或`on`来指定连接条件。
+&emsp;&emsp; 第二，对于两张表中列名相同的属性，**自然连接**只会返一次，而内连接会返回两次。例证如下：
 ```sql
 select * from Sales natural join product;
 
